@@ -1,0 +1,60 @@
+source $VIM_DIR/main.vim
+source $VIM_DIR/keymaps.vim
+source $VIM_DIR/autocmds.vim
+source $VIM_DIR/abbrev.vim
+
+set guicursor+=i:block
+
+tnoremap <Esc> <C-\><C-n>
+
+call plug#begin('$HOME/.config/nvim/plugged')
+
+Plug 'tpope/vim-sensible'
+
+" nvim colorschemes
+Plug 'ellisonleao/gruvbox.nvim'
+Plug 'sainnhe/gruvbox-material'
+Plug 'folke/tokyonight.nvim'
+
+Plug 'numToStr/Comment.nvim'
+
+" Status line
+Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-tree/nvim-web-devicons'
+
+" Syntax highlighting
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+
+Plug 'tpope/vim-surround'
+Plug 'andymass/vim-matchup'
+
+" Async library
+Plug 'nvim-lua/plenary.nvim'
+
+" File explorer
+Plug 'stevearc/oil.nvim'
+nnoremap <leader>- :Oil<CR>
+
+" Repeat custom commands with dot
+Plug 'tpope/vim-repeat'
+
+" Debugger
+Plug 'mfussenegger/nvim-dap'
+
+" Git tool
+Plug 'tpope/vim-fugitive'
+
+source $VIM_DIR/plugins/fzf.vim           " fuzzy finder
+source $VIM_DIR/plugins/coc.vim           " lsp
+source $VIM_DIR/plugins/ack.vim           " grep tool
+source $VIM_DIR/plugins/tagbar.vim        " tags
+
+call plug#end()
+
+" lua configs
+source $VIM_DIR/lua/config.lua
+source $VIM_DIR/lua/treesitter.lua
+
+colorscheme gruvbox-material
+

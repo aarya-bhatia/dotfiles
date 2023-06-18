@@ -1,0 +1,36 @@
+local indent = 4
+
+vim.o.hlsearch = true
+vim.wo.number = true
+vim.o.mouse = 'a'
+vim.o.undofile = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.updatetime = 250
+vim.o.timeout = true
+vim.o.timeoutlen = 300
+vim.o.completeopt = 'menuone,noselect'
+vim.o.termguicolors = true
+vim.opt.confirm = true
+vim.opt.cursorline = true
+vim.opt.expandtab = true
+vim.opt.tabstop = indent
+vim.opt.hidden = true
+vim.opt.inccommand = "nosplit"
+vim.opt.joinspaces = false
+vim.opt.laststatus = 0
+vim.opt.relativenumber = true
+vim.opt.scrolloff = 8
+vim.opt.shiftround = true
+vim.opt.shiftwidth = indent
+vim.opt.showmode = false
+vim.opt.sidescrolloff = 8
+vim.opt.signcolumn = "yes"
+vim.opt.smartindent = true
+vim.opt.splitbelow = true
+vim.opt.splitkeep = "screen"
+vim.opt.splitright = true
+vim.opt.backspace = 'indent,eol,start'
+vim.opt.showcmd = true
+vim.opt.wrap = false
+
