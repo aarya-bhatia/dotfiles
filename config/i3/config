@@ -135,7 +135,7 @@ bindsym $mod+a focus parent
 set $ws1 "1 < term >"
 set $ws2 "2 < web >"
 set $ws3 "3 < email >"
-set $ws4 "4"
+set $ws4 "4 < util >"
 set $ws5 "5"
 set $ws6 "6"
 set $ws7 "7"
@@ -146,6 +146,7 @@ set $ws10 "10"
 # Assign Workspaces:
 assign [class="firefox"] $ws2
 assign [class="thunderbird"] $ws3
+assign [class="Arandr"] $ws4
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
