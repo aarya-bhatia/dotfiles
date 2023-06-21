@@ -1,4 +1,4 @@
-source $HOME/dotfiles/default-bashrc
+# source $HOME/dotfiles/default-bashrc
 
 if [ -d /usr/share/fzf ]; then
 	source /usr/share/fzf/completion.bash

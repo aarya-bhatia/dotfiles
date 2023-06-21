@@ -1,3 +1,5 @@
+#!/bin/bash
+
 ## Todo
 ## fzf, ag, fd, thunderbird, nerd font, xsel
 
@@ -49,17 +51,6 @@ else
     echo "ERROR: git is not installed"
 fi
 
-# Link config files
-if [ ! -f $HOME/.vimrc ]
-then
-    ln -sf `pwd`/vimrc $HOME/.vimrc
-fi
-
-if [ ! -f $HOME/.tmux.conf ]
-then
-    ln -sf `pwd`/tmux.conf $HOME/.tmux.conf
-fi
-
 # tmux plugin manager
 if command -v git &> /dev/null && command -v tmux &> /dev/null 
 then
@@ -70,5 +61,52 @@ then
     fi
 else
     echo "ERROR: tmux is not installed"
+fi
+
+# setup bashrc
+read -p "setup bash? [y/n]: " choice
+if [[ $choice == [yY] ]]; then
+    # install ohmybash
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ohmybash/oh-my-bash/master/tools/install.sh)"
+    # set theme to "rr"
+    sed -i 's/^OSH_THEME=.*/OSH_THEME="rr"/' "$HOME/.bashrc"
+    # append custom settings
+    cat ../bashrc >> $HOME/.bashrc
+    echo "bash setup completed"
+fi
+
+mkdir -p $HOME/.vim $HOME/.config/nvim $HOME/.tmux
+
+timestamp=timestamp=$(date +%Y%m%d%H%M%S)
+
+# Usage: create_symlink <old_file> <new_file>
+try_create_symlink() {
+    local old_file="$1"
+    local new_file="$2"
+
+    if [ ! -f "$new_file" ]; then
+        new_file=$(find . -type f -name "$new_file" -print -quit)
+    fi
+
+    if [ -z "$new_file" ]; then
+        echo "Failed to find the new file '$2'"
+        return 1
+    fi
+
+    if [ -f "$old_file" ]; then
+        mv "$old_file" "$old_file-$timestamp"
+    fi
+
+    ln -s "$(realpath "$new_file")" "$old_file"
+
+    echo "Linked file: $old_file -> $new_file"
+}
+
+# Link config files
+read -p "backup and symlink config files? [y/n]: " choice
+if [[ $choice == [yY] ]]; then
+    try_create_symlink "$HOME/.vimrc" "vimrc"
+    try_create_symlink "$HOME/.config/nvim/init.vim" "nvimrc"
+    try_create_symlink "$HOME/.tmux.conf" "tmux.conf"
 fi
 
