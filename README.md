@@ -1,11 +1,5 @@
 # dotfiles
 
-A collection of personal configuration and scripts
+These are a collection of my personal configuration files and scripts.
 
-## Setup
-
-Run the following commands:
-
-```
-./setup.sh
-```
+- Setup script: `./scripts/setup.sh`
