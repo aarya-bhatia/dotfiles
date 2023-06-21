@@ -7,7 +7,7 @@
 if uname -a | grep -qi "arch"; then
     read -p "install arch packages? [y/n]: " choice
     if [[ $choice == [yY] ]]; then
-        sudo pacman -Syu base-devel vim git tmux fd fzf xsel the_silver_searcher neovim ctags
+        sudo pacman -Syu base-devel neofetch vim git tmux fd fzf xsel the_silver_searcher neovim ctags
     fi
 
     read -p "install node? [y/n]: " choice
@@ -24,7 +24,7 @@ if uname -a | grep -qi "ubuntu"; then
     read -p "install ubuntu packages? [y/n]: " choice
     if [[ $choice == [yY] ]]; then
         sudo apt-get update -y
-        sudo apt-get install -y build-essential vim git tmux gdb valgrind fd-find fzf neovim python3 exuberant-ctags
+        sudo apt-get install -y build-essential neofetch vim git tmux gdb valgrind fd-find fzf neovim python3 exuberant-ctags
     fi
 fi
 
@@ -37,7 +37,7 @@ if uname -a | grep -qi "darwin"; then
             /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         fi
 
-        brew install vim tmux
+        brew install neofetch vim tmux
     fi
 fi
 
