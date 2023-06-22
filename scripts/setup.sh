@@ -71,7 +71,7 @@ if [[ $choice == [yY] ]]; then
     # set theme to "rr"
     sed -i 's/^OSH_THEME=.*/OSH_THEME="rr"/' "$HOME/.bashrc"
     # append custom settings
-    cat ../bashrc >> $HOME/.bashrc
+    cat $HOME/dotfiles/bashrc >> $HOME/.bashrc
     echo "bash setup completed"
 fi
 

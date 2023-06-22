@@ -29,3 +29,5 @@ call plug#end()
 " }}}
 
 colorscheme gruvbox-material
+
+let g:netrw_liststyle = 3
