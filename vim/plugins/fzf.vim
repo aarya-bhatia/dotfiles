@@ -87,6 +87,9 @@ nnoremap <silent> <leader>fm :FzfMarks<CR>
 " List snippets
 nnoremap <silent> <leader>fs :FzfSnippets<CR>
 
+" List tags
+nnoremap <silent> <leader>ft :FzfTags<CR>
+
 " Mapping selecting mappings
 nmap <leader><tab> <plug>(fzf-maps-n)
 xmap <leader><tab> <plug>(fzf-maps-x)

@@ -1,8 +1,12 @@
+# Custom
+plugged/
+bin/
+cache/
+
 # Ignore directories
 node_modules/
 .git/
 tmp/
-
 
 # Ignore specific files
 .env

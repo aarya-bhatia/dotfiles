@@ -7,10 +7,14 @@ endif
 
 "" Editor settings {{{
 
-syntax on
-filetype indent plugin on
+set nocompatible      " We're running Vim, not Vi!
+syntax on             " Enable syntax highlighting
+filetype on           " Enable filetype detection
+filetype indent on    " Enable filetype-specific indenting
+filetype plugin on    " Enable filetype-specific plugins
 
-set nocompatible
+set smartindent
+set smarttab
 set autoindent                    " set auto-indenting on for programming
 set number                        " show current line number
 set relativenumber                " show relative line numbers
@@ -22,18 +26,17 @@ set belloff=all                   " turn off error beeps
 set hidden                        " allows multiple buffers without saving
 set nowrap                        " line wrap
 set linebreak
-set shiftwidth=4 tabstop=4 noexpandtab
+set shiftwidth=2 tabstop=2 expandtab
 set scrolloff=8
 set backspace=indent,eol,start    " make that backspace key work the way it should
 set splitbelow                    " new horizontal split opens below current window
 set splitright                    " new vertical split opens to the right of current window
 set colorcolumn=0			      " color column
 set foldlevel=99 " Prevent folding on startup
-set mouse=a
-set noswapfile
-set nowritebackup
-set undodir=$HOME/undodir
-set undofile
+set mouse+=a
+" set noswapfile
+" set undodir=$HOME/undodir
+" set undofile
 set laststatus=2		          " always show status line
 set path+=**
 set wildmenu

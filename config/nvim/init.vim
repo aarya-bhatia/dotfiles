@@ -9,52 +9,59 @@ tnoremap <Esc> <C-\><C-n>
 
 call plug#begin('$HOME/.config/nvim/plugged')
 
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-sensible'
-
-" nvim colorschemes
-Plug 'ellisonleao/gruvbox.nvim'
-Plug 'sainnhe/gruvbox-material'
-Plug 'folke/tokyonight.nvim'
+Plug 'tpope/vim-repeat'     " Repeat custom commands with dot
+Plug 'tpope/vim-fugitive'   " Git tool
 
 Plug 'numToStr/Comment.nvim'
 
-" Status line
+" colorschemes
+Plug 'sainnhe/gruvbox-material'
+Plug 'folke/tokyonight.nvim'
+
+" status line
 Plug 'nvim-lualine/lualine.nvim'
+
+" icons
 Plug 'nvim-tree/nvim-web-devicons'
 
 " Syntax highlighting
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
-Plug 'tpope/vim-surround'
-Plug 'andymass/vim-matchup'
-
 " Async library
 Plug 'nvim-lua/plenary.nvim'
-
-" File explorer
-Plug 'stevearc/oil.nvim'
-nnoremap <leader>- :Oil<CR>
-
-" Repeat custom commands with dot
-Plug 'tpope/vim-repeat'
 
 " Debugger
 Plug 'mfussenegger/nvim-dap'
 
-" Git tool
-Plug 'tpope/vim-fugitive'
+" Indent lines
+Plug 'lukas-reineke/indent-blankline.nvim'
+
+" Marks
+Plug 'chentoast/marks.nvim'
+
+" File explorer
+Plug 'stevearc/oil.nvim'
+nnoremap <leader>- :Oil<CR>
 
 source $VIM_DIR/plugins/fzf.vim           " fuzzy finder
 source $VIM_DIR/plugins/coc.vim           " lsp
 source $VIM_DIR/plugins/ack.vim           " grep tool
 source $VIM_DIR/plugins/tagbar.vim        " tags
 
+" Lua development plugin
+Plug 'bfredl/nvim-luadev'
+nnoremap <leader>lr <Plug>(Luadev-Run)
+nnoremap <leader>ll <Plug>(Luadev-RunLine)
+
 call plug#end()
 
 " lua configs
-source $VIM_DIR/lua/config.lua
-source $VIM_DIR/lua/treesitter.lua
+source $HOME/.config/nvim/lua/config.lua
+source $HOME/.config/nvim/lua/treesitter.lua
 
 colorscheme gruvbox-material
+" colorscheme tokyonight-night
 

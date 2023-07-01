@@ -2,10 +2,13 @@
 [keybindings]
 [profiles]
   [[default]]
+    background_darkness = 0.64
+    background_type = transparent
     cursor_fg_color = "#000000"
     cursor_bg_color = "#aaaaaa"
-    font = Hack Nerd Font Mono 13
+    font = Source Code Pro 12
     show_titlebar = False
+    scrollbar_position = hidden
     use_system_font = False
     bold_is_bright = True
 [layouts]

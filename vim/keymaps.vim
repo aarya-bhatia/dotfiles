@@ -51,18 +51,15 @@ nnoremap <C-j> 8<C-e>
 nnoremap <C-l> 8zl
 nnoremap <C-h> 8zh
 
-vnoremap <silent> <leader>y :call WriteToClipboard()<CR>
+" unhighlight search results
+nnoremap <leader>hl :nohl<CR>
 
-function! WriteToClipboard()
-    let clipboard_command = has('mac') ? 'pbcopy' : 'xsel --clipboard'
-    let error_message = has('mac') ? 'pbcopy command not found' : 'xsel command not found'
-    
-    if executable(clipboard_command)
-        execute 'write !' . clipboard_command
-    else
-        echomsg error_message
-    endif
-endfunction
+" copy selection to clipboard tool
+if has('mac')
+  noremap <leader>y :write !pbcopy >/dev/null
+else
+  noremap <leader>y :write !xsel -b >/dev/null
+endif
 
 " close buffer and quit if last window
 nnoremap <silent> <leader>d :call CloseBuffer()<CR>

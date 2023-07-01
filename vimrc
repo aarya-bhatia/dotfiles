@@ -17,6 +17,7 @@ Plug 'jamessan/vim-gnupg'       " edit gpg files in vim
 Plug 'kana/vim-textobj-user'
 Plug 'andymass/vim-matchup'
 Plug 'wellle/targets.vim'		" text objects
+Plug 'vim-ruby/vim-ruby'
 
 source $VIM_DIR/plugins/fzf.vim
 source $VIM_DIR/plugins/status.vim
@@ -29,3 +30,6 @@ call plug#end()
 " }}}
 
 colorscheme gruvbox-material
+" colorscheme catppuccin_mocha
+
+let g:netrw_liststyle = 0
