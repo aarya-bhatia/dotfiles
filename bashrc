@@ -1,5 +1,7 @@
 source $HOME/dotfiles/default-bashrc
 
+[ -z "$TMUX" ] && export TERM=xterm-256color
+
 if [ -d /usr/share/fzf ]; then
 	source /usr/share/fzf/completion.bash
 	source /usr/share/fzf/key-bindings.bash
@@ -10,7 +12,7 @@ alias vim='nvim'
 alias audio='pulseaudio-ctl'
 alias bright='brightnessctl'
 alias tree='tree -C --gitignore'
-alias rsync='rsync -avu --exclude-from=/home/aarya/dotfiles/copyignore'
+alias rsync='rsync -avu --exclude-from=/home/aarya/copyignore'
 alias rclone='rclone -P'
 alias df='df -h'
 alias open='xdg-open'
@@ -18,16 +20,18 @@ alias xsel='xsel -b'
 alias s='systemctl'
 alias rm='mkdir -p ~/.trash && mv -t ~/.trash'
 alias emptytrash='/bin/rm -rf ~/.trash'
+alias i3lock='i3lock --ignore-empty-password -c 000000 -i "/usr/share/backgrounds/archlinux/wild.png"'
+alias addpass='pass insert -m'
 
 function screenshot() {
   scrot -F "/home/aarya/screenshots/%Y-%m-%d_%H:%M:%S_\$wx\$h.png" -e 'optipng $f'
 }
 
-function rclonesync(){
-  rclone copy --exclude-from=/home/aarya/dotfiles/copyignore -v --update ~/GoogleDrive gdrive:
-  rclone copy --exclude-from=/home/aarya/dotfiles/copyignore -v --update gdrive: ~/GoogleDrive
-  rclone copy --exclude-from=/home/aarya/dotfiles/copyignore -v --update ~/OneDrive onedrive:
-  rclone copy --exclude-from=/home/aarya/dotfiles/copyignore -v --update onedrive: ~/OneDrive
+function cloudsync(){
+  rclone copy --exclude-from=/home/aarya/copyignore -v --update ~/GoogleDrive gdrive:
+  rclone copy --exclude-from=/home/aarya/copyignore -v --update gdrive: ~/GoogleDrive
+  rclone copy --exclude-from=/home/aarya/copyignore -v --update ~/OneDrive onedrive:
+  rclone copy --exclude-from=/home/aarya/copyignore -v --update onedrive: ~/OneDrive
 }
 
 export FZF_DEFAULT_OPTS="--border --info=inline -m"

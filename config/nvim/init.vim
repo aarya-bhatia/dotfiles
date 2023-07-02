@@ -44,6 +44,9 @@ Plug 'chentoast/marks.nvim'
 
 " File explorer
 Plug 'stevearc/oil.nvim'
+
+Plug 'jamessan/vim-gnupg'       " edit gpg files in vim
+
 nnoremap <leader>- :Oil<CR>
 
 source $VIM_DIR/plugins/fzf.vim           " fuzzy finder
