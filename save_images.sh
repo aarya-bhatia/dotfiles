@@ -1,4 +1,8 @@
 #!/bin/bash
+#
+# We can pipe this command to "meh" image viewer
+# It will "bookmark" the selected images when we press ENTER
+# by copying the file to the destination folder
 
 # Destination directory
 destination="$HOME/Pictures/saved/"
