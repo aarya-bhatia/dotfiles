@@ -10,6 +10,7 @@ directories=(
 "$HOME/.config/nvim"
 "$HOME/.config/zathura"
 "$HOME/.config/neofetch"
+"$HOME/.config/cmus"
 )
 
 for directory in "${directories[@]}"; do

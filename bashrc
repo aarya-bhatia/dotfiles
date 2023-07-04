@@ -12,7 +12,7 @@ alias vim='nvim'
 alias audio='pulseaudio-ctl'
 alias bright='brightnessctl'
 alias tree='tree -C --gitignore'
-alias rsync='rsync -avu --exclude-from=/home/aarya/copyignore'
+alias rsync='rsync -avu --exclude-from=/home/aarya/dotfiles/copyignore'
 alias rclone='rclone -P'
 alias df='df -h'
 alias open='xdg-open'
@@ -28,10 +28,11 @@ function screenshot() {
 }
 
 function cloudsync(){
-  rclone copy --exclude-from=/home/aarya/copyignore -v --update ~/GoogleDrive gdrive:
-  rclone copy --exclude-from=/home/aarya/copyignore -v --update gdrive: ~/GoogleDrive
-  rclone copy --exclude-from=/home/aarya/copyignore -v --update ~/OneDrive onedrive:
-  rclone copy --exclude-from=/home/aarya/copyignore -v --update onedrive: ~/OneDrive
+  copyignore="/home/aarya/dotfiles/copyignore"
+  rclone copy --exclude-from=$copyignore -v --update ~/GoogleDrive gdrive:
+  rclone copy --exclude-from=$copyignore -v --update gdrive: ~/GoogleDrive
+  rclone copy --exclude-from=$copyignore -v --update ~/OneDrive onedrive:
+  rclone copy --exclude-from=$copyignore -v --update onedrive: ~/OneDrive
 }
 
 export FZF_DEFAULT_OPTS="--border --info=inline -m"

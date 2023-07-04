@@ -2,6 +2,9 @@
 plugged/
 bin/
 cache/
+*.pl
+*history
+cache
 
 # Ignore directories
 node_modules/
