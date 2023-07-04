@@ -22,7 +22,7 @@ augroup group
   autocmd FileType vim setlocal foldmethod=marker
 
   " Trim trailing whitespace on lines
-  autocmd BufWritePost * :%s/\s\+$//e | nohlsearch
+  autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
 
 augroup END
 

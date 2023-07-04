@@ -6,6 +6,7 @@ directories=(
 "$HOME/Downloads"
 "$HOME/GoogleDrive"
 "$HOME/OneDrive"
+"$HOME/Library"
 "$HOME/repos"
 "$HOME/screenshots"
 "$HOME/Pictures"
