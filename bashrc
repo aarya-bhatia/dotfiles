@@ -22,6 +22,7 @@ alias rm='mkdir -p ~/.trash && mv -t ~/.trash'
 alias emptytrash='/bin/rm -rf ~/.trash'
 alias i3lock='i3lock --ignore-empty-password -c 000000 -i "/usr/share/backgrounds/archlinux/wild.png"'
 alias addpass='pass insert -m'
+alias fvim='$HOME/dotfiles/fzf-vim.py'
 
 function screenshot() {
   scrot -F "/home/aarya/screenshots/%Y-%m-%d_%H:%M:%S_\$wx\$h.png" -e 'optipng $f'
@@ -46,3 +47,6 @@ export VIM_DIR=$HOME/dotfiles/vim
 
 export PATH=$PATH:/usr/local/bin
 export PATH=$HOME/.config/rofi/scripts:$PATH
+
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+source $HOME/pyvenv/bin/activate

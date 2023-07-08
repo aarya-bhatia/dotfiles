@@ -64,6 +64,7 @@ call plug#end()
 " lua configs
 source $HOME/.config/nvim/lua/config.lua
 source $HOME/.config/nvim/lua/treesitter.lua
+source $HOME/.config/nvim/lua/commands.lua
 
 colorscheme gruvbox-material
 " colorscheme tokyonight-night
