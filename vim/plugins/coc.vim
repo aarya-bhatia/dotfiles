@@ -4,6 +4,7 @@
 
 " LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" let g:coc_node_path = ''
 
 set hidden
 set cmdheight=2

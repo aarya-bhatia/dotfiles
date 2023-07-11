@@ -3,6 +3,8 @@
 let mapleader = ' '
 let maplocalleader = ' '
 
+nnoremap <Esc> :nohl<CR>
+
 nnoremap <silent> <leader> <Nop>
 nnoremap <leader>ve :edit $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
@@ -46,13 +48,12 @@ nnoremap ]t :tabnext<CR>
 nnoremap [T :tabfirst<CR>
 nnoremap ]T :tablast<CR>
 
-nnoremap <C-k> 8<C-y>
-nnoremap <C-j> 8<C-e>
+" nnoremap <C-k> 8<C-y>
+" nnoremap <C-j> 8<C-e>
+nnoremap <C-k> 6k
+nnoremap <C-j> 6j
 nnoremap <C-l> 8zl
 nnoremap <C-h> 8zh
-
-" unhighlight search results
-nnoremap <leader>hl :nohl<CR>
 
 " copy selection to clipboard tool
 if has('mac')
@@ -61,18 +62,50 @@ else
   noremap <leader>y :write !xsel -b >/dev/null
 endif
 
-" close buffer and quit if last window
-nnoremap <silent> <leader>d :call CloseBuffer()<CR>
-
 " save and close window
 nnoremap <leader>q :wqa<CR>
+
+" close buffer and quit if last window
+nnoremap <silent> <leader>d :call CloseBuffer()<CR>
 
 function! CloseBuffer()
     if bufnr('$') == 1
         execute 'q'
     else
         execute 'bd'
+        " execute 'bp'
+        " execute 'bd #'
     endif
 endfunction
+
+" Close current buffer and switch to the previous one
+noremap <C-x> :bp<Bar>bd #<Cr>
+
+nmap >> <Nop>
+nmap << <Nop>
+vmap << <Nop>
+vmap << <Nop>
+
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+vnoremap <Tab> >><Esc>gv
+vnoremap <S-Tab> <<<Esc>gv
+
+nnoremap Q @q
+
+nnoremap Y y$
+
+inoremap <> <><Left>
+inoremap () ()<Left>
+inoremap {} {}<Left>
+inoremap [] []<Left>
+inoremap "" ""<Left>
+inoremap '' ''<Left>
+inoremap `` ``<Left>
+
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
 
 " }}}
