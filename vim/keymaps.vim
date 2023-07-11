@@ -57,9 +57,13 @@ nnoremap <C-h> 8zh
 
 " copy selection to clipboard tool
 if has('mac')
-  noremap <leader>y :write !pbcopy >/dev/null
+  nnoremap <leader>y :write !pbcopy<CR>
+  vnoremap <leader>y :write !pbcopy<CR>
+  nnoremap <leader>p :read !pbpaste<CR>
 else
-  noremap <leader>y :write !xsel -b >/dev/null
+  nnoremap <leader>y :write !xsel -i -b >/dev/null<CR>
+  vnoremap <leader>y :write !xsel -i -b >/dev/null<CR>
+  nnoremap <leader>p :read !xsel -o<CR>
 endif
 
 " save and close window
