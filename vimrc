@@ -1,7 +1,5 @@
-source $VIM_DIR/main.vim
-source $VIM_DIR/keymaps.vim
-source $VIM_DIR/autocmds.vim
-source $VIM_DIR/abbrev.vim
+let mapleader = ' '
+let maplocalleader = ' '
 
 " Vim Plug {{{
 
@@ -30,6 +28,6 @@ call plug#end()
 " }}}
 
 colorscheme gruvbox-material
-" colorscheme catppuccin_mocha
 
-let g:netrw_liststyle = 0
+source $VIM_DIR/main.vim
+

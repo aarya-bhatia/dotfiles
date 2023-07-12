@@ -193,7 +193,7 @@ exec_always --no-startup-id picom --config $HOME/dotfiles/config/picom.conf &
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # Auto lock in 10 minutes and suspend after 10 more mins of inactivity
-exec_always --no-startup-id ~/dotfiles/screenlock.sh
+exec_always --no-startup-id ~/dotfiles/scripts/screenlock.sh
 
 bindsym $mod+Shift+x exec i3lock -e -c 000000 -i "/usr/share/backgrounds/archlinux/wild.png" && systemctl suspend
 

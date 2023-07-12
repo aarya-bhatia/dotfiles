@@ -1,19 +1,15 @@
-source $VIM_DIR/main.vim
-source $VIM_DIR/keymaps.vim
-source $VIM_DIR/autocmds.vim
-source $VIM_DIR/abbrev.vim
-
-set guicursor+=i:block
-
-tnoremap <Esc> <C-\><C-n>
+let mapleader = ' '
+let maplocalleader = ' '
 
 call plug#begin('$HOME/.config/nvim/plugged')
 
-Plug 'tpope/vim-surround'
+" Essentials
 Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-repeat'     " Repeat custom commands with dot
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'   " Git tool
 
+" comment with gc
 Plug 'numToStr/Comment.nvim'
 
 " colorschemes
@@ -45,9 +41,8 @@ Plug 'chentoast/marks.nvim'
 " File explorer
 Plug 'stevearc/oil.nvim'
 
-Plug 'jamessan/vim-gnupg'       " edit gpg files in vim
-
-nnoremap <leader>- :Oil<CR>
+" edit gpg files in vim
+Plug 'jamessan/vim-gnupg'
 
 source $VIM_DIR/plugins/fzf.vim           " fuzzy finder
 source $VIM_DIR/plugins/coc.vim           " lsp
@@ -67,5 +62,6 @@ source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/commands.lua
 
 colorscheme gruvbox-material
-" colorscheme tokyonight-night
+
+source $VIM_DIR/main.vim
 

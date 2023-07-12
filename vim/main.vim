@@ -16,7 +16,7 @@ filetype plugin on    " Enable filetype-specific plugins
 set smartindent
 set smarttab
 set autoindent                    " set auto-indenting on for programming
-set number                        " show current line number
+" set number                        " show current line number
 set relativenumber                " show relative line numbers
 set incsearch                     " do incremental searching
 set showmatch                     " jump to matches when entering regexp
@@ -34,14 +34,228 @@ set splitright                    " new vertical split opens to the right of cur
 set colorcolumn=0			      " color column
 set foldlevel=99 " Prevent folding on startup
 set mouse+=a
+set laststatus=2		          " always show status line
+set wildmenu
+
 " set noswapfile
 " set undodir=$HOME/undodir
 " set undofile
-set laststatus=2		          " always show status line
-set path+=**
-set wildmenu
+" set path+=**
+
+if has('nvim')
+  set guicursor+=i:block
+  tnoremap <Esc> <C-\><C-n>
+endif
 
 runtime! ftplugin/man.vim         " Use :Man man to lookup man page
 
+let g:netrw_liststyle = 0
+let g:netrw_banner=0
+
 " }}}
 
+" Autocommands {{{
+
+" Return to last edit position when opening files (You want this!)
+au BufReadPost *
+            \ if line("'\"") > 0 && line("'\"") <= line("$") |
+            \   exe "normal! g`\"" |
+            \ endif
+
+augroup group
+  autocmd!
+
+  " C/C++ filetye commands
+  autocmd!
+  autocmd FileType vim setlocal foldmethod=marker
+  autocmd FileType c,cpp setlocal textwidth=120
+  autocmd FileType c,cpp setlocal foldmethod=syntax
+  autocmd FileType c,cpp setlocal ts=2 sts=2 sw=2 et
+  autocmd BufRead,BufNewFile *.h set filetype=c
+
+  autocmd FileType markdown,text setlocal spell spelllang=en_us
+  autocmd FileType markdown,text setlocal wrap
+  autocmd FileType vim setlocal foldmethod=marker
+
+  " Trim trailing whitespace on lines
+  autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
+
+augroup END
+
+" }}}
+
+" Abbreviations {{{
+
+iabbrev @@ aarya.bhatia1678@gmail.com
+iabbrev AB Aarya Bhatia
+iabbrev ab Aarya Bhatia
+iabbrev uiuc University of Illinois
+iabbrev --- ----------------------
+iabbrev todo TODO:<Space><C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR>:<Space>
+
+" }}}
+
+" Mappings {{{
+
+map [f <Nop>
+map ]f <Nop>
+map gh <Nop>
+map gH <Nop>
+map gH <Nop>
+nmap >> <Nop>
+nmap << <Nop>
+vmap << <Nop>
+vmap << <Nop>
+
+nnoremap <silent> <leader> <Nop>
+
+nnoremap <leader>ve :edit $MYVIMRC<CR>
+nnoremap <leader>vs :source $MYVIMRC<CR>
+
+" write buffer
+nnoremap <leader>s :w<cr>
+
+" save and close window
+nnoremap <leader>q :wqa<CR>
+
+" close buffer and keep split
+nnoremap <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
+
+" Close current buffer and switch to the previous one
+noremap <C-x> :bp<Bar>bd #<Cr>
+
+" Unhighlight search results
+nnoremap <Esc> :nohl<CR>
+
+" Indent lines with Tab and Shift+Tab
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
+vnoremap <Tab> >><Esc>gv
+vnoremap <S-Tab> <<<Esc>gv
+
+" surround last visual selection with quotes
+nnoremap <leader>v" `>a"<esc>`<i"<esc>lel
+
+" Exit insert mode
+inoremap kj <Esc>
+
+" open netrw file explorer
+if has('nvim')
+  nnoremap <leader>- :Oil<CR>
+else
+  nnoremap <leader>- :Ex<CR>
+endif
+
+" Reselect visual range while indenting
+vnoremap < <gv
+vnoremap > >gv
+
+" Paste over currently selected text without yanking it
+vnoremap p "_dP
+
+" navigate quickfix list
+nnoremap [q :cprev<CR>
+nnoremap ]q :cnext<CR>
+nnoremap [Q :colder<CR>
+nnoremap ]Q :cnewer<CR>
+
+" navigate buffers
+nnoremap [b :bprev<CR>
+nnoremap ]b :bnext<CR>
+
+" navigate arg list
+nnoremap [A :first<CR>
+nnoremap ]A :last<CR>
+nnoremap [a :prev<CR>
+nnoremap ]a :next<CR>
+
+" navigate tabs
+nnoremap [t :tabprevious<CR>
+nnoremap ]t :tabnext<CR>
+nnoremap [T :tabfirst<CR>
+nnoremap ]T :tablast<CR>
+
+" original vim keys
+nnoremap <leader>vj J
+nnoremap <leader>vh H
+nnoremap <leader>vl L
+nnoremap <leader>vm M
+
+" Open [M]an page
+nnoremap M K
+
+" Vertical scrolling without moving cursor
+nnoremap <C-k> 6<C-y>
+nnoremap <C-j> 6<C-e>
+vnoremap <C-k> 6<C-y>
+vnoremap <C-j> 6<C-e>
+
+" Horizontal scrolling
+nnoremap <C-h> 8zh
+nnoremap <C-l> 8zl
+vnoremap <C-h> 8zh
+vnoremap <C-l> 8zl
+
+" move up/down faster
+nnoremap K 6gk
+nnoremap J 6gj
+vnoremap K 6gk
+vnoremap J 6gj
+
+" move to start and end of line
+nnoremap L g$
+vnoremap L g$
+nnoremap H g^
+vnoremap H g^
+
+" handle line wrapped text in normal and visual mode
+nnoremap k gk
+nnoremap j gj
+nnoremap 0 g0
+nnoremap $ g$
+vnoremap k gk
+vnoremap j gj
+vnoremap 0 g0
+vnoremap $ g$
+
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+
+" To move around in insert mode
+inoremap <C-h> <Left>
+inoremap <C-l> <Right>
+inoremap <C-k> <Up>
+inoremap <C-j> <Down>
+
+" Command line mode navigation
+cnoremap <C-h> <Left>
+cnoremap <C-l> <Right>
+
+" copying selection to clipboard tools
+if has('mac')
+  nnoremap <leader>y :write !pbcopy<CR>
+  vnoremap <leader>y :write !pbcopy<CR>
+  nnoremap <leader>p :read !pbpaste<CR>
+else
+  nnoremap <leader>y :write !xsel -b >/dev/null<CR>
+  vnoremap <leader>y :write !xsel -b >/dev/null<CR>
+  nnoremap <leader>p :read !xsel -b -o<CR>
+endif
+
+" Replay macro @q
+nnoremap Q @q
+
+" [Y]ank till end of line for consistency with C and D commands
+nnoremap Y y$
+
+" inoremap <> <><Left>
+" inoremap () ()<Left>
+" inoremap {} {}<Left>
+" inoremap [] []<Left>
+" inoremap "" ""<Left>
+" inoremap '' ''<Left>
+" inoremap `` ``<Left>
+
+"
