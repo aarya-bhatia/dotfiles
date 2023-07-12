@@ -23,6 +23,7 @@ alias emptytrash='/bin/rm -rf ~/.trash'
 alias i3lock='i3lock --ignore-empty-password -c 000000 -i "/usr/share/backgrounds/archlinux/wild.png"'
 alias addpass='pass insert -m'
 alias fvim='$HOME/dotfiles/scripts/fzf-vim.py'
+alias pwd='pwd -P' # get fully resolved path of directory
 
 function screenshot() {
   scrot -F "/home/aarya/screenshots/%Y-%m-%d_%H:%M:%S_\$wx\$h.png" -e 'optipng $f'
