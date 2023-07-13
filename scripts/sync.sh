@@ -23,8 +23,4 @@ rsync $opts $HOME/.Xmodmap $HOME/dotfiles/config/xmodmap
 rsync $opts $HOME/.xinitrc $HOME/dotfiles/config/xinitrc
 rsync $opts $HOME/.screenlayout/ $HOME/dotfiles/screenlayout
 rsync $opts $HOME/.ssh/config $HOME/.ssh/*.pub $HOME/dotfiles/config/ssh
-rsync $opts $HOME/.bashrc $HOME/dotfiles/bashrc
-rsync $opts $HOME/.bash_profile $HOME/dotfiles/bash_profile
-rsync $opts $HOME/.vimrc $HOME/dotfiles/vimrc
-rsync $opts $HOME/.tmux.conf $HOME/dotfiles/tmux.conf
 
