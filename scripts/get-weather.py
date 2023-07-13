@@ -3,7 +3,7 @@
 import os
 import requests
 
-filepath = os.path.join(os.path.expanduser("~"), "dotfiles/locations.txt")
+filepath = os.path.join(os.path.expanduser("~"), "/tmp/locations")
 
 default_locations = ["ord", "sfo", "lax", "del"]
 locations = []

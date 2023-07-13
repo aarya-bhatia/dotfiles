@@ -1,23 +1,14 @@
 stty -ixon # disable ctrl-s and ctrl-q
-
 # append to the history file, don't overwrite it
 shopt -s histappend
-
+# allows us to cd into directory by typing its name
+shopt -s autocd
 # infinite history
 HISTSIZE=
 HISTFILESIZE=
-
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
-
-# enable color support of ls and also add handy aliases
-if [ -x /usr/bin/dircolors ]; then
-    test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
-    alias grep='grep --color=auto'
-    alias fgrep='fgrep --color=auto'
-    alias egrep='egrep --color=auto'
-fi
 
 alias s='systemctl'
 alias ss='sudo systemctl'
@@ -41,6 +32,7 @@ alias addpass='pass insert -m'
 alias fvim='$HOME/dotfiles/scripts/fzf-vim.py'
 alias pwd='pwd -P' # get fully resolved path of directory
 alias mkdir='mkdir -pv'
+alias bat='bat --style=plain --theme=gruvbox-dark'
 
 alias ls='ls --color=auto --group-directories-first'
 alias ll='ls --color=auto -alFh'
@@ -49,6 +41,18 @@ alias l='ls --color=auto -CF'
 
 # Add an "alert" alias for long running commands. Use like so: `sleep 10; alert`
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
+
+alias ip="ip --color=auto"
+alias diff="diff --color=auto"
+alias grep="grep --color=auto"
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+alias dmesg="dmesg --color=auto"
+
+alias cat="bat --plain"
+alias bathelp="bat --plain --language=help"
+
+export PS1='$(pwd) $ ' # Prompt
 
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
@@ -85,12 +89,14 @@ function cloudsync(){
   rclone copy --exclude-from=$copyignore -v --update onedrive: ~/OneDrive
 }
 
-_GREEN=$(tput setaf 2)
-_BLUE=$(tput setaf 4)
-_RED=$(tput setaf 1)
-_RESET=$(tput sgr0)
-_BOLD=$(tput bold)
+# vim pager
+alias view='col -b | vim -R -'
 
-# Command Prompt
-# export PS1='\W \$ '
-export PS1='$(pwd) $ '
+# fuzzy find man page
+alias fman="man -k . | fzf --prompt='Man > ' | awk '{print $1}' | xargs -r man"
+
+# open man page in vim
+function vman(){
+  [ ! $# -eq 0 ] && man "$@" | col -b | vim -R -c 'set ft=man' -
+}
+

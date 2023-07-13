@@ -5,6 +5,8 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+let $PAGER=''
+
 "" Editor settings {{{
 
 set nocompatible      " We're running Vim, not Vi!
@@ -211,12 +213,8 @@ vnoremap H g^
 " handle line wrapped text in normal and visual mode
 nnoremap k gk
 nnoremap j gj
-nnoremap 0 g0
-nnoremap $ g$
 vnoremap k gk
 vnoremap j gj
-vnoremap 0 g0
-vnoremap $ g$
 
 nnoremap <leader>h <C-w>h
 nnoremap <leader>j <C-w>j
