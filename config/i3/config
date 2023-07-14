@@ -123,6 +123,7 @@ set $ws10 "10"
 
 # Assign Workspaces:
 assign [class="firefox"] $ws2
+assign [class="qutebrowser"] $ws2
 assign [class="thunderbird"] $ws3
 assign [class="Tartube"] $ws4
 assign [class="arandr"] $ws4

@@ -52,7 +52,7 @@ alias dmesg="dmesg --color=auto"
 alias cat="bat --plain"
 alias bathelp="bat --plain --language=help"
 
-export PS1='$(pwd) $ ' # Prompt
+export PS1='$(pwd)$ ' # Prompt
 
 [ -z "$TMUX" ] && export TERM=xterm-256color
 

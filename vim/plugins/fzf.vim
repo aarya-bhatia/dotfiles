@@ -3,12 +3,6 @@
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'			" fuzzy finder
 
-" This is the default extra key bindings
-let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-x': 'split',
-  \ 'ctrl-v': 'vsplit' }
-
 " An action can be a reference to a function that processes selected lines
 function! s:build_quickfix_list(lines)
   call setqflist(map(copy(a:lines), '{ "filename": v:val, "lnum": 1 }'))
@@ -20,6 +14,7 @@ let g:fzf_action = {
   \ 'ctrl-q': function('s:build_quickfix_list'),
   \ 'ctrl-t': 'tab split',
   \ 'ctrl-x': 'split',
+  \ 'ctrl-s': 'split',
   \ 'ctrl-v': 'vsplit' }
 
 " - down / up / left / right
@@ -50,10 +45,6 @@ let g:fzf_colors =
   \ 'spinner': ['fg', 'Label'],
   \ 'header':  ['fg', 'Comment'] }
 
-" Enable per-command history
-" - History files will be stored in the specified directory
-" - When set, CTRL-N and CTRL-P will be bound to 'next-history' and
-"   'previous-history' instead of 'down' and 'up'.
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " List files in current files directory
@@ -73,6 +64,8 @@ nnoremap <silent> <leader><leader> :FzfBuffers<CR>
 
 " Find lines in buffers
 nnoremap <silent> <leader>fl :FzfBLines<CR>
+
+" Find lines in all buffers
 nnoremap <silent> <leader>fL :FzfLines<CR>
 
 " Grep search with Silver Searcher
@@ -89,11 +82,6 @@ nnoremap <silent> <leader>fs :FzfSnippets<CR>
 
 " List tags
 nnoremap <silent> <leader>ft :FzfTags<CR>
-
-" Mapping selecting mappings
-nmap <leader><tab> <plug>(fzf-maps-n)
-xmap <leader><tab> <plug>(fzf-maps-x)
-omap <leader><tab> <plug>(fzf-maps-o)
 
 " Insert mode completion
 imap <c-x><c-k> <plug>(fzf-complete-word)

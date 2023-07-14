@@ -5,8 +5,6 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-let $PAGER=''
-
 "" Editor settings {{{
 
 set nocompatible      " We're running Vim, not Vi!
@@ -18,7 +16,6 @@ filetype plugin on    " Enable filetype-specific plugins
 set smartindent
 set smarttab
 set autoindent                    " set auto-indenting on for programming
-" set number                        " show current line number
 set relativenumber                " show relative line numbers
 set incsearch                     " do incremental searching
 set showmatch                     " jump to matches when entering regexp
@@ -39,10 +36,8 @@ set mouse+=a
 set laststatus=2		          " always show status line
 set wildmenu
 
-" set noswapfile
 " set undodir=$HOME/undodir
 " set undofile
-" set path+=**
 
 if has('nvim')
   set guicursor+=i:block
@@ -53,6 +48,8 @@ runtime! ftplugin/man.vim         " Use :Man man to lookup man page
 
 let g:netrw_liststyle = 0
 let g:netrw_banner=0
+
+let $PAGER=''
 
 " }}}
 
@@ -93,7 +90,7 @@ iabbrev AB Aarya Bhatia
 iabbrev ab Aarya Bhatia
 iabbrev uiuc University of Illinois
 iabbrev --- ----------------------
-iabbrev todo TODO:<Space><C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR>:<Space>
+iabbrev todo TODO:<Space><C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR>:
 
 " }}}
 
@@ -104,10 +101,6 @@ map ]f <Nop>
 map gh <Nop>
 map gH <Nop>
 map gH <Nop>
-nmap >> <Nop>
-nmap << <Nop>
-vmap << <Nop>
-vmap << <Nop>
 
 nnoremap <silent> <leader> <Nop>
 
@@ -121,19 +114,14 @@ nnoremap <leader>s :w<cr>
 nnoremap <leader>q :wqa<CR>
 
 " close buffer and keep split
-nnoremap <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
+" nnoremap <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
+nnoremap <leader>d :bd<CR>
 
 " Close current buffer and switch to the previous one
 noremap <C-x> :bp<Bar>bd #<Cr>
 
 " Unhighlight search results
 nnoremap <Esc> :nohl<CR>
-
-" Indent lines with Tab and Shift+Tab
-nnoremap <Tab> >>
-nnoremap <S-Tab> <<
-vnoremap <Tab> >><Esc>gv
-vnoremap <S-Tab> <<<Esc>gv
 
 " surround last visual selection with quotes
 nnoremap <leader>v" `>a"<esc>`<i"<esc>lel
@@ -148,6 +136,10 @@ else
   nnoremap <leader>- :Ex<CR>
 endif
 
+" Indent with single angle bracket
+nnoremap > >>
+nnoremap < <<
+
 " Reselect visual range while indenting
 vnoremap < <gv
 vnoremap > >gv
@@ -158,8 +150,8 @@ vnoremap p "_dP
 " navigate quickfix list
 nnoremap [q :cprev<CR>
 nnoremap ]q :cnext<CR>
-nnoremap [Q :colder<CR>
-nnoremap ]Q :cnewer<CR>
+nnoremap [Q :cfirst<CR>
+nnoremap ]Q :clast<CR>
 
 " navigate buffers
 nnoremap [b :bprev<CR>
@@ -178,13 +170,8 @@ nnoremap [T :tabfirst<CR>
 nnoremap ]T :tablast<CR>
 
 " original vim keys
-nnoremap <leader>vj J
-nnoremap <leader>vh H
-nnoremap <leader>vl L
-nnoremap <leader>vm M
-
-" Open [M]an page
-nnoremap M K
+nnoremap <leader>J J
+nnoremap <leader>K K
 
 " Vertical scrolling without moving cursor
 nnoremap <C-k> 6<C-y>
@@ -203,12 +190,6 @@ nnoremap K 6gk
 nnoremap J 6gj
 vnoremap K 6gk
 vnoremap J 6gj
-
-" move to start and end of line
-nnoremap L g$
-vnoremap L g$
-nnoremap H g^
-vnoremap H g^
 
 " handle line wrapped text in normal and visual mode
 nnoremap k gk
@@ -248,12 +229,6 @@ nnoremap Q @q
 " [Y]ank till end of line for consistency with C and D commands
 nnoremap Y y$
 
-" inoremap <> <><Left>
-" inoremap () ()<Left>
-" inoremap {} {}<Left>
-" inoremap [] []<Left>
-" inoremap "" ""<Left>
-" inoremap '' ''<Left>
-" inoremap `` ``<Left>
+" Select the lines that were just pasted
+nnoremap <leader>V V`]
 
-"
