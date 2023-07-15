@@ -13,6 +13,9 @@ directories=(
 "$HOME/.config/zathura"
 "$HOME/.config/neofetch"
 "$HOME/.config/cmus"
+"$HOME/.config/qutebrowser"
+"$HOME/.config/bat"
+"$HOME/.config/vifm"
 )
 
 for directory in "${directories[@]}"; do

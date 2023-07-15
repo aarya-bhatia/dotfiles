@@ -39,8 +39,8 @@ bindsym XF86MonBrightnessUp exec brightnessctl set +10% # increase screen bright
 bindsym XF86MonBrightnessDown exec brightnessctl set 10%- # decrease screen brightness
 
 # Media player controls
-# bindsym XF86AudioPlay exec playerctl play-pause
-# bindsym XF86AudioPause exec playerctl play-pause
+bindsym XF86AudioPlay exec playerctl play-pause
+bindsym XF86AudioPause exec playerctl play-pause
 # bindsym XF86AudioNext exec playerctl next
 # bindsym XF86AudioPrev exec playerctl previous
 

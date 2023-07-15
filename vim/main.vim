@@ -67,6 +67,7 @@ augroup group
   " C/C++ filetye commands
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
+  autocmd FileType * setlocal foldmethod=syntax
   autocmd FileType c,cpp setlocal textwidth=120
   autocmd FileType c,cpp setlocal foldmethod=syntax
   autocmd FileType c,cpp setlocal ts=2 sts=2 sw=2 et
@@ -111,7 +112,7 @@ nnoremap <leader>vs :source $MYVIMRC<CR>
 nnoremap <leader>s :w<cr>
 
 " save and close window
-nnoremap <leader>q :wqa<CR>
+nnoremap <leader>q :wq<CR>
 
 " close buffer and keep split
 " nnoremap <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
@@ -231,4 +232,6 @@ nnoremap Y y$
 
 " Select the lines that were just pasted
 nnoremap <leader>V V`]
+
+nnoremap <leader>F :Format<CR>
 
