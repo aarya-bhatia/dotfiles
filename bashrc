@@ -26,6 +26,7 @@ alias df='df -h'
 alias open='xdg-open'
 alias xsel='xsel -b'
 alias rm='mkdir -p ~/.trash && mv -t ~/.trash'
+alias RM='/bin/rm'
 alias emptytrash='/bin/rm -rf ~/.trash'
 alias i3lock='i3lock --ignore-empty-password -c 000000 -i "/usr/share/backgrounds/archlinux/wild.png"'
 alias addpass='pass insert -m'
@@ -75,7 +76,7 @@ export PATH=$HOME/.config/rofi/scripts:$PATH
 
 # Load python venv
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-source $HOME/pyvenv/bin/activate
+[ -d $HOME/pyenv ] && source $HOME/pyvenv/bin/activate
 
 function screenshot() {
   scrot -F "/home/aarya/screenshots/%Y-%m-%d_%H:%M:%S_\$wx\$h.png" -e 'optipng $f'

@@ -109,10 +109,10 @@ nnoremap <leader>ve :edit $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
 
 " write buffer
-nnoremap <leader>s :w<cr>
+nnoremap <leader>s :write<cr>
 
 " save and close window
-nnoremap <leader>q :wq<CR>
+nnoremap <leader>q :quit<CR>
 
 " close buffer and keep split
 " nnoremap <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
