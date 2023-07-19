@@ -73,6 +73,8 @@ augroup group
   autocmd FileType c,cpp setlocal ts=2 sts=2 sw=2 et
   autocmd BufRead,BufNewFile *.h set filetype=c
 
+  autocmd BufNewFile,BufRead *.ejs set filetype=html
+
   autocmd FileType markdown,text setlocal spell spelllang=en_us
   autocmd FileType markdown,text setlocal wrap
   autocmd FileType vim setlocal foldmethod=marker
