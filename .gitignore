@@ -1,14 +1,11 @@
 # Custom
-plugged/
-bin/
-cache/
-*.pl
+plugged
+bin
+cache
 *history
 cache
-.vimgolf
+node_modules
 tmp
-
-node_modules/
 
 # Ignore specific files
 .env
