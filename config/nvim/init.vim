@@ -5,7 +5,7 @@ call plug#begin('$HOME/.config/nvim/plugged')
 
 " Essentials
 Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround' 
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'   " Git tool
 
@@ -51,8 +51,8 @@ source $VIM_DIR/plugins/tagbar.vim        " tags
 
 " Lua development plugin
 Plug 'bfredl/nvim-luadev'
-nnoremap <leader>lr <Plug>(Luadev-Run)
-nnoremap <leader>ll <Plug>(Luadev-RunLine)
+" nnoremap <leader>lr <Plug>(Luadev-Run)
+" nnoremap <leader>ll <Plug>(Luadev-RunLine)
 
 call plug#end()
 

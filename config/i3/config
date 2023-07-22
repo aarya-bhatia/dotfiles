@@ -196,5 +196,12 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 # Auto lock in 10 minutes and suspend after 10 more mins of inactivity
 exec_always --no-startup-id ~/dotfiles/scripts/screenlock.sh
 
+# CapsLock key acts like <Esc> if pressed alone and <Ctrl> if pressed with another key
+exec_always --no-startup-id ~/dotfiles/scripts/keymaps.sh
+
+# mirror display with HDMI-1 if connected
+exec_always --no-startup-id ~/dotfiles/scripts/screenmirror.sh
+
+# lock and suspend device with <Alt-X>
 bindsym $mod+Shift+x exec i3lock -e -c 000000 -i "/usr/share/backgrounds/archlinux/wild.png" && systemctl suspend
 

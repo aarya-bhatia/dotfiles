@@ -7,3 +7,8 @@ Host aws
   User ubuntu
   IdentityFile ~/.ssh/aws_rsa
 
+Host ubuntu14
+  Hostname 127.0.0.1
+  User aarya
+  Port 3022
+

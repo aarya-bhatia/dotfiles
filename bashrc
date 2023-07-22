@@ -34,6 +34,7 @@ alias fvim='$HOME/dotfiles/scripts/fzf-vim.py'
 alias pwd='pwd -P' # get fully resolved path of directory
 alias mkdir='mkdir -pv'
 alias bat='bat --style=plain --theme=gruvbox-dark'
+alias sc='sc-im'
 
 alias ls='ls --color=auto --group-directories-first'
 alias ll='ls --color=auto -alFh'
