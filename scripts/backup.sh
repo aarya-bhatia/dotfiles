@@ -10,6 +10,8 @@ directories=(
 "$HOME/screenshots"
 "$HOME/Pictures"
 "$HOME/MacBookProBackup"
+"$HOME/repos"
+"$HOME/dotfiles"
 "$HOME/.config"
 "$HOME/.ssh"
 "$HOME/.gnupg"
@@ -26,7 +28,7 @@ fi
 destination="$HOME/backup_$(date +%Y-%m-%d)"
 mkdir -p $destination
 
-opts="-aP --update --exclude-from=$copyignore --include=.git"
+opts="-aP --update --exclude-from=$copyignore --include=.git/"
 
 echo "Copying files..."
 for directory in "${directories[@]}"; do
@@ -37,30 +39,30 @@ echo "Exporting gpg keys..."
 gpg --export > $destination/public.key
 gpg --export-secret-key > $destination/private.key
 
-echo "Backing up git repos..."
-repo_directory=$HOME/repos
-mkdir -p ${destination}/repos
-
-cd "$HOME/dotfiles" && git archive --format=tar.gz --output="${destination}/dotfiles.tar.gz" HEAD
-
-# Find all the git repositories and perform the backup
-find "${repo_directory}" -type d -name ".git" | while read -r git_directory; do
-    repo_directory=$(dirname "${git_directory}")
-
-    # Move to the repository directory
-    cd "${repo_directory}" || exit
-
-    # Get the repository name
-    repo_name=$(basename "${repo_directory}")
-
-    # Create the backup file path
-    backup_file="${destination}/repos/${repo_name}.tar.gz"
-
-    # Run "git archive" and save the output as a tar file
-    git archive --format=tar.gz --output="${backup_file}" HEAD
-
-    echo "Backup created for ${repo_name}"
-done
+# echo "Backing up git repos..."
+# repo_directory=$HOME/repos
+# mkdir -p ${destination}/repos
+#
+# cd "$HOME/dotfiles" && git archive --format=tar.gz --output="${destination}/dotfiles.tar.gz" HEAD
+#
+# # Find all the git repositories and perform the backup
+# find "${repo_directory}" -type d -name ".git" | while read -r git_directory; do
+#     repo_directory=$(dirname "${git_directory}")
+#
+#     # Move to the repository directory
+#     cd "${repo_directory}" || exit
+#
+#     # Get the repository name
+#     repo_name=$(basename "${repo_directory}")
+#
+#     # Create the backup file path
+#     backup_file="${destination}/repos/${repo_name}.tar.gz"
+#
+#     # Run "git archive" and save the output as a tar file
+#     git archive --format=tar.gz --output="${backup_file}" HEAD
+#
+#     echo "Backup created for ${repo_name}"
+# done
 
 echo "Creating tar file..."
 tarfile=$destination.tar.gz

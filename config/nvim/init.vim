@@ -49,10 +49,9 @@ source $VIM_DIR/plugins/coc.vim           " lsp
 source $VIM_DIR/plugins/ack.vim           " grep tool
 source $VIM_DIR/plugins/tagbar.vim        " tags
 
-" Lua development plugin
-Plug 'bfredl/nvim-luadev'
-" nnoremap <leader>lr <Plug>(Luadev-Run)
-" nnoremap <leader>ll <Plug>(Luadev-RunLine)
+Plug 'azadkuh/vim-cmus'
+nnoremap <leader>cmn :CmusNext<CR>
+nnoremap <leader>cmp :CmusPrevious<CR>
 
 call plug#end()
 
