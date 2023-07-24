@@ -23,5 +23,6 @@ for directory in "${directories[@]}"; do
 done
 
 rsync $opts $HOME/.xinitrc $HOME/dotfiles/config/xinitrc
+rsync $opts $HOME/.gitconfig $HOME/dotfiles/gitconfig
 rsync $opts $HOME/.ssh/config $HOME/.ssh/*.pub $HOME/dotfiles/config/ssh
 

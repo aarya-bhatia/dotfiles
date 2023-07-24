@@ -63,6 +63,7 @@ bindsym $mod+Shift+q kill
 
 # Open rofi program launcher
 bindsym $mod+d exec --no-startup-id rofi -show drun
+bindsym $mod+space exec --no-startup-id rofi -show run
 
 # Open rofi window menu
 bindsym $mod+Tab exec --no-startup-id rofi -show window
@@ -100,7 +101,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+# bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 # bindsym $mod+a focus parent
