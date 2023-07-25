@@ -114,10 +114,10 @@ xmap <silent> <leader>cr  <Plug>(coc-codeaction-refactor-selected)
 nmap <silent> <leader>cr  <Plug>(coc-codeaction-refactor-selected)
 
 " Symbol renaming
-nmap <leader>crn <Plug>(coc-rename)
+nnoremap <leader>crn <Plug>(coc-rename)
 
 " Git blame
-nmap <leader>gb :CocCommand git.showBlameDoc<CR>
+nnoremap <leader>gb :CocCommand git.showBlameDoc<CR>
 
 " navigate chunks of current buffer
 nnoremap [g <Plug>(coc-git-prevchunk)

@@ -216,11 +216,11 @@ cnoremap <C-l> <Right>
 if has('mac')
   nnoremap <leader>y :write !pbcopy<CR>
   vnoremap <leader>y :write !pbcopy<CR>
-  nnoremap <leader>p :read !pbpaste<CR>
+  nnoremap <leader>pp :read !pbpaste<CR>
 else
   nnoremap <leader>y :write !xsel -b >/dev/null<CR>
   vnoremap <leader>y :write !xsel -b >/dev/null<CR>
-  nnoremap <leader>p :read !xsel -b -o<CR>
+  nnoremap <leader>pp :read !xsel -b -o<CR>
 endif
 
 " Replay macro @q
@@ -234,3 +234,5 @@ nnoremap <leader>V V`]
 
 nnoremap <leader>F :Format<CR>
 
+" Replace current word with yanked word ([p]aste [w]ord)
+nnoremap <leader>pw ciw<C-r>0<Esc>
