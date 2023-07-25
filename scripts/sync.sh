@@ -1,7 +1,6 @@
 #!/bin/sh
 
 mkdir -p ~/dotfiles/config
-
 copyignore="/home/aarya/dotfiles/copyignore"
 opts="-avu --exclude-from=$copyignore"
 directories=(
@@ -15,6 +14,7 @@ directories=(
 "$HOME/.config/cmus"
 "$HOME/.config/qutebrowser"
 "$HOME/.config/bat"
+"$HOME/.config/ranger"
 )
 
 for directory in "${directories[@]}"; do

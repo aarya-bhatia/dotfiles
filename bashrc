@@ -72,6 +72,7 @@ export READER="zathura"
 export GPG_TTY=`tty`
 export NOTES_DIRECTORY=$HOME/GoogleDrive/Laptop/notes
 export VIM_DIR=$HOME/dotfiles/vim
+export DOTFILES=$HOME/dotfiles
 
 export PATH=$PATH:/usr/local/bin
 export PATH=$HOME/.config/rofi/scripts:$PATH
@@ -85,11 +86,10 @@ function screenshot() {
 }
 
 function cloudsync(){
-  copyignore="/home/aarya/dotfiles/copyignore"
-  rclone copy --exclude-from=$copyignore -v --update ~/GoogleDrive gdrive:
-  rclone copy --exclude-from=$copyignore -v --update gdrive: ~/GoogleDrive
-  rclone copy --exclude-from=$copyignore -v --update ~/OneDrive onedrive:
-  rclone copy --exclude-from=$copyignore -v --update onedrive: ~/OneDrive
+  rclone copy --exclude-from=$DOTFILES/copyignore -v --update ~/GoogleDrive gdrive:
+  rclone copy --exclude-from=$DOTFILES/copyignore -v --update gdrive: ~/GoogleDrive
+  rclone copy --exclude-from=$DOTFILES/copyignore -v --update ~/OneDrive onedrive:
+  rclone copy --exclude-from=$DOTFILES/copyignore -v --update onedrive: ~/OneDrive
 }
 
 # vim pager
