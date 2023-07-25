@@ -16,7 +16,6 @@ Plug 'wellle/targets.vim'		              " more text objects
 Plug 'jamessan/vim-gnupg'                 " edit gpg files
 
 source $VIM_DIR/plugins/fzf.vim           " fuzzy finder
-source $VIM_DIR/plugins/status.vim        " status bar
 source $VIM_DIR/plugins/ack.vim           " grep tool
 source $VIM_DIR/plugins/colorscheme.vim   " colorscheme
 source $VIM_DIR/plugins/tagbar.vim        " tags
