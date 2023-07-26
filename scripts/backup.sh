@@ -12,10 +12,13 @@ directories=(
 "$HOME/Pictures"
 "$HOME/repos"
 "$HOME/dotfiles"
+"$HOME/diskimages"
 "$HOME/.config"
+"$HOME/.local"
 "$HOME/.ssh"
 "$HOME/.gnupg"
 "$HOME/.password-store"
+"$HOME/.thunderbird"
 )
 
 copyignore="/home/aarya/dotfiles/copyignore"

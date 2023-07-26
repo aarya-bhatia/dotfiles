@@ -2,12 +2,26 @@
 
 [ -f ~/.bashrc ] && source ~/.bashrc
 
-# default file permission mask
-umask 0027
+[ -z "$TMUX" ] && export TERM=xterm-256color
 
-# if command -v neofetch 2>&1 >/dev/null; then
-# 	neofetch
-# fi
+export FZF_DEFAULT_OPTS="--border --info=inline -m"
+export FZF_DEFAULT_COMMAND="fd --follow --color=auto --hidden --exclude={.git,node_modules,tmp,__pycache__}"
+export BROWSER="firefox"
+export EDITOR="nvim"
+export READER="zathura"
+export GPG_TTY=`tty`
+export PATH=$PATH:/usr/local/bin
+export PATH=$HOME/.config/rofi/scripts:$PATH
+
+export NOTES_DIRECTORY=$HOME/GoogleDrive/notes
+export DOTFILES=$HOME/dotfiles
+export VIM_DIR=$HOME/dotfiles/vim
+
+# Load python venv
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+[ -d $HOME/pyenv ] && source $HOME/pyvenv/bin/activate
+
+umask 0027 # file permission mask
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
   exec startx

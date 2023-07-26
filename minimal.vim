@@ -12,9 +12,8 @@ Plug 'tpope/vim-surround'		" surround operator
 Plug 'tpope/vim-repeat'
 
 source $VIM_DIR/plugins/fzf.vim
-source $VIM_DIR/plugins/status.vim
 source $VIM_DIR/plugins/ack.vim
-source $VIM_DIR/plugins/theme.vim
+source $VIM_DIR/plugins/colorscheme.vim
 
 call plug#end()
 
