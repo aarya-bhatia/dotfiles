@@ -46,7 +46,7 @@ alias sc="sc-im"
 alias bat="bat --style=plain --theme=gruvbox-dark"
 alias cat="bat --plain"
 alias bathelp="bat --plain --language=help"
-alias ta="tmux attach"
+alias ta="tmux attach || tmux"
 alias block="betterlockscreen"
 
 # vim pager
