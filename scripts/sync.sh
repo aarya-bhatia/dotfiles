@@ -10,19 +10,19 @@ directories=(
 "$HOME/.config/rofi"
 "$HOME/.config/nvim"
 "$HOME/.config/zathura"
-"$HOME/.config/neofetch"
-"$HOME/.config/cmus"
 "$HOME/.config/qutebrowser"
-"$HOME/.config/bat"
 "$HOME/.config/ranger"
-"$HOME/.config/nitrogen"
 )
 
 for directory in "${directories[@]}"; do
   rsync $opts $directory $HOME/dotfiles/config
 done
 
-rsync $opts $HOME/.xinitrc $HOME/dotfiles/config/xinitrc
+rsync $opts $HOME/.xinitrc $HOME/dotfiles/xinitrc
+rsync $opts $HOME/.Xmodmap $HOME/dotfiles/Xmodmap
 rsync $opts $HOME/.gitconfig $HOME/dotfiles/gitconfig
-rsync $opts $HOME/.ssh/config $HOME/.ssh/*.pub $HOME/dotfiles/config/ssh
+rsync $opts $HOME/.fehbg $HOME/dotfiles/fehbg
+rsync $opts $HOME/.agignore $HOME/dotfiles/agignore
+rsync $opts $HOME/.clang-format $HOME/dotfiles/clang-format
 
+rsync $opts $HOME/.ssh/config $HOME/.ssh/*.pub $HOME/dotfiles/config/ssh
