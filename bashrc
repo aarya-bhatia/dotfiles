@@ -1,5 +1,3 @@
-# export PS1="$(pwd)$ "
-
 HISTSIZE=
 HISTFILESIZE=
 
@@ -41,17 +39,15 @@ alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 alias dmesg="dmesg --color=auto"
 
-alias i3lock='i3lock --ignore-empty-password -c 000000 -i "/usr/share/backgrounds/archlinux/wild.png"'
-alias audio="pulseaudio-ctl"
-alias bright="brightnessctl"
-alias sc="sc-im"
-
 # Add an "alert" alias for long running commands. Use like so: `sleep 10; alert`
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
+alias sc="sc-im"
 alias bat="bat --style=plain --theme=gruvbox-dark"
 alias cat="bat --plain"
 alias bathelp="bat --plain --language=help"
+alias ta="tmux attach"
+alias block="betterlockscreen"
 
 # vim pager
 alias view="col -b | vim -R -"
@@ -65,7 +61,7 @@ if [ -d /usr/share/fzf ]; then
 fi
 
 function screenshot() {
-  scrot -F "/home/aarya/screenshots/%Y-%m-%d_%H:%M:%S_\$wx\$h.png" -e 'optipng $f'
+  scrot -F "$HOME/GoogleDrive/Pictures/screenshots/%Y-%m-%d_%H:%M:%S_\$wx\$h.png" -e 'optipng $f'
 }
 
 function cloudsync(){
@@ -79,4 +75,6 @@ function cloudsync(){
 function vman(){
   [ ! $# -eq 0 ] && man "$@" | col -b | vim -R -c "set ft=man" -
 }
+
+export PS1="\$(pwd)$ "
 

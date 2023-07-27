@@ -15,6 +15,7 @@ directories=(
 "$HOME/.config/qutebrowser"
 "$HOME/.config/bat"
 "$HOME/.config/ranger"
+"$HOME/.config/nitrogen"
 )
 
 for directory in "${directories[@]}"; do
