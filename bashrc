@@ -80,5 +80,5 @@ export PS1="\$(pwd)$ "
 
 # Load python venv
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-[ -d $HOME/pyenv ] && source $HOME/pyvenv/bin/activate
+[ -d $HOME/pyvenv ] && source $HOME/pyvenv/bin/activate
 
