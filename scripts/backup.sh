@@ -9,6 +9,7 @@ fi
 
 sudo rsync -aP --update \
   --exclude-from=/home/aarya/dotfiles/copyignore \
+  --no-o --no-g \
   /home/aarya /mnt/aarya/backup
 
 gpg --export | sudo tee /mnt/aarya/public.key >/dev/null
