@@ -51,6 +51,7 @@ source $VIM_DIR/plugins/tagbar.vim        " tags
 
 Plug 'francoiscabrol/ranger.vim'
 
+nnoremap <leader>rr :Ranger<CR>
 let g:ranger_map_keys = 0
 let g:ranger_replace_netrw = 1
 
