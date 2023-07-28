@@ -91,7 +91,7 @@ iabbrev AB Aarya Bhatia
 iabbrev ab Aarya Bhatia
 iabbrev uiuc University of Illinois
 iabbrev --- ----------------------
-iabbrev todo TODO:<Space><C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR>:
+
 
 " }}}
 
@@ -244,8 +244,5 @@ nnoremap <leader>pw ciw<C-r>0<Esc>
 " [S]plit [L]ine - splits a comma separated list into a bullet list
 nnoremap <leader>osl :s/, \?/\r- /g<CR>:noh<CR>
 
-function SortTodos()
-  g/\vDONE.*\r?\n[\n-]/move $
-  g/\vTODO.*\r?\n[\n-]/move 2
-endfunction
-
+" [I]nsert [D]ate
+nnoremap <leader>id i<C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR><Esc>
