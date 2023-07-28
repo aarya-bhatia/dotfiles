@@ -79,6 +79,7 @@ augroup group
 
   " Trim trailing whitespace on lines
   autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
+
 augroup END
 
 " }}}
@@ -242,4 +243,9 @@ nnoremap <leader>pw ciw<C-r>0<Esc>
 
 " [S]plit [L]ine - splits a comma separated list into a bullet list
 nnoremap <leader>osl :s/, \?/\r- /g<CR>:noh<CR>
+
+function SortTodos()
+  g/\vDONE.*\r?\n[\n-]/move $
+  g/\vTODO.*\r?\n[\n-]/move 2
+endfunction
 
