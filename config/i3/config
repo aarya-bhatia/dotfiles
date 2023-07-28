@@ -113,6 +113,9 @@ assign [class="qutebrowser"] $ws2
 assign [class="thunderbird"] $ws3
 assign [class="Tartube"] $ws4
 assign [class="arandr"] $ws4
+assign [class="discord"] $ws5
+assign [class="slack"] $ws5
+assign [class="VirtualBox Manager"] $ws6
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -171,7 +174,7 @@ new_window 1pixel
 exec_always --no-startup-id ~/.fehbg &
 
 # Window compositor
-exec_always --no-startup-id picom --config $HOME/.config/picom/picom.conf &
+exec_always --no-startup-id picom --config ~/.config/picom.conf &
 
 # Polybar status bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -182,12 +185,12 @@ exec_always --no-startup-id ~/dotfiles/scripts/keymaps.sh
 # mirror display with HDMI-1 monitor if connected
 exec_always --no-startup-id ~/dotfiles/scripts/screenmirror.sh
 
+# Auto lock screen and suspend after some amount of idle time
+exec_always --no-startup-id ~/dotfiles/scripts/screenlock.sh
+
 # lock screen with <Alt-X>
 bindsym $mod+Shift+x exec betterlockscreen --lock dim --off 600
 
 # lock and suspend with <Alt-Z>
 bindsym $mod+Shift+z exec betterlockscreen --suspend
-
-# Auto lock screen and suspend after some amount of idle time
-# exec_always --no-startup-id ~/dotfiles/scripts/screenlock.sh
 

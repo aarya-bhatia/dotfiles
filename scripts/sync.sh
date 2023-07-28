@@ -24,5 +24,5 @@ rsync $opts $HOME/.gitconfig $HOME/dotfiles/gitconfig
 rsync $opts $HOME/.fehbg $HOME/dotfiles/fehbg
 rsync $opts $HOME/.agignore $HOME/dotfiles/agignore
 rsync $opts $HOME/.clang-format $HOME/dotfiles/clang-format
-
 rsync $opts $HOME/.ssh/config $HOME/.ssh/*.pub $HOME/dotfiles/config/ssh
+rsync $opts $HOME/.config/picom.conf $HOME/dotfiles/config/picom.conf
