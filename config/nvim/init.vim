@@ -49,12 +49,12 @@ source $VIM_DIR/plugins/coc.vim           " lsp
 source $VIM_DIR/plugins/ack.vim           " grep tool
 source $VIM_DIR/plugins/tagbar.vim        " tags
 
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-rails'
-Plug 'tpope/vim-rbenv'
-
 Plug 'francoiscabrol/ranger.vim'
-Plug 'https://github.com/freitass/todo.txt-vim'
+
+let g:ranger_map_keys = 0
+let g:ranger_replace_netrw = 1
+
+Plug 'freitass/todo.txt-vim'
 
 call plug#end()
 
@@ -67,5 +67,3 @@ colorscheme gruvbox-material
 
 source $VIM_DIR/main.vim
 
-let g:ranger_map_keys = 0
-let g:ranger_replace_netrw = 1

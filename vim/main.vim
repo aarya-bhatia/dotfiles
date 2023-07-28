@@ -92,7 +92,6 @@ iabbrev ab Aarya Bhatia
 iabbrev uiuc University of Illinois
 iabbrev --- ----------------------
 
-
 " }}}
 
 " Mappings {{{
@@ -105,8 +104,13 @@ map gH <Nop>
 
 nnoremap <silent> <leader> <Nop>
 
+" [V]im namespace
 nnoremap <leader>ve :edit $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
+nnoremap <leader>vpi :PlugInstall<CR>
+nnoremap <leader>vpu :PlugUpdate<CR>
+nnoremap <leader>vps :PlugStatus<CR>
+nnoremap <leader>vpc :PlugClean<CR>
 
 " write buffer
 nnoremap <leader>s :write<cr>
@@ -240,9 +244,9 @@ nnoremap <leader>F :Format<CR>
 nnoremap <leader>pw ciw<C-r>0<Esc>
 
 " [O]ther namespace: <leader>o
-
 " [S]plit [L]ine - splits a comma separated list into a bullet list
 nnoremap <leader>osl :s/, \?/\r- /g<CR>:noh<CR>
 
 " [I]nsert [D]ate
 nnoremap <leader>id i<C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR><Esc>
+
