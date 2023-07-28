@@ -122,6 +122,7 @@ noremap <C-x> :bp<Bar>bd #<Cr>
 
 " Unhighlight search results
 nnoremap <Esc> :nohl<CR>
+nnoremap <leader>hl :set invhlsearch<CR>
 
 " surround last visual selection with quotes
 nnoremap <leader>v" `>a"<esc>`<i"<esc>lel

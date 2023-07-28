@@ -13,13 +13,9 @@ export GPG_TTY=`tty`
 export PATH=$PATH:/usr/local/bin
 export PATH=$HOME/.config/rofi/scripts:$PATH
 
-export NOTES_DIRECTORY=$HOME/GoogleDrive/notes
+export NOTES_DIRECTORY=$HOME/GoogleDrive/Notes
 export DOTFILES=$HOME/dotfiles
 export VIM_DIR=$HOME/dotfiles/vim
-
-# Load python venv
-export VIRTUAL_ENV_DISABLE_PROMPT=1
-[ -d $HOME/pyenv ] && source $HOME/pyvenv/bin/activate
 
 umask 0027 # file permission mask
 
