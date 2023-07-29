@@ -50,6 +50,7 @@ alias bathelp="bat --plain --language=help"
 alias ta="tmux attach || tmux"
 alias block="betterlockscreen"
 alias t="todo.sh -d /home/aarya/dotfiles/todo.cfg"
+alias send_alert="/home/aarya/dotfiles/scripts/alert-service/send_alert.py"
 
 # vim pager
 alias view="col -b | vim -R -"
@@ -64,6 +65,11 @@ fi
 
 function screenshot() {
   scrot -F "$HOME/GoogleDrive/Pictures/screenshots/%Y-%m-%d_%H:%M:%S_\$wx\$h.png" -e 'optipng $f'
+}
+
+function gsync() {
+  rclone copy --exclude-from=$DOTFILES/copyignore -v --update ~/GoogleDrive gdrive:
+  rclone copy --exclude-from=$DOTFILES/copyignore -v --update gdrive: ~/GoogleDrive
 }
 
 function cloudsync(){

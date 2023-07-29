@@ -242,6 +242,7 @@ nnoremap <leader>F :Format<CR>
 
 " Replace current word with yanked word ([p]aste [w]ord)
 nnoremap <leader>pw ciw<C-r>0<Esc>
+nnoremap <leader>pW ciW<C-r>0<Esc>
 
 " [O]ther namespace: <leader>o
 " [S]plit [L]ine - splits a comma separated list into a bullet list
