@@ -22,6 +22,7 @@ alias xsel="xsel -b"
 alias fvim="$HOME/dotfiles/scripts/fzf-vim.py"
 alias pwd="pwd -P"
 alias mkdir="mkdir -pv"
+alias py="python3"
 
 alias rm="mkdir -p ~/.trash && mv -t ~/.trash"
 alias RM="/bin/rm"
@@ -48,6 +49,7 @@ alias cat="bat --plain"
 alias bathelp="bat --plain --language=help"
 alias ta="tmux attach || tmux"
 alias block="betterlockscreen"
+alias t="todo.sh -d /home/aarya/dotfiles/todo.cfg"
 
 # vim pager
 alias view="col -b | vim -R -"
@@ -82,3 +84,4 @@ export PS1="\$(pwd)$ "
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 [ -d $HOME/pyvenv ] && source $HOME/pyvenv/bin/activate
 
+export TODO_DIR="/home/aarya/GoogleDrive/Notes/todos"
