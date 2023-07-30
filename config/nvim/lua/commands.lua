@@ -15,3 +15,15 @@ end
 
 vim.cmd([[command! SaveFile lua SaveFile()]])
 
+function SendRegisterToExternalCommand(cmd)
+  local contents = vim.fn.getreg('"')
+  local tmpfile = vim.fn.tempname()
+  local file = io.open(tmpfile, "w")
+  file:write(contents)
+  file:close()
+  print("Copied " .. string.len(contents) .. " bytes to " .. tmpfile)
+
+  cmd="cat " .. tmpfile .. " | " .. cmd
+  print(vim.fn.system(cmd))
+end
+

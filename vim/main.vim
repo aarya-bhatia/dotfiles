@@ -228,12 +228,18 @@ cnoremap <C-l> <Right>
 
 " copying selection to clipboard tools
 if has('mac')
-  nnoremap <leader>y :write !pbcopy<CR>
-  vnoremap <leader>y :write !pbcopy<CR>
+  nnoremap <leader>yy :write !pbcopy<CR>
+  xnoremap <leader>y :write !pbcopy<CR>
   nnoremap <leader>pp :read !pbpaste<CR>
 else
-  nnoremap <leader>y :write !xsel -b >/dev/null<CR>
-  vnoremap <leader>y :write !xsel -b >/dev/null<CR>
+  if has('nvim')
+    nnoremap <leader>yy :lua SendRegisterToExternalCommand("xsel -b >/dev/null")<CR>
+    xnoremap <leader>y y:lua SendRegisterToExternalCommand("xsel -b >/dev/null")<CR>
+  else
+    nnoremap <leader>y :write !xsel -b >/dev/null<CR>
+    xnoremap <leader>y :write !xsel -b >/dev/null<CR>
+  endif
+
   nnoremap <leader>pp :read !xsel -b -o<CR>
 endif
 
