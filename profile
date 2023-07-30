@@ -17,6 +17,8 @@ export NOTES_DIRECTORY=$HOME/GoogleDrive/Notes
 export DOTFILES=$HOME/dotfiles
 export VIM_DIR=$HOME/dotfiles/vim
 
+export RANGER_LOAD_DEFAULT_RC=FALSE
+
 umask 0027 # file permission mask
 
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
