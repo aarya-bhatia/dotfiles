@@ -36,6 +36,14 @@ set mouse+=a
 set laststatus=2		          " always show status line
 set wildmenu
 
+if filereadable('/usr/share/dictd/gcide.index')
+  set dictionary=/usr/share/dictd/gcide.index
+endif
+
+if filereadable('/usr/share/dict/words')
+  set dictionary=/usr/share/dict/words
+endif
+
 " set undodir=$HOME/undodir
 " set undofile
 
