@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/home/aarya/pyvenv/bin/python3
 import smtplib
 import ssl
 import os

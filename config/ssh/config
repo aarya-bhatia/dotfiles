@@ -1,6 +1,6 @@
 Host azure
-	Hostname 40.117.208.41
-	User aarya
+  Hostname 40.117.208.41
+  User aarya
 
 Host aws
   Hostname ec2-65-0-147-62.ap-south-1.compute.amazonaws.com
