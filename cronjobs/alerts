@@ -1,0 +1,5 @@
+# -----------------------------------------------------
+# minute hour day_of_month month day_of_week command
+# -----------------------------------------------------
+
+0 */2 * * * /home/aarya/dotfiles/scripts/alert-service/run.sh

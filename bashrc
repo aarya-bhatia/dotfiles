@@ -1,7 +1,6 @@
 HISTSIZE=
 HISTFILESIZE=
 
-stty -ixon # disable ctrl-s and ctrl-q
 shopt -s histappend
 shopt -s autocd
 shopt -s checkwinsize
@@ -23,10 +22,7 @@ alias fvim="$HOME/dotfiles/scripts/fzf-vim.py"
 alias pwd="pwd -P"
 alias mkdir="mkdir -pv"
 alias py="python3"
-
-alias rm="mkdir -p ~/.trash && mv -t ~/.trash"
-alias RM="/bin/rm"
-alias emptytrash="/bin/rm -rf ~/.trash"
+alias rm="trash-put"
 
 alias ls="ls --color=auto --group-directories-first"
 alias ll="ls --color=auto -alFh"
@@ -87,7 +83,4 @@ function vman(){
 export PS1="\$(pwd)$ "
 
 # Load python venv
-export VIRTUAL_ENV_DISABLE_PROMPT=1
 [ -d $HOME/pyvenv ] && source $HOME/pyvenv/bin/activate
-
-export TODO_DIR="/home/aarya/GoogleDrive/Notes/todos"

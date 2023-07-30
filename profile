@@ -10,14 +10,13 @@ export BROWSER="firefox"
 export EDITOR="nvim"
 export READER="zathura"
 export GPG_TTY=`tty`
-export PATH=$PATH:/usr/local/bin
-export PATH=$HOME/.config/rofi/scripts:$PATH
-
-export NOTES_DIRECTORY=$HOME/GoogleDrive/Notes
-export DOTFILES=$HOME/dotfiles
-export VIM_DIR=$HOME/dotfiles/vim
-
 export RANGER_LOAD_DEFAULT_RC=FALSE
+export VIRTUAL_ENV_DISABLE_PROMPT=1
+export NOTES_DIRECTORY="$HOME/GoogleDrive/Notes"
+export DOTFILES="$HOME/dotfiles"
+export VIM_DIR="$HOME/dotfiles/vim"
+export TODO_DIR="$HOME/GoogleDrive/Notes/todos"
+export PATH=$PATH:/usr/local/bin
 
 umask 0027 # file permission mask
 
