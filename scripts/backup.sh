@@ -7,11 +7,16 @@ if ! [ -f $copyignore ]; then
   exit 1
 fi
 
-sudo rsync -aP --update \
-  --exclude-from=/home/aarya/dotfiles/copyignore \
-  --no-o --no-g \
-  /home/aarya /mnt/aarya/backup
+backup_src="/home/aarya"
+backup_dest="/mnt/aarya/backup"
 
-gpg --export | sudo tee /mnt/aarya/public.key >/dev/null
-gpg --export-secret-key | sudo tee /mnt/aarya/private.key >/dev/null
+sudo rsync -aP --update --exclude-from=$copyignore --no-o --no-g \
+  $backup_src $backup_dest
 
+public_key_path="/mnt/aarya/public.key"
+private_key_path="/mnt/aarya/public.key"
+
+sudo sh -c "[ ! -e $public_key_path ] && gpg --export | tee $public_key_path >/dev/null"
+sudo sh -c "[ ! -e $private_key_path ] && gpg --export-secret-key | tee $private_key_path >/dev/null"
+
+echo "Backup created in $backup_dest"
