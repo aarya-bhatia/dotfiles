@@ -1,20 +1,24 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 import requests
 from datetime import datetime
 
+
 def get_forecast_url(latitude, longitude):
-    response = requests.get(f"https://api.weather.gov/points/{latitude},{longitude}")
-    if response.status_code == 200:
-        return response.json()["properties"]["forecastHourly"]
-    return None
+    try:
+        response = requests.get(
+            f"https://api.weather.gov/points/{latitude},{longitude}")
+        if response.status_code == 200:
+            return response.json()["properties"]["forecastHourly"]
+    except:
+        return None
 
-SFO_lat = "37.7875"
-SFO_long = "-122.3905"
 
-url = get_forecast_url(SFO_lat, SFO_long)
+def get_forecast(url):
+    if not url:
+        return None
 
-if url:
     response = requests.get(url)
+
     if response.status_code == 200:
         data = response.json()
         currentDateTime = datetime.now().replace(tzinfo=None)
@@ -24,8 +28,10 @@ if url:
             endTimeString = period["endTime"][:-6]
 
             # Parse the ISO format string to datetime object
-            startDateTime = datetime.strptime(startTimeString, "%Y-%m-%dT%H:%M:%S").replace(tzinfo=None)
-            endDateTime = datetime.strptime(endTimeString, "%Y-%m-%dT%H:%M:%S").replace(tzinfo=None)
+            startDateTime = datetime.strptime(
+                startTimeString, "%Y-%m-%dT%H:%M:%S").replace(tzinfo=None)
+            endDateTime = datetime.strptime(
+                endTimeString, "%Y-%m-%dT%H:%M:%S").replace(tzinfo=None)
 
             # print(startDateTime, currentDateTime, endDateTime)
 
@@ -38,7 +44,19 @@ if url:
                     forecast = round(forecast)
                     unit = "°C"
 
-                print(f"{forecast}{unit}")
-                exit(0)
+                return f"{forecast}{unit}"
 
-print("ERROR")
+    return None
+
+
+SFO_lat = "37.7875"
+SFO_long = "-122.3905"
+
+url = get_forecast_url(SFO_lat, SFO_long)
+forecast = get_forecast(url)
+
+if forecast:
+    print(forecast)
+else:
+    print("Error")
+
