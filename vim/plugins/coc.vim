@@ -4,8 +4,15 @@
 
 " LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-let g:coc_node_path = '/usr/bin/node'
-let g:coc_global_extensions = ['coc-json','coc-tsserver','coc-pyright','coc-git','coc-clangd']
+
+if executable('/usr/bin/node')
+  let g:coc_node_path = '/usr/bin/node'
+endif
+
+let user = trim(system('whoami'))
+if user ==# 'aarya'
+  let g:coc_global_extensions = ['coc-json','coc-tsserver','coc-pyright','coc-git','coc-clangd']
+endif
 
 set hidden
 set cmdheight=2
