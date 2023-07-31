@@ -228,8 +228,14 @@ cnoremap <C-l> <Right>
 
 " copying selection to clipboard tools
 if has('mac')
-  nnoremap <leader>yy :write !pbcopy<CR>
-  xnoremap <leader>y :write !pbcopy<CR>
+  if has('nvim')
+    nnoremap <leader>yy :lua SendRegisterToExternalCommand("pbcopy")<CR>
+    xnoremap <leader>y y:lua SendRegisterToExternalCommand("pbcopy")<CR>
+  else
+    nnoremap <leader>yy :write !pbcopy<CR>
+    xnoremap <leader>y :write !pbcopy<CR>
+  endif
+
   nnoremap <leader>pp :read !pbpaste<CR>
 else
   if has('nvim')
