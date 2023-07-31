@@ -26,3 +26,5 @@ rsync $opts $HOME/.agignore $HOME/dotfiles/agignore
 rsync $opts $HOME/.clang-format $HOME/dotfiles/clang-format
 rsync $opts $HOME/.ssh/config $HOME/.ssh/*.pub $HOME/dotfiles/config/ssh
 rsync $opts $HOME/.config/picom.conf $HOME/dotfiles/config/picom.conf
+
+which pacman >&/dev/null && pacman -Q > $HOME/dotfiles/pacman.txt
