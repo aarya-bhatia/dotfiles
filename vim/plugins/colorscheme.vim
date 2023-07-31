@@ -1,14 +1,12 @@
 " Colorscheme {{{
 
-Plug 'sainnhe/gruvbox-material' " theme
+Plug 'sainnhe/gruvbox-material'
+Plug 'folke/tokyonight.nvim'
+Plug 'itchyny/lightline.vim'	" Status Line
 
 set termguicolors
 set background=dark
 
-" Transparent background
-hi Normal guibg=NONE ctermbg=NONE
-
-Plug 'itchyny/lightline.vim'	" Status Line
 let g:lightline = { 'colorscheme': 'one' }
 
 " }}}

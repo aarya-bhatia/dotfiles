@@ -26,5 +26,9 @@ call plug#end()
 
 colorscheme gruvbox-material
 
+" Transparent background
+hi Normal guibg=NONE ctermbg=NONE
+hi NonText guibg=NONE ctermbg=NONE
+
 source $VIM_DIR/main.vim
 

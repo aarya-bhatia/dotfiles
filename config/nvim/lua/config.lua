@@ -2,13 +2,13 @@ require('Comment').setup()
 require("oil").setup()
 require("marks").setup()
 
-require('lualine').setup ({
-  options = {
-    theme = 'gruvbox',
-    section_separators = '',
-    component_separators = '',
-  }
-})
+-- require('lualine').setup ({
+--   options = {
+--     theme = 'gruvbox',
+--     section_separators = '',
+--     component_separators = '',
+--   }
+-- })
 
 vim.opt.list = false
 vim.opt.listchars:append "eol:↴"

@@ -12,12 +12,8 @@ Plug 'tpope/vim-fugitive'   " Git tool
 " comment with gc
 Plug 'numToStr/Comment.nvim'
 
-" colorschemes
-Plug 'sainnhe/gruvbox-material'
-Plug 'folke/tokyonight.nvim'
-
 " status line
-Plug 'nvim-lualine/lualine.nvim'
+" Plug 'nvim-lualine/lualine.nvim'
 
 " icons
 Plug 'nvim-tree/nvim-web-devicons'
@@ -48,6 +44,7 @@ source $VIM_DIR/plugins/fzf.vim           " fuzzy finder
 source $VIM_DIR/plugins/coc.vim           " lsp
 source $VIM_DIR/plugins/ack.vim           " grep tool
 source $VIM_DIR/plugins/tagbar.vim        " tags
+source $VIM_DIR/plugins/colorscheme.vim   " colorscheme
 
 Plug 'francoiscabrol/ranger.vim'
 
@@ -65,6 +62,17 @@ source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/commands.lua
 
 colorscheme gruvbox-material
+
+if has("termguicolors")     " set true colors
+    set t_8f=\[[38;2;%lu;%lu;%lum
+    set t_8b=\[[48;2;%lu;%lu;%lum
+    set termguicolors
+endif
+
+" highlight Normal guibg=none
+" highlight Normal ctermbg=none
+" highlight NonText guibg=none
+" highlight NonText ctermbg=none
 
 source $VIM_DIR/main.vim
 
