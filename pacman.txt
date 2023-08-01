@@ -181,7 +181,7 @@ iana-etc 20230629-1
 icu 73.2-2
 ifuse 1.1.4-4
 ijs 0.35-5
-imagemagick 7.1.1.14-1
+imagemagick 7.1.1.15-1
 imath 3.1.9-1
 imlib2 1.11.1-1
 intel-ucode 20230613-1
@@ -206,8 +206,9 @@ lcms2 2.15-1
 ldm 0.8-1
 ldns 1.8.3-2
 less 1:633-1
+lf 30-1
 libabw 0.1.3-3
-libarchive 3.7.0-2
+libarchive 3.7.1-1
 libass 0.17.1-1
 libassuan 2.5.6-1
 libasyncns 1:0.8+r3+g68cd5af-2
@@ -423,7 +424,7 @@ libyaml 0.2.5-2
 libyuv r2322+3aebf69d-1
 libzip 1.10.0-1
 libzmf 0.0.2-14
-licenses 20220125-2
+licenses 20230729-1
 linux 6.4.7.arch1-1
 linux-api-headers 6.3-1
 linux-firmware 20230625.ee91452d-5
@@ -463,7 +464,7 @@ ncdu 2.2.2-2
 ncurses 6.4_20230520-1
 neofetch 7.1.0-2
 neon 0.32.5-2
-neovim 0.9.1-2
+neovim 0.9.1-3
 net-tools 2.10-2
 nettle 3.9.1-1
 networkmanager 1.42.6-1
@@ -473,7 +474,7 @@ nitrogen 1.6.1-4
 node-gyp 9.4.0-1
 nodejs 20.4.0-1
 nodejs-nopt 7.2.0-1
-notification-daemon 3.20.0-4
+notification-daemon 3.20.0-5
 npm 9.8.1-1
 npth 1.6-4
 nspr 4.35-1
@@ -537,7 +538,7 @@ psmisc 23.6-1
 pulseaudio 16.1-6
 python 3.11.3-2
 python-attrs 22.2.0-3
-python-cairo 1.23.0-6
+python-cairo 1.24.0-1
 python-certifi 2023.07.22-1
 python-cffi 1.15.1-3
 python-chardet 5.1.0-3
@@ -572,7 +573,7 @@ python-urllib3 1.26.15-1
 python-werkzeug 2.3.2-1
 python-wheel 0.40.0-3
 python-yaml 6.0.1-2
-qt5-base 5.15.10+kde+r135-1
+qt5-base 5.15.10+kde+r139-1
 qt5-declarative 5.15.10+kde+r29-1
 qt5-location 5.15.10+kde+r4-2
 qt5-svg 5.15.10+kde+r8-1
@@ -587,10 +588,11 @@ ranger 1.9.3-9
 raptor 2.0.16-3
 rasqal 1:0.9.33-6
 rav1e 0.6.6-1
-rclone 1.63.0-1
+rclone 1.63.1-1
 re2 1:20230301-1
 readline 8.2.001-2
 redland 1:1.0.17-8
+redshift 1.12-8
 ripgrep 13.0.0-3
 rmlint 2.10.1-4
 rofi 1.7.5-1

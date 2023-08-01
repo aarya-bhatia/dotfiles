@@ -5,9 +5,9 @@ import os
 import shutil
 import subprocess
 
-home_path = os.environ.get("HOME")
-fzf_path = shutil.which("fzf")
-nvim_path = shutil.which("nvim")
+home_path = str(os.environ.get("HOME"))
+fzf_path = str(shutil.which("fzf"))
+nvim_path = str(shutil.which("nvim"))
 
 filemarks = os.path.join(home_path, ".local/share/aarya/filemarks")
 

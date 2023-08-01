@@ -8,7 +8,7 @@ then
   tmux send-keys -t $session_name 'cd $HOME' C-m
 
   tmux new-window -n notes -t $session_name
-  tmux send-keys -t $session_name:2 'cd ~/GoogleDrive/notes' C-m
+  tmux send-keys -t $session_name:2 'cd ~/GoogleDrive/Notes' C-m
 
   tmux new-window -n monitor -t $session_name
   tmux send-keys -t $session_name:3 'htop' C-m

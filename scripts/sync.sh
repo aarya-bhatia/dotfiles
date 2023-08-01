@@ -11,7 +11,7 @@ directories=(
 "$HOME/.config/nvim"
 "$HOME/.config/zathura"
 "$HOME/.config/qutebrowser"
-"$HOME/.config/ranger"
+"$HOME/.config/lf"
 )
 
 for directory in "${directories[@]}"; do
