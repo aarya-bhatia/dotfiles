@@ -11,12 +11,29 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
+#include "common.h"
 #include "hashtable.h"
 #include "log.h"
 
 #define xfree(ptr)                                                             \
   free(ptr);                                                                   \
   ptr = NULL;
+
+// void create_directories(const char *path) {
+//   assert(path);
+//
+//   char *pre = calloc(1, strlen(path) + 1);
+//   struct stat st;
+//   while(s) {
+//     strncpy(pre, path, s-path);
+//     memset(&st, 0, sizeof st);
+//
+//     if(stat(pre, &st) == -1) {
+//     }
+//
+//     s = strstr(s+1, "/");
+//   }
+// }
 
 /**
  * To rename the original filenames to the modified filenames.
@@ -53,7 +70,7 @@ void check_and_rename_files(const char *tmpfile, char **filenames,
   size_t size = 0;
 
   // A hashmap to check if all file names are unique
-  Hashtable *hashtable = ht_alloc_string_to_shallow();
+  Hashtable *hashtable = ht_alloc(shallow_copy, shallow_free, shallow_compare, string_hash, shallow_copy, shallow_free);
 
   // Read file line by line
   while ((n_read = getline(&line, &line_cap, handle)) > 0) {
@@ -73,6 +90,7 @@ void check_and_rename_files(const char *tmpfile, char **filenames,
     }
 
     names[size] = strdup(line);
+    log_debug("Recevied file: %s", names[size]);
 
     if (ht_get(hashtable, names[size]) != NULL) {
       log_error("Error: File names must be unique");
@@ -83,6 +101,7 @@ void check_and_rename_files(const char *tmpfile, char **filenames,
     ht_set(hashtable, names[size], NULL);
 
     size++;
+    assert(ht_size(hashtable) == size);
 
     if (size > num_files) {
       log_error("Error: The number of files have changed");
@@ -96,32 +115,26 @@ void check_and_rename_files(const char *tmpfile, char **filenames,
 
   fclose(handle);
 
-  char current_dir[256] = {0};
-
-  if (getcwd(current_dir, sizeof current_dir) == NULL) {
-    perror("getcwd");
-    exit(1);
-  }
-
   if (flag) {
     log_info("OK to rename (%zu files)", size);
-
-    char *original_filepath = calloc(1,256);
-    char *new_filepath = calloc(1,256);
 
     for (int i = 0; i < size; i++) {
       // TODO: Check if file is being moved to a different directory
       // Check if file name ends with a '/'
-      snprintf(original_filepath, strlen(current_dir) + strlen(filenames[i]), "%s/%s", current_dir, filenames[i]);
-      snprintf(new_filepath, strlen(current_dir) + strlen(names[i]), "%s/%s", current_dir, names[i]);
-      log_info("before:%s\tafter:%s\n", original_filepath, new_filepath);
-      // if (rename(filenames[i], names[i]) == -1) {
-      //   log_error("Failed to rename file: %s", filenames[i]);
-      // }
-    }
 
-    xfree(original_filepath);
-    xfree(new_filepath);
+      char *original_filepath = filenames[i];
+      char *new_filepath = names[i];
+
+      log_info("before:%s\tafter:%s\n", original_filepath, new_filepath);
+
+      if(strcmp(original_filepath, new_filepath) == 0) { continue; }
+
+      create_directories(new_filepath);
+
+      if (rename(filenames[i], names[i]) == -1) {
+        log_error("Failed to rename file: %s", filenames[i]);
+      }
+    }
   }
 
   for (int i = 0; i < size; i++) {
@@ -177,8 +190,10 @@ int main(int argc, char *argv[]) {
   // Write filenames to temp file
   for (int i = 1; i < argc; i++) {
     char *filename = argv[i];
-    filenames[i - 1] = strdup(filename);
-    write(fd, filename, strlen(filename));
+    filenames[i - 1] = realpath(filename, NULL);
+    assert(filenames[i-1]);
+    log_debug("%s", filenames[i-1]);
+    write(fd, filenames[i-1], strlen(filenames[i-1]));
     write(fd, "\n", 1);
   }
 
