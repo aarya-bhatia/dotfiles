@@ -46,13 +46,14 @@ source $VIM_DIR/plugins/ack.vim           " grep tool
 source $VIM_DIR/plugins/tagbar.vim        " tags
 source $VIM_DIR/plugins/colorscheme.vim   " colorscheme
 
-Plug 'francoiscabrol/ranger.vim'
-
-nnoremap <leader>rr :Ranger<CR>
-let g:ranger_map_keys = 0
-let g:ranger_replace_netrw = 1
-
 Plug 'freitass/todo.txt-vim'
+
+Plug 'ptzz/lf.vim'
+nnoremap <leader>lf :Lf<CR>
+let g:lf_map_keys = 0
+
+Plug 'voldikss/vim-floaterm'
+nnoremap <leader>tt :FloatermToggle<CR>
 
 call plug#end()
 
@@ -76,3 +77,4 @@ endif
 
 source $VIM_DIR/main.vim
 
+" command! Ctags :!ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=tmp .<CR>
