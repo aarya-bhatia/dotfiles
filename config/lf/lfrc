@@ -20,9 +20,6 @@ set ifs "\n"
 # leave some space at the top and the bottom of the screen
 set scrolloff 10
 
-# Use the `dim` attribute instead of underline for the cursor in the preview pane
-# set cursorpreviewfmt "\033[7;2m"
-
 # use enter for shell commands
 map <enter> shell
 
@@ -34,8 +31,8 @@ map x $$f
 map X !$f
 
 # dedicated keys for file opener actions
-map o &mimeopen $f
-map O $mimeopen --ask $f
+# map <enter> &mimeopen $f
+# map <Shift><enter> $mimeopen --ask $f
 
 # define a custom 'open' command
 # This command is called when current file is not a directory. You may want to
@@ -48,32 +45,20 @@ cmd open &{{
     esac
 }}
 
-# mkdir command. See wiki if you want it to select created dir
-map a :push %mkdir<space>
-
-# define a custom 'rename' command without prompt for overwrite
-# cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
-# map r push :rename<space>
-
-# make sure trash folder exists
-# %mkdir -p ~/.trash
-
-# move current file or selected files to trash folder
-# (also see 'man mv' for backup/overwrite options)
-cmd trash %set -f; mv $fx ~/.trash
+map <enter> open
 
 # define a custom 'delete' command
-# cmd delete ${{
-#     set -f
-#     printf "$fx\n"
-#     printf "delete?[y/n]"
-#     read ans
-#     [ "$ans" = "y" ] && rm -rf $fx
-# }}
+cmd delete ${{
+    set -f
+    printf "$fx\n"
+    printf "delete?[y/n]"
+    read ans
+    [ "$ans" = "y" ] && rm -rf $fx
+}}
 
-# use '<delete>' key for either 'trash' or 'delete' command
-# map <delete> trash
-# map <delete> delete
+# cmd trash %set -f; mv $fx ~/.trash
+cmd trash %set -f; trash-put $fx
+map <delete> trash
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
@@ -106,3 +91,9 @@ cmd zip ${{
     zip -r $1.zip $1
     rm -rf $1
 }}
+
+map = %echo $fx
+
+map o %python $HOME/.config/lf/scripts/mkfile.py
+# map R %python $HOME/.config/lf/scripts/bulkrename.py
+
