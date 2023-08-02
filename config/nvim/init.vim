@@ -53,7 +53,7 @@ nnoremap <leader>lf :Lf<CR>
 let g:lf_map_keys = 0
 
 Plug 'voldikss/vim-floaterm'
-let g:floaterm_wintype='split'
+" let g:floaterm_wintype='split'
 let g:floaterm_opener='edit'
 let g:floaterm_keymap_prev   = '<F10>'
 let g:floaterm_keymap_next   = '<F11>'
