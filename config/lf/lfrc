@@ -92,8 +92,14 @@ cmd zip ${{
     rm -rf $1
 }}
 
-map = %echo $fx
+
+# NOTE
+# :  read (default)  builtin/custom command
+# $  shell           shell command
+# %  shell-pipe      shell command running with the ui
+# !  shell-wait      shell command waiting for key press
+# &  shell-async     shell command running asynchronously
 
 map o %python $HOME/.config/lf/scripts/mkfile.py
-# map R %python $HOME/.config/lf/scripts/bulkrename.py
+map R $set -f; echo $fx | xargs $HOME/dotfiles/scripts/c-library/bulkrename
 
