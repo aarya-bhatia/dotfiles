@@ -1,9 +1,0 @@
-data data
-log.h log.h
-main main
-main.c main.c
-main.o main.o
-Makefile Makefile
-output.txt output.txt
-file1 file3
-file2 file4

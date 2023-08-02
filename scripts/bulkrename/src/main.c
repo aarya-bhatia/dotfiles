@@ -1,5 +1,4 @@
-// TODO: File names are relative to cwd
-// Compute actual path before renaming files.
+// TODO: memcheck resolve_path function
 
 #include <assert.h>
 #include <fcntl.h>
@@ -11,39 +10,17 @@
 #include <sys/wait.h>
 #include <unistd.h>
 
-#include "common.h"
-#include "hashtable.h"
-#include "log.h"
-
-#define xfree(ptr)                                                             \
-  free(ptr);                                                                   \
-  ptr = NULL;
-
-// void create_directories(const char *path) {
-//   assert(path);
-//
-//   char *pre = calloc(1, strlen(path) + 1);
-//   struct stat st;
-//   while(s) {
-//     strncpy(pre, path, s-path);
-//     memset(&st, 0, sizeof st);
-//
-//     if(stat(pre, &st) == -1) {
-//     }
-//
-//     s = strstr(s+1, "/");
-//   }
-// }
+#include "Aarya/common.h"
+#include "Aarya/hashtable.h"
+#include "Aarya/files.h"
 
 /**
  * To rename the original filenames to the modified filenames.
- * Note: Each filename is given by the relative path.
  *
  * The number of filenames in the tmpfile must match the num_files,
  * or else this operation will fail.
  *
- * TODO: Check if modified filename is a filename or a directory.
- * TODO: Check if all filenames are unique
+ * Overwriting files is not allowed.
  *
  * @param tmpfile The temporary file containing the modified file names line by
  * line
@@ -51,7 +28,7 @@
  * @param num_files Length of the original filenames array
  */
 void check_and_rename_files(const char *tmpfile, char **filenames,
-                            int num_files) {
+                            size_t num_files) {
   FILE *handle = fopen(tmpfile, "r");
 
   if (!handle) {
@@ -70,13 +47,14 @@ void check_and_rename_files(const char *tmpfile, char **filenames,
   size_t size = 0;
 
   // A hashmap to check if all file names are unique
-  Hashtable *hashtable = ht_alloc(shallow_copy, shallow_free, shallow_compare, string_hash, shallow_copy, shallow_free);
+  Hashtable *hashtable = ht_alloc(shallow_copy, shallow_free, shallow_compare,
+                                  string_hash, shallow_copy, shallow_free);
 
   // Read file line by line
   while ((n_read = getline(&line, &line_cap, handle)) > 0) {
     assert(line);
 
-    int n = strlen(line);
+    size_t n = strlen(line);
     assert(n > 0);
 
     if (line[n - 1] == '\n') {
@@ -89,8 +67,17 @@ void check_and_rename_files(const char *tmpfile, char **filenames,
       cap += 8;
     }
 
-    names[size] = strdup(line);
     log_debug("Recevied file: %s", names[size]);
+
+    n = strlen(line);
+    if(line[n-1] == '/') {
+      log_error("Error: File name cannot end with slash");
+      flag = 0;
+      break;
+    }
+
+    names[size] = resolve_path(line);
+    log_debug("Resolved path: %s", names[size]);
 
     if (ht_get(hashtable, names[size]) != NULL) {
       log_error("Error: File names must be unique");
@@ -118,18 +105,17 @@ void check_and_rename_files(const char *tmpfile, char **filenames,
   if (flag) {
     log_info("OK to rename (%zu files)", size);
 
-    for (int i = 0; i < size; i++) {
-      // TODO: Check if file is being moved to a different directory
-      // Check if file name ends with a '/'
-
+    for (size_t i = 0; i < size; i++) {
       char *original_filepath = filenames[i];
       char *new_filepath = names[i];
 
       log_info("before:%s\tafter:%s\n", original_filepath, new_filepath);
 
-      if(strcmp(original_filepath, new_filepath) == 0) { continue; }
+      if (strcmp(original_filepath, new_filepath) == 0) {
+        continue;
+      }
 
-      create_directories(new_filepath);
+      mkdirs(new_filepath);
 
       if (rename(filenames[i], names[i]) == -1) {
         log_error("Failed to rename file: %s", filenames[i]);
@@ -137,7 +123,7 @@ void check_and_rename_files(const char *tmpfile, char **filenames,
     }
   }
 
-  for (int i = 0; i < size; i++) {
+  for (size_t i = 0; i < size; i++) {
     xfree(names[i]);
   }
 
@@ -183,7 +169,7 @@ int main(int argc, char *argv[]) {
   log_info("Created temporary file: %s", tmpfile);
 
   assert(argc > 1);
-  int num_files = argc - 1;
+  size_t num_files = argc - 1;
   char **filenames = calloc(num_files, sizeof(*filenames));
   assert(filenames);
 
@@ -191,9 +177,9 @@ int main(int argc, char *argv[]) {
   for (int i = 1; i < argc; i++) {
     char *filename = argv[i];
     filenames[i - 1] = realpath(filename, NULL);
-    assert(filenames[i-1]);
-    log_debug("%s", filenames[i-1]);
-    write(fd, filenames[i-1], strlen(filenames[i-1]));
+    assert(filenames[i - 1]);
+    log_debug("%s", filenames[i - 1]);
+    write(fd, filenames[i - 1], strlen(filenames[i - 1]));
     write(fd, "\n", 1);
   }
 
@@ -227,7 +213,7 @@ int main(int argc, char *argv[]) {
     }
   }
 
-  for (int i = 0; i < num_files; i++) {
+  for (size_t i = 0; i < num_files; i++) {
     xfree(filenames[i]);
   }
   xfree(filenames);
@@ -237,3 +223,4 @@ int main(int argc, char *argv[]) {
 
   return 0;
 }
+

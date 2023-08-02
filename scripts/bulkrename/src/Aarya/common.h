@@ -14,6 +14,10 @@
 #define MAX(a, b) ((a) > (b) ? (a) : (b))
 #define MIN(a, b) ((a) < (b) ? (a) : (b))
 
+#define xfree(ptr)                                                             \
+  free(ptr);                                                                   \
+  ptr = NULL;
+
 #define DEFAULT_CAPACITY 8
 
 char *make_string(char *format, ...);
