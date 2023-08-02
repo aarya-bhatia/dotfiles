@@ -33,21 +33,6 @@
 !_TAG_KIND_DESCRIPTION!C++	t,typedef	/typedefs/
 !_TAG_KIND_DESCRIPTION!C++	u,union	/union names/
 !_TAG_KIND_DESCRIPTION!C++	v,variable	/variable definitions/
-!_TAG_KIND_DESCRIPTION!D	M,module	/modules/
-!_TAG_KIND_DESCRIPTION!D	T,template	/templates/
-!_TAG_KIND_DESCRIPTION!D	V,version	/version statements/
-!_TAG_KIND_DESCRIPTION!D	X,mixin	/mixins/
-!_TAG_KIND_DESCRIPTION!D	a,alias	/aliases/
-!_TAG_KIND_DESCRIPTION!D	c,class	/classes/
-!_TAG_KIND_DESCRIPTION!D	e,enumerator	/enumerators (values inside an enumeration)/
-!_TAG_KIND_DESCRIPTION!D	f,function	/function definitions/
-!_TAG_KIND_DESCRIPTION!D	g,enum	/enumeration names/
-!_TAG_KIND_DESCRIPTION!D	i,interface	/interfaces/
-!_TAG_KIND_DESCRIPTION!D	m,member	/class, struct, and union members/
-!_TAG_KIND_DESCRIPTION!D	n,namespace	/namespaces/
-!_TAG_KIND_DESCRIPTION!D	s,struct	/structure names/
-!_TAG_KIND_DESCRIPTION!D	u,union	/union names/
-!_TAG_KIND_DESCRIPTION!D	v,variable	/variable definitions/
 !_TAG_KIND_DESCRIPTION!Make	I,makefile	/makefiles/
 !_TAG_KIND_DESCRIPTION!Make	m,macro	/macros/
 !_TAG_KIND_DESCRIPTION!Make	t,target	/targets/
@@ -57,7 +42,6 @@
 !_TAG_OUTPUT_VERSION	0.0	/current.age/
 !_TAG_PARSER_VERSION!C	0.0	/current.age/
 !_TAG_PARSER_VERSION!C++	0.0	/current.age/
-!_TAG_PARSER_VERSION!D	0.0	/current.age/
 !_TAG_PARSER_VERSION!Make	0.0	/current.age/
 !_TAG_PATTERN_LENGTH_LIMIT	96	/0 for no limit/
 !_TAG_PROC_CWD	/home/aarya/dotfiles/scripts/bulkrename/	//
@@ -73,11 +57,12 @@
 !_TAG_ROLE_DESCRIPTION!C++!macro	undef	/undefined/
 !_TAG_ROLE_DESCRIPTION!Make!makefile	included	/included/
 !_TAG_ROLE_DESCRIPTION!Make!makefile	optional	/optionally included/
+$(OBJDIR)/%.o	Makefile	/^$(OBJDIR)\/%.o: src\/%.c$/;"	t
 CC	Makefile	/^CC=gcc$/;"	m
 CFLAGS	Makefile	/^CFLAGS=-std=gnu99 -Wall -Wextra -Wno-pointer-arith -pedantic -gdwarf-4 -MMD -MP -O0 -D_GNU_SOURC/;"	m
 CstrToString	src/Aarya/astring.c	/^string_t *CstrToString(char *cstr) {$/;"	f	typeref:typename:string_t *
 DEFAULT_CAPACITY	src/Aarya/common.h	/^#define DEFAULT_CAPACITY /;"	d
-FILES	Makefile	/^FILES=$(shell find src -type f -name "*.c")$/;"	m
+FILES	Makefile	/^FILES=$(shell find src\/Aarya -type f -name "*.c")$/;"	m
 HASHTABLE_FOR_EACH	src/Aarya/hashtable.h	/^#define HASHTABLE_FOR_EACH(/;"	d
 HTNode	src/Aarya/hashtable.h	/^typedef struct HTNode {$/;"	s
 HTNode	src/Aarya/hashtable.h	/^} HTNode;$/;"	t	typeref:struct:HTNode
@@ -87,13 +72,14 @@ Hashtable	src/Aarya/hashtable.h	/^typedef struct Hashtable {$/;"	s
 Hashtable	src/Aarya/hashtable.h	/^} Hashtable;$/;"	t	typeref:struct:Hashtable
 HashtableIter	src/Aarya/hashtable.h	/^typedef struct HashtableIter {$/;"	s
 HashtableIter	src/Aarya/hashtable.h	/^} HashtableIter;$/;"	t	typeref:struct:HashtableIter
-INCLUDES	Makefile	/^INCLUDES=-Isrc\/ -Isrc\/Aarya$/;"	m
+INCLUDES	Makefile	/^INCLUDES=-Isrc -Isrc\/Aarya$/;"	m
 INITIAL_CAPACITY	src/Aarya/astring.h	/^#define INITIAL_CAPACITY /;"	d
 LOGLEVEL	src/Aarya/log.h	/^#define LOGLEVEL /;"	d
 MAX	src/Aarya/common.h	/^#define MAX(/;"	d
 MIN	src/Aarya/common.h	/^#define MIN(/;"	d
 NDEBUG	src/Aarya/log.h	/^#define NDEBUG /;"	d
-OBJ	Makefile	/^OBJ=$(FILES:src\/%.c=obj\/%.o)$/;"	m
+OBJ	Makefile	/^OBJ=$(FILES:src\/%.c=$(OBJDIR)\/%.o)$/;"	m
+OBJDIR	Makefile	/^OBJDIR=.obj$/;"	m
 StringAdd	src/Aarya/astring.c	/^void StringAdd(string_t *this, char c) {$/;"	f	typeref:typename:void
 StringAddCstr	src/Aarya/astring.c	/^void StringAddCstr(string_t *this, char *cstr) {$/;"	f	typeref:typename:void
 StringAppend	src/Aarya/astring.c	/^void StringAppend(string_t *this, const string_t *other) {$/;"	f	typeref:typename:void
@@ -124,7 +110,7 @@ _GetCapacity	src/Aarya/astring.c	/^size_t _GetCapacity(size_t n) {$/;"	f	typeref
 __FILENAME__	src/Aarya/log.h	/^#define __FILENAME__ /;"	d
 __LOG_h__	src/Aarya/log.h	/^#define __LOG_h__$/;"	d
 _align_capacity	src/Aarya/common.c	/^size_t _align_capacity(size_t capacity) {$/;"	f	typeref:typename:size_t
-all	Makefile	/^all: main$/;"	t
+all	Makefile	/^all: main files_test$/;"	t
 buffer	src/Aarya/astring.h	/^  char *buffer;$/;"	m	struct:string_t	typeref:typename:char *
 capacity	src/Aarya/astring.h	/^  size_t capacity;$/;"	m	struct:string_t	typeref:typename:size_t
 capacity	src/Aarya/hashtable.h	/^	size_t capacity;$/;"	m	struct:Hashtable	typeref:typename:size_t
@@ -133,6 +119,7 @@ char_compare	src/Aarya/common.c	/^int char_compare(const void *char_ptr_1, const
 char_copy	src/Aarya/common.c	/^void *char_copy(void *char_ptr) {$/;"	f	typeref:typename:void *
 char_to_string	src/Aarya/common.c	/^char *char_to_string(void *char_ptr) {$/;"	f	typeref:typename:char *
 check_and_rename_files	src/main.c	/^void check_and_rename_files(const char *tmpfile, char **filenames,$/;"	f	typeref:typename:void
+clean	Makefile	/^clean:$/;"	t
 clean_errno	src/Aarya/log.h	/^#define clean_errno(/;"	d
 double_compare	src/Aarya/common.c	/^int double_compare(const void *double_ptr_1, const void *double_ptr_2) {$/;"	f	typeref:typename:int
 double_copy	src/Aarya/common.c	/^void *double_copy(void *double_ptr) {$/;"	f	typeref:typename:void *
@@ -147,6 +134,7 @@ elem_free_type	src/Aarya/common.h	/^typedef void (*elem_free_type)(void *elem_pt
 elem_hash_type	src/Aarya/common.h	/^typedef size_t (*elem_hash_type)(void *elem_ptr);$/;"	t	typeref:typename:size_t (*)(void * elem_ptr)
 elem_to_string_type	src/Aarya/common.h	/^typedef char *(*elem_to_string_type)(void *elem_ptr);$/;"	t	typeref:typename:char * (*)(void * elem_ptr)
 elems	src/Aarya/vector.h	/^  void **elems;$/;"	m	struct:Vector	typeref:typename:void **
+files_test	Makefile	/^files_test: $(OBJDIR)\/files_test.o $(OBJ)$/;"	t
 float_compare	src/Aarya/common.c	/^int float_compare(const void *float_ptr_1, const void *float_ptr_2) {$/;"	f	typeref:typename:int
 float_copy	src/Aarya/common.c	/^void *float_copy(void *float_ptr) {$/;"	f	typeref:typename:void *
 float_to_string	src/Aarya/common.c	/^char *float_to_string(void *float_ptr) {$/;"	f	typeref:typename:char *
@@ -174,7 +162,7 @@ int_copy	src/Aarya/common.c	/^void *int_copy(void *int_ptr) {$/;"	f	typeref:type
 int_hash	src/Aarya/hashtable.c	/^size_t int_hash(void *int_ptr) { return *(int *)int_ptr; }$/;"	f	typeref:typename:size_t
 int_to_string	src/Aarya/common.c	/^char *int_to_string(void *int_ptr) {$/;"	f	typeref:typename:char *
 jenkins_hash	src/Aarya/hashtable.c	/^uint32_t jenkins_hash(const void *key, size_t len) {$/;"	f	typeref:typename:uint32_t
-join	src/main.c	/^char *join(Vector *vector) {$/;"	f	typeref:typename:char *
+join	src/Aarya/files.c	/^char *join(Vector *vector) {$/;"	f	typeref:typename:char *
 key	src/Aarya/hashtable.h	/^	void *key;$/;"	m	struct:HTNode	typeref:typename:void *
 key_compare	src/Aarya/hashtable.h	/^	elem_compare_type key_compare;$/;"	m	struct:Hashtable	typeref:typename:elem_compare_type
 key_copy	src/Aarya/hashtable.h	/^	elem_copy_type key_copy;$/;"	m	struct:Hashtable	typeref:typename:elem_copy_type
@@ -190,16 +178,16 @@ log_warn	src/Aarya/log.h	/^#define log_warn(/;"	d
 long_compare	src/Aarya/common.c	/^int long_compare(const void *long_ptr_1, const void *long_ptr_2) {$/;"	f	typeref:typename:int
 long_copy	src/Aarya/common.c	/^void *long_copy(void *long_ptr) {$/;"	f	typeref:typename:void *
 long_to_string	src/Aarya/common.c	/^char *long_to_string(void *long_ptr) {$/;"	f	typeref:typename:char *
-main	Makefile	/^main: $(OBJ)$/;"	t
+main	Makefile	/^main: $(OBJDIR)\/main.o $(OBJ)$/;"	t
+main	src/files_test.c	/^int main(int argc, char *argv[]) {$/;"	f	typeref:typename:int
 main	src/main.c	/^int main(int argc, char *argv[]) {$/;"	f	typeref:typename:int
 make_string	src/Aarya/common.c	/^char *make_string(char *format, ...) {$/;"	f	typeref:typename:char *
 memcheck	Makefile	/^memcheck:$/;"	t
-mkdirs	src/main.c	/^void mkdirs(char *dirname) {$/;"	f	typeref:typename:void
+mkdirs	src/Aarya/files.c	/^void mkdirs(char *filepath) {$/;"	f	typeref:typename:void
 next	src/Aarya/hashtable.h	/^	struct HTNode *next;$/;"	m	struct:HTNode	typeref:struct:HTNode *
 node	src/Aarya/hashtable.h	/^	HTNode *node;$/;"	m	struct:HashtableIter	typeref:typename:HTNode *
-obj/%.o	Makefile	/^obj\/%.o: src\/%.c$/;"	t
-resolve_path	src/main.c	/^char *resolve_path(char *path) {$/;"	f	typeref:typename:char *
-resolve_path_helper	src/main.c	/^void resolve_path_helper(Vector *vector, char *name) {$/;"	f	typeref:typename:void
+resolve_path	src/Aarya/files.c	/^char *resolve_path(char *path) {$/;"	f	typeref:typename:char *
+resolve_path_helper	src/Aarya/files.c	/^void resolve_path_helper(Vector *vector, char *name) {$/;"	f	typeref:typename:void
 rstrstr	src/Aarya/common.c	/^char *rstrstr(char *string, char *pattern) {$/;"	f	typeref:typename:char *
 seed	src/Aarya/hashtable.h	/^	unsigned int seed;$/;"	m	struct:Hashtable	typeref:typename:unsigned int
 shallow_compare	src/Aarya/common.c	/^int shallow_compare(const void *elem_ptr_1, const void *elem_ptr_2) {$/;"	f	typeref:typename:int
@@ -216,9 +204,11 @@ string_hash	src/Aarya/hashtable.c	/^size_t string_hash(void *str_ptr) {$/;"	f	ty
 string_t	src/Aarya/astring.h	/^typedef struct string_t {$/;"	s
 string_t	src/Aarya/astring.h	/^} string_t;$/;"	t	typeref:struct:string_t
 table	src/Aarya/hashtable.h	/^	HTNode **table;$/;"	m	struct:Hashtable	typeref:typename:HTNode **
-tags	Makefile	/^tags:$/;"	t
-test	src/main.c	/^int test() {$/;"	f	typeref:typename:int
-test_resolve_path	src/main.c	/^int test_resolve_path(char *path, char *expected) {$/;"	f	typeref:typename:int
+test_mkdirs	src/files_test.c	/^int test_mkdirs() {$/;"	f	typeref:typename:int
+test_resolve_path	src/files_test.c	/^int test_resolve_path() {$/;"	f	typeref:typename:int
+test_resolve_path_helper	src/files_test.c	/^void test_resolve_path_helper(char *path, char *expected) {$/;"	f	typeref:typename:void
+tests_passed	src/files_test.c	/^int tests_passed = 0;$/;"	v	typeref:typename:int
+tests_total	src/files_test.c	/^int tests_total = 0;$/;"	v	typeref:typename:int
 trimwhitespace	src/Aarya/common.c	/^char *trimwhitespace(char *str) {$/;"	f	typeref:typename:char *
 value	src/Aarya/hashtable.h	/^	void *value;$/;"	m	struct:HTNode	typeref:typename:void *
 value_copy	src/Aarya/hashtable.h	/^	elem_copy_type value_copy;$/;"	m	struct:Hashtable	typeref:typename:elem_copy_type
