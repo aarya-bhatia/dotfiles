@@ -1,18 +1,19 @@
 CC=gcc
-INCLUDES=-Isrc/ -Isrc/Aarya
+INCLUDES=-Isrc -Isrc/Aarya
 CFLAGS=-std=gnu99 -Wall -Wextra -Wno-pointer-arith -pedantic -gdwarf-4 -MMD -MP -O0 -D_GNU_SOURCE -c $(INCLUDES)
+OBJDIR=.obj
 FILES=$(shell find src/Aarya -type f -name "*.c")
-OBJ=$(FILES:src/%.c=obj/%.o)
+OBJ=$(FILES:src/%.c=$(OBJDIR)/%.o)
 
-all: main
+all: main files_test
 
-main: obj/main.o $(OBJ)
+main: $(OBJDIR)/main.o $(OBJ)
 	$(CC) -std=gnu99 $^ -o $@
 
-files_test: obj/files_test.o $(OBJ)
+files_test: $(OBJDIR)/files_test.o $(OBJ)
 	$(CC) -std=gnu99 $^ -o $@
 
-obj/%.o: src/%.c
+$(OBJDIR)/%.o: src/%.c
 	@mkdir -p $(dir $@);
 	$(CC) $(CFLAGS) $< -o $@
 
@@ -22,7 +23,7 @@ memcheck:
 
 .PHONY: clean
 clean:
-	rm -rf obj main
+	rm -rf $(OBJDIR) main
 
--include obj/*.d
+-include $(OBJDIR)/*.d
 
