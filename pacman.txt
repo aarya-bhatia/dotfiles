@@ -123,6 +123,8 @@ gc 8.2.4-1
 gcc 13.1.1-2
 gcc-libs 13.1.1-2
 gd 2.3.3-6
+gdb 13.2-1
+gdb-common 13.2-1
 gdbm 1.23-2
 gdk-pixbuf2 2.42.10-2
 geoip 1.6.12-2
@@ -617,6 +619,7 @@ slack-desktop 4.33.73-1
 slang 2.3.3-2
 snappy 1.1.9-2
 sound-theme-freedesktop 0.8-5
+source-highlight 3.1.9-10
 speex 1.2.1-1
 speexdsp 1.2.1-1
 spirv-tools 2022.4-1
