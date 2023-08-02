@@ -85,6 +85,8 @@ augroup group
   autocmd BufRead,BufNewFile *.h set filetype=c
   autocmd BufNewFile,BufRead *.ejs set filetype=html
 
+  autocmd FileType make set ts=4 sts=4 sw=4 noet list
+
   " Trim trailing whitespace on lines
   autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
 
