@@ -2,4 +2,5 @@
 # minute hour day_of_month month day_of_week command
 # -----------------------------------------------------
 
-0 */2 * * * /home/aarya/dotfiles/scripts/alert-service/run.sh
+0 */3 * * * /home/aarya/dotfiles/scripts/alert-service/run.sh
+*/10 * * * * /usr/bin/mailsync

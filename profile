@@ -24,8 +24,8 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$HOME/dotfiles/scripts
 
 export GOPATH=$HOME/go
-export GOBIN=$HOME/go/bin
-export PATH=$PATH:$HOME/go/bin
+export GOBIN=$GOPATH/bin
+export PATH=$PATH:$GOPATH/bin
 
 # file permission mask
 # This will disable access to "others" for all files

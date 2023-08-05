@@ -46,6 +46,9 @@ source $VIM_DIR/plugins/ack.vim           " grep tool
 source $VIM_DIR/plugins/tagbar.vim        " tags
 source $VIM_DIR/plugins/colorscheme.vim   " colorscheme
 
+Plug 'romainl/vim-qf'
+let g:qf_auto_resize = 0
+
 Plug 'freitass/todo.txt-vim'
 
 Plug 'ptzz/lf.vim'

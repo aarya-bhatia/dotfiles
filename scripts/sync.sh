@@ -28,3 +28,5 @@ rsync $opts $HOME/.ssh/config $HOME/.ssh/*.pub $HOME/dotfiles/config/ssh
 rsync $opts $HOME/.config/picom.conf $HOME/dotfiles/config/picom.conf
 
 which pacman >&/dev/null && pacman -Q > $HOME/dotfiles/pacman.txt
+
+crontab -l > $HOME/dotfiles/crontab

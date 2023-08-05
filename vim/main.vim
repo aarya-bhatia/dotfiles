@@ -70,8 +70,6 @@ au BufReadPost *
             \ endif
 
 augroup group
-  autocmd!
-
   " C/C++ filetye commands
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
@@ -213,10 +211,10 @@ nnoremap j gj
 vnoremap k gk
 vnoremap j gj
 
-nnoremap <leader>h <C-w>h
-nnoremap <leader>j <C-w>j
-nnoremap <leader>k <C-w>k
-nnoremap <leader>l <C-w>l
+" nnoremap <leader>h <C-w>h
+" nnoremap <leader>j <C-w>j
+" nnoremap <leader>k <C-w>k
+" nnoremap <leader>l <C-w>l
 
 " To move around in insert mode
 inoremap <C-h> <Left>
@@ -273,3 +271,15 @@ nnoremap <leader>osl :s/, \?/\r- /g<CR>:noh<CR>
 " [I]nsert [D]ate
 nnoremap <leader>id i<C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR><Esc>
 
+augroup qflist
+  autocmd!
+  autocmd FileType qf cabbrev <buffer> K Keep
+  autocmd FileType qf cabbrev <buffer> Rej Reject
+  autocmd FileType qf cabbrev <buffer> Res Restore
+
+  autocmd FileType qf nnoremap <buffer> dd :.Reject<CR>
+  autocmd FileType qf vnoremap <buffer> d :Reject<CR>
+
+  autocmd FileType qf nnoremap <buffer> [[ :colder<CR>
+  autocmd FileType qf nnoremap <buffer> ]] :cnewer<CR>
+augroup END
