@@ -3,4 +3,3 @@
 # -----------------------------------------------------
 
 0 */3 * * * /home/aarya/dotfiles/scripts/alert-service/run.sh
-*/10 * * * * /usr/bin/mailsync
