@@ -145,7 +145,7 @@ cmd fzf ${{
 map <c-f> fzf
 
 map o %python $HOME/.config/lf/scripts/mkfile.py
-map R $set -f; echo $fx | xargs $HOME/scripts/c-library/bulkrename
+map R $set -f; echo $fx | xargs $HOME/scripts/c-programs/bulkrename
 
 cmd chmod %{{
   printf "Mode bits: "
