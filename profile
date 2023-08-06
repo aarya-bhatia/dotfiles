@@ -16,19 +16,21 @@ export RANGER_LOAD_DEFAULT_RC=FALSE
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 export NOTES_DIRECTORY="$HOME/GoogleDrive/Notes"
+export TODO_DIR="$HOME/GoogleDrive/Notes/todos"
 export DOTFILES="$HOME/dotfiles"
 export VIM_DIR="$HOME/dotfiles/vim"
-export TODO_DIR="$HOME/GoogleDrive/Notes/todos"
+export SCRIPTS_DIR="$HOME/scripts"
+export COPYIGNORE="$HOME/dotfiles/copyignore"
 
 export PATH=$PATH:/usr/local/bin
-export PATH=$PATH:$HOME/dotfiles/scripts
+export PATH=$PATH:$SCRIPTS_DIR
 
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin
 
 # file permission mask
-# This will disable access to "others" for all files
+# This will disable all permissions for "others"
 umask 0027
 
 # Start X server
