@@ -73,7 +73,7 @@ cmd trash ${{
 
 map <delete> trash
 map D trash
-# map D $echo "$fx" | xargs python3 $HOME/dotfiles/scripts/lf/trash.py
+# map D $echo "$fx" | xargs python3 $HOME/scripts/lf/trash.py
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
@@ -111,7 +111,7 @@ cmd cd-home $lf -remote "send $id cd $HOME"
 cmd cd-notes $lf -remote "send $id cd $HOME/GoogleDrive/Notes"
 cmd cd-todos $lf -remote "send $id cd $HOME/GoogleDrive/Notes/todos"
 cmd cd-dotfiles $lf -remote "send $id cd $HOME/dotfiles"
-cmd cd-scripts $lf -remote "send $id cd $HOME/dotfiles/scripts"
+cmd cd-scripts $lf -remote "send $id cd $HOME/scripts"
 cmd cd-config $lf -remote "send $id cd $HOME/.config"
 cmd cd-lf $lf -remote "send $id cd $HOME/.config/lf"
 
@@ -145,7 +145,7 @@ cmd fzf ${{
 map <c-f> fzf
 
 map o %python $HOME/.config/lf/scripts/mkfile.py
-map R $set -f; echo $fx | xargs $HOME/dotfiles/scripts/c-library/bulkrename
+map R $set -f; echo $fx | xargs $HOME/scripts/c-library/bulkrename
 
 cmd chmod %{{
   printf "Mode bits: "
