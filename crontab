@@ -3,3 +3,4 @@
 # -----------------------------------------------------
 
 0 */3 * * * /home/aarya/scripts/alert-service/run.sh
+*/5 * * * * /home/aarya/scripts/monitor.sh
