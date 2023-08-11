@@ -1,5 +1,3 @@
-[ -f ~/.bashrc ] && source ~/.bashrc
-
 HISTSIZE=
 HISTFILESIZE=
 
