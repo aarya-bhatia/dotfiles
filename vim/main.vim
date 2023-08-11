@@ -35,6 +35,7 @@ set foldlevel=99 " Prevent folding on startup
 set mouse+=a
 set laststatus=2		          " always show status line
 set wildmenu
+set cursorline
 
 if filereadable('/usr/share/dictd/gcide.index')
   set dictionary=/usr/share/dictd/gcide.index

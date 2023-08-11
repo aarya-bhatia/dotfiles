@@ -5,21 +5,29 @@ let maplocalleader = ' '
 
 call plug#begin("$HOME/.vim/plugged")
 
-Plug 'tpope/vim-sensible'		" sensible defaults
-Plug 'sheerun/vim-polyglot' 	" syntax highlighting
-Plug 'tpope/vim-commentary' 	" comments
-Plug 'tpope/vim-surround'		" surround operator
+Plug 'tpope/vim-sensible'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
 
 source $VIM_DIR/plugins/fzf.vim
 source $VIM_DIR/plugins/ack.vim
-source $VIM_DIR/plugins/colorscheme.vim
 
 call plug#end()
 
 " }}}
 
-colorscheme gruvbox-material
+let g:lightline = { 'colorscheme': 'one' }
+
+set termguicolors
+set background=dark
+
+hi Normal guibg=NONE ctermbg=NONE
+
+colorscheme gruvbox
 
 source $VIM_DIR/main.vim
 

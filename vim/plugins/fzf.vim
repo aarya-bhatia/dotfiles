@@ -23,8 +23,7 @@ let g:fzf_layout = { 'down': '40%' }
 " Preview window is hidden by default. You can toggle it with ctrl-/.
 " It will show on the right with 50% width, but if the width is smaller
 " than 70 columns, it will show above the candidate list
-let g:fzf_preview_window = ['hidden', 'ctrl-/']
-" let g:fzf_preview_window = []
+let g:fzf_preview_window = ['right,50%', 'ctrl-/']
 
 let g:fzf_command_prefix = 'Fzf'
 
@@ -59,6 +58,9 @@ nnoremap <silent> <leader>ff :FzfFiles<CR>
 " Find in history
 nnoremap <silent> <leader>fh :FzfHistory<CR>
 
+" List windows
+nnoremap <silent> <leader>fw :FzfWindows<CR>
+
 " List buffers
 nnoremap <silent> <leader><leader> :FzfBuffers<CR>
 
@@ -77,11 +79,17 @@ nnoremap <silent> <leader>f? :FzfHelp<CR>
 " List marks
 nnoremap <silent> <leader>fm :FzfMarks<CR>
 
+" List jumps
+nnoremap <silent> <leader>fj :FzfJumps<CR>
+
 " List snippets
 nnoremap <silent> <leader>fs :FzfSnippets<CR>
 
 " List tags
 nnoremap <silent> <leader>ft :FzfTags<CR>
+
+" List git commits
+nnoremap <silent> <leader>fc :FzfCommits<CR>
 
 " Insert mode completion
 " imap <c-x><c-k> <plug>(fzf-complete-word)

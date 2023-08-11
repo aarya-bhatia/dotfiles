@@ -1,6 +1,7 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 import requests
 from datetime import datetime
+import sys
 
 
 def get_forecast_url(latitude, longitude):
@@ -34,6 +35,7 @@ def get_forecast(url):
                 endTimeString, "%Y-%m-%dT%H:%M:%S").replace(tzinfo=None)
 
             # print(startDateTime, currentDateTime, endDateTime)
+            sys.stderr.write(f"{startDateTime},{currentDateTime},{endDateTime}\n")
 
             if startDateTime <= currentDateTime and currentDateTime <= endDateTime:
                 forecast = period["temperature"]
@@ -45,6 +47,8 @@ def get_forecast(url):
                     unit = "°C"
 
                 return f"{forecast}{unit}"
+    else:
+        sys.stderr.write(f"Request failed with HTTP status code: {response.status_code}\n")
 
     return None
 
@@ -53,10 +57,11 @@ SFO_lat = "37.7875"
 SFO_long = "-122.3905"
 
 url = get_forecast_url(SFO_lat, SFO_long)
+sys.stderr.write(f"URL: {url}\n")
 forecast = get_forecast(url)
+sys.stderr.write(f"Forecast: {forecast}\n")
 
 if forecast:
     print(forecast)
 else:
     print("Error")
-

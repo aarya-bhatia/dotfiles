@@ -2,9 +2,9 @@
 
 Plug 'tomasiser/vim-code-dark'
 Plug 'navarasu/onedark.nvim'
+Plug 'folke/tokyonight.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
-Plug 'folke/tokyonight.nvim'
 
 Plug 'itchyny/lightline.vim'	" Status Line
 
