@@ -43,17 +43,12 @@ Plug 'jamessan/vim-gnupg'
 source $VIM_DIR/plugins/fzf.vim           " fuzzy finder
 source $VIM_DIR/plugins/coc.vim           " lsp
 source $VIM_DIR/plugins/ack.vim           " grep tool
-source $VIM_DIR/plugins/tagbar.vim        " tags
 source $VIM_DIR/plugins/colorscheme.vim   " colorscheme
 
 Plug 'romainl/vim-qf'
 let g:qf_auto_resize = 0
 
 Plug 'freitass/todo.txt-vim'
-
-Plug 'ptzz/lf.vim'
-nnoremap <leader>lf :Lf<CR>
-let g:lf_map_keys = 0
 
 Plug 'voldikss/vim-floaterm'
 " let g:floaterm_wintype='split'
@@ -63,6 +58,13 @@ let g:floaterm_keymap_next   = '<F11>'
 let g:floaterm_keymap_toggle = '<F12>'
 nnoremap <leader>tt :FloatermToggle<CR>
 
+Plug 'ptzz/lf.vim'
+nnoremap <leader>lf :Lf<CR>
+let g:lf_map_keys = 0
+
+Plug 'preservim/nerdtree'
+nnoremap <C-t> :NERDTreeToggle<CR>
+
 call plug#end()
 
 " lua configs
@@ -70,7 +72,8 @@ source $HOME/.config/nvim/lua/config.lua
 source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/commands.lua
 
-colorscheme gruvbox-material
+colorscheme gruvbox
+" colorscheme gruvbox-material
 
 if has("termguicolors")     " set true colors
     set t_8f=\[[38;2;%lu;%lu;%lum
@@ -78,11 +81,10 @@ if has("termguicolors")     " set true colors
     set termguicolors
 endif
 
-" highlight Normal guibg=none
 " highlight Normal ctermbg=none
-" highlight NonText guibg=none
 " highlight NonText ctermbg=none
 
 source $VIM_DIR/main.vim
 
 " command! Ctags :!ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=tmp .<CR>
+

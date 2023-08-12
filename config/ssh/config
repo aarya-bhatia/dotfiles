@@ -7,12 +7,14 @@ Host aws
   User ubuntu
   IdentityFile ~/.ssh/aws_rsa
 
-Host linode
+# Linode VM
+Host epsilon
   Hostname 172.232.4.49
   User aarya
   IdentityFile ~/.ssh/id_rsa
 
-Host ubuntu14
+# Ubuntu 14 Virtual Box VM
+Host ubuntu
   Hostname 127.0.0.1
   User aarya
   Port 3022
