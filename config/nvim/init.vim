@@ -59,8 +59,8 @@ let g:floaterm_keymap_toggle = '<F12>'
 nnoremap <leader>tt :FloatermToggle<CR>
 
 Plug 'ptzz/lf.vim'
-nnoremap <leader>lf :Lf<CR>
 let g:lf_map_keys = 0
+nnoremap <leader>lf :Lf<CR>
 
 Plug 'preservim/nerdtree'
 nnoremap <C-t> :NERDTreeToggle<CR>
@@ -72,8 +72,8 @@ source $HOME/.config/nvim/lua/config.lua
 source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/commands.lua
 
-colorscheme gruvbox
-" colorscheme gruvbox-material
+" colorscheme gruvbox
+colorscheme gruvbox-material
 
 if has("termguicolors")     " set true colors
     set t_8f=\[[38;2;%lu;%lu;%lum
@@ -87,4 +87,6 @@ endif
 source $VIM_DIR/main.vim
 
 " command! Ctags :!ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=tmp .<CR>
+
+nnoremap <leader>mk :make<CR>
 

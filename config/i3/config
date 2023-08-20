@@ -38,7 +38,7 @@ floating_modifier $mod
 
 # move tiling windows via drag & drop by left-clicking into the title bar,
 # or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
+# tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec terminator
@@ -48,7 +48,7 @@ bindsym $mod+Shift+q kill
 
 # Open rofi program launcher
 bindsym $mod+d exec --no-startup-id rofi -show drun
-bindsym $mod+space exec --no-startup-id rofi -show run
+bindsym $mod+p exec --no-startup-id rofi -show run
 
 # Open rofi window menu
 bindsym $mod+Tab exec --no-startup-id rofi -show window
@@ -86,7 +86,7 @@ bindsym $mod+e layout toggle split
 bindsym $mod+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-# bindsym $mod+space focus mode_toggle
+bindsym $mod+space focus mode_toggle
 
 # focus the parent container
 # bindsym $mod+a focus parent
@@ -109,13 +109,13 @@ set $ws10 "10"
 
 # Assign Workspaces:
 assign [class="firefox"] $ws2
-assign [class="qutebrowser"] $ws2
 assign [class="thunderbird"] $ws3
-assign [class="Tartube"] $ws4
-assign [class="arandr"] $ws4
-assign [class="discord"] $ws5
-assign [class="slack"] $ws5
-assign [class="VirtualBox Manager"] $ws6
+# assign [class="qutebrowser"] $ws2
+# assign [class="Tartube"] $ws4
+# assign [class="arandr"] $ws4
+# assign [class="discord"] $ws5
+# assign [class="slack"] $ws5
+# assign [class="VirtualBox Manager"] $ws6
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1

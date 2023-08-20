@@ -81,10 +81,10 @@ augroup group
   autocmd FileType markdown,text setlocal spell spelllang=en_us
   autocmd FileType markdown,text setlocal wrap
   autocmd FileType vim setlocal foldmethod=marker
+  autocmd FileType make set ts=4 sts=4 sw=4 noet list
+
   autocmd BufRead,BufNewFile *.h set filetype=c
   autocmd BufNewFile,BufRead *.ejs set filetype=html
-
-  autocmd FileType make set ts=4 sts=4 sw=4 noet list
 
   " Trim trailing whitespace on lines
   autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
@@ -260,6 +260,7 @@ nnoremap Y y$
 nnoremap <leader>V V`]
 
 nnoremap <leader>F :Format<CR>
+nnoremap <leader>gq mmgggqG`m
 
 " Replace current word with yanked word ([p]aste [w]ord)
 nnoremap <leader>pw ciw<C-r>0<Esc>
@@ -273,8 +274,8 @@ nnoremap <leader>osl :s/, \?/\r- /g<CR>:noh<CR>
 nnoremap <leader>id i<C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR><Esc>
 
 " Use magic mode regex
-nnoremap / /\v
-cnoremap <C-u> <C-u>\v
+" nnoremap / /\v
+" cnoremap <C-u> <C-u>\v
 
 augroup qflist
   autocmd!

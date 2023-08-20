@@ -7,13 +7,13 @@ Host aws
   User ubuntu
   IdentityFile ~/.ssh/aws_rsa
 
-# Linode VM
-Host epsilon
+# Epsilon
+Host linode
   Hostname 172.232.4.49
   User aarya
   IdentityFile ~/.ssh/id_rsa
 
-# Ubuntu 14 Virtual Box VM
+# Ubuntu 14 Virtual Box
 Host ubuntu
   Hostname 127.0.0.1
   User aarya
