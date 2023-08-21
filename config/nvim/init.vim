@@ -72,8 +72,8 @@ source $HOME/.config/nvim/lua/config.lua
 source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/commands.lua
 
-" colorscheme gruvbox
-colorscheme gruvbox-material
+colorscheme gruvbox
+" colorscheme gruvbox-material
 
 if has("termguicolors")     " set true colors
     set t_8f=\[[38;2;%lu;%lu;%lum

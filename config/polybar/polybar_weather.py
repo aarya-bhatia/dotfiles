@@ -1,13 +1,14 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
+import sys
 import requests
 from datetime import datetime
-import sys
 
 
 def get_forecast_url(latitude, longitude):
     try:
         response = requests.get(
             f"https://api.weather.gov/points/{latitude},{longitude}")
+        print(response.status_code, file=sys.stderr)
         if response.status_code == 200:
             return response.json()["properties"]["forecastHourly"]
     except:
@@ -34,8 +35,7 @@ def get_forecast(url):
             endDateTime = datetime.strptime(
                 endTimeString, "%Y-%m-%dT%H:%M:%S").replace(tzinfo=None)
 
-            # print(startDateTime, currentDateTime, endDateTime)
-            sys.stderr.write(f"{startDateTime},{currentDateTime},{endDateTime}\n")
+            print(startDateTime, currentDateTime, endDateTime, file=sys.stderr)
 
             if startDateTime <= currentDateTime and currentDateTime <= endDateTime:
                 forecast = period["temperature"]
@@ -47,21 +47,20 @@ def get_forecast(url):
                     unit = "°C"
 
                 return f"{forecast}{unit}"
-    else:
-        sys.stderr.write(f"Request failed with HTTP status code: {response.status_code}\n")
 
     return None
 
 
-SFO_lat = "37.7875"
-SFO_long = "-122.3905"
+# SFO_lat = "37.7875"
+# SFO_long = "-122.3905"
 
-url = get_forecast_url(SFO_lat, SFO_long)
-sys.stderr.write(f"URL: {url}\n")
+url = get_forecast_url("40.11", "-88.24")
+print(url, file=sys.stderr)
+
 forecast = get_forecast(url)
-sys.stderr.write(f"Forecast: {forecast}\n")
 
 if forecast:
     print(forecast)
 else:
     print("Error")
+
