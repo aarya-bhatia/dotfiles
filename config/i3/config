@@ -10,7 +10,7 @@ font pango:monospace 8
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
+exec_always --no-startup-id nm-applet
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -177,7 +177,7 @@ exec_always --no-startup-id ~/.fehbg &
 exec_always --no-startup-id picom --config ~/.config/picom.conf &
 
 # Polybar status bar
-exec_always --no-startup-id ~/.config/polybar/launch.sh
+# exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 # CapsLock key acts like <Esc> if pressed alone and <Ctrl> if pressed with another key
 exec_always --no-startup-id ~/scripts/keymaps.sh

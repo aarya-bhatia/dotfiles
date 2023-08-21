@@ -13,6 +13,7 @@ pyvenv
 # Ignore directories
 node_modules/
 tmp/
+.npm/
 
 # Ignore specific files
 .env

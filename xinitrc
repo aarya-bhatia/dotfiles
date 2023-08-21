@@ -58,4 +58,10 @@ function start_kde() {
     exec startplasma-x11
 }
 
-start_i3
+function start_xfce() {
+  exec startxfce4
+}
+
+# start_i3
+
+start_xfce
