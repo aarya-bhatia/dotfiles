@@ -7,12 +7,13 @@ acpi 1.7-3
 adobe-source-code-pro-fonts 2.042u+1.062i+1.026vf-1
 adwaita-cursors 44.0-1
 adwaita-icon-theme 44.0-1
+alsa-card-profiles 1:0.3.77-2
 alsa-lib 1.2.9-1
 alsa-topology-conf 1.2.5.1-3
 alsa-ucm-conf 1.2.9-1
 aom 3.6.1-1
 arandr 0.1.11-2
-archlinux-keyring 20230704-1
+archlinux-keyring 20230821-1
 archlinux-wallpaper 1.6.1-6
 argon2 20190702-5
 aribb24 1.0.3-3
@@ -56,7 +57,7 @@ cantarell-fonts 1:0.303.1-1
 cbatticon 1.6.13-1
 cblas 3.11.0-2
 cdparanoia 10.2-8
-chromium 116.0.5845.96-1
+chromium 116.0.5845.110-1
 clang 15.0.7-9
 clucene 2.3.3.4-14
 cmatrix 2.0-2
@@ -141,12 +142,13 @@ gdbm 1.23-2
 gdk-pixbuf2 2.42.10-2
 geoip 1.6.12-2
 geoip-database 20230719-1
+gestures 0.3.1-1
 gettext 0.22-1
 ghc-libs 9.0.2-3
 ghostscript 10.01.2-1
 giflib 5.2.1-2
 girara 0.4.0-1
-git 2.41.0-2
+git 2.42.0-1
 glib-networking 1:2.76.1-1
 glib2 2.76.4-1
 glibc 2.38-3
@@ -187,7 +189,7 @@ gtkmm3 3.24.8-1
 gtksourceview4 4.8.4-1
 guile 3.0.9-1
 gumbo-parser 0.10.1-2
-gzip 1.12-2
+gzip 1.12-3
 harfbuzz 8.1.1-1
 harfbuzz-icu 8.1.1-1
 haskell-aeson 2.1.2.1-6
@@ -263,7 +265,7 @@ haskell-generically 0.1.1-1
 haskell-ghc-bignum-orphans 0.1.1-1
 haskell-glob 0.10.2-70
 haskell-gridtables 0.1.0.0-21
-haskell-haddock-library 1.10.0-223
+haskell-haddock-library 1.10.0-224
 haskell-hashable 1.4.2.0-23
 haskell-hourglass 0.2.12-226
 haskell-hslua 2.3.0-5
@@ -284,7 +286,7 @@ haskell-hslua-repl 0.1.1-3
 haskell-hslua-typing 0.1.0-4
 haskell-http-api-data 0.5.1-12
 haskell-http-client 0.7.13.1-58
-haskell-http-client-tls 0.3.6.2-2
+haskell-http-client-tls 0.3.6.3-1
 haskell-http-date 0.0.11-116
 haskell-http-media 0.8.0.0-185
 haskell-http-types 0.12.3-305
@@ -314,10 +316,10 @@ haskell-old-locale 1.0.0.7-30
 haskell-old-time 1.1.0.3-30
 haskell-onetuple 0.3.1-55
 haskell-optparse-applicative 0.17.0.0-45
-haskell-pandoc 3.1.2-22
-haskell-pandoc-lua-engine 0.2-21
+haskell-pandoc 3.1.2-24
+haskell-pandoc-lua-engine 0.2-23
 haskell-pandoc-lua-marshal 0.2.2-14
-haskell-pandoc-server 0.1-96
+haskell-pandoc-server 0.1-98
 haskell-pandoc-types 1.23-27
 haskell-pem 0.2.4-264
 haskell-pretty-show 1.10-14
@@ -402,6 +404,7 @@ haskell-xml-types 0.3.8-8
 haskell-yaml 0.11.11.2-1
 haskell-zip-archive 0.4.3-6
 haskell-zlib 0.6.3.0-40
+hdparm 9.65-1
 hicolor-icon-theme 0.17-3
 hidapi 0.14.0-1
 highway 1.0.6-1
@@ -415,13 +418,13 @@ hyphen 2.8.8-5
 i3-wm 4.22-4
 i3ipc-glib-git r183.1634568402.ef6d030-1
 i3lock-color 2.13.c.4-1
-iana-etc 20230629-1
+iana-etc 20230803-1
 icu 73.2-2
 ifuse 1.1.4-4
 ijs 0.35-5
 imagemagick 7.1.1.15-2
 imath 3.1.9-1
-imlib2 1.11.1-1
+imlib2 1.12.0-1
 imwheel 1.0.0pre12-6
 inetutils 2.4-1
 intel-ucode 20230808-1
@@ -430,6 +433,7 @@ iptables-nft 1:1.8.9-1
 iputils 20221126-2
 iso-codes 4.15.0-1
 isync 1.4.4-4
+iw 5.19-2
 jack2 1.9.22-1
 jansson 2.14-2
 jbig2dec 0.19-1
@@ -469,6 +473,8 @@ libbsd 0.11.7-1
 libburn 1.5.6-1
 libbytesize 2.8-2
 libcaca 0.99.beta20-2
+libcamera 0.1.0-1
+libcamera-ipa 0.1.0-1
 libcanberra 1:0.30+r2+gc0620e4-3
 libcap 2.69-1
 libcap-ng 0.8.3-2
@@ -503,11 +509,13 @@ libevdev 1.13.1-1
 libevent 2.1.12-4
 libexif 0.6.24-2
 libexttextcat 3.4.6-1
+libfdk-aac 2.0.2-1
 libffi 3.4.4-1
 libfm 1.3.2-1
 libfm-extra 1.3.2-1
 libfm-gtk3 1.3.2-1
 libfontenc 1.1.7-1
+libfreeaptx 0.1.1-1
 libfreehand 0.1.2-4
 libgcrypt 1.10.2-1
 libgexiv2 0.14.2-1
@@ -529,6 +537,7 @@ libimagequant 4.2.0-1
 libimobiledevice 1.3.0-9
 libinih 57-1
 libinput 1.23.0-1
+libinput-gestures 2.74-1
 libisl 0.26-1
 libisofs 1.5.6-1
 libixion 0.17.0-5
@@ -537,6 +546,8 @@ libjxl 0.8.2-1
 libkeybinder3 0.3.2-4
 libksba 1.6.4-1
 liblangtag 0.6.4-1
+liblc3 1.0.4-1
+libldac 2.0.2.3-1
 libldap 2.6.6-1
 liblqr 0.4.2-3
 libluv 1.45.0_0-1
@@ -558,6 +569,7 @@ libmpdclient 2.20-3
 libmpeg2 0.5.1-8
 libmspub 0.1.4-14
 libmwaw 0.3.22-1
+libmysofa 1.3.1-2
 libndp 1.8-1
 libnetfilter_conntrack 1.0.9-1
 libnewt 0.52.23-2
@@ -594,7 +606,7 @@ libqalculate 4.7.0-1
 libqxp 0.0.2-10
 libraqm 0.10.1-1
 libraw1394 2.1.2-3
-libreoffice-still 7.4.7-5
+libreoffice-still 7.5.5-1
 librevenge 0.0.5-2
 librsvg 2:2.56.3-1
 libsamplerate 0.2.2-2
@@ -605,7 +617,7 @@ libshout 1:2.4.6-2
 libsigc++ 2.12.0-1
 libsigsegv 2.14-2
 libsm 1.2.4-1
-libsndfile 1.2.0-1
+libsndfile 1.2.2-1
 libsodium 1.0.18-2
 libsoup 2.74.3-1
 libsoup3 3.4.2-1
@@ -629,7 +641,7 @@ libtool 2.4.7+4+g1ec8fa28-6
 libtpms 0.9.6-1
 libunistring 1.1-2
 libunwind 1.6.2-2
-libupnp 1.14.17-1
+libupnp 1.14.18-1
 libusb 1.0.26-2
 libusbmuxd 2.0.2-3
 libutempter 1.2.1-3
@@ -689,6 +701,7 @@ libyuv r2322+3aebf69d-1
 libzip 1.10.0-1
 libzmf 0.0.2-14
 licenses 20230729-1
+lilv 0.24.20-2
 linux 6.4.11.arch2-1
 linux-api-headers 6.4-1
 linux-firmware 20230804.7be2766d-2
@@ -703,7 +716,8 @@ lua 5.4.6-1
 lua-lpeg 1.1.0-1
 lua52 5.2.4-5
 lua53 5.3.6-1
-luajit 2.1.0.beta3.r505.g72efc42e-1
+luajit 2.1.1692616192-1
+lv2 1.18.10-1
 lxappearance 0.6.3-4
 lxmenu-data 0.1.5-3
 lz4 1:1.9.4-1
@@ -748,7 +762,7 @@ nginx-mainline 1.25.2-1
 nitrogen 1.6.1-4
 nm-connection-editor 1.32.0-3
 node-gyp 9.4.0-1
-nodejs 20.5.0-1
+nodejs 20.5.1-1
 nodejs-nopt 7.2.0-1
 notification-daemon 3.20.0-5
 notmuch-runtime 0.37-3
@@ -775,7 +789,7 @@ pacman-mirrorlist 20230628-1
 pahole 1:1.25-4
 pam 1.5.3-3
 pambase 20221020-1
-pandoc-cli 0.1.1-28
+pandoc-cli 0.1.1-30
 pango 1:1.50.14-1
 pangomm 2.46.3-1
 paprefs 1.2-1
@@ -786,7 +800,7 @@ patch 2.7.6-10
 pavucontrol 1:5.0+r64+geba9ca6-1
 pciutils 3.10.0-1
 pcmanfm-gtk3 1.3.2-1
-pcre 8.45-3
+pcre 8.45-4
 pcre2 10.42-2
 pcsclite 2.0.0-1
 perl 5.38.0-1
@@ -802,6 +816,10 @@ perl-uri 5.19-2
 picom 10.2-1
 pinentry 1.2.1-1
 pinta 2.1.1-1
+pipewire 1:0.3.77-2
+pipewire-audio 1:0.3.77-2
+pipewire-media-session 1:0.4.2-2
+pipewire-pulse 1:0.3.77-2
 pixman 0.42.2-1
 pkgconf 1.8.1-1
 playerctl 2.4.1-3
@@ -816,7 +834,6 @@ postfix 3.8.1-3
 potrace 1.16-2
 procps-ng 4.0.3-1
 psmisc 23.6-1
-pulseaudio 16.1-6
 python 3.11.3-2
 python-attrs 22.2.0-3
 python-autocommand 2.2.2-4
@@ -913,12 +930,14 @@ rubberband 3.3.0-1
 run-parts 5.5-1
 runc 1.1.9-1
 s-nail 14.9.24-2
+sbc 2.0-1
 sc-im-git 0.8.3.r25.gff27440-1
 scrot 1.10-1
 sdl12-compat 1.2.64-1
 sdl2 2.28.2-1
 sed 4.9-3
 semver 7.5.0-1
+serd 0.30.16-1
 sfsexp 1.4.1-1
 shaderc 2023.4-1
 shadow 4.13-2
@@ -926,6 +945,7 @@ shared-mime-info 2.2+13+ga2ffb28-1
 slack-desktop 4.33.73-1
 slang 2.3.3-2
 snappy 1.1.9-2
+sord 0.16.14-1
 sound-theme-freedesktop 0.8-5
 source-highlight 3.1.9-10
 speex 1.2.1-1
@@ -933,6 +953,7 @@ speexdsp 1.2.1-1
 spirv-tools 2022.4-1
 spotify-tui 0.25.0-3
 sqlite 3.42.0-1
+sratom 0.6.14-1
 srt 1.5.2-1
 startup-notification 0.12-8
 strace 6.4-1
@@ -978,6 +999,8 @@ thunar-archive-plugin 0.5.1-1
 thunar-media-tags-plugin 0.4.0-1
 thunar-volman 4.18.0-1
 tldr 3.2.0-1
+tlp 1.5.0-6
+tlpui 1:1.5.0.7-1
 tmux 3.3_a-7
 todotxt 2.12.0.post2-2
 tpm2-tss 4.0.1-1
@@ -1045,7 +1068,7 @@ xdg-utils 1.1.3+45+g301a1a4-1
 xf86-input-libinput 1.3.0-1
 xf86-video-vesa 2.6.0-1
 xfburn 0.7.0-1
-xfce4-appfinder 4.18.0-1
+xfce4-appfinder 4.18.1-1
 xfce4-artwork 0.1.1a_git20110420-6
 xfce4-battery-plugin 1.1.5-1
 xfce4-clipman-plugin 1.6.4-1
@@ -1074,7 +1097,7 @@ xfce4-settings 4.18.3-1
 xfce4-smartbookmark-plugin 0.5.2-1
 xfce4-systemload-plugin 1.3.2-1
 xfce4-taskmanager 1.5.5-1
-xfce4-terminal 1.0.4-1
+xfce4-terminal 1.1.0-1
 xfce4-time-out-plugin 1.1.3-1
 xfce4-timer-plugin 1.7.2-1
 xfce4-verve-plugin 2.0.3-1

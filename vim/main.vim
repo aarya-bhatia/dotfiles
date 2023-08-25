@@ -132,7 +132,7 @@ nnoremap <leader>q :quit<CR>
 nnoremap <leader>d :bd<CR>
 
 " Close current buffer and switch to the previous one
-noremap <C-x> :bp<Bar>bd #<Cr>
+" noremap <C-x> :bp<Bar>bd #<Cr>
 
 " Unhighlight search results
 nnoremap <Esc> :nohl<CR>

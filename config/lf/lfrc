@@ -28,7 +28,7 @@ set ifs "\n"
 set scrolloff 10
 
 # use enter for shell commands
-map <enter> shell
+# map <enter> shell
 
 # show the result of execution of previous commands
 map ` !true

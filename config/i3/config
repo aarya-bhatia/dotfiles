@@ -30,8 +30,8 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Take screenshot with Print key
-bindcode 107 exec --no-startup-id scrot -F '/home/aarya/GoogleDrive/Pictures/screenshots/%Y-%m-%d_%H:%M:%S_$wx$h.png' -e 'optipng $f' && notify-send "Screenshot" "Screenshot was taken!"
-bindcode $mod+107 exec --no-startup-id scrot -s -F '/home/aarya/GoogleDrive/Pictures/screenshots/%Y-%m-%d_%H:%M:%S_$wx$h.png' -e 'optipng $f' && notify-send "Screenshot" "Screenshot was taken!"
+# bindcode 107 exec --no-startup-id scrot -F '/home/aarya/GoogleDrive/Pictures/screenshots/%Y-%m-%d_%H:%M:%S_$wx$h.png' -e 'optipng $f' && notify-send "Screenshot" "Screenshot was taken!"
+# bindcode $mod+107 exec --no-startup-id scrot -s -F '/home/aarya/GoogleDrive/Pictures/screenshots/%Y-%m-%d_%H:%M:%S_$wx$h.png' -e 'optipng $f' && notify-send "Screenshot" "Screenshot was taken!"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -113,7 +113,7 @@ assign [class="thunderbird"] $ws3
 # assign [class="qutebrowser"] $ws2
 # assign [class="Tartube"] $ws4
 # assign [class="arandr"] $ws4
-# assign [class="discord"] $ws5
+assign [class="discord"] $ws4
 # assign [class="slack"] $ws5
 # assign [class="VirtualBox Manager"] $ws6
 
@@ -163,6 +163,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
 # Hide window borders
 for_window [class="^.*"] border pixel 1
 # new_window 1pixel
@@ -183,14 +186,14 @@ exec_always --no-startup-id picom --config ~/.config/picom.conf &
 exec_always --no-startup-id ~/scripts/keymaps.sh
 
 # mirror display with HDMI-1 monitor if connected
-exec_always --no-startup-id ~/scripts/screenmirror.sh
+# exec_always --no-startup-id ~/scripts/screenmirror.sh
 
 # Auto lock screen and suspend after some amount of idle time
-exec_always --no-startup-id ~/scripts/screenlock.sh
+# exec_always --no-startup-id ~/scripts/screenlock.sh
 
 # lock screen with <Alt-X>
 bindsym $mod+Shift+x exec betterlockscreen --lock dim --off 600
 
 # lock and suspend with <Alt-Z>
-bindsym $mod+Shift+z exec betterlockscreen --suspend
+# bindsym $mod+Shift+z exec betterlockscreen --suspend
 
