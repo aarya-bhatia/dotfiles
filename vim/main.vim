@@ -25,7 +25,7 @@ set belloff=all                   " turn off error beeps
 set hidden                        " allows multiple buffers without saving
 set nowrap                        " line wrap
 set linebreak
-set shiftwidth=2 tabstop=2 expandtab
+set shiftwidth=4 tabstop=4 noexpandtab
 set scrolloff=8
 set backspace=indent,eol,start    " make that backspace key work the way it should
 set splitbelow                    " new horizontal split opens below current window
