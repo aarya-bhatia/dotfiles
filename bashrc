@@ -8,7 +8,8 @@ shopt -s checkwinsize
 alias s="systemctl"
 alias ss="sudo systemctl"
 alias g="git"
-alias p="sudo pacman"
+alias p="pacman"
+alias sp="sudo pacman"
 alias v="vim"
 alias sv="sudo vim"
 alias vim="nvim"
@@ -36,16 +37,15 @@ alias fgrep="fgrep --color=auto"
 alias egrep="egrep --color=auto"
 alias dmesg="dmesg --color=auto"
 
+alias scrot="escrotum"
 alias mutt="neomutt"
 alias sc="sc-im"
 alias bat="bat --style=plain --theme=gruvbox-dark"
 alias cat="bat --plain"
 alias bathelp="bat --plain --language=help"
 alias ta="tmux attach || tmux"
-alias block="betterlockscreen"
 alias t="todo.sh -d /home/aarya/dotfiles/todo.cfg"
 alias send_alert="$SCRIPTS_DIR/alert-service/send_alert.py"
-alias screenshot="scrot -F '$HOME/GoogleDrive/Pictures/screenshots/%Y-%m-%d_%H:%M:%S_\$wx\$h.png' -e 'optipng $f'"
 
 # vim pager
 alias view="col -b | vim -R -"
@@ -82,3 +82,4 @@ export PS1="\$(pwd)$ "
 
 # Load python venv
 [ -d $HOME/pyvenv ] && source $HOME/pyvenv/bin/activate
+

@@ -2,10 +2,9 @@
 plugged/
 bin/
 cache/
+.cache/
 *.pl
 *history
-cache
-.cache
 VirtualBox
 pyvenv
 .cargo

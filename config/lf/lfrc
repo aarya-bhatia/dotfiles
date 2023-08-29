@@ -111,16 +111,12 @@ cmd zip ${{
 }}
 
 cmd cd-home $lf -remote "send $id cd $HOME"
-cmd cd-notes $lf -remote "send $id cd $HOME/GoogleDrive/Notes"
-cmd cd-todos $lf -remote "send $id cd $HOME/GoogleDrive/Notes/todos"
 cmd cd-dotfiles $lf -remote "send $id cd $HOME/dotfiles"
 cmd cd-scripts $lf -remote "send $id cd $HOME/scripts"
 cmd cd-config $lf -remote "send $id cd $HOME/.config"
 cmd cd-lf $lf -remote "send $id cd $HOME/.config/lf"
 
 map gh cd-home
-map gn cd-notes
-map gt cd-todos
 map gd cd-dotfiles
 map gs cd-scripts
 map gc cd-config

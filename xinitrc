@@ -62,6 +62,5 @@ function start_xfce() {
   exec startxfce4
 }
 
-# start_i3
-
-start_xfce
+start_i3
+# start_xfce

@@ -1,5 +1,9 @@
 import os
-filename = input("Enter file name:").strip()
-print("pwd: ", os.getcwd())
+
+filename = input().strip()
+
 if not os.path.exists(filename):
-    open(filename, "w").close()
+    if filename[-1] == "/":
+        os.mkdir(filename)
+    else:
+        open(filename, "w").close()

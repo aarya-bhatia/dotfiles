@@ -34,7 +34,7 @@ export PATH=$PATH:$GOPATH/bin
 umask 0027
 
 # Start X server
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
-  exec startx
-fi
+# if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+#   exec startx
+# fi
 
