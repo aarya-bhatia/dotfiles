@@ -1024,6 +1024,7 @@ tree-sitter 0.20.10-1
 tslib 1.22-1
 ttf-font-awesome-4 4.7.0-5
 ttf-liberation 2.1.5-1
+ttf-meslo-nerd 3.0.2-1
 tumbler 4.18.1-1
 twolame 0.4.0-3
 tzdata 2023c-2

@@ -19,3 +19,9 @@ Host ubuntu
   User aarya
   Port 3022
 
+Host gitlab
+	Hostname gitlab.engr.illinois.edu
+	User git
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+
