@@ -205,6 +205,9 @@ bindsym $mod+Shift+x exec betterlockscreen --lock dim --off 600
 
 bindsym $mod+Shift+z exec betterlockscreen --lock dim
 
+# Rofi password store lookup
+bindsym $mod+Shift+P exec rofi-pass
+
 # Press $mod+o followed by either f, t, Escape or Return to launch firefox,
 # thunderbird or return to the default mode, respectively.
 set $mode_launcher Launch: [f]irefox [t]hunderbird [c]hrome [d]iscord [s]lack

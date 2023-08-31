@@ -7,7 +7,7 @@ shopt -s checkwinsize
 
 alias s="systemctl"
 alias ss="systemctl status"
-alias S="systemctl"
+alias S="sudo systemctl"
 alias g="git"
 alias gs="git status"
 alias gl="git log"
