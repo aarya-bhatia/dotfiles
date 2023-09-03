@@ -193,6 +193,9 @@ exec_always --no-startup-id ~/scripts/keymaps.sh
 # Dunst notification daemon
 exec_always --no-startup-id dunst
 
+# random baackground wallpaper
+exec_always --no-startup-id ~/scripts/wallpaper.sh
+
 # mirror display with HDMI-1 monitor if connected
 exec_always --no-startup-id ~/scripts/screenmirror.sh
 
