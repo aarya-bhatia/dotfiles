@@ -68,17 +68,9 @@ cmd delete ${{
     [ "$ans" = "y" ] && rm -rf $fx
 }}
 
-cmd trash ${{
-  set -f
-  for file in "$fx"
-  do
-    trash-put "$file"
-  done
-}}
-
+cmd trash !python3 $HOME/scripts/lf/trash.py
 map <delete> trash
 map D trash
-# map D $echo "$fx" | xargs python3 $HOME/scripts/lf/trash.py
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
@@ -148,34 +140,24 @@ map <c-f> fzf
 map o %python $HOME/.config/lf/scripts/mkfile.py
 map R $set -f; echo $fx | xargs $HOME/scripts/c-programs/bulkrename
 
-cmd chmod %{{
-  printf "Mode bits: "
-  read ans
-  for file in "$fx"
-  do
-    chmod $ans $file
-  done
-}}
-
-cmd mkdir %{{
-  printf "Directory name: "
-  read ans
-  mkdir -p $ans
-}}
-
-cmd mkfile %{{
-  printf "File name: "
-  read ans
-  lf -remote "send $id \$$EDITOR $ans"
-}}
-
-# cmd exec %{{
-#   if [ -x  "$f" ]
-#   then
-#     printf "Args: "
-#     read ans
-#     lf -remote "send \$$f $ans"
-#   else
-#     lf -remote "send $id echo File is not executable"
-#   fi
+# cmd chmod %{{
+#   printf "Mode bits: "
+#   read ans
+#   for file in "$fx"
+#   do
+#     chmod $ans $file
+#   done
 # }}
+
+# cmd mkdir %{{
+#   printf "Directory name: "
+#   read ans
+#   mkdir -p $ans
+# }}
+#
+# cmd mkfile %{{
+#   printf "File name: "
+#   read ans
+#   lf -remote "send $id \$$EDITOR $ans"
+# }}
+#

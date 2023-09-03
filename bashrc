@@ -89,3 +89,7 @@ export PS1="\$(pwd)$ "
 # Load python venv
 [ -d $HOME/pyvenv ] && source $HOME/pyvenv/bin/activate
 
+alias toggle-notifications="dunstctl set-paused toggle"
+
+export LATITUDE="41.11"
+export LONGITUDE="-88.24"

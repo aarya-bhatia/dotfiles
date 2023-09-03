@@ -37,8 +37,8 @@ bindsym XF86AudioNext exec --no-startup-id $HOME/scripts/external/volume_brightn
 bindsym XF86AudioPrev exec --no-startup-id $HOME/scripts/external/volume_brightness.sh prev_track
 
 # Screenshots with Print key
-bindcode 107 exec --no-startup-id escrotum '~/GoogleDrive/Pictures/screenshots/screenshot-%Y-%m-%d-%T.png' -e 'notify-send "Screenshot" "Screenshot was taken!"' -C
-bindcode $mod+107 exec --no-startup-id escrotum '~/GoogleDrive/Pictures/screenshots/screenshot-%Y-%m-%d-%T.png' -s -e 'notify-send "Screenshot" "Screenshot was taken!"'
+bindcode 107 exec --no-startup-id escrotum -e 'notify-send "Screenshot" "Screenshot was taken!"' '~/GoogleDrive/Pictures/screenshots/screenshot-%Y-%m-%d-%T.png'
+bindcode $mod+107 exec --no-startup-id escrotum -s -e 'notify-send "Screenshot" "Screenshot was taken!"' '~/GoogleDrive/Pictures/screenshots/screenshot-%Y-%m-%d-%T.png'
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -199,10 +199,10 @@ exec_always --no-startup-id ~/scripts/screenmirror.sh
 # Auto lock screen and suspend after some amount of idle time
 exec_always --no-startup-id ~/scripts/screenlock.sh
 
-# lock screen with <Alt-X>
-bindsym $mod+Shift+x exec betterlockscreen --lock dim --off 600
-# bindsym $mod+Shift+x exec systemctl suspend
+# bindsym $mod+Shift+x exec betterlockscreen --lock dim --off 600
+bindsym $mod+Shift+x exec systemctl suspend
 
+# lock screen with <Alt-Z>
 bindsym $mod+Shift+z exec betterlockscreen --lock dim
 
 # Rofi password store lookup

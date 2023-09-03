@@ -45,6 +45,7 @@ box2d 2.4.1-1
 bridge-utils 1.7.1-1
 brightnessctl 0.5.1-2
 brotli 1.0.9-12
+bubblewrap 0.8.0-1
 bzip2 1.0.8-5
 c-ares 1.19.1-1
 ca-certificates 20220905-1
@@ -107,6 +108,7 @@ efibootmgr 18-2
 efivar 38-3
 electron22 22.3.22-1
 elementary-icon-theme 7.3.1-1
+enchant 2.5.0-1
 escrotum-git 0.2.1.r48.a41d0f1-1
 exiv2 0.28.0-3
 exo 4.18.0-1
@@ -125,6 +127,7 @@ findutils 4.9.0-3
 firefox 117.0-1
 flac 1.4.3-1
 flex 2.6.4-5
+font-manager 0.8.8-1
 fontconfig 2:2.14.2-1
 freeglut 3.4.0-1
 freetype2 2.13.1-1
@@ -181,6 +184,8 @@ grub-customizer 5.2.3-1
 gsasl 2.2.0-1
 gsettings-desktop-schemas 44.0-1
 gsm 1.0.22-1
+gssdp 1.6.2-1
+gst-plugins-bad-libs 1.22.5-2
 gst-plugins-base 1.22.5-1
 gst-plugins-base-libs 1.22.5-1
 gst-plugins-good 1.22.5-1
@@ -194,6 +199,8 @@ gtkmm3 3.24.8-1
 gtksourceview4 4.8.4-1
 guile 3.0.9-1
 gumbo-parser 0.10.1-2
+gupnp 1:1.6.5-1
+gupnp-igd 1.6.0-1
 gzip 1.12-3
 harfbuzz 8.1.1-1
 harfbuzz-icu 8.1.1-1
@@ -559,6 +566,7 @@ libluv 1.45.0_0-1
 liblzf 3.6-4
 libmaa 1.4.7-2
 libmad 0.15.1b-10
+libmanette 0.2.6-5
 libmatroska 1.7.1-1
 libmaxminddb 1.7.1-1
 libmd 1.1.0-1
@@ -580,6 +588,7 @@ libnewt 0.52.23-2
 libnfnetlink 1.0.2-1
 libnftnl 1.2.6-1
 libnghttp2 1.55.1-1
+libnice 0.1.21-2
 libnl 3.7.0-3
 libnm 1.42.6-1
 libnma 1.10.6-2
@@ -623,6 +632,7 @@ libsigsegv 2.14-2
 libsm 1.2.4-1
 libsndfile 1.2.2-1
 libsodium 1.0.18-2
+libsoup 2.74.3-1
 libsoup3 3.4.2-1
 libsoxr 0.1.3-3
 libssh 0.10.5-1
@@ -660,6 +670,7 @@ libwacom 2.8.0-1
 libwebp 1.3.1-1
 libwnck3 43.0-3
 libwpd 0.10.3-4
+libwpe 1.14.1-2
 libwpg 0.3.4-1
 libwps 0.4.14-1
 libx11 1.8.6-1
@@ -761,6 +772,8 @@ net-tools 2.10-2
 nettle 3.9.1-1
 network-manager-applet 1.32.0-3
 networkmanager 1.42.6-1
+networkmanager-openconnect 1.2.10-1
+networkmanager-openvpn 1.10.2-3
 nftables 1:1.0.8-2
 nginx-mainline 1.25.2-1
 nitrogen 1.6.1-4
@@ -775,9 +788,11 @@ npth 1.6-4
 nspr 4.35-1
 nss 3.92-1
 numactl 2.0.16-1
+oath-toolkit 2.6.9-1
 ocl-icd 2.3.2-1
 oniguruma 6.9.8-1
 openbsd-netcat 1.225_1-1
+openconnect 1:9.12-1
 opencore-amr 0.1.6-1
 openexr 3.1.11-1
 openjpeg2 2.5.0-2
@@ -786,6 +801,7 @@ openpmix 4.2.5-1
 openssh 9.4p1-2
 openssl 3.1.2-1
 openssl-1.1 1.1.1.v-1
+openvpn 2.6.6-1
 opus 1.4-1
 orc 0.4.34-1
 p11-kit 0.25.0-1
@@ -826,6 +842,7 @@ pipewire-audio 1:0.3.78-1
 pipewire-media-session 1:0.4.2-2
 pipewire-pulse 1:0.3.78-1
 pixman 0.42.2-1
+pkcs11-helper 1.29.0-2
 pkgconf 1.8.1-1
 playerctl 2.4.1-3
 polkit 123-1
@@ -968,6 +985,7 @@ sqlite 3.43.0-1
 sratom 0.6.14-1
 srt 1.5.2-1
 startup-notification 0.12-8
+stoken 0.92-4
 strace 6.4-1
 sudo 1.9.14.p3-1
 svt-av1 1.7.0-1
@@ -1021,7 +1039,7 @@ trash-cli 0.23.2.13.2-2
 tree 2.1.1-1
 tree-sitter 0.20.10-1
 tslib 1.22-1
-ttf-font-awesome-4 4.7.0-5
+ttf-font-awesome-5 5.15.4-1
 ttf-liberation 2.1.5-1
 ttf-meslo-nerd 3.0.2-1
 tumbler 4.18.1-1
@@ -1051,6 +1069,7 @@ virtualbox-host-modules-arch 7.0.10-13
 vlc 3.0.18-14
 vmaf 2.3.1-1
 volume_key 0.3.12-8
+vpnc 1:0.5.3.r526.r213-1
 vte-common 0.72.2-2
 vte3 0.72.2-2
 vulkan-headers 1:1.3.262-1
@@ -1058,12 +1077,15 @@ vulkan-icd-loader 1.3.255-1
 w3m 0.5.3.git20230121_1-1
 wavpack 5.6.0-1
 wayland 1.22.0-1
+wayland-protocols 1.32-1
+webkit2gtk 2.40.5-2
 webp-pixbuf-loader 0.2.4-1
 webrtc-audio-processing 0.3.1-4
 wget 1.21.4-1
 which 2.21-6
 woff2 1.0.2-4
 wpa_supplicant 2:2.10-8
+wpebackend-fdo 1.14.2-1
 x264 3:0.164.r3095.baee400-4
 x265 3.5-3
 xapian-core 1:1.4.23-1
@@ -1079,6 +1101,7 @@ xcb-util-renderutil 0.3.10-1
 xcb-util-wm 0.4.2-1
 xcb-util-xrm 1.3-2
 xclip 0.13-4
+xdg-dbus-proxy 0.1.5-1
 xdg-utils 1.1.3+45+g301a1a4-1
 xdotool 3.20211022.1-1
 xf86-input-libinput 1.4.0-1
