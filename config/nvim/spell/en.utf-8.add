@@ -16,3 +16,5 @@ malloc
 syscall
 stdout
 tcp
+hostname
+config

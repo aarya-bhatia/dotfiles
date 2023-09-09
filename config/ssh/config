@@ -1,3 +1,15 @@
+# Virtual Box
+
+Host ubuntu20
+  Hostname 127.0.0.1
+  User aarya
+  Port 3022
+
+Host ubuntu14
+  Hostname 127.0.0.1
+  User aarya
+  Port 3022
+
 Host azure
   Hostname 40.117.208.41
   User aarya
@@ -13,27 +25,13 @@ Host linode
   User aarya
   IdentityFile ~/.ssh/id_rsa
 
-# Virtual Box
-Host ubuntu14
-  Hostname 127.0.0.1
-  User aarya
-  Port 3022
-
-Host ubuntu20
-  Hostname 127.0.0.1
-  User aarya
-  Port 3022
-
 Host gitlab
 	Hostname gitlab.engr.illinois.edu
 	User git
     IdentityFile ~/.ssh/id_rsa
     IdentitiesOnly yes
 
-
-# #########################
 # CS425 VM CLUSTER
-# #########################
 
 Host vm1
 	Hostname fa23-cs425-0701.cs.illinois.edu
@@ -74,6 +72,4 @@ Host vm9
 Host vm10
 	Hostname fa23-cs425-0710.cs.illinois.edu
 	User aaryab2
-
-# #########################
 

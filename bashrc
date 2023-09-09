@@ -6,11 +6,10 @@ shopt -s autocd
 shopt -s checkwinsize
 
 alias s="systemctl"
+alias j="journalctl"
 alias ss="systemctl status"
 alias S="sudo systemctl"
 alias g="git"
-alias gs="git status"
-alias gl="git log"
 alias p="sudo pacman"
 alias y="yay"
 alias v="vim"
@@ -54,6 +53,7 @@ alias ta="tmux attach || tmux"
 alias t="todo.sh -d /home/aarya/dotfiles/todo.cfg"
 alias send_alert="$SCRIPTS_DIR/alert-service/send_alert.py"
 alias fvim="$SCRIPTS_DIR/fzf_vim.py"
+alias vbox="VBoxManage"
 
 # vim pager
 alias view="col -b | vim -R -"
@@ -68,18 +68,6 @@ if [ -d /usr/share/fzf ]; then
 	source /usr/share/fzf/completion.bash
 	source /usr/share/fzf/key-bindings.bash
 fi
-
-function gsync() {
-  rclone copy --exclude-from=$COPYIGNORE -v --update ~/GoogleDrive gdrive:
-  rclone copy --exclude-from=$COPYIGNORE -v --update gdrive: ~/GoogleDrive
-}
-
-function cloudsync(){
-  rclone copy --exclude-from=$COPYIGNORE -v --update ~/GoogleDrive gdrive:
-  rclone copy --exclude-from=$COPYIGNORE -v --update gdrive: ~/GoogleDrive
-  rclone copy --exclude-from=$COPYIGNORE -v --update ~/OneDrive onedrive:
-  rclone copy --exclude-from=$COPYIGNORE -v --update onedrive: ~/OneDrive
-}
 
 # open man page in vim
 function vman(){

@@ -15,6 +15,8 @@ Plug 'numToStr/Comment.nvim'
 " status line
 " Plug 'nvim-lualine/lualine.nvim'
 
+Plug 'wellle/targets.vim'		              " more text objects
+
 " icons
 Plug 'nvim-tree/nvim-web-devicons'
 
@@ -72,14 +74,14 @@ source $HOME/.config/nvim/lua/config.lua
 source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/commands.lua
 
-colorscheme gruvbox
-" colorscheme gruvbox-material
-
 if has("termguicolors")     " set true colors
     set t_8f=\[[38;2;%lu;%lu;%lum
     set t_8b=\[[48;2;%lu;%lu;%lum
     set termguicolors
 endif
+
+colorscheme gruvbox
+" colorscheme gruvbox-material
 
 " highlight Normal ctermbg=none
 " highlight NonText ctermbg=none
