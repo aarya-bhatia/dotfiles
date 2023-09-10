@@ -39,8 +39,9 @@ set scrolloff 10
 map ` !true
 
 # execute current file (must be executable)
-map x $$f
-map X !$f
+cmd exec !python3 $HOME/scripts/lf/exec.py
+map x exec
+map X exec
 
 # dedicated keys for file opener actions
 # map <enter> &mimeopen $f
@@ -68,10 +69,11 @@ cmd delete ${{
     printf "$fx\n"
     printf "delete?[y/n]"
     read ans
-    [ "$ans" = "y" ] && rm -rf $fx
+    [ "$ans" = "y" ] && trash-put $fx
 }}
 
 cmd trash !python3 $HOME/scripts/lf/trash.py
+
 map <delete> trash
 map D trash
 
@@ -143,24 +145,12 @@ map <c-f> fzf
 map o %python $HOME/.config/lf/scripts/mkfile.py
 map R $set -f; echo $fx | xargs $HOME/scripts/c-programs/bulkrename
 
-# cmd chmod %{{
-#   printf "Mode bits: "
-#   read ans
-#   for file in "$fx"
-#   do
-#     chmod $ans $file
-#   done
-# }}
+cmd chmod %{{
+  printf "Mode bits: "
+  read ans
+  for file in "$fx"
+  do
+    chmod $ans $file
+  done
+}}
 
-# cmd mkdir %{{
-#   printf "Directory name: "
-#   read ans
-#   mkdir -p $ans
-# }}
-#
-# cmd mkfile %{{
-#   printf "File name: "
-#   read ans
-#   lf -remote "send $id \$$EDITOR $ans"
-# }}
-#
