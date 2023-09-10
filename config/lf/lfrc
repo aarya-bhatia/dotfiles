@@ -140,11 +140,16 @@ cmd fzf ${{
   fi
 }}
 
+# Fuzzy find file or directory
 map <c-f> fzf
 
-map o %python $HOME/.config/lf/scripts/mkfile.py
+# To create files and directories
+map o %python $HOME/scripts/lf/mkfile.py
+
+# To rename selected files in defualt editor
 map R $set -f; echo $fx | xargs $HOME/scripts/c-programs/bulkrename
 
+# To change mode bits for selected files
 cmd chmod %{{
   printf "Mode bits: "
   read ans
