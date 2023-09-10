@@ -766,7 +766,7 @@ nginx-mainline 1.25.2-1
 nitrogen 1.6.1-4
 nm-connection-editor 1.32.0-3
 node-gyp 9.4.0-1
-nodejs 20.6.0-1
+nodejs 20.6.1-1
 nodejs-nopt 7.2.0-1
 notification-daemon 3.20.0-5
 notmuch-runtime 0.37-3
@@ -784,8 +784,8 @@ opencore-amr 0.1.6-1
 openexr 3.2.0-2
 openjpeg2 2.5.0-3
 openmpi 4.1.5-5
-openpmix 4.2.5-1
-openssh 9.4p1-3
+openpmix 4.2.6-1
+openssh 9.4p1-4
 openssl 3.1.2-1
 openssl-1.1 1.1.1.v-1
 openvpn 2.6.6-1
@@ -958,7 +958,7 @@ semver 7.5.0-1
 serd 0.30.16-1
 sfsexp 1.4.1-1
 shaderc 2023.4-1
-shadow 4.13-2
+shadow 4.13-3
 shared-mime-info 2.2+13+ga2ffb28-1
 slack-desktop 4.33.90-1
 slang 2.3.3-2
@@ -979,9 +979,9 @@ stoken 0.92-4
 strace 6.5-1
 sudo 1.9.14.p3-1
 svt-av1 1.7.0-1
-systemd 254.2-1
-systemd-libs 254.2-1
-systemd-sysvcompat 254.2-1
+systemd 254.3-1
+systemd-libs 254.3-1
+systemd-sysvcompat 254.3-1
 t1lib 5.1.2-8
 taglib 1.13.1-1
 talloc 2.4.1-1

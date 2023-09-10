@@ -32,14 +32,11 @@ set ifs "\n"
 # leave some space at the top and the bottom of the screen
 set scrolloff 10
 
-# use enter for shell commands
-# map <enter> shell
-
 # show the result of execution of previous commands
 map ` !true
 
 # execute current file (must be executable)
-cmd exec !python3 $HOME/scripts/lf/exec.py
+cmd exec %python3 $HOME/scripts/lf/exec.py
 map x exec
 map X exec
 
@@ -63,17 +60,8 @@ cmd open &{{
 
 map <enter> open
 
-# define a custom 'delete' command
-# cmd delete ${{
-#     set -f
-#     printf "$fx\n"
-#     printf "delete?[y/n]"
-#     read ans
-#     [ "$ans" = "y" ] && trash-put $fx
-# }}
-
+# To delete files
 cmd trash %python3 $HOME/scripts/lf/trash.py
-
 map <delete> trash
 map D trash
 
@@ -110,14 +98,10 @@ cmd zip ${{
 }}
 
 cmd cd-home $lf -remote "send $id cd $HOME"
-cmd cd-dotfiles $lf -remote "send $id cd $HOME/dotfiles"
-cmd cd-scripts $lf -remote "send $id cd $HOME/scripts"
 cmd cd-config $lf -remote "send $id cd $HOME/.config"
 cmd cd-lf $lf -remote "send $id cd $HOME/.config/lf"
 
 map gh cd-home
-map gd cd-dotfiles
-map gs cd-scripts
 map gc cd-config
 map gl cd-lf
 
@@ -144,10 +128,10 @@ cmd fzf ${{
 map <c-f> fzf
 
 # To create files and directories
-map o %python $HOME/scripts/lf/mkfile.py
+map o %$HOME/scripts/lf/mkfile.py
 
-# To rename selected files in defualt editor
-map R $set -f; echo $fx | xargs $HOME/scripts/c-programs/bulkrename
+# To rename selected files in editor
+map R !$HOME/scripts/lf/bulkrename.py
 
 # To change mode bits for selected files
 cmd chmod %{{
