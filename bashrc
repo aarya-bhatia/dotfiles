@@ -83,3 +83,5 @@ alias toggle-notifications="dunstctl set-paused toggle"
 
 export LATITUDE="41.11"
 export LONGITUDE="-88.24"
+
+alias sshpass="sshpass -f ~/passwd"

@@ -64,15 +64,15 @@ cmd open &{{
 map <enter> open
 
 # define a custom 'delete' command
-cmd delete ${{
-    set -f
-    printf "$fx\n"
-    printf "delete?[y/n]"
-    read ans
-    [ "$ans" = "y" ] && trash-put $fx
-}}
+# cmd delete ${{
+#     set -f
+#     printf "$fx\n"
+#     printf "delete?[y/n]"
+#     read ans
+#     [ "$ans" = "y" ] && trash-put $fx
+# }}
 
-cmd trash !python3 $HOME/scripts/lf/trash.py
+cmd trash %python3 $HOME/scripts/lf/trash.py
 
 map <delete> trash
 map D trash
