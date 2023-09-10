@@ -1,4 +1,4 @@
 # dotfiles
 
-These are a collection of my personal configuration files and scripts.
+These are a collection of my personal configuration files.
 
