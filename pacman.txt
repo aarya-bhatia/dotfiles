@@ -293,7 +293,7 @@ haskell-http-client-tls 0.3.6.3-6
 haskell-http-date 0.0.11-117
 haskell-http-media 0.8.1.0-1
 haskell-http-types 0.12.3-306
-haskell-http2 3.0.3-55
+haskell-http2 3.0.3-56
 haskell-hunit 1.6.2.0-190
 haskell-indexed-traversable 0.1.2.1-1
 haskell-indexed-traversable-instances 0.1.1.2-4
@@ -322,7 +322,7 @@ haskell-optparse-applicative 0.17.0.0-47
 haskell-pandoc 3.1.2-34
 haskell-pandoc-lua-engine 0.2-33
 haskell-pandoc-lua-marshal 0.2.2-15
-haskell-pandoc-server 0.1-111
+haskell-pandoc-server 0.1-112
 haskell-pandoc-types 1.23-28
 haskell-pem 0.2.4-266
 haskell-pretty-show 1.10-14
@@ -338,7 +338,7 @@ haskell-scientific 0.3.7.0-94
 haskell-semialign 1.2.0.1-120
 haskell-semigroupoids 5.3.7-102
 haskell-servant 0.19.1-45
-haskell-servant-server 0.19.2-81
+haskell-servant-server 0.19.2-82
 haskell-sha 1.6.4.4-19
 haskell-simple-sendfile 0.2.31-16
 haskell-singleton-bool 0.1.7-1
@@ -394,11 +394,11 @@ haskell-vector 0.13.0.0-46
 haskell-vector-algorithms 0.9.0.1-54
 haskell-vector-stream 0.1.0.0-1
 haskell-wai 3.2.3-196
-haskell-wai-app-static 3.1.8-2
+haskell-wai-app-static 3.1.8-3
 haskell-wai-cors 0.2.7-313
-haskell-wai-extra 3.1.13.0-148
-haskell-wai-logger 2.4.0-299
-haskell-warp 3.3.29-2
+haskell-wai-extra 3.1.13.0-150
+haskell-wai-logger 2.4.0-301
+haskell-warp 3.3.29-3
 haskell-witherable 0.4.2-61
 haskell-word8 0.1.3-22
 haskell-xml 1.3.14-30
@@ -798,7 +798,7 @@ pacman-mirrorlist 20230820-1
 pahole 1:1.25-4
 pam 1.5.3-3
 pambase 20221020-1
-pandoc-cli 0.1.1-43
+pandoc-cli 0.1.1-44
 pango 1:1.50.14-1
 pangomm 2.46.3-1
 paprefs 1.2-1
