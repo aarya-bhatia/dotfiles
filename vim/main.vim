@@ -289,3 +289,7 @@ augroup qflist
   autocmd FileType qf nnoremap <buffer> [[ :colder<CR>
   autocmd FileType qf nnoremap <buffer> ]] :cnewer<CR>
 augroup END
+
+nnoremap <leader>mk :make<CR>
+
+

@@ -36,7 +36,7 @@ set scrolloff 10
 map ` !true
 
 # execute current file (must be executable)
-cmd exec %python3 $HOME/scripts/lf/exec.py
+cmd exec %$HOME/scripts/lf/exec.py
 map x exec
 map X exec
 
@@ -61,7 +61,7 @@ cmd open &{{
 map <enter> open
 
 # To delete files
-cmd trash %python3 $HOME/scripts/lf/trash.py
+cmd trash %$HOME/scripts/lf/trash.py
 map <delete> trash
 map D trash
 
@@ -110,13 +110,10 @@ cmd fzf ${{
   selected=$(fzf)
   status=$?
 
-  if [ $status -eq 0 ]
-  then
-    if [ -d "$selected" ]
-    then
+  if [ $status -eq 0 ]; then
+    if [ -d "$selected" ]; then
       lf -remote "send $id cd $selected"
-    elif [ -f "$selected" ]
-    then
+    elif [ -f "$selected" ]; then
       lf -remote "send $id \$$EDITOR $selected"
     fi
   else

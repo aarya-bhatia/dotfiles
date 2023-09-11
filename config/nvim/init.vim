@@ -52,18 +52,6 @@ let g:qf_auto_resize = 0
 
 Plug 'freitass/todo.txt-vim'
 
-Plug 'voldikss/vim-floaterm'
-" let g:floaterm_wintype='split'
-let g:floaterm_opener='edit'
-let g:floaterm_keymap_prev   = '<F10>'
-let g:floaterm_keymap_next   = '<F11>'
-let g:floaterm_keymap_toggle = '<F12>'
-nnoremap <leader>tt :FloatermToggle<CR>
-
-Plug 'ptzz/lf.vim'
-let g:lf_map_keys = 0
-nnoremap <leader>lf :Lf<CR>
-
 Plug 'preservim/nerdtree'
 nnoremap <C-t> :NERDTreeToggle<CR>
 
@@ -80,8 +68,8 @@ if has("termguicolors")     " set true colors
     set termguicolors
 endif
 
-colorscheme gruvbox
-" colorscheme gruvbox-material
+" colorscheme gruvbox
+colorscheme gruvbox-material
 
 " highlight Normal ctermbg=none
 " highlight NonText ctermbg=none
@@ -90,5 +78,5 @@ source $VIM_DIR/main.vim
 
 " command! Ctags :!ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=tmp .<CR>
 
-nnoremap <leader>mk :make<CR>
+source $VIM_DIR/lf.vim
 

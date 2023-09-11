@@ -18,7 +18,6 @@ Plug 'jamessan/vim-gnupg'                 " edit gpg files
 source $VIM_DIR/plugins/fzf.vim           " fuzzy finder
 source $VIM_DIR/plugins/ack.vim           " grep tool
 source $VIM_DIR/plugins/colorscheme.vim   " colorscheme
-" source $VIM_DIR/plugins/tagbar.vim        " tags
 
 call plug#end()
 
@@ -31,4 +30,7 @@ hi Normal guibg=NONE ctermbg=NONE
 hi NonText guibg=NONE ctermbg=NONE
 
 source $VIM_DIR/main.vim
+
+source $VIM_DIR/lf.vim
+nnoremap <leader>l :LF<cr>
 

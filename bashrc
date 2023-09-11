@@ -85,3 +85,10 @@ export LATITUDE="41.11"
 export LONGITUDE="-88.24"
 
 alias sshpass="sshpass -f ~/passwd"
+
+# Automatically Load the SSH Agent on Login
+if [ -z "$SSH_AUTH_SOCK" ] ; then
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_rsa
+fi
+

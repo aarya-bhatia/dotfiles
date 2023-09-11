@@ -33,7 +33,7 @@ export PATH=$PATH:$GOPATH/bin
 # This will disable all permissions for "others"
 umask 0027
 
-# Start X server
+# # Start X server
 # if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 #   exec startx
 # fi
