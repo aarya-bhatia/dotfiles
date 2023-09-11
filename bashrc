@@ -92,3 +92,8 @@ if [ -z "$SSH_AUTH_SOCK" ] ; then
     ssh-add ~/.ssh/id_rsa
 fi
 
+lfcd () {
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    cd "$(command lf -print-last-dir "$@")"
+}
+
