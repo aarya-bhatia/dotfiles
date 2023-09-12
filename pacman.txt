@@ -62,7 +62,7 @@ clang 16.0.6-1
 clucene 2.3.3.4-14
 cmatrix 2.0-2
 cmus 2.10.0-4
-code 1.82.0-1
+code 1.82.0-2
 compiler-rt 16.0.6-2
 confuse 3.3-3
 containerd 1.7.5-1
@@ -152,7 +152,7 @@ giflib 5.2.1-2
 girara 0.4.0-1
 git 2.42.0-1
 glib-networking 1:2.76.1-1
-glib2 2.78.0-1
+glib2 2.78.0-2
 glibc 2.38-3
 glibmm 2.66.6-1
 glslang 12.3.1-2
@@ -816,11 +816,14 @@ perl-encode-locale 1.05-11
 perl-error 0.17029-5
 perl-file-basedir 0.09-3
 perl-file-desktopentry 0.22-11
+perl-file-homedir 1.006-4
 perl-file-mimeinfo 0.33-2
+perl-file-which 1.27-3
 perl-ipc-system-simple 1.30-5
 perl-mailtools 2.21-7
 perl-timedate 2.33-5
 perl-uri 5.20-1
+perl-yaml-tiny 1.74-2
 picom 10.2-1
 pinentry 1.2.1-1
 pinta 2.1.1-1
@@ -861,7 +864,7 @@ python-distro 1.8.0-3
 python-fastjsonschema 2.18.0-1
 python-feedparser 6.0.10-3
 python-flask 2.3.3-1
-python-gobject 3.44.1-4
+python-gobject 3.46.0-1
 python-idna 3.4-3
 python-inflect 7.0.0-1
 python-itsdangerous 2.1.2-3
@@ -914,7 +917,7 @@ qt5-svg 5.15.10+kde+r8-1
 qt5-tools 5.15.10+kde+r3-2
 qt5-translations 5.15.10-1
 qt5-webchannel 5.15.10+kde+r3-1
-qt5-webengine 5.15.14-5
+qt5-webengine 5.15.15-1
 qt5-x11extras 5.15.10-1
 qt5ct 1.7-1
 qt6-base 6.5.2-1
@@ -970,7 +973,7 @@ speex 1.2.1-1
 speexdsp 1.2.1-1
 spirv-tools 2022.4-1
 spotify-tui 0.25.0-3
-sqlite 3.43.0-1
+sqlite 3.43.1-1
 sratom 0.6.14-1
 srt 1.5.3-1
 sshpass 1.10-1

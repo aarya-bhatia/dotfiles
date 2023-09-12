@@ -8,7 +8,7 @@
     background_type = transparent
     cursor_fg_color = "#000000"
     cursor_bg_color = "#aaaaaa"
-    font = Source Code Pro 11
+    font = Hack Nerd Font Propo 11
     show_titlebar = False
     scrollbar_position = hidden
     use_system_font = False

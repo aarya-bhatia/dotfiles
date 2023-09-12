@@ -68,8 +68,8 @@ if has("termguicolors")     " set true colors
     set termguicolors
 endif
 
-" colorscheme gruvbox
-colorscheme gruvbox-material
+colorscheme gruvbox
+" colorscheme gruvbox-material
 
 " highlight Normal ctermbg=none
 " highlight NonText ctermbg=none
