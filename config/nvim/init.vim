@@ -80,3 +80,4 @@ source $VIM_DIR/main.vim
 
 source $VIM_DIR/lf.vim
 
+set wrap

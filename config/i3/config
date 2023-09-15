@@ -178,7 +178,7 @@ for_window [class="^.*"] border pixel 1
 # Network manager
 exec_always --no-startup-id nm-applet
 
-# Display wallpaper
+# Display random wallpaper
 exec_always --no-startup-id ~/.fehbg
 
 # Window compositor
@@ -187,14 +187,11 @@ exec_always --no-startup-id picom --config ~/.config/picom.conf
 # Polybar status bar
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-# CapsLock key acts like <Esc> if pressed alone and <Ctrl> if pressed with another key
+# Remap Caps Lock to Control key
 exec_always --no-startup-id ~/scripts/keymaps.sh
 
 # Dunst notification daemon
 exec_always --no-startup-id dunst
-
-# random baackground wallpaper
-exec_always --no-startup-id ~/scripts/wallpaper.sh
 
 # mirror display with HDMI-1 monitor if connected
 exec_always --no-startup-id ~/scripts/screenmirror.sh

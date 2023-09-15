@@ -112,9 +112,9 @@ cmd fzf ${{
 
   if [ $status -eq 0 ]; then
     if [ -d "$selected" ]; then
-      lf -remote "send $id cd $selected"
+      lf -remote "send $id cd \"$selected\""
     elif [ -f "$selected" ]; then
-      lf -remote "send $id \$$EDITOR $selected"
+      lf -remote "send $id \$$EDITOR \"$selected\""
     fi
   else
     lf -remote "send $id %echo error"
