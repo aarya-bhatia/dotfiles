@@ -1,6 +1,6 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0001.jpg'
+# feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0001.jpg'
 # feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0048.jpg'
 # feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0003.jpg'
-# feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0003.jpg'
+feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0003.jpg'
 # feh --no-fehbg --bg-scale '/home/aarya/wp_shuffle'

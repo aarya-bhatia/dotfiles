@@ -55,6 +55,9 @@ Plug 'freitass/todo.txt-vim'
 Plug 'preservim/nerdtree'
 nnoremap <C-t> :NERDTreeToggle<CR>
 
+Plug 'preservim/tagbar'
+nnoremap <leader>tt :TagbarToggle<CR>
+
 call plug#end()
 
 " lua configs
