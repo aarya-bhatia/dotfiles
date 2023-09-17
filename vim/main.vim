@@ -71,9 +71,9 @@ au BufReadPost *
             \ endif
 
 augroup group
-  " C/C++ filetye commands
   autocmd!
   autocmd FileType vim setlocal foldmethod=marker
+  autocmd FileType go setlocal foldmethod=manual
   autocmd FileType * setlocal foldmethod=syntax
   autocmd FileType c,cpp setlocal textwidth=120
   autocmd FileType c,cpp setlocal foldmethod=syntax
@@ -90,6 +90,13 @@ augroup group
   autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
 
 augroup END
+
+augroup remember_folds
+  autocmd!
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent! loadview
+augroup END
+
 
 " }}}
 
