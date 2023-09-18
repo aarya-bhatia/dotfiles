@@ -13,7 +13,7 @@ Plug 'tpope/vim-fugitive'   " Git tool
 Plug 'numToStr/Comment.nvim'
 
 " status line
-" Plug 'nvim-lualine/lualine.nvim'
+Plug 'nvim-lualine/lualine.nvim'
 
 Plug 'wellle/targets.vim'		              " more text objects
 
@@ -42,6 +42,8 @@ Plug 'stevearc/oil.nvim'
 " edit gpg files in vim
 Plug 'jamessan/vim-gnupg'
 
+Plug 'xiyaowong/transparent.nvim'
+
 source $VIM_DIR/plugins/fzf.vim           " fuzzy finder
 source $VIM_DIR/plugins/coc.vim           " lsp
 source $VIM_DIR/plugins/ack.vim           " grep tool
@@ -57,6 +59,12 @@ nnoremap <C-t> :NERDTreeToggle<CR>
 
 Plug 'preservim/tagbar'
 nnoremap <leader>tt :TagbarToggle<CR>
+
+" source $VIM_DIR/lf.vim
+Plug 'ptzz/lf.vim'
+Plug 'voldikss/vim-floaterm'
+let g:lf_map_keys = 0
+nnoremap <leader>L :Lf<CR>
 
 call plug#end()
 
@@ -74,14 +82,7 @@ endif
 colorscheme gruvbox
 " colorscheme gruvbox-material
 
-" highlight Normal ctermbg=none
-" highlight NonText ctermbg=none
-
 source $VIM_DIR/main.vim
 
 " command! Ctags :!ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=tmp .<CR>
-
-source $VIM_DIR/lf.vim
-
-set wrap
 
