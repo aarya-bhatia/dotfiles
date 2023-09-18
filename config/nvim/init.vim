@@ -52,15 +52,12 @@ source $VIM_DIR/plugins/colorscheme.vim   " colorscheme
 Plug 'romainl/vim-qf'
 let g:qf_auto_resize = 0
 
-Plug 'freitass/todo.txt-vim'
-
 Plug 'preservim/nerdtree'
 nnoremap <C-t> :NERDTreeToggle<CR>
 
 Plug 'preservim/tagbar'
 nnoremap <leader>tt :TagbarToggle<CR>
 
-" source $VIM_DIR/lf.vim
 Plug 'ptzz/lf.vim'
 Plug 'voldikss/vim-floaterm'
 let g:lf_map_keys = 0
@@ -73,16 +70,8 @@ source $HOME/.config/nvim/lua/config.lua
 source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/commands.lua
 
-if has("termguicolors")     " set true colors
-    set t_8f=\[[38;2;%lu;%lu;%lum
-    set t_8b=\[[48;2;%lu;%lu;%lum
-    set termguicolors
-endif
-
 colorscheme gruvbox
 " colorscheme gruvbox-material
 
 source $VIM_DIR/main.vim
-
-" command! Ctags :!ctags -R --languages=ruby --exclude=.git --exclude=log --exclude=tmp .<CR>
 
