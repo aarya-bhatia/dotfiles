@@ -25,6 +25,12 @@ Host linode
   User aarya
   IdentityFile ~/.ssh/id_rsa
 
+Host github
+	Hostname github.com
+	User git
+    IdentityFile ~/.ssh/id_rsa
+    IdentitiesOnly yes
+
 Host gitlab
 	Hostname gitlab.engr.illinois.edu
 	User git

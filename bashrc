@@ -97,3 +97,5 @@ lfcd () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
+export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp2
+
