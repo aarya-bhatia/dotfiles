@@ -88,7 +88,8 @@ augroup group
   autocmd BufNewFile,BufRead *.ejs set filetype=html
 
   " Trim trailing whitespace on lines
-  autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
+  " autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
+  autocmd BufWritePost * :%s/\s\+$//e | nohlsearch
 
 augroup END
 
@@ -151,13 +152,6 @@ nnoremap <leader>v" `>a"<esc>`<i"<esc>lel
 
 " Exit insert mode
 inoremap kj <Esc>
-
-" open netrw file explorer
-if has('nvim')
-  nnoremap <leader>- :Oil<CR>
-else
-  nnoremap <leader>- :Ex<CR>
-endif
 
 " Indent with single angle bracket
 nnoremap > >>

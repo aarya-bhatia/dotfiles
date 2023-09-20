@@ -36,32 +36,35 @@ Plug 'lukas-reineke/indent-blankline.nvim'
 " Marks
 Plug 'chentoast/marks.nvim'
 
-" File explorer
-Plug 'stevearc/oil.nvim'
-
 " edit gpg files in vim
 Plug 'jamessan/vim-gnupg'
 
+" transparent background
 Plug 'xiyaowong/transparent.nvim'
+
+" sidebar code outline
+Plug 'preservim/tagbar'
+nnoremap <leader>tt :TagbarToggle<CR>
 
 source $VIM_DIR/plugins/fzf.vim           " fuzzy finder
 source $VIM_DIR/plugins/coc.vim           " lsp
 source $VIM_DIR/plugins/ack.vim           " grep tool
 source $VIM_DIR/plugins/colorscheme.vim   " colorscheme
 
+" better quickfix list
 Plug 'romainl/vim-qf'
 let g:qf_auto_resize = 0
 
-Plug 'preservim/nerdtree'
-nnoremap <C-t> :NERDTreeToggle<CR>
+" File explorer
+" Plug 'stevearc/oil.nvim'
+" Plug 'preservim/nerdtree'
+" nnoremap <C-t> :NERDTreeToggle<CR>
 
-Plug 'preservim/tagbar'
-nnoremap <leader>tt :TagbarToggle<CR>
-
+" lf file explorer integration
 Plug 'ptzz/lf.vim'
 Plug 'voldikss/vim-floaterm'
 let g:lf_map_keys = 0
-nnoremap <leader>L :Lf<CR>
+nnoremap <leader>- :Lf<CR>
 
 call plug#end()
 

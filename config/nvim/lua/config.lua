@@ -1,5 +1,6 @@
+-- require("oil").setup()
+
 require('Comment').setup()
-require("oil").setup()
 require("marks").setup()
 
 -- require('lualine').setup ({
