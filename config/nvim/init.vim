@@ -78,3 +78,5 @@ colorscheme gruvbox
 
 source $VIM_DIR/main.vim
 
+nnoremap <leader>R "zyyo:r !z
+
