@@ -15,6 +15,10 @@ hide_edge_borders both
 
 ipc-socket ~/.i3/i3-ipc.sock
 
+popup_during_fullscreen smart
+
+workspace_auto_back_and_forth yes
+
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 
