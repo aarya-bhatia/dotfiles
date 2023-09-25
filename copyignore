@@ -1,6 +1,8 @@
 # Custom
 plugged/
 bin/
+obj/
+pkg/
 cache/
 .cache/
 *.pl
@@ -8,6 +10,8 @@ cache/
 VirtualBox
 pyvenv
 .cargo
+
+Trash/
 
 # Ignore directories
 node_modules/
@@ -43,6 +47,9 @@ __pycache__/
 *.dll
 *.so
 *.dylib
+
+/go/pkg/
+/go/bin/
 
 # Ruby
 *.gem
