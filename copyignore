@@ -4,6 +4,7 @@ bin/
 obj/
 pkg/
 cache/
+Cache/
 .cache/
 *.pl
 *history
@@ -11,6 +12,9 @@ VirtualBox
 pyvenv
 .cargo
 
+.config/Slack/
+.config/chromium/
+.config/discord/
 Trash/
 
 # Ignore directories

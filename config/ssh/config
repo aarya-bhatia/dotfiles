@@ -10,6 +10,11 @@ Host ubuntu14
   User aarya
   Port 3022
 
+Host debian11
+  Hostname 127.0.0.1
+  User aarya
+  Port 9022
+
 Host azure
   Hostname 40.117.208.41
   User aarya
