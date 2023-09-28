@@ -22,16 +22,16 @@ workspace_auto_back_and_forth yes
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_up
-bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_down
-bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_mute
-bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/scripts/external/volume_brightness.sh brightness_up
-bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/scripts/external/volume_brightness.sh brightness_down
-bindsym XF86AudioPlayPause exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
-bindsym XF86AudioPause exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
-bindsym XF86AudioPlay exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
-bindsym XF86AudioNext exec --no-startup-id $HOME/scripts/external/volume_brightness.sh next_track
-bindsym XF86AudioPrev exec --no-startup-id $HOME/scripts/external/volume_brightness.sh prev_track
+# bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_up
+# bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_down
+# bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_mute
+# bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/scripts/external/volume_brightness.sh brightness_up
+# bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/scripts/external/volume_brightness.sh brightness_down
+# bindsym XF86AudioPlayPause exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
+# bindsym XF86AudioPause exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
+# bindsym XF86AudioPlay exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
+# bindsym XF86AudioNext exec --no-startup-id $HOME/scripts/external/volume_brightness.sh next_track
+# bindsym XF86AudioPrev exec --no-startup-id $HOME/scripts/external/volume_brightness.sh prev_track
 
 # Screenshots with Print key
 bindcode 107 exec --no-startup-id escrotum -e 'notify-send "Screenshot" "Screenshot was taken!"' '~/GoogleDrive/Pictures/screenshots/screenshot-%Y-%m-%d-%T.png'
@@ -47,15 +47,14 @@ bindsym $mod+Return exec terminator
 bindsym $mod+Shift+q kill
 
 # Open rofi program launcher
-bindsym $mod+d exec --no-startup-id rofi -show drun
-bindsym $mod+p exec --no-startup-id rofi -show run
+bindsym $mod+d exec dmenu_run
 
-# Open rofi window menu
-bindsym $mod+Tab exec --no-startup-id rofi -show window
+# Launch rofi programs
+# bindsym $mod+d exec --no-startup-id rofi -show drun
+# bindsym $mod+p exec --no-startup-id rofi -show run
+# bindsym $mod+Tab exec --no-startup-id rofi -show window
 
-# Open rofi calculator with key
-# bindcode 148 exec --no-startup-id rofi -show calc -modi calc -no-show-match -no-sort
-
+# Launch calculator
 bindcode 148 exec --no-startup-id gnome-calculator
 for_window [class="gnome-calculator"] floating enable
 bindcode $mod+148 [class="gnome-calculator"] scratchpad show
@@ -204,7 +203,7 @@ bindsym $mod+Shift+x exec betterlockscreen --lock dim --off 120
 bindsym $mod+Shift+z exec betterlockscreen --lock dim --off 600
 
 # Rofi password store lookup
-bindsym $mod+Shift+P exec rofi-pass
+# bindsym $mod+Shift+P exec rofi-pass
 
 # Press $mod+o followed by either f, t, Escape or Return to launch firefox,
 # thunderbird or return to the default mode, respectively.
@@ -227,7 +226,3 @@ mode "$mode_launcher" {
 # 	status_command i3status
 # }
 
-# exec --no-startup-id /usr/lib/gsd-xsettings
-# exec_always --no-startup-id gnome-power-manager
-# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
-# exec --no-startup-id gnome-flashback

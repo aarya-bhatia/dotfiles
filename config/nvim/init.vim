@@ -57,8 +57,6 @@ let g:qf_auto_resize = 0
 
 " File explorer
 " Plug 'stevearc/oil.nvim'
-" Plug 'preservim/nerdtree'
-" nnoremap <C-t> :NERDTreeToggle<CR>
 
 " lf file explorer integration
 Plug 'ptzz/lf.vim'
@@ -74,8 +72,8 @@ source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/commands.lua
 
 " colorscheme gruvbox
-" colorscheme gruvbox-material
-colorscheme melange
+colorscheme gruvbox-material
+" colorscheme melange
 
 source $VIM_DIR/main.vim
 

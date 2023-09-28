@@ -5,6 +5,9 @@ shopt -s histappend
 shopt -s autocd
 shopt -s checkwinsize
 
+alias fd="fdfind"
+alias bat="batcat"
+
 alias s="systemctl"
 alias j="journalctl"
 alias ss="systemctl status"
@@ -47,7 +50,7 @@ alias scrot="escrotum"
 alias mutt="neomutt"
 alias sc="sc-im"
 alias bat="bat --style=plain --theme=gruvbox-dark"
-alias cat="bat --plain"
+alias cat="batcat --plain"
 alias bathelp="bat --plain --language=help"
 alias ta="tmux attach || tmux"
 alias t="todo.sh -d /home/aarya/dotfiles/todo.cfg"
