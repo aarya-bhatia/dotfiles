@@ -46,14 +46,14 @@ boost-libs 1.83.0-2
 box2d 2.4.1-1
 bridge-utils 1.7.1-1
 brightnessctl 0.5.1-2
-brotli 1.0.9-12
+brotli 1.1.0-1
 bubblewrap 0.8.0-1
 bzip2 1.0.8-5
 c-ares 1.19.1-1
 ca-certificates 20220905-1
 ca-certificates-mozilla 3.93-1
 ca-certificates-utils 20220905-1
-cairo 1.17.8-2
+cairo 1.18.0-1
 cairomm 1.14.4-1
 calcurse 4.8.1-1
 cantarell-fonts 1:0.303.1-1
@@ -106,7 +106,7 @@ dvisvgm 3.1.1-1
 e2fsprogs 1.47.0-1
 efibootmgr 18-2
 efivar 38-3
-electron22 22.3.22-1
+electron22 22.3.24-1
 electron25 25.6.0-1
 enchant 2.5.0-1
 escrotum-git 0.2.1.r48.a41d0f1-1
@@ -123,7 +123,7 @@ fftw 3.3.10-4
 file 5.45-1
 filesystem 2023.09.18-1
 findutils 4.9.0-3
-firefox 117.0.1-1
+firefox 118.0-1
 flac 1.4.3-1
 flex 2.6.4-5
 font-manager 0.8.8-1
@@ -619,7 +619,7 @@ libqalculate 4.8.1-1
 libqxp 0.0.2-10
 libraqm 0.10.1-1
 libraw1394 2.1.2-3
-libreoffice-still 7.5.6-1
+libreoffice-still 7.5.7-1
 librevenge 0.0.5-2
 librsvg 2:2.57.0-1
 libsamplerate 0.2.2-2
@@ -712,11 +712,11 @@ libzip 1.10.1-1
 libzmf 0.0.2-14
 licenses 20230917-1
 lilv 0.24.20-2
-linux 6.5.4.arch2-1
+linux 6.5.5.arch1-1
 linux-api-headers 6.4-1
 linux-firmware 20230804.7be2766d-2
 linux-firmware-whence 20230804.7be2766d-2
-linux-headers 6.5.4.arch2-1
+linux-headers 6.5.5.arch1-1
 llvm-libs 16.0.6-1
 lm_sensors 1:3.6.0.r41.g31d1f125-2
 lmdb 0.9.30-3
@@ -736,7 +736,7 @@ lzo 2.10-5
 m4 1.4.19-3
 mailcap 2.1.54-1
 make 4.4.1-2
-man-db 2.11.2-1
+man-db 2.12.0-1
 man-pages 6.05.01-1
 md4c 0.4.8-1
 mdadm 4.2-2
@@ -753,7 +753,7 @@ mongodb-compass 1.39.3-1
 mongodb-tools 1:100.7.5-1
 mousepad 0.6.1-3
 mpfr 4.2.1-1
-mpg123 1.32.1-1
+mpg123 1.32.1-2
 mpv 1:0.36.0-1
 msgpack-c 5.0.0-1
 msmtp 1.8.23-1
@@ -794,7 +794,7 @@ oniguruma 6.9.8-1
 openbsd-netcat 1.225_1-1
 openconnect 1:9.12-1
 opencore-amr 0.1.6-1
-openexr 3.2.0-2
+openexr 3.2.1-1
 openjpeg2 2.5.0-3
 openmpi 4.1.5-5
 openpmix 4.2.6-1
@@ -806,7 +806,7 @@ opus 1.4-1
 opusfile 0.12-3
 orc 0.4.34-1
 p11-kit 0.25.0-2
-pacman 6.0.2-7
+pacman 6.0.2-8
 pacman-mirrorlist 20230820-1
 pahole 1:1.25-4
 pam 1.5.3-3
@@ -838,7 +838,7 @@ perl-timedate 2.33-5
 perl-uri 5.20-1
 perl-yaml-tiny 1.74-2
 picom 10.2-1
-pinentry 1.2.1-1
+pinentry 1.2.1-2
 pinta 2.1.1-1
 pipewire 1:0.3.80-1
 pipewire-audio 1:0.3.80-1
@@ -888,7 +888,7 @@ python-jaraco.text 3.11.1-3
 python-jinja 1:3.1.2-4
 python-markupsafe 2.1.3-1
 python-more-itertools 10.1.0-1
-python-numpy 1.26.0-1
+python-numpy 1.26.0-3
 python-ordered-set 4.1.0-4
 python-packaging 23.1-1
 python-pillow 10.0.1-1
@@ -967,7 +967,7 @@ runc 1.1.9-1
 s-nail 14.9.24-2
 sbc 2.0-1
 sc-im-git 0.8.3.r25.gff27440-1
-sdl12-compat 1.2.64-1
+sdl12-compat 1.2.68-1
 sdl2 2.28.3-1
 sdl2_image 2.6.3-1
 sdl2_mixer 2.6.3-2
@@ -1067,7 +1067,7 @@ vimix-gtk-themes 2023.06.21-1
 vimix-icon-theme 2023.06.26-1
 virtualbox 7.0.10-2
 virtualbox-guest-iso 7.0.10-1
-virtualbox-host-modules-arch 7.0.10-18
+virtualbox-host-modules-arch 7.0.10-19
 vlc 3.0.18-16
 vmaf 2.3.1-1
 volume_key 0.3.12-8
