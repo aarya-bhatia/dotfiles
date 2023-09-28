@@ -21,8 +21,8 @@ Plug 'wellle/targets.vim'		              " more text objects
 Plug 'nvim-tree/nvim-web-devicons'
 
 " Syntax highlighting
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+" Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+" Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 " Async library
 Plug 'nvim-lua/plenary.nvim'
@@ -31,7 +31,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'mfussenegger/nvim-dap'
 
 " Indent lines
-Plug 'lukas-reineke/indent-blankline.nvim'
+" Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Marks
 Plug 'chentoast/marks.nvim'
@@ -68,7 +68,7 @@ call plug#end()
 
 " lua configs
 source $HOME/.config/nvim/lua/config.lua
-source $HOME/.config/nvim/lua/treesitter.lua
+" source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/commands.lua
 
 " colorscheme gruvbox

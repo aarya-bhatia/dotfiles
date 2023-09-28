@@ -25,9 +25,13 @@ export COPYIGNORE="$HOME/dotfiles/copyignore"
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$SCRIPTS_DIR
 
+export PATH=$PATH:/usr/local/go/bin
+
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
 export PATH=$PATH:$GOPATH/bin
+
+export PATH=$PATH:/home/$USER/.local/bin
 
 # file permission mask
 # This will disable all permissions for "others"

@@ -1,25 +1,9 @@
--- require("oil").setup()
-
 require('Comment').setup()
 require("marks").setup()
-
--- require('lualine').setup ({
---   options = {
---     theme = 'gruvbox',
---     section_separators = '',
---     component_separators = '',
---   }
--- })
 
 vim.opt.list = false
 vim.opt.listchars:append "eol:↴"
 vim.opt.listchars:append "space:⋅"
-
-require("indent_blankline").setup ({
-  show_end_of_line = true,
-  show_current_context = true,
-  show_current_context_start = true,
-})
 
 require'marks'.setup {
   -- whether to map keybinds or not. default true

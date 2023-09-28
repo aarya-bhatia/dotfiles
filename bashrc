@@ -100,5 +100,8 @@ lfcd () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
+export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp1
 export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp2
+
+alias notes="$EDITOR /home/aarya/GoogleDrive/Notes/$(date +"%Y-%m").md"
 

@@ -64,6 +64,7 @@ bindsym $mod+h focus left
 bindsym $mod+j focus down
 bindsym $mod+k focus up
 bindsym $mod+l focus right
+# exec --no-startup-id gnome-flashback
 
 # move focused window
 bindsym $mod+Shift+h move left
@@ -114,11 +115,14 @@ set $ws10 "10"
 assign [class="thunderbird"] $ws3
 assign [class="discord"] $ws3
 assign [class="slack"] $ws3
+
 # assign [class="firefox"] $ws2
 # assign [class="qutebrowser"] $ws2
 # assign [class="Tartube"] $ws4
 # assign [class="arandr"] $ws4
 # assign [class="VirtualBox Manager"] $ws6
+
+for_window [class="Com.cisco.secureclient.gui"] floating enable
 
 # switch to workspace
 bindsym $mod+1 workspace number $ws1
@@ -188,22 +192,24 @@ exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec_always --no-startup-id ~/scripts/keymaps.sh
 
 # Dunst notification daemon
-exec_always --no-startup-id dunst
+# exec_always --no-startup-id dunst
 
 # mirror display with HDMI-1 monitor if connected
 exec_always --no-startup-id ~/scripts/screenmirror.sh
 
 # Auto lock screen and suspend after some amount of idle time
-exec_always --no-startup-id ~/scripts/screenlock.sh
+# exec_always --no-startup-id ~/scripts/screenlock.sh
 
-bindsym $mod+Shift+x exec betterlockscreen --lock dim --off 120
 # bindsym $mod+Shift+x exec systemctl suspend
+# bindsym $mod+Shift+x exec betterlockscreen --lock dim --off 120
+bindsym $mod+Shift+x exec dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
 
 # lock screen with <Alt-Z>
 bindsym $mod+Shift+z exec betterlockscreen --lock dim --off 600
 
 # Rofi password store lookup
 # bindsym $mod+Shift+P exec rofi-pass
+bindsym $mod+Shift+P exec ~/scripts/external/dmenupass.sh
 
 # Press $mod+o followed by either f, t, Escape or Return to launch firefox,
 # thunderbird or return to the default mode, respectively.
@@ -225,4 +231,10 @@ mode "$mode_launcher" {
 # bar {
 # 	status_command i3status
 # }
+
+# exec --no-startup-id /usr/lib/gsd-xsettings
+# exec_always --no-startup-id gnome-power-manager
+# exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
+# exec --no-startup-id gnome-flashback
+exec --no-startup-id /usr/bin/gnome-screensaver
 

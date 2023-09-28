@@ -24,7 +24,6 @@
       maximised = False
       fullscreen = False
       size = 816, 549
-      title = aarya@archlinux: ~
       last_active_term = 06f1463a-5482-4afe-ad2f-310648da7c8c
       last_active_window = True
     [[[terminal1]]]
