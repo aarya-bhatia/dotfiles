@@ -201,8 +201,8 @@ exec_always --no-startup-id ~/scripts/screenmirror.sh
 # exec_always --no-startup-id ~/scripts/screenlock.sh
 
 # bindsym $mod+Shift+x exec systemctl suspend
-# bindsym $mod+Shift+x exec betterlockscreen --lock dim --off 120
-bindsym $mod+Shift+x exec dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
+bindsym $mod+Shift+x exec betterlockscreen --lock dim --off 10
+# bindsym $mod+Shift+x exec dbus-send --type=method_call --dest=org.gnome.ScreenSaver /org/gnome/ScreenSaver org.gnome.ScreenSaver.Lock
 
 # lock screen with <Alt-Z>
 bindsym $mod+Shift+z exec betterlockscreen --lock dim --off 600
@@ -236,5 +236,5 @@ mode "$mode_launcher" {
 # exec_always --no-startup-id gnome-power-manager
 # exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
 # exec --no-startup-id gnome-flashback
-exec --no-startup-id /usr/bin/gnome-screensaver
+# exec --no-startup-id /usr/bin/gnome-screensaver
 

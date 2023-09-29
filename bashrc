@@ -84,9 +84,6 @@ export PS1="\$(pwd)$ "
 
 alias toggle-notifications="dunstctl set-paused toggle"
 
-export LATITUDE="41.11"
-export LONGITUDE="-88.24"
-
 alias sshpass="sshpass -f ~/passwd ssh"
 
 # Automatically Load the SSH Agent on Login
@@ -99,9 +96,6 @@ lfcd () {
     # `command` is needed in case `lfcd` is aliased to `lf`
     cd "$(command lf -print-last-dir "$@")"
 }
-
-export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp1
-export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp2
 
 alias notes="$EDITOR /home/aarya/GoogleDrive/Notes/$(date +"%Y-%m").md"
 

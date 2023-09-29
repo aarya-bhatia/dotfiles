@@ -28,10 +28,16 @@ export PATH=$PATH:$SCRIPTS_DIR
 export PATH=$PATH:/usr/local/go/bin
 
 export GOPATH=$HOME/go
+export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp1
+export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp2
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH/bin
 
-export PATH=$PATH:/home/$USER/.local/bin
+export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:/usr/local/bin:/home/$USER/.local/bin:/home/$USER/pyvenv/bin
+export PATH=$PATH:/snap/bin
+
+export LATITUDE="41.11"
+export LONGITUDE="-88.24"
 
 # file permission mask
 # This will disable all permissions for "others"

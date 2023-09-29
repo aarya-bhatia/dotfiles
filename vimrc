@@ -22,7 +22,7 @@ source $VIM_DIR/plugins/colorscheme.vim   	" colorscheme
 call plug#end()
 
 source $VIM_DIR/lf.vim
-nnoremap <leader>l :LF<cr>
+nnoremap <leader>- :LF<cr>
 
 colorscheme gruvbox-material
 
