@@ -34,8 +34,11 @@ set $refresh_i3status killall -SIGUSR1 i3status
 # bindsym XF86AudioPrev exec --no-startup-id $HOME/scripts/external/volume_brightness.sh prev_track
 
 # Screenshots with Print key
-bindcode 107 exec --no-startup-id escrotum -e 'notify-send "Screenshot" "Screenshot was taken!"' '~/GoogleDrive/Pictures/screenshots/screenshot-%Y-%m-%d-%T.png'
-bindcode $mod+107 exec --no-startup-id escrotum -s -e 'notify-send "Screenshot" "Screenshot was taken!"' '~/GoogleDrive/Pictures/screenshots/screenshot-%Y-%m-%d-%T.png'
+# bindcode 107 exec --no-startup-id escrotum -e 'notify-send "Screenshot" "Screenshot was taken!"' '~/GoogleDrive/Pictures/screenshots/screenshot-%Y-%m-%d-%T.png'
+# bindcode $mod+107 exec --no-startup-id escrotum -s -e 'notify-send "Screenshot" "Screenshot was taken!"' '~/GoogleDrive/Pictures/screenshots/screenshot-%Y-%m-%d-%T.png'
+
+bindcode 107 exec ~/scripts/screenshot.sh
+bindcode $mod+107 exec ~/scripts/screenshot.sh -s
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

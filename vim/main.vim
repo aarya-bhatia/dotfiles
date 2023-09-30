@@ -275,6 +275,8 @@ nnoremap <leader>osl :s/, \?/\r- /g<CR>:noh<CR>
 " [I]nsert [D]ate
 nnoremap <leader>id i<C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR><Esc>
 
+nnoremap <leader>mk :make<CR>
+
 " Use magic mode regex
 " nnoremap / /\v
 " cnoremap <C-u> <C-u>\v
@@ -292,6 +294,10 @@ augroup qflist
   autocmd FileType qf nnoremap <buffer> ]] :cnewer<CR>
 augroup END
 
-nnoremap <leader>mk :make<CR>
+augroup cdpwd
+    autocmd!
+    autocmd VimEnter * cd $PWD
+augroup END
+
 
 
