@@ -46,7 +46,7 @@ alias egrep="egrep --color=auto"
 alias dmesg="dmesg --color=auto"
 
 alias valgrind="valgrind --leak-check=full --show-leak-kinds=all"
-alias scrot="escrotum"
+# alias scrot="escrotum"
 alias mutt="neomutt"
 alias sc="sc-im"
 alias bat="bat --style=plain --theme=gruvbox-dark"
