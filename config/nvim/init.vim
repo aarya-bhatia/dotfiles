@@ -62,6 +62,8 @@ let g:qf_auto_resize = 0
 Plug 'ptzz/lf.vim'
 Plug 'voldikss/vim-floaterm'
 let g:lf_map_keys = 0
+let g:NERDTreeHijackNetrw = 0 " Add this line if you use NERDTree
+let g:lf_replace_netrw = 1 " Open lf when vim opens a directory
 nnoremap <leader>- :Lf<CR>
 
 call plug#end()
