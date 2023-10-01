@@ -22,21 +22,24 @@ workspace_auto_back_and_forth yes
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
 
-# bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_up
-# bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_down
-# bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_mute
-# bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/scripts/external/volume_brightness.sh brightness_up
-# bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/scripts/external/volume_brightness.sh brightness_down
-# bindsym XF86AudioPlayPause exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
-# bindsym XF86AudioPause exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
-# bindsym XF86AudioPlay exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
-# bindsym XF86AudioNext exec --no-startup-id $HOME/scripts/external/volume_brightness.sh next_track
-# bindsym XF86AudioPrev exec --no-startup-id $HOME/scripts/external/volume_brightness.sh prev_track
+# bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
+# bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
+# bindsym XF86AudioMute exec amixer -q set Master toggle
+# bindsym XF86MonBrightnessUp exec brightnessctl set +5%
+# bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
+
+bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_up
+bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_down
+bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_mute
+bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/scripts/external/volume_brightness.sh brightness_up
+bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/scripts/external/volume_brightness.sh brightness_down
+bindsym XF86AudioPlayPause exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
+bindsym XF86AudioPause exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
+bindsym XF86AudioPlay exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
+bindsym XF86AudioNext exec --no-startup-id $HOME/scripts/external/volume_brightness.sh next_track
+bindsym XF86AudioPrev exec --no-startup-id $HOME/scripts/external/volume_brightness.sh prev_track
 
 # Screenshots with Print key
-# bindcode 107 exec --no-startup-id escrotum -e 'notify-send "Screenshot" "Screenshot was taken!"' '~/GoogleDrive/Pictures/screenshots/screenshot-%Y-%m-%d-%T.png'
-# bindcode $mod+107 exec --no-startup-id escrotum -s -e 'notify-send "Screenshot" "Screenshot was taken!"' '~/GoogleDrive/Pictures/screenshots/screenshot-%Y-%m-%d-%T.png'
-
 bindcode 107 exec ~/scripts/screenshot.sh
 bindcode $mod+107 exec ~/scripts/screenshot.sh -s
 

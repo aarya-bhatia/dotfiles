@@ -23,7 +23,7 @@ set ignorecase                    " ignore case when searching
 set smartcase                     " no ignorecase if Uppercase char present
 set belloff=all                   " turn off error beeps
 set hidden                        " allows multiple buffers without saving
-set wrap                       	  " line wrap
+set nowrap
 set linebreak
 set shiftwidth=4 tabstop=4 noexpandtab
 set scrolloff=8
