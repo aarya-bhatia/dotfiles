@@ -63,9 +63,9 @@ bindsym $mod+d exec dmenu_run
 # bindsym $mod+Tab exec --no-startup-id rofi -show window
 
 # Launch calculator
-bindcode 148 exec --no-startup-id gnome-calculator
-for_window [class="gnome-calculator"] floating enable
-bindcode $mod+148 [class="gnome-calculator"] scratchpad show
+bindcode 148 exec --no-startup-id ~/.local/bin/qalculate
+for_window [class="Qalculate"] floating enable
+bindcode $mod+148 [class="Qalculate"] scratchpad show
 
 # change focus
 bindsym $mod+h focus left

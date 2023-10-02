@@ -33,6 +33,7 @@ export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp1
 export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp2
+export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/Coding-Problems/Leetcode/go
 export GOBIN=$GOPATH/bin
 
 export PATH=$PATH:$GOPATH/bin
@@ -69,6 +70,7 @@ alias py="python3"
 alias rm="trash-put"
 alias bc="bc -q"
 alias du="du -sh"
+alias free="free -h"
 
 alias ls="ls --color=auto --group-directories-first"
 alias ll="ls --color=auto -alFh"

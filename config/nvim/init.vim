@@ -82,3 +82,6 @@ source $VIM_DIR/main.vim
 " Run the command on current line and paste output below
 nnoremap <leader>R "zyyo:r !z
 
+let g:python3_host_prog="/home/aarya/pyvenv/bin/python3"
+
+
