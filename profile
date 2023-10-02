@@ -1,6 +1,10 @@
 #!/bin/sh
 
-[ -f ~/.bashrc ] && source ~/.bashrc
+if [ -n "$BASH_VERSION" ]; then
+    if [ -f "$HOME/.bashrc" ]; then
+        . "$HOME/.bashrc"
+    fi
+fi
 
 [ -z "$TMUX" ] && export TERM=xterm-256color
 

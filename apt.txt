@@ -1745,8 +1745,8 @@ brickos/stable 0.9.0.dfsg-12.2 amd64
 bridge-utils/stable 1.7.1-1 amd64
 brig/stable 0.95+dfsg-3 amd64
 brightd/stable 0.4.1-4 amd64
-brightness-udev/stable 0.5.1-3 all
-brightnessctl/stable 0.5.1-3 amd64
+brightness-udev/stable,now 0.5.1-3 all [installed,automatic]
+brightnessctl/stable,now 0.5.1-3 amd64 [installed]
 briquolo-data/stable 0.5.7-11 all
 briquolo/stable 0.5.7-11 amd64
 bristol-data/stable 0.60.11-3.1 all
@@ -32543,7 +32543,7 @@ libplank1/stable 0.11.89-4+b1 amd64
 libplasma-geolocation-interface5/stable 4:5.27.5-2 amd64
 libplayerctl-dev/stable 2.4.1-2 amd64
 libplayerctl-doc/stable 2.4.1-2 all
-libplayerctl2/stable 2.4.1-2 amd64
+libplayerctl2/stable,now 2.4.1-2 amd64 [installed,automatic]
 libplb-dev/stable 1.5~r1+repack1-5 amd64
 libplb-doc/stable 1.5~r1+repack1-5 all
 libplb1/stable 1.5~r1+repack1-5 amd64
@@ -47737,7 +47737,7 @@ plast/stable 2.3.2+dfsg-10+b2 amd64
 plastex/stable 2.1-4 all
 plastimatch/stable 1.9.4+dfsg.1-1 amd64
 plater/stable 2.0.0~rc8-2 all
-playerctl/stable 2.4.1-2 amd64
+playerctl/stable,now 2.4.1-2 amd64 [installed]
 playmidi/stable 2.4debian-13 amd64
 plc-utils-doc/stable 0.0.6+git20230504.1ba7d5a0-1 all
 plc-utils-extra/stable 0.0.6+git20230504.1ba7d5a0-1 amd64
