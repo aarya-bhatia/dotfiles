@@ -12,6 +12,7 @@ VirtualBox
 pyvenv
 .cargo
 
+.mozilla
 .config/Slack/
 .config/chromium/
 .config/discord/
