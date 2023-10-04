@@ -187,6 +187,9 @@ for_window [class="^.*"] border pixel 1
 # Network manager
 exec_always --no-startup-id nm-applet
 
+# Battery icon
+exec_always --no-startup-id cbatticon -u 3 -r 3 -c "systemctl suspend" -l 15 -x "/home/aarya/scripts/notifications/battery_level.sh"
+
 # Display random wallpaper
 exec_always --no-startup-id ~/.fehbg
 
