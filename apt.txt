@@ -2174,7 +2174,7 @@ cavepacker/stable 2.5.2-1 amd64
 cavezofphear/stable 0.5.1-1.1 amd64
 cb2bib/stable 2.0.1-2 amd64
 cba/stable 0.3.6-6+b2 amd64
-cbatticon/stable 1.6.9-1+b2 amd64
+cbatticon/stable,now 1.6.9-1+b2 amd64 [installed]
 cbflib-bin/stable 0.9.7+dfsg1-2+b2 amd64
 cbflib-doc/stable 0.9.7+dfsg1-2 all
 cbindgen/stable 0.24.3-2+b2 amd64
@@ -2887,9 +2887,9 @@ coda/stable 2.24.2-1 amd64
 code-exploration/stable 1.82.0-1693249446 amd64
 code-exploration/stable 1.82.0-1693248439 arm64
 code-exploration/stable 1.82.0-1693248361 armhf
-code-insiders/stable 1.83.0-1696021438 amd64
-code-insiders/stable 1.83.0-1696020291 arm64
-code-insiders/stable 1.83.0-1696020288 armhf
+code-insiders/stable 1.83.0-1696342225 amd64
+code-insiders/stable 1.83.0-1696341017 arm64
+code-insiders/stable 1.83.0-1696341002 armhf
 code-saturne-bin/stable 6.0.2-2 amd64
 code-saturne-data/stable 6.0.2-2 all
 code-saturne-doc/stable 6.0.2-2 all
@@ -5657,7 +5657,7 @@ ethflop/stable 0~20191003-3 amd64
 ethflux/stable 1.0-4+b6 amd64
 ethstats/stable 1.2.1-4 all
 ethstatus/stable 0.4.9+b1 amd64
-ethtool/stable 1:6.1-1 amd64
+ethtool/stable,now 1:6.1-1 amd64 [installed,automatic]
 etktab/stable 3.2-15 all
 etl-dev/stable 1.5.1-1 amd64
 etm-qt/stable 3.2.30-4 all
@@ -9094,8 +9094,8 @@ glib-networking-common/stable,now 2.74.0-4 all [installed,automatic]
 glib-networking-services/stable,now 2.74.0-4 amd64 [installed,automatic]
 glib-networking-tests/stable 2.74.0-4 amd64
 glib-networking/stable,now 2.74.0-4 amd64 [installed,automatic]
-glibc-doc/stable 2.36-9+deb12u1 all
-glibc-source/stable 2.36-9+deb12u1 all
+glibc-doc/stable-security 2.36-9+deb12u3 all
+glibc-source/stable-security 2.36-9+deb12u3 all
 glimpse/stable 4.18.7-6 amd64
 glirc/stable 2.39.0.1-1 amd64
 gliv/stable 1.9.7-2+b3 amd64
@@ -12518,7 +12518,7 @@ hdhomerun-config/stable 20220303-3 amd64
 hdmi2usb-fx2-firmware/stable 0.0.0~git20151225-3 all
 hdmi2usb-mode-switch/stable 0.0.1-3 all
 hdmi2usb-udev/stable 0.0.1-3 all
-hdparm/stable 9.65+ds-1 amd64
+hdparm/stable,now 9.65+ds-1 amd64 [installed,automatic]
 hdrmerge/stable 0.5+git20200117-2+b4 amd64
 hdup/stable 2.0.14-6+b1 amd64
 headache/stable 1.06-1 amd64
@@ -16645,7 +16645,7 @@ libbos-ocaml/stable 0.2.1-1+b9 amd64
 libbot-basicbot-perl/stable 0.93-2 all
 libbot-basicbot-pluggable-perl/stable 1.20-3 all
 libbot-training-perl/stable 0.07-4 all
-libbotan-2-19/stable,now 2.19.3+dfsg-1 amd64 [installed,automatic]
+libbotan-2-19/stable 2.19.3+dfsg-1 amd64
 libbotan-2-dev/stable 2.19.3+dfsg-1 amd64
 libbotan-2-doc/stable 2.19.3+dfsg-1 all
 libboulder-perl/stable 1.30-6 all
@@ -16808,15 +16808,15 @@ libc++abi1-15/stable 1:15.0.6-4+b1 amd64
 libc++abi1/stable 1:14.0-55.6 amd64
 libc-ares-dev/stable 1.18.1-3 amd64
 libc-ares2/stable,now 1.18.1-3 amd64 [installed,automatic]
-libc-bin/stable,now 2.36-9+deb12u1 amd64 [installed]
+libc-bin/stable-security,now 2.36-9+deb12u3 amd64 [installed]
 libc-client2007e-dev/stable 8:2007f~dfsg-7+b2 amd64
 libc-client2007e/stable 8:2007f~dfsg-7+b2 amd64
-libc-dev-bin/stable,now 2.36-9+deb12u1 amd64 [installed,automatic]
-libc-devtools/stable,now 2.36-9+deb12u1 amd64 [installed,automatic]
+libc-dev-bin/stable-security,now 2.36-9+deb12u3 amd64 [installed,automatic]
+libc-devtools/stable-security,now 2.36-9+deb12u3 amd64 [installed,automatic]
 libc-icap-mod-contentfiltering/stable 1:0.5.5-2+b1 amd64
 libc-icap-mod-urlcheck/stable 1:0.5.5-2+b1 amd64
 libc-icap-mod-virus-scan/stable 1:0.5.5-2+b1 amd64
-libc-l10n/stable,now 2.36-9+deb12u1 all [installed,automatic]
+libc-l10n/stable-security,now 2.36-9+deb12u3 all [installed,automatic]
 libc3p0-java-doc/stable 0.9.1.2-10 all
 libc3p0-java/stable 0.9.1.2-10 all
 libc6-amd64-cross/stable 2.36-8cross1 all
@@ -16826,7 +16826,7 @@ libc6-arc-cross/stable 2.36-8cross1 all
 libc6-arm64-cross/stable 2.36-8cross1 all
 libc6-armel-cross/stable 2.36-8cross1 all
 libc6-armhf-cross/stable 2.36-8cross1 all
-libc6-dbg/stable,now 2.36-9+deb12u1 amd64 [installed,automatic]
+libc6-dbg/stable-security,now 2.36-9+deb12u3 amd64 [installed,automatic]
 libc6-dev-amd64-cross/stable 2.36-8cross1 all
 libc6-dev-amd64-i386-cross/stable 2.36-8cross1 all
 libc6-dev-amd64-x32-cross/stable 2.36-8cross1 all
@@ -16838,7 +16838,7 @@ libc6-dev-hppa-cross/stable 2.36-8cross1 all
 libc6-dev-i386-amd64-cross/stable 2.36-8cross1 all
 libc6-dev-i386-cross/stable 2.36-8cross1 all
 libc6-dev-i386-x32-cross/stable 2.36-8cross1 all
-libc6-dev-i386/stable 2.36-9+deb12u1 amd64
+libc6-dev-i386/stable-security 2.36-9+deb12u3 amd64
 libc6-dev-m68k-cross/stable 2.36-8cross1 all
 libc6-dev-mips-cross/stable 2.36-8cross2 all
 libc6-dev-mips32-mips64-cross/stable 2.36-8cross2 all
@@ -16890,13 +16890,13 @@ libc6-dev-sparc64-cross/stable 2.36-8cross1 all
 libc6-dev-x32-amd64-cross/stable 2.36-8cross1 all
 libc6-dev-x32-cross/stable 2.36-8cross1 all
 libc6-dev-x32-i386-cross/stable 2.36-8cross1 all
-libc6-dev-x32/stable 2.36-9+deb12u1 amd64
-libc6-dev/stable,now 2.36-9+deb12u1 amd64 [installed,automatic]
+libc6-dev-x32/stable-security 2.36-9+deb12u3 amd64
+libc6-dev/stable-security,now 2.36-9+deb12u3 amd64 [installed,automatic]
 libc6-hppa-cross/stable 2.36-8cross1 all
 libc6-i386-amd64-cross/stable 2.36-8cross1 all
 libc6-i386-cross/stable 2.36-8cross1 all
 libc6-i386-x32-cross/stable 2.36-8cross1 all
-libc6-i386/stable 2.36-9+deb12u1 amd64
+libc6-i386/stable-security 2.36-9+deb12u3 amd64
 libc6-m68k-cross/stable 2.36-8cross1 all
 libc6-mips-cross/stable 2.36-8cross2 all
 libc6-mips32-mips64-cross/stable 2.36-8cross2 all
@@ -16948,10 +16948,10 @@ libc6-sparc64-cross/stable 2.36-8cross1 all
 libc6-x32-amd64-cross/stable 2.36-8cross1 all
 libc6-x32-cross/stable 2.36-8cross1 all
 libc6-x32-i386-cross/stable 2.36-8cross1 all
-libc6-x32/stable 2.36-9+deb12u1 amd64
+libc6-x32/stable-security 2.36-9+deb12u3 amd64
 libc6.1-alpha-cross/stable 2.36-8cross1 all
 libc6.1-dev-alpha-cross/stable 2.36-8cross1 all
-libc6/stable,now 2.36-9+deb12u1 amd64 [installed]
+libc6/stable-security,now 2.36-9+deb12u3 amd64 [installed]
 libca-certs-ocaml-dev/stable 0.2.3-1+b2 amd64
 libca-certs-ocaml/stable 0.2.3-1+b2 amd64
 libca-dev/stable 7.0.3.1-4 amd64
@@ -34172,7 +34172,7 @@ librnd3-pixmap/stable 3.2.2-1 amd64
 librnd3/stable 3.2.2-1 amd64
 librngom-java/stable 2.3.0.1-10.1 all
 librnp-dev/stable 0.16.3-1 amd64
-librnp0/stable,now 0.16.3-1 amd64 [installed,automatic]
+librnp0/stable 0.16.3-1 amd64
 libroaring-dev/stable 0.2.66+ds-2 amd64
 libroaring0/stable 0.2.66+ds-2 amd64
 librobert-hooke-clojure/stable 1.3.0-4 all
@@ -38960,7 +38960,7 @@ libtsl-ordered-map-dev/stable 1.0.0-1 amd64
 libtsm-dev/stable 4.0.2-0.4 amd64
 libtsm4/stable 4.0.2-0.4 amd64
 libtspi-dev/stable 0.3.15-0.3 amd64
-libtspi1/stable,now 0.3.15-0.3 amd64 [installed,automatic]
+libtspi1/stable 0.3.15-0.3 amd64
 libtss-dev/stable 1045-2 amd64
 libtss0/stable 1045-2 amd64
 libtss2-dev/stable 3.2.1-3 amd64
@@ -41275,8 +41275,8 @@ loadwatch/stable 1.0+1.1alpha1-6+b1 amd64
 local-apt-repository/stable 0.7+nmu1 all
 localehelper/stable 0.1.4-3 all
 localepurge/stable 0.7.3.10 all
-locales-all/stable 2.36-9+deb12u1 amd64
-locales/stable,now 2.36-9+deb12u1 all [installed]
+locales-all/stable-security 2.36-9+deb12u3 amd64
+locales/stable-security,now 2.36-9+deb12u3 all [installed]
 localslackirc/stable 1.17-1.1 all
 locate/stable 4.9.0-4 amd64
 location/stable 0.9.16-2 all
@@ -45250,7 +45250,7 @@ nsca-client/stable 2.10.2-2 amd64
 nsca-ng-client/stable 1.6-6 amd64
 nsca-ng-server/stable 1.6-6 amd64
 nsca/stable 2.10.2-2 amd64
-nscd/stable 2.36-9+deb12u1 amd64
+nscd/stable-security 2.36-9+deb12u3 amd64
 nsd/stable 4.6.1-1 amd64
 nsf-dev/stable 2.3.0-1 amd64
 nsf-shells/stable 2.3.0-1 all
@@ -48069,7 +48069,7 @@ powerline/stable 2.8.3-4 amd64
 powerman/stable 2.3.27-2 amd64
 powermanga-data/stable 0.93.1-5 all
 powermanga/stable 0.93.1-5 amd64
-powermgmt-base/stable 1.37 all
+powermgmt-base/stable,now 1.37 all [installed,automatic]
 powerstat/stable 0.03.01-1 amd64
 powersupply-gtk/stable 0.8.0-2 all
 powertop/stable,now 2.14-1+b2 amd64 [installed,automatic]
@@ -56111,7 +56111,7 @@ rexical/stable 1.0.7-2 all
 rexima/stable 1.4-8+b2 amd64
 rfcdiff/stable 1.45-1.1 all
 rfdump/stable 1.6-8 amd64
-rfkill/stable 2.38.1-5+b1 amd64
+rfkill/stable,now 2.38.1-5+b1 amd64 [installed,automatic]
 rgbpaint/stable 0.8.7-6.1+b1 amd64
 rgxg/stable 0.1.2-5 amd64
 rhash/stable 1.4.3-3 amd64
@@ -58776,7 +58776,7 @@ snap-templates/stable 1.0.0.2-4+b1 amd64
 snap/stable 2013-11-29-11 amd64
 snapclient/stable 0.26.0+dfsg1-1+b2 amd64
 snapd-glib-tests/stable 1.63-5 amd64
-snapd/stable,now 2.57.6-1+b5 amd64 [installed]
+snapd/stable 2.57.6-1+b5 amd64
 snapper-gui/stable 0git.960a94834f-5 all
 snapper/stable 0.10.4-1 amd64
 snapraid/stable 12.2-1 amd64
@@ -59058,7 +59058,7 @@ sqlsmith/stable 1.4-1 amd64
 sqop/stable 0.27.3-1+b1 amd64
 squareness/stable 2.3.0-7 all
 squashfs-tools-ng/stable 1.2.0-1 amd64
-squashfs-tools/stable,now 1:4.5.1-1 amd64 [installed,automatic]
+squashfs-tools/stable 1:4.5.1-1 amd64
 squashfuse/stable 0.1.105-1 amd64
 squeak-vm/stable 1:4.10.2.2614+20120917~dfsg-1+b1 amd64
 squeekboard-devel/stable 1.21.0-1 amd64
@@ -60432,73 +60432,73 @@ thunar-volman/stable,now 4.18.0-1 amd64 [residual-config]
 thunar/stable,now 4.18.4-1 amd64 [residual-config]
 thunarx-python/stable 0.5.2-2+b2 amd64
 thunderbird-bidiui/stable 0.9.7-2.2 all
-thunderbird-l10n-af/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-all/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-ar/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-ast/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-be/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-bg/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-br/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-ca/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-cak/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-cs/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-cy/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-da/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-de/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-dsb/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-el/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-en-ca/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-en-gb/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-es-ar/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-es-es/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-es-mx/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-et/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-eu/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-fi/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-fr/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-fy-nl/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-ga-ie/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-gd/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-gl/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-he/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-hr/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-hsb/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-hu/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-hy-am/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-id/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-is/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-it/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-ja/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-ka/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-kab/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-kk/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-ko/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-lt/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-lv/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-ms/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-nb-no/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-nl/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-nn-no/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-pa-in/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-pl/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-pt-br/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-pt-pt/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-rm/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-ro/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-ru/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-sk/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-sl/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-sq/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-sr/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-sv-se/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-th/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-tr/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-uk/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-uz/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-vi/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-zh-cn/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird-l10n-zh-tw/stable-security 1:102.15.1-1~deb12u1 all
-thunderbird/stable-security,now 1:102.15.1-1~deb12u1 amd64 [installed]
+thunderbird-l10n-af/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-all/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-ar/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-ast/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-be/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-bg/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-br/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-ca/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-cak/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-cs/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-cy/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-da/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-de/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-dsb/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-el/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-en-ca/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-en-gb/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-es-ar/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-es-es/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-es-mx/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-et/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-eu/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-fi/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-fr/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-fy-nl/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-ga-ie/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-gd/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-gl/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-he/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-hr/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-hsb/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-hu/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-hy-am/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-id/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-is/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-it/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-ja/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-ka/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-kab/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-kk/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-ko/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-lt/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-lv/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-ms/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-nb-no/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-nl/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-nn-no/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-pa-in/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-pl/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-pt-br/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-pt-pt/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-rm/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-ro/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-ru/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-sk/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-sl/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-sq/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-sr/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-sv-se/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-th/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-tr/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-uk/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-uz/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-vi/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-zh-cn/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird-l10n-zh-tw/stable-security 1:115.3.1-1~deb12u1 all
+thunderbird/stable-security,now 1:115.3.1-1~deb12u1 amd64 [installed]
 thunderbolt-tools/stable 0.9.3-6 amd64
 tiarra-conf-el/stable 20100212+r39209-9 all
 tiarra/stable 20100212+r39209-9 all
@@ -60635,8 +60635,8 @@ tldr-py/stable 0.7.0-6 all
 tldr/stable 0.9.2-2+b4 amd64
 tlf/stable 1.4.1-5 amd64
 tlog/stable 12.1-2 amd64
-tlp-rdw/stable 1.5.0-2 all
-tlp/stable 1.5.0-2 all
+tlp-rdw/stable,now 1.5.0-2 all [residual-config]
+tlp/stable,now 1.5.0-2 all [installed]
 tlsh-tools/stable 3.4.4+20151206-1.4+b4 amd64
 tlslookup/stable 1.1-1.1 amd64
 tlswrapper/stable 0~20230101-1 amd64

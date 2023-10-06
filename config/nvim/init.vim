@@ -55,9 +55,6 @@ source $VIM_DIR/plugins/colorscheme.vim   " colorscheme
 Plug 'romainl/vim-qf'
 let g:qf_auto_resize = 0
 
-" File explorer
-" Plug 'stevearc/oil.nvim'
-
 " lf file explorer integration
 Plug 'ptzz/lf.vim'
 Plug 'voldikss/vim-floaterm'

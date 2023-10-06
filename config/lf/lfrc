@@ -36,9 +36,11 @@ set scrolloff 10
 map ` !true
 
 # execute current file (must be executable)
-cmd exec %$HOME/scripts/lf/exec.py
+cmd exec !python3 $HOME/scripts/lf/exec.py
+cmd exec_args !python3 $HOME/scripts/lf/exec.py args
+
 map x exec
-map X exec
+map X exec_args
 
 # dedicated keys for file opener actions
 # map <enter> &mimeopen $f
