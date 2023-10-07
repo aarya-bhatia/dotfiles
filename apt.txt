@@ -2417,14 +2417,14 @@ chromhmm/stable 1.24+dfsg-1 all
 chromimpute/stable 1.0.3+dfsg-4 all
 chromium-bsu-data/stable 0.9.16.1-3 all
 chromium-bsu/stable 0.9.16.1-3 amd64
-chromium-common/stable-security,now 117.0.5938.132-1~deb12u1 amd64 [installed,automatic]
-chromium-driver/stable-security 117.0.5938.132-1~deb12u1 amd64
-chromium-l10n/stable-security 117.0.5938.132-1~deb12u1 all
+chromium-common/stable-security,now 117.0.5938.149-1~deb12u1 amd64 [installed,automatic]
+chromium-driver/stable-security 117.0.5938.149-1~deb12u1 amd64
+chromium-l10n/stable-security 117.0.5938.149-1~deb12u1 all
 chromium-lwn4chrome/stable 1.0-3 all
-chromium-sandbox/stable-security,now 117.0.5938.132-1~deb12u1 amd64 [installed,automatic]
-chromium-shell/stable-security 117.0.5938.132-1~deb12u1 amd64
+chromium-sandbox/stable-security,now 117.0.5938.149-1~deb12u1 amd64 [installed,automatic]
+chromium-shell/stable-security 117.0.5938.149-1~deb12u1 amd64
 chromium-tt-rss-notifier/stable 0.5.2-2.1 all
-chromium/stable-security,now 117.0.5938.132-1~deb12u1 amd64 [installed]
+chromium/stable-security,now 117.0.5938.149-1~deb12u1 amd64 [installed]
 chromono/stable 1.1.1-1.1+b1 amd64
 chronicle/stable 4.6-2.1 all
 chrony/stable 4.3-2+deb12u1 amd64
@@ -2887,18 +2887,18 @@ coda/stable 2.24.2-1 amd64
 code-exploration/stable 1.82.0-1693249446 amd64
 code-exploration/stable 1.82.0-1693248439 arm64
 code-exploration/stable 1.82.0-1693248361 armhf
-code-insiders/stable 1.83.0-1696342225 amd64
-code-insiders/stable 1.83.0-1696341017 arm64
-code-insiders/stable 1.83.0-1696341002 armhf
+code-insiders/stable 1.84.0-1696485474 amd64
+code-insiders/stable 1.84.0-1696484331 arm64
+code-insiders/stable 1.84.0-1696484325 armhf
 code-saturne-bin/stable 6.0.2-2 amd64
 code-saturne-data/stable 6.0.2-2 all
 code-saturne-doc/stable 6.0.2-2 all
 code-saturne-include/stable 6.0.2-2 amd64
 code-saturne/stable 6.0.2-2 amd64
 code2html/stable 0.9.1-4.2 all
-code/stable,now 1.82.3-1696245001 amd64 [installed]
-code/stable 1.82.3-1696243900 arm64
-code/stable 1.82.3-1696243903 armhf
+code/stable,now 1.83.0-1696350811 amd64 [installed]
+code/stable 1.83.0-1696349969 arm64
+code/stable 1.83.0-1696349653 armhf
 codeblocks-common/stable 20.03+svn13046-0.1 all
 codeblocks-contrib/stable 20.03+svn13046-0.1+b2 amd64
 codeblocks-dev/stable 20.03+svn13046-0.1+b2 amd64
@@ -4348,7 +4348,7 @@ dirsearch/stable 0.4.2+ds-3 all
 dirvish/stable 1.2.1-2.1 all
 dis51/stable 0.5-1.2 amd64
 disc-cover/stable 1.5.6-5 all
-discord/now 0.0.30 amd64 [installed,local]
+discord/now 0.0.31 amd64 [installed,local]
 discosnp/stable 1:2.6.2-2 amd64
 discount/stable 2.2.7-2 amd64
 discover-data/stable,now 2.2013.01.13 all [installed,automatic]
@@ -5764,7 +5764,7 @@ extrepo-offline-data/stable 1.0.3 all
 extrepo/stable 0.11 all
 extsmail/stable 2.5-1 amd64
 extundelete/stable 0.2.4-3 amd64
-exuberant-ctags/stable 1:5.9~svn20110310-18 amd64
+exuberant-ctags/stable,now 1:5.9~svn20110310-18 amd64 [installed]
 eye/stable 22.1201.1601~ds-1 all
 eyed3/stable 0.9.7-1 all
 eyes17-manuals-en/stable 5.1.2+repack-1 all
@@ -6478,9 +6478,9 @@ foma-bin/stable 1:0.10.0+s311-1 all
 foma/stable 1:0.10.0+s311-1 amd64
 fomp/stable 1.2.2-1 amd64
 fondu/stable 0.0.20060102-5 amd64
-font-manager-common/stable 0.8.8-2 amd64
-font-manager/stable 0.8.8-2 amd64
-font-viewer/stable 0.8.8-2 amd64
+font-manager-common/stable,now 0.8.8-2 amd64 [installed,automatic]
+font-manager/stable,now 0.8.8-2 amd64 [installed]
+font-viewer/stable,now 0.8.8-2 amd64 [installed,automatic]
 fontconfig-config/stable,now 2.14.1-4 amd64 [installed,automatic]
 fontconfig/stable,now 2.14.1-4 amd64 [installed,automatic]
 fontcustom/stable 2.0.0+ds4-5.1 all
@@ -8392,7 +8392,7 @@ gentoo/stable 0.20.7-2 amd64
 genwqe-tools/stable 4.0.18-3.1 amd64
 genxdr/stable 2.0.1-8 amd64
 geoclue-2-demo/stable 2.6.0-2 amd64
-geoclue-2.0/stable 2.6.0-2 amd64
+geoclue-2.0/stable,now 2.6.0-2 amd64 [installed,automatic]
 geoclue-doc/stable 2.6.0-2 all
 geocode-glib-common/stable 3.26.3-6 all
 geocode-glib-tests/stable 3.26.3-6 amd64
@@ -13172,7 +13172,7 @@ igv/stable 2.16.0+dfsg-1 all
 ihungarian/stable 1.6.1-2.1 amd64
 ii-esu/stable 1.0a.dfsg2-2 amd64
 ii/stable 1.8-3+ds+b1 amd64
-iio-sensor-proxy/stable 3.0-2 amd64
+iio-sensor-proxy/stable,now 3.0-2 amd64 [installed,automatic]
 iiod/stable 0.24-4 amd64
 iipimage-doc/stable 1.1-3 all
 iipimage-server/stable 1.1-3+b2 amd64
@@ -16119,7 +16119,7 @@ libayatana-appindicator-dev/stable 0.5.92-1 amd64
 libayatana-appindicator-doc/stable 0.5.92-1 all
 libayatana-appindicator0.1-cil-dev/stable 0.5.92-1 amd64
 libayatana-appindicator0.1-cil/stable 0.5.92-1 amd64
-libayatana-appindicator1/stable 0.5.92-1 amd64
+libayatana-appindicator1/stable,now 0.5.92-1 amd64 [installed,automatic]
 libayatana-appindicator3-0.1-cil-dev/stable 0.5.92-1 amd64
 libayatana-appindicator3-0.1-cil/stable 0.5.92-1 amd64
 libayatana-appindicator3-1/stable,now 0.5.92-1 amd64 [installed,automatic]
@@ -16132,7 +16132,7 @@ libayatana-indicator-dev/stable 0.9.3-1 amd64
 libayatana-indicator3-7/stable,now 0.9.3-1 amd64 [installed,automatic]
 libayatana-indicator3-dev/stable 0.9.3-1 amd64
 libayatana-indicator3-tools/stable 0.9.3-1 amd64
-libayatana-indicator7/stable 0.9.3-1 amd64
+libayatana-indicator7/stable,now 0.9.3-1 amd64 [installed,automatic]
 libb-compiling-perl/stable 0.06-2+b1 amd64
 libb-cow-perl/stable 0.007-1 amd64
 libb-debug-perl/stable 1.26-3 all
@@ -18884,7 +18884,7 @@ libdbusmenu-gtk-dev/stable 18.10.20180917~bzr492+repack1-3 amd64
 libdbusmenu-gtk-doc/stable 18.10.20180917~bzr492+repack1-3 all
 libdbusmenu-gtk3-4/stable,now 18.10.20180917~bzr492+repack1-3 amd64 [installed,automatic]
 libdbusmenu-gtk3-dev/stable 18.10.20180917~bzr492+repack1-3 amd64
-libdbusmenu-gtk4/stable 18.10.20180917~bzr492+repack1-3 amd64
+libdbusmenu-gtk4/stable,now 18.10.20180917~bzr492+repack1-3 amd64 [installed,automatic]
 libdbusmenu-jsonloader-dev/stable 18.10.20180917~bzr492+repack1-3 amd64
 libdbusmenu-jsonloader4/stable 18.10.20180917~bzr492+repack1-3 amd64
 libdbusmenu-qt5-2/stable 0.9.3+16.04.20160218-2+b1 amd64
@@ -39697,9 +39697,9 @@ libvpl-dev/stable 2023.1.1-1 amd64
 libvpl2/stable 2023.1.1-1 amd64
 libvpoll-dev/stable 0.1-3 amd64
 libvpoll0/stable 0.1-3 amd64
-libvpx-dev/stable-security 1.12.0-1+deb12u1 amd64
-libvpx-doc/stable-security 1.12.0-1+deb12u1 all
-libvpx7/stable-security,now 1.12.0-1+deb12u1 amd64 [installed,automatic]
+libvpx-dev/stable-security 1.12.0-1+deb12u2 amd64
+libvpx-doc/stable-security 1.12.0-1+deb12u2 all
+libvpx7/stable-security,now 1.12.0-1+deb12u2 amd64 [installed,automatic]
 libvshadow-dev/stable 20190323-2+b2 amd64
 libvshadow-utils/stable 20190323-2+b2 amd64
 libvshadow1/stable 20190323-2+b2 amd64
@@ -40030,19 +40030,19 @@ libwxsvg-dev/stable 2:1.5.24+dfsg-1+b2 amd64
 libwxsvg-tools/stable 2:1.5.24+dfsg-1+b2 amd64
 libwxsvg3/stable 2:1.5.24+dfsg-1+b2 amd64
 libwyhash-dev/stable 0~2.gbp234f0c6-1 amd64
-libx11-6/stable,stable-security,now 2:1.8.4-2+deb12u1 amd64 [installed,automatic]
-libx11-data/stable,stable-security,now 2:1.8.4-2+deb12u1 all [installed,automatic]
-libx11-dev/stable,stable-security,now 2:1.8.4-2+deb12u1 amd64 [installed,automatic]
-libx11-doc/stable,stable-security 2:1.8.4-2+deb12u1 all
+libx11-6/stable-security,now 2:1.8.4-2+deb12u2 amd64 [installed,automatic]
+libx11-data/stable-security,now 2:1.8.4-2+deb12u2 all [installed,automatic]
+libx11-dev/stable-security,now 2:1.8.4-2+deb12u2 amd64 [installed,automatic]
+libx11-doc/stable-security 2:1.8.4-2+deb12u2 all
 libx11-freedesktop-desktopentry-perl/stable 0.04-5 all
 libx11-guitest-perl/stable 0.28-3+b1 amd64
 libx11-keyboard-perl/stable 1.4-7 all
 libx11-protocol-other-perl/stable 31-1 all
 libx11-protocol-perl/stable,now 0.56-9 all [installed,automatic]
 libx11-windowhierarchy-perl/stable 0.004-3 all
-libx11-xcb-dev/stable,stable-security,now 2:1.8.4-2+deb12u1 amd64 [installed]
+libx11-xcb-dev/stable-security,now 2:1.8.4-2+deb12u2 amd64 [installed]
 libx11-xcb-perl/stable 0.19-1+b2 amd64
-libx11-xcb1/stable,stable-security,now 2:1.8.4-2+deb12u1 amd64 [installed,automatic]
+libx11-xcb1/stable-security,now 2:1.8.4-2+deb12u2 amd64 [installed,automatic]
 libx12-parser-perl/stable 0.80-4 all
 libx264-164/stable,now 2:0.164.3095+gitbaee400-3 amd64 [installed,automatic]
 libx264-dev/stable 2:0.164.3095+gitbaee400-3 amd64
@@ -40579,8 +40579,8 @@ libxpa-dev/stable 2.1.20-1 amd64
 libxpa1/stable 2.1.20-1 amd64
 libxplc0.3.13-dev/stable 0.3.13-12 amd64
 libxplc0.3.13/stable 0.3.13-12 amd64
-libxpm-dev/stable 1:3.5.12-1.1 amd64
-libxpm4/stable,now 1:3.5.12-1.1 amd64 [installed,automatic]
+libxpm-dev/stable-security 1:3.5.12-1.1+deb12u1 amd64
+libxpm4/stable-security,now 1:3.5.12-1.1+deb12u1 amd64 [installed,automatic]
 libxpp2-java/stable 2.1.10-8 all
 libxpp3-java/stable 1.1.4c-3 all
 libxpresent-dev/stable 1.0.0-2+b10 amd64
@@ -55991,8 +55991,8 @@ redmine-plugin-redhopper/stable 2.0.0-2 all
 redmine-sqlite/stable 5.0.4-5 all
 redmine/stable 5.0.4-5 all
 rednotebook/stable 2.29.3+ds-1 all
-redshift-gtk/stable 1.12-4.2 all
-redshift/stable 1.12-4.2 amd64
+redshift-gtk/stable,now 1.12-4.2 all [installed]
+redshift/stable,now 1.12-4.2 amd64 [installed,automatic]
 redsocks/stable 0.5-2+b3 amd64
 ree/stable 1.4.1-2 amd64
 refind/stable 0.13.2-1+b1 amd64
@@ -58619,7 +58619,7 @@ skyview-java-doc/stable 3.5.6+repack-1 all
 skyview-java/stable 3.5.6+repack-1 all
 skyview/stable 3.5.6+repack-1 all
 sl/stable 5.02-1+b1 amd64
-slack-desktop/jessie,now 4.34.120 amd64 [installed]
+slack-desktop/jessie,now 4.34.121 amd64 [installed]
 slack/stable 1:0.15.2-11 all
 slang-cfitsio/stable 0.4.7~pre.19-1+b2 amd64
 slang-curl/stable 0.2.2~pre.12-2 amd64
@@ -61907,7 +61907,7 @@ vpnc-scripts/stable 0.1~git20220510-1 all
 vpnc/stable 0.5.3+git20220927-1 amd64
 vpoll-dkms/stable 0.1-3 all
 vprerex/stable,now 1:6.5.1-1+b2 amd64 [installed,automatic]
-vpx-tools/stable-security 1.12.0-1+deb12u1 amd64
+vpx-tools/stable-security 1.12.0-1+deb12u2 amd64
 vramsteg/stable 1.1.0-1+b1 amd64
 vrfy/stable 990522-11 amd64
 vrfydmn/stable 0.11.0-2.1 all
@@ -62919,7 +62919,7 @@ xplanet-images/stable 1.3.1-3 all
 xplanet/stable 1.3.1-3+b1 amd64
 xplot-xplot.org/stable 0.90.7.1-4+b1 amd64
 xplot/stable 1.19-9.1 amd64
-xpmutils/stable 1:3.5.12-1.1 amd64
+xpmutils/stable-security 1:3.5.12-1.1+deb12u1 amd64
 xpore-doc/stable 2.1-1 all
 xpore/stable 2.1-1 all
 xppaut/stable 6.11b+1.dfsg-1.1 amd64
