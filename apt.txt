@@ -305,7 +305,7 @@ amazon-ecr-credential-helper/stable 0.6.0-1+b2 amd64
 amb-plugins/stable 0.8.1-7+b1 amd64
 ambdec/stable 0.7.1-1 amd64
 amber/stable 0.0~git20171010.cdade1c-2+b5 amd64
-amd64-microcode/stable-security 3.20230719.1~deb12u1 amd64
+amd64-microcode/stable 3.20230808.1.1~deb12u1 amd64
 amdgcn-tools/stable 13+b1 amd64
 ament-cmake-clang-format/stable 0.13.2-4 all
 ament-cmake-clang-tidy/stable 0.13.2-4 all
@@ -704,12 +704,12 @@ archivemount/stable 0.8.7-1+b1 amd64
 archlinux-keyring/stable 0~20230130-1 all
 archmage/stable 1:0.4.2.1-2 all
 archmbox/stable 4.10.0-6 all
-arctica-greeter-guest-session/stable 0.99.3.0-1 all
-arctica-greeter-remote-logon/stable 0.99.3.0-1 all
-arctica-greeter-theme-debian-futureprototype/stable 0.99.3.0-1 all
-arctica-greeter-theme-debian-softwaves/stable 0.99.3.0-1 all
-arctica-greeter-theme-debian/stable 0.99.3.0-1 all
-arctica-greeter/stable 0.99.3.0-1 amd64
+arctica-greeter-guest-session/stable 0.99.3.0-1+deb12u1 all
+arctica-greeter-remote-logon/stable 0.99.3.0-1+deb12u1 all
+arctica-greeter-theme-debian-futureprototype/stable 0.99.3.0-1+deb12u1 all
+arctica-greeter-theme-debian-softwaves/stable 0.99.3.0-1+deb12u1 all
+arctica-greeter-theme-debian/stable 0.99.3.0-1+deb12u1 all
+arctica-greeter/stable 0.99.3.0-1+deb12u1 amd64
 arden/stable 1.0-5 all
 ardentryst/stable 1.71-9 all
 ardour-data/stable 1:7.3.0+ds0-1 all
@@ -1039,9 +1039,9 @@ autodock-vina/stable 1.2.3-2 amd64
 autodock/stable 4.2.6-9 amd64
 autofdo/stable 0.19-2.2+b1 amd64
 autoflake/stable 2.1.1-1 all
-autofs-hesiod/stable 5.1.8-2+deb12u1 amd64
-autofs-ldap/stable 5.1.8-2+deb12u1 amd64
-autofs/stable 5.1.8-2+deb12u1 amd64
+autofs-hesiod/stable 5.1.8-2+deb12u2 amd64
+autofs-ldap/stable 5.1.8-2+deb12u2 amd64
+autofs/stable 5.1.8-2+deb12u2 amd64
 autogen-doc/stable 1:5.18.16-5 all
 autogen/stable 1:5.18.16-5 amd64
 autogrid-test/stable 4.2.6-9 all
@@ -1221,7 +1221,7 @@ barrier/stable 2.4.0+dfsg-3 amd64
 barrnap/stable 0.9+dfsg-3 all
 bart-view/stable 0.2.00-1 amd64
 bart/stable 0.8.00-3 amd64
-base-files/stable,now 12.4+deb12u1 amd64 [installed]
+base-files/stable,now 12.4+deb12u2 amd64 [installed]
 base-passwd/stable,now 3.6.1 amd64 [installed]
 base16384/stable 2.2.2-1 amd64
 base58/stable 1.0.3-2 all
@@ -1378,14 +1378,14 @@ biloba/stable 0.9.3-11 amd64
 bin86/stable 0.16.17-3.4 amd64
 binaryen/stable 108-1 amd64
 binclock/stable 1.5-11 amd64
-bind9-dev/stable-security 1:9.18.19-1~deb12u1 amd64
-bind9-dnsutils/stable-security,now 1:9.18.19-1~deb12u1 amd64 [installed]
-bind9-doc/stable-security 1:9.18.19-1~deb12u1 all
-bind9-host/stable-security,now 1:9.18.19-1~deb12u1 amd64 [installed]
-bind9-libs/stable-security,now 1:9.18.19-1~deb12u1 amd64 [installed,automatic]
-bind9-utils/stable-security 1:9.18.19-1~deb12u1 amd64
-bind9/stable-security 1:9.18.19-1~deb12u1 amd64
-bind9utils/stable-security 1:9.18.19-1~deb12u1 all
+bind9-dev/stable,stable-security 1:9.18.19-1~deb12u1 amd64
+bind9-dnsutils/stable,stable-security,now 1:9.18.19-1~deb12u1 amd64 [installed]
+bind9-doc/stable,stable-security 1:9.18.19-1~deb12u1 all
+bind9-host/stable,stable-security,now 1:9.18.19-1~deb12u1 amd64 [installed]
+bind9-libs/stable,stable-security,now 1:9.18.19-1~deb12u1 amd64 [installed,automatic]
+bind9-utils/stable,stable-security 1:9.18.19-1~deb12u1 amd64
+bind9/stable,stable-security 1:9.18.19-1~deb12u1 amd64
+bind9utils/stable,stable-security 1:9.18.19-1~deb12u1 all
 bindechexascii/stable 0.0+20140524.git7dcd86-4+b1 amd64
 bindfs/stable 1.14.7-1 amd64
 bindgen/stable 0.60.1-2+b2 amd64
@@ -1701,7 +1701,7 @@ bowtie2/stable 2.5.0-3+b2 amd64
 bowtie/stable 1.3.1-1+b1 amd64
 boxbackup-client/stable 0.13~~git20221201.g166b3fa-1 amd64
 boxbackup-server/stable 0.13~~git20221201.g166b3fa-1 amd64
-boxer-data/stable 10.9.12 all
+boxer-data/stable 10.9.12+deb12u1 all
 boxer/stable 1.4.3-1 all
 boxes/stable 2.2.0-2 amd64
 boxshade/stable 3.3.1-14 amd64
@@ -1709,7 +1709,7 @@ bpfcc-introspection/stable 0.26.0+ds-1 amd64
 bpfcc-lua/stable 0.26.0+ds-1 amd64
 bpfcc-tools/stable 0.26.0+ds-1 all
 bpfmon/stable 2.51-1 amd64
-bpftool/stable-security 7.1.0+6.1.52-1 amd64
+bpftool/stable 7.1.0+6.1.55-1 amd64
 bpftrace/stable 0.17.0-1 amd64
 bplay/stable 0.991-10.1 amd64
 bpm-tools/stable 0.3-4 amd64
@@ -1751,11 +1751,11 @@ briquolo-data/stable 0.5.7-11 all
 briquolo/stable 0.5.7-11 amd64
 bristol-data/stable 0.60.11-3.1 all
 bristol/stable 0.60.11-3.1 amd64
-brltty-espeak/stable 6.5-7 amd64
-brltty-flite/stable 6.5-7 amd64
-brltty-speechd/stable 6.5-7 amd64
-brltty-x11/stable 6.5-7 amd64
-brltty/stable 6.5-7 amd64
+brltty-espeak/stable 6.5-7+deb12u1 amd64
+brltty-flite/stable 6.5-7+deb12u1 amd64
+brltty-speechd/stable 6.5-7+deb12u1 amd64
+brltty-x11/stable 6.5-7+deb12u1 amd64
+brltty/stable 6.5-7+deb12u1 amd64
 bro-aux/stable 0.42-1 amd64
 brotli/stable 1.0.9-2+b6 amd64
 brp-pacu/stable 2.1.2+git20210421-1 amd64
@@ -1929,7 +1929,7 @@ c2hs-doc/stable 0.28.8-1 all
 c2hs/stable 0.28.8-1 amd64
 c2x/stable 2.40.e+ds-1 amd64
 c3270/stable 4.1ga10-1.1+b1 amd64
-ca-certificates-java/stable-updates,now 20230620~deb12u1 all [installed,automatic]
+ca-certificates-java/stable,stable-updates,now 20230620~deb12u1 all [installed,automatic]
 ca-certificates-mono/stable 6.8.0.105+dfsg-3.3 all
 ca-certificates/stable,now 20230311 all [installed]
 cabal-debian/stable 5.2-1 amd64
@@ -2008,7 +2008,7 @@ cairo-dock-xfce-integration-plug-in/stable 3.4.1+git20201022.a0d3415c-1+b1 amd64
 cairo-dock-xgamma-plug-in/stable 3.4.1+git20201022.a0d3415c-1+b1 amd64
 cairo-dock/stable 3.4.1+git20201103.0836f5d1-1 amd64
 cairo-perf-utils/stable 1.16.0-7 amd64
-cairosvg/stable 2.5.2-1.1 all
+cairosvg/stable 2.5.2-1.1+deb12u1 all
 caja-actions-common/stable 1.27.0-1 all
 caja-actions-dev/stable 1.27.0-1 amd64
 caja-actions/stable 1.27.0-1 amd64
@@ -2046,8 +2046,8 @@ calculix-cgx/stable 2.17+dfsg-2+b1 amd64
 calcurse/stable 4.7.1-1 amd64
 calendar/stable 12.1.8 amd64
 calf-plugins/stable 0.90.3-4 amd64
-calibre-bin/stable 6.13.0+repack-2 amd64
-calibre/stable 6.13.0+repack-2 all
+calibre-bin/stable 6.13.0+repack-2+deb12u1 amd64
+calibre/stable 6.13.0+repack-2+deb12u1 all
 calife/stable 1:3.0.1-6 amd64
 callaudiod/stable 0.1.7-1 amd64
 calligra-data/stable 1:3.2.1+dfsg-6 all
@@ -2174,7 +2174,7 @@ cavepacker/stable 2.5.2-1 amd64
 cavezofphear/stable 0.5.1-1.1 amd64
 cb2bib/stable 2.0.1-2 amd64
 cba/stable 0.3.6-6+b2 amd64
-cbatticon/stable,now 1.6.9-1+b2 amd64 [installed]
+cbatticon/stable 1.6.9-1+b2 amd64
 cbflib-bin/stable 0.9.7+dfsg1-2+b2 amd64
 cbflib-doc/stable 0.9.7+dfsg1-2 all
 cbindgen/stable 0.24.3-2+b2 amd64
@@ -2503,7 +2503,7 @@ cl-babel/stable 20200719.gitf892d05-2 all
 cl-base64/stable 3.4.0-1 all
 cl-bond/stable 1.8.6-10 all
 cl-bordeaux-threads/stable 0.8.8-5 all
-cl-brlapi/stable 6.5-7 all
+cl-brlapi/stable 6.5-7+deb12u1 all
 cl-cffi/stable 1:0.24.1-3 all
 cl-chipz/stable 20220213.git82a17d3-1 all
 cl-chunga/stable 20220222.git7836609-1 all
@@ -2646,16 +2646,16 @@ cl-zip/stable 20150608-1.1 all
 cl-zpb-ttf/stable 1.0.4-2 all
 cl-zs3/stable 1.3.1-1.1 all
 clamassassin/stable 1.2.4-1.2 all
-clamav-base/stable-updates 1.0.3+dfsg-1~deb12u1 all
+clamav-base/stable,stable-updates 1.0.3+dfsg-1~deb12u1 all
 clamav-cvdupdate/stable 1.1.1-1 all
-clamav-daemon/stable-updates 1.0.3+dfsg-1~deb12u1 amd64
-clamav-docs/stable-updates 1.0.3+dfsg-1~deb12u1 all
-clamav-freshclam/stable-updates 1.0.3+dfsg-1~deb12u1 amd64
-clamav-milter/stable-updates 1.0.3+dfsg-1~deb12u1 amd64
-clamav-testfiles/stable-updates 1.0.3+dfsg-1~deb12u1 all
+clamav-daemon/stable,stable-updates 1.0.3+dfsg-1~deb12u1 amd64
+clamav-docs/stable,stable-updates 1.0.3+dfsg-1~deb12u1 all
+clamav-freshclam/stable,stable-updates 1.0.3+dfsg-1~deb12u1 amd64
+clamav-milter/stable,stable-updates 1.0.3+dfsg-1~deb12u1 amd64
+clamav-testfiles/stable,stable-updates 1.0.3+dfsg-1~deb12u1 all
 clamav-unofficial-sigs/stable 3.7.2-2.1 all
-clamav/stable-updates 1.0.3+dfsg-1~deb12u1 amd64
-clamdscan/stable-updates 1.0.3+dfsg-1~deb12u1 amd64
+clamav/stable,stable-updates 1.0.3+dfsg-1~deb12u1 amd64
+clamdscan/stable,stable-updates 1.0.3+dfsg-1~deb12u1 amd64
 clamfs/stable 1.2.0-2.1 amd64
 clamsmtp/stable 1.10-17.2 amd64
 clamtk-gnome/stable 6.07-1.1 all
@@ -2673,20 +2673,20 @@ clang-15/stable 1:15.0.6-4+b1 amd64
 clang-format-13/stable 1:13.0.1-11+b2 amd64
 clang-format-14/stable 1:14.0.6-12 amd64
 clang-format-15/stable 1:15.0.6-4+b1 amd64
-clang-format/stable 1:14.0-55.6 amd64
+clang-format/stable 1:14.0-55.7~deb12u1 amd64
 clang-tidy-13/stable 1:13.0.1-11+b2 amd64
 clang-tidy-14/stable 1:14.0.6-12 amd64
 clang-tidy-15/stable 1:15.0.6-4+b1 amd64
-clang-tidy/stable 1:14.0-55.6 amd64
+clang-tidy/stable 1:14.0-55.7~deb12u1 amd64
 clang-tools-13/stable 1:13.0.1-11+b2 amd64
 clang-tools-14/stable 1:14.0.6-12 amd64
 clang-tools-15/stable 1:15.0.6-4+b1 amd64
-clang-tools/stable 1:14.0-55.6 amd64
-clang/stable 1:14.0-55.6 amd64
+clang-tools/stable 1:14.0-55.7~deb12u1 amd64
+clang/stable 1:14.0-55.7~deb12u1 amd64
 clangd-13/stable 1:13.0.1-11+b2 amd64
 clangd-14/stable 1:14.0.6-12 amd64
 clangd-15/stable 1:15.0.6-4+b1 amd64
-clangd/stable 1:14.0-55.6 amd64
+clangd/stable 1:14.0-55.7~deb12u1 amd64
 clanlib-doc/stable 1.0~svn3827-8 all
 clapper/stable 0.5.2-7 amd64
 clasp/stable 3.3.5-4.2 amd64
@@ -3364,7 +3364,7 @@ crunch/stable 3.6-3 amd64
 crust-firmware/stable 0.5-3 all
 cryfs/stable 0.11.3-5 amd64
 crypt++el/stable 2.94-3.1 all
-cryptmount/stable 6.2.0-1 amd64
+cryptmount/stable 6.2.0-1+deb12u1 amd64
 cryptominisat/stable 5.11.4+dfsg1-2+b1 amd64
 cryptsetup-bin/stable 2:2.6.1-4~deb12u1 amd64
 cryptsetup-initramfs/stable 2:2.6.1-4~deb12u1 all
@@ -3407,7 +3407,7 @@ csvkit/stable 1.0.7-1 all
 csvtool/stable 2.4-1+b2 amd64
 csync2/stable 2.0-42-g83b3644-2 amd64
 ctapi-dev/stable 1.1+nmu1 all
-ctdb/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
+ctdb/stable 2:4.17.11+dfsg-0+deb12u1 amd64
 ctdconverter/stable 2.1-5 all
 cthreadpool-dev/stable 0.0+git20201207.b259a6e-1 all
 cthumb/stable 4.2-3.2 all
@@ -3439,25 +3439,25 @@ cupp3/stable 0.0+20190501.git986658-6 all
 cupp/stable 0.0+20190501.git986658-6 all
 cups-backend-bjnp/stable 2.0.3-4 amd64
 cups-browsed/stable,now 1.28.17-3 amd64 [installed,automatic]
-cups-bsd/stable 2.4.2-3+deb12u1 amd64
-cups-client/stable,now 2.4.2-3+deb12u1 amd64 [installed,automatic]
-cups-common/stable,now 2.4.2-3+deb12u1 all [installed,automatic]
-cups-core-drivers/stable,now 2.4.2-3+deb12u1 amd64 [installed,automatic]
-cups-daemon/stable,now 2.4.2-3+deb12u1 amd64 [installed,automatic]
+cups-bsd/stable 2.4.2-3+deb12u4 amd64
+cups-client/stable,now 2.4.2-3+deb12u4 amd64 [installed,automatic]
+cups-common/stable,now 2.4.2-3+deb12u4 all [installed,automatic]
+cups-core-drivers/stable,now 2.4.2-3+deb12u4 amd64 [installed,automatic]
+cups-daemon/stable,now 2.4.2-3+deb12u4 amd64 [installed,automatic]
 cups-filters-core-drivers/stable,now 1.28.17-3 amd64 [installed,automatic]
 cups-filters/stable,now 1.28.17-3 amd64 [installed,automatic]
-cups-ipp-utils/stable,now 2.4.2-3+deb12u1 amd64 [installed,automatic]
+cups-ipp-utils/stable,now 2.4.2-3+deb12u4 amd64 [installed,automatic]
 cups-pk-helper/stable,now 0.2.6-1+b1 amd64 [installed,automatic]
-cups-ppdc/stable,now 2.4.2-3+deb12u1 amd64 [installed,automatic]
-cups-server-common/stable,now 2.4.2-3+deb12u1 all [installed,automatic]
+cups-ppdc/stable,now 2.4.2-3+deb12u4 amd64 [installed,automatic]
+cups-server-common/stable,now 2.4.2-3+deb12u4 all [installed,automatic]
 cups-tea4cups/stable 3.14~alpha0+svn3576-2 all
 cups-x2go/stable 3.0.1.4-2 all
-cups/stable,now 2.4.2-3+deb12u1 amd64 [installed,automatic]
+cups/stable,now 2.4.2-3+deb12u4 amd64 [installed,automatic]
 cupt-dbg/stable 2.10.4+nmu1+b1 amd64
 cupt/stable 2.10.4+nmu1+b1 amd64
 cura-engine/stable 1:4.13.0-1+b1 amd64
 cura/stable 4.13.0-1 all
-curl/stable-security,now 7.88.1-10+deb12u1 amd64 [installed]
+curl/stable,now 7.88.1-10+deb12u3 amd64 [installed]
 curseofwar/stable 1.1.8-3.1 amd64
 curtain/stable 0.3-1.1+b1 amd64
 curvedns/stable 0.87-6+b1 amd64
@@ -3512,18 +3512,18 @@ cyclonedds-doc/stable 0.10.2-2 all
 cyclonedds-tools/stable 0.10.2-2 amd64
 cylc-flow/stable 8.0.2-1 all
 cynthiune.app/stable 1.0.0-2+b6 amd64
-cyrus-admin/stable 3.6.1-4 amd64
-cyrus-caldav/stable 3.6.1-4 amd64
-cyrus-clients/stable 3.6.1-4 amd64
-cyrus-common/stable 3.6.1-4 amd64
-cyrus-dev/stable 3.6.1-4 amd64
-cyrus-doc/stable 3.6.1-4 all
-cyrus-imapd/stable 3.6.1-4 amd64
+cyrus-admin/stable 3.6.1-4+deb12u1 amd64
+cyrus-caldav/stable 3.6.1-4+deb12u1 amd64
+cyrus-clients/stable 3.6.1-4+deb12u1 amd64
+cyrus-common/stable 3.6.1-4+deb12u1 amd64
+cyrus-dev/stable 3.6.1-4+deb12u1 amd64
+cyrus-doc/stable 3.6.1-4+deb12u1 all
+cyrus-imapd/stable 3.6.1-4+deb12u1 amd64
 cyrus-imspd/stable 1.8-5+b1 amd64
-cyrus-murder/stable 3.6.1-4 amd64
-cyrus-nntpd/stable 3.6.1-4 amd64
-cyrus-pop3d/stable 3.6.1-4 amd64
-cyrus-replication/stable 3.6.1-4 amd64
+cyrus-murder/stable 3.6.1-4+deb12u1 amd64
+cyrus-nntpd/stable 3.6.1-4+deb12u1 amd64
+cyrus-pop3d/stable 3.6.1-4+deb12u1 amd64
+cyrus-replication/stable 3.6.1-4+deb12u1 amd64
 cyrus-sasl2-doc/stable 2.1.28+dfsg-10 all
 cysignals-tools/stable 1.11.2+ds-2 all
 cython-doc/stable 0.29.32-2 all
@@ -3562,9 +3562,9 @@ daphne/stable 4.0.0-1 all
 dapl2-utils/stable 2.1.10.1.f1e05b7a-3+b1 amd64
 daps/stable 3.3.2+cleaned1-4 all
 daptup/stable 0.12.7+nmu1 all
-dar-docs/stable 2.7.8-1 all
-dar-static/stable 2.7.8-1+b8 amd64
-dar/stable 2.7.8-1+b8 amd64
+dar-docs/stable 2.7.8-2 all
+dar-static/stable 2.7.8-2 amd64
+dar/stable 2.7.8-2 amd64
 darcs-monitor/stable 0.4.2-14+b2 amd64
 darcs/stable 2.16.5-1 amd64
 darcsum/stable 1.10+20120116-4 all
@@ -3635,19 +3635,19 @@ dblatex-doc/stable 0.3.12py3-2 all
 dblatex/stable 0.3.12py3-2 all
 dbskkd-cdb/stable 1:3.00-5 amd64
 dbtoepub/stable 0+svn9904-7 all
-dbus-1-doc/stable 1.14.8-2~deb12u1 all
-dbus-bin/stable,now 1.14.8-2~deb12u1 amd64 [installed,automatic]
+dbus-1-doc/stable 1.14.10-1~deb12u1 all
+dbus-bin/stable,now 1.14.10-1~deb12u1 amd64 [installed,automatic]
 dbus-broker/stable 33-1 amd64
 dbus-cpp-bin/stable 5.0.3-4 amd64
 dbus-cpp-dev-examples/stable 5.0.3-4 amd64
-dbus-daemon/stable,now 1.14.8-2~deb12u1 amd64 [installed,automatic]
-dbus-session-bus-common/stable,now 1.14.8-2~deb12u1 all [installed,automatic]
-dbus-system-bus-common/stable,now 1.14.8-2~deb12u1 all [installed,automatic]
+dbus-daemon/stable,now 1.14.10-1~deb12u1 amd64 [installed,automatic]
+dbus-session-bus-common/stable,now 1.14.10-1~deb12u1 all [installed,automatic]
+dbus-system-bus-common/stable,now 1.14.10-1~deb12u1 all [installed,automatic]
 dbus-test-runner/stable 19.04.0-1 amd64
-dbus-tests/stable 1.14.8-2~deb12u1 amd64
-dbus-user-session/stable,now 1.14.8-2~deb12u1 amd64 [installed]
-dbus-x11/stable 1.14.8-2~deb12u1 amd64
-dbus/stable,now 1.14.8-2~deb12u1 amd64 [installed]
+dbus-tests/stable 1.14.10-1~deb12u1 amd64
+dbus-user-session/stable,now 1.14.10-1~deb12u1 amd64 [installed]
+dbus-x11/stable 1.14.10-1~deb12u1 amd64
+dbus/stable,now 1.14.10-1~deb12u1 amd64 [installed]
 dbview/stable 1.0.4-5 amd64
 dc3dd/stable 7.2.646-6 amd64
 dc/stable 1.07.1-3+b1 amd64
@@ -3719,7 +3719,7 @@ debdelta-doc/stable 0.67 all
 debdelta/stable 0.67 amd64
 debfoster/stable 2.7-2.1+b2 amd64
 debhelper/stable 13.11.4 all
-debian-archive-keyring/stable,now 2023.3 all [installed]
+debian-archive-keyring/stable,now 2023.3+deb12u1 all [installed]
 debian-astro-logo/stable 4.0 all
 debian-cd/stable 3.2.1 all
 debian-cloud-images-packages/stable 0.0.6 amd64
@@ -3731,31 +3731,31 @@ debian-edu-artwork-softwaves/stable 2.12.2-2 all
 debian-edu-artwork-spacefun/stable 20220131-1 all
 debian-edu-artwork/stable 2.12.2-2 all
 debian-edu-config/stable 2.12.32 all
-debian-edu-doc-da/stable 2.12.17 all
-debian-edu-doc-de/stable 2.12.17 all
-debian-edu-doc-en/stable 2.12.17 all
-debian-edu-doc-es/stable 2.12.17 all
-debian-edu-doc-fr/stable 2.12.17 all
-debian-edu-doc-it/stable 2.12.17 all
-debian-edu-doc-ja/stable 2.12.17 all
-debian-edu-doc-legacy-en/stable 2.12.17 all
-debian-edu-doc-legacy-fr/stable 2.12.17 all
-debian-edu-doc-legacy-ja/stable 2.12.17 all
-debian-edu-doc-legacy-nb-no/stable 2.12.17 all
-debian-edu-doc-legacy-nl/stable 2.12.17 all
-debian-edu-doc-legacy-pl/stable 2.12.17 all
-debian-edu-doc-legacy-pt-br/stable 2.12.17 all
-debian-edu-doc-legacy-pt-pt/stable 2.12.17 all
-debian-edu-doc-legacy-sv/stable 2.12.17 all
-debian-edu-doc-legacy-uk/stable 2.12.17 all
-debian-edu-doc-legacy-zh-cn/stable 2.12.17 all
-debian-edu-doc-nb-no/stable 2.12.17 all
-debian-edu-doc-nl/stable 2.12.17 all
-debian-edu-doc-pt-br/stable 2.12.17 all
-debian-edu-doc-pt-pt/stable 2.12.17 all
-debian-edu-doc-zh-cn/stable 2.12.17 all
+debian-edu-doc-da/stable 2.12.18~deb12u1 all
+debian-edu-doc-de/stable 2.12.18~deb12u1 all
+debian-edu-doc-en/stable 2.12.18~deb12u1 all
+debian-edu-doc-es/stable 2.12.18~deb12u1 all
+debian-edu-doc-fr/stable 2.12.18~deb12u1 all
+debian-edu-doc-it/stable 2.12.18~deb12u1 all
+debian-edu-doc-ja/stable 2.12.18~deb12u1 all
+debian-edu-doc-legacy-en/stable 2.12.18~deb12u1 all
+debian-edu-doc-legacy-fr/stable 2.12.18~deb12u1 all
+debian-edu-doc-legacy-ja/stable 2.12.18~deb12u1 all
+debian-edu-doc-legacy-nb-no/stable 2.12.18~deb12u1 all
+debian-edu-doc-legacy-nl/stable 2.12.18~deb12u1 all
+debian-edu-doc-legacy-pl/stable 2.12.18~deb12u1 all
+debian-edu-doc-legacy-pt-br/stable 2.12.18~deb12u1 all
+debian-edu-doc-legacy-pt-pt/stable 2.12.18~deb12u1 all
+debian-edu-doc-legacy-sv/stable 2.12.18~deb12u1 all
+debian-edu-doc-legacy-uk/stable 2.12.18~deb12u1 all
+debian-edu-doc-legacy-zh-cn/stable 2.12.18~deb12u1 all
+debian-edu-doc-nb-no/stable 2.12.18~deb12u1 all
+debian-edu-doc-nl/stable 2.12.18~deb12u1 all
+debian-edu-doc-pt-br/stable 2.12.18~deb12u1 all
+debian-edu-doc-pt-pt/stable 2.12.18~deb12u1 all
+debian-edu-doc-zh-cn/stable 2.12.18~deb12u1 all
 debian-edu-fai/stable 2023.05.16.1 all
-debian-edu-install/stable 2.12.8 all
+debian-edu-install/stable 2.12.9~deb12u1 all
 debian-edu-router-config/stable 2.12.7 all
 debian-edu-router-deployserver/stable 2.12.7 all
 debian-edu-router-fai/stable 2.12.7 all
@@ -3773,16 +3773,16 @@ debian-faq/stable,now 11.1 all [installed]
 debian-goodies/stable 0.88.1 all
 debian-handbook/stable 11.20220922 all
 debian-history/stable 2.28 all
-debian-installer-12-netboot-amd64/stable 20230607+deb12u1 all
-debian-installer-12-netboot-arm64/stable 20230607+deb12u1 all
-debian-installer-12-netboot-armel/stable 20230607+deb12u1 all
-debian-installer-12-netboot-armhf/stable 20230607+deb12u1 all
-debian-installer-12-netboot-i386/stable 20230607+deb12u1 all
-debian-installer-12-netboot-mips64el/stable 20230607+deb12u1 all
-debian-installer-12-netboot-mipsel/stable 20230607+deb12u1 all
-debian-installer-12-netboot-ppc64el/stable 20230607+deb12u1 all
+debian-installer-12-netboot-amd64/stable 20230607+deb12u2 all
+debian-installer-12-netboot-arm64/stable 20230607+deb12u2 all
+debian-installer-12-netboot-armel/stable 20230607+deb12u2 all
+debian-installer-12-netboot-armhf/stable 20230607+deb12u2 all
+debian-installer-12-netboot-i386/stable 20230607+deb12u2 all
+debian-installer-12-netboot-mips64el/stable 20230607+deb12u2 all
+debian-installer-12-netboot-mipsel/stable 20230607+deb12u2 all
+debian-installer-12-netboot-ppc64el/stable 20230607+deb12u2 all
 debian-installer-launcher/stable 39 all
-debian-installer/stable 20230607+deb12u1 amd64
+debian-installer/stable 20230607+deb12u2 amd64
 debian-kernel-handbook/stable 1.0.21 all
 debian-keyring/stable 2022.12.24 all
 debian-mate-default-settings/stable 1.26.0-1+deb12u1 all
@@ -3808,7 +3808,7 @@ debian-security-support/stable 1:12+2023.05.12 all
 debiandoc-sgml-doc-pt-br/stable 1.1.13+nmu1 all
 debiandoc-sgml-doc/stable 1.1.26 all
 debiandoc-sgml/stable 1.2.32-2.1 all
-debianutils/stable,now 5.7-0.4 amd64 [installed]
+debianutils/stable,now 5.7-0.5~deb12u1 amd64 [installed]
 debichem-analytical-biochemistry/stable 0.0.12 all
 debichem-cheminformatics/stable 0.0.12 all
 debichem-crystallography/stable 0.0.12 all
@@ -3970,8 +3970,8 @@ dfrs/stable 0.0.7-4+b3 amd64
 dfu-programmer/stable 0.6.1-1+b1 amd64
 dfu-util/stable 0.11-1 amd64
 dgedit/stable 0.10.0-2 amd64
-dgit-infrastructure/stable 10.7 all
-dgit/stable 10.7 all
+dgit-infrastructure/stable 10.7+deb12u2 all
+dgit/stable 10.7+deb12u2 all
 dh-acc/stable 2.3-2 all
 dh-ada-library/stable 8.6 all
 dh-apparmor/stable 3.0.8-3 all
@@ -4023,11 +4023,11 @@ dh-xsp/stable 4.2-2.4 all
 dhav2mkv/stable 1.4.1-1+b1 amd64
 dhcp-helper/stable 1.2-3.1 amd64
 dhcp-probe/stable 1.3.0-10.1+b1 amd64
-dhcpcd-base/stable 9.4.1-22 amd64
+dhcpcd-base/stable 9.4.1-24~deb12u2 amd64
 dhcpcd-dbus/stable 0.6.1-4 amd64
 dhcpcd-gtk/stable 0.7.8-1 amd64
-dhcpcd5/stable 9.4.1-22 all
-dhcpcd/stable 9.4.1-22 all
+dhcpcd5/stable 9.4.1-24~deb12u2 all
+dhcpcd/stable 1:9.4.1-24~deb12u2 all
 dhcpd-pools/stable 2.29-1.1 amd64
 dhcpdump/stable 1.8-7 amd64
 dhcpig/stable 1.5-3 all
@@ -4457,7 +4457,7 @@ dnstap-ldns/stable 0.2.1-1 amd64
 dnstop/stable 20120611-2+b4 amd64
 dnstracer/stable 1.9-7+b1 amd64
 dnstwist/stable 0~20221213-1 all
-dnsutils/stable-security 1:9.18.19-1~deb12u1 all
+dnsutils/stable,stable-security 1:9.18.19-1~deb12u1 all
 dnsvi/stable 1.4 all
 dnsviz/stable 0.9.4-1 all
 dnswalk/stable 2.0.2.dfsg.1-3 all
@@ -4586,10 +4586,10 @@ doxyqml/stable 0.3.0-1.1 all
 dozzaqueux-data/stable 3.51-2.1 all
 dozzaqueux/stable 3.51-2.1 amd64
 dpaste/stable 0.4.0-1+b2 amd64
-dpdk-dev/stable 22.11.2-2~deb12u1 amd64
-dpdk-doc/stable 22.11.2-2~deb12u1 all
+dpdk-dev/stable 22.11.3-1~deb12u1 amd64
+dpdk-doc/stable 22.11.3-1~deb12u1 all
 dpdk-kmods-dkms/stable 0~20220829+git-3 amd64
-dpdk/stable 22.11.2-2~deb12u1 amd64
+dpdk/stable 22.11.3-1~deb12u1 amd64
 dpf-plugins-common/stable 1.6+ds-2 amd64
 dpf-plugins-dssi/stable 1.6+ds-2 amd64
 dpf-plugins-ladspa/stable 1.6+ds-2 amd64
@@ -4611,8 +4611,8 @@ dpkg/stable,now 1.21.22 amd64 [installed]
 dpo-tools/stable 1.5-1 all
 dpuser-doc/stable 4.1+dfsg-1 all
 dpuser/stable 4.1+dfsg-1+b2 amd64
-dput-ng-doc/stable 1.35 all
-dput-ng/stable 1.35 all
+dput-ng-doc/stable 1.35+deb12u1 all
+dput-ng/stable 1.35+deb12u1 all
 dput/stable 1.1.3 all
 dq/stable 20230101-1 amd64
 dqcache/stable 20230101-1 amd64
@@ -4887,7 +4887,7 @@ eekboek-gui/stable 2.04-1 all
 eekboek/stable 2.04-1 all
 efax-gtk/stable 3.2.8-2.3+b1 amd64
 efax/stable 1:0.9a-21 amd64
-efibootguard/stable 0.13-2 amd64
+efibootguard/stable 0.13-2+deb12u1 amd64
 efibootmgr/stable,now 17-2 amd64 [installed,automatic]
 efingerd/stable 1.6.7-1+b1 amd64
 efitools/stable 1.9.2-3 amd64
@@ -4970,7 +4970,7 @@ electronics-pcb/stable 0.3 all
 electronics-radio-dev/stable 0.3 all
 electronics-simulation/stable 0.3 all
 electronics-tasks/stable 0.3 all
-electrum/stable 4.3.4+dfsg1-1 all
+electrum/stable 4.3.4+dfsg1-1+deb12u1 all
 elektroid/stable 2.4.1-1 amd64
 elementary-icon-theme/stable 7.2.0-1 all
 elementary-xfce-icon-theme/stable 0.17-1 all
@@ -5831,7 +5831,7 @@ fastaq/stable 3.17.0-5 all
 fastboot/stable 1:29.0.6-28 amd64
 fastd-doc/stable 22-4 all
 fastd/stable 22-4 amd64
-fastdds-tools/stable-security 2.9.1+ds-1+deb12u1 amd64
+fastdds-tools/stable,stable-security 2.9.1+ds-1+deb12u1 amd64
 fastddsgen/stable 2.3.0+dfsg-1 all
 fastdnaml/stable 1.2.2-15 amd64
 fastep/stable 0.12-5 all
@@ -6165,8 +6165,8 @@ filelight/stable 4:22.12.3-1 amd64
 filespooler/stable 1.2.2-2+b2 amd64
 filetea/stable 0.1.18-1+b1 amd64
 filetraq/stable 0.3+nmu1 all
-filezilla-common/stable 3.63.0-1 all
-filezilla/stable 3.63.0-1 amd64
+filezilla-common/stable 3.63.0-1+deb12u2 all
+filezilla/stable 3.63.0-1+deb12u2 amd64
 filler/stable 1.02-6.4 all
 fillets-ng-data-cs/stable 1.0.1-1.1 all
 fillets-ng-data-nl/stable 1.0.1-1.1 all
@@ -6315,14 +6315,14 @@ fireqos-doc/stable 3.1.7+ds-2.1 all
 fireqos/stable 3.1.7+ds-2.1 all
 firetools/stable 0.9.72-1 amd64
 firewalk/stable 5.0-5 amd64
-firewall-applet/stable 1.3.0-1 all
-firewall-config/stable 1.3.0-1 all
-firewalld-tests/stable 1.3.0-1 all
-firewalld/stable 1.3.0-1 all
+firewall-applet/stable 1.3.3-1~deb12u1 all
+firewall-config/stable 1.3.3-1~deb12u1 all
+firewalld-tests/stable 1.3.3-1~deb12u1 all
+firewalld/stable 1.3.3-1~deb12u1 all
 firm-phoenix-ware/stable 4.7.5+repack-2 all
 firmware-amd-graphics/stable 20230210-5 all
 firmware-ast/stable 20140808-7 all
-firmware-ath9k-htc/stable 1.4.0-108-gd856466+dfsg1-1.3 all
+firmware-ath9k-htc/stable 1.4.0-108-gd856466+dfsg1-1.3+deb12u1 all
 firmware-atheros/stable 20230210-5 all
 firmware-bnx2/stable 20230210-5 all
 firmware-bnx2x/stable 20230210-5 all
@@ -6383,7 +6383,7 @@ flamerobin/stable 0.9.6.ds.1-2 amd64
 flameshot/stable 12.1.0-2 amd64
 flamethrower/stable 0.1.8-6.1 all
 flamp/stable 2.2.07-1+b1 amd64
-flann-doc/stable 1.9.2+dfsg-1 all
+flann-doc/stable 1.9.2+dfsg-1+deb12u1 all
 flare-data/stable 0.19-1.1 all
 flare-engine/stable 1.14-1 amd64
 flare-game/stable 1.14-1 all
@@ -7001,9 +7001,9 @@ foomatic-db-engine/stable 4.0.13-6 amd64
 foomatic-db/stable 20230202-1 all
 foomatic-filters-beh/stable 4.0.17-16 all
 foomatic-filters/stable 4.0.17-16 amd64
-foot-terminfo/stable 1.13.1-2 all
-foot-themes/stable 1.13.1-2 all
-foot/stable 1.13.1-2 amd64
+foot-terminfo/stable 1.13.1-2+deb12u1 all
+foot-themes/stable 1.13.1-2+deb12u1 all
+foot/stable 1.13.1-2+deb12u1 amd64
 fop-doc/stable 1:2.8-2 all
 fop/stable 1:2.8-2 all
 foremancli/stable 1.0-3 all
@@ -7158,9 +7158,9 @@ freedink-engine/stable 109.6-4 amd64
 freedink/stable 109.6-4 all
 freedm/stable 0.12.1-2 all
 freedom-maker/stable 0.32 all
-freedombox-doc-en/stable 23.6.2 all
-freedombox-doc-es/stable 23.6.2 all
-freedombox/stable 23.6.2 all
+freedombox-doc-en/stable 23.6.2+deb12u1 all
+freedombox-doc-es/stable 23.6.2+deb12u1 all
+freedombox/stable 23.6.2+deb12u1 all
 freedoom/stable 0.12.1-2 all
 freedroid-data/stable 1.0.2+cvs040112-7 all
 freedroid/stable 1.0.2+cvs040112-7 amd64
@@ -7194,21 +7194,21 @@ freepats/stable 20060219-4 all
 freeplane-scripting-api/stable 1.7.10-1 all
 freeplane/stable 1.7.10-1 all
 freepwing/stable 1.5-2 all
-freeradius-common/stable 3.2.1+dfsg-4 all
-freeradius-config/stable 3.2.1+dfsg-4 amd64
-freeradius-dhcp/stable 3.2.1+dfsg-4 amd64
-freeradius-iodbc/stable 3.2.1+dfsg-4 amd64
-freeradius-krb5/stable 3.2.1+dfsg-4 amd64
-freeradius-ldap/stable 3.2.1+dfsg-4 amd64
-freeradius-memcached/stable 3.2.1+dfsg-4 amd64
-freeradius-mysql/stable 3.2.1+dfsg-4 amd64
-freeradius-postgresql/stable 3.2.1+dfsg-4 amd64
-freeradius-python3/stable 3.2.1+dfsg-4 amd64
-freeradius-redis/stable 3.2.1+dfsg-4 amd64
-freeradius-rest/stable 3.2.1+dfsg-4 amd64
-freeradius-utils/stable 3.2.1+dfsg-4 amd64
-freeradius-yubikey/stable 3.2.1+dfsg-4 amd64
-freeradius/stable 3.2.1+dfsg-4 amd64
+freeradius-common/stable 3.2.1+dfsg-4+deb12u1 all
+freeradius-config/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius-dhcp/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius-iodbc/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius-krb5/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius-ldap/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius-memcached/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius-mysql/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius-postgresql/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius-python3/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius-redis/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius-rest/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius-utils/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius-yubikey/stable 3.2.1+dfsg-4+deb12u1 amd64
+freeradius/stable 3.2.1+dfsg-4+deb12u1 amd64
 freerdp2-dev/stable 2.10.0+dfsg1-1 amd64
 freerdp2-shadow-x11/stable 2.10.0+dfsg1-1 amd64
 freerdp2-wayland/stable 2.10.0+dfsg1-1 amd64
@@ -7264,11 +7264,11 @@ frogr/stable 1.7-1 amd64
 frotz/stable 2.54+dfsg-3 amd64
 frozen-bubble-data/stable 2.212-11 all
 frozen-bubble/stable 2.212-11+b1 amd64
-frr-doc/stable-security 8.4.4-1.1~deb12u1 all
-frr-pythontools/stable-security 8.4.4-1.1~deb12u1 all
-frr-rpki-rtrlib/stable-security 8.4.4-1.1~deb12u1 amd64
-frr-snmp/stable-security 8.4.4-1.1~deb12u1 amd64
-frr/stable-security 8.4.4-1.1~deb12u1 amd64
+frr-doc/stable,stable-security 8.4.4-1.1~deb12u1 all
+frr-pythontools/stable,stable-security 8.4.4-1.1~deb12u1 all
+frr-rpki-rtrlib/stable,stable-security 8.4.4-1.1~deb12u1 amd64
+frr-snmp/stable,stable-security 8.4.4-1.1~deb12u1 amd64
+frr/stable,stable-security 8.4.4-1.1~deb12u1 amd64
 fs-uae-arcade/stable 3.1.63-2 all
 fs-uae/stable 3.1.66-2 amd64
 fsa/stable 1.15.9+dfsg-6 amd64
@@ -8600,9 +8600,9 @@ ghextris/stable 0.9.0-5 all
 ghkl/stable 5.0.0.3001-1+b1 amd64
 ghmm/stable 0.9~rc3-4 amd64
 ghostess/stable 20120105-1+b2 amd64
-ghostscript-doc/stable,stable-security 10.0.0~dfsg-11+deb12u1 all
-ghostscript-x/stable,stable-security 10.0.0~dfsg-11+deb12u1 amd64
-ghostscript/stable,stable-security,now 10.0.0~dfsg-11+deb12u1 amd64 [installed,automatic]
+ghostscript-doc/stable 10.0.0~dfsg-11+deb12u2 all
+ghostscript-x/stable 10.0.0~dfsg-11+deb12u2 amd64
+ghostscript/stable,now 10.0.0~dfsg-11+deb12u2 amd64 [installed,automatic]
 ghostwriter/stable 2.1.6+ds-2 amd64
 ghp-import/stable 2.1.0-3 all
 gi-docgen-doc/stable 2023.1+ds-2 all
@@ -8804,8 +8804,8 @@ gir1.2-gst-rtsp-server-1.0/stable 1.22.0-2 amd64
 gir1.2-gstreamer-1.0/stable,now 1.22.0-2 amd64 [installed,automatic]
 gir1.2-gtherm-0.0/stable 0.0.3-1+b2 amd64
 gir1.2-gtk-2.0/stable 2.24.33-2 amd64
-gir1.2-gtk-3.0/stable,now 3.24.37-2 amd64 [installed,automatic]
-gir1.2-gtk-4.0/stable 4.8.3+ds-2 amd64
+gir1.2-gtk-3.0/stable,now 3.24.38-2~deb12u1 amd64 [installed,automatic]
+gir1.2-gtk-4.0/stable 4.8.3+ds-2+deb12u1 amd64
 gir1.2-gtk-vnc-2.0/stable,now 1.3.1-1 amd64 [installed,automatic]
 gir1.2-gtkchamplain-0.12/stable 0.12.20-1+b1 amd64
 gir1.2-gtkclutter-1.0/stable 1.8.4-4+b1 amd64
@@ -8834,9 +8834,9 @@ gir1.2-ical-3.0/stable 3.0.16-1+b1 amd64
 gir1.2-infinity-0.7/stable 0.7.2-1+b2 amd64
 gir1.2-inputpad-1.1/stable 1.0.99.20210817-2+b1 amd64
 gir1.2-itl-1.0/stable 0.3-1 amd64
-gir1.2-javascriptcoregtk-4.0/stable-security,now 2.40.5-1~deb12u1 amd64 [installed,automatic]
-gir1.2-javascriptcoregtk-4.1/stable-security 2.40.5-1~deb12u1 amd64
-gir1.2-javascriptcoregtk-6.0/stable-security 2.40.5-1~deb12u1 amd64
+gir1.2-javascriptcoregtk-4.0/stable,stable-security,now 2.40.5-1~deb12u1 amd64 [installed,automatic]
+gir1.2-javascriptcoregtk-4.1/stable,stable-security 2.40.5-1~deb12u1 amd64
+gir1.2-javascriptcoregtk-6.0/stable,stable-security 2.40.5-1~deb12u1 amd64
 gir1.2-jcat-1.0/stable 0.1.9-1 amd64
 gir1.2-json-1.0/stable 1.6.6-1 amd64
 gir1.2-jsonrpc-1.0/stable 3.42.0-1 amd64
@@ -8896,7 +8896,7 @@ gir1.2-rda-1.0/stable 0.0.5-1.1 amd64
 gir1.2-rest-1.0/stable 0.9.1-6 amd64
 gir1.2-restextras-1.0/stable 0.9.1-6 amd64
 gir1.2-retro-1/stable 1.0.2-2.1 amd64
-gir1.2-rsvg-2.0/stable-security 2.54.7+dfsg-1~deb12u1 amd64
+gir1.2-rsvg-2.0/stable,stable-security 2.54.7+dfsg-1~deb12u1 amd64
 gir1.2-secret-1/stable,now 0.20.5-3 amd64 [installed,automatic]
 gir1.2-shumate-1.0/stable 1.0.3-2 amd64
 gir1.2-signon-2.0/stable 2.1-3 amd64
@@ -8927,11 +8927,11 @@ gir1.2-upowerglib-1.0/stable 0.99.20-2 amd64
 gir1.2-urfkill-0.5/stable 0.5.0-7+b1 amd64
 gir1.2-v-sim-1.0/stable 3.7.2-9 amd64
 gir1.2-vips-8.0/stable 8.14.1-3 amd64
-gir1.2-vte-2.91/stable,now 0.70.6-1~deb12u1 amd64 [installed,automatic]
-gir1.2-vte-3.91/stable 0.70.6-1~deb12u1 amd64
-gir1.2-webkit-6.0/stable-security 2.40.5-1~deb12u1 amd64
-gir1.2-webkit2-4.0/stable-security,now 2.40.5-1~deb12u1 amd64 [installed,automatic]
-gir1.2-webkit2-4.1/stable-security 2.40.5-1~deb12u1 amd64
+gir1.2-vte-2.91/stable,now 0.70.6-2~deb12u1 amd64 [installed,automatic]
+gir1.2-vte-3.91/stable 0.70.6-2~deb12u1 amd64
+gir1.2-webkit-6.0/stable,stable-security 2.40.5-1~deb12u1 amd64
+gir1.2-webkit2-4.0/stable,stable-security,now 2.40.5-1~deb12u1 amd64 [installed,automatic]
+gir1.2-webkit2-4.1/stable,stable-security 2.40.5-1~deb12u1 amd64
 gir1.2-wnck-1.0/stable 2.30.7-6+b1 amd64
 gir1.2-wnck-3.0/stable,now 43.0-3 amd64 [installed,automatic]
 gir1.2-wp-0.4/stable 0.4.13-1 amd64
@@ -8972,8 +8972,8 @@ git-crypt/stable 0.7.0-0.1 amd64
 git-cvs/stable 1:2.39.2-1.1 all
 git-daemon-run/stable 1:2.39.2-1.1 all
 git-daemon-sysvinit/stable 1:2.39.2-1.1 all
-git-debpush/stable 10.7 all
-git-debrebase/stable 10.7 all
+git-debpush/stable 10.7+deb12u2 all
+git-debrebase/stable 10.7+deb12u2 all
 git-delete-merged-branches/stable 7.4.0-1 all
 git-doc/stable 1:2.39.2-1.1 all
 git-dpm/stable 0.10.0-1.1 all
@@ -9012,7 +9012,7 @@ gitbatch/stable 0.5.0-4+b5 amd64
 gitbrute/stable 0~15-2 amd64
 gitg/stable 41-2 amd64
 gitinspector/stable 0.4.4+dfsg-12 all
-gitit/stable 0.15.1.0+dfsg-2+b4 amd64
+gitit/stable 0.15.1.0+dfsg-2+b6 amd64
 gitk/stable 1:2.39.2-1.1 all
 gitlab-cli/stable 1:3.12.0-1 all
 gitlab-rulez/stable 0.0~git20221202.8222047e-1 all
@@ -9031,8 +9031,8 @@ giza-dev/stable 1.3.2-1 amd64
 gjacktransport/stable 0.6.4-1 amd64
 gjh-asl-json/stable 0.0+git20210628.867c5da-1 amd64
 gjiten/stable 3.1-2 amd64
-gjs-tests/stable 1.74.2-1 amd64
-gjs/stable 1.74.2-1 amd64
+gjs-tests/stable 1.74.2-1+deb12u1 amd64
+gjs/stable 1.74.2-1+deb12u1 amd64
 gkbd-capplet/stable 3.28.1-1 amd64
 gkdebconf/stable 2.1.1 amd64
 gkermit/stable 2.01-2 amd64
@@ -9449,7 +9449,7 @@ gnome-session/stable 43.0-1 all
 gnome-settings-daemon-common/stable 43.0-4 all
 gnome-settings-daemon-dev/stable 43.0-4 amd64
 gnome-settings-daemon/stable 43.0-4 amd64
-gnome-shell-common/stable-security 43.6-1~deb12u2 all
+gnome-shell-common/stable,stable-security 43.6-1~deb12u2 all
 gnome-shell-extension-appindicator/stable 46-1 all
 gnome-shell-extension-arc-menu/stable 49+forkv29-3 all
 gnome-shell-extension-autohidetopbar/stable 1:111-1 all
@@ -9475,7 +9475,7 @@ gnome-shell-extension-manager/stable 0.4.0-1 amd64
 gnome-shell-extension-no-annoyance/stable 0+20220925-c6804a4-3 all
 gnome-shell-extension-panel-osd/stable 1.0.50.gc032923-3 amd64
 gnome-shell-extension-pixelsaver/stable 1.30-1 all
-gnome-shell-extension-prefs/stable-security 43.6-1~deb12u2 amd64
+gnome-shell-extension-prefs/stable,stable-security 43.6-1~deb12u2 amd64
 gnome-shell-extension-runcat/stable 21-1 all
 gnome-shell-extension-shortcuts/stable 1.3.6-1 all
 gnome-shell-extension-system-monitor/stable 40-5 all
@@ -9488,7 +9488,7 @@ gnome-shell-extensions/stable 43.1-1 all
 gnome-shell-mailnag/stable 40.0-4 amd64
 gnome-shell-pomodoro-data/stable 0.22.1-1 all
 gnome-shell-pomodoro/stable 0.22.1-1 amd64
-gnome-shell/stable-security 43.6-1~deb12u2 amd64
+gnome-shell/stable,stable-security 43.6-1~deb12u2 amd64
 gnome-software-common/stable 43.5-1~deb12u1 all
 gnome-software-dev/stable 43.5-1~deb12u1 amd64
 gnome-software-doc/stable 43.5-1~deb12u1 all
@@ -11889,15 +11889,15 @@ gosa-help-de/stable 2.8~git20230203.10abe45+dfsg-1+deb12u1 all
 gosa-help-en/stable 2.8~git20230203.10abe45+dfsg-1+deb12u1 all
 gosa-help-fr/stable 2.8~git20230203.10abe45+dfsg-1+deb12u1 all
 gosa-help-nl/stable 2.8~git20230203.10abe45+dfsg-1+deb12u1 all
-gosa-plugins-dhcp-schema/stable 2.8~git20211027.5741b8f-4 all
-gosa-plugins-dns-schema/stable 2.8~git20211027.5741b8f-4 all
+gosa-plugins-dhcp-schema/stable 2.8~git20211027.5741b8f-4+deb12u2 all
+gosa-plugins-dns-schema/stable 2.8~git20211027.5741b8f-4+deb12u2 all
 gosa-plugins-ldapmanager/stable 2.8~git20211022.877a67e-3 all
 gosa-plugins-mailaddress/stable 2.8~git20211027.08b10a2-2 all
-gosa-plugins-netgroups/stable 2.8~git20211022.3b6449d-4 all
+gosa-plugins-netgroups/stable 2.8~git20211022.3b6449d-4+deb12u1 all
 gosa-plugins-pwreset/stable 2.8~git20211021.d93b138-4 all
 gosa-plugins-sudo-schema/stable 2.8~git20211022.7ff3ed2-2 all
 gosa-plugins-sudo/stable 2.8~git20211022.7ff3ed2-2 all
-gosa-plugins-systems/stable 2.8~git20211027.5741b8f-4 all
+gosa-plugins-systems/stable 2.8~git20211027.5741b8f-4+deb12u2 all
 gosa-schema/stable 2.8~git20230203.10abe45+dfsg-1+deb12u1 all
 gosa/stable 2.8~git20230203.10abe45+dfsg-1+deb12u1 all
 gosop/stable 0.0~git20221115.92fc880-1+b6 amd64
@@ -12228,7 +12228,7 @@ gstreamer1.0-plugins-base-apps/stable,stable-security 1.22.0-3+deb12u1 amd64
 gstreamer1.0-plugins-base/stable,stable-security,now 1.22.0-3+deb12u1 amd64 [installed,automatic]
 gstreamer1.0-plugins-good/stable,stable-security,now 1.22.0-5+deb12u1 amd64 [installed,automatic]
 gstreamer1.0-plugins-rtp/stable 1.14.4.1 amd64
-gstreamer1.0-plugins-ugly/stable-security,now 1.22.0-2+deb12u1 amd64 [installed,automatic]
+gstreamer1.0-plugins-ugly/stable,stable-security,now 1.22.0-2+deb12u1 amd64 [installed,automatic]
 gstreamer1.0-pocketsphinx/stable 0.8+5prealpha+1-15 amd64
 gstreamer1.0-pulseaudio/stable,stable-security 1.22.0-5+deb12u1 amd64
 gstreamer1.0-python3-plugin-loader/stable 1.22.0-2 amd64
@@ -12252,9 +12252,9 @@ gthumb/stable 3:3.12.2-3+b1 amd64
 gtick/stable 0.5.5-3 amd64
 gtimelog/stable 0.11.3-2 all
 gtimer/stable 2.0.0-1.2+b2 amd64
-gtk-3-examples/stable 3.24.37-2 amd64
-gtk-4-examples/stable 4.8.3+ds-2 amd64
-gtk-4-tests/stable 4.8.3+ds-2 amd64
+gtk-3-examples/stable 3.24.38-2~deb12u1 amd64
+gtk-4-examples/stable 4.8.3+ds-2+deb12u1 amd64
+gtk-4-tests/stable 4.8.3+ds-2+deb12u1 amd64
 gtk-chtheme/stable 0.3.1-6.1+b1 amd64
 gtk-doc-tools/stable 1.33.2-1 all
 gtk-im-libthai/stable 0.2.2-2 amd64
@@ -12267,7 +12267,7 @@ gtk-sharp3-examples/stable 2.99.3-4.1 all
 gtk-sharp3-gapi/stable 2.99.3-4.1 amd64
 gtk-sharp3/stable 2.99.3-4.1 amd64
 gtk-theme-switch/stable 2.1.0-5+b1 amd64
-gtk-update-icon-cache/stable,now 3.24.37-2 amd64 [installed,automatic]
+gtk-update-icon-cache/stable,now 3.24.38-2~deb12u1 amd64 [installed,automatic]
 gtk-vector-screenshot/stable 0.3.3-2 amd64
 gtk2-engines-aurora/stable 1.5.1-4+b2 amd64
 gtk2-engines-cleanice/stable 2.4.1-3+b2 amd64
@@ -12614,7 +12614,7 @@ hiera/stable 3.10.0-1 all
 highlight-common/stable 3.41-2 all
 highlight.js-doc/stable 9.18.5+dfsg1-2 all
 highlight/stable 3.41-2+b6 amd64
-highway-doc/stable 1.0.3-3 all
+highway-doc/stable 1.0.3-3+deb12u1 all
 hiki/stable 1.0.0-2.1 all
 hilive/stable 2.0a-3+b2 amd64
 hime-anthy/stable 0.9.11+dfsg-2+b4 amd64
@@ -12679,7 +12679,7 @@ homesick/stable 1.1.6-3 all
 hopm/stable 1.1.10-1+b1 amd64
 horgand-data/stable 1.14-7.1 all
 horgand/stable 1.14-7.1 amd64
-horizon-doc/stable 3:23.0.0-5 all
+horizon-doc/stable 3:23.0.0-5+deb12u1 all
 horizon-eda/stable 2.4.0-1+b1 amd64
 horizon-tempest-plugin/stable 1.1.0-2 all
 horst/stable 5.1-3 amd64
@@ -12862,7 +12862,7 @@ hylafax-server/stable 3:6.0.7-5 amd64
 hyperfine/stable 1.15.0-2 amd64
 hyperrogue-music/stable 12.0q-1 all
 hyperrogue/stable 12.0q-1 amd64
-hyperv-daemons/stable-security 6.1.52-1 amd64
+hyperv-daemons/stable 6.1.55-1 amd64
 hyphen-af/stable 1:7.5.0-1 all
 hyphen-as/stable 0.9.0-2 all
 hyphen-be/stable 1:7.5.0-1 all
@@ -13049,16 +13049,16 @@ icinga2-doc/stable 2.13.6-2 all
 icinga2-ido-mysql/stable 2.13.6-2 amd64
 icinga2-ido-pgsql/stable 2.13.6-2 amd64
 icinga2/stable 2.13.6-2 amd64
-icingacli/stable 2.11.4-2 all
+icingacli/stable 2.11.4-2+deb12u1 all
 icingadb-web/stable 1.0.2-1 all
 icingadb/stable 1.1.0-1+b4 amd64
-icingaweb2-common/stable 2.11.4-2 all
+icingaweb2-common/stable 2.11.4-2+deb12u1 all
 icingaweb2-module-audit/stable 1.0.2-1 all
 icingaweb2-module-boxydash/stable 0.0.1+20160321-4 all
 icingaweb2-module-businessprocess/stable 2.4.0-1 all
 icingaweb2-module-cube/stable 1.2.2-1 all
 icingaweb2-module-director/stable 1.10.2-1 all
-icingaweb2-module-doc/stable 2.11.4-2 all
+icingaweb2-module-doc/stable 2.11.4-2+deb12u1 all
 icingaweb2-module-eventdb/stable 1.3.0-3 all
 icingaweb2-module-fileshipper/stable 1.2.0-2 all
 icingaweb2-module-generictts/stable 2.1.0-1 all
@@ -13066,7 +13066,7 @@ icingaweb2-module-graphite/stable 1.2.2-1 all
 icingaweb2-module-idoreports/stable 0.10.0-1 all
 icingaweb2-module-incubator/stable 0.20.0-1 all
 icingaweb2-module-map/stable 1.1.0-3 all
-icingaweb2-module-monitoring/stable 2.11.4-2 all
+icingaweb2-module-monitoring/stable 2.11.4-2+deb12u1 all
 icingaweb2-module-nagvis/stable 1.1.1-3 all
 icingaweb2-module-pdfexport/stable 0.10.2+dfsg1-2 all
 icingaweb2-module-pnp/stable 1.1.0-3 all
@@ -13076,7 +13076,7 @@ icingaweb2-module-reporting/stable 0.10.0-1 all
 icingaweb2-module-statusmap/stable 20160720-4 all
 icingaweb2-module-toplevelview/stable 0.3.3-1 all
 icingaweb2-module-x509/stable 1:1.1.2-1 all
-icingaweb2/stable 2.11.4-2 all
+icingaweb2/stable 2.11.4-2+deb12u1 all
 icmake/stable 10.03.03-2 amd64
 icmpinfo/stable 1.11-12+b1 amd64
 icmptx/stable 0.2-1+b2 amd64
@@ -13232,8 +13232,8 @@ in-toto/stable 1.3.1-1 all
 inadyn/stable 2.10.0-1 amd64
 incron/stable 0.5.12-4 amd64
 indelible/stable 1.03-5 amd64
-indent-doc/stable 2.2.12-4+deb12u1 all
-indent/stable 2.2.12-4+deb12u1 amd64
+indent-doc/stable 2.2.12-4+deb12u2 all
+indent/stable 2.2.12-4+deb12u2 amd64
 indi-aagcloudwatcher-ng/stable 1.7+20230106180155-1 amd64
 indi-aok/stable 2.0+20221222093242-1 amd64
 indi-apogee/stable 1.9+20221223184417-1 amd64
@@ -13271,17 +13271,17 @@ indi-weewx-json/stable 1.0-1+b1 amd64
 indicator-sensors/stable 1.3-1 amd64
 indigo-utils/stable 1.2.3-3.1 amd64
 inetsim/stable 1.3.2+dfsg.1-1 all
-inetutils-ftp/stable 2:2.4-2 amd64
-inetutils-ftpd/stable 2:2.4-2 amd64
-inetutils-inetd/stable 2:2.4-2 amd64
-inetutils-ping/stable 2:2.4-2 amd64
-inetutils-syslogd/stable 2:2.4-2 amd64
-inetutils-talk/stable 2:2.4-2 amd64
-inetutils-talkd/stable 2:2.4-2 amd64
-inetutils-telnet/stable,now 2:2.4-2 amd64 [installed]
-inetutils-telnetd/stable 2:2.4-2 amd64
-inetutils-tools/stable 2:2.4-2 amd64
-inetutils-traceroute/stable 2:2.4-2 amd64
+inetutils-ftp/stable 2:2.4-2+deb12u1 amd64
+inetutils-ftpd/stable 2:2.4-2+deb12u1 amd64
+inetutils-inetd/stable 2:2.4-2+deb12u1 amd64
+inetutils-ping/stable 2:2.4-2+deb12u1 amd64
+inetutils-syslogd/stable 2:2.4-2+deb12u1 amd64
+inetutils-talk/stable 2:2.4-2+deb12u1 amd64
+inetutils-talkd/stable 2:2.4-2+deb12u1 amd64
+inetutils-telnet/stable,now 2:2.4-2+deb12u1 amd64 [installed]
+inetutils-telnetd/stable 2:2.4-2+deb12u1 amd64
+inetutils-tools/stable 2:2.4-2+deb12u1 amd64
+inetutils-traceroute/stable 2:2.4-2+deb12u1 amd64
 infernal-doc/stable 1.1.4-1 all
 infernal/stable 1.1.4-1 amd64
 infiniband-diags/stable 44.0-2 amd64
@@ -13311,9 +13311,9 @@ inkscape-textext-doc/stable 1.8.2-1 all
 inkscape-textext/stable 1.8.2-1 all
 inkscape-tutorials/stable 1.2.2-2 all
 inkscape/stable 1.2.2-2+b1 amd64
-inn2-dev/stable 2.7.1-1 amd64
-inn2-inews/stable 2.7.1-1 amd64
-inn2/stable 2.7.1-1 amd64
+inn2-dev/stable 2.7.1-1+deb12u1 amd64
+inn2-inews/stable 2.7.1-1+deb12u1 amd64
+inn2/stable 2.7.1-1+deb12u1 amd64
 inn/stable 1:1.7.2q-47 amd64
 innoextract/stable 1.9-0.1 amd64
 ino-headers-doc/stable 0.4.0-2.1 all
@@ -13361,7 +13361,7 @@ intel-cmt-cat/stable 4.5.0-2 amd64
 intel-gpu-tools/stable 1.27.1-1 amd64
 intel-hdcp/stable 20.3.0-1+b3 amd64
 intel-media-va-driver/stable,now 23.1.1+dfsg1-1 amd64 [installed,automatic]
-intel-microcode/stable-security,now 3.20230808.1~deb12u1 amd64 [installed]
+intel-microcode/stable,stable-security,now 3.20230808.1~deb12u1 amd64 [installed]
 intel-opencl-icd/stable 22.43.24595.41-1 amd64
 intel-vc-intrinsics-dev/stable 0.11.0-1 amd64
 intel2gas/stable 1.3.3-17+b1 amd64
@@ -13402,7 +13402,7 @@ ipcalc-ng/stable 1.0.2-1 amd64
 ipcalc/stable 0.42-2 all
 ipe5toxml/stable 1:7.2.24.1-3.1 amd64
 ipe/stable 7.2.26+dfsg1-3+b1 amd64
-iperf3/stable-security 3.12-1+deb12u1 amd64
+iperf3/stable,stable-security 3.12-1+deb12u1 amd64
 iperf/stable 2.1.8+dfsg-1 amd64
 ipfm/stable 0.11.5-4.3 amd64
 ipfs-cid/stable 0.0~git20200813.59cf068-1+b4 amd64
@@ -13656,7 +13656,7 @@ jeepney-doc/stable 0.8.0-3 all
 jeepyb/stable 0+20190513-3 all
 jeex/stable 12.0.4-1.1+b1 amd64
 jekyll-theme-minima/stable 2.5.1-2 all
-jekyll/stable 4.3.1+dfsg-2 all
+jekyll/stable 4.3.1+dfsg-3+deb12u1 all
 jel-java-doc/stable 2.1.2-2 all
 jel-java/stable 2.1.2-2 all
 jello/stable 1.5.5-1 all
@@ -13673,7 +13673,7 @@ jest/stable 29.3.1~ds1+~cs70.48.25-2 all
 jester/stable 1.0-15 amd64
 jetring/stable 0.31 all
 jets3t/stable 0.8.1+dfsg-4 all
-jetty9/stable-security 9.4.50-4+deb12u1 all
+jetty9/stable,stable-security 9.4.50-4+deb12u1 all
 jeuclid-cli/stable 3.1.9-5 all
 jeuclid-mathviewer/stable 3.1.9-5 all
 jflex/stable 1.7.0-3 all
@@ -13937,7 +13937,7 @@ kanadic/stable 6.5deb2-13 all
 kanagram/stable 4:22.12.3-1 amd64
 kanatest/stable 0.4.8-5 amd64
 kanboard-cli/stable 0.0.2-3 all
-kanboard/stable-security 1.2.26+ds-2+deb12u2 all
+kanboard/stable,stable-security 1.2.26+ds-2+deb12u2 all
 kanif/stable 1.2.2-4 all
 kanjidic-xml/stable 2022.08.23 all
 kanjidic/stable 2022.08.23 all
@@ -14115,7 +14115,7 @@ kel-agent/stable 0.4.6-2+b5 amd64
 kelbt/stable 0.16-3 amd64
 kephra/stable 0.4.3.34+dfsg-4 all
 kernel-wedge/stable 2.104 all
-kernelshark/stable 2.9.3+really2.2.0-2 amd64
+kernelshark/stable 2.9.3+really2.2.1-1~deb12u1 amd64
 kerneltop/stable 0.91-2+b1 amd64
 ketm-data/stable 0.0.6-25 all
 ketm/stable 0.0.6-25 amd64
@@ -14442,23 +14442,23 @@ kramdown/stable 2.4.0-2 all
 krank/stable 0.7+dfsg2-4 all
 kraptor-data/stable 0.0.20040403+ds-2 all
 kraptor/stable 0.0.20040403+ds-2 amd64
-krb5-admin-server/stable 1.20.1-2 amd64
+krb5-admin-server/stable 1.20.1-2+deb12u1 amd64
 krb5-auth-dialog/stable 43.0-1+b1 amd64
 krb5-config/stable 2.7 all
-krb5-doc/stable 1.20.1-2 all
-krb5-gss-samples/stable 1.20.1-2 amd64
-krb5-k5tls/stable 1.20.1-2 amd64
-krb5-kdc-ldap/stable 1.20.1-2 amd64
-krb5-kdc/stable 1.20.1-2 amd64
-krb5-kpropd/stable 1.20.1-2 amd64
-krb5-locales/stable,now 1.20.1-2 all [installed]
-krb5-multidev/stable 1.20.1-2 amd64
-krb5-otp/stable 1.20.1-2 amd64
-krb5-pkinit/stable 1.20.1-2 amd64
+krb5-doc/stable 1.20.1-2+deb12u1 all
+krb5-gss-samples/stable 1.20.1-2+deb12u1 amd64
+krb5-k5tls/stable 1.20.1-2+deb12u1 amd64
+krb5-kdc-ldap/stable 1.20.1-2+deb12u1 amd64
+krb5-kdc/stable 1.20.1-2+deb12u1 amd64
+krb5-kpropd/stable 1.20.1-2+deb12u1 amd64
+krb5-locales/stable,now 1.20.1-2+deb12u1 all [installed]
+krb5-multidev/stable 1.20.1-2+deb12u1 amd64
+krb5-otp/stable 1.20.1-2+deb12u1 amd64
+krb5-pkinit/stable 1.20.1-2+deb12u1 amd64
 krb5-strength/stable 3.2-3 amd64
 krb5-sync-plugin/stable 3.1-3+b1 amd64
 krb5-sync-tools/stable 3.1-3+b1 amd64
-krb5-user/stable 1.20.1-2 amd64
+krb5-user/stable 1.20.1-2+deb12u1 amd64
 krdc/stable 4:22.12.3-1 amd64
 krename/stable 5.0.2-1 amd64
 kreversi/stable 4:22.12.3-1 amd64
@@ -14728,7 +14728,7 @@ ldap2dns/stable 0.3.1-5 amd64
 ldap2zone/stable 0.2-12+b1 amd64
 ldapscripts/stable 2.0.8-2 all
 ldapvi/stable 1.7-10+b6 amd64
-ldb-tools/stable-security 2:2.6.2+samba4.17.10+dfsg-0+deb12u1 amd64
+ldb-tools/stable 2:2.6.2+samba4.17.11+dfsg-0+deb12u1 amd64
 ldc/stable 1:1.30.0-1+b1 amd64
 ldh-gui-suite/stable 0.1~20200908-6 all
 ldirectord/stable 1:4.12.0-2 all
@@ -14763,11 +14763,11 @@ leiningen/stable 2.10.0-2 all
 lektor/stable 3.3.7-1 all
 lemon/stable 3.40.1-2 amd64
 lemonbar/stable 1.4-1 amd64
-lemonldap-ng-doc/stable 2.16.1+ds-2 all
-lemonldap-ng-fastcgi-server/stable 2.16.1+ds-2 all
-lemonldap-ng-handler/stable 2.16.1+ds-2 all
-lemonldap-ng-uwsgi-app/stable 2.16.1+ds-2 all
-lemonldap-ng/stable 2.16.1+ds-2 all
+lemonldap-ng-doc/stable 2.16.1+ds-deb12u2 all
+lemonldap-ng-fastcgi-server/stable 2.16.1+ds-deb12u2 all
+lemonldap-ng-handler/stable 2.16.1+ds-deb12u2 all
+lemonldap-ng-uwsgi-app/stable 2.16.1+ds-deb12u2 all
+lemonldap-ng/stable 2.16.1+ds-deb12u2 all
 leocad/stable 21.06-1+b1 amd64
 lepton-eda/stable 1.9.18-1 amd64
 leptonica-progs/stable 1.82.0-3+b3 amd64
@@ -15555,7 +15555,7 @@ libapache-htpasswd-perl/stable 1.9-3 all
 libapache-jena-java/stable 4.5.0-2 all
 libapache-logformat-compiler-perl/stable 0.36-3 all
 libapache-mime4j-java/stable 0.8.2-1 all
-libapache-mod-jk-doc/stable 1:1.2.48-2 all
+libapache-mod-jk-doc/stable 1:1.2.48-2+deb12u1 all
 libapache-opennlp-java/stable 2.1.0-1 all
 libapache-poi-java-doc/stable 4.0.1-4 all
 libapache-poi-java/stable 4.0.1-4 all
@@ -15594,7 +15594,7 @@ libapache2-mod-form-dev/stable 0~svn146-1.1 all
 libapache2-mod-form/stable 0~svn146-1.1 amd64
 libapache2-mod-geoip/stable 1.2.10-1+b1 amd64
 libapache2-mod-intercept-form-submit/stable 1.1.0-1.1 amd64
-libapache2-mod-jk/stable 1:1.2.48-2 amd64
+libapache2-mod-jk/stable 1:1.2.48-2+deb12u1 amd64
 libapache2-mod-ldap-userdir-dbg/stable 1.1.19-2.1+b3 amd64
 libapache2-mod-ldap-userdir/stable 1.1.19-2.1+b3 amd64
 libapache2-mod-lisp/stable 1.3.1-2 amd64
@@ -16203,7 +16203,7 @@ libbasicobjects0/stable 0.6.2-1 amd64
 libbasicplayer-java/stable 3.0-7 all
 libbasix-dev/stable 0.5.1-1+b2 amd64
 libbasix0.5/stable 0.5.1-1+b2 amd64
-libbatik-java/stable 1.16+dfsg-1 all
+libbatik-java/stable 1.16+dfsg-1+deb12u1 all
 libbatteries-ocaml-dev/stable 3.6.0-1 amd64
 libbatteries-ocaml-doc/stable 3.6.0-1 all
 libbbhash-dev/stable 1.0.0-5 amd64
@@ -16689,10 +16689,10 @@ libbrial-groebner3/stable 1.2.11-2.1 amd64
 libbrial3/stable 1.2.11-2.1 amd64
 libbridge-method-injector-java-doc/stable 1.25-1 all
 libbridge-method-injector-java/stable 1.25-1 all
-libbrlapi-dev/stable 6.5-7 amd64
-libbrlapi-java/stable 6.5-7 all
-libbrlapi-jni/stable 6.5-7 amd64
-libbrlapi0.8/stable,now 6.5-7 amd64 [installed,automatic]
+libbrlapi-dev/stable 6.5-7+deb12u1 amd64
+libbrlapi-java/stable 6.5-7+deb12u1 all
+libbrlapi-jni/stable 6.5-7+deb12u1 amd64
+libbrlapi0.8/stable,now 6.5-7+deb12u1 amd64 [installed,automatic]
 libbroker-dev/stable 1.4.0+ds1-1+b2 amd64
 libbroker2/stable 1.4.0+ds1-1+b2 amd64
 libbrotli-dev/stable,now 1.0.9-2+b6 amd64 [installed,automatic]
@@ -16791,21 +16791,21 @@ libc++-13-dev/stable 1:13.0.1-11+b2 amd64
 libc++-14-dev-wasm32/stable 1:14.0.6-12 all
 libc++-14-dev/stable 1:14.0.6-12 amd64
 libc++-15-dev/stable 1:15.0.6-4+b1 amd64
-libc++-dev-wasm32/stable 1:14.0-55.6 amd64
-libc++-dev/stable 1:14.0-55.6 amd64
+libc++-dev-wasm32/stable 1:14.0-55.7~deb12u1 amd64
+libc++-dev/stable 1:14.0-55.7~deb12u1 amd64
 libc++1-13/stable 1:13.0.1-11+b2 amd64
 libc++1-14/stable 1:14.0.6-12 amd64
 libc++1-15/stable 1:15.0.6-4+b1 amd64
-libc++1/stable 1:14.0-55.6 amd64
+libc++1/stable 1:14.0-55.7~deb12u1 amd64
 libc++abi-13-dev/stable 1:13.0.1-11+b2 amd64
 libc++abi-14-dev-wasm32/stable 1:14.0.6-12 all
 libc++abi-14-dev/stable 1:14.0.6-12 amd64
 libc++abi-15-dev/stable 1:15.0.6-4+b1 amd64
-libc++abi-dev/stable 1:14.0-55.6 amd64
+libc++abi-dev/stable 1:14.0-55.7~deb12u1 amd64
 libc++abi1-13/stable 1:13.0.1-11+b2 amd64
 libc++abi1-14/stable 1:14.0.6-12 amd64
 libc++abi1-15/stable 1:15.0.6-4+b1 amd64
-libc++abi1/stable 1:14.0-55.6 amd64
+libc++abi1/stable 1:14.0-55.7~deb12u1 amd64
 libc-ares-dev/stable 1.18.1-3 amd64
 libc-ares2/stable,now 1.18.1-3 amd64 [installed,automatic]
 libc-bin/stable-security,now 2.36-9+deb12u3 amd64 [installed]
@@ -17554,8 +17554,8 @@ libcitygml-dev/stable 2.4.3-1+b1 amd64
 libcitygml2/stable 2.4.3-1+b1 amd64
 libcivetweb-dev/stable 1.15+dfsg-4 amd64
 libcivetweb1/stable 1.15+dfsg-4 amd64
-libcjose-dev/stable-security 0.6.2.1-1+deb12u1 amd64
-libcjose0/stable-security 0.6.2.1-1+deb12u1 amd64
+libcjose-dev/stable,stable-security 0.6.2.1-1+deb12u1 amd64
+libcjose0/stable,stable-security 0.6.2.1-1+deb12u1 amd64
 libcjs-dev/stable 5.6.0-1 amd64
 libcjs0/stable 5.6.0-1 amd64
 libcjson-dev/stable 1.7.15-1 amd64
@@ -17568,8 +17568,8 @@ libckyapplet1/stable 1.1.0-16 amd64
 libclalsadrv-dev/stable 2.0.0-3.1 all
 libclalsadrv2/stable 2.0.0-3.1 amd64
 libclamav-client-perl/stable 0.11-4 all
-libclamav-dev/stable-updates 1.0.3+dfsg-1~deb12u1 amd64
-libclamav11/stable-updates 1.0.3+dfsg-1~deb12u1 amd64
+libclamav-dev/stable,stable-updates 1.0.3+dfsg-1~deb12u1 amd64
+libclamav11/stable,stable-updates 1.0.3+dfsg-1~deb12u1 amd64
 libclanapp-1.0v5/stable 1.0~svn3827-8 amd64
 libclang-13-dev/stable 1:13.0.1-11+b2 amd64
 libclang-14-dev/stable 1:14.0.6-12 amd64
@@ -17577,25 +17577,25 @@ libclang-15-dev/stable 1:15.0.6-4+b1 amd64
 libclang-common-13-dev/stable 1:13.0.1-11+b2 amd64
 libclang-common-14-dev/stable 1:14.0.6-12 all
 libclang-common-15-dev/stable 1:15.0.6-4+b1 amd64
-libclang-cpp-dev/stable 1:14.0-55.6 amd64
+libclang-cpp-dev/stable 1:14.0-55.7~deb12u1 amd64
 libclang-cpp13-dev/stable 1:13.0.1-11+b2 amd64
 libclang-cpp13/stable 1:13.0.1-11+b2 amd64
 libclang-cpp14-dev/stable 1:14.0.6-12 amd64
 libclang-cpp14/stable 1:14.0.6-12 amd64
 libclang-cpp15-dev/stable 1:15.0.6-4+b1 amd64
 libclang-cpp15/stable 1:15.0.6-4+b1 amd64
-libclang-dev/stable 1:14.0-55.6 amd64
+libclang-dev/stable 1:14.0-55.7~deb12u1 amd64
 libclang-perl/stable 0.09-6+b2 amd64
 libclang-rt-14-dev-wasm32/stable 1:14.0.6-12 all
 libclang-rt-14-dev-wasm64/stable 1:14.0.6-12 all
 libclang-rt-14-dev/stable 1:14.0.6-12 amd64
-libclang-rt-dev-wasm32/stable 1:14.0-55.6 amd64
-libclang-rt-dev-wasm64/stable 1:14.0-55.6 amd64
-libclang-rt-dev/stable 1:14.0-55.6 amd64
+libclang-rt-dev-wasm32/stable 1:14.0-55.7~deb12u1 amd64
+libclang-rt-dev-wasm64/stable 1:14.0-55.7~deb12u1 amd64
+libclang-rt-dev/stable 1:14.0-55.7~deb12u1 amd64
 libclang1-13/stable 1:13.0.1-11+b2 amd64
 libclang1-14/stable 1:14.0.6-12 amd64
 libclang1-15/stable 1:15.0.6-4+b1 amd64
-libclang1/stable 1:14.0-55.6 amd64
+libclang1/stable 1:14.0-55.7~deb12u1 amd64
 libclanlib-dev/stable 1.0~svn3827-8 amd64
 libclansdl-1.0v5/stable 1.0~svn3827-8 amd64
 libclass-accessor-chained-perl/stable 0.01.1~debian-5 all
@@ -17895,7 +17895,7 @@ libcolor-rgb-util-perl/stable 0.606-1 all
 libcolor-scheme-perl/stable 1.08-1 all
 libcolor-spectrum-multi-perl/stable 0.02-2 all
 libcolor-spectrum-perl/stable 1.14-2 all
-libcolorcorrect5/stable 4:5.27.5-2 amd64
+libcolorcorrect5/stable 4:5.27.5-2+deb12u1 amd64
 libcolord-dev/stable 1.4.6-2.2 amd64
 libcolord-gtk-dev/stable 0.3.0-3.1 amd64
 libcolord-gtk-doc/stable 0.3.0-3.1 all
@@ -18266,8 +18266,8 @@ libcpuid-dev/stable 0.6.2+repack1-1 amd64
 libcpuid16/stable 0.6.2+repack1-1 amd64
 libcpuinfo-dev/stable 0.0~git20220617.082deff-1 amd64
 libcpuinfo0/stable 0.0~git20220617.082deff-1 amd64
-libcpupower-dev/stable-security 6.1.52-1 amd64
-libcpupower1/stable-security 6.1.52-1 amd64
+libcpupower-dev/stable 6.1.55-1 amd64
+libcpupower1/stable 6.1.55-1 amd64
 libcpuset-dev/stable 1.0-6+b1 amd64
 libcpuset1/stable 1.0-6+b1 amd64
 libcql-parser-perl/stable 1.13-2 all
@@ -18439,12 +18439,12 @@ libcunit1-doc/stable 2.1-3-dfsg-2.6 all
 libcunit1-ncurses-dev/stable 2.1-3-dfsg-2.6 amd64
 libcunit1-ncurses/stable 2.1-3-dfsg-2.6 amd64
 libcunit1/stable 2.1-3-dfsg-2.6 amd64
-libcups2-dev/stable 2.4.2-3+deb12u1 amd64
-libcups2/stable,now 2.4.2-3+deb12u1 amd64 [installed,automatic]
+libcups2-dev/stable 2.4.2-3+deb12u4 amd64
+libcups2/stable,now 2.4.2-3+deb12u4 amd64 [installed,automatic]
 libcupsfilters-dev/stable 1.28.17-3 amd64
 libcupsfilters1/stable,now 1.28.17-3 amd64 [installed,automatic]
-libcupsimage2-dev/stable 2.4.2-3+deb12u1 amd64
-libcupsimage2/stable 2.4.2-3+deb12u1 amd64
+libcupsimage2-dev/stable 2.4.2-3+deb12u4 amd64
+libcupsimage2/stable 2.4.2-3+deb12u4 amd64
 libcupt-common/stable 2.10.4+nmu1 all
 libcupt4-2-downloadmethod-curl/stable 2.10.4+nmu1+b1 amd64
 libcupt4-2-downloadmethod-wget/stable 2.10.4+nmu1+b1 amd64
@@ -18459,13 +18459,13 @@ libcurator-recipes-java/stable 5.4.0-3 all
 libcurator-test-java/stable 5.4.0-3 all
 libcurl-ocaml-dev/stable 0.9.2-3 amd64
 libcurl-ocaml/stable 0.9.2-3 amd64
-libcurl3-gnutls/stable-security,now 7.88.1-10+deb12u1 amd64 [installed,automatic]
-libcurl3-nss/stable-security 7.88.1-10+deb12u1 amd64
-libcurl4-doc/stable-security 7.88.1-10+deb12u1 all
-libcurl4-gnutls-dev/stable-security 7.88.1-10+deb12u1 amd64
-libcurl4-nss-dev/stable-security 7.88.1-10+deb12u1 amd64
-libcurl4-openssl-dev/stable-security 7.88.1-10+deb12u1 amd64
-libcurl4/stable-security,now 7.88.1-10+deb12u1 amd64 [installed,automatic]
+libcurl3-gnutls/stable,now 7.88.1-10+deb12u3 amd64 [installed,automatic]
+libcurl3-nss/stable 7.88.1-10+deb12u3 amd64
+libcurl4-doc/stable 7.88.1-10+deb12u3 all
+libcurl4-gnutls-dev/stable 7.88.1-10+deb12u3 amd64
+libcurl4-nss-dev/stable 7.88.1-10+deb12u3 amd64
+libcurl4-openssl-dev/stable 7.88.1-10+deb12u3 amd64
+libcurl4/stable,now 7.88.1-10+deb12u3 amd64 [installed,automatic]
 libcurlpp-dev/stable 0.8.1-5.1 amd64
 libcurlpp0/stable 0.8.1-5.1 amd64
 libcurry-perl/stable 2.000001-2 all
@@ -18518,7 +18518,7 @@ libcyaml-dev/stable 1.3.1-1 amd64
 libcyaml-doc/stable 1.3.1-1 all
 libcyaml1/stable 1.3.1-1 amd64
 libcycloneddsidl0/stable 0.10.2-2 amd64
-libcyrus-imap-perl/stable 3.6.1-4 amd64
+libcyrus-imap-perl/stable 3.6.1-4+deb12u1 amd64
 libczmq-dev/stable 4.2.1-1 amd64
 libczmq4/stable 4.2.1-1 amd64
 libd3dadapter9-mesa-dev/stable 22.3.6-1+deb12u1 amd64
@@ -18557,8 +18557,8 @@ libdapl2/stable 2.1.10.1.f1e05b7a-3+b1 amd64
 libdapserver7v5/stable 3.20.11-1 amd64
 libdaq-dev/stable 2.0.7-5 amd64
 libdaq2/stable 2.0.7-5 amd64
-libdar-dev/stable 2.7.8-1+b8 amd64
-libdar64-6000/stable 2.7.8-1+b8 amd64
+libdar-dev/stable 2.7.8-2 amd64
+libdar64-6000/stable 2.7.8-2 amd64
 libdart-all-dev/stable 6.12.1+dfsg4-12+b2 amd64
 libdart-collision-bullet-dev/stable 6.12.1+dfsg4-12+b2 amd64
 libdart-collision-bullet6.12/stable 6.12.1+dfsg4-12+b2 amd64
@@ -18852,8 +18852,8 @@ libdbix-simple-perl/stable 1.37-2 all
 libdbix-xml-rdb-perl/stable 0.05-13 all
 libdbix-xmlmessage-perl/stable 0.05-11 all
 libdbm-deep-perl/stable 2.0016-2 all
-libdbus-1-3/stable,now 1.14.8-2~deb12u1 amd64 [installed,automatic]
-libdbus-1-dev/stable 1.14.8-2~deb12u1 amd64
+libdbus-1-3/stable,now 1.14.10-1~deb12u1 amd64 [installed,automatic]
+libdbus-1-dev/stable 1.14.10-1~deb12u1 amd64
 libdbus-c++-1-0v5/stable 0.9.0-11 amd64
 libdbus-c++-bin/stable 0.9.0-11 amd64
 libdbus-c++-dev/stable 0.9.0-11 amd64
@@ -19270,7 +19270,7 @@ libdoxia-core-java/stable 1.12.0-1 all
 libdoxia-java/stable 1.12.0-1 all
 libdoxia-sitetools-java/stable 1.11.1-1 all
 libdoxygen-filter-perl/stable 1.72-3 all
-libdpdk-dev/stable 22.11.2-2~deb12u1 amd64
+libdpdk-dev/stable 22.11.3-1~deb12u1 amd64
 libdpkg-dev/stable 1.21.22 amd64
 libdpkg-parse-perl/stable 0.03-3 all
 libdpkg-perl/stable,now 1.21.22 all [installed,automatic]
@@ -19438,8 +19438,8 @@ libeb16-dev/stable 4.4.3-14 amd64
 libeb16/stable 4.4.3-14 amd64
 libebackend-1.2-11/stable 3.46.4-2 amd64
 libebackend1.2-dev/stable 3.46.4-2 amd64
-libebgenv-dev/stable 0.13-2 amd64
-libebgenv0/stable 0.13-2 amd64
+libebgenv-dev/stable 0.13-2+deb12u1 amd64
+libebgenv0/stable 0.13-2+deb12u1 amd64
 libebml-dev/stable 1.4.4-1 amd64
 libebml5/stable,now 1.4.4-1 amd64 [installed,automatic]
 libebook-1.2-21/stable 3.46.4-2 amd64
@@ -20135,9 +20135,9 @@ libfastjettools-dev/stable 3.4.0+dfsg-1 amd64
 libfastjettools0/stable 3.4.0+dfsg-1 amd64
 libfastjson-dev/stable 1.2304.0-1 amd64
 libfastjson4/stable 1.2304.0-1 amd64
-libfastrtps-dev/stable-security 2.9.1+ds-1+deb12u1 amd64
-libfastrtps-doc/stable-security 2.9.1+ds-1+deb12u1 all
-libfastrtps2.9/stable-security 2.9.1+ds-1+deb12u1 amd64
+libfastrtps-dev/stable,stable-security 2.9.1+ds-1+deb12u1 amd64
+libfastrtps-doc/stable,stable-security 2.9.1+ds-1+deb12u1 all
+libfastrtps2.9/stable,stable-security 2.9.1+ds-1+deb12u1 amd64
 libfasttext-dev/stable 0.9.2+ds-1+b1 amd64
 libfasttext0/stable 0.9.2+ds-1+b1 amd64
 libfastutil-java-doc/stable 8.5.11+dfsg-1 all
@@ -20450,8 +20450,8 @@ libflame-dev/stable 5.2.0-4 amd64
 libflame1/stable 5.2.0-4 amd64
 libflamingo-java-doc/stable 7.3+dfsg3-5.1 all
 libflamingo-java/stable 7.3+dfsg3-5.1 all
-libflann-dev/stable 1.9.2+dfsg-1 amd64
-libflann1.9/stable 1.9.2+dfsg-1 amd64
+libflann-dev/stable 1.9.2+dfsg-1+deb12u1 amd64
+libflann1.9/stable 1.9.2+dfsg-1+deb12u1 amd64
 libflashrom-dev/stable 1.3.0-2.1 amd64
 libflashrom1/stable 1.3.0-2.1 amd64
 libflatbuffers-dev/stable 2.0.8+dfsg1-2 amd64
@@ -20649,8 +20649,8 @@ libfreenect-demos/stable 1:0.5.3-3+b1 amd64
 libfreenect-dev/stable 1:0.5.3-3+b1 amd64
 libfreenect-doc/stable 1:0.5.3-3 all
 libfreenect0.5/stable 1:0.5.3-3+b1 amd64
-libfreeradius-dev/stable 3.2.1+dfsg-4 amd64
-libfreeradius3/stable 3.2.1+dfsg-4 amd64
+libfreeradius-dev/stable 3.2.1+dfsg-4+deb12u1 amd64
+libfreeradius3/stable 3.2.1+dfsg-4+deb12u1 amd64
 libfreerdp-client2-2/stable 2.10.0+dfsg1-1 amd64
 libfreerdp-server2-2/stable 2.10.0+dfsg1-1 amd64
 libfreerdp-shadow-subsystem2-2/stable 2.10.0+dfsg1-1 amd64
@@ -20791,9 +20791,9 @@ libgadap-dev/stable 2.0-15 amd64
 libgadu-dev/stable 1:1.12.2-6 amd64
 libgadu-doc/stable 1:1.12.2-6 all
 libgadu3/stable 1:1.12.2-6 amd64
-libgail-3-0/stable 3.24.37-2 amd64
-libgail-3-dev/stable 3.24.37-2 amd64
-libgail-3-doc/stable 3.24.37-2 all
+libgail-3-0/stable 3.24.38-2~deb12u1 amd64
+libgail-3-dev/stable 3.24.38-2~deb12u1 amd64
+libgail-3-doc/stable 3.24.38-2~deb12u1 all
 libgail-common/stable,now 2.24.33-2 amd64 [installed,automatic]
 libgail-dev/stable 2.24.33-2 amd64
 libgail-doc/stable 2.24.33-2 all
@@ -22269,9 +22269,9 @@ libghc-github-dev/stable 0.27-1+b4 amd64
 libghc-github-doc/stable 0.27-1 all
 libghc-github-prof/stable 0.27-1+b4 amd64
 libghc-gitit-data/stable 0.15.1.0+dfsg-2 all
-libghc-gitit-dev/stable 0.15.1.0+dfsg-2+b4 amd64
+libghc-gitit-dev/stable 0.15.1.0+dfsg-2+b6 amd64
 libghc-gitit-doc/stable 0.15.1.0+dfsg-2 all
-libghc-gitit-prof/stable 0.15.1.0+dfsg-2+b4 amd64
+libghc-gitit-prof/stable 0.15.1.0+dfsg-2+b6 amd64
 libghc-gitrev-dev/stable 1.3.1-5+b2 amd64
 libghc-gitrev-doc/stable 1.3.1-5 all
 libghc-gitrev-prof/stable 1.3.1-5+b2 amd64
@@ -22329,9 +22329,9 @@ libghc-hackage-security-prof/stable 0.6.2.2-1 amd64
 libghc-haddock-library-dev/stable 1.10.0-2+b1 amd64
 libghc-haddock-library-doc/stable 1.10.0-2 all
 libghc-haddock-library-prof/stable 1.10.0-2+b1 amd64
-libghc-hakyll-dev/stable 4.15.1.1-1+b4 amd64
+libghc-hakyll-dev/stable 4.15.1.1-1+b6 amd64
 libghc-hakyll-doc/stable 4.15.1.1-1 all
-libghc-hakyll-prof/stable 4.15.1.1-1+b4 amd64
+libghc-hakyll-prof/stable 4.15.1.1-1+b6 amd64
 libghc-half-dev/stable 0.3.1-1+b3 amd64
 libghc-half-doc/stable 0.3.1-1 all
 libghc-half-prof/stable 0.3.1-1+b3 amd64
@@ -23228,12 +23228,12 @@ libghc-ordered-containers-prof/stable 0.2.2-3+b2 amd64
 libghc-ormolu-dev/stable 0.3.1.0-1+b2 amd64
 libghc-ormolu-doc/stable 0.3.1.0-1 all
 libghc-ormolu-prof/stable 0.3.1.0-1+b2 amd64
-libghc-pandoc-dev/stable 2.17.1.1-1.1 amd64
-libghc-pandoc-doc/stable 2.17.1.1-1.1 all
+libghc-pandoc-dev/stable 2.17.1.1-2~deb12u1 amd64
+libghc-pandoc-doc/stable 2.17.1.1-2~deb12u1 all
 libghc-pandoc-lua-marshal-dev/stable 0.1.7-1+b3 amd64
 libghc-pandoc-lua-marshal-doc/stable 0.1.7-1 all
 libghc-pandoc-lua-marshal-prof/stable 0.1.7-1+b3 amd64
-libghc-pandoc-prof/stable 2.17.1.1-1.1 amd64
+libghc-pandoc-prof/stable 2.17.1.1-2~deb12u1 amd64
 libghc-pandoc-sidenote-dev/stable 0.22.1.0-2+b4 amd64
 libghc-pandoc-sidenote-doc/stable 0.22.1.0-2 all
 libghc-pandoc-sidenote-prof/stable 0.22.1.0-2+b4 amd64
@@ -24545,8 +24545,8 @@ libgivaro-dev/stable 4.2.0-3 amd64
 libgivaro-doc/stable 4.2.0-3 all
 libgivaro9/stable 4.2.0-3 amd64
 libgiza0/stable 1.3.2-1 amd64
-libgjs-dev/stable 1.74.2-1 amd64
-libgjs0g/stable 1.74.2-1 amd64
+libgjs-dev/stable 1.74.2-1+deb12u1 amd64
+libgjs0g/stable 1.74.2-1+deb12u1 amd64
 libgkarrays-dev/stable 2.1.0+dfsg-4 amd64
 libgkarrays1/stable 2.1.0+dfsg-4 amd64
 libgkeyfile-cil-dev/stable 0.1-5.1 all
@@ -25408,11 +25408,11 @@ libgrpc29/stable 1.51.1-3+b1 amd64
 libgrss-dev/stable 0.7.0-2+b11 amd64
 libgrss0/stable 0.7.0-2+b11 amd64
 libgs-collections-java/stable 5.1.0-5 all
-libgs-common/stable,stable-security,now 10.0.0~dfsg-11+deb12u1 all [installed,automatic]
-libgs-dev/stable,stable-security 10.0.0~dfsg-11+deb12u1 amd64
-libgs10-common/stable,stable-security,now 10.0.0~dfsg-11+deb12u1 all [installed,automatic]
-libgs10/stable,stable-security,now 10.0.0~dfsg-11+deb12u1 amd64 [installed,automatic]
-libgs9-common/stable,stable-security 10.0.0~dfsg-11+deb12u1 all
+libgs-common/stable,now 10.0.0~dfsg-11+deb12u2 all [installed,automatic]
+libgs-dev/stable 10.0.0~dfsg-11+deb12u2 amd64
+libgs10-common/stable,now 10.0.0~dfsg-11+deb12u2 all [installed,automatic]
+libgs10/stable,now 10.0.0~dfsg-11+deb12u2 amd64 [installed,automatic]
+libgs9-common/stable 10.0.0~dfsg-11+deb12u2 all
 libgsasl-dev/stable 2.2.0-1 amd64
 libgsasl18/stable 2.2.0-1 amd64
 libgsasl7-dev/stable 2.2.0-1 amd64
@@ -25445,7 +25445,7 @@ libgspell-1-dev/stable 1.12.0-1+b2 amd64
 libgspell-1-doc/stable 1.12.0-1 all
 libgss-dev/stable 1.0.4-1 amd64
 libgss3/stable 1.0.4-1 amd64
-libgssapi-krb5-2/stable,now 1.20.1-2 amd64 [installed]
+libgssapi-krb5-2/stable,now 1.20.1-2+deb12u1 amd64 [installed]
 libgssapi-perl/stable 0.28-4+b1 amd64
 libgssapi3-heimdal/stable 7.8.git20221117.28daf24+dfsg-2 amd64
 libgssdp-1.6-0/stable,now 1.6.2-2 amd64 [installed,automatic]
@@ -25453,7 +25453,7 @@ libgssdp-1.6-dev/stable 1.6.2-2 amd64
 libgssdp-doc/stable 1.6.2-2 all
 libgssglue-dev/stable 0.7-1.1 amd64
 libgssglue1/stable 0.7-1.1 amd64
-libgssrpc4/stable 1.20.1-2 amd64
+libgssrpc4/stable 1.20.1-2+deb12u1 amd64
 libgstreamer-gl1.0-0/stable,stable-security,now 1.22.0-3+deb12u1 amd64 [installed,automatic]
 libgstreamer-ocaml-dev/stable 0.3.1-2 amd64
 libgstreamer-ocaml/stable 0.3.1-2 amd64
@@ -25479,17 +25479,17 @@ libgtg-tools/stable 0.2-2+dfsg-7+b2 amd64
 libgtg0/stable 0.2-2+dfsg-7+b2 amd64
 libgtherm-0.0-0/stable 0.0.3-1+b2 amd64
 libgtherm-dev/stable 0.0.3-1+b2 amd64
-libgtk-3-0/stable,now 3.24.37-2 amd64 [installed,automatic]
-libgtk-3-bin/stable,now 3.24.37-2 amd64 [installed,automatic]
-libgtk-3-common/stable,now 3.24.37-2 all [installed,automatic]
-libgtk-3-dev/stable 3.24.37-2 amd64
-libgtk-3-doc/stable 3.24.37-2 all
-libgtk-4-1/stable,now 4.8.3+ds-2 amd64 [installed,automatic]
-libgtk-4-bin/stable,now 4.8.3+ds-2 amd64 [installed,automatic]
-libgtk-4-common/stable,now 4.8.3+ds-2 all [installed,automatic]
-libgtk-4-dev/stable 4.8.3+ds-2 amd64
-libgtk-4-doc/stable 4.8.3+ds-2 all
-libgtk-4-media-gstreamer/stable 4.8.3+ds-2 amd64
+libgtk-3-0/stable,now 3.24.38-2~deb12u1 amd64 [installed,automatic]
+libgtk-3-bin/stable,now 3.24.38-2~deb12u1 amd64 [installed,automatic]
+libgtk-3-common/stable,now 3.24.38-2~deb12u1 all [installed,automatic]
+libgtk-3-dev/stable 3.24.38-2~deb12u1 amd64
+libgtk-3-doc/stable 3.24.38-2~deb12u1 all
+libgtk-4-1/stable,now 4.8.3+ds-2+deb12u1 amd64 [installed,automatic]
+libgtk-4-bin/stable,now 4.8.3+ds-2+deb12u1 amd64 [installed,automatic]
+libgtk-4-common/stable,now 4.8.3+ds-2+deb12u1 all [installed,automatic]
+libgtk-4-dev/stable 4.8.3+ds-2+deb12u1 amd64
+libgtk-4-doc/stable 4.8.3+ds-2+deb12u1 all
+libgtk-4-media-gstreamer/stable 4.8.3+ds-2+deb12u1 amd64
 libgtk-dotnet3.0-cil-dev/stable 2.99.3-4.1 amd64
 libgtk-dotnet3.0-cil/stable 2.99.3-4.1 amd64
 libgtk-layer-shell-dev/stable 0.8.0-1 amd64
@@ -25898,7 +25898,7 @@ libhmmer2-dev/stable 2.3.2+dfsg-8 amd64
 libhmsbeagle-dev/stable 3.1.2+dfsg-13 amd64
 libhmsbeagle-java/stable 3.1.2+dfsg-13 amd64
 libhmsbeagle1v5/stable 3.1.2+dfsg-13 amd64
-libhnswlib-dev/stable 0.6.2-2 all
+libhnswlib-dev/stable 0.6.2-2+deb12u1 all
 libhocr-dev/stable 0.10.18-3.2+b2 amd64
 libhocr0/stable 0.10.18-3.2+b2 amd64
 libhoel-dev/stable 1.4.27-1 amd64
@@ -26031,8 +26031,8 @@ libhtml-wikiconverter-wakkawiki-perl/stable 0.50-2 all
 libhtml-wikiconverter-wikkawiki-perl/stable 0.50-3 all
 libhtml5parser-java-doc/stable 1.4+r1.3.1-3 all
 libhtml5parser-java/stable 1.4+r1.3.1-3 all
-libhtmlcleaner-java-doc/stable-security 2.26-1+deb12u1 all
-libhtmlcleaner-java/stable-security 2.26-1+deb12u1 all
+libhtmlcleaner-java-doc/stable,stable-security 2.26-1+deb12u1 all
+libhtmlcleaner-java/stable,stable-security 2.26-1+deb12u1 all
 libhtmlcxx-dev/stable 0.87-3 amd64
 libhtmlcxx3v5/stable 0.87-3 amd64
 libhtmlparser-java-doc/stable 1.6.20060610.dfsg0-9 all
@@ -26136,8 +26136,8 @@ libhwloc-dev/stable 2.9.0-1 amd64
 libhwloc-doc/stable 2.9.0-1 all
 libhwloc-plugins/stable 2.9.0-1 amd64
 libhwloc15/stable 2.9.0-1 amd64
-libhwy-dev/stable 1.0.3-3 amd64
-libhwy1/stable,now 1.0.3-3 amd64 [installed,automatic]
+libhwy-dev/stable 1.0.3-3+deb12u1 amd64
+libhwy1/stable,now 1.0.3-3+deb12u1 amd64 [installed,automatic]
 libhx-dev/stable 4.10-1 amd64
 libhx-doc/stable 4.10-1 all
 libhx32/stable 4.10-1 amd64
@@ -26386,8 +26386,8 @@ libimgscalr-java/stable 4.2-2 all
 libimgui-dev/stable 1.86+ds-1+b1 amd64
 libiml-dev/stable 1.0.5-1+b1 amd64
 libiml0/stable 1.0.5-1+b1 amd64
-libimlib2-dev/stable 1.10.0-4+b1 amd64
-libimlib2/stable,now 1.10.0-4+b1 amd64 [installed,automatic]
+libimlib2-dev/stable 1.10.0-4+deb12u1 amd64
+libimlib2/stable,now 1.10.0-4+deb12u1 amd64 [installed,automatic]
 libimobiledevice-dev/stable 1.3.0-6+b3 amd64
 libimobiledevice-doc/stable 1.3.0-6 all
 libimobiledevice-utils/stable 1.3.0-6+b3 amd64
@@ -26562,8 +26562,8 @@ libipc-signal-perl/stable 1.00-10 all
 libipc-system-simple-perl/stable,now 1.30-2 all [installed,automatic]
 libipe-dev/stable 7.2.26+dfsg1-3+b1 amd64
 libipe7.2.26/stable 7.2.26+dfsg1-3+b1 amd64
-libiperf-dev/stable-security 3.12-1+deb12u1 amd64
-libiperf0/stable-security 3.12-1+deb12u1 amd64
+libiperf-dev/stable,stable-security 3.12-1+deb12u1 amd64
+libiperf0/stable,stable-security 3.12-1+deb12u1 amd64
 libipmctl-common/stable 03.00.00.0468-1 all
 libipmctl-dev/stable 03.00.00.0468-1 amd64
 libipmctl5/stable 03.00.00.0468-1 amd64
@@ -26770,13 +26770,13 @@ libjavascript-minifier-perl/stable 1.16-2 all
 libjavascript-minifier-xs-perl/stable 0.15-1+b2 amd64
 libjavascript-packer-perl/stable 2.11+dfsg-1 all
 libjavascript-rpc-perl/stable 0.10-2 all
-libjavascriptcoregtk-4.0-18/stable-security,now 2.40.5-1~deb12u1 amd64 [installed,automatic]
-libjavascriptcoregtk-4.0-bin/stable-security 2.40.5-1~deb12u1 amd64
-libjavascriptcoregtk-4.0-dev/stable-security 2.40.5-1~deb12u1 amd64
-libjavascriptcoregtk-4.1-0/stable-security,now 2.40.5-1~deb12u1 amd64 [installed,automatic]
-libjavascriptcoregtk-4.1-dev/stable-security 2.40.5-1~deb12u1 amd64
-libjavascriptcoregtk-6.0-1/stable-security 2.40.5-1~deb12u1 amd64
-libjavascriptcoregtk-6.0-dev/stable-security 2.40.5-1~deb12u1 amd64
+libjavascriptcoregtk-4.0-18/stable,stable-security,now 2.40.5-1~deb12u1 amd64 [installed,automatic]
+libjavascriptcoregtk-4.0-bin/stable,stable-security 2.40.5-1~deb12u1 amd64
+libjavascriptcoregtk-4.0-dev/stable,stable-security 2.40.5-1~deb12u1 amd64
+libjavascriptcoregtk-4.1-0/stable,stable-security,now 2.40.5-1~deb12u1 amd64 [installed,automatic]
+libjavascriptcoregtk-4.1-dev/stable,stable-security 2.40.5-1~deb12u1 amd64
+libjavascriptcoregtk-6.0-1/stable,stable-security 2.40.5-1~deb12u1 amd64
+libjavascriptcoregtk-6.0-dev/stable,stable-security 2.40.5-1~deb12u1 amd64
 libjavassist-java-doc/stable 1:3.27.0-1 all
 libjavassist-java/stable 1:3.27.0-1 all
 libjavatuples-java/stable 1.2-2 all
@@ -26896,8 +26896,8 @@ libjetbrains-annotations-java/stable 23.0.0-2 all
 libjets3t-java-doc/stable 0.8.1+dfsg-4 all
 libjets3t-java/stable 0.8.1+dfsg-4 all
 libjettison-java/stable 1.5.3-1 all
-libjetty9-extra-java/stable-security 9.4.50-4+deb12u1 all
-libjetty9-java/stable-security 9.4.50-4+deb12u1 all
+libjetty9-extra-java/stable,stable-security 9.4.50-4+deb12u1 all
+libjetty9-java/stable,stable-security 9.4.50-4+deb12u1 all
 libjeuclid-core-java/stable 3.1.9-5 all
 libjeuclid-fop-java/stable 3.1.9-5 all
 libjexcelapi-java-doc/stable 2.6.12-3 all
@@ -27497,12 +27497,12 @@ libjzlib-java/stable 1.1.3-2 all
 libk3b-dev/stable 22.12.3-1 amd64
 libk3b-extracodecs/stable 22.12.3-1 amd64
 libk3b8/stable 22.12.3-1 amd64
-libk5crypto3/stable,now 1.20.1-2 amd64 [installed]
+libk5crypto3/stable,now 1.20.1-2+deb12u1 amd64 [installed]
 libkaccounts-dev/stable 4:22.12.3-1 amd64
 libkaccounts2/stable 4:22.12.3-1 amd64
-libkadm5clnt-mit12/stable 1.20.1-2 amd64
+libkadm5clnt-mit12/stable 1.20.1-2+deb12u1 amd64
 libkadm5clnt7-heimdal/stable 7.8.git20221117.28daf24+dfsg-2 amd64
-libkadm5srv-mit12/stable 1.20.1-2 amd64
+libkadm5srv-mit12/stable 1.20.1-2+deb12u1 amd64
 libkadm5srv8-heimdal/stable 7.8.git20221117.28daf24+dfsg-2 amd64
 libkafs-client-dev/stable 0.5-4 amd64
 libkafs-client0/stable 0.5-4 amd64
@@ -27540,7 +27540,7 @@ libkdb3-dev/stable 3.2.0-6+b1 amd64
 libkdb3-driver-mysql/stable 3.2.0-6+b1 amd64
 libkdb3-driver-postgresql/stable 3.2.0-6+b1 amd64
 libkdb3-driver-sqlite/stable 3.2.0-6+b1 amd64
-libkdb5-10/stable 1.20.1-2 amd64
+libkdb5-10/stable 1.20.1-2+deb12u1 amd64
 libkdc2-heimdal/stable 7.8.git20221117.28daf24+dfsg-2 amd64
 libkdecorations2-5v5/stable 4:5.27.5-2 amd64
 libkdecorations2-dev/stable 4:5.27.5-2 amd64
@@ -27900,10 +27900,10 @@ libkf5pimtextedit-data/stable 22.12.3-1 all
 libkf5pimtextedit-dev/stable 22.12.3-1 amd64
 libkf5pimtextedit-plugins/stable 22.12.3-1 amd64
 libkf5pimtextedit5abi2/stable 22.12.3-1 amd64
-libkf5plasma-dev/stable 5.103.0-1 amd64
-libkf5plasma-doc/stable 5.103.0-1 all
-libkf5plasma5/stable 5.103.0-1 amd64
-libkf5plasmaquick5/stable 5.103.0-1 amd64
+libkf5plasma-dev/stable 5.103.0-1+deb12u1 amd64
+libkf5plasma-doc/stable 5.103.0-1+deb12u1 all
+libkf5plasma5/stable 5.103.0-1+deb12u1 amd64
+libkf5plasmaquick5/stable 5.103.0-1+deb12u1 amd64
 libkf5plotting-dev/stable 5.103.0-1 amd64
 libkf5plotting-doc/stable 5.103.0-1 all
 libkf5plotting5/stable 5.103.0-1 amd64
@@ -28019,8 +28019,8 @@ libkf5xmlrpcclient-data/stable 5.103.0-1 all
 libkf5xmlrpcclient-dev/stable 5.103.0-1 amd64
 libkf5xmlrpcclient-doc/stable 5.103.0-1 all
 libkf5xmlrpcclient5/stable 5.103.0-1 amd64
-libkfontinst5/stable 4:5.27.5-2 amd64
-libkfontinstui5/stable 4:5.27.5-2 amd64
+libkfontinst5/stable 4:5.27.5-2+deb12u1 amd64
+libkfontinstui5/stable 4:5.27.5-2+deb12u1 amd64
 libkgantt-dev/stable 2.8.0-1 amd64
 libkgantt2-l10n/stable 2.8.0-1 all
 libkgantt2/stable 2.8.0-1 amd64
@@ -28131,13 +28131,13 @@ libkpropertycore3-4/stable 3.2.0-2 amd64
 libkpropertywidgets3-4/stable 3.2.0-2 amd64
 libkpublictransport-dev/stable 22.12.3-1 amd64
 libkpublictransport1/stable 22.12.3-1 amd64
-libkrad-dev/stable 1.20.1-2 amd64
-libkrad0/stable 1.20.1-2 amd64
+libkrad-dev/stable 1.20.1-2+deb12u1 amd64
+libkrad0/stable 1.20.1-2+deb12u1 amd64
 libkrb5-26-heimdal/stable 7.8.git20221117.28daf24+dfsg-2 amd64
-libkrb5-3/stable,now 1.20.1-2 amd64 [installed]
-libkrb5-dbg/stable 1.20.1-2 amd64
-libkrb5-dev/stable 1.20.1-2 amd64
-libkrb5support0/stable,now 1.20.1-2 amd64 [installed]
+libkrb5-3/stable,now 1.20.1-2+deb12u1 amd64 [installed]
+libkrb5-dbg/stable 1.20.1-2+deb12u1 amd64
+libkrb5-dev/stable 1.20.1-2+deb12u1 amd64
+libkrb5support0/stable,now 1.20.1-2+deb12u1 amd64 [installed]
 libkreport-data/stable 3.2.0-3 all
 libkreport3-4/stable 3.2.0-3 amd64
 libkreport3-dev/stable 3.2.0-3 amd64
@@ -28157,8 +28157,8 @@ libkseexpr-dev/stable 4.0.4.0-4 amd64
 libkseexpr4/stable 4.0.4.0-4 amd64
 libkseexprui4/stable 4.0.4.0-4 amd64
 libksgrd9/stable 4:5.27.5-2 amd64
-libkshark-dev/stable 2.2.0-2 amd64
-libkshark2/stable 2.2.0-2 amd64
+libkshark-dev/stable 2.2.1-1~deb12u1 amd64
+libkshark2/stable 2.2.1-1~deb12u1 amd64
 libksignalplotter9/stable 4:5.27.5-2 amd64
 libksysguardformatter1/stable 4:5.27.5-2 amd64
 libksysguardsensorfaces1/stable 4:5.27.5-2 amd64
@@ -28183,7 +28183,7 @@ libkwineffects14/stable 4:5.27.5-3 amd64
 libkwinglutils14/stable 4:5.27.5-3 amd64
 libkwnn-dev/stable 1.1.1~a021+cvs20130302-7+b2 amd64
 libkwnn0/stable 1.1.1~a021+cvs20130302-7+b2 amd64
-libkworkspace5-5/stable 4:5.27.5-2 amd64
+libkworkspace5-5/stable 4:5.27.5-2+deb12u1 amd64
 libkxl0-dev/stable 1.1.7-17 amd64
 libkxl0/stable 1.1.7-17 amd64
 libkxml2-java-doc/stable 2.3.0+ds1-2.1 all
@@ -28306,8 +28306,8 @@ libldap-dev/stable 2.5.13+dfsg-5 amd64
 libldap-java/stable 5.3.0+dfsg1-1 all
 libldap-ocaml-dev/stable 2.4.2-1+b5 amd64
 libldap2-dev/stable 2.5.13+dfsg-5 all
-libldb-dev/stable-security 2:2.6.2+samba4.17.10+dfsg-0+deb12u1 amd64
-libldb2/stable-security,now 2:2.6.2+samba4.17.10+dfsg-0+deb12u1 amd64 [installed,automatic]
+libldb-dev/stable 2:2.6.2+samba4.17.11+dfsg-0+deb12u1 amd64
+libldb2/stable,now 2:2.6.2+samba4.17.11+dfsg-0+deb12u1 amd64 [installed,automatic]
 libldl2/stable 1:5.12.0+dfsg-2 amd64
 libldm-1.0-0/stable 0.2.5-1 amd64
 libldm-common-dev/stable 0.1.2-1 amd64
@@ -28323,11 +28323,11 @@ liblemon-dev/stable 1.3.1+dfsg-6 amd64
 liblemon-doc/stable 1.3.1+dfsg-6 all
 liblemon-utils/stable 1.3.1+dfsg-6 amd64
 liblemon1.3.1/stable 1.3.1+dfsg-6 amd64
-liblemonldap-ng-common-perl/stable 2.16.1+ds-2 all
-liblemonldap-ng-handler-perl/stable 2.16.1+ds-2 all
-liblemonldap-ng-manager-perl/stable 2.16.1+ds-2 all
-liblemonldap-ng-portal-perl/stable 2.16.1+ds-2 all
-liblemonldap-ng-ssoaas-apache-client-perl/stable 2.16.1+ds-2 all
+liblemonldap-ng-common-perl/stable 2.16.1+ds-deb12u2 all
+liblemonldap-ng-handler-perl/stable 2.16.1+ds-deb12u2 all
+liblemonldap-ng-manager-perl/stable 2.16.1+ds-deb12u2 all
+liblemonldap-ng-portal-perl/stable 2.16.1+ds-deb12u2 all
+liblemonldap-ng-ssoaas-apache-client-perl/stable 2.16.1+ds-deb12u2 all
 liblensfun-bin/stable 0.3.3-1 amd64
 liblensfun-data-v1/stable 0.3.3-1 all
 liblensfun-dev/stable 0.3.3-1 amd64
@@ -28480,19 +28480,19 @@ liblld-14-dev/stable 1:14.0.6-12 amd64
 liblld-14/stable 1:14.0.6-12 amd64
 liblld-15-dev/stable 1:15.0.6-4+b1 amd64
 liblld-15/stable 1:15.0.6-4+b1 amd64
-liblld-dev/stable 1:14.0-55.6 amd64
+liblld-dev/stable 1:14.0-55.7~deb12u1 amd64
 liblldb-13-dev/stable 1:13.0.1-11+b2 amd64
 liblldb-13/stable 1:13.0.1-11+b2 amd64
 liblldb-14-dev/stable 1:14.0.6-12 amd64
 liblldb-14/stable 1:14.0.6-12 amd64
 liblldb-15-dev/stable 1:15.0.6-4+b1 amd64
 liblldb-15/stable 1:15.0.6-4+b1 amd64
-liblldb-dev/stable 1:14.0-55.6 amd64
-liblldpctl-dev/stable-security 1.0.16-1+deb12u1 amd64
+liblldb-dev/stable 1:14.0-55.7~deb12u1 amd64
+liblldpctl-dev/stable,stable-security 1.0.16-1+deb12u1 amd64
 libllvm-13-ocaml-dev/stable 1:13.0.1-11+b2 amd64
 libllvm-14-ocaml-dev/stable 1:14.0.6-12 amd64
 libllvm-15-ocaml-dev/stable 1:15.0.6-4+b1 amd64
-libllvm-ocaml-dev/stable 1:14.0-55.6 amd64
+libllvm-ocaml-dev/stable 1:14.0-55.7~deb12u1 amd64
 libllvm13/stable 1:13.0.1-11+b2 amd64
 libllvm14/stable 1:14.0.6-12 amd64
 libllvm15/stable,now 1:15.0.6-4+b1 amd64 [installed,automatic]
@@ -28806,8 +28806,8 @@ liblwt-ocaml-dev/stable 5.6.1-1+b1 amd64
 liblwt-ocaml/stable 5.6.1-1+b1 amd64
 liblwt-ssl-ocaml-dev/stable 1:1.1.3-2+b14 amd64
 liblwt-ssl-ocaml/stable 1:1.1.3-2+b14 amd64
-liblxc-common/stable 1:5.0.2-1 amd64
-liblxc1/stable 1:5.0.2-1 amd64
+liblxc-common/stable 1:5.0.2-1+deb12u1 amd64
+liblxc1/stable 1:5.0.2-1+deb12u1 amd64
 liblxi-dev/stable 1.18-1 amd64
 liblxi1/stable 1.18-1 amd64
 liblxqt-backlight-helper/stable 1.2.0-8 amd64
@@ -28973,14 +28973,14 @@ libmarc-spec-perl/stable 2.0.3-2 all
 libmarc-transform-perl/stable 0.003009-1 all
 libmarc-xml-perl/stable 1.0.5-2 all
 libmarc4j-java/stable 2.9.2-1 all
-libmarco-dev/stable 1.26.1-3+deb12u1 amd64
-libmarco-private2/stable 1.26.1-3+deb12u1 amd64
-libmariadb-dev-compat/stable 1:10.11.3-1 amd64
-libmariadb-dev/stable 1:10.11.3-1 amd64
+libmarco-dev/stable 1.26.1-3+deb12u2 amd64
+libmarco-private2/stable 1.26.1-3+deb12u2 amd64
+libmariadb-dev-compat/stable 1:10.11.4-1~deb12u1 amd64
+libmariadb-dev/stable 1:10.11.4-1~deb12u1 amd64
 libmariadb-java/stable 2.7.6-1 all
-libmariadb3/stable 1:10.11.3-1 amd64
-libmariadbd-dev/stable 1:10.11.3-1 amd64
-libmariadbd19/stable 1:10.11.3-1 amd64
+libmariadb3/stable 1:10.11.4-1~deb12u1 amd64
+libmariadbd-dev/stable 1:10.11.4-1~deb12u1 amd64
+libmariadbd19/stable 1:10.11.4-1~deb12u1 amd64
 libmarisa-dev/stable 0.2.6-13+b1 amd64
 libmarisa-perl/stable 0.2.6-13+b1 amd64
 libmarisa0/stable 0.2.6-13+b1 amd64
@@ -29028,10 +29028,10 @@ libmatedict6/stable 1.26.0-1 amd64
 libmatekbd-common/stable 1.26.0-1+deb12u1 all
 libmatekbd-dev/stable 1.26.0-1+deb12u1 amd64
 libmatekbd4/stable 1.26.0-1+deb12u1 amd64
-libmatemixer-common/stable 1.26.0-2 all
-libmatemixer-dev/stable 1.26.0-2 amd64
-libmatemixer-doc/stable 1.26.0-2 all
-libmatemixer0/stable 1.26.0-2 amd64
+libmatemixer-common/stable 1.26.0-2+deb12u1 all
+libmatemixer-dev/stable 1.26.0-2+deb12u1 amd64
+libmatemixer-doc/stable 1.26.0-2+deb12u1 all
+libmatemixer0/stable 1.26.0-2+deb12u1 amd64
 libmateweather-common/stable 1.26.0-1.1 all
 libmateweather-dev/stable 1.26.0-1.1 amd64
 libmateweather1/stable 1.26.0-1.1 amd64
@@ -29340,8 +29340,8 @@ libmfx-gen-dev/stable 22.6.4-1 amd64
 libmfx-gen1.2/stable 22.6.4-1 amd64
 libmfx-tools/stable 22.5.4-1 amd64
 libmfx1/stable,now 22.5.4-1 amd64 [installed,automatic]
-libmgba-dev/stable 0.10.1+dfsg-1 amd64
-libmgba0.10/stable 0.10.1+dfsg-1 amd64
+libmgba-dev/stable 0.10.1+dfsg-1+deb12u1 amd64
+libmgba0.10/stable 0.10.1+dfsg-1+deb12u1 amd64
 libmgl-data/stable 8.0.1-4 all
 libmgl-dev/stable 8.0.1-4+b4 amd64
 libmgl-fltk8/stable 8.0.1-4+b4 amd64
@@ -29527,8 +29527,8 @@ libmodpbase64-dev/stable 3.10.3+git20180306-1.1 amd64
 libmodplug-dev/stable 1:0.8.9.0-3 amd64
 libmodplug1/stable,now 1:0.8.9.0-3 amd64 [installed,automatic]
 libmods-record-perl/stable 0.13-2 all
-libmodsecurity-dev/stable 3.0.9-1 amd64
-libmodsecurity3/stable 3.0.9-1 amd64
+libmodsecurity-dev/stable 3.0.9-1+deb12u1 amd64
+libmodsecurity3/stable 3.0.9-1+deb12u1 amd64
 libmodulator-java/stable 1.0-3 all
 libmodule-build-cleaninstall-perl/stable 0.5-4 all
 libmodule-build-parse-yapp-perl/stable 0.1.2-4 all
@@ -29955,8 +29955,8 @@ libmove-base-msgs-dev/stable 1.14.1-2 amd64
 libmovit-dev/stable 1.6.3-5 amd64
 libmovit8/stable 1.6.3-5 amd64
 libmozilla-ldap-perl/stable 1.5.3-3+b5 amd64
-libmozjs-102-0/stable 102.11.0-1 amd64
-libmozjs-102-dev/stable 102.11.0-1 amd64
+libmozjs-102-0/stable 102.15.1-1~deb12u1 amd64
+libmozjs-102-dev/stable 102.15.1-1~deb12u1 amd64
 libmozjs-78-0/stable 78.15.0-7 amd64
 libmozjs-78-dev/stable 78.15.0-7 amd64
 libmp3-info-perl/stable 1.26-1 all
@@ -30804,8 +30804,8 @@ libnfs-utils/stable 4.0.0-1 amd64
 libnfs13/stable,now 4.0.0-1 amd64 [installed,automatic]
 libnfsidmap-dev/stable 1:2.6.2-4 amd64
 libnfsidmap1/stable 1:2.6.2-4 amd64
-libnftables-dev/stable 1.0.6-2+deb12u1 amd64
-libnftables1/stable,now 1.0.6-2+deb12u1 amd64 [installed]
+libnftables-dev/stable 1.0.6-2+deb12u2 amd64
+libnftables1/stable,now 1.0.6-2+deb12u2 amd64 [installed]
 libnftnl-dev-doc/stable 1.2.4-2 all
 libnftnl-dev/stable 1.2.4-2 amd64
 libnftnl11/stable,now 1.2.4-2 amd64 [installed]
@@ -30939,7 +30939,7 @@ libnorm1/stable,now 1.5.9+dfsg-2 amd64 [installed,automatic]
 libnormaliz-dev-common/stable 3.9.4+ds-2 all
 libnormaliz-dev/stable 3.9.4+ds-2 amd64
 libnormaliz3/stable 3.9.4+ds-2 amd64
-libnotificationmanager1/stable 4:5.27.5-2 amd64
+libnotificationmanager1/stable 4:5.27.5-2+deb12u1 amd64
 libnotify-bin/stable,now 0.8.1-1 amd64 [installed,automatic]
 libnotify-dev/stable 0.8.1-1 amd64
 libnotify-doc/stable 0.8.1-1 all
@@ -30973,18 +30973,18 @@ libnss-gw-name/stable 0.3-5 amd64
 libnss-ldapd/stable 0.9.12-4 amd64
 libnss-libvirt/stable 9.0.0-4 amd64
 libnss-mdns/stable,now 0.15.1-3 amd64 [installed,automatic]
-libnss-myhostname/stable 252.12-1~deb12u1 amd64
-libnss-mymachines/stable,now 252.12-1~deb12u1 amd64 [installed,automatic]
+libnss-myhostname/stable 252.17-1~deb12u1 amd64
+libnss-mymachines/stable,now 252.17-1~deb12u1 amd64 [installed,automatic]
 libnss-nis/stable 3.1-4 amd64
 libnss-nisplus/stable 1.3-4 amd64
 libnss-pgsql2/stable 1.4.0debian-8+b2 amd64
-libnss-resolve/stable 252.12-1~deb12u1 amd64
+libnss-resolve/stable 252.17-1~deb12u1 amd64
 libnss-sss/stable 2.8.2-4 amd64
 libnss-sudo/stable 1.9.13p3-1+deb12u1 all
-libnss-systemd/stable,now 252.12-1~deb12u1 amd64 [installed]
+libnss-systemd/stable,now 252.17-1~deb12u1 amd64 [installed]
 libnss-tls/stable 1.1-1.1 amd64
 libnss-unknown/stable 0.0.2-3 amd64
-libnss-winbind/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
+libnss-winbind/stable 2:4.17.11+dfsg-0+deb12u1 amd64
 libnss-wrapper/stable 1.1.12-1 amd64
 libnss3-dev/stable 2:3.87.1-1 amd64
 libnss3-tools/stable 2:3.87.1-1 amd64
@@ -31045,8 +31045,8 @@ libnvme1/stable 1.3-1 amd64
 libnvtt-bin/stable 2.0.8-1+dfsg-8.2+b3 amd64
 libnvtt-dev/stable 2.0.8-1+dfsg-8.2+b3 amd64
 libnvtt2/stable 2.0.8-1+dfsg-8.2+b3 amd64
-libnx-x11-6/stable 2:3.5.99.26-5+b1 amd64
-libnx-x11-dev/stable 2:3.5.99.26-5+b1 amd64
+libnx-x11-6/stable 2:3.5.99.26-5+deb12u1 amd64
+libnx-x11-dev/stable 2:3.5.99.26-5+deb12u1 amd64
 libnxml0-dev/stable 0.18.4-1 amd64
 libnxml0/stable 0.18.4-1 amd64
 libnxt/stable 0.4.2-1+b1 amd64
@@ -31338,12 +31338,12 @@ libomp-14-dev/stable 1:14.0.6-12 amd64
 libomp-14-doc/stable 1:14.0.6-12 amd64
 libomp-15-dev/stable 1:15.0.6-4+b1 amd64
 libomp-15-doc/stable 1:15.0.6-4+b1 amd64
-libomp-dev/stable 1:14.0-55.6 amd64
+libomp-dev/stable 1:14.0-55.7~deb12u1 amd64
 libomp-jonathonl-dev/stable 1.0.0-1 amd64
 libomp5-13/stable 1:13.0.1-11+b2 amd64
 libomp5-14/stable 1:14.0.6-12 amd64
 libomp5-15/stable 1:15.0.6-4+b1 amd64
-libomp5/stable 1:14.0-55.6 amd64
+libomp5/stable 1:14.0-55.7~deb12u1 amd64
 libompl-dev/stable 1.5.2+ds1-1 amd64
 libompl16/stable 1.5.2+ds1-1 amd64
 libomxil-bellagio-bin/stable 0.9.3-8 amd64
@@ -31597,9 +31597,9 @@ libopenrefine-arithcode-java/stable 1.2-2 all
 libopenrefine-butterfly-java/stable 1.2.4-1 all
 libopenrefine-opencsv-java/stable 2.4-2 all
 libopenrefine-vicino-java/stable 1.2-3 all
-libopenscap-dev/stable 1.3.7+dfsg-1+b1 amd64
-libopenscap-perl/stable 1.3.7+dfsg-1+b1 amd64
-libopenscap25/stable 1.3.7+dfsg-1+b1 amd64
+libopenscap-dev/stable 1.3.7+dfsg-1+deb12u1 amd64
+libopenscap-perl/stable 1.3.7+dfsg-1+deb12u1 amd64
+libopenscap25/stable 1.3.7+dfsg-1+deb12u1 amd64
 libopenscenegraph-dev/stable 3.6.5+dfsg1-8+b2 amd64
 libopenscenegraph161/stable 3.6.5+dfsg1-8+b2 amd64
 libopenshot-audio-dev/stable 0.2.2+dfsg1-2 amd64
@@ -31709,8 +31709,8 @@ liborocos-bfl-examples/stable 0.8.0-6 all
 liborocos-bfl0.8/stable 0.8.0-6+b1 amd64
 liborocos-kdl-dev/stable 1.5.1-2+b4 amd64
 liborocos-kdl1.5/stable 1.5.1-2+b4 amd64
-liborthancframework-dev/stable-security 1.10.1+dfsg-2+deb12u1 amd64
-liborthancframework1/stable-security 1.10.1+dfsg-2+deb12u1 amd64
+liborthancframework-dev/stable,stable-security 1.10.1+dfsg-2+deb12u1 amd64
+liborthancframework1/stable,stable-security 1.10.1+dfsg-2+deb12u1 amd64
 libortp-dev/stable 1:5.1.64-2 amd64
 libortp-doc/stable 1:5.1.64-2 all
 libortp16/stable 1:5.1.64-2 amd64
@@ -31985,10 +31985,10 @@ libpam-barada/stable 0.5-3.2+b1 amd64
 libpam-biometric/stable 1.2.2.1-1 amd64
 libpam-cap/stable 1:2.66-4 amd64
 libpam-ccreds/stable 10-8 amd64
-libpam-cgfs/stable 1:5.0.2-1 amd64
+libpam-cgfs/stable 1:5.0.2-1+deb12u1 amd64
 libpam-cgroup/stable 2.0.2-2 amd64
 libpam-chroot/stable 0.9-5.1 amd64
-libpam-doc/stable 1.5.2-6 all
+libpam-doc/stable 1.5.2-6+deb12u1 all
 libpam-duo/stable 1.11.3-1+b1 amd64
 libpam-elogind/stable 246.10-1debian1 amd64
 libpam-encfs/stable 0.1.4.4-15 amd64
@@ -32007,9 +32007,9 @@ libpam-kwallet-common/stable 5.27.5-2 all
 libpam-kwallet5/stable 5.27.5-2 amd64
 libpam-ldapd/stable 0.9.12-4 amd64
 libpam-malcontent/stable 0.11.0-4 amd64
-libpam-mklocaluser/stable 0.18 all
-libpam-modules-bin/stable,now 1.5.2-6 amd64 [installed]
-libpam-modules/stable,now 1.5.2-6 amd64 [installed]
+libpam-mklocaluser/stable 0.18+deb12u1 all
+libpam-modules-bin/stable,now 1.5.2-6+deb12u1 amd64 [installed]
+libpam-modules/stable,now 1.5.2-6+deb12u1 amd64 [installed]
 libpam-mount-bin/stable 2.19-1 amd64
 libpam-mount/stable 2.19-1 amd64
 libpam-mysql/stable 0.8.2-2 amd64
@@ -32027,7 +32027,7 @@ libpam-pwquality/stable 1.4.5-1+b1 amd64
 libpam-python-doc/stable 1.1.0~git20220701.1d4e111-0.3 all
 libpam-python/stable 1.1.0~git20220701.1d4e111-0.3+b1 amd64
 libpam-radius-auth/stable 2.0.0-1 amd64
-libpam-runtime/stable,now 1.5.2-6 all [installed]
+libpam-runtime/stable,now 1.5.2-6+deb12u1 all [installed]
 libpam-script/stable 1.1.9-5+b1 amd64
 libpam-shield/stable 0.9.6-1.3+b2 amd64
 libpam-shishi/stable 1.0.3-1+b1 amd64
@@ -32036,17 +32036,17 @@ libpam-slurm/stable 22.05.8-4 amd64
 libpam-snapper/stable 0.10.4-1 amd64
 libpam-ssh-agent-auth/stable 0.10.3-4 amd64
 libpam-sss/stable 2.8.2-4 amd64
-libpam-systemd/stable,now 252.12-1~deb12u1 amd64 [installed]
+libpam-systemd/stable,now 252.17-1~deb12u1 amd64 [installed]
 libpam-tmpdir/stable 0.09+b2 amd64
 libpam-u2f/stable 1.1.0-1.1+b1 amd64
 libpam-ufpidentity/stable 1.0-1+b1 amd64
-libpam-winbind/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
+libpam-winbind/stable 2:4.17.11+dfsg-0+deb12u1 amd64
 libpam-wrapper/stable 1.1.4-1+b2 amd64
 libpam-x2go-dev/stable 0.0.2.0-3 amd64
 libpam-x2go/stable 0.0.2.0-3 amd64
 libpam-yubico/stable 2.26-1.1+b1 amd64
-libpam0g-dev/stable,now 1.5.2-6 amd64 [installed]
-libpam0g/stable,now 1.5.2-6 amd64 [installed]
+libpam0g-dev/stable,now 1.5.2-6+deb12u1 amd64 [installed]
+libpam0g/stable,now 1.5.2-6+deb12u1 amd64 [installed]
 libpamtest0-dev/stable 1.1.4-1+b2 amd64
 libpamtest0/stable 1.1.4-1+b2 amd64
 libpandoc-elements-perl/stable 0.38-6 all
@@ -32549,7 +32549,7 @@ libplank-common/stable 0.11.89-4 all
 libplank-dev/stable 0.11.89-4+b1 amd64
 libplank-doc/stable 0.11.89-4 all
 libplank1/stable 0.11.89-4+b1 amd64
-libplasma-geolocation-interface5/stable 4:5.27.5-2 amd64
+libplasma-geolocation-interface5/stable 4:5.27.5-2+deb12u1 amd64
 libplayerctl-dev/stable 2.4.1-2 amd64
 libplayerctl-doc/stable 2.4.1-2 all
 libplayerctl2/stable,now 2.4.1-2 amd64 [installed,automatic]
@@ -33328,9 +33328,9 @@ libqt5gui5/stable,now 5.15.8+dfsg-11 amd64 [installed,automatic]
 libqt5help5/stable 5.15.8-2 amd64
 libqt5hunspellinputmethod5/stable 5.15.8+dfsg-2 amd64
 libqt5keychain1/stable 0.13.2-5 amd64
-libqt5location5-plugin-mapboxgl/stable 5.15.8+dfsg-3 amd64
-libqt5location5-plugins/stable 5.15.8+dfsg-3 amd64
-libqt5location5/stable 5.15.8+dfsg-3 amd64
+libqt5location5-plugin-mapboxgl/stable 5.15.8+dfsg-3+deb12u1 amd64
+libqt5location5-plugins/stable 5.15.8+dfsg-3+deb12u1 amd64
+libqt5location5/stable 5.15.8+dfsg-3+deb12u1 amd64
 libqt5multimedia5-plugins/stable 5.15.8-2 amd64
 libqt5multimedia5/stable 5.15.8-2 amd64
 libqt5multimediagsttools5/stable 5.15.8-2 amd64
@@ -33347,9 +33347,9 @@ libqt5pas-dev/stable 2.6+2.2.0+dfsg1-3 amd64
 libqt5pas1/stable 2.6+2.2.0+dfsg1-3 amd64
 libqt5pdf5/stable 5.15.13+dfsg-1~deb12u1 amd64
 libqt5pdfwidgets5/stable 5.15.13+dfsg-1~deb12u1 amd64
-libqt5positioning5-plugins/stable 5.15.8+dfsg-3 amd64
-libqt5positioning5/stable 5.15.8+dfsg-3 amd64
-libqt5positioningquick5/stable 5.15.8+dfsg-3 amd64
+libqt5positioning5-plugins/stable 5.15.8+dfsg-3+deb12u1 amd64
+libqt5positioning5/stable 5.15.8+dfsg-3+deb12u1 amd64
+libqt5positioningquick5/stable 5.15.8+dfsg-3+deb12u1 amd64
 libqt5printsupport5/stable 5.15.8+dfsg-11 amd64
 libqt5publishsubscribe5/stable 5.0~git20190103.e3332ee+dfsg1-5+b1 amd64
 libqt5qml5/stable,now 5.15.8+dfsg-3 amd64 [installed,automatic]
@@ -34102,7 +34102,7 @@ libretro-desmume/stable 0.9.11+git20160819+dfsg1-2 amd64
 libretro-gambatte/stable 0.5.0+git20160522+dfsg1-2.1 amd64
 libretro-gtk-1-0/stable 1.0.2-2.1 amd64
 libretro-gtk-1-dev/stable 1.0.2-2.1 amd64
-libretro-mgba/stable 0.10.1+dfsg-1 amd64
+libretro-mgba/stable 0.10.1+dfsg-1+deb12u1 amd64
 libretro-nestopia/stable 1.52.0+20230102.gitcb1e24e-1 amd64
 libreturn-multilevel-perl/stable 0.08-1 all
 libreturn-type-perl/stable 0.007-1 all
@@ -34281,12 +34281,12 @@ librss-ocaml/stable 2.2.2-1+b4 amd64
 librsskit-dev/stable 0.4-1+b5 amd64
 librsskit0d-dbg/stable 0.4-1+b5 amd64
 librsskit0d/stable 0.4-1+b5 amd64
-librsvg2-2/stable-security,now 2.54.7+dfsg-1~deb12u1 amd64 [installed,automatic]
-librsvg2-bin/stable-security 2.54.7+dfsg-1~deb12u1 amd64
-librsvg2-common/stable-security,now 2.54.7+dfsg-1~deb12u1 amd64 [installed,automatic]
-librsvg2-dev/stable-security 2.54.7+dfsg-1~deb12u1 amd64
-librsvg2-doc/stable-security 2.54.7+dfsg-1~deb12u1 all
-librsvg2-tests/stable-security 2.54.7+dfsg-1~deb12u1 amd64
+librsvg2-2/stable,stable-security,now 2.54.7+dfsg-1~deb12u1 amd64 [installed,automatic]
+librsvg2-bin/stable,stable-security 2.54.7+dfsg-1~deb12u1 amd64
+librsvg2-common/stable,stable-security,now 2.54.7+dfsg-1~deb12u1 amd64 [installed,automatic]
+librsvg2-dev/stable,stable-security 2.54.7+dfsg-1~deb12u1 amd64
+librsvg2-doc/stable,stable-security 2.54.7+dfsg-1~deb12u1 all
+librsvg2-tests/stable,stable-security 2.54.7+dfsg-1~deb12u1 amd64
 librsync-dev/stable 2.3.2-1+b1 amd64
 librsync2/stable 2.3.2-1+b1 amd64
 librsyntaxtextarea-java/stable 2.5.8-2 all
@@ -34295,198 +34295,198 @@ librt-extension-commandbymail-perl/stable 3.00-1.1 all
 librtaudio-dev/stable 5.2.0~ds1-2 amd64
 librtaudio-doc/stable 5.2.0~ds1-2 all
 librtaudio6/stable 5.2.0~ds1-2 amd64
-librte-acl23/stable 22.11.2-2~deb12u1 amd64
-librte-baseband-acc23/stable 22.11.2-2~deb12u1 amd64
-librte-baseband-fpga-5gnr-fec23/stable 22.11.2-2~deb12u1 amd64
-librte-baseband-fpga-lte-fec23/stable 22.11.2-2~deb12u1 amd64
-librte-baseband-la12xx23/stable 22.11.2-2~deb12u1 amd64
-librte-baseband-null23/stable 22.11.2-2~deb12u1 amd64
-librte-baseband-turbo-sw23/stable 22.11.2-2~deb12u1 amd64
-librte-bbdev23/stable 22.11.2-2~deb12u1 amd64
-librte-bitratestats23/stable 22.11.2-2~deb12u1 amd64
-librte-bpf23/stable 22.11.2-2~deb12u1 amd64
-librte-bus-auxiliary23/stable 22.11.2-2~deb12u1 amd64
-librte-bus-dpaa23/stable 22.11.2-2~deb12u1 amd64
-librte-bus-fslmc23/stable 22.11.2-2~deb12u1 amd64
-librte-bus-ifpga23/stable 22.11.2-2~deb12u1 amd64
-librte-bus-pci23/stable 22.11.2-2~deb12u1 amd64
-librte-bus-vdev23/stable 22.11.2-2~deb12u1 amd64
-librte-bus-vmbus23/stable 22.11.2-2~deb12u1 amd64
-librte-cfgfile23/stable 22.11.2-2~deb12u1 amd64
-librte-cmdline23/stable 22.11.2-2~deb12u1 amd64
-librte-common-cnxk23/stable 22.11.2-2~deb12u1 amd64
-librte-common-cpt23/stable 22.11.2-2~deb12u1 amd64
-librte-common-dpaax23/stable 22.11.2-2~deb12u1 amd64
-librte-common-iavf23/stable 22.11.2-2~deb12u1 amd64
-librte-common-idpf23/stable 22.11.2-2~deb12u1 amd64
-librte-common-mlx5-23/stable 22.11.2-2~deb12u1 amd64
-librte-common-octeontx23/stable 22.11.2-2~deb12u1 amd64
-librte-common-qat23/stable 22.11.2-2~deb12u1 amd64
-librte-common-sfc-efx23/stable 22.11.2-2~deb12u1 amd64
-librte-compress-isal23/stable 22.11.2-2~deb12u1 amd64
-librte-compress-mlx5-23/stable 22.11.2-2~deb12u1 amd64
-librte-compress-octeontx23/stable 22.11.2-2~deb12u1 amd64
-librte-compress-zlib23/stable 22.11.2-2~deb12u1 amd64
-librte-compressdev23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-bcmfs23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-caam-jr23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-ccp23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-cnxk23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-dpaa-sec23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-dpaa2-sec23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-ipsec-mb23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-mlx5-23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-nitrox23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-null23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-octeontx23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-openssl23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-scheduler23/stable 22.11.2-2~deb12u1 amd64
-librte-crypto-virtio23/stable 22.11.2-2~deb12u1 amd64
-librte-cryptodev23/stable 22.11.2-2~deb12u1 amd64
-librte-distributor23/stable 22.11.2-2~deb12u1 amd64
-librte-dma-cnxk23/stable 22.11.2-2~deb12u1 amd64
-librte-dma-dpaa2-23/stable 22.11.2-2~deb12u1 amd64
-librte-dma-dpaa23/stable 22.11.2-2~deb12u1 amd64
-librte-dma-hisilicon23/stable 22.11.2-2~deb12u1 amd64
-librte-dma-idxd23/stable 22.11.2-2~deb12u1 amd64
-librte-dma-ioat23/stable 22.11.2-2~deb12u1 amd64
-librte-dma-skeleton23/stable 22.11.2-2~deb12u1 amd64
-librte-dmadev23/stable 22.11.2-2~deb12u1 amd64
-librte-eal23/stable 22.11.2-2~deb12u1 amd64
-librte-efd23/stable 22.11.2-2~deb12u1 amd64
-librte-ethdev23/stable 22.11.2-2~deb12u1 amd64
-librte-event-cnxk23/stable 22.11.2-2~deb12u1 amd64
-librte-event-dlb2-23/stable 22.11.2-2~deb12u1 amd64
-librte-event-dpaa2-23/stable 22.11.2-2~deb12u1 amd64
-librte-event-dpaa23/stable 22.11.2-2~deb12u1 amd64
-librte-event-dsw23/stable 22.11.2-2~deb12u1 amd64
-librte-event-octeontx23/stable 22.11.2-2~deb12u1 amd64
-librte-event-opdl23/stable 22.11.2-2~deb12u1 amd64
-librte-event-skeleton23/stable 22.11.2-2~deb12u1 amd64
-librte-event-sw23/stable 22.11.2-2~deb12u1 amd64
-librte-eventdev23/stable 22.11.2-2~deb12u1 amd64
-librte-fib23/stable 22.11.2-2~deb12u1 amd64
-librte-gpudev23/stable 22.11.2-2~deb12u1 amd64
-librte-graph23/stable 22.11.2-2~deb12u1 amd64
-librte-gro23/stable 22.11.2-2~deb12u1 amd64
-librte-gso23/stable 22.11.2-2~deb12u1 amd64
-librte-hash23/stable 22.11.2-2~deb12u1 amd64
-librte-ip-frag23/stable 22.11.2-2~deb12u1 amd64
-librte-ipsec23/stable 22.11.2-2~deb12u1 amd64
-librte-jobstats23/stable 22.11.2-2~deb12u1 amd64
-librte-kvargs23/stable 22.11.2-2~deb12u1 amd64
-librte-latencystats23/stable 22.11.2-2~deb12u1 amd64
-librte-lpm23/stable 22.11.2-2~deb12u1 amd64
-librte-mbuf23/stable 22.11.2-2~deb12u1 amd64
-librte-member23/stable 22.11.2-2~deb12u1 amd64
-librte-mempool-bucket23/stable 22.11.2-2~deb12u1 amd64
-librte-mempool-cnxk23/stable 22.11.2-2~deb12u1 amd64
-librte-mempool-dpaa2-23/stable 22.11.2-2~deb12u1 amd64
-librte-mempool-dpaa23/stable 22.11.2-2~deb12u1 amd64
-librte-mempool-octeontx23/stable 22.11.2-2~deb12u1 amd64
-librte-mempool-ring23/stable 22.11.2-2~deb12u1 amd64
-librte-mempool-stack23/stable 22.11.2-2~deb12u1 amd64
-librte-mempool23/stable 22.11.2-2~deb12u1 amd64
-librte-meta-all/stable 22.11.2-2~deb12u1 amd64
-librte-meta-allpmds/stable 22.11.2-2~deb12u1 amd64
-librte-meta-baseband/stable 22.11.2-2~deb12u1 amd64
-librte-meta-bus/stable 22.11.2-2~deb12u1 amd64
-librte-meta-common/stable 22.11.2-2~deb12u1 amd64
-librte-meta-compress/stable 22.11.2-2~deb12u1 amd64
-librte-meta-crypto/stable 22.11.2-2~deb12u1 amd64
-librte-meta-dma/stable 22.11.2-2~deb12u1 amd64
-librte-meta-event/stable 22.11.2-2~deb12u1 amd64
-librte-meta-mempool/stable 22.11.2-2~deb12u1 amd64
-librte-meta-net/stable 22.11.2-2~deb12u1 amd64
-librte-meta-raw/stable 22.11.2-2~deb12u1 amd64
-librte-meter23/stable 22.11.2-2~deb12u1 amd64
-librte-metrics23/stable 22.11.2-2~deb12u1 amd64
-librte-net-af-packet23/stable 22.11.2-2~deb12u1 amd64
-librte-net-af-xdp23/stable 22.11.2-2~deb12u1 amd64
-librte-net-ark23/stable 22.11.2-2~deb12u1 amd64
-librte-net-atlantic23/stable 22.11.2-2~deb12u1 amd64
-librte-net-avp23/stable 22.11.2-2~deb12u1 amd64
-librte-net-axgbe23/stable 22.11.2-2~deb12u1 amd64
-librte-net-bnx2x23/stable 22.11.2-2~deb12u1 amd64
-librte-net-bnxt23/stable 22.11.2-2~deb12u1 amd64
-librte-net-bond23/stable 22.11.2-2~deb12u1 amd64
-librte-net-cnxk23/stable 22.11.2-2~deb12u1 amd64
-librte-net-cxgbe23/stable 22.11.2-2~deb12u1 amd64
-librte-net-dpaa2-23/stable 22.11.2-2~deb12u1 amd64
-librte-net-dpaa23/stable 22.11.2-2~deb12u1 amd64
-librte-net-e1000-23/stable 22.11.2-2~deb12u1 amd64
-librte-net-ena23/stable 22.11.2-2~deb12u1 amd64
-librte-net-enetc23/stable 22.11.2-2~deb12u1 amd64
-librte-net-enetfec23/stable 22.11.2-2~deb12u1 amd64
-librte-net-enic23/stable 22.11.2-2~deb12u1 amd64
-librte-net-failsafe23/stable 22.11.2-2~deb12u1 amd64
-librte-net-fm10k23/stable 22.11.2-2~deb12u1 amd64
-librte-net-gve23/stable 22.11.2-2~deb12u1 amd64
-librte-net-hinic23/stable 22.11.2-2~deb12u1 amd64
-librte-net-hns3-23/stable 22.11.2-2~deb12u1 amd64
-librte-net-i40e23/stable 22.11.2-2~deb12u1 amd64
-librte-net-iavf23/stable 22.11.2-2~deb12u1 amd64
-librte-net-ice23/stable 22.11.2-2~deb12u1 amd64
-librte-net-idpf23/stable 22.11.2-2~deb12u1 amd64
-librte-net-igc23/stable 22.11.2-2~deb12u1 amd64
-librte-net-ionic23/stable 22.11.2-2~deb12u1 amd64
-librte-net-ipn3ke23/stable 22.11.2-2~deb12u1 amd64
-librte-net-ixgbe23/stable 22.11.2-2~deb12u1 amd64
-librte-net-liquidio23/stable 22.11.2-2~deb12u1 amd64
-librte-net-memif23/stable 22.11.2-2~deb12u1 amd64
-librte-net-mlx4-23/stable 22.11.2-2~deb12u1 amd64
-librte-net-mlx5-23/stable 22.11.2-2~deb12u1 amd64
-librte-net-netvsc23/stable 22.11.2-2~deb12u1 amd64
-librte-net-nfp23/stable 22.11.2-2~deb12u1 amd64
-librte-net-ngbe23/stable 22.11.2-2~deb12u1 amd64
-librte-net-null23/stable 22.11.2-2~deb12u1 amd64
-librte-net-octeon-ep23/stable 22.11.2-2~deb12u1 amd64
-librte-net-octeontx23/stable 22.11.2-2~deb12u1 amd64
-librte-net-pcap23/stable 22.11.2-2~deb12u1 amd64
-librte-net-pfe23/stable 22.11.2-2~deb12u1 amd64
-librte-net-qede23/stable 22.11.2-2~deb12u1 amd64
-librte-net-ring23/stable 22.11.2-2~deb12u1 amd64
-librte-net-sfc23/stable 22.11.2-2~deb12u1 amd64
-librte-net-softnic23/stable 22.11.2-2~deb12u1 amd64
-librte-net-tap23/stable 22.11.2-2~deb12u1 amd64
-librte-net-thunderx23/stable 22.11.2-2~deb12u1 amd64
-librte-net-txgbe23/stable 22.11.2-2~deb12u1 amd64
-librte-net-vdev-netvsc23/stable 22.11.2-2~deb12u1 amd64
-librte-net-vhost23/stable 22.11.2-2~deb12u1 amd64
-librte-net-virtio23/stable 22.11.2-2~deb12u1 amd64
-librte-net-vmxnet3-23/stable 22.11.2-2~deb12u1 amd64
-librte-net23/stable 22.11.2-2~deb12u1 amd64
-librte-node23/stable 22.11.2-2~deb12u1 amd64
-librte-pcapng23/stable 22.11.2-2~deb12u1 amd64
-librte-pci23/stable 22.11.2-2~deb12u1 amd64
-librte-pdump23/stable 22.11.2-2~deb12u1 amd64
-librte-pipeline23/stable 22.11.2-2~deb12u1 amd64
-librte-port23/stable 22.11.2-2~deb12u1 amd64
-librte-power23/stable 22.11.2-2~deb12u1 amd64
-librte-raw-cnxk-bphy23/stable 22.11.2-2~deb12u1 amd64
-librte-raw-cnxk-gpio23/stable 22.11.2-2~deb12u1 amd64
-librte-raw-dpaa2-cmdif23/stable 22.11.2-2~deb12u1 amd64
-librte-raw-ifpga23/stable 22.11.2-2~deb12u1 amd64
-librte-raw-ntb23/stable 22.11.2-2~deb12u1 amd64
-librte-raw-skeleton23/stable 22.11.2-2~deb12u1 amd64
-librte-rawdev23/stable 22.11.2-2~deb12u1 amd64
-librte-rcu23/stable 22.11.2-2~deb12u1 amd64
-librte-regex-cn9k23/stable 22.11.2-2~deb12u1 amd64
-librte-regex-mlx5-23/stable 22.11.2-2~deb12u1 amd64
-librte-regexdev23/stable 22.11.2-2~deb12u1 amd64
-librte-reorder23/stable 22.11.2-2~deb12u1 amd64
-librte-rib23/stable 22.11.2-2~deb12u1 amd64
-librte-ring23/stable 22.11.2-2~deb12u1 amd64
-librte-sched23/stable 22.11.2-2~deb12u1 amd64
-librte-security23/stable 22.11.2-2~deb12u1 amd64
-librte-stack23/stable 22.11.2-2~deb12u1 amd64
-librte-table23/stable 22.11.2-2~deb12u1 amd64
-librte-telemetry23/stable 22.11.2-2~deb12u1 amd64
-librte-timer23/stable 22.11.2-2~deb12u1 amd64
-librte-vdpa-ifc23/stable 22.11.2-2~deb12u1 amd64
-librte-vdpa-mlx5-23/stable 22.11.2-2~deb12u1 amd64
-librte-vdpa-sfc23/stable 22.11.2-2~deb12u1 amd64
-librte-vhost23/stable 22.11.2-2~deb12u1 amd64
+librte-acl23/stable 22.11.3-1~deb12u1 amd64
+librte-baseband-acc23/stable 22.11.3-1~deb12u1 amd64
+librte-baseband-fpga-5gnr-fec23/stable 22.11.3-1~deb12u1 amd64
+librte-baseband-fpga-lte-fec23/stable 22.11.3-1~deb12u1 amd64
+librte-baseband-la12xx23/stable 22.11.3-1~deb12u1 amd64
+librte-baseband-null23/stable 22.11.3-1~deb12u1 amd64
+librte-baseband-turbo-sw23/stable 22.11.3-1~deb12u1 amd64
+librte-bbdev23/stable 22.11.3-1~deb12u1 amd64
+librte-bitratestats23/stable 22.11.3-1~deb12u1 amd64
+librte-bpf23/stable 22.11.3-1~deb12u1 amd64
+librte-bus-auxiliary23/stable 22.11.3-1~deb12u1 amd64
+librte-bus-dpaa23/stable 22.11.3-1~deb12u1 amd64
+librte-bus-fslmc23/stable 22.11.3-1~deb12u1 amd64
+librte-bus-ifpga23/stable 22.11.3-1~deb12u1 amd64
+librte-bus-pci23/stable 22.11.3-1~deb12u1 amd64
+librte-bus-vdev23/stable 22.11.3-1~deb12u1 amd64
+librte-bus-vmbus23/stable 22.11.3-1~deb12u1 amd64
+librte-cfgfile23/stable 22.11.3-1~deb12u1 amd64
+librte-cmdline23/stable 22.11.3-1~deb12u1 amd64
+librte-common-cnxk23/stable 22.11.3-1~deb12u1 amd64
+librte-common-cpt23/stable 22.11.3-1~deb12u1 amd64
+librte-common-dpaax23/stable 22.11.3-1~deb12u1 amd64
+librte-common-iavf23/stable 22.11.3-1~deb12u1 amd64
+librte-common-idpf23/stable 22.11.3-1~deb12u1 amd64
+librte-common-mlx5-23/stable 22.11.3-1~deb12u1 amd64
+librte-common-octeontx23/stable 22.11.3-1~deb12u1 amd64
+librte-common-qat23/stable 22.11.3-1~deb12u1 amd64
+librte-common-sfc-efx23/stable 22.11.3-1~deb12u1 amd64
+librte-compress-isal23/stable 22.11.3-1~deb12u1 amd64
+librte-compress-mlx5-23/stable 22.11.3-1~deb12u1 amd64
+librte-compress-octeontx23/stable 22.11.3-1~deb12u1 amd64
+librte-compress-zlib23/stable 22.11.3-1~deb12u1 amd64
+librte-compressdev23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-bcmfs23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-caam-jr23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-ccp23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-cnxk23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-dpaa-sec23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-dpaa2-sec23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-ipsec-mb23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-mlx5-23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-nitrox23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-null23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-octeontx23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-openssl23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-scheduler23/stable 22.11.3-1~deb12u1 amd64
+librte-crypto-virtio23/stable 22.11.3-1~deb12u1 amd64
+librte-cryptodev23/stable 22.11.3-1~deb12u1 amd64
+librte-distributor23/stable 22.11.3-1~deb12u1 amd64
+librte-dma-cnxk23/stable 22.11.3-1~deb12u1 amd64
+librte-dma-dpaa2-23/stable 22.11.3-1~deb12u1 amd64
+librte-dma-dpaa23/stable 22.11.3-1~deb12u1 amd64
+librte-dma-hisilicon23/stable 22.11.3-1~deb12u1 amd64
+librte-dma-idxd23/stable 22.11.3-1~deb12u1 amd64
+librte-dma-ioat23/stable 22.11.3-1~deb12u1 amd64
+librte-dma-skeleton23/stable 22.11.3-1~deb12u1 amd64
+librte-dmadev23/stable 22.11.3-1~deb12u1 amd64
+librte-eal23/stable 22.11.3-1~deb12u1 amd64
+librte-efd23/stable 22.11.3-1~deb12u1 amd64
+librte-ethdev23/stable 22.11.3-1~deb12u1 amd64
+librte-event-cnxk23/stable 22.11.3-1~deb12u1 amd64
+librte-event-dlb2-23/stable 22.11.3-1~deb12u1 amd64
+librte-event-dpaa2-23/stable 22.11.3-1~deb12u1 amd64
+librte-event-dpaa23/stable 22.11.3-1~deb12u1 amd64
+librte-event-dsw23/stable 22.11.3-1~deb12u1 amd64
+librte-event-octeontx23/stable 22.11.3-1~deb12u1 amd64
+librte-event-opdl23/stable 22.11.3-1~deb12u1 amd64
+librte-event-skeleton23/stable 22.11.3-1~deb12u1 amd64
+librte-event-sw23/stable 22.11.3-1~deb12u1 amd64
+librte-eventdev23/stable 22.11.3-1~deb12u1 amd64
+librte-fib23/stable 22.11.3-1~deb12u1 amd64
+librte-gpudev23/stable 22.11.3-1~deb12u1 amd64
+librte-graph23/stable 22.11.3-1~deb12u1 amd64
+librte-gro23/stable 22.11.3-1~deb12u1 amd64
+librte-gso23/stable 22.11.3-1~deb12u1 amd64
+librte-hash23/stable 22.11.3-1~deb12u1 amd64
+librte-ip-frag23/stable 22.11.3-1~deb12u1 amd64
+librte-ipsec23/stable 22.11.3-1~deb12u1 amd64
+librte-jobstats23/stable 22.11.3-1~deb12u1 amd64
+librte-kvargs23/stable 22.11.3-1~deb12u1 amd64
+librte-latencystats23/stable 22.11.3-1~deb12u1 amd64
+librte-lpm23/stable 22.11.3-1~deb12u1 amd64
+librte-mbuf23/stable 22.11.3-1~deb12u1 amd64
+librte-member23/stable 22.11.3-1~deb12u1 amd64
+librte-mempool-bucket23/stable 22.11.3-1~deb12u1 amd64
+librte-mempool-cnxk23/stable 22.11.3-1~deb12u1 amd64
+librte-mempool-dpaa2-23/stable 22.11.3-1~deb12u1 amd64
+librte-mempool-dpaa23/stable 22.11.3-1~deb12u1 amd64
+librte-mempool-octeontx23/stable 22.11.3-1~deb12u1 amd64
+librte-mempool-ring23/stable 22.11.3-1~deb12u1 amd64
+librte-mempool-stack23/stable 22.11.3-1~deb12u1 amd64
+librte-mempool23/stable 22.11.3-1~deb12u1 amd64
+librte-meta-all/stable 22.11.3-1~deb12u1 amd64
+librte-meta-allpmds/stable 22.11.3-1~deb12u1 amd64
+librte-meta-baseband/stable 22.11.3-1~deb12u1 amd64
+librte-meta-bus/stable 22.11.3-1~deb12u1 amd64
+librte-meta-common/stable 22.11.3-1~deb12u1 amd64
+librte-meta-compress/stable 22.11.3-1~deb12u1 amd64
+librte-meta-crypto/stable 22.11.3-1~deb12u1 amd64
+librte-meta-dma/stable 22.11.3-1~deb12u1 amd64
+librte-meta-event/stable 22.11.3-1~deb12u1 amd64
+librte-meta-mempool/stable 22.11.3-1~deb12u1 amd64
+librte-meta-net/stable 22.11.3-1~deb12u1 amd64
+librte-meta-raw/stable 22.11.3-1~deb12u1 amd64
+librte-meter23/stable 22.11.3-1~deb12u1 amd64
+librte-metrics23/stable 22.11.3-1~deb12u1 amd64
+librte-net-af-packet23/stable 22.11.3-1~deb12u1 amd64
+librte-net-af-xdp23/stable 22.11.3-1~deb12u1 amd64
+librte-net-ark23/stable 22.11.3-1~deb12u1 amd64
+librte-net-atlantic23/stable 22.11.3-1~deb12u1 amd64
+librte-net-avp23/stable 22.11.3-1~deb12u1 amd64
+librte-net-axgbe23/stable 22.11.3-1~deb12u1 amd64
+librte-net-bnx2x23/stable 22.11.3-1~deb12u1 amd64
+librte-net-bnxt23/stable 22.11.3-1~deb12u1 amd64
+librte-net-bond23/stable 22.11.3-1~deb12u1 amd64
+librte-net-cnxk23/stable 22.11.3-1~deb12u1 amd64
+librte-net-cxgbe23/stable 22.11.3-1~deb12u1 amd64
+librte-net-dpaa2-23/stable 22.11.3-1~deb12u1 amd64
+librte-net-dpaa23/stable 22.11.3-1~deb12u1 amd64
+librte-net-e1000-23/stable 22.11.3-1~deb12u1 amd64
+librte-net-ena23/stable 22.11.3-1~deb12u1 amd64
+librte-net-enetc23/stable 22.11.3-1~deb12u1 amd64
+librte-net-enetfec23/stable 22.11.3-1~deb12u1 amd64
+librte-net-enic23/stable 22.11.3-1~deb12u1 amd64
+librte-net-failsafe23/stable 22.11.3-1~deb12u1 amd64
+librte-net-fm10k23/stable 22.11.3-1~deb12u1 amd64
+librte-net-gve23/stable 22.11.3-1~deb12u1 amd64
+librte-net-hinic23/stable 22.11.3-1~deb12u1 amd64
+librte-net-hns3-23/stable 22.11.3-1~deb12u1 amd64
+librte-net-i40e23/stable 22.11.3-1~deb12u1 amd64
+librte-net-iavf23/stable 22.11.3-1~deb12u1 amd64
+librte-net-ice23/stable 22.11.3-1~deb12u1 amd64
+librte-net-idpf23/stable 22.11.3-1~deb12u1 amd64
+librte-net-igc23/stable 22.11.3-1~deb12u1 amd64
+librte-net-ionic23/stable 22.11.3-1~deb12u1 amd64
+librte-net-ipn3ke23/stable 22.11.3-1~deb12u1 amd64
+librte-net-ixgbe23/stable 22.11.3-1~deb12u1 amd64
+librte-net-liquidio23/stable 22.11.3-1~deb12u1 amd64
+librte-net-memif23/stable 22.11.3-1~deb12u1 amd64
+librte-net-mlx4-23/stable 22.11.3-1~deb12u1 amd64
+librte-net-mlx5-23/stable 22.11.3-1~deb12u1 amd64
+librte-net-netvsc23/stable 22.11.3-1~deb12u1 amd64
+librte-net-nfp23/stable 22.11.3-1~deb12u1 amd64
+librte-net-ngbe23/stable 22.11.3-1~deb12u1 amd64
+librte-net-null23/stable 22.11.3-1~deb12u1 amd64
+librte-net-octeon-ep23/stable 22.11.3-1~deb12u1 amd64
+librte-net-octeontx23/stable 22.11.3-1~deb12u1 amd64
+librte-net-pcap23/stable 22.11.3-1~deb12u1 amd64
+librte-net-pfe23/stable 22.11.3-1~deb12u1 amd64
+librte-net-qede23/stable 22.11.3-1~deb12u1 amd64
+librte-net-ring23/stable 22.11.3-1~deb12u1 amd64
+librte-net-sfc23/stable 22.11.3-1~deb12u1 amd64
+librte-net-softnic23/stable 22.11.3-1~deb12u1 amd64
+librte-net-tap23/stable 22.11.3-1~deb12u1 amd64
+librte-net-thunderx23/stable 22.11.3-1~deb12u1 amd64
+librte-net-txgbe23/stable 22.11.3-1~deb12u1 amd64
+librte-net-vdev-netvsc23/stable 22.11.3-1~deb12u1 amd64
+librte-net-vhost23/stable 22.11.3-1~deb12u1 amd64
+librte-net-virtio23/stable 22.11.3-1~deb12u1 amd64
+librte-net-vmxnet3-23/stable 22.11.3-1~deb12u1 amd64
+librte-net23/stable 22.11.3-1~deb12u1 amd64
+librte-node23/stable 22.11.3-1~deb12u1 amd64
+librte-pcapng23/stable 22.11.3-1~deb12u1 amd64
+librte-pci23/stable 22.11.3-1~deb12u1 amd64
+librte-pdump23/stable 22.11.3-1~deb12u1 amd64
+librte-pipeline23/stable 22.11.3-1~deb12u1 amd64
+librte-port23/stable 22.11.3-1~deb12u1 amd64
+librte-power23/stable 22.11.3-1~deb12u1 amd64
+librte-raw-cnxk-bphy23/stable 22.11.3-1~deb12u1 amd64
+librte-raw-cnxk-gpio23/stable 22.11.3-1~deb12u1 amd64
+librte-raw-dpaa2-cmdif23/stable 22.11.3-1~deb12u1 amd64
+librte-raw-ifpga23/stable 22.11.3-1~deb12u1 amd64
+librte-raw-ntb23/stable 22.11.3-1~deb12u1 amd64
+librte-raw-skeleton23/stable 22.11.3-1~deb12u1 amd64
+librte-rawdev23/stable 22.11.3-1~deb12u1 amd64
+librte-rcu23/stable 22.11.3-1~deb12u1 amd64
+librte-regex-cn9k23/stable 22.11.3-1~deb12u1 amd64
+librte-regex-mlx5-23/stable 22.11.3-1~deb12u1 amd64
+librte-regexdev23/stable 22.11.3-1~deb12u1 amd64
+librte-reorder23/stable 22.11.3-1~deb12u1 amd64
+librte-rib23/stable 22.11.3-1~deb12u1 amd64
+librte-ring23/stable 22.11.3-1~deb12u1 amd64
+librte-sched23/stable 22.11.3-1~deb12u1 amd64
+librte-security23/stable 22.11.3-1~deb12u1 amd64
+librte-stack23/stable 22.11.3-1~deb12u1 amd64
+librte-table23/stable 22.11.3-1~deb12u1 amd64
+librte-telemetry23/stable 22.11.3-1~deb12u1 amd64
+librte-timer23/stable 22.11.3-1~deb12u1 amd64
+librte-vdpa-ifc23/stable 22.11.3-1~deb12u1 amd64
+librte-vdpa-mlx5-23/stable 22.11.3-1~deb12u1 amd64
+librte-vdpa-sfc23/stable 22.11.3-1~deb12u1 amd64
+librte-vhost23/stable 22.11.3-1~deb12u1 amd64
 librtf-document-perl/stable 0.64-12 all
 librtf-writer-perl/stable 1.11-5 all
 librtfilter-dev/stable 1.1-4+b2 amd64
@@ -36979,7 +36979,7 @@ libsisu-inject-java/stable 0.3.4-2 all
 libsisu-plexus-java/stable 0.3.4-3 all
 libsitemesh-java-doc/stable 2.4.1+dfsg-7 all
 libsitemesh-java/stable 2.4.1+dfsg-7 all
-libsitesummary-perl/stable 0.1.51 all
+libsitesummary-perl/stable 0.1.56~deb12u1 all
 libsixel-bin/stable,now 1.10.3-3 amd64 [installed,automatic]
 libsixel-dev/stable 1.10.3-3 amd64
 libsixel-examples/stable 1.10.3-3 all
@@ -37042,8 +37042,8 @@ libsmali-java/stable 2.5.2.git2771eae-4 all
 libsmart-comments-perl/stable 1.06-3 all
 libsmartcols-dev/stable 2.38.1-5+b1 amd64
 libsmartcols1/stable,now 2.38.1-5+b1 amd64 [installed]
-libsmbclient-dev/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
-libsmbclient/stable-security,now 2:4.17.10+dfsg-0+deb12u1 amd64 [installed,automatic]
+libsmbclient-dev/stable 2:4.17.11+dfsg-0+deb12u1 amd64
+libsmbclient/stable,now 2:4.17.11+dfsg-0+deb12u1 amd64 [installed,automatic]
 libsmbios-c2/stable 2.4.3-1 amd64
 libsmbios-dev/stable 2.4.3-1 amd64
 libsmbios-doc/stable 2.4.3-1 all
@@ -37417,12 +37417,12 @@ libssh-gcrypt-4/stable,now 0.10.5-2 amd64 [installed,automatic]
 libssh-gcrypt-dev/stable 0.10.5-2 amd64
 libssh2-1-dev/stable 1.10.0-3+b1 amd64
 libssh2-1/stable,now 1.10.0-3+b1 amd64 [installed,automatic]
-libssl-dev/stable,now 3.0.9-1 amd64 [installed,automatic]
-libssl-doc/stable 3.0.9-1 all
+libssl-dev/stable,now 3.0.11-1~deb12u1 amd64 [installed,automatic]
+libssl-doc/stable 3.0.11-1~deb12u1 all
 libssl-ocaml-dev/stable 0.5.13-1 amd64
 libssl-ocaml/stable 0.5.13-1 amd64
 libssl-utils-clojure/stable 3.5.0-2 all
-libssl3/stable,now 3.0.9-1 amd64 [installed]
+libssl3/stable,now 3.0.11-1~deb12u1 amd64 [installed]
 libssm-bin/stable 1.4.0-2 amd64
 libssm-dev/stable 1.4.0-2 amd64
 libssm2/stable 1.4.0-2 amd64
@@ -37930,9 +37930,9 @@ libsystem-sub-perl/stable 0.162800-3 all
 libsystemc-dev/stable 2.3.4-2 amd64
 libsystemc-doc/stable 2.3.4-2 all
 libsystemc/stable 2.3.4-2 amd64
-libsystemd-dev/stable 252.12-1~deb12u1 amd64
-libsystemd-shared/stable,now 252.12-1~deb12u1 amd64 [installed]
-libsystemd0/stable,now 252.12-1~deb12u1 amd64 [installed]
+libsystemd-dev/stable 252.17-1~deb12u1 amd64
+libsystemd-shared/stable,now 252.17-1~deb12u1 amd64 [installed]
+libsystemd0/stable,now 252.17-1~deb12u1 amd64 [installed]
 libsz2/stable 1.0.6-1+b1 amd64
 libt-digest-java-doc/stable 1:3.0-3 all
 libt-digest-java/stable 1:3.0-3 all
@@ -38038,7 +38038,7 @@ libtask-kensho-webcrawling-perl/stable 0.41-2 all
 libtask-kensho-webdev-perl/stable 0.41-2 all
 libtask-kensho-xml-perl/stable 0.41-2 all
 libtask-weaken-perl/stable 1.06-2 all
-libtaskmanager6abi1/stable 4:5.27.5-2 amd64
+libtaskmanager6abi1/stable 4:5.27.5-2+deb12u1 amd64
 libtasn1-6-dev/stable 4.19.0-2 amd64
 libtasn1-6/stable,now 4.19.0-2 amd64 [installed]
 libtasn1-bin/stable 4.19.0-2 amd64
@@ -38399,6 +38399,7 @@ libtest2-plugin-uuid-perl/stable 0.002001-2 all
 libtest2-suite-perl/stable 0.000145-1 all
 libtest2-tools-command-perl/stable 0.20-2 all
 libtest2-tools-explain-perl/stable 0.02-2 all
+libtestng7-java/stable 7.5-2~deb12u1 all
 libtet1.5-dev/stable 1.5.0-5 amd64
 libtet1.5/stable 1.5.0-5 amd64
 libtevent-dev/stable 0.14.1-1 amd64
@@ -39067,9 +39068,9 @@ libucto-dev/stable 0.21.1-2+b3 amd64
 libucto5/stable 0.21.1-2+b3 amd64
 libucx-dev/stable 1.13.1-1 amd64
 libucx0/stable 1.13.1-1 amd64
-libudev-dev/stable 252.12-1~deb12u1 amd64
+libudev-dev/stable 252.17-1~deb12u1 amd64
 libudev0/stable 200-1 amd64
-libudev1/stable,now 252.12-1~deb12u1 amd64 [installed]
+libudev1/stable,now 252.17-1~deb12u1 amd64 [installed]
 libudf-dev/stable 2.1.0-4 amd64
 libudf0/stable 2.1.0-4 amd64
 libudfread-dev/stable 1.1.2-1 amd64
@@ -39176,8 +39177,8 @@ libunarr-dev/stable 1.0.1-1.1 amd64
 libunarr1/stable 1.0.1-1.1 amd64
 libunbescape-java-doc/stable 1.1.5-1.1 all
 libunbescape-java/stable 1.1.5-1.1 all
-libunbound-dev/stable 1.17.1-2 amd64
-libunbound8/stable,now 1.17.1-2 amd64 [installed,automatic]
+libunbound-dev/stable 1.17.1-2+deb12u1 amd64
+libunbound8/stable,now 1.17.1-2+deb12u1 amd64 [installed,automatic]
 libuncommons-maths-java-doc/stable 1.2.3-2 all
 libuncommons-maths-java/stable 1.2.3-2 all
 libuncommons-watchmaker-framework-java/stable 0.7.1-3 all
@@ -39710,13 +39711,13 @@ libvsqlitepp-dev/stable 0.3.13-4.1 amd64
 libvsqlitepp-doc/stable 0.3.13-4.1 all
 libvsqlitepp3v5/stable 0.3.13-4.1 amd64
 libvt-ldap-java/stable 3.3.8-4 all
-libvte-2.91-0/stable,now 0.70.6-1~deb12u1 amd64 [installed,automatic]
-libvte-2.91-common/stable,now 0.70.6-1~deb12u1 amd64 [installed,automatic]
-libvte-2.91-dev/stable 0.70.6-1~deb12u1 amd64
-libvte-2.91-doc/stable 0.70.6-1~deb12u1 all
-libvte-2.91-gtk4-0/stable 0.70.6-1~deb12u1 amd64
-libvte-2.91-gtk4-dev/stable 0.70.6-1~deb12u1 amd64
-libvte-2.91-gtk4-doc/stable 0.70.6-1~deb12u1 all
+libvte-2.91-0/stable,now 0.70.6-2~deb12u1 amd64 [installed,automatic]
+libvte-2.91-common/stable,now 0.70.6-2~deb12u1 amd64 [installed,automatic]
+libvte-2.91-dev/stable 0.70.6-2~deb12u1 amd64
+libvte-2.91-doc/stable 0.70.6-2~deb12u1 all
+libvte-2.91-gtk4-0/stable 0.70.6-2~deb12u1 amd64
+libvte-2.91-gtk4-dev/stable 0.70.6-2~deb12u1 amd64
+libvte-2.91-gtk4-doc/stable 0.70.6-2~deb12u1 all
 libvte-common/stable 1:0.28.2-6 all
 libvte-dev/stable 1:0.28.2-6+b1 amd64
 libvte9/stable 1:0.28.2-6+b1 amd64
@@ -39781,8 +39782,8 @@ libwayland-egl1-mesa/stable 22.3.6-1+deb12u1 amd64
 libwayland-egl1/stable,now 1.21.0-1 amd64 [installed,automatic]
 libwayland-server++1/stable 1.0.0-4 amd64
 libwayland-server0/stable,now 1.21.0-1 amd64 [installed,automatic]
-libwbclient-dev/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
-libwbclient0/stable-security,now 2:4.17.10+dfsg-0+deb12u1 amd64 [installed,automatic]
+libwbclient-dev/stable 2:4.17.11+dfsg-0+deb12u1 amd64
+libwbclient0/stable,now 2:4.17.11+dfsg-0+deb12u1 amd64 [installed,automatic]
 libwbxml2-1/stable 0.11.8+dfsg-3 amd64
 libwbxml2-dev/stable 0.11.8+dfsg-3 amd64
 libwbxml2-utils/stable 0.11.8+dfsg-3 amd64
@@ -39794,7 +39795,7 @@ libwcstools1/stable 3.9.7-1 amd64
 libweasel-driverrole-perl/stable 0.04-2 all
 libweasel-perl/stable 0.29-1 all
 libweasel-widgets-dojo-perl/stable 0.07-1 all
-libweather-ion7/stable 4:5.27.5-2 amd64
+libweather-ion7/stable 4:5.27.5-2+deb12u1 amd64
 libweb-api-perl/stable 2.7-2 all
 libweb-id-perl/stable 1.927-3 all
 libweb-machine-perl/stable 0.17-3 all
@@ -39809,20 +39810,20 @@ libwebcam0/stable 0.2.5-2 amd64
 libwebinject-perl/stable 1.94-2 all
 libwebjars-locator-core-java/stable 0.30-1.1 all
 libwebjars-locator-java/stable 0.32-1.1 all
-libwebkit2gtk-4.0-37/stable-security,now 2.40.5-1~deb12u1 amd64 [installed,automatic]
-libwebkit2gtk-4.0-dev/stable-security 2.40.5-1~deb12u1 amd64
-libwebkit2gtk-4.0-doc/stable-security 2.40.5-1~deb12u1 all
-libwebkit2gtk-4.1-0/stable-security,now 2.40.5-1~deb12u1 amd64 [installed,automatic]
-libwebkit2gtk-4.1-dev/stable-security 2.40.5-1~deb12u1 amd64
-libwebkitgtk-6.0-4/stable-security 2.40.5-1~deb12u1 amd64
-libwebkitgtk-6.0-dev/stable-security 2.40.5-1~deb12u1 amd64
+libwebkit2gtk-4.0-37/stable,stable-security,now 2.40.5-1~deb12u1 amd64 [installed,automatic]
+libwebkit2gtk-4.0-dev/stable,stable-security 2.40.5-1~deb12u1 amd64
+libwebkit2gtk-4.0-doc/stable,stable-security 2.40.5-1~deb12u1 all
+libwebkit2gtk-4.1-0/stable,stable-security,now 2.40.5-1~deb12u1 amd64 [installed,automatic]
+libwebkit2gtk-4.1-dev/stable,stable-security 2.40.5-1~deb12u1 amd64
+libwebkitgtk-6.0-4/stable,stable-security 2.40.5-1~deb12u1 amd64
+libwebkitgtk-6.0-dev/stable,stable-security 2.40.5-1~deb12u1 amd64
 libwebm-dev/stable 1.0.0.29-1 amd64
 libwebm-tools/stable 1.0.0.29-1 amd64
 libwebm1/stable 1.0.0.29-1 amd64
-libwebp-dev/stable-security 1.2.4-0.2+deb12u1 amd64
-libwebp7/stable-security,now 1.2.4-0.2+deb12u1 amd64 [installed,automatic]
-libwebpdemux2/stable-security,now 1.2.4-0.2+deb12u1 amd64 [installed,automatic]
-libwebpmux3/stable-security,now 1.2.4-0.2+deb12u1 amd64 [installed,automatic]
+libwebp-dev/stable,stable-security 1.2.4-0.2+deb12u1 amd64
+libwebp7/stable,stable-security,now 1.2.4-0.2+deb12u1 amd64 [installed,automatic]
+libwebpdemux2/stable,stable-security,now 1.2.4-0.2+deb12u1 amd64 [installed,automatic]
+libwebpmux3/stable,stable-security,now 1.2.4-0.2+deb12u1 amd64 [installed,automatic]
 libwebrtc-audio-processing-dev/stable 0.3-1+b1 amd64
 libwebrtc-audio-processing1/stable,now 0.3-1+b1 amd64 [installed,automatic]
 libwebservice-cia-perl/stable 1.4-4 all
@@ -40049,11 +40050,11 @@ libx264-dev/stable 2:0.164.3095+gitbaee400-3 amd64
 libx265-199/stable,now 3.5-2+b1 amd64 [installed,automatic]
 libx265-dev/stable 3.5-2+b1 amd64
 libx265-doc/stable 3.5-2 all
-libx2go-config-perl/stable 4.1.0.3-7 all
-libx2go-log-perl/stable 4.1.0.3-7 all
-libx2go-server-db-perl/stable 4.1.0.3-7 amd64
-libx2go-server-perl/stable 4.1.0.3-7 all
-libx2go-utils-perl/stable 4.1.0.3-7 all
+libx2go-config-perl/stable 4.1.0.3-7+deb12u1 all
+libx2go-log-perl/stable 4.1.0.3-7+deb12u1 all
+libx2go-server-db-perl/stable 4.1.0.3-7+deb12u1 amd64
+libx2go-server-perl/stable 4.1.0.3-7+deb12u1 all
+libx2go-utils-perl/stable 4.1.0.3-7+deb12u1 all
 libx32asan6-amd64-cross/stable 11.3.0-11cross1 all
 libx32asan6-i386-cross/stable 11.3.0-11cross1 all
 libx32asan6/stable 11.3.0-12 amd64
@@ -40251,12 +40252,12 @@ libxcb-xvmc0-dev/stable 1.15-1 amd64
 libxcb-xvmc0/stable 1.15-1 amd64
 libxcb1-dev/stable,now 1.15-1 amd64 [installed,automatic]
 libxcb1/stable,now 1.15-1 amd64 [installed,automatic]
-libxcomp-dev/stable 2:3.5.99.26-5+b1 amd64
-libxcomp3/stable 2:3.5.99.26-5+b1 amd64
+libxcomp-dev/stable 2:3.5.99.26-5+deb12u1 amd64
+libxcomp3/stable 2:3.5.99.26-5+deb12u1 amd64
 libxcomposite-dev/stable 1:0.4.5-1 amd64
 libxcomposite1/stable,now 1:0.4.5-1 amd64 [installed,automatic]
-libxcompshad-dev/stable 2:3.5.99.26-5+b1 amd64
-libxcompshad3/stable 2:3.5.99.26-5+b1 amd64
+libxcompshad-dev/stable 2:3.5.99.26-5+deb12u1 amd64
+libxcompshad3/stable 2:3.5.99.26-5+deb12u1 amd64
 libxcrypt-source/stable 1:4.4.33-2 all
 libxcursor-dev/stable 1:1.2.1-1 amd64
 libxcursor1/stable,now 1:1.2.1-1 amd64 [installed,automatic]
@@ -40569,8 +40570,8 @@ libxneur-dev/stable 0.20.0-3 amd64
 libxneur/stable 0.20.0-3 amd64
 libxnnpack-dev/stable 0.0~git20220216.ae108ef-2 amd64
 libxnnpack0/stable 0.0~git20220216.ae108ef-2 amd64
-libxnvctrl-dev/stable 525.85.05-1 amd64
-libxnvctrl0/stable,now 525.85.05-1 amd64 [installed,automatic]
+libxnvctrl-dev/stable 525.85.05-3~deb12u1 amd64
+libxnvctrl0/stable,now 525.85.05-3~deb12u1 amd64 [installed,automatic]
 libxom-java-doc/stable 1.3.8-1 all
 libxom-java/stable 1.3.8-1 all
 libxosd-dev/stable 2.2.14-2.1+b1 amd64
@@ -41024,16 +41025,16 @@ lintex/stable 1.14-2+b1 amd64
 lintian-brush/stable 0.147 all
 lintian/stable 2.116.3 all
 linux-base/stable,now 4.9 all [installed,automatic]
-linux-compiler-gcc-12-x86/stable-security 6.1.52-1 amd64
-linux-config-6.1/stable-security 6.1.52-1 amd64
-linux-cpupower/stable-security 6.1.52-1 amd64
-linux-doc-6.1/stable-security 6.1.52-1 all
-linux-doc/stable-security 6.1.52-1 all
-linux-headers-6.1.0-10-amd64/stable 6.1.38-1 amd64
-linux-headers-6.1.0-10-cloud-amd64/stable 6.1.38-1 amd64
-linux-headers-6.1.0-10-common-rt/stable 6.1.38-1 all
-linux-headers-6.1.0-10-common/stable 6.1.38-1 all
-linux-headers-6.1.0-10-rt-amd64/stable 6.1.38-1 amd64
+linux-compiler-gcc-12-x86/stable 6.1.55-1 amd64
+linux-config-6.1/stable 6.1.55-1 amd64
+linux-cpupower/stable 6.1.55-1 amd64
+linux-doc-6.1/stable 6.1.55-1 all
+linux-doc/stable 6.1.55-1 all
+linux-headers-6.1.0-10-amd64/stable 6.1.38-2 amd64
+linux-headers-6.1.0-10-cloud-amd64/stable 6.1.38-2 amd64
+linux-headers-6.1.0-10-common-rt/stable 6.1.38-2 all
+linux-headers-6.1.0-10-common/stable 6.1.38-2 all
+linux-headers-6.1.0-10-rt-amd64/stable 6.1.38-2 amd64
 linux-headers-6.1.0-11-amd64/stable-security 6.1.38-4 amd64
 linux-headers-6.1.0-11-cloud-amd64/stable-security 6.1.38-4 amd64
 linux-headers-6.1.0-11-common-rt/stable-security 6.1.38-4 all
@@ -41044,23 +41045,23 @@ linux-headers-6.1.0-12-cloud-amd64/stable-security 6.1.52-1 amd64
 linux-headers-6.1.0-12-common-rt/stable-security 6.1.52-1 all
 linux-headers-6.1.0-12-common/stable-security 6.1.52-1 all
 linux-headers-6.1.0-12-rt-amd64/stable-security 6.1.52-1 amd64
-linux-headers-6.1.0-9-amd64/stable 6.1.27-1 amd64
-linux-headers-6.1.0-9-cloud-amd64/stable 6.1.27-1 amd64
-linux-headers-6.1.0-9-common-rt/stable 6.1.27-1 all
-linux-headers-6.1.0-9-common/stable 6.1.27-1 all
-linux-headers-6.1.0-9-rt-amd64/stable 6.1.27-1 amd64
-linux-headers-amd64/stable-security 6.1.52-1 amd64
-linux-headers-cloud-amd64/stable-security 6.1.52-1 amd64
-linux-headers-rt-amd64/stable-security 6.1.52-1 amd64
-linux-image-6.1.0-10-amd64-dbg/stable 6.1.38-1 amd64
-linux-image-6.1.0-10-amd64-unsigned/stable 6.1.38-1 amd64
-linux-image-6.1.0-10-amd64/stable 6.1.38-1 amd64
-linux-image-6.1.0-10-cloud-amd64-dbg/stable 6.1.38-1 amd64
-linux-image-6.1.0-10-cloud-amd64-unsigned/stable 6.1.38-1 amd64
-linux-image-6.1.0-10-cloud-amd64/stable 6.1.38-1 amd64
-linux-image-6.1.0-10-rt-amd64-dbg/stable 6.1.38-1 amd64
-linux-image-6.1.0-10-rt-amd64-unsigned/stable 6.1.38-1 amd64
-linux-image-6.1.0-10-rt-amd64/stable 6.1.38-1 amd64
+linux-headers-6.1.0-13-amd64/stable 6.1.55-1 amd64
+linux-headers-6.1.0-13-cloud-amd64/stable 6.1.55-1 amd64
+linux-headers-6.1.0-13-common-rt/stable 6.1.55-1 all
+linux-headers-6.1.0-13-common/stable 6.1.55-1 all
+linux-headers-6.1.0-13-rt-amd64/stable 6.1.55-1 amd64
+linux-headers-amd64/stable 6.1.55-1 amd64
+linux-headers-cloud-amd64/stable 6.1.55-1 amd64
+linux-headers-rt-amd64/stable 6.1.55-1 amd64
+linux-image-6.1.0-10-amd64-dbg/stable 6.1.38-2 amd64
+linux-image-6.1.0-10-amd64-unsigned/stable 6.1.38-2 amd64
+linux-image-6.1.0-10-amd64/stable 6.1.38-2 amd64
+linux-image-6.1.0-10-cloud-amd64-dbg/stable 6.1.38-2 amd64
+linux-image-6.1.0-10-cloud-amd64-unsigned/stable 6.1.38-2 amd64
+linux-image-6.1.0-10-cloud-amd64/stable 6.1.38-2 amd64
+linux-image-6.1.0-10-rt-amd64-dbg/stable 6.1.38-2 amd64
+linux-image-6.1.0-10-rt-amd64-unsigned/stable 6.1.38-2 amd64
+linux-image-6.1.0-10-rt-amd64/stable 6.1.38-2 amd64
 linux-image-6.1.0-11-amd64-dbg/stable-security 6.1.38-4 amd64
 linux-image-6.1.0-11-amd64-unsigned/stable-security 6.1.38-4 amd64
 linux-image-6.1.0-11-amd64/stable-security 6.1.38-4 amd64
@@ -41079,23 +41080,24 @@ linux-image-6.1.0-12-cloud-amd64/stable-security 6.1.52-1 amd64
 linux-image-6.1.0-12-rt-amd64-dbg/stable-security 6.1.52-1 amd64
 linux-image-6.1.0-12-rt-amd64-unsigned/stable-security 6.1.52-1 amd64
 linux-image-6.1.0-12-rt-amd64/stable-security 6.1.52-1 amd64
-linux-image-6.1.0-9-amd64-dbg/stable 6.1.27-1 amd64
-linux-image-6.1.0-9-amd64-unsigned/stable 6.1.27-1 amd64
-linux-image-6.1.0-9-amd64/stable,now 6.1.27-1 amd64 [installed,automatic]
-linux-image-6.1.0-9-cloud-amd64-dbg/stable 6.1.27-1 amd64
-linux-image-6.1.0-9-cloud-amd64-unsigned/stable 6.1.27-1 amd64
-linux-image-6.1.0-9-cloud-amd64/stable 6.1.27-1 amd64
-linux-image-6.1.0-9-rt-amd64-dbg/stable 6.1.27-1 amd64
-linux-image-6.1.0-9-rt-amd64-unsigned/stable 6.1.27-1 amd64
-linux-image-6.1.0-9-rt-amd64/stable 6.1.27-1 amd64
-linux-image-amd64-dbg/stable-security 6.1.52-1 amd64
-linux-image-amd64-signed-template/stable-security 6.1.52-1 amd64
-linux-image-amd64/stable-security,now 6.1.52-1 amd64 [installed]
-linux-image-cloud-amd64-dbg/stable-security 6.1.52-1 amd64
-linux-image-cloud-amd64/stable-security 6.1.52-1 amd64
-linux-image-rt-amd64-dbg/stable-security 6.1.52-1 amd64
-linux-image-rt-amd64/stable-security 6.1.52-1 amd64
-linux-kbuild-6.1/stable-security 6.1.52-1 amd64
+linux-image-6.1.0-13-amd64-dbg/stable 6.1.55-1 amd64
+linux-image-6.1.0-13-amd64-unsigned/stable 6.1.55-1 amd64
+linux-image-6.1.0-13-amd64/stable,now 6.1.55-1 amd64 [installed,automatic]
+linux-image-6.1.0-13-cloud-amd64-dbg/stable 6.1.55-1 amd64
+linux-image-6.1.0-13-cloud-amd64-unsigned/stable 6.1.55-1 amd64
+linux-image-6.1.0-13-cloud-amd64/stable 6.1.55-1 amd64
+linux-image-6.1.0-13-rt-amd64-dbg/stable 6.1.55-1 amd64
+linux-image-6.1.0-13-rt-amd64-unsigned/stable 6.1.55-1 amd64
+linux-image-6.1.0-13-rt-amd64/stable 6.1.55-1 amd64
+linux-image-6.1.0-9-amd64/now 6.1.27-1 amd64 [installed,local]
+linux-image-amd64-dbg/stable 6.1.55-1 amd64
+linux-image-amd64-signed-template/stable 6.1.55-1 amd64
+linux-image-amd64/stable,now 6.1.55-1 amd64 [installed]
+linux-image-cloud-amd64-dbg/stable 6.1.55-1 amd64
+linux-image-cloud-amd64/stable 6.1.55-1 amd64
+linux-image-rt-amd64-dbg/stable 6.1.55-1 amd64
+linux-image-rt-amd64/stable 6.1.55-1 amd64
+linux-kbuild-6.1/stable 6.1.55-1 amd64
 linux-libc-dev-alpha-cross/stable 6.1.4-1cross1 all
 linux-libc-dev-amd64-cross/stable 6.1.4-1cross1 all
 linux-libc-dev-arc-cross/stable 6.1.4-1cross1 all
@@ -41125,15 +41127,15 @@ linux-libc-dev-s390x-cross/stable 6.1.4-1cross1 all
 linux-libc-dev-sh4-cross/stable 6.1.4-1cross1 all
 linux-libc-dev-sparc64-cross/stable 6.1.4-1cross1 all
 linux-libc-dev-x32-cross/stable 6.1.4-1cross1 all
-linux-libc-dev/stable-security,now 6.1.52-1 amd64 [installed,automatic]
-linux-perf/stable-security 6.1.52-1 amd64
+linux-libc-dev/stable,now 6.1.55-1 amd64 [installed,automatic]
+linux-perf/stable 6.1.55-1 amd64
 linux-show-player/stable 0.5.3-1 all
-linux-source-6.1/stable-security 6.1.52-1 all
-linux-source/stable-security 6.1.52-1 all
-linux-support-6.1.0-10/stable 6.1.38-1 all
+linux-source-6.1/stable 6.1.55-1 all
+linux-source/stable 6.1.55-1 all
+linux-support-6.1.0-10/stable 6.1.38-2 all
 linux-support-6.1.0-11/stable-security 6.1.38-4 all
 linux-support-6.1.0-12/stable-security 6.1.52-1 all
-linux-support-6.1.0-9/stable 6.1.27-1 all
+linux-support-6.1.0-13/stable 6.1.55-1 all
 linuxcnc-doc-de/stable 2.9.0~pre1+git20230208.f1270d6ed7-1 all
 linuxcnc-doc-en/stable 2.9.0~pre1+git20230208.f1270d6ed7-1 all
 linuxcnc-doc-es/stable 2.9.0~pre1+git20230208.f1270d6ed7-1 all
@@ -41214,14 +41216,14 @@ lksctp-tools/stable 1.0.19+dfsg-2 amd64
 lld-13/stable 1:13.0.1-11+b2 amd64
 lld-14/stable 1:14.0.6-12 amd64
 lld-15/stable 1:15.0.6-4+b1 amd64
-lld/stable 1:14.0-55.6 amd64
+lld/stable 1:14.0-55.7~deb12u1 amd64
 lldb-13/stable 1:13.0.1-11+b2 amd64
 lldb-14/stable 1:14.0.6-12 amd64
 lldb-15/stable 1:15.0.6-4+b1 amd64
-lldb/stable 1:14.0-55.6 amd64
+lldb/stable 1:14.0-55.7~deb12u1 amd64
 lldpad-dev/stable 1.1+git20221028.aa18720-1 amd64
 lldpad/stable 1.1+git20221028.aa18720-1 amd64
-lldpd/stable-security 1.0.16-1+deb12u1 amd64
+lldpd/stable,stable-security 1.0.16-1+deb12u1 amd64
 llgal/stable 0.13.19-1.1 all
 llmnrd/stable 0.5-1+b1 amd64
 lloconv/stable 6.1.1-1 amd64
@@ -41249,11 +41251,11 @@ llvm-15-linker-tools/stable 1:15.0.6-4+b1 amd64
 llvm-15-runtime/stable 1:15.0.6-4+b1 amd64
 llvm-15-tools/stable 1:15.0.6-4+b1 amd64
 llvm-15/stable 1:15.0.6-4+b1 amd64
-llvm-dev/stable 1:14.0-55.6 amd64
-llvm-runtime/stable 1:14.0-55.6 amd64
+llvm-dev/stable 1:14.0-55.7~deb12u1 amd64
+llvm-runtime/stable 1:14.0-55.7~deb12u1 amd64
 llvm-spirv-14/stable 14.0.0-5 amd64
 llvm-spirv-15/stable 15.0.0-2 amd64
-llvm/stable 1:14.0-55.6 amd64
+llvm/stable 1:14.0-55.7~deb12u1 amd64
 llvmlite-doc/stable 0.39.1-2 all
 lm-sensors/stable,now 1:3.6.0-7.1 amd64 [installed,automatic]
 lm4flash/stable 3:0.1.3-1+b1 amd64
@@ -41421,7 +41423,7 @@ ltpanel/stable 0.2-8 amd64
 ltrace/stable 0.7.3-6.4 amd64
 ltris/stable 1.0.19-3+b1 amd64
 ltrsift/stable 1.0.2-9+b1 amd64
-ltsp/stable 23.02-1 all
+ltsp/stable 23.02-1+deb12u1 all
 lttng-modules-dkms/stable 2.13.9-1 all
 lttng-tools/stable 2.13.9-1+b1 amd64
 lttoolbox-dev/stable 3.7.1-1+b2 amd64
@@ -41653,11 +41655,11 @@ lxappearance-dbg/stable 0.6.3-1+b2 amd64
 lxappearance-obconf-dbg/stable 0.2.3-1+b2 amd64
 lxappearance-obconf/stable 0.2.3-1+b2 amd64
 lxappearance/stable,now 0.6.3-1+b2 amd64 [installed]
-lxc-dev/stable 1:5.0.2-1 amd64
+lxc-dev/stable 1:5.0.2-1+deb12u1 amd64
 lxc-templates/stable 3.0.4.48.g4765da8-1 amd64
-lxc-tests/stable 1:5.0.2-1 amd64
-lxc/stable 1:5.0.2-1 amd64
-lxcfs/stable 5.0.3-1 amd64
+lxc-tests/stable 1:5.0.2-1+deb12u1 amd64
+lxc/stable 1:5.0.2-1+deb12u1 amd64
+lxcfs/stable 5.0.3-1+deb12u1 amd64
 lxctl/stable 0.3.1+debian-5 all
 lxd-agent/stable 5.0.2-5 amd64
 lxd-client/stable 5.0.2-5 amd64
@@ -41963,33 +41965,34 @@ marble-plugins/stable 4:22.12.3-1 amd64
 marble-qt-data/stable 4:22.12.3-1 all
 marble-qt/stable 4:22.12.3-1 amd64
 marble/stable 4:22.12.3-1 amd64
-marco-common/stable 1.26.1-3+deb12u1 all
-marco/stable 1.26.1-3+deb12u1 amd64
+marco-common/stable 1.26.1-3+deb12u2 all
+marco/stable 1.26.1-3+deb12u2 amd64
 maria-doc/stable 1.3.5-4.1 all
 maria/stable 1.3.5-4.1+b2 amd64
-mariadb-backup/stable 1:10.11.3-1 amd64
-mariadb-client-core/stable 1:10.11.3-1 amd64
-mariadb-client/stable 1:10.11.3-1 amd64
-mariadb-common/stable 1:10.11.3-1 all
-mariadb-plugin-connect/stable 1:10.11.3-1 amd64
-mariadb-plugin-cracklib-password-check/stable 1:10.11.3-1 amd64
-mariadb-plugin-gssapi-client/stable 1:10.11.3-1 amd64
-mariadb-plugin-gssapi-server/stable 1:10.11.3-1 amd64
-mariadb-plugin-hashicorp-key-management/stable 1:10.11.3-1 amd64
-mariadb-plugin-mroonga/stable 1:10.11.3-1 amd64
-mariadb-plugin-oqgraph/stable 1:10.11.3-1 amd64
-mariadb-plugin-provider-bzip2/stable 1:10.11.3-1 amd64
-mariadb-plugin-provider-lz4/stable 1:10.11.3-1 amd64
-mariadb-plugin-provider-lzma/stable 1:10.11.3-1 amd64
-mariadb-plugin-provider-lzo/stable 1:10.11.3-1 amd64
-mariadb-plugin-provider-snappy/stable 1:10.11.3-1 amd64
-mariadb-plugin-rocksdb/stable 1:10.11.3-1 amd64
-mariadb-plugin-s3/stable 1:10.11.3-1 amd64
-mariadb-plugin-spider/stable 1:10.11.3-1 amd64
-mariadb-server-core/stable 1:10.11.3-1 amd64
-mariadb-server/stable 1:10.11.3-1 amd64
-mariadb-test-data/stable 1:10.11.3-1 all
-mariadb-test/stable 1:10.11.3-1 amd64
+mariadb-backup/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-client-core/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-client/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-common/stable 1:10.11.4-1~deb12u1 all
+mariadb-plugin-connect/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-cracklib-password-check/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-gssapi-client/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-gssapi-server/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-hashicorp-key-management/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-mroonga/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-oqgraph/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-provider-bzip2/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-provider-lz4/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-provider-lzma/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-provider-lzo/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-provider-snappy/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-rocksdb/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-s3/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-plugin-spider/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-server-10.5/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-server-core/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-server/stable 1:10.11.4-1~deb12u1 amd64
+mariadb-test-data/stable 1:10.11.4-1~deb12u1 all
+mariadb-test/stable 1:10.11.4-1~deb12u1 amd64
 marisa/stable 0.2.6-13+b1 amd64
 markdent/stable 0.40-1 all
 markdown-unlit/stable 0.5.1-1+b1 amd64
@@ -42057,8 +42060,8 @@ mate-menu/stable 22.04.2-1 all
 mate-menus/stable 1.26.0-3 all
 mate-netbook-common/stable 1.26.0-1 all
 mate-netbook/stable 1.26.0-1 amd64
-mate-notification-daemon-common/stable 1.26.0-1 all
-mate-notification-daemon/stable 1.26.0-1 amd64
+mate-notification-daemon-common/stable 1.26.0-1+deb12u1 all
+mate-notification-daemon/stable 1.26.0-1+deb12u1 amd64
 mate-panel-common/stable 1.27.0-1 all
 mate-panel/stable 1.27.0-1 amd64
 mate-polkit-bin/stable 1.26.1-3 all
@@ -42331,9 +42334,9 @@ mffm-fftw1/stable 1.7-4.1 amd64
 mfoc/stable 0.10.7+git20180724-2 amd64
 mftrace/stable 1.2.20+git20191022.3b4bc2e-3 amd64
 mg/stable 20221112-1 amd64
-mgba-common/stable 0.10.1+dfsg-1 all
-mgba-qt/stable 0.10.1+dfsg-1 amd64
-mgba-sdl/stable 0.10.1+dfsg-1 amd64
+mgba-common/stable 0.10.1+dfsg-1+deb12u1 all
+mgba-qt/stable 0.10.1+dfsg-1+deb12u1 amd64
+mgba-sdl/stable 0.10.1+dfsg-1+deb12u1 amd64
 mgdiff/stable 1.0+debian1-1 amd64
 mgen-doc/stable 5.02.b+dfsg1-2.2 all
 mgen/stable 5.02.b+dfsg1-2.2 amd64
@@ -42665,14 +42668,14 @@ mongoose/stable 1:5.12.0+dfsg-2 amd64
 mongrel2-core/stable 1.12.2-3+b1 amd64
 mongrel2-run/stable 1.12.2-3 all
 monit/stable 1:5.33.0-1 amd64
-monitoring-plugins-basic/stable 2.3.3-5 amd64
+monitoring-plugins-basic/stable 2.3.3-5+deb12u1 amd64
 monitoring-plugins-btrfs/stable 13-1 all
 monitoring-plugins-check-logfiles/stable 4.1.1-3 all
-monitoring-plugins-common/stable 2.3.3-5 amd64
+monitoring-plugins-common/stable 2.3.3-5+deb12u1 amd64
 monitoring-plugins-contrib/stable 42.20230308 amd64
-monitoring-plugins-standard/stable 2.3.3-5 amd64
+monitoring-plugins-standard/stable 2.3.3-5+deb12u1 amd64
 monitoring-plugins-systemd/stable 2.3.1-4 all
-monitoring-plugins/stable 2.3.3-5 all
+monitoring-plugins/stable 2.3.3-5+deb12u1 all
 monitorix/stable 3.15.0-1 all
 mono-4.0-gac/stable 6.8.0.105+dfsg-3.3 all
 mono-4.0-service/stable 6.8.0.105+dfsg-3.3 all
@@ -43056,7 +43059,7 @@ mustang-testdata/stable 3.2.4-1 all
 mustang/stable 3.2.4-1 amd64
 mutt-vc-query/stable 005-2 amd64
 mutt-wizard/stable 3.3.1-2 all
-mutt/stable-security 2.2.9-1+deb12u1 amd64
+mutt/stable 2.2.12-0.1~deb12u1 amd64
 mutter-11-tests/stable 43.6-1~deb12u1 amd64
 mutter-common/stable 43.6-1~deb12u1 all
 mutter/stable 43.6-1~deb12u1 amd64
@@ -43284,7 +43287,7 @@ ncl-tools/stable 2.1.21+git20210811.b1213a7-4 amd64
 ncmpc-lyrics/stable 0.47-2 all
 ncmpc/stable 0.47-2 amd64
 ncmpcpp/stable 0.9.2-2+b3 amd64
-nco/stable 5.1.4-1 amd64
+nco/stable 5.1.4-1+deb12u1 amd64
 ncoils/stable 2002-9 amd64
 ncompress/stable 4.2.4.6-6 amd64
 ncrack/stable 0.7+debian-4 amd64
@@ -43516,7 +43519,7 @@ nfs4-acl-tools/stable 0.3.7-1 amd64
 nfstrace-doc/stable 0.4.3.2+git20200805+b220d04-2.2 all
 nfstrace/stable 0.4.3.2+git20200805+b220d04-2.2 amd64
 nfswatch/stable 4.99.12-1 amd64
-nftables/stable,now 1.0.6-2+deb12u1 amd64 [installed]
+nftables/stable,now 1.0.6-2+deb12u2 amd64 [installed]
 nftlb/stable 1.0.7-1 amd64
 ng-cjk-canna/stable 1.5~beta1-10+b1 amd64
 ng-cjk/stable 1.5~beta1-10+b1 amd64
@@ -44018,7 +44021,7 @@ node-dompurify/stable 2.4.1+dfsg+~2.4.0-1 all
 node-domutils/stable 3.0.1-3 all
 node-dot-prop/stable 7.2.0-3 all
 node-dot/stable 1.1.3+ds-2 all
-node-dottie/stable 2.0.2-4 all
+node-dottie/stable 2.0.2-4+deb12u1 all
 node-dryice/stable 0.4.11-2 all
 node-dtrace-provider/stable 0.8.8-3 all
 node-duplexer3/stable 1.0.0+~0.1.1-2 all
@@ -45277,14 +45280,14 @@ ntfs-3g/stable,now 1:2022.10.3-1+b1 amd64 [installed,automatic]
 ntfs2btrfs/stable 20220812-1 amd64
 nthash/stable 2.3.0+dfsg-1 amd64
 ntldd/stable 0.2-3 all
-ntp-doc/stable-security 1:4.2.8p15+dfsg-2~1.2.2+dfsg1-1+deb12u1 all
-ntp/stable-security 1:4.2.8p15+dfsg-2~1.2.2+dfsg1-1+deb12u1 all
-ntpdate/stable-security 1:4.2.8p15+dfsg-2~1.2.2+dfsg1-1+deb12u1 all
-ntpsec-doc/stable-security 1.2.2+dfsg1-1+deb12u1 all
-ntpsec-ntpdate/stable-security 1.2.2+dfsg1-1+deb12u1 amd64
-ntpsec-ntpdig/stable-security 1.2.2+dfsg1-1+deb12u1 amd64
-ntpsec-ntpviz/stable-security 1.2.2+dfsg1-1+deb12u1 amd64
-ntpsec/stable-security 1.2.2+dfsg1-1+deb12u1 amd64
+ntp-doc/stable,stable-security 1:4.2.8p15+dfsg-2~1.2.2+dfsg1-1+deb12u1 all
+ntp/stable,stable-security 1:4.2.8p15+dfsg-2~1.2.2+dfsg1-1+deb12u1 all
+ntpdate/stable,stable-security 1:4.2.8p15+dfsg-2~1.2.2+dfsg1-1+deb12u1 all
+ntpsec-doc/stable,stable-security 1.2.2+dfsg1-1+deb12u1 all
+ntpsec-ntpdate/stable,stable-security 1.2.2+dfsg1-1+deb12u1 amd64
+ntpsec-ntpdig/stable,stable-security 1.2.2+dfsg1-1+deb12u1 amd64
+ntpsec-ntpviz/stable,stable-security 1.2.2+dfsg1-1+deb12u1 amd64
+ntpsec/stable,stable-security 1.2.2+dfsg1-1+deb12u1 amd64
 ntpstat/stable 0.0.0.1-2+b1 amd64
 nudoku/stable 2.1.0-0.1+b2 amd64
 nuget/stable 2.8.7+md510+dhx1-1.1 all
@@ -45344,19 +45347,19 @@ nwchem-mpich/stable 7.0.2-4 amd64
 nwchem-openmpi/stable 7.0.2-4 amd64
 nwchem/stable 7.0.2-4 all
 nwipe/stable 0.34-1+b1 amd64
-nx-x11-common/stable 2:3.5.99.26-5 all
-nx-x11proto-composite-dev/stable 2:3.5.99.26-5+b1 amd64
-nx-x11proto-core-dev/stable 2:3.5.99.26-5+b1 amd64
-nx-x11proto-damage-dev/stable 2:3.5.99.26-5+b1 amd64
-nx-x11proto-randr-dev/stable 2:3.5.99.26-5+b1 amd64
-nx-x11proto-render-dev/stable 2:3.5.99.26-5+b1 amd64
-nx-x11proto-scrnsaver-dev/stable 2:3.5.99.26-5+b1 amd64
-nx-x11proto-xext-dev/stable 2:3.5.99.26-5+b1 amd64
-nx-x11proto-xfixes-dev/stable 2:3.5.99.26-5+b1 amd64
-nx-x11proto-xinerama-dev/stable 2:3.5.99.26-5+b1 amd64
-nxagent/stable 2:3.5.99.26-5+b1 amd64
-nxdialog/stable 2:3.5.99.26-5 all
-nxproxy/stable 2:3.5.99.26-5+b1 amd64
+nx-x11-common/stable 2:3.5.99.26-5+deb12u1 all
+nx-x11proto-composite-dev/stable 2:3.5.99.26-5+deb12u1 amd64
+nx-x11proto-core-dev/stable 2:3.5.99.26-5+deb12u1 amd64
+nx-x11proto-damage-dev/stable 2:3.5.99.26-5+deb12u1 amd64
+nx-x11proto-randr-dev/stable 2:3.5.99.26-5+deb12u1 amd64
+nx-x11proto-render-dev/stable 2:3.5.99.26-5+deb12u1 amd64
+nx-x11proto-scrnsaver-dev/stable 2:3.5.99.26-5+deb12u1 amd64
+nx-x11proto-xext-dev/stable 2:3.5.99.26-5+deb12u1 amd64
+nx-x11proto-xfixes-dev/stable 2:3.5.99.26-5+deb12u1 amd64
+nx-x11proto-xinerama-dev/stable 2:3.5.99.26-5+deb12u1 amd64
+nxagent/stable 2:3.5.99.26-5+deb12u1 amd64
+nxdialog/stable 2:3.5.99.26-5+deb12u1 all
+nxproxy/stable 2:3.5.99.26-5+deb12u1 amd64
 nxt-firmware/stable 1.29.2-1 all
 nxtrim/stable 0.4.3+dfsg-3 amd64
 nyacc/stable 1.00.2-5 amd64
@@ -45682,12 +45685,12 @@ open-isns-utils/stable 0.101-0.2+b1 amd64
 open-jtalk-mecab-naist-jdic/stable 1.11-3 all
 open-jtalk/stable 1.11-3 amd64
 open-roms/stable 0.0~git20210824.e4e324c-1 all
-open-vm-tools-containerinfo/stable-security 2:12.2.0-1+deb12u1 amd64
-open-vm-tools-desktop/stable-security 2:12.2.0-1+deb12u1 amd64
-open-vm-tools-dev/stable-security 2:12.2.0-1+deb12u1 amd64
-open-vm-tools-salt-minion/stable-security 2:12.2.0-1+deb12u1 amd64
-open-vm-tools-sdmp/stable-security 2:12.2.0-1+deb12u1 amd64
-open-vm-tools/stable-security 2:12.2.0-1+deb12u1 amd64
+open-vm-tools-containerinfo/stable,stable-security 2:12.2.0-1+deb12u1 amd64
+open-vm-tools-desktop/stable,stable-security 2:12.2.0-1+deb12u1 amd64
+open-vm-tools-dev/stable,stable-security 2:12.2.0-1+deb12u1 amd64
+open-vm-tools-salt-minion/stable,stable-security 2:12.2.0-1+deb12u1 amd64
+open-vm-tools-sdmp/stable,stable-security 2:12.2.0-1+deb12u1 amd64
+open-vm-tools/stable,stable-security 2:12.2.0-1+deb12u1 amd64
 open3d-doc/stable 0.16.1+ds-2 all
 open3d-gui-data/stable 0.16.1+ds-2 all
 open3d-gui/stable 0.16.1+ds-2+b4 amd64
@@ -45724,7 +45727,7 @@ openbox-gnome-session/stable 3.6.1-10 all
 openbox-kde-session/stable 3.6.1-10 all
 openbox-lxde-session/stable 0.99.2-4 all
 openbox/stable 3.6.1-10 amd64
-openbsd-inetd/stable 0.20221205-1 amd64
+openbsd-inetd/stable 0.20221205-2~deb12u1 amd64
 opencc/stable 1.1.6+ds1-1 amd64
 opencfu/stable 4.0.0+dfsg-2 amd64
 openchrome-tool/stable 1:0.6.0-5 amd64
@@ -45796,15 +45799,15 @@ openiked/stable 7.2-1 amd64
 openimageio-tools/stable 2.4.7.1+dfsg-2 amd64
 openipmi/stable 2.0.33-1+b1 amd64
 openjade/stable,now 1.4devel1-22 amd64 [installed,automatic]
-openjdk-17-dbg/stable-security 17.0.8+7-1~deb12u1 amd64
-openjdk-17-demo/stable-security 17.0.8+7-1~deb12u1 amd64
-openjdk-17-doc/stable-security 17.0.8+7-1~deb12u1 all
-openjdk-17-jdk-headless/stable-security 17.0.8+7-1~deb12u1 amd64
-openjdk-17-jdk/stable-security 17.0.8+7-1~deb12u1 amd64
-openjdk-17-jre-headless/stable-security,now 17.0.8+7-1~deb12u1 amd64 [installed,automatic]
-openjdk-17-jre-zero/stable-security 17.0.8+7-1~deb12u1 amd64
-openjdk-17-jre/stable-security,now 17.0.8+7-1~deb12u1 amd64 [installed,automatic]
-openjdk-17-source/stable-security 17.0.8+7-1~deb12u1 all
+openjdk-17-dbg/stable,stable-security 17.0.8+7-1~deb12u1 amd64
+openjdk-17-demo/stable,stable-security 17.0.8+7-1~deb12u1 amd64
+openjdk-17-doc/stable,stable-security 17.0.8+7-1~deb12u1 all
+openjdk-17-jdk-headless/stable,stable-security 17.0.8+7-1~deb12u1 amd64
+openjdk-17-jdk/stable,stable-security 17.0.8+7-1~deb12u1 amd64
+openjdk-17-jre-headless/stable,stable-security,now 17.0.8+7-1~deb12u1 amd64 [installed,automatic]
+openjdk-17-jre-zero/stable,stable-security 17.0.8+7-1~deb12u1 amd64
+openjdk-17-jre/stable,stable-security,now 17.0.8+7-1~deb12u1 amd64 [installed,automatic]
+openjdk-17-source/stable,stable-security 17.0.8+7-1~deb12u1 all
 openjfx-source/stable 11.0.11+1-3 all
 openjfx/stable 11.0.11+1-3 amd64
 openjpeg-doc/stable 2.5.0-2 all
@@ -45862,7 +45865,7 @@ openrazer-doc/stable 3.5.1+dfsg-2 all
 openrazer-driver-dkms/stable 3.5.1+dfsg-2 all
 openrazer-meta/stable 3.5.1+dfsg-2 all
 openrc/stable 0.45.2-2 amd64
-openrefine/stable 3.6.2-2 all
+openrefine/stable 3.6.2-2+deb12u1 all
 openresolv/stable 3.12.0-3 all
 opensaml-schemas/stable 3.2.1-3 all
 opensaml-tools/stable 3.2.1-3 amd64
@@ -45873,10 +45876,10 @@ openscad-mcad/stable 2019.05-1 all
 openscad-testing-data/stable 2021.01-6 all
 openscad-testing/stable 2021.01-6 amd64
 openscad/stable 2021.01-6 amd64
-openscap-common/stable 1.3.7+dfsg-1 all
-openscap-doc/stable 1.3.7+dfsg-1 all
-openscap-scanner/stable 1.3.7+dfsg-1+b1 amd64
-openscap-utils/stable 1.3.7+dfsg-1+b1 amd64
+openscap-common/stable 1.3.7+dfsg-1+deb12u1 all
+openscap-doc/stable 1.3.7+dfsg-1+deb12u1 all
+openscap-scanner/stable 1.3.7+dfsg-1+deb12u1 amd64
+openscap-utils/stable 1.3.7+dfsg-1+deb12u1 amd64
 openscenegraph-doc/stable 3.6.5+dfsg1-8 all
 openscenegraph-examples/stable 3.6.5+dfsg1-8 all
 openscenegraph/stable 3.6.5+dfsg1-8+b2 amd64
@@ -45895,12 +45898,12 @@ opensmtpd/stable 6.8.0p2-4+b4 amd64
 opensnitch/stable 1.5.8.1-1+b2 amd64
 opensp/stable 1.5.2-13+b2 amd64
 openssh-client-ssh1/stable 1:7.5p1-14 amd64
-openssh-client/stable,now 1:9.2p1-2 amd64 [installed]
+openssh-client/stable,now 1:9.2p1-2+deb12u1 amd64 [installed]
 openssh-known-hosts/stable 0.6.2-1.1 all
-openssh-server/stable,now 1:9.2p1-2 amd64 [installed,automatic]
-openssh-sftp-server/stable,now 1:9.2p1-2 amd64 [installed,automatic]
-openssh-tests/stable 1:9.2p1-2 amd64
-openssl/stable,now 3.0.9-1 amd64 [installed,automatic]
+openssh-server/stable,now 1:9.2p1-2+deb12u1 amd64 [installed,automatic]
+openssh-sftp-server/stable,now 1:9.2p1-2+deb12u1 amd64 [installed,automatic]
+openssh-tests/stable 1:9.2p1-2+deb12u1 amd64
+openssl/stable,now 3.0.11-1~deb12u1 amd64 [installed,automatic]
 openssn-data/stable 1.4-4 all
 openssn/stable 1.4-4 amd64
 opensta-dev/stable 0~20191111gitc018cb2+dfsg-1 amd64
@@ -45916,9 +45919,9 @@ openstack-cluster-installer-poc/stable 42.2.5 all
 openstack-cluster-installer-utils/stable 42.2.5 all
 openstack-cluster-installer/stable 42.2.5 all
 openstack-compute-node/stable 0.34 all
-openstack-dashboard-apache/stable 3:23.0.0-5 all
+openstack-dashboard-apache/stable 3:23.0.0-5+deb12u1 all
 openstack-dashboard-debian-theme/stable 1.0.1 all
-openstack-dashboard/stable 3:23.0.0-5 all
+openstack-dashboard/stable 3:23.0.0-5+deb12u1 all
 openstack-debian-images-build-farm/stable 1.73 amd64
 openstack-debian-images-updater/stable 1.73 all
 openstack-debian-images/stable 1.73 amd64
@@ -46009,9 +46012,9 @@ original-awk/stable 2022-09-12-1 amd64
 ormolu/stable 0.3.1.0-1+b2 amd64
 orphan-sysvinit-scripts/stable 0.14 all
 orpie/stable 1.6.1-1+b2 amd64
-orthanc-dev/stable-security 1.10.1+dfsg-2+deb12u1 amd64
+orthanc-dev/stable,stable-security 1.10.1+dfsg-2+deb12u1 amd64
 orthanc-dicomweb/stable 1.7+dfsg-6 amd64
-orthanc-doc/stable-security 1.10.1+dfsg-2+deb12u1 all
+orthanc-doc/stable,stable-security 1.10.1+dfsg-2+deb12u1 all
 orthanc-gdcm/stable 1.5-1+b3 amd64
 orthanc-imagej/stable 1.2+dfsg-3 all
 orthanc-mysql/stable 4.3-3+b3 amd64
@@ -46020,7 +46023,7 @@ orthanc-postgresql/stable 4.0-7+b2 amd64
 orthanc-python/stable 4.0+ds-1+b5 amd64
 orthanc-webviewer/stable 2.8-2+b1 amd64
 orthanc-wsi/stable 1.1-4+b4 amd64
-orthanc/stable-security 1.10.1+dfsg-2+deb12u1 amd64
+orthanc/stable,stable-security 1.10.1+dfsg-2+deb12u1 amd64
 os-autoinst/stable 4.6.1674476646.0798a03c-6 amd64
 os-brick-common/stable 6.1.0-3 all
 os-prober/stable,now 1.81 amd64 [installed]
@@ -46222,10 +46225,10 @@ pan-tomography/stable 0.4 all
 pan-xas/stable 0.4 all
 pan/stable 0.154-1 amd64
 pandoc-citeproc-preamble/stable 1.7-1 amd64
-pandoc-data/stable 2.17.1.1-1.1 all
+pandoc-data/stable 2.17.1.1-2~deb12u1 all
 pandoc-plantuml-filter/stable 0.1.1-4 all
 pandoc-sidenote/stable 0.22.1.0-2+b4 amd64
-pandoc/stable 2.17.1.1-1.1 amd64
+pandoc/stable 2.17.1.1-2~deb12u1 amd64
 pandorafms-agent/stable 4.1-1.1 all
 pango1.0-tests/stable 1.50.12+ds-1 amd64
 pango1.0-tools/stable 1.50.12+ds-1 amd64
@@ -46273,11 +46276,11 @@ pari-gp2c/stable 0.0.13-1 amd64
 pari-gp/stable 2.15.2-1 amd64
 pari-nflistdata/stable 0.20220729-2 all
 pari-seadata/stable 0.20090618-3 all
-parl-data/stable 1.9.31 all
-parl-desktop-eu/stable 1.9.31 all
-parl-desktop-strict/stable 1.9.31 all
-parl-desktop-world/stable 1.9.31 all
-parl-desktop/stable 1.9.31 all
+parl-data/stable 1.9.31+deb12u1 all
+parl-desktop-eu/stable 1.9.31+deb12u1 all
+parl-desktop-strict/stable 1.9.31+deb12u1 all
+parl-desktop-world/stable 1.9.31+deb12u1 all
+parl-desktop/stable 1.9.31+deb12u1 all
 parlatype/stable 3.1-2 amd64
 parley-data/stable 4:22.12.3-1 all
 parley/stable 4:22.12.3-1 amd64
@@ -46964,7 +46967,7 @@ php-http-psr7-integration-tests/stable 1.1.1-3 all
 php-http-webdav-server/stable 1.0.0RC8-1.1 all
 php-http/stable 4.2.3-3.1 amd64
 php-httpful/stable 0.3.2-2 all
-php-icinga/stable 2.11.4-2 all
+php-icinga/stable 2.11.4-2+deb12u1 all
 php-igbinary-all-dev/stable 3.2.13-1 all
 php-igbinary/stable 3.2.13-1 amd64
 php-illuminate-auth/stable 8.83.26+dfsg-2 all
@@ -47705,7 +47708,7 @@ plasma-discover-common/stable 5.27.5-2 all
 plasma-discover/stable 5.27.5-2 amd64
 plasma-disks/stable 5.27.5-2 amd64
 plasma-firewall/stable 5.27.5-2 amd64
-plasma-framework/stable 5.103.0-1 amd64
+plasma-framework/stable 5.103.0-1+deb12u1 amd64
 plasma-gamemode/stable 0.0~git20220224.3adea2bd-2 amd64
 plasma-gmailfeed/stable 1.2-1 amd64
 plasma-integration/stable 5.27.5-2 amd64
@@ -47733,11 +47736,11 @@ plasma-wayland-protocols/stable 1.10.0-1 amd64
 plasma-welcome/stable 5.27.5-2 amd64
 plasma-widget-foreigncurrencies/stable 8.1.1-2 all
 plasma-widgets-addons/stable 4:5.27.5-2 amd64
-plasma-workspace-data/stable 4:5.27.5-2 all
-plasma-workspace-dev/stable 4:5.27.5-2 amd64
+plasma-workspace-data/stable 4:5.27.5-2+deb12u1 all
+plasma-workspace-dev/stable 4:5.27.5-2+deb12u1 amd64
 plasma-workspace-wallpapers/stable 4:5.27.5-2 all
-plasma-workspace-wayland/stable 4:5.27.5-2 amd64
-plasma-workspace/stable 4:5.27.5-2 amd64
+plasma-workspace-wayland/stable 4:5.27.5-2+deb12u1 amd64
+plasma-workspace/stable 4:5.27.5-2+deb12u1 amd64
 plasmidid/stable 1.6.5+dfsg-2 amd64
 plasmidomics/stable 0.2.0-10 all
 plasmidseeker/stable 1.3+dfsg-3 amd64
@@ -48837,7 +48840,7 @@ python-django-csp-doc/stable 3.7-3 all
 python-django-debreach-doc/stable 2.1.0-2 all
 python-django-debug-toolbar-doc/stable 1:3.8.1-1 all
 python-django-dirtyfields-doc/stable 1.3.1-4 all
-python-django-doc/stable-security 3:3.2.19-1+deb12u1 all
+python-django-doc/stable,stable-security 3:3.2.19-1+deb12u1 all
 python-django-etcd-settings-doc/stable 0.1.13+dfsg-4 all
 python-django-extensions-doc/stable 3.2.1-2 all
 python-django-extra-views-doc/stable 0.14.0-3 all
@@ -48955,7 +48958,7 @@ python-geoalchemy2-doc/stable 0.12.5-1 all
 python-getdns-doc/stable 1.0.0~b1-5 all
 python-gevent-doc/stable 22.10.2-3 all
 python-gi-dev/stable 3.42.2-3+b1 amd64
-python-git-doc/stable 3.1.30-1 all
+python-git-doc/stable 3.1.30-1+deb12u2 all
 python-gitlab-doc/stable 1:3.12.0-1 all
 python-glance-store-doc/stable 4.1.0-4 all
 python-glanceclient-doc/stable 1:4.1.0-2 all
@@ -49849,7 +49852,7 @@ python3-breezy/stable 3.3.2-3 amd64
 python3-brial/stable 1.2.11-2.1 amd64
 python3-brian-lib/stable 2.5.1-3 amd64
 python3-brian/stable 2.5.1-3 all
-python3-brlapi/stable,now 6.5-7 amd64 [installed,automatic]
+python3-brlapi/stable,now 6.5-7+deb12u1 amd64 [installed,automatic]
 python3-broker/stable 1.4.0+ds1-1+b2 amd64
 python3-brotli/stable 1.0.9-2+b6 amd64
 python3-bs4/stable 4.11.2-2 all
@@ -49883,7 +49886,7 @@ python3-cairo-dev/stable 1.20.1-5 all
 python3-cairo-doc/stable 1.20.1-5 all
 python3-cairo/stable,now 1.20.1-5+b1 amd64 [installed,automatic]
 python3-cairocffi/stable 1.4.0-1 all
-python3-cairosvg/stable 2.5.2-1.1 all
+python3-cairosvg/stable 2.5.2-1.1+deb12u1 all
 python3-caja/stable 1.26.0-1+b2 amd64
 python3-caldav/stable 0.11.0-1 all
 python3-calmjs.parse/stable 1.2.5-2 all
@@ -49985,7 +49988,7 @@ python3-ck/stable 1.9.4-1.1 all
 python3-clang-13/stable 1:13.0.1-11+b2 amd64
 python3-clang-14/stable 1:14.0.6-12 amd64
 python3-clang-15/stable 1:15.0.6-4+b1 amd64
-python3-clang/stable 1:14.0-55.6 amd64
+python3-clang/stable 1:14.0-55.7~deb12u1 amd64
 python3-clap/stable 0.14.0-3 all
 python3-cleo/stable 2.0.1-5 all
 python3-clevercsv-doc/stable 0.7.5+ds-1 all
@@ -50334,7 +50337,7 @@ python3-django-guardian/stable 2.4.0-2 all
 python3-django-haystack-redis/stable 0.0.1-2 all
 python3-django-haystack/stable 3.2.1-1 all
 python3-django-health-check/stable 3.17.0-1 all
-python3-django-horizon/stable 3:23.0.0-5 all
+python3-django-horizon/stable 3:23.0.0-5+deb12u1 all
 python3-django-housekeeping/stable 1.2-2 all
 python3-django-hyperkitty/stable 1.3.7-1 all
 python3-django-ical/stable 1.8.3-4 all
@@ -50433,7 +50436,7 @@ python3-django-webpack-loader/stable 0.6.0-4 all
 python3-django-wkhtmltopdf/stable 3.4.0-1 all
 python3-django-xmlrpc/stable 0.1.8-4 all
 python3-django-yarnpkg/stable 6.1.0-1 all
-python3-django/stable-security 3:3.2.19-1+deb12u1 all
+python3-django/stable,stable-security 3:3.2.19-1+deb12u1 all
 python3-djangorestframework-api-key/stable 2.0.0-4 all
 python3-djangorestframework-extensions/stable 0.7.1-2 all
 python3-djangorestframework-filters/stable 1.0.0.dev2-2 all
@@ -50494,7 +50497,7 @@ python3-dotty-dict/stable 1.3.1-2 all
 python3-doubleratchet/stable 1.0.3-1 all
 python3-doxypypy/stable 0.8.8.6-5 all
 python3-dpkt/stable 1.9.8-1 all
-python3-dput/stable 1.35 all
+python3-dput/stable 1.35+deb12u1 all
 python3-dracclient/stable 3.1.0-3 all
 python3-drgn/stable 0.0.22-1 amd64
 python3-drizzle/stable 1.13.4-1+b3 amd64
@@ -50540,7 +50543,7 @@ python3-efilter/stable 1.5-2.1 all
 python3-einsteinpy/stable 0.4.0-2 all
 python3-elasticsearch-curator/stable 5.8.1-4.1 all
 python3-elasticsearch/stable 7.17.6-1 all
-python3-electrum/stable 4.3.4+dfsg1-1 all
+python3-electrum/stable 4.3.4+dfsg1-1+deb12u1 all
 python3-elementpath/stable 2.5.3-1 all
 python3-elgato-streamdeck/stable 0.9.1+ds-1 all
 python3-eliot/stable 1.13.0-1 all
@@ -50658,7 +50661,7 @@ python3-findpython/stable 0.2.4-1 all
 python3-fingerprints/stable 1.1.0-1 all
 python3-fiona/stable 1.9.0-1 amd64
 python3-fire/stable 0.5.0-1 all
-python3-firewall/stable 1.3.0-1 all
+python3-firewall/stable 1.3.3-1~deb12u1 all
 python3-first/stable 2.0.0-3 all
 python3-fissix/stable 21.6.6-3 all
 python3-fisx/stable 1.2.0-2+b4 amd64
@@ -50859,7 +50862,7 @@ python3-git-big-picture/stable 1.2.2-1 all
 python3-git-delete-merged-branches/stable 7.4.0-1 all
 python3-git-os-job/stable 1.0.1-4 all
 python3-git-repo-updater/stable 0.5.1-4 all
-python3-git/stable 3.1.30-1 all
+python3-git/stable 3.1.30-1+deb12u2 all
 python3-gitdb/stable 4.0.9-2 all
 python3-github/stable 1.55-3 all
 python3-gitlab/stable 1:3.12.0-1 all
@@ -50997,7 +51000,7 @@ python3-hisat2/stable 2.2.1-4 all
 python3-hivex/stable 1.3.23-1+b1 amd64
 python3-hkdf/stable 0.0.3-5 all
 python3-hl7/stable 0.4.5-1 all
-python3-hnswlib/stable 0.6.2-2+b2 amd64
+python3-hnswlib/stable 0.6.2-2+deb12u1 amd64
 python3-holidays/stable 0.10.1-3 all
 python3-home-assistant-bluetooth/stable 1.10.0-1 amd64
 python3-hpack/stable 4.0.0-2 all
@@ -51264,8 +51267,8 @@ python3-ldap3/stable 2.9.1-2 all
 python3-ldap/stable 3.4.3-2+b2 amd64
 python3-ldapdomaindump/stable 0.9.3-2 all
 python3-ldappool/stable 3.0.0-2 all
-python3-ldb-dev/stable-security 2:2.6.2+samba4.17.10+dfsg-0+deb12u1 amd64
-python3-ldb/stable-security 2:2.6.2+samba4.17.10+dfsg-0+deb12u1 amd64
+python3-ldb-dev/stable 2:2.6.2+samba4.17.11+dfsg-0+deb12u1 amd64
+python3-ldb/stable 2:2.6.2+samba4.17.11+dfsg-0+deb12u1 amd64
 python3-ldns/stable 1.8.3-1+b1 amd64
 python3-leather/stable 0.3.4-2 all
 python3-ledger/stable 3.3.0-3 amd64
@@ -51370,7 +51373,7 @@ python3-livereload/stable 2.6.3-2 all
 python3-lldb-13/stable 1:13.0.1-11+b2 amd64
 python3-lldb-14/stable 1:14.0.6-12 amd64
 python3-lldb-15/stable 1:15.0.6-4+b1 amd64
-python3-lldb/stable 1:14.0-55.6 amd64
+python3-lldb/stable 1:14.0-55.7~deb12u1 amd64
 python3-llfuse/stable 1.4.1+dfsg-2+b3 amd64
 python3-llvmlite/stable 0.39.1-2 amd64
 python3-lmdb/stable 1.4.0-1+b1 amd64
@@ -51695,7 +51698,7 @@ python3-neutron/stable 2:21.0.0-7 all
 python3-neutronclient/stable 1:8.1.0-2 all
 python3-newt/stable 0.52.23-1+b1 amd64
 python3-nfs-ganesha/stable 4.3-2 all
-python3-nftables/stable 1.0.6-2+deb12u1 amd64
+python3-nftables/stable 1.0.6-2+deb12u2 amd64
 python3-ngs/stable 3.0.3+dfsg-6~deb12u1 all
 python3-nibabel/stable 5.0.0-2 all
 python3-nine/stable 1.1.0-2 all
@@ -51736,7 +51739,7 @@ python3-nox/stable 2022.11.21-1 all
 python3-npx/stable 0.1.1-1 all
 python3-nss/stable 1.0.1-1+b5 amd64
 python3-ntlm-auth/stable 1.4.0-2 all
-python3-ntp/stable-security 1.2.2+dfsg1-1+deb12u1 amd64
+python3-ntp/stable,stable-security 1.2.2+dfsg1-1+deb12u1 amd64
 python3-ntplib/stable 0.3.3-3 all
 python3-nubia/stable 0.2b5-2 all
 python3-nudatus/stable 0.0.5-2 all
@@ -51797,7 +51800,7 @@ python3-openimageio/stable 2.4.7.1+dfsg-2 amd64
 python3-openpyxl/stable 3.0.9-1 all
 python3-openqa-client/stable 4.2.1-1 all
 python3-openrazer/stable 3.5.1+dfsg-2 all
-python3-openscap/stable 1.3.7+dfsg-1+b1 amd64
+python3-openscap/stable 1.3.7+dfsg-1+deb12u1 amd64
 python3-openshift/stable 0.13.1-3 all
 python3-openshot/stable 0.2.7+dfsg1-4+b1 amd64
 python3-openslide/stable 1.2.0-1+b3 amd64
@@ -52836,7 +52839,7 @@ python3-sahara/stable 1:16.0.0-2 all
 python3-saharaclient/stable 4.0.2-2 all
 python3-saltfactories/stable 0.907.0-4 all
 python3-saltpylint/stable 2020.9.28-1 all
-python3-samba/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
+python3-samba/stable 2:4.17.11+dfsg-0+deb12u1 amd64
 python3-sane/stable 2.9.1-2+b4 amd64
 python3-saneyaml/stable 0.3-2 all
 python3-sanlock/stable 3.8.5-1+b1 amd64
@@ -53424,7 +53427,7 @@ python3-uinput/stable 0.11.2-4+b1 amd64
 python3-ujson/stable 5.7.0-1 amd64
 python3-ukui-menu/stable 1.1.4-1+b4 amd64
 python3-ulmo/stable 0.8.8+dfsg1-1.1 all
-python3-unbound/stable 1.17.1-2 amd64
+python3-unbound/stable 1.17.1-2+deb12u1 amd64
 python3-uncertainties/stable 3.1.6-1 all
 python3-unearth/stable 0.7.2+ds-2 all
 python3-unicodecsv/stable 0.14.1-7 all
@@ -53561,7 +53564,7 @@ python3-wikkid/stable 0.4-1 all
 python3-wilderness/stable 0.1.6-1 all
 python3-willow/stable 1.4-3 all
 python3-wimsapi/stable 0.5.11-2 all
-python3-winrm/stable 0.3.0-4 all
+python3-winrm/stable 0.3.0-4+deb12u1 all
 python3-wither/stable 1.1-3 all
 python3-wokkel/stable 18.0.0-4 all
 python3-wordcloud/stable 1.8.2.2+dfsg-1+b1 amd64
@@ -53834,26 +53837,26 @@ qdoc-qt5/stable 5.15.8-2 amd64
 qelectrotech-data/stable 1:0.9-1 all
 qelectrotech-examples/stable 1:0.9-1 all
 qelectrotech/stable 1:0.9-1 amd64
-qemu-block-extra/stable,now 1:7.2+dfsg-7+deb12u1 amd64 [installed,automatic]
+qemu-block-extra/stable,now 1:7.2+dfsg-7+deb12u2 amd64 [installed,automatic]
 qemu-efi-aarch64/stable,now 2022.11-6 all [installed,automatic]
 qemu-efi-arm/stable,now 2022.11-6 all [installed,automatic]
 qemu-efi/stable 2022.11-6 all
-qemu-guest-agent/stable 1:7.2+dfsg-7+deb12u1 amd64
-qemu-system-arm/stable,now 1:7.2+dfsg-7+deb12u1 amd64 [installed,automatic]
-qemu-system-common/stable,now 1:7.2+dfsg-7+deb12u1 amd64 [installed,automatic]
-qemu-system-data/stable,now 1:7.2+dfsg-7+deb12u1 all [installed,automatic]
-qemu-system-gui/stable,now 1:7.2+dfsg-7+deb12u1 amd64 [installed,automatic]
-qemu-system-mips/stable,now 1:7.2+dfsg-7+deb12u1 amd64 [installed,automatic]
-qemu-system-misc/stable,now 1:7.2+dfsg-7+deb12u1 amd64 [installed,automatic]
-qemu-system-ppc/stable,now 1:7.2+dfsg-7+deb12u1 amd64 [installed,automatic]
-qemu-system-sparc/stable,now 1:7.2+dfsg-7+deb12u1 amd64 [installed,automatic]
-qemu-system-x86/stable,now 1:7.2+dfsg-7+deb12u1 amd64 [installed,automatic]
-qemu-system-xen/stable 1:7.2+dfsg-7+deb12u1 amd64
-qemu-system/stable,now 1:7.2+dfsg-7+deb12u1 amd64 [installed]
-qemu-user-binfmt/stable 1:7.2+dfsg-7+deb12u1 amd64
-qemu-user-static/stable 1:7.2+dfsg-7+deb12u1 amd64
-qemu-user/stable 1:7.2+dfsg-7+deb12u1 amd64
-qemu-utils/stable,now 1:7.2+dfsg-7+deb12u1 amd64 [installed,automatic]
+qemu-guest-agent/stable 1:7.2+dfsg-7+deb12u2 amd64
+qemu-system-arm/stable,now 1:7.2+dfsg-7+deb12u2 amd64 [installed,automatic]
+qemu-system-common/stable,now 1:7.2+dfsg-7+deb12u2 amd64 [installed,automatic]
+qemu-system-data/stable,now 1:7.2+dfsg-7+deb12u2 all [installed,automatic]
+qemu-system-gui/stable,now 1:7.2+dfsg-7+deb12u2 amd64 [installed,automatic]
+qemu-system-mips/stable,now 1:7.2+dfsg-7+deb12u2 amd64 [installed,automatic]
+qemu-system-misc/stable,now 1:7.2+dfsg-7+deb12u2 amd64 [installed,automatic]
+qemu-system-ppc/stable,now 1:7.2+dfsg-7+deb12u2 amd64 [installed,automatic]
+qemu-system-sparc/stable,now 1:7.2+dfsg-7+deb12u2 amd64 [installed,automatic]
+qemu-system-x86/stable,now 1:7.2+dfsg-7+deb12u2 amd64 [installed,automatic]
+qemu-system-xen/stable 1:7.2+dfsg-7+deb12u2 amd64
+qemu-system/stable,now 1:7.2+dfsg-7+deb12u2 amd64 [installed]
+qemu-user-binfmt/stable 1:7.2+dfsg-7+deb12u2 amd64
+qemu-user-static/stable 1:7.2+dfsg-7+deb12u2 amd64
+qemu-user/stable 1:7.2+dfsg-7+deb12u2 amd64
+qemu-utils/stable,now 1:7.2+dfsg-7+deb12u2 amd64 [installed,automatic]
 qemu-web-desktop/stable 23.02.16+ds1-1 amd64
 qemubuilder/stable 0.89 amd64
 qepcad/stable 1.74+ds-3+b2 amd64
@@ -53992,7 +53995,7 @@ qml-module-qmenumodel1/stable 0.9.1-1 amd64
 qml-module-qt-labs-animation/stable 5.15.8+dfsg-3 amd64
 qml-module-qt-labs-calendar/stable 5.15.8+dfsg-2 amd64
 qml-module-qt-labs-folderlistmodel/stable 5.15.8+dfsg-3 amd64
-qml-module-qt-labs-location/stable 5.15.8+dfsg-3 amd64
+qml-module-qt-labs-location/stable 5.15.8+dfsg-3+deb12u1 amd64
 qml-module-qt-labs-platform/stable 5.15.8+dfsg-2 amd64
 qml-module-qt-labs-qmlmodels/stable 5.15.8+dfsg-3 amd64
 qml-module-qt-labs-settings/stable 5.15.8+dfsg-3 amd64
@@ -54009,12 +54012,12 @@ qml-module-qtfeedback/stable 5.0~git20180903.a14bd0b-5 amd64
 qml-module-qtgamepad/stable 5.15.8-2 amd64
 qml-module-qtgraphicaleffects/stable 5.15.8-2 amd64
 qml-module-qtgstreamer/stable 1.2.0-5.2 amd64
-qml-module-qtlocation/stable 5.15.8+dfsg-3 amd64
+qml-module-qtlocation/stable 5.15.8+dfsg-3+deb12u1 amd64
 qml-module-qtmir/stable 0.8.0~git20230223.bd21224-3 amd64
 qml-module-qtmultimedia/stable 5.15.8-2 amd64
 qml-module-qtnfc/stable 5.15.8-2 amd64
 qml-module-qtorganizer/stable 5.0~git20201102.f9a8f0fc+dfsg1-3 amd64
-qml-module-qtpositioning/stable 5.15.8+dfsg-3 amd64
+qml-module-qtpositioning/stable 5.15.8+dfsg-3+deb12u1 amd64
 qml-module-qtpublishsubscribe/stable 5.0~git20190103.e3332ee+dfsg1-5+b1 amd64
 qml-module-qtqml-models2/stable 5.15.8+dfsg-3 amd64
 qml-module-qtqml-statemachine/stable 5.15.8+dfsg-3 amd64
@@ -54322,11 +54325,11 @@ qthid-fcd-controller/stable 4.1-6 amd64
 qtikz/stable 0.13.2+ds1-1+b1 amd64
 qtkeychain-qt5-dev/stable 0.13.2-5 amd64
 qtkeychain-qt6-dev/stable 0.13.2-5 amd64
-qtlocation5-dev/stable 5.15.8+dfsg-3 amd64
-qtlocation5-doc-dev/stable 5.15.8+dfsg-3 all
-qtlocation5-doc-html/stable 5.15.8+dfsg-3 all
-qtlocation5-doc/stable 5.15.8+dfsg-3 all
-qtlocation5-examples/stable 5.15.8+dfsg-3 amd64
+qtlocation5-dev/stable 5.15.8+dfsg-3+deb12u1 amd64
+qtlocation5-doc-dev/stable 5.15.8+dfsg-3+deb12u1 all
+qtlocation5-doc-html/stable 5.15.8+dfsg-3+deb12u1 all
+qtlocation5-doc/stable 5.15.8+dfsg-3+deb12u1 all
+qtlocation5-examples/stable 5.15.8+dfsg-3+deb12u1 amd64
 qtltools-example/stable 1.3.1+dfsg-4 all
 qtltools/stable 1.3.1+dfsg-4 amd64
 qtmir-desktop/stable 0.8.0~git20230223.bd21224-3 amd64
@@ -54350,7 +54353,7 @@ qtpim5-dev/stable 5.0~git20201102.f9a8f0fc+dfsg1-3 amd64
 qtpim5-doc-html/stable 5.0~git20201102.f9a8f0fc+dfsg1-3 all
 qtpim5-doc/stable 5.0~git20201102.f9a8f0fc+dfsg1-3 all
 qtpim5-examples/stable 5.0~git20201102.f9a8f0fc+dfsg1-3 amd64
-qtpositioning5-dev/stable 5.15.8+dfsg-3 amd64
+qtpositioning5-dev/stable 5.15.8+dfsg-3+deb12u1 amd64
 qtqr/stable 2.1~bzr46-4 all
 qtquickcontrols2-5-dev/stable 5.15.8+dfsg-2 amd64
 qtquickcontrols2-5-doc-html/stable 5.15.8+dfsg-2 all
@@ -56006,7 +56009,7 @@ regina-normal-doc/stable 7.3-2 all
 regina-normal/stable 7.3-2 amd64
 regina-rexx/stable 3.6-2.4 amd64
 regionset/stable 0.2-2 amd64
-registry-tools/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
+registry-tools/stable 2:4.17.11+dfsg-0+deb12u1 amd64
 reglookup-doc/stable 1.0.1+svn287-9 all
 reglookup/stable 1.0.1+svn287-9 amd64
 regripper/stable 3.0~git20221205.d588019+dfsg-1 all
@@ -56071,7 +56074,7 @@ reposurgeon/stable 4.35-1+b1 amd64
 repowerd-data/stable 2022.01-3 all
 repowerd-tools/stable 2022.01-3+b1 amd64
 repowerd/stable 2022.01-3+b1 amd64
-reprepro/stable 5.3.1-1 amd64
+reprepro/stable 5.3.1-1+deb12u1 amd64
 reprof/stable 1.0.1-8 all
 reprotest/stable 0.7.23 all
 reprounzip/stable 1.0.16-2 all
@@ -56188,9 +56191,9 @@ rmagic/stable 2.21-5.1 all
 rmail/stable 8.17.1.9-2 amd64
 rman/stable 3.2-9 amd64
 rmligs-german/stable 20161207-11 all
-rmlint-doc/stable 2.9.0-2.3 all
-rmlint-gui/stable 2.9.0-2.3 all
-rmlint/stable 2.9.0-2.3 amd64
+rmlint-doc/stable 2.9.0-2.5~deb12u1 all
+rmlint-gui/stable 2.9.0-2.5~deb12u1 all
+rmlint/stable 2.9.0-2.5~deb12u1 amd64
 rmtfs/stable 1.0-2 amd64
 rna-star/stable 2.7.10b+dfsg-2+b2 amd64
 rnahybrid/stable 2.1.2-7 amd64
@@ -56305,15 +56308,15 @@ rosout/stable 1.15.15+ds-2 amd64
 rospack-tools/stable 2.6.2-8+b1 amd64
 rotix/stable 0.83-7+b2 amd64
 rotter/stable 0.9-3.1 amd64
-roundcube-core/stable 1.6.1+dfsg-1 all
-roundcube-mysql/stable 1.6.1+dfsg-1 all
-roundcube-pgsql/stable 1.6.1+dfsg-1 all
+roundcube-core/stable 1.6.3+dfsg-1~deb12u1 all
+roundcube-mysql/stable 1.6.3+dfsg-1~deb12u1 all
+roundcube-pgsql/stable 1.6.3+dfsg-1~deb12u1 all
 roundcube-plugins-extra/stable 1.4.10+1-4 all
-roundcube-plugins/stable 1.6.1+dfsg-1 all
+roundcube-plugins/stable 1.6.3+dfsg-1~deb12u1 all
 roundcube-skin-classic/stable 1.6.0+ds-2 all
 roundcube-skin-larry/stable 1.6.0+ds-2 all
-roundcube-sqlite3/stable 1.6.1+dfsg-1 all
-roundcube/stable 1.6.1+dfsg-1 all
+roundcube-sqlite3/stable 1.6.3+dfsg-1~deb12u1 all
+roundcube/stable 1.6.3+dfsg-1~deb12u1 all
 route-rnd/stable 0.9.2-1+b2 amd64
 routine-update/stable 0.1.1 all
 routino-common/stable 3.3.3-2 all
@@ -56425,7 +56428,7 @@ rtklib-qt/stable 2.4.3.b34+dfsg-1+b1 amd64
 rtklib/stable 2.4.3.b34+dfsg-1+b1 amd64
 rtl-433/stable 22.11-1 amd64
 rtl-sdr/stable 0.6.0-4 amd64
-rtla/stable-security 6.1.52-1 amd64
+rtla/stable 6.1.55-1 amd64
 rtmpdump/stable 2.4+20151223.gitfa8646d.1-2+b2 amd64
 rtorrent/stable 0.9.8-1 amd64
 rtpengine-daemon/stable 10.5.3.5-1 amd64
@@ -57874,7 +57877,7 @@ rungetty/stable 1.2-16.1+b1 amd64
 runit-helper/stable,now 2.15.2 all [installed,automatic]
 runit-init/stable 2.1.2-54 amd64
 runit-run/stable 2.1.2-54 all
-runit-services/stable 0.5.4 all
+runit-services/stable 0.5.5~deb12u1 all
 runit-systemd/stable 2.1.2-54 all
 runit/stable 2.1.2-54 amd64
 runlim/stable 1.10-6 amd64
@@ -57971,16 +57974,16 @@ salliere/stable 0.10-3.1 all
 salmid/stable 0.1.23-5 all
 salmon/stable 1.10.1+ds1-1+b1 amd64
 salt-pepper/stable 0.5.5-1 all
-samba-ad-dc/stable-security 2:4.17.10+dfsg-0+deb12u1 all
-samba-ad-provision/stable-security 2:4.17.10+dfsg-0+deb12u1 all
-samba-common-bin/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
-samba-common/stable-security 2:4.17.10+dfsg-0+deb12u1 all
-samba-dev/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
-samba-dsdb-modules/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
-samba-libs/stable-security,now 2:4.17.10+dfsg-0+deb12u1 amd64 [installed,automatic]
-samba-testsuite/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
-samba-vfs-modules/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
-samba/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
+samba-ad-dc/stable 2:4.17.11+dfsg-0+deb12u1 all
+samba-ad-provision/stable 2:4.17.11+dfsg-0+deb12u1 all
+samba-common-bin/stable 2:4.17.11+dfsg-0+deb12u1 amd64
+samba-common/stable 2:4.17.11+dfsg-0+deb12u1 all
+samba-dev/stable 2:4.17.11+dfsg-0+deb12u1 amd64
+samba-dsdb-modules/stable 2:4.17.11+dfsg-0+deb12u1 amd64
+samba-libs/stable,now 2:4.17.11+dfsg-0+deb12u1 amd64 [installed,automatic]
+samba-testsuite/stable 2:4.17.11+dfsg-0+deb12u1 amd64
+samba-vfs-modules/stable 2:4.17.11+dfsg-0+deb12u1 amd64
+samba/stable 2:4.17.11+dfsg-0+deb12u1 amd64
 sambamba/stable 1.0+dfsg-1 amd64
 samblaster/stable 0.1.26-4 amd64
 samclip/stable 0.4.0-4 all
@@ -58226,8 +58229,8 @@ sdcc-libraries/stable 4.2.0+dfsg-1 all
 sdcc-ucsim/stable 4.2.0+dfsg-1 amd64
 sdcc/stable 4.2.0+dfsg-1 amd64
 sdcv/stable 0.5.2-2+b1 amd64
-sddm-theme-breeze/stable 4:5.27.5-2 amd64
-sddm-theme-debian-breeze/stable 4:5.27.5-2 amd64
+sddm-theme-breeze/stable 4:5.27.5-2+deb12u1 amd64
+sddm-theme-debian-breeze/stable 4:5.27.5-2+deb12u1 amd64
 sddm-theme-debian-elarun/stable 0.19.0-5 all
 sddm-theme-debian-maui/stable 0.19.0-5 all
 sddm-theme-elarun/stable 0.19.0-5 all
@@ -58587,8 +58590,8 @@ sisu-postgresql/stable 7.2.1-2 all
 sisu-sqlite/stable 7.2.1-2 all
 sisu/stable 7.2.1-2 all
 sitecopy/stable 1:0.16.6-10+b1 amd64
-sitesummary-client/stable 0.1.51 all
-sitesummary/stable 0.1.51 all
+sitesummary-client/stable 0.1.56~deb12u1 all
+sitesummary/stable 0.1.56~deb12u1 all
 sixer/stable 1.6-3 all
 sjaakii/stable 1.4.1-2 amd64
 sjeng/stable 11.2-8.2 amd64
@@ -58643,7 +58646,7 @@ slashem-x11/stable 0.0.7E7F3-10+b3 amd64
 slashem/stable 0.0.7E7F3-10+b3 amd64
 slashtime/stable 0.5.13-2 all
 slay/stable 3.0.2 all
-slbackup-php/stable 0.4.5-4 all
+slbackup-php/stable 0.4.5-4+deb12u1 all
 slbackup/stable 0.0.12-13 all
 sleepd/stable 2.11 amd64
 sleepenh/stable 1.7-1 amd64
@@ -58729,7 +58732,7 @@ smarty4/stable 4.3.0-1+deb12u1 all
 smb-nat/stable 1:1.0-6.1 amd64
 smb2www/stable 980804-45 all
 smb4k/stable 3.1.7-1 amd64
-smbclient/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
+smbclient/stable 2:4.17.11+dfsg-0+deb12u1 amd64
 smbios-utils/stable 2.4.3-1 amd64
 smbldap-tools/stable 0.9.11-3 all
 smbmap/stable 1.8.2-2 all
@@ -58821,7 +58824,7 @@ snpeff/stable 5.1+d+dfsg-3 all
 snpomatic/stable 1.0-6 amd64
 snpsift/stable 5.1+dfsg2-2 all
 sntop/stable 1.4.3-6 amd64
-sntp/stable-security 1:4.2.8p15+dfsg-2~1.2.2+dfsg1-1+deb12u1 all
+sntp/stable,stable-security 1:4.2.8p15+dfsg-2~1.2.2+dfsg1-1+deb12u1 all
 so-synth-lv2/stable 1.5-1 amd64
 soapaligner/stable 2.20-5 amd64
 soapdenovo2/stable 242+dfsg-3 amd64
@@ -58945,7 +58948,7 @@ spamc/stable 4.0.0-6 amd64
 spamd/stable 4.0.0-6 all
 spamoracle/stable 1.6-1+b2 amd64
 spampd/stable 2.53-1.2 all
-spamprobe/stable 1.4d-16 amd64
+spamprobe/stable 1.4d-16+deb12u1 amd64
 sparse-test-inspect/stable 0.6.4-3 amd64
 sparse/stable 0.6.4-3 amd64
 spass/stable 3.9-1.1 amd64
@@ -59115,7 +59118,7 @@ ssg-debian/stable 0.1.65-1 all
 ssg-nondebian/stable 0.1.65-1 all
 ssh-agent-filter/stable 0.5.2-1+b4 amd64
 ssh-askpass-fullscreen/stable 1.3-1 amd64
-ssh-askpass-gnome/stable 1:9.2p1-2 amd64
+ssh-askpass-gnome/stable 1:9.2p1-2+deb12u1 amd64
 ssh-askpass/stable 1:1.2.4.1-16 amd64
 ssh-audit/stable 2.5.0-1 all
 ssh-contact-client/stable 0.7-1.1 amd64
@@ -59124,7 +59127,7 @@ ssh-contact/stable 0.7-1.1 all
 ssh-cron/stable 1.04.01-1 amd64
 ssh-import-id/stable 5.10-1 all
 ssh-tools/stable 1.7-2 all
-ssh/stable,now 1:9.2p1-2 all [installed]
+ssh/stable,now 1:9.2p1-2+deb12u1 all [installed]
 sshcommand/stable 0~20160110.1~2795f65-1.1 all
 sshesame/stable 0.0~git20210926.d7fdb81-1+b6 amd64
 sshfs/stable 3.7.3-1.1 amd64
@@ -59333,7 +59336,7 @@ stubby/stable 1.6.0-3+b1 amd64
 stumpwm/stable 2:22.11-3 all
 stun-client/stable 0.97~dfsg-2.1+b1 amd64
 stun-server/stable 0.97~dfsg-2.1+b1 amd64
-stunnel4/stable 3:5.68-2 amd64
+stunnel4/stable 3:5.68-2+deb12u1 amd64
 stx2any/stable 1.56-2.3 all
 stymulator/stable 0.21a~dfsg-3 amd64
 subdownloader/stable 2.1.0-5 all
@@ -59634,24 +59637,24 @@ system-config-printer/stable,now 1.5.18-1 all [installed]
 system-tools-backends-dev/stable 2.10.2-3.1 all
 system-tools-backends/stable 2.10.2-3.1 amd64
 systemctl/stable 1.4.4181-1.1 all
-systemd-boot-efi/stable 252.12-1~deb12u1 amd64
-systemd-boot/stable 252.12-1~deb12u1 amd64
+systemd-boot-efi/stable 252.17-1~deb12u1 amd64
+systemd-boot/stable 252.17-1~deb12u1 amd64
 systemd-bootchart/stable 234-2+b1 amd64
-systemd-container/stable,now 252.12-1~deb12u1 amd64 [installed,automatic]
-systemd-coredump/stable 252.12-1~deb12u1 amd64
+systemd-container/stable,now 252.17-1~deb12u1 amd64 [installed,automatic]
+systemd-coredump/stable 252.17-1~deb12u1 amd64
 systemd-cron/stable 1.15.19-5 amd64
-systemd-homed/stable 252.12-1~deb12u1 amd64
-systemd-journal-remote/stable 252.12-1~deb12u1 amd64
-systemd-oomd/stable 252.12-1~deb12u1 amd64
-systemd-resolved/stable 252.12-1~deb12u1 amd64
-systemd-standalone-sysusers/stable 252.12-1~deb12u1 amd64
-systemd-standalone-tmpfiles/stable 252.12-1~deb12u1 amd64
-systemd-sysv/stable,now 252.12-1~deb12u1 amd64 [installed]
-systemd-tests/stable 252.12-1~deb12u1 amd64
-systemd-timesyncd/stable,now 252.12-1~deb12u1 amd64 [installed]
-systemd-userdbd/stable 252.12-1~deb12u1 amd64
+systemd-homed/stable 252.17-1~deb12u1 amd64
+systemd-journal-remote/stable 252.17-1~deb12u1 amd64
+systemd-oomd/stable 252.17-1~deb12u1 amd64
+systemd-resolved/stable 252.17-1~deb12u1 amd64
+systemd-standalone-sysusers/stable 252.17-1~deb12u1 amd64
+systemd-standalone-tmpfiles/stable 252.17-1~deb12u1 amd64
+systemd-sysv/stable,now 252.17-1~deb12u1 amd64 [installed]
+systemd-tests/stable 252.17-1~deb12u1 amd64
+systemd-timesyncd/stable,now 252.17-1~deb12u1 amd64 [installed]
+systemd-userdbd/stable 252.17-1~deb12u1 amd64
 systemd-zram-generator/stable 1.1.2-2+b2 amd64
-systemd/stable,now 252.12-1~deb12u1 amd64 [installed]
+systemd/stable,now 252.17-1~deb12u1 amd64 [installed]
 systempreferences.app-dbg/stable 1.2.0-2+b8 amd64
 systempreferences.app/stable 1.2.0-2+b8 amd64
 systemsettings/stable 4:5.27.5-2 amd64
@@ -60104,9 +60107,9 @@ tellico-doc/stable 3.4.6-1 all
 tellico-scripts/stable 3.4.6-1 all
 tellico/stable 3.4.6-1 amd64
 telnet-ssl/stable 0.17.41+really0.17-3 amd64
-telnet/stable 0.17+2.4-2 all
+telnet/stable 0.17+2.4-2+deb12u1 all
 telnetd-ssl/stable 0.17.41+really0.17-3 amd64
-telnetd/stable 0.17+2.4-2 all
+telnetd/stable 0.17+2.4-2+deb12u1 all
 tempest-for-eliza/stable 1.0.5-2.1 amd64
 tempest/stable 1:33.0.0-1 all
 tenace/stable 0.17-1 amd64
@@ -60544,7 +60547,7 @@ timemachine/stable 0.3.3-2.1+b2 amd64
 timemon.app/stable 4.2-2+b4 amd64
 timeshift/stable 22.11.2-1 amd64
 timewarrior/stable 1.4.3+ds.1-2 amd64
-timg/stable 1.4.5-1 amd64
+timg/stable 1.4.5-1+deb12u1 amd64
 timgm6mb-soundfont/stable,now 1.3-5 all [installed,automatic]
 timidity-daemon/stable 2.14.0-8.1 all
 timidity-el/stable 2.14.0-8.1 all
@@ -60778,13 +60781,13 @@ transip/stable 2.0.0-3 all
 translate-toolkit-doc/stable 3.8.4-1 all
 translate-toolkit/stable 3.8.4-1 all
 translate/stable 1.1.3 all
-transmission-cli/stable 3.00-2.1+b1 amd64
-transmission-common/stable 3.00-2.1 all
-transmission-daemon/stable 3.00-2.1+b1 amd64
-transmission-gtk/stable 3.00-2.1+b1 amd64
-transmission-qt/stable 3.00-2.1+b1 amd64
+transmission-cli/stable 3.00-2.1+deb12u1 amd64
+transmission-common/stable 3.00-2.1+deb12u1 all
+transmission-daemon/stable 3.00-2.1+deb12u1 amd64
+transmission-gtk/stable 3.00-2.1+deb12u1 amd64
+transmission-qt/stable 3.00-2.1+deb12u1 amd64
 transmission-remote-gtk/stable 1.5.1-1 amd64
-transmission/stable 3.00-2.1 all
+transmission/stable 3.00-2.1+deb12u1 all
 transrate-tools/stable 1.0.0-5 amd64
 transtermhp/stable 2.09-5 amd64
 trash-cli/stable 0.17.1.14-5 all
@@ -61013,12 +61016,12 @@ tryton-modules-web-shortener/stable 6.0.1-3 all
 tryton-modules-web-user/stable 6.0.0-5 all
 tryton-proteus/stable 6.0.8-1 all
 tryton-sao/stable 6.0.28+ds1-2 all
-tryton-server-all-in-one/stable-security 6.0.29-2+deb12u1 all
-tryton-server-doc/stable-security 6.0.29-2+deb12u1 all
-tryton-server-nginx/stable-security 6.0.29-2+deb12u1 all
-tryton-server-postgresql/stable-security 6.0.29-2+deb12u1 all
-tryton-server-uwsgi/stable-security 6.0.29-2+deb12u1 all
-tryton-server/stable-security 6.0.29-2+deb12u1 all
+tryton-server-all-in-one/stable,stable-security 6.0.29-2+deb12u1 all
+tryton-server-doc/stable,stable-security 6.0.29-2+deb12u1 all
+tryton-server-nginx/stable,stable-security 6.0.29-2+deb12u1 all
+tryton-server-postgresql/stable,stable-security 6.0.29-2+deb12u1 all
+tryton-server-uwsgi/stable,stable-security 6.0.29-2+deb12u1 all
+tryton-server/stable,stable-security 6.0.29-2+deb12u1 all
 ts-jest/stable 29.0.3+~cs0.2.6-1 all
 ts-node/stable 10.9.1+~cs8.8.29-1 all
 tsdecrypt/stable 10.0-2.1 amd64
@@ -61199,7 +61202,7 @@ ucto/stable 0.21.1-2+b3 amd64
 uctodata/stable 0.8-2 all
 ucx-utils/stable 1.13.1-1 amd64
 udav/stable 8.0.1-4+b4 amd64
-udev/stable,now 252.12-1~deb12u1 amd64 [installed]
+udev/stable,now 252.17-1~deb12u1 amd64 [installed]
 udevil/stable 0.4.4-3 amd64
 udfclient/stable 0.8.11-2 amd64
 udftools/stable 2.3-1 amd64
@@ -61356,9 +61359,9 @@ unagi/stable 0.3.4-1+b3 amd64
 unalz/stable 0.65-8 amd64
 unar/stable 1.10.7+ds1+really1.10.1-2+b2 amd64
 unattended-upgrades/stable 2.9.1+nmu3 all
-unbound-anchor/stable 1.17.1-2 amd64
-unbound-host/stable 1.17.1-2 amd64
-unbound/stable 1.17.1-2 amd64
+unbound-anchor/stable 1.17.1-2+deb12u1 amd64
+unbound-host/stable 1.17.1-2+deb12u1 amd64
+unbound/stable 1.17.1-2+deb12u1 amd64
 unburden-home-dir-doc/stable 0.4.2 all
 unburden-home-dir/stable 0.4.2 all
 uncalled/stable 2.2+ds1-1+b3 amd64
@@ -61452,7 +61455,7 @@ usbauth-notifier/stable 1.0.4-2.1 amd64
 usbauth/stable 1.0.5-1 amd64
 usbguard-notifier/stable 0.1.0-1 amd64
 usbguard/stable 1.1.2+ds-3+b1 amd64
-usbip/stable-security 2.0+6.1.52-1 amd64
+usbip/stable 2.0+6.1.55-1 amd64
 usbmuxd/stable,now 1.1.1-2 amd64 [installed,automatic]
 usbredirect/stable 0.13.0-2 amd64
 usbrelay/stable 1.0-2.1+b2 amd64
@@ -61896,7 +61899,7 @@ voro++-dev/stable 0.5+revert-to-0.4.6+dfsg1-1 amd64
 voro++-examples/stable 0.5+revert-to-0.4.6+dfsg1-1 all
 voro++/stable 0.5+revert-to-0.4.6+dfsg1-1 amd64
 voronota/stable 1.22.3149-2 amd64
-vorta/stable 0.8.10-1 all
+vorta/stable 0.8.10-1+deb12u1 all
 votca-data/stable 2022.1-1 all
 votca-tutorials/stable 2022.1-1 all
 votca/stable 2022.1-1 amd64
@@ -62064,7 +62067,6 @@ webext-debianbuttons/stable 2.3-2 all
 webext-eas4tbsync/stable 4.1.5-1 all
 webext-form-history-control/stable 2.5.1.0-1 all
 webext-foxyproxy/stable 7.5.1+dfsg-3 all
-webext-https-everywhere/stable 2022.5.11-1 all
 webext-keepassxc-browser/stable 1.8.4+repack1-7 all
 webext-lightbeam/stable 3.0.1-1 all
 webext-mailmindr/stable 1.4.0-1 all
@@ -62081,12 +62083,12 @@ webhook/stable 2.8.0-4+b6 amd64
 webhttrack-common/stable 3.49.4-1 all
 webhttrack/stable 3.49.4-1 amd64
 webissues/stable 1.1.5-10 amd64
-webkit2gtk-driver/stable-security 2.40.5-1~deb12u1 amd64
+webkit2gtk-driver/stable,stable-security 2.40.5-1~deb12u1 amd64
 weblint-perl/stable 2.32+dfsg-1.1 all
 weborf-daemon/stable 0.19-2.1 all
 weborf/stable 0.19-2.1 amd64
 webp-pixbuf-loader/stable 0.2.1-1 amd64
-webp/stable-security 1.2.4-0.2+deb12u1 amd64
+webp/stable,stable-security 1.2.4-0.2+deb12u1 amd64
 webpack/stable,now 5.75.0+dfsg+~cs17.16.14-1+deb12u1 all [installed,automatic]
 websocketd/stable 0.4.1-1+b11 amd64
 websockify/stable 0.10.0+dfsg1-4+b1 amd64
@@ -62208,7 +62210,7 @@ wims-help/stable 4.01-5 all
 wims-lti/stable 0.4.4.1-12 all
 wimtools/stable 1.13.6-1 amd64
 win32-loader/stable 0.10.6 all
-winbind/stable-security 2:4.17.10+dfsg-0+deb12u1 amd64
+winbind/stable 2:4.17.11+dfsg-0+deb12u1 amd64
 window-size/stable 1.1.1+~1.1.0-1 all
 windowlab/stable 1.40-3+b1 amd64
 windows-el/stable 2.55-1 all
@@ -62487,14 +62489,14 @@ x2gobroker-wsgi/stable 0.0.4.3-4 all
 x2gobroker/stable 0.0.4.3-4 all
 x2goclient/stable 4.1.2.2-2+b1 amd64
 x2godesktopsharing/stable 3.2.0.0-2+b1 amd64
-x2goserver-common/stable 4.1.0.3-7 all
-x2goserver-desktopsharing/stable 4.1.0.3-7 all
-x2goserver-extensions/stable 4.1.0.3-7 all
-x2goserver-fmbindings/stable 4.1.0.3-7 all
-x2goserver-printing/stable 4.1.0.3-7 all
-x2goserver-x2goagent/stable 4.1.0.3-7 amd64
-x2goserver-xsession/stable 4.1.0.3-7 all
-x2goserver/stable 4.1.0.3-7 amd64
+x2goserver-common/stable 4.1.0.3-7+deb12u1 all
+x2goserver-desktopsharing/stable 4.1.0.3-7+deb12u1 all
+x2goserver-extensions/stable 4.1.0.3-7+deb12u1 all
+x2goserver-fmbindings/stable 4.1.0.3-7+deb12u1 all
+x2goserver-printing/stable 4.1.0.3-7+deb12u1 all
+x2goserver-x2goagent/stable 4.1.0.3-7+deb12u1 amd64
+x2goserver-xsession/stable 4.1.0.3-7+deb12u1 all
+x2goserver/stable 4.1.0.3-7+deb12u1 amd64
 x2gothinclient-cdmanager/stable 1.5.0.1-10 amd64
 x2gothinclient-chroot/stable 1.5.0.1-10 all
 x2gothinclient-common/stable 1.5.0.1-10 all
@@ -62556,7 +62558,7 @@ xblast-tnt/stable 2.10.4-4.1 amd64
 xboard/stable 4.9.1-2+b1 amd64
 xbomb/stable 2.2b-1+b1 amd64
 xboxdrv/stable 0.8.8-3 amd64
-xbrlapi/stable,now 6.5-7 amd64 [installed,automatic]
+xbrlapi/stable,now 6.5-7+deb12u1 amd64 [installed,automatic]
 xbrzscale/stable 1.8-2 amd64
 xbs/stable 0-11 amd64
 xbubble-data/stable 0.5.11.2-3.5 all
