@@ -2887,9 +2887,9 @@ coda/stable 2.24.2-1 amd64
 code-exploration/stable 1.82.0-1693249446 amd64
 code-exploration/stable 1.82.0-1693248439 arm64
 code-exploration/stable 1.82.0-1693248361 armhf
-code-insiders/stable 1.84.0-1696485474 amd64
-code-insiders/stable 1.84.0-1696484331 arm64
-code-insiders/stable 1.84.0-1696484325 armhf
+code-insiders/stable 1.84.0-1696620592 amd64
+code-insiders/stable 1.84.0-1696619420 arm64
+code-insiders/stable 1.84.0-1696619425 armhf
 code-saturne-bin/stable 6.0.2-2 amd64
 code-saturne-data/stable 6.0.2-2 all
 code-saturne-doc/stable 6.0.2-2 all
@@ -12132,43 +12132,43 @@ grpn/stable 1.4.1-1.1 amd64
 grr.app/stable 1.0-1+b8 amd64
 grsync/stable 1.3.0-1+b1 amd64
 grub-cloud-amd64/stable 0.0.5 amd64
-grub-common/stable,now 2.06-13 amd64 [installed]
-grub-coreboot-bin/stable 2.06-13 amd64
-grub-coreboot-dbg/stable 2.06-13 amd64
-grub-coreboot/stable 2.06-13 amd64
+grub-common/stable-security,now 2.06-13+deb12u1 amd64 [installed]
+grub-coreboot-bin/stable-security 2.06-13+deb12u1 amd64
+grub-coreboot-dbg/stable-security 2.06-13+deb12u1 amd64
+grub-coreboot/stable-security 2.06-13+deb12u1 amd64
 grub-customizer/stable 5.2.2-2 amd64
-grub-efi-amd64-bin/stable,now 2.06-13 amd64 [installed,automatic]
-grub-efi-amd64-dbg/stable 2.06-13 amd64
-grub-efi-amd64-signed-template/stable 2.06-13 amd64
-grub-efi-amd64-signed/stable,now 1+2.06+13 amd64 [installed,automatic]
-grub-efi-amd64/stable,now 2.06-13 amd64 [installed]
-grub-efi-ia32-bin/stable 2.06-13 amd64
-grub-efi-ia32-dbg/stable 2.06-13 amd64
-grub-efi-ia32/stable 2.06-13 amd64
-grub-efi/stable 2.06-13 amd64
-grub-emu-dbg/stable 2.06-13 amd64
-grub-emu/stable 2.06-13 amd64
-grub-firmware-qemu/stable 2.06-13 amd64
-grub-ieee1275-bin/stable 2.06-13 amd64
-grub-ieee1275-dbg/stable 2.06-13 amd64
-grub-ieee1275/stable 2.06-13 amd64
+grub-efi-amd64-bin/stable-security,now 2.06-13+deb12u1 amd64 [installed,automatic]
+grub-efi-amd64-dbg/stable-security 2.06-13+deb12u1 amd64
+grub-efi-amd64-signed-template/stable-security 2.06-13+deb12u1 amd64
+grub-efi-amd64-signed/stable-security,now 1+2.06+13+deb12u1 amd64 [installed,automatic]
+grub-efi-amd64/stable-security,now 2.06-13+deb12u1 amd64 [installed]
+grub-efi-ia32-bin/stable-security 2.06-13+deb12u1 amd64
+grub-efi-ia32-dbg/stable-security 2.06-13+deb12u1 amd64
+grub-efi-ia32/stable-security 2.06-13+deb12u1 amd64
+grub-efi/stable-security 2.06-13+deb12u1 amd64
+grub-emu-dbg/stable-security 2.06-13+deb12u1 amd64
+grub-emu/stable-security 2.06-13+deb12u1 amd64
+grub-firmware-qemu/stable-security 2.06-13+deb12u1 amd64
+grub-ieee1275-bin/stable-security 2.06-13+deb12u1 amd64
+grub-ieee1275-dbg/stable-security 2.06-13+deb12u1 amd64
+grub-ieee1275/stable-security 2.06-13+deb12u1 amd64
 grub-imageboot/stable 0.6+nmu1 all
 grub-invaders/stable 1.0.0-15 amd64
 grub-legacy-doc/stable 0.97-80 all
 grub-legacy/stable 0.97-80 amd64
-grub-linuxbios/stable 2.06-13 amd64
-grub-pc-bin/stable 2.06-13 amd64
-grub-pc-dbg/stable 2.06-13 amd64
-grub-pc/stable 2.06-13 amd64
-grub-rescue-pc/stable 2.06-13 amd64
+grub-linuxbios/stable-security 2.06-13+deb12u1 amd64
+grub-pc-bin/stable-security 2.06-13+deb12u1 amd64
+grub-pc-dbg/stable-security 2.06-13+deb12u1 amd64
+grub-pc/stable-security 2.06-13+deb12u1 amd64
+grub-rescue-pc/stable-security 2.06-13+deb12u1 amd64
 grub-theme-breeze/stable 5.27.5-2 amd64
-grub-theme-starfield/stable 2.06-13 amd64
-grub-xen-bin/stable 2.06-13 amd64
-grub-xen-dbg/stable 2.06-13 amd64
-grub-xen-host/stable 2.06-13 amd64
-grub-xen/stable 2.06-13 amd64
-grub2-common/stable,now 2.06-13 amd64 [installed,automatic]
-grub2/stable 2.06-13 amd64
+grub-theme-starfield/stable-security 2.06-13+deb12u1 amd64
+grub-xen-bin/stable-security 2.06-13+deb12u1 amd64
+grub-xen-dbg/stable-security 2.06-13+deb12u1 amd64
+grub-xen-host/stable-security 2.06-13+deb12u1 amd64
+grub-xen/stable-security 2.06-13+deb12u1 amd64
+grub2-common/stable-security,now 2.06-13+deb12u1 amd64 [installed,automatic]
+grub2/stable-security 2.06-13+deb12u1 amd64
 grun/stable 0.9.3+git20200303-3 amd64
 grunt/stable 1.5.3-2 all
 gsalliere/stable 0.10-3.1 all
@@ -45990,7 +45990,7 @@ opt/stable 3.19-3 amd64
 optgeo/stable 2.25-2+b1 amd64
 opticalraytracer/stable 9.6-1 all
 optimir/stable 1.2-1 all
-optipng/stable 0.7.7-2+b1 amd64
+optipng/stable,now 0.7.7-2+b1 amd64 [installed]
 opus-tools/stable 0.2-1+b1 amd64
 ora2pg/stable 23.2-1 all
 orage-data/stable 4.16.0-2 all
@@ -58204,7 +58204,7 @@ scriv/stable 1.3.1-1 all
 scrm/stable 1.7.4-1 amd64
 scrobbler/stable 0.11+git-5+b1 amd64
 scrollz/stable 2.2.3-2 amd64
-scrot/stable 1.8.1-1 amd64
+scrot/stable,now 1.8.1-1 amd64 [installed]
 scrounge-ntfs/stable 0.9-10 amd64
 scrub/stable 2.6.1-1+b1 amd64
 scrypt/stable 1.3.1-2+b1 amd64

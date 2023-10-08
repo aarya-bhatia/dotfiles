@@ -82,11 +82,11 @@ augroup group
   autocmd FileType markdown,text setlocal spell spelllang=en_us
   autocmd FileType markdown,text setlocal wrap
   autocmd FileType vim setlocal foldmethod=marker
-  autocmd FileType make set ts=4 sts=4 sw=4 noet list
+  autocmd FileType make setlocal ts=4 sts=4 sw=4 noet list
 
-  autocmd BufRead,BufNewFile *.h set filetype=c
-  autocmd BufNewFile,BufRead *.ejs set filetype=html
-  autocmd BufRead,BufNewFile *.html set filetype=html
+  autocmd BufRead,BufNewFile *.h setlocal filetype=c
+  autocmd BufNewFile,BufRead *.ejs setlocal filetype=html
+  autocmd BufRead,BufNewFile *.html setlocal filetype=html
 
   " Trim trailing whitespace on lines
   " autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch

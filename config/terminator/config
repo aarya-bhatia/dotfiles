@@ -6,7 +6,7 @@
     visible_bell = True
     background_darkness = 0.81
     background_type = image
-    background_image = /home/aarya/wallpapers/0055.jpg
+    background_image = /home/aarya/wallpapers/0001.jpg
     cursor_fg_color = "#000000"
     cursor_bg_color = "#aaaaaa"
     font = Hack Nerd Font Propo 11
