@@ -219,13 +219,14 @@ bindsym $mod+minus scratchpad show
 for_window [class="^.*"] border pixel 1
 
 # Network manager
-exec_always --no-startup-id nm-applet
+exec_always --no-startup-id nm-applet &
 
 # Display random wallpaper
-exec_always --no-startup-id ~/.fehbg
+exec_always --no-startup-id ~/.fehbg &
 
 # Window compositor
-exec_always --no-startup-id picom --config ~/.config/picom.conf
+# exec_always --no-startup-id picom --config ~/.config/picom.conf --backend glx --xrender-sync-fence
+exec_always --no-startup-id killall -q picom; picom --config ~/.config/picom.conf &
 
 # Polybar status bar
 exec_always --no-startup-id ~/scripts/polybar/launch.sh
@@ -234,7 +235,7 @@ exec_always --no-startup-id ~/scripts/polybar/launch.sh
 exec_always --no-startup-id ~/scripts/keymaps.sh
 
 # Dunst notification daemon
-exec_always --no-startup-id dunst
+exec_always --no-startup-id dunst &
 
 # mirror display with HDMI-1 monitor if connected
 exec_always --no-startup-id ~/scripts/screenmirror.sh

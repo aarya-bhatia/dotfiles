@@ -25,20 +25,10 @@ export VIM_DIR="$HOME/dotfiles/vim"
 export SCRIPTS_DIR="$HOME/scripts"
 export COPYIGNORE="$HOME/dotfiles/copyignore"
 
-export PATH=$PATH:/usr/local/bin
-export PATH=$PATH:$SCRIPTS_DIR
-
-export PATH=$PATH:/usr/local/go/bin
-
 export GOPATH=$HOME/go
-export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425git/mp2
-export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425git/mp3
-export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/Coding-Problems/go
 export GOBIN=$GOPATH/bin
 
-export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/usr/local/bin:/home/$USER/.local/bin:/home/$USER/pyvenv/bin
-export PATH=$PATH:/snap/bin
+export PATH=$PATH:$SCRIPTS_DIR:/usr/local/bin:/usr/local/go/bin:$GOPATH/bin:/usr/local/bin:/home/$USER/.local/bin:/home/$USER/pyvenv/bin
 
 export LATITUDE="41.11"
 export LONGITUDE="-88.24"

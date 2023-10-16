@@ -12,6 +12,8 @@ VirtualBox
 pyvenv
 .cargo
 
+.local/*/docker/
+
 .mozilla
 .config/Slack/
 .config/chromium/

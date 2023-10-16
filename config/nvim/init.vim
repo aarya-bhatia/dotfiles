@@ -21,8 +21,8 @@ Plug 'wellle/targets.vim'		              " more text objects
 Plug 'nvim-tree/nvim-web-devicons'
 
 " Syntax highlighting
-" Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-" Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 " Async library
 Plug 'nvim-lua/plenary.nvim'
@@ -67,7 +67,7 @@ call plug#end()
 
 " lua configs
 source $HOME/.config/nvim/lua/config.lua
-" source $HOME/.config/nvim/lua/treesitter.lua
+source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/commands.lua
 
 colorscheme gruvbox
@@ -81,5 +81,5 @@ nnoremap <leader>R "zyyo:r !z
 
 let g:python3_host_prog="/home/aarya/pyvenv/bin/python3"
 
-set noacd
+" set noacd
 
