@@ -294,11 +294,3 @@ augroup qflist
   autocmd FileType qf nnoremap <buffer> [[ :colder<CR>
   autocmd FileType qf nnoremap <buffer> ]] :cnewer<CR>
 augroup END
-
-augroup cdpwd
-    autocmd!
-    autocmd VimEnter * cd $PWD
-augroup END
-
-
-

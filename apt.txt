@@ -1597,11 +1597,11 @@ bluedevil/stable 4:5.27.5-2 amd64
 bluefish-data/stable 2.2.12-1.1 all
 bluefish-plugins/stable 2.2.12-1.1+b2 amd64
 bluefish/stable 2.2.12-1.1+b2 amd64
-blueman/stable,now 2.3.5-2+b1 amd64 [installed]
+blueman/stable,now 2.3.5-2+b1 amd64 [residual-config]
 bluemon/stable 1.4-8 amd64
 blueprint-compiler/stable 0.6.0-1 all
 blueprint-tools/stable 0.0~git20201007.25128be-2+b8 amd64
-bluetooth/stable,now 5.66-1 all [installed,automatic]
+bluetooth/stable 5.66-1 all
 bluez-alsa-utils/stable 4.0.0-2 amd64
 bluez-cups/stable 5.66-1 amd64
 bluez-firmware/stable 1.2-9 all
@@ -1612,7 +1612,7 @@ bluez-source/stable 5.66-1 all
 bluez-test-scripts/stable 5.66-1 all
 bluez-test-tools/stable 5.66-1 amd64
 bluez-tools/stable 2.0~20170911.0.7cb788c-4 amd64
-bluez/stable,now 5.66-1 amd64 [installed,automatic]
+bluez/stable,now 5.66-1 amd64 [residual-config]
 blur-effect/stable 1.1.3-2+b1 amd64
 bmagic/stable 6.3.0-1 all
 bmake/stable 20200710-15+b1 amd64
@@ -8874,7 +8874,7 @@ gir1.2-mypaint-1.5/stable 1.6.0-2 amd64
 gir1.2-nautilus-4.0/stable 43.2-1 amd64
 gir1.2-nemo-3.0/stable 5.6.4-1 amd64
 gir1.2-nice-0.1/stable 0.1.21-1 amd64
-gir1.2-nm-1.0/stable,now 1.42.4-1 amd64 [installed,automatic]
+gir1.2-nm-1.0/stable 1.42.4-1 amd64
 gir1.2-nma-1.0/stable 1.10.6-1 amd64
 gir1.2-nma4-1.0/stable 1.10.6-1 amd64
 gir1.2-notify-0.7/stable,now 0.8.1-1 amd64 [installed,automatic]
@@ -9894,10 +9894,10 @@ goiardi/stable 0.11.10-1+b13 amd64
 gojay/stable 1.2.13-5+b12 amd64
 gojq/stable 0.12.11-1 amd64
 gokey/stable 0.1.2-1+b2 amd64
-golang-1.19-doc/stable,now 1.19.8-2 all [installed,automatic]
-golang-1.19-go/stable,now 1.19.8-2 amd64 [installed,automatic]
-golang-1.19-src/stable,now 1.19.8-2 all [installed,automatic]
-golang-1.19/stable,now 1.19.8-2 all [installed,automatic]
+golang-1.19-doc/stable 1.19.8-2 all
+golang-1.19-go/stable 1.19.8-2 amd64
+golang-1.19-src/stable 1.19.8-2 all
+golang-1.19/stable 1.19.8-2 all
 golang-android-soong-dev/stable 0.0~git20201014.17e97d9-4 all
 golang-any/stable 2:1.19~1 amd64
 golang-ariga-atlas-dev/stable 0.7.2-2 all
@@ -9921,7 +9921,7 @@ golang-dbus-dev/stable 5.1.0-1 all
 golang-debian-mdosch-xmppsrv-dev/stable 0.2.4-1 all
 golang-debian-vasudev-gospake2-dev/stable 0.2.1-2 all
 golang-dlib-dev/stable 5.6.0.9+dfsg-3 all
-golang-doc/stable,now 2:1.19~1 all [installed,automatic]
+golang-doc/stable 2:1.19~1 all
 golang-docker-credential-helpers/stable 0.6.4+ds1-1+b6 amd64
 golang-easyjson/stable 0.7.7-1+b2 amd64
 golang-ed25519-dev/stable 0~20140907.d2b94fd-4.1 all
@@ -11682,7 +11682,7 @@ golang-go.uber-atomic-dev/stable 1.10.0-2 all
 golang-go.uber-multierr-dev/stable 1.6.0-1 all
 golang-go.uber-zap-dev/stable 1.23.0-1 all
 golang-go4-dev/stable 0.0~git20201209.d4a0794-1 all
-golang-go/stable,now 2:1.19~1 amd64 [installed,automatic]
+golang-go/stable 2:1.19~1 amd64
 golang-gocapability-dev/stable 0.0+git20200815.42c35b4-2 all
 golang-gocloud-dev/stable 0.23.0-1 all
 golang-godebiancontrol-dev/stable 0.0~git20140119-2 all
@@ -11842,7 +11842,7 @@ golang-sourcehut-emersion-go-scfg-dev/stable 0.0~git20211215.c2c7a15-2 all
 golang-sourcehut-emersion-gqlclient-dev/stable 0.0~git20221107.1d1d46a-2 all
 golang-sourcehut-rockorager-tcell-term-dev/stable 0.4.0-1 all
 golang-sourcehut-sircmpwn-getopt-dev/stable 0.0~git20191230.23622cc-2 all
-golang-src/stable,now 2:1.19~1 all [installed,automatic]
+golang-src/stable 2:1.19~1 all
 golang-sslmate-src-go-pkcs12-dev/stable 0.0~git20210415.c5206de-2 all
 golang-starlark-dev/stable 0.0~git20210122.f935de8-2 all
 golang-statik/stable 0.1.1-5+b7 amd64
@@ -11857,7 +11857,7 @@ golang-uber-goleak-dev/stable 1.2.0-1 all
 golang-v2ray-core-dev/stable 4.34.0+ds-1 all
 golang-vbom-util-dev/stable 0.0~git20180919.efcd4e0-3 all
 golang-vhost-dev/stable 0.0~git20140120-3 all
-golang/stable,now 2:1.19~1 amd64 [installed]
+golang/stable 2:1.19~1 amd64
 goldencheetah/stable 1:3.5-1.1 amd64
 goldendict-webengine/stable 23.02.05-1 amd64
 goldendict-wordnet/stable 1:3.0-37 all
@@ -41089,7 +41089,7 @@ linux-image-6.1.0-13-cloud-amd64/stable 6.1.55-1 amd64
 linux-image-6.1.0-13-rt-amd64-dbg/stable 6.1.55-1 amd64
 linux-image-6.1.0-13-rt-amd64-unsigned/stable 6.1.55-1 amd64
 linux-image-6.1.0-13-rt-amd64/stable 6.1.55-1 amd64
-linux-image-6.1.0-9-amd64/now 6.1.27-1 amd64 [installed,local]
+linux-image-6.1.0-9-amd64/now 6.1.27-1 amd64 [residual-config]
 linux-image-amd64-dbg/stable 6.1.55-1 amd64
 linux-image-amd64-signed-template/stable 6.1.55-1 amd64
 linux-image-amd64/stable,now 6.1.55-1 amd64 [installed]
@@ -48406,7 +48406,7 @@ pulldown-cmark/stable 0.9.2-1+b2 amd64
 pullimap/stable 0.5.7-2 all
 pullseq/stable 1.0.2-4 amd64
 pulseaudio-equalizer/stable 16.1+dfsg1-2+b1 amd64
-pulseaudio-module-bluetooth/stable,now 16.1+dfsg1-2+b1 amd64 [installed,automatic]
+pulseaudio-module-bluetooth/stable 16.1+dfsg1-2+b1 amd64
 pulseaudio-module-gsettings/stable 16.1+dfsg1-2+b1 amd64
 pulseaudio-module-jack/stable 16.1+dfsg1-2+b1 amd64
 pulseaudio-module-lirc/stable 16.1+dfsg1-2+b1 amd64

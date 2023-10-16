@@ -31,9 +31,9 @@ export PATH=$PATH:$SCRIPTS_DIR
 export PATH=$PATH:/usr/local/go/bin
 
 export GOPATH=$HOME/go
-export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp1
-export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp2
-export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/Coding-Problems/Leetcode/go
+export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425git/mp2
+export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425git/mp3
+export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/Coding-Problems/go
 export GOBIN=$GOPATH/bin
 
 export PATH=$PATH:$GOPATH/bin
