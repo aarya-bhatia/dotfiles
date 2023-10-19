@@ -278,3 +278,9 @@ mode "$mode_power" {
     bindsym Return mode "default"
 }
 bindsym $mod+Escape mode "$mode_power"
+
+
+# bar {
+#         status_command i3status
+# }
+#
