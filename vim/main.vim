@@ -89,8 +89,8 @@ augroup group
   autocmd BufRead,BufNewFile *.html setlocal filetype=html
 
   " Trim trailing whitespace on lines
-  " autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
-  autocmd BufWritePost * :%s/\s\+$//e | nohlsearch
+  autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
+  " autocmd BufWritePost * :%s/\s\+$//e | nohlsearch
 
 augroup END
 

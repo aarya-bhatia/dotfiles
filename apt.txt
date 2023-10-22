@@ -1605,7 +1605,7 @@ blosxom/stable 2.1.2-2.1 all
 bls-standalone/stable 0.20151231+b1 amd64
 blt-demo/stable 2.5.3+dfsg-4.1 all
 blt-dev/stable 2.5.3+dfsg-4.1 amd64
-blt/stable 2.5.3+dfsg-4.1 amd64
+blt/stable,now 2.5.3+dfsg-4.1 amd64 [installed,automatic]
 bluebird-gtk-theme/stable 1.3-3 all
 bluebrain-hpc-coding-conventions/stable 1.0.0+git20221201-2 all
 bluedevil/stable 4:5.27.5-2 amd64
@@ -2910,9 +2910,9 @@ coda/stable 2.24.2-1 amd64
 code-exploration/stable 1.84.0-1696907652 amd64
 code-exploration/stable 1.84.0-1696906197 arm64
 code-exploration/stable 1.84.0-1696906437 armhf
-code-insiders/stable 1.84.0-1697435849 amd64
-code-insiders/stable 1.84.0-1697435673 arm64
-code-insiders/stable 1.84.0-1697435067 armhf
+code-insiders/stable 1.84.0-1697786240 amd64
+code-insiders/stable 1.84.0-1697780175 arm64
+code-insiders/stable 1.84.0-1697780182 armhf
 code-saturne-bin/stable 6.0.2-2 amd64
 code-saturne-data/stable 6.0.2-2 all
 code-saturne-doc/stable 6.0.2-2 all
@@ -6803,7 +6803,7 @@ fonts-lohit-taml/stable 2.91.3-2 all
 fonts-lohit-telu/stable 2.5.5-2 all
 fonts-lxgw-wenkai-doc/stable 1.250+repack-1 all
 fonts-lxgw-wenkai/stable 1.250+repack-1 all
-fonts-lyx/stable 2.3.7-1 all
+fonts-lyx/stable,now 2.3.7-1 all [installed,automatic]
 fonts-manchufont/stable 2.007.svn0068-5.1 all
 fonts-manrope/stable 4.504+git20201211-2 all
 fonts-material-design-icons-iconfont/stable 6.7.0+dfsg-1 all
@@ -31827,7 +31827,7 @@ libopenblas-openmp-dev/stable 0.3.21+ds-4 amd64
 libopenblas-pthread-dev/stable 0.3.21+ds-4 amd64
 libopenblas-serial-dev/stable 0.3.21+ds-4 amd64
 libopenblas0-openmp/stable 0.3.21+ds-4 amd64
-libopenblas0-pthread/stable 0.3.21+ds-4 amd64
+libopenblas0-pthread/stable,now 0.3.21+ds-4 amd64 [installed]
 libopenblas0-serial/stable 0.3.21+ds-4 amd64
 libopenblas0/stable 0.3.21+ds-4 amd64
 libopenblas64-0-openmp/stable 0.3.21+ds-4 amd64
@@ -41043,7 +41043,7 @@ libxpm4/stable-security,now 1:3.5.12-1.1+deb12u1 amd64 [installed,automatic]
 libxpp2-java/stable 2.1.10-8 all
 libxpp3-java/stable 1.1.4c-3 all
 libxpresent-dev/stable 1.0.0-2+b10 amd64
-libxpresent1/stable 1.0.0-2+b10 amd64
+libxpresent1/stable,now 1.0.0-2+b10 amd64 [installed,automatic]
 libxqdbm-dev/stable 1.8.78-12+b1 amd64
 libxqdbm3c2/stable 1.8.78-12+b1 amd64
 libxrandr-dev/stable 2:1.5.2-2+b1 amd64
@@ -43405,7 +43405,7 @@ mptcpd/stable 0.12-1 amd64
 mptcpize/stable 0.12-1 amd64
 mptp/stable 0.2.4-3+b2 amd64
 mpv-mpris/stable 0.7.1-1 amd64
-mpv/stable 0.35.1-4 amd64
+mpv/stable,now 0.35.1-4 amd64 [installed,automatic]
 mrb/stable 0.3+nmu2 all
 mrbayes-doc/stable 3.2.7a-6 all
 mrbayes-mpi/stable 3.2.7a-6 amd64
@@ -49709,7 +49709,7 @@ python-manilaclient-doc/stable 4.1.1-1 all
 python-manimpango-doc/stable 0.4.3-2 all
 python-markdown-callouts-doc/stable 0.3.0-2 all
 python-markdown-doc/stable 3.4.1-2 all
-python-matplotlib-data/stable 3.6.3-1 all
+python-matplotlib-data/stable,now 3.6.3-1 all [residual-config]
 python-maxminddb-doc/stable 2.2.0-1 all
 python-mbed-host-tests-doc/stable 1.4.4-8 all
 python-mbed-ls-doc/stable 1.6.2+dfsg-8 all
@@ -50498,7 +50498,7 @@ python3-brian-lib/stable 2.5.1-3 amd64
 python3-brian/stable 2.5.1-3 all
 python3-brlapi/stable,now 6.5-7+deb12u1 amd64 [installed,automatic]
 python3-broker/stable 1.4.0+ds1-1+b2 amd64
-python3-brotli/stable 1.0.9-2+b6 amd64
+python3-brotli/stable,now 1.0.9-2+b6 amd64 [installed,automatic]
 python3-bs4/stable 4.11.2-2 all
 python3-bsddb3/stable 6.2.9-2+b4 amd64
 python3-bson-ext/stable 3.11.0-1+b5 amd64
@@ -52669,7 +52669,7 @@ python3-piexif/stable 1.1.3-2 all
 python3-pigpio/stable 1.78-1 all
 python3-pika/stable 1.2.0-1 all
 python3-pikepdf/stable 6.0.0+dfsg-1+b2 amd64
-python3-pil.imagetk/stable 9.4.0-1.1+b1 amd64
+python3-pil.imagetk/stable,now 9.4.0-1.1+b1 amd64 [installed,automatic]
 python3-pil/stable,now 9.4.0-1.1+b1 amd64 [installed,automatic]
 python3-pilkit/stable 2.0-4 all
 python3-pint/stable 0.19.2-1 all
@@ -52857,7 +52857,7 @@ python3-pycodestyle/stable 2.10.0-1 all
 python3-pycosat/stable 0.6.4+dfsg-1+b1 amd64
 python3-pycountry/stable 22.3.5+ds1-1 all
 python3-pycparser/stable 2.21-1 all
-python3-pycryptodome/stable 3.11.0+dfsg1-4 amd64
+python3-pycryptodome/stable,now 3.11.0+dfsg1-4 amd64 [installed,automatic]
 python3-pycsw/stable 2.6.1+dfsg-2 all
 python3-pyct/stable 0.5.0-1 all
 python3-pycurl/stable,now 7.45.2-3 amd64 [installed,automatic]
@@ -53281,7 +53281,7 @@ python3-pywt/stable 1.1.1-3+b2 amd64
 python3-pywws/stable 22.10.0-1 all
 python3-pyx-doc/stable 0.16-1 all
 python3-pyx/stable 0.16-1+b2 amd64
-python3-pyxattr/stable 0.8.1-1 amd64
+python3-pyxattr/stable,now 0.8.1-1 amd64 [installed,automatic]
 python3-pyxdameraulevenshtein/stable 1.7.1-2+b2 amd64
 python3-pyxid/stable 1.0-6 all
 python3-pyxnat/stable 1.5-2 all
@@ -53580,7 +53580,7 @@ python3-setuptools-rust/stable 1.5.2-2 all
 python3-setuptools-scm-git-archive/stable 1.4-1 all
 python3-setuptools-scm/stable 7.1.0-3 all
 python3-setuptools-whl/stable 66.1.1-1 all
-python3-setuptools/stable 66.1.1-1 all
+python3-setuptools/stable,now 66.1.1-1 all [installed,automatic]
 python3-sexpdata/stable 0.0.3-3 all
 python3-sfepy/stable 2021.4-4+b1 amd64
 python3-sfml/stable 2.2~git20150611.196c88+dfsg-7+b4 amd64
@@ -53874,7 +53874,7 @@ python3-swiglpk/stable 4.65.1-1+b4 amd64
 python3-sword/stable 1.9.0+dfsg-4+b4 amd64
 python3-sybil/stable 3.0.1-1 all
 python3-syllabipy/stable 0.2-4 all
-python3-sympy/stable 1.11.1-1 all
+python3-sympy/stable,now 1.11.1-1 all [residual-config]
 python3-synphot/stable 1.1.1-3+b2 amd64
 python3-systemd/stable 235-1+b2 amd64
 python3-systemfixtures/stable 0.6.4-2 all
@@ -53958,7 +53958,7 @@ python3-tinydb/stable 3.15.2-4 all
 python3-tinyobjloader/stable 2.0.0~rc10+dfsg-2+b1 amd64
 python3-tinyrpc/stable 0.6-4 all
 python3-tk-dbg/stable 3.11.2-3 amd64
-python3-tk/stable 3.11.2-3 amd64
+python3-tk/stable,now 3.11.2-3 amd64 [installed,automatic]
 python3-tkrzw/stable 0.1.29-1 amd64
 python3-tksnack/stable 2.2.10.20090624+dfsg-1 all
 python3-tktreectrl/stable 2.0.2-5 all
@@ -54193,7 +54193,7 @@ python3-webpy/stable 1:0.62-4 all
 python3-websocket/stable 1.2.3-1 all
 python3-websocketd-doc/stable 0.5-1 all
 python3-websocketd/stable 0.5-1 all
-python3-websockets/stable 10.4-1 all
+python3-websockets/stable,now 10.4-1 all [installed,automatic]
 python3-websockify/stable 0.10.0+dfsg1-4+b1 amd64
 python3-webtest/stable 3.0.0-2 all
 python3-webview/stable 3.3.5+dfsg-2 all
@@ -57095,7 +57095,7 @@ rtklib/stable 2.4.3.b34+dfsg-1+b1 amd64
 rtl-433/stable 22.11-1 amd64
 rtl-sdr/stable 0.6.0-4 amd64
 rtla/stable 6.1.55-1 amd64
-rtmpdump/stable 2.4+20151223.gitfa8646d.1-2+b2 amd64
+rtmpdump/stable,now 2.4+20151223.gitfa8646d.1-2+b2 amd64 [installed,automatic]
 rtorrent/stable 0.9.8-1 amd64
 rtpengine-daemon/stable 10.5.3.5-1 amd64
 rtpengine-iptables/stable 10.5.3.5-1 amd64
@@ -61297,7 +61297,7 @@ tk-tktray/stable 1.3.9-3+b1 amd64
 tk2/stable 1.1-10.1 all
 tk5/stable 0.6-7 all
 tk707/stable 0.8-2 amd64
-tk8.6-blt2.5/stable 2.5.3+dfsg-4.1 amd64
+tk8.6-blt2.5/stable,now 2.5.3+dfsg-4.1 amd64 [installed,automatic]
 tk8.6-dev/stable 8.6.13-2 amd64
 tk8.6-doc/stable 8.6.13-2 all
 tk8.6/stable,now 8.6.13-2 amd64 [installed,automatic]
@@ -63961,7 +63961,7 @@ ypbind-mt/stable 2.7.2-2+b1 amd64
 ypserv/stable 4.2-1+b2 amd64
 yq/stable 3.1.0-3 all
 yrmcds/stable 1.1.9-1+b2 amd64
-yt-dlp/stable 2023.03.04-1 all
+yt-dlp/stable,now 2023.03.04-1 all [installed]
 ytcc/stable 2.6.1-1 all
 ytfzf/stable 2.5.4-1 all
 ytnef-tools/stable 2.0-1+b1 amd64
