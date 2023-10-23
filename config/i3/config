@@ -148,6 +148,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec terminator
+# i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -229,7 +230,7 @@ exec_always --no-startup-id ~/.fehbg &
 exec_always --no-startup-id killall -q picom; picom --config ~/.config/picom.conf &
 
 # Polybar status bar
-exec_always --no-startup-id ~/scripts/polybar/launch.sh
+# exec_always --no-startup-id ~/scripts/polybar/launch.sh
 
 # Remap Caps Lock to Control key
 exec_always --no-startup-id ~/scripts/keymaps.sh
@@ -244,7 +245,7 @@ exec_always --no-startup-id ~/scripts/screenmirror.sh
 exec_always --no-startup-id ~/scripts/screenlock.sh
 
 # bindsym $mod+Shift+x exec systemctl suspend
-bindsym $mod+Shift+x exec ~/.local/bin/betterlockscreen --time-format "%r" --lock dim --off 60
+bindsym $mod+Shift+x exec betterlockscreen --time-format "%r" --lock dim --off 60
 
 # Rofi password store lookup
 # bindsym $mod+Shift+P exec rofi-pass
@@ -266,7 +267,6 @@ bindsym $mod+o mode "$mode_launcher"
 set $Locker i3lock && sleep 1
 set $mode_power [l]lock [e]logout [s]suspend [h]hibernate [r]reboot [S]shutdown
 mode "$mode_power" {
-    # bindsym l exec --no-startup-id ~/.local/bin/betterlockscreen --lock dim --off 10, mode "default"
     bindsym l exec --no-startup-id ~/scripts/lock.sh, mode "default"
 	bindsym e exec --no-startup-id i3-msg exit, mode "default"
 	bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
@@ -280,7 +280,13 @@ mode "$mode_power" {
 bindsym $mod+Escape mode "$mode_power"
 
 
-# bar {
-#         status_command i3status
-# }
-#
+bar {
+	status_command i3status
+	# tray_output eDP-1
+	tray_output none
+	position top
+	font pango:monospace 11
+	workspace_min_width 20
+	# tray_padding 4
+}
+

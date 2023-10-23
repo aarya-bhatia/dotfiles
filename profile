@@ -1,5 +1,7 @@
 #!/bin/sh
 
+setfont ter-120n
+
 if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
         . "$HOME/.bashrc"
@@ -9,14 +11,13 @@ fi
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
 export FZF_DEFAULT_OPTS="--border --info=inline -m"
-export FZF_DEFAULT_COMMAND="fdfind --follow --color=auto --hidden --exclude={.git,node_modules,tmp,__pycache__}"
+export FZF_DEFAULT_COMMAND="fd --follow --color=auto --hidden --exclude={.git,node_modules,tmp,__pycache__}"
 
 export BROWSER="firefox"
 export EDITOR="nvim"
 export READER="zathura"
 
 export GPG_TTY=`tty`
-export RANGER_LOAD_DEFAULT_RC=FALSE
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 export NOTES_DIRECTORY="$HOME/GoogleDrive/Notes"
@@ -32,8 +33,6 @@ export PATH=$PATH:$SCRIPTS_DIR
 export PATH=$PATH:/usr/local/go/bin
 
 export GOPATH=$HOME/go
-export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp1
-export GOPATH=$GOPATH:/home/aarya/repos/aarya-bhatia/uiuc/cs425/gitlab/mp2
 export GOBIN=$GOPATH/bin
 
 export PATH=$PATH:$GOPATH/bin
