@@ -1,9 +1,9 @@
 #!/bin/sh
-# feh --no-fehbg --bg-fill --no-xinerama '/home/aarya/.cache/betterlockscreen/current/wall_resize.png'
 # feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0048.jpg'
 # feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0003.jpg'
 # feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0280.jpg'
 # feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0001.jpg'
 # feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0071.jpg'
 # feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0055.jpg'
-feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0226.jpg'
+# feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0226.jpg'
+feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0060.jpg'

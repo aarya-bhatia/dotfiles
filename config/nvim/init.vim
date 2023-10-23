@@ -63,8 +63,6 @@ let g:NERDTreeHijackNetrw = 0 " Add this line if you use NERDTree
 let g:lf_replace_netrw = 1 " Open lf when vim opens a directory
 nnoremap <leader>- :Lf<CR>
 
-Plug 'stevearc/oil.nvim'
-
 call plug#end()
 
 " lua configs
@@ -83,5 +81,5 @@ nnoremap <leader>R "zyyo:r !z
 
 let g:python3_host_prog="/home/aarya/pyvenv/bin/python3"
 
-" set noacd
+set acd
 
