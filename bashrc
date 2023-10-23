@@ -8,7 +8,7 @@ shopt -s checkwinsize
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
 export FZF_DEFAULT_OPTS="--border --info=inline -m"
-export FZF_DEFAULT_COMMAND="fdfind --follow --color=auto --hidden --exclude={.git,node_modules,tmp,__pycache__}"
+export FZF_DEFAULT_COMMAND="fd --follow --color=auto --hidden --exclude={.git,node_modules,tmp,__pycache__}"
 
 export BROWSER="firefox"
 export EDITOR="nvim"
@@ -32,9 +32,6 @@ export PATH=$PATH:$SCRIPTS_DIR:/usr/local/bin:/usr/local/go/bin:$GOPATH/bin:/usr
 
 export LATITUDE="41.11"
 export LONGITUDE="-88.24"
-
-alias fd="fdfind"
-alias bat="batcat"
 
 alias s="systemctl"
 alias j="journalctl"
@@ -80,7 +77,7 @@ alias valgrind="valgrind --leak-check=full --show-leak-kinds=all"
 alias mutt="neomutt"
 alias sc="sc-im"
 alias bat="bat --style=plain --theme=gruvbox-dark"
-alias cat="batcat --plain"
+alias cat="bat --plain"
 alias bathelp="bat --plain --language=help"
 alias ta="tmux attach || tmux"
 alias t="todo.sh -d /home/aarya/dotfiles/todo.cfg"
