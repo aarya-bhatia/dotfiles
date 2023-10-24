@@ -80,3 +80,7 @@ Host cs340
 	User aaryab2
 	IdentityFile /home/aarya/.ssh/aaryab2
 
+Host cs340vm11
+	Hostname fa23-cs340-011.cs.illinois.edu
+	User aaryab2
+

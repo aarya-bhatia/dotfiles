@@ -1,6 +1,6 @@
 #!/bin/sh
 
-setfont ter-120n
+# setfont ter-120n
 
 if [ -n "$BASH_VERSION" ]; then
     if [ -f "$HOME/.bashrc" ]; then
@@ -27,17 +27,13 @@ export VIM_DIR="$HOME/dotfiles/vim"
 export SCRIPTS_DIR="$HOME/scripts"
 export COPYIGNORE="$HOME/dotfiles/copyignore"
 
-export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:$SCRIPTS_DIR
-
-export PATH=$PATH:/usr/local/go/bin
 
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-
 export PATH=$PATH:$GOPATH/bin
-export PATH=$PATH:/usr/local/bin:/home/$USER/.local/bin:/home/$USER/pyvenv/bin
-export PATH=$PATH:/snap/bin
+
+export PATH=$PATH:/usr/local/go/bin:/usr/local/bin:/home/$USER/.local/bin:/home/$USER/pyvenv/bin:/snap/bin
 
 export LATITUDE="41.11"
 export LONGITUDE="-88.24"
