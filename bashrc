@@ -29,7 +29,7 @@ alias mkdir="mkdir -pv"
 alias py="python3"
 alias rm="trash-put"
 alias bc="bc -q"
-alias du="du -sh"
+# alias du="du -sh"
 alias free="free -h"
 
 alias ls="ls --color=auto --group-directories-first"
