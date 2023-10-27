@@ -32,7 +32,7 @@ archiso 73-1
 archlinux-appstream-data 20231010-1
 archlinux-keyring 20231017-1
 archlinux-logout-git 23.10-04
-archlinux-tweak-tool-git 23.10-06
+archlinux-tweak-tool-git 23.10-08
 archlinux-wallpaper 1.6.1-6
 arcolinux-alacritty-git 23.06-01
 arcolinux-arc-kde 20220908-01
@@ -186,14 +186,14 @@ edk2-ovmf 202308-3
 edk2-shell 202308-3
 efibootmgr 18-2
 efivar 38-3
-electron25 25.9.2-1
+electron25 25.9.3-1
 elementary-icon-theme 7.3.1-1
 enchant 2.6.1-1
 endeavouros-keyring 20230523-1
-endeavouros-mirrorlist 23.14-1
+endeavouros-mirrorlist 23.16-1
 erofs-utils 1.7.1-1
 ethtool 1:6.5-1
-exfatprogs 1.2.1-1
+exfatprogs 1.2.2-1
 exiv2 0.28.0-3
 exo 4.18.0-1
 expac 10-5
@@ -255,6 +255,7 @@ glslang 13.0.0-1
 glu 9.0.3-1
 gmp 6.3.0-1
 gnome-bluetooth 3.34.5+r16+g61cfff1c-1
+gnome-calculator 45.0.2-1
 gnome-disk-utility 45.0-1
 gnome-keyring 1:42.1-3
 gnome-themes-extra 3.28+r6+g45b1d457-1
@@ -292,13 +293,14 @@ gstreamer 1.22.6-1
 gtk-engine-murrine 0.98.2-4
 gtk-engines 2.21.0-5
 gtk-layer-shell 0.8.1-1
-gtk-update-icon-cache 1:4.12.3-1
+gtk-update-icon-cache 1:4.12.3-2
 gtk2 2.24.33-3
 gtk3 1:3.24.38-1
-gtk4 1:4.12.3-1
+gtk4 1:4.12.3-2
 gtkmm 1:2.24.5-4
 gtkmm3 3.24.8-1
 gtksourceview3 1:3.24.11+r28+g73e57b57-1
+gtksourceview5 5.10.0-1
 guile 3.0.9-1
 gumbo-parser 0.12.1-1
 gupnp 1:1.6.5-1
@@ -443,6 +445,7 @@ libfontenc 1.1.7-1
 libfreeaptx 0.1.1-1
 libfreehand 0.1.2-4
 libgcrypt 1.10.2-1
+libgee 0.20.6-1
 libgexiv2 0.14.2-1
 libgirepository 1.78.1-1
 libgit2 1:1.7.1-1
@@ -661,7 +664,7 @@ libyuv r2322+3aebf69d-1
 libzmf 0.0.2-14
 licenses 20231011-1
 lilv 0.24.20-2
-linux 6.5.8.arch1-1
+linux 6.5.9.arch2-1
 linux-api-headers 6.4-1
 linux-atm 2.5.2-8
 linux-firmware 20230804.7be2766d-2
@@ -672,7 +675,7 @@ linux-firmware-mellanox 20230804.7be2766d-2
 linux-firmware-nfp 20230804.7be2766d-2
 linux-firmware-qlogic 20230804.7be2766d-2
 linux-firmware-whence 20230804.7be2766d-2
-linux-headers 6.5.8.arch1-1
+linux-headers 6.5.9.arch2-1
 llvm-libs 16.0.6-1
 lm_sensors 1:3.6.0.r41.g31d1f125-2
 lmdb 0.9.30-3
@@ -703,7 +706,7 @@ mdadm 4.2-2
 memtest86+ 6.20-1
 memtest86+-efi 6.20-1
 mesa 1:23.2.1-2
-minizip 1:1.3-1
+minizip 1:1.3-2
 mintstick-git r266.b5db0b1-1
 mjpegtools 2.2.1-2
 mkinitcpio 36-1
@@ -896,7 +899,7 @@ python-six 1.16.0-8
 python-soupsieve 2.5-1
 python-typing_extensions 4.8.0-1
 python-urllib3 1.26.15-1
-python-virtualenv 20.24.5-1
+python-virtualenv 20.24.6-1
 python-wheel 0.40.0-3
 python-xapp 2.4.1-1
 python-xlib 0.33-2
@@ -923,8 +926,8 @@ rav1e 0.6.6-3
 rclone 1.64.0-1
 re2 1:20230901-2
 readline 8.2.001-2
-rebornos-keyring 20230815-1
-rebornos-mirrorlist 20230815-1
+rebornos-keyring 20231026-1
+rebornos-mirrorlist 20231026-1
 redland 1:1.0.17-8
 redshift 1.12-8
 refind 0.14.0.2-1
@@ -948,6 +951,7 @@ sardi-icons 23.07-01
 sbc 2.0-1
 screen 4.9.1-1
 scrot 1.10-1
+sddm 0.20.0-4
 sdl2 2.28.4-1
 sdparm 1.12-1
 seabios 1.16.2-2
@@ -1205,7 +1209,7 @@ zenity 3.44.2-1
 zeromq 4.3.5-2
 zimg 3.0.5-1
 zip 3.0-11
-zlib 1:1.3-1
+zlib 1:1.3-2
 zoom 5.16.5-1
 zstd 1.5.5-1
 zvbi 0.2.42-1

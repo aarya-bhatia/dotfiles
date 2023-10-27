@@ -11,6 +11,7 @@ Cache/
 VirtualBox
 pyvenv
 .cargo
+.docker
 
 .local/*/docker/
 

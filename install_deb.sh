@@ -1,0 +1,47 @@
+#!/bin/bash
+
+cd $HOME
+
+packages=(
+	arandr
+	bat
+	build-essential
+	curl
+	dmenu
+	dunst
+	fd-find
+	feh
+	ffmpeg
+	fzf
+	git
+	i3
+	lxappearance
+	neofetch
+	neovim
+	nodejs
+	npm
+	picom
+	pipewire
+	python3-pip
+	python3-venv
+	python3-virtualenv
+	rclone
+	rsync
+	terminator
+	texlive
+	thunderbird
+	tmux
+	valgrind
+	vlc
+	xcape
+	xdotool
+	zathura
+)
+
+for package in "${packages[@]}"; do
+	echo sudo apt install $package
+done
+
+echo python3 -m venv pyvenv
+echo pip install flask requests vimiv trash-cli
+
