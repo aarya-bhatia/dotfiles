@@ -5,6 +5,7 @@ cd $HOME
 packages=(
 	arandr
 	bat
+	brightnessctl
 	build-essential
 	curl
 	dmenu
@@ -20,6 +21,7 @@ packages=(
 	neovim
 	nodejs
 	npm
+	pass
 	picom
 	pipewire
 	python3-pip

@@ -2,8 +2,16 @@
 
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
+fd=fdfind
+bat=batcat
+
+alias fd=$fd
+alias bat="$bat --style=plain --theme=gruvbox-dark"
+alias cat="$bat --plain"
+alias bathelp="$bat --plain --language=help"
+
 export FZF_DEFAULT_OPTS="--border --info=inline -m"
-export FZF_DEFAULT_COMMAND="fd --follow --color=auto --hidden --exclude={.git,node_modules,tmp,__pycache__}"
+export FZF_DEFAULT_COMMAND="$fd --follow --color=auto --hidden --exclude={.git,node_modules,tmp,__pycache__}"
 
 export BROWSER="firefox"
 export EDITOR="nvim"
@@ -83,9 +91,6 @@ alias valgrind="valgrind --leak-check=full --show-leak-kinds=all"
 # alias scrot="escrotum"
 alias mutt="neomutt"
 alias sc="sc-im"
-alias bat="bat --style=plain --theme=gruvbox-dark"
-alias cat="bat --plain"
-alias bathelp="bat --plain --language=help"
 alias ta="tmux attach || tmux"
 alias t="todo.sh -d /home/aarya/dotfiles/todo.cfg"
 alias send_alert="$SCRIPTS_DIR/alert-service/send_alert.py"
