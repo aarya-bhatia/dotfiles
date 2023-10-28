@@ -2,8 +2,13 @@
 
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
-fd=fdfind
-bat=batcat
+fd=fd
+bat=bat
+
+if uname -a | grep -q debian; then 
+	fd=fdfind
+	bat=batcat
+fi
 
 alias fd=$fd
 alias bat="$bat --style=plain --theme=gruvbox-dark"

@@ -31,6 +31,7 @@ packages=(
 	rsync
 	terminator
 	texlive
+	thunar
 	thunderbird
 	tmux
 	valgrind
@@ -46,4 +47,7 @@ done
 
 echo python3 -m venv pyvenv
 echo pip install flask requests vimiv trash-cli
+
+ln -s $(which thunar) /usr/local/bin/files
+ln -s $(which thunderbird) /usr/local/bin/thunderbird
 

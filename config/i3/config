@@ -226,8 +226,8 @@ exec_always --no-startup-id nm-applet &
 exec_always --no-startup-id ~/.fehbg &
 
 # Window compositor
-# exec_always --no-startup-id picom --config ~/.config/picom.conf --backend glx --xrender-sync-fence
-exec_always --no-startup-id killall -q picom; picom --config ~/.config/picom.conf &
+exec_always --no-startup-id killall -q picom; picom --config ~/.config/picom.conf --backend glx --xrender-sync-fence &
+# exec_always --no-startup-id killall -q picom; picom --config ~/.config/picom.conf &
 
 # Polybar status bar
 # exec_always --no-startup-id ~/scripts/polybar/launch.sh
@@ -282,8 +282,8 @@ bindsym $mod+Escape mode "$mode_power"
 
 bar {
 	status_command i3status
-	# tray_output eDP-1
-	tray_output none
+	tray_output eDP-1
+	# tray_output none
 	position top
 	font pango:monospace 11
 	workspace_min_width 25

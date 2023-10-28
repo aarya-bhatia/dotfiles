@@ -4,8 +4,9 @@
   [[default]]
     audible_bell = True
     visible_bell = True
-    background_darkness = 0.85
-    background_image = /home/aarya/wallpapers/0001.jpg
+    background_darkness = 0.9
+    background_type = image
+    background_image = /home/aarya/wallpapers/archlinux/snow.jpg
     cursor_fg_color = "#000000"
     cursor_bg_color = "#aaaaaa"
     font = Hack Nerd Font Propo 11
