@@ -29,6 +29,7 @@ packages=(
 	python3-virtualenv
 	rclone
 	rsync
+  	silversearcher-ag
 	terminator
 	texlive
 	thunar

@@ -1,6 +1,5 @@
 require('Comment').setup()
 require("marks").setup()
-require("oil").setup()
 
 vim.opt.list = false
 vim.opt.listchars:append "eol:↴"
