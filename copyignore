@@ -8,14 +8,14 @@ Cache/
 .cache/
 *.pl
 *history
-VirtualBox
-pyvenv
+VirtualBox/
+pyvenv/
 .cargo
-.docker
+.docker/
 
 .local/*/docker/
+.local/state
 
-.mozilla
 .config/Slack/
 .config/chromium/
 .config/discord/

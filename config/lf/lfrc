@@ -9,9 +9,13 @@ set previewer ~/.config/lf/preview.sh
 map i $~/.config/lf/preview.sh $f | less -R
 
 set icons
+set hidden true
+set drawbox true
+set ignorecase true
+set incsearch true
 
 # interpreter for shell commands
-set shell sh
+set shell bash
 
 # set '-eu' options for shell commands
 # These options are used to have safer shell commands. Option '-e' is used to

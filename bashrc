@@ -5,7 +5,7 @@
 fd=fd
 bat=bat
 
-if uname -a | grep -q debian; then 
+if uname -a | grep -q debian; then
 	fd=fdfind
 	bat=batcat
 fi
