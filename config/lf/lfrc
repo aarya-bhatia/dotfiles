@@ -120,7 +120,9 @@ cmd fzf ${{
     if [ -d "$selected" ]; then
       lf -remote "send $id cd \"$selected\""
     elif [ -f "$selected" ]; then
-      lf -remote "send $id \$$EDITOR \"$selected\""
+	  dir=$(dirname "$selected")
+      # lf -remote "send $id \$$EDITOR \"$selected\""
+      lf -remote "send $id cd \"$dir\""
     fi
   else
     lf -remote "send $id %echo error"
