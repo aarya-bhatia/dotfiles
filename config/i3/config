@@ -290,7 +290,7 @@ bar {
 	tray_output eDP-1
 	# tray_output none
 	position top
-	font pango:monospace 11
+	font pango:monospace 10
 	workspace_min_width 25
 	# tray_padding 4
 }

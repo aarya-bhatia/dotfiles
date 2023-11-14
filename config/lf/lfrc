@@ -13,6 +13,7 @@ set hidden true
 set drawbox true
 set ignorecase true
 set incsearch true
+set info size
 
 # interpreter for shell commands
 set shell bash
@@ -110,6 +111,7 @@ cmd cd-lf $lf -remote "send $id cd $HOME/.config/lf"
 map gh cd-home
 map gc cd-config
 map gl cd-lf
+map gd cd ~/Downloads
 
 # Fuzzy finder
 cmd fzf ${{
@@ -121,8 +123,8 @@ cmd fzf ${{
       lf -remote "send $id cd \"$selected\""
     elif [ -f "$selected" ]; then
 	  dir=$(dirname "$selected")
-      # lf -remote "send $id \$$EDITOR \"$selected\""
       lf -remote "send $id cd \"$dir\""
+      lf -remote "send $id \$$EDITOR \"$selected\""
     fi
   else
     lf -remote "send $id %echo error"
