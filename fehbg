@@ -1,3 +1,2 @@
 #!/bin/sh
-# feh --no-fehbg --bg-scale '/home/aarya/wallpapers/0001.jpg'
-# feh --no-fehbg --bg-scale '/home/aarya/wallpapers/archlinux/lone.jpg'
+# feh --no-fehbg --bg-scale /home/aarya/wallpapers/0091.jpg
