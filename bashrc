@@ -102,6 +102,8 @@ alias send_alert="$SCRIPTS_DIR/alert-service/send_alert.py"
 alias fvim="$SCRIPTS_DIR/fzf_vim.py"
 alias vbox="VBoxManage"
 
+export LESS="-i"
+
 # vim pager
 alias view="col -b | vim -R -"
 
