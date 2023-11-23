@@ -69,9 +69,9 @@ source $HOME/.config/nvim/lua/config.lua
 source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/commands.lua
 
-" colorscheme gruvbox
+colorscheme gruvbox
 " colorscheme gruvbox-material
-colorscheme melange
+" colorscheme melange
 
 source $VIM_DIR/main.vim
 
