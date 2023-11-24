@@ -31,7 +31,7 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'mfussenegger/nvim-dap'
 
 " Indent lines
-" Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Marks
 Plug 'chentoast/marks.nvim'
@@ -84,3 +84,5 @@ let g:python3_host_prog="/home/aarya/pyvenv/bin/python3"
 
 set undodir=~/.nvim
 set undofile
+
+

@@ -17,6 +17,7 @@ packages=(
 	git
 	i3
 	lxappearance
+	mpv
 	neofetch
 	neovim
 	nodejs
