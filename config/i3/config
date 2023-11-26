@@ -117,19 +117,9 @@ workspace_auto_back_and_forth yes
 assign [class="thunderbird"] $ws3
 assign [class="discord"] $ws3
 assign [class="slack"] $ws3
-# assign [class="firefox"] $ws2
-# assign [class="qutebrowser"] $ws2
-# assign [class="Tartube"] $ws4
-# assign [class="arandr"] $ws4
-# assign [class="VirtualBox Manager"] $ws6
+assign [class="vlc"] $ws5
 
 for_window [class="Com.cisco.secureclient.gui"] floating enable
-
-# bindsym XF86AudioRaiseVolume exec amixer -q set Master 2%+ unmute
-# bindsym XF86AudioLowerVolume exec amixer -q set Master 2%- unmute
-# bindsym XF86AudioMute exec amixer -q set Master toggle
-# bindsym XF86MonBrightnessUp exec brightnessctl set +5%
-# bindsym XF86MonBrightnessDown exec brightnessctl set 5%-
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_up
 bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_down
