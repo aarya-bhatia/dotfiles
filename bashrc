@@ -77,7 +77,7 @@ alias mkdir="mkdir -pv"
 alias py="python3"
 alias rm="trash-put"
 alias bc="bc -q"
-# alias du="du -sh"
+alias du="du -h"
 alias free="free -h"
 
 alias ls="ls --color=auto --group-directories-first"
@@ -102,6 +102,7 @@ alias send_alert="$SCRIPTS_DIR/alert-service/send_alert.py"
 alias fvim="$SCRIPTS_DIR/fzf_vim.py"
 alias vbox="VBoxManage"
 alias bright="brightnessctl"
+alias timer="termdown"
 
 export LESS="-iR"
 

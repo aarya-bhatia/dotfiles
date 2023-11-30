@@ -251,11 +251,11 @@ bindsym $mod+Shift+P exec ~/scripts/external/dmenupass.sh
 
 set $mode_launcher Launch: [f]irefox [t]hunderbird [c]hrome [d]iscord [s]lack
 mode "$mode_launcher" {
-    bindsym f exec firefox
-    bindsym t exec thunderbird
-    bindsym c exec chromium
-    bindsym d exec discord
-    bindsym s exec slack
+    bindsym f exec firefox, mode "default"
+    bindsym t exec thunderbird, mode "default"
+    bindsym c exec chromium, mode "default"
+    bindsym d exec discord, mode "default"
+    bindsym s exec slack, mode "default"
 
     bindsym Escape mode "default"
     bindsym Return mode "default"
@@ -283,7 +283,7 @@ bar {
 	tray_output eDP-1
 	# tray_output none
 	position top
-	font pango:monospace 10
+	font pango:monospace 9
 	workspace_min_width 25
 	# tray_padding 4
 }
