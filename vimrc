@@ -18,6 +18,7 @@ Plug 'jamessan/vim-gnupg'					" edit gpg files
 source $VIM_DIR/plugins/fzf.vim           	" fuzzy finder
 source $VIM_DIR/plugins/ack.vim           	" grep tool
 source $VIM_DIR/plugins/colorscheme.vim   	" colorscheme
+" source $VIM_DIR/plugins/vimlsp.vim
 
 call plug#end()
 

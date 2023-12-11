@@ -34,11 +34,20 @@ export COPYIGNORE="$HOME/dotfiles/copyignore"
 
 export PATH=$PATH:$SCRIPTS_DIR
 
+export GOROOT=/usr/local/go/
 export GOPATH=$HOME/go
 export GOBIN=$GOPATH/bin
-export PATH=$PATH:$GOPATH/bin
+export PATH=$PATH:${GOPATH}/bin:${GOROOT}/bin
 
-export PATH=$PATH:/usr/local/go/bin:/usr/local/bin:/home/$USER/.local/bin:/home/$USER/pyvenv/bin:/snap/bin
+export PATH=$PATH:/home/$USER/.local/bin
+export PATH=$PATH:/home/$USER/pyvenv/bin
+
+export PATH=$PATH:/usr/local
+export PATH=$PATH:/usr/local/bin
+export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/nvim/bin
+
+export PATH=$PATH:/snap/bin
 
 export LATITUDE="41.11"
 export LONGITUDE="-88.24"
