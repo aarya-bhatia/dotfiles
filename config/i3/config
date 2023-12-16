@@ -220,7 +220,7 @@ exec_always --no-startup-id nm-applet &
 
 # Display random wallpaper
 exec --no-startup-id ~/.fehbg &
-# exec --no-startup-id ~/scripts/wallpaper.sh &
+# exec --no-startup-id nitrogen --restore &
 bindsym $mod+Shift+w exec ~/scripts/wallpaper.sh &
 
 # Window compositor

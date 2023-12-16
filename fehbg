@@ -1,2 +1,2 @@
 #!/bin/sh
-feh --no-fehbg --bg-scale /home/aarya/wallpapers/0091.jpg
+feh --no-fehbg --bg-scale '/home/aarya/wallpapers/arcolinux/arco-login-plasma.jpg' 
