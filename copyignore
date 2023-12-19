@@ -3,7 +3,7 @@ plugged/
 bin/
 obj/
 pkg/
-cache/
+cache
 Cache/
 .cache/
 *.pl

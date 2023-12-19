@@ -23,6 +23,7 @@ order += "cpu_usage"
 order += "memory"
 order += "battery 0"
 order += "wireless wlo1"
+order += "ethernet enx00e04c680d42"
 order += "volume master"
 order += "time"
 
@@ -78,6 +79,12 @@ time {
 
 ## ethernet sensor
 ethernet enp2s0 {
+    # if you use %speed, i3status requires root privileges shows only if you have a 1000Mbit/s after ip adress)
+    #format_up = "E: %ip (%speed)"
+    format_up = "E: %ip"
+}
+
+ethernet enx00e04c680d42 {
     # if you use %speed, i3status requires root privileges shows only if you have a 1000Mbit/s after ip adress)
     #format_up = "E: %ip (%speed)"
     format_up = "E: %ip"
