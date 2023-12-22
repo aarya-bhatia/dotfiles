@@ -112,6 +112,7 @@ map gh cd-home
 map gc cd-config
 map gl cd-lf
 map gd cd ~/Downloads
+map gt cd ~/Downloads/tar
 
 # Fuzzy finder
 cmd fzf ${{
