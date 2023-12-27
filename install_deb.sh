@@ -10,6 +10,7 @@ packages=(
 	curl
 	dmenu
 	dunst
+	exuberant-ctags
 	fd-find
 	feh
 	ffmpeg
@@ -38,6 +39,7 @@ packages=(
 	tmux
 	valgrind
 	vlc
+	xautolock
 	xcape
 	xdotool
 	zathura

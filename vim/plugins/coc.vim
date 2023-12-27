@@ -2,9 +2,6 @@
 " coc.nvim settings
 " -------------------------------------------------------------------------------------------------
 
-" LSP
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 if executable('/usr/bin/node')
   let g:coc_node_path = '/usr/bin/node'
 endif

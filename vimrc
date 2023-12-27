@@ -1,7 +1,8 @@
 let mapleader = ' '
 let maplocalleader = ' '
 
-let $VIM_DIR=$HOME."/dotfiles/vim"
+set termguicolors
+set background=dark
 
 call plug#begin("$HOME/.vim/plugged")
 
@@ -14,21 +15,17 @@ Plug 'tpope/vim-fugitive'					" git tool
 Plug 'andymass/vim-matchup'					" match keywords
 Plug 'wellle/targets.vim'					" more text objects
 Plug 'jamessan/vim-gnupg'					" edit gpg files
+Plug 'mileszs/ack.vim'
+Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
+Plug 'preservim/tagbar'
 
 source $VIM_DIR/plugins/fzf.vim           	" fuzzy finder
-source $VIM_DIR/plugins/ack.vim           	" grep tool
-source $VIM_DIR/plugins/colorscheme.vim   	" colorscheme
-" source $VIM_DIR/plugins/vimlsp.vim
+source $VIM_DIR/plugins/lf.vim
 
 call plug#end()
 
-source $VIM_DIR/lf.vim
+colorscheme gruvbox
+
 nnoremap <leader>- :LF<cr>
-
-colorscheme gruvbox-material
-
-source $VIM_DIR/main.vim
-set termguicolors
-set background=dark
-
-
+nnoremap <leader>tt :TagbarToggle<CR>
