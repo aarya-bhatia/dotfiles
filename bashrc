@@ -5,7 +5,7 @@
 fd=fd
 bat=bat
 
-if uname -a | grep -q debian; then
+if uname -a | grep -q -E "debian|Ubuntu"; then
 	fd=fdfind
 	bat=batcat
 fi
@@ -97,6 +97,8 @@ alias l="ls --color=auto -CF"
 alias ip="ip --color=auto"
 alias diff="diff --color=auto"
 alias grep="grep -E --color=auto"
+alias fgrep="fgrep --color=auto"
+alias egrep="egrep --color=auto"
 alias dmesg="dmesg --color=auto"
 
 alias valgrind="valgrind --leak-check=full --show-leak-kinds=all"

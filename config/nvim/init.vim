@@ -8,6 +8,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'   " Git tool
+Plug 'tpope/vim-abolish'
 
 " comment with gc
 Plug 'numToStr/Comment.nvim'
