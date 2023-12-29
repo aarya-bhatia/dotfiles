@@ -70,7 +70,7 @@ augroup group
   autocmd FileType vim setlocal foldmethod=marker
   autocmd FileType go setlocal foldmethod=manual
   autocmd FileType * setlocal foldmethod=syntax
-  autocmd FileType c,cpp setlocal textwidth=120
+  " autocmd FileType c,cpp setlocal textwidth=120
   autocmd FileType c,cpp setlocal foldmethod=syntax
   autocmd FileType c,cpp setlocal ts=2 sts=2 sw=2 et
   autocmd FileType markdown,text setlocal spell spelllang=en_us
@@ -83,8 +83,8 @@ augroup group
   autocmd BufRead,BufNewFile *.html setlocal filetype=html
 
   " Trim trailing whitespace on lines
-  autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
-  " autocmd BufWritePost * :%s/\s\+$//e | nohlsearch
+  " autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
+  autocmd BufWritePost * :%s/\s\+$//e | nohlsearch
 
 augroup END
 
@@ -131,7 +131,6 @@ nnoremap <leader>s :write<cr>
 nnoremap <leader>q :quit<CR>
 
 " close buffer and keep split
-" nnoremap <leader>d :bp<bar>sp<bar>bn<bar>bd<CR>
 nnoremap <leader>d :bd<CR>
 
 " Unhighlight search results
@@ -296,13 +295,13 @@ Plug 'numToStr/Comment.nvim'
 
 " Syntax highlighting
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-" Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
 " Async library
 Plug 'nvim-lua/plenary.nvim'
 
 " Indent lines
-Plug 'lukas-reineke/indent-blankline.nvim'
+" Plug 'lukas-reineke/indent-blankline.nvim'
 
 " Marks
 Plug 'chentoast/marks.nvim'
@@ -364,11 +363,13 @@ source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/lsp.lua
 
 colorscheme gruvbox
-" colorscheme gruvbox-material
 " colorscheme melange
 
 " Run the command on current line and paste output below
 nnoremap <leader>R "zyy:r !z
 
 let g:python3_host_prog="/home/aarya/pyvenv/bin/python3"
+
+" Archived
+" source $VIM_DIR/plugins/coc.vim
 

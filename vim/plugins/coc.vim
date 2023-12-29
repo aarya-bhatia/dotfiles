@@ -2,6 +2,12 @@
 " coc.nvim settings
 " -------------------------------------------------------------------------------------------------
 
+" Use release branch (recommended)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Or build from source code by using npm
+Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
+
 if executable('/usr/bin/node')
   let g:coc_node_path = '/usr/bin/node'
 endif

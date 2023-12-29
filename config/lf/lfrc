@@ -114,25 +114,19 @@ map gd cd ~/Downloads
 map gt cd ~/Downloads/tar
 
 # Fuzzy finder
-cmd fzf ${{
-  selected=$(fzf)
-  status=$?
-
-  if [ $status -eq 0 ]; then
-    if [ -d "$selected" ]; then
-      lf -remote "send $id cd \"$selected\""
-    elif [ -f "$selected" ]; then
-	  dir=$(dirname "$selected")
-      lf -remote "send $id cd \"$dir\""
-      lf -remote "send $id \$$EDITOR \"$selected\""
+cmd fzf_jump ${{
+    res="$(fzf)"
+    if [ -n "$res" ]; then
+        if [ -d "$res" ]; then
+            cmd="cd"
+        else
+            cmd="select"
+        fi
+        res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+        lf -remote "send $id $cmd \"$res\""
     fi
-  else
-    lf -remote "send $id %echo error"
-  fi
 }}
-
-# Fuzzy find file or directory
-map <c-f> fzf
+map <c-f> :fzf_jump
 
 # To create files and directories
 map o %$HOME/scripts/lf/mkfile.py
