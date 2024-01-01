@@ -12,6 +12,7 @@ set icons
 set drawbox true
 set ignorecase true
 set incsearch true
+# set info size:time
 set info size
 
 # interpreter for shell commands
@@ -143,4 +144,35 @@ cmd chmod %{{
     chmod $ans $file
   done
 }}
+
+
+# Edit and reload config
+cmd edit-config ${{
+    $EDITOR ~/.config/lf/lfrc
+    lf -remote "send $id source ~/.config/lf/lfrc"
+}}
+
+map C edit-config
+
+# Dynamically set number of columns
+# cmd on-redraw %{{
+#     if [ $lf_width -le 80 ]; then
+#         lf -remote "send $id set ratios 1:2"
+#     elif [ $lf_width -le 160 ]; then
+#         lf -remote "send $id set ratios 1:2:3"
+#     else
+#         lf -remote "send $id set ratios 1:2:3:5"
+#     fi
+# }}
+
+# Toggle preview column
+cmd toggle_preview %{{
+    if [ "$lf_preview" = "true" ]; then
+        lf -remote "send $id :set preview false; set ratios 1:5"
+    else
+        lf -remote "send $id :set preview true; set ratios 1:2:3"
+    fi
+}}
+
+map zp toggle_preview
 

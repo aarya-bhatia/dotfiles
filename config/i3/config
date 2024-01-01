@@ -240,7 +240,7 @@ exec_always --no-startup-id dunst &
 exec_always --no-startup-id ~/scripts/screenmirror.sh
 
 # Auto lock screen and suspend after some amount of idle time
-# exec_always --no-startup-id ~/scripts/screenlock.sh
+exec_always --no-startup-id ~/scripts/screenlock.sh &
 
 # bindsym $mod+Shift+x exec systemctl suspend
 # bindsym $mod+Shift+x exec betterlockscreen --time-format "%r" --lock dim --off 60
@@ -268,7 +268,7 @@ set $Locker i3lock && sleep 1
 set $mode_power [l]lock [e]logout [s]suspend [h]hibernate [r]reboot [S]shutdown
 mode "$mode_power" {
     # bindsym l exec --no-startup-id ~/scripts/lock.sh, mode "default"
-    bindsym l exec --no-startup-id i3lock && sleep 10 && systemctl suspend, mode "default"
+    bindsym l exec --no-startup-id i3lock -c 009999 && sleep 300 && systemctl suspend, mode "default"
 	bindsym e exec --no-startup-id i3-msg exit, mode "default"
 	bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
 	bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"

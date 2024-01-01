@@ -152,7 +152,7 @@ vnoremap < <gv
 vnoremap > >gv
 
 " Paste over currently selected text without yanking it
-vnoremap p "_dP
+" xnoremap p "_dP
 
 " navigate quickfix list
 nnoremap [q :cprev<CR>

@@ -56,9 +56,11 @@ extra=(
 	chromium
 	bluez
 	bluez-tools
+	blueman
 	fd-find
 	ufw
 	redshift
+	scrot
 )
 
 gnome=(

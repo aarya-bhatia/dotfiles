@@ -8,6 +8,8 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+# xset s 0 0
+
 # # Start X server
 # if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
 #   exec startx
