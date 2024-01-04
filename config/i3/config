@@ -11,7 +11,8 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
-bindsym $mod+t exec thunar &
+# bindsym $mod+t exec thunar &
+bindsym $mod+t exec nautilus &
 bindsym $mod+g exec gnome-calculator &
 
 set $primary eDP-1
@@ -151,8 +152,8 @@ bindsym $mod+d exec dmenu_run
 
 # Launch calculator
 bindcode 148 exec --no-startup-id gnome-calculator
-for_window [class="gnome-calculator"] floating enable
-bindcode $mod+148 [class="gnome-calculator"] scratchpad show
+for_window [class="Gnome-calculator"] floating enable
+bindcode $mod+148 [class="Gnome-calculator"] scratchpad show
 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
