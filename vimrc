@@ -140,7 +140,7 @@ nnoremap <leader>q :quit<CR>
 nnoremap <leader>d :bd<CR>
 
 " Unhighlight search results
-nnoremap <Esc> :nohl<CR>
+" nnoremap <Esc> :nohl<CR>
 nnoremap <leader>hl :set invhlsearch<CR>
 
 " surround last visual selection with quotes
