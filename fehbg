@@ -2,9 +2,9 @@
 file='/home/aarya/Notes/favorite_wallpapers.txt'
 if [ -f $file ];
 then
-	wallpaper=$(cat $file | shuf -n 1)
+	wallpaper="$(cat $file | shuf -n 1)"
 	echo $wallpaper
-	feh --no-fehbg --bg-scale $wallpaper
+	feh --no-fehbg --bg-scale "$wallpaper"
 else
 	echo "file not found: " $file
 	exit 1
