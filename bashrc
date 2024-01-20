@@ -156,3 +156,4 @@ lfcd () {
 
 alias notes="$EDITOR /home/aarya/GoogleDrive/Notes/$(date +"%Y-%m").md"
 
+alias iverilog="iverilog -Wall"
