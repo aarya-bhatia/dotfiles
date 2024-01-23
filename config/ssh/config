@@ -19,7 +19,7 @@ Host linode
   User aarya
   IdentityFile ~/.ssh/id_rsa
 
-Host github
+Host github.com
 	Hostname github.com
 	User git
     IdentityFile ~/.ssh/id_rsa

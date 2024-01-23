@@ -57,6 +57,7 @@ nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
 nnoremap <silent> <leader>ck :call ShowDocumentation()<CR>
+nnoremap <silent> <leader>lk :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')

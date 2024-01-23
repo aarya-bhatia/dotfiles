@@ -176,3 +176,8 @@ cmd toggle_preview %{{
 
 map zp toggle_preview
 
+# Map A to rename with cursor at the last position
+map A rename<space>
+
+# Map I to rename with cursor at the first position
+map I rename<space><home>

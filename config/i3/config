@@ -252,12 +252,12 @@ bindsym $mod+Shift+P exec ~/scripts/external/dmenupass.sh
 
 set $mode_launcher Launch: [f]irefox [t]hunderbird [c]hrome [d]iscord [s]lack [v]lc
 mode "$mode_launcher" {
-    bindsym f exec firefox, mode "default"
-    bindsym t exec thunderbird, mode "default"
-    bindsym c exec chromium, mode "default"
-    bindsym d exec discord, mode "default"
-    bindsym s exec slack, mode "default"
-    bindsym v exec vlc, mode "default"
+    bindsym f exec firefox
+    bindsym t exec thunderbird
+    bindsym c exec chromium
+    bindsym d exec discord
+    bindsym s exec slack
+    bindsym v exec vlc
 
     bindsym Escape mode "default"
     bindsym Return mode "default"

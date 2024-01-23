@@ -45,7 +45,7 @@ export PATH=$PATH:/home/$USER/pyvenv/bin
 export PATH=$PATH:/usr/local
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/usr/local/go/bin
-# export PATH=$PATH:/usr/local/nvim/bin
+export PATH=$PATH:/usr/local/nvim/bin
 
 export PATH=$PATH:/snap/bin
 
@@ -150,7 +150,6 @@ alias sshpass="sshpass -f ~/passwd ssh"
 # fi
 
 lfcd () {
-    # `command` is needed in case `lfcd` is aliased to `lf`
     cd "$(command lf -print-last-dir "$@")"
 }
 
