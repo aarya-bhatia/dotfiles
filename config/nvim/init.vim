@@ -273,8 +273,8 @@ augroup qflist
 augroup END
 
 nnoremap <leader>M :Mason<CR>
-" nnoremap <leader>F :LspZeroFormat<CR>
-nnoremap <leader>F :Format<CR>
+nnoremap <leader>F :LspZeroFormat<CR>
+" nnoremap <leader>F :Format<CR>
 
 " VimPlug
 
@@ -346,22 +346,22 @@ let g:lf_replace_netrw = 1
 nnoremap <leader>- :Lf<CR>
 
 " LSP
-" Plug 'williamboman/mason.nvim'
-" Plug 'williamboman/mason-lspconfig.nvim'
-" Plug 'neovim/nvim-lspconfig'
-" Plug 'hrsh7th/nvim-cmp'
-" Plug 'hrsh7th/cmp-nvim-lsp'
-" Plug 'L3MON4D3/LuaSnip'
-" Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'L3MON4D3/LuaSnip'
+Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
 
-source $VIM_DIR/plugins/coc.vim
+" source $VIM_DIR/plugins/coc.vim
 
 call plug#end()
 
 " lua configs
 source $HOME/.config/nvim/lua/config.lua
 source $HOME/.config/nvim/lua/treesitter.lua
-" source $HOME/.config/nvim/lua/lsp.lua
+source $HOME/.config/nvim/lua/lsp.lua
 
 colorscheme gruvbox
 " colorscheme melange
