@@ -8,7 +8,7 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
-# xset s 0 0
+xset s 0 0
 
 # Automatically Load the SSH Agent on Login
 # if [ -z "$SSH_AUTH_SOCK" ] ; then

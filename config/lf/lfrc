@@ -58,6 +58,7 @@ map X exec_args
 cmd open &{{
     case $(file --mime-type -Lb $f) in
         text/*) lf -remote "send $id \$$EDITOR \$fx";;
+        application/json ) lf -remote "send $id \$$EDITOR \$fx";;
         image/*) lf -remote "send $id \$vimiv \$fx";;
         audio/*) lf -remote "send $id \$mpv \$fx";;
         video/*) lf -remote "send $id \$vlc \$fx";;

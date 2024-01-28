@@ -120,8 +120,6 @@ assign [class="discord"] $ws3
 assign [class="Slack"] $ws3
 assign [class="vlc"] $ws5
 
-for_window [class="Com.cisco.secureclient.gui"] floating enable
-
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_up
 bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_down
 bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_mute
@@ -240,7 +238,7 @@ exec_always --no-startup-id dunst &
 exec_always --no-startup-id ~/scripts/screenmirror.sh
 
 # Auto lock screen and suspend after some amount of idle time
-exec_always --no-startup-id ~/scripts/screenlock.sh &
+# exec_always --no-startup-id ~/scripts/screenlock.sh &
 
 # bindsym $mod+Shift+x exec systemctl suspend
 # bindsym $mod+Shift+x exec betterlockscreen --time-format "%r" --lock dim --off 60
@@ -285,7 +283,7 @@ bar {
 	status_command i3status
 	tray_output eDP-1
 	# tray_output none
-	position top
+	position bottom
 	font pango:monospace 9
 	workspace_min_width 25
 	# tray_padding 4
