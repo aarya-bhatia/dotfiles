@@ -22,7 +22,7 @@ order += "disk /home"
 order += "cpu_usage"
 order += "memory"
 order += "battery 0"
-order += "wireless wlo1"
+order += "wireless wlp1s0"
 order += "ethernet enx00e04c680d42"
 order += "volume master"
 order += "time"
@@ -102,6 +102,11 @@ wireless wlan0 {
 }
 
 wireless wlo1 {
+    format_up = "W: (%quality at %essid) %ip"
+    format_down = "W: down"
+}
+
+wireless wlp1s0 {
     format_up = "W: (%quality at %essid) %ip"
     format_down = "W: down"
 }

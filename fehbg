@@ -4,7 +4,7 @@ if [ ! -z "$wallpaper" ] && [ -f "$wallpaper" ]; then
 	echo $wallpaper
 	feh --no-fehbg --bg-scale "$wallpaper"
 else
-	file='/home/aarya/Notes/favorite_wallpapers.txt'
+	file='/home/aarya/GoogleDrive/Notes/favorite_wallpapers.txt'
 	if [ -f $file ];
 	then
 		wallpaper="$(cat $file | shuf -n 1)"

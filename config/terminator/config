@@ -2,48 +2,15 @@
 [keybindings]
 [profiles]
   [[default]]
-    audible_bell = True
-    visible_bell = True
-    background_darkness = 0.84
-    background_type = transparent
-    background_image = /home/aarya/wallpapers/archlinux/snow.jpg
-    cursor_fg_color = "#000000"
-    cursor_bg_color = "#aaaaaa"
-    font = Hack Nerd Font Propo 11
     show_titlebar = False
     scrollbar_position = hidden
-    use_system_font = False
-    bold_is_bright = True
-    copy_on_selection = True
-  [[test]]
-    audible_bell = True
-    visible_bell = True
-    background_darkness = 0.93
-    background_image = /home/aarya/wallpapers/archlinux/snow.jpg
-    cursor_fg_color = "#000000"
-    cursor_bg_color = "#aaaaaa"
-    font = DejaVu Sans Mono 11
-    show_titlebar = False
-    scrollbar_position = hidden
-    use_system_font = False
-    bold_is_bright = True
     copy_on_selection = True
 [layouts]
   [[default]]
-    [[[child0]]]
+    [[[window0]]]
       type = Window
       parent = ""
-      order = 0
-      position = 0:0
-      maximised = False
-      fullscreen = False
-      size = 816, 549
-      last_active_term = 06f1463a-5482-4afe-ad2f-310648da7c8c
-      last_active_window = True
-    [[[terminal1]]]
+    [[[child1]]]
       type = Terminal
-      parent = child0
-      order = 0
-      profile = default
-      uuid = 06f1463a-5482-4afe-ad2f-310648da7c8c
+      parent = window0
 [plugins]

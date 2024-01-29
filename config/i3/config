@@ -1,7 +1,7 @@
 # i3 config file (v4)
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
 
-# super key = Alt
+# mod1 = Alt
 set $mod Mod1
 
 # mod4 = windows key
@@ -9,36 +9,17 @@ set $mod4 Mod4
 
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-
-# bindsym $mod+t exec thunar &
-bindsym $mod+t exec nautilus &
-bindsym $mod+g exec gnome-calculator &
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
 
 set $primary eDP-1
 set $secondary HDMI-1
 
-workspace 1 output $primary
-workspace 2 output $primary
-workspace 3 output $primary
-workspace 4 output $primary
-workspace 5 output $primary
-workspace 6 output $primary
-workspace 7 output $primary
-workspace 8 output $primary
-workspace 9 output $primary
-workspace 10 output $primary
-
-workspace 11 output $secondary
-workspace 12 output $secondary
-workspace 13 output $secondary
-workspace 14 output $secondary
-workspace 15 output $secondary
-workspace 16 output $secondary
-workspace 17 output $secondary
-workspace 18 output $secondary
-workspace 19 output $secondary
-workspace 20 output $secondary
+focus_wrapping no
+font pango:monospace 8
+hide_edge_borders both
+ipc-socket ~/.i3/i3-ipc.sock
+popup_during_fullscreen smart
+workspace_auto_back_and_forth yes
 
 set $ws1 "1"
 set $ws2 "2"
@@ -61,97 +42,39 @@ set $ws18 "18"
 set $ws19 "19"
 set $ws20 "20"
 
-# switch to workspace
-bindsym $mod+1 workspace number $ws1
-bindsym $mod+2 workspace number $ws2
-bindsym $mod+3 workspace number $ws3
-bindsym $mod+4 workspace number $ws4
-bindsym $mod+5 workspace number $ws5
-bindsym $mod+6 workspace number $ws6
-bindsym $mod+7 workspace number $ws7
-bindsym $mod+8 workspace number $ws8
-bindsym $mod+9 workspace number $ws9
-bindsym $mod+0 workspace number $ws10
-
-bindsym $mod4+1 workspace number $ws11
-bindsym $mod4+2 workspace number $ws12
-bindsym $mod4+3 workspace number $ws13
-bindsym $mod4+4 workspace number $ws14
-bindsym $mod4+5 workspace number $ws15
-bindsym $mod4+6 workspace number $ws16
-bindsym $mod4+7 workspace number $ws17
-bindsym $mod4+8 workspace number $ws18
-bindsym $mod4+9 workspace number $ws19
-bindsym $mod4+0 workspace number $ws20
-
-# move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace number $ws1
-bindsym $mod+Shift+2 move container to workspace number $ws2
-bindsym $mod+Shift+3 move container to workspace number $ws3
-bindsym $mod+Shift+4 move container to workspace number $ws4
-bindsym $mod+Shift+5 move container to workspace number $ws5
-bindsym $mod+Shift+6 move container to workspace number $ws6
-bindsym $mod+Shift+7 move container to workspace number $ws7
-bindsym $mod+Shift+8 move container to workspace number $ws8
-bindsym $mod+Shift+9 move container to workspace number $ws9
-bindsym $mod+Shift+0 move container to workspace number $ws10
-
-bindsym $mod4+Shift+1 move container to workspace number $ws11
-bindsym $mod4+Shift+2 move container to workspace number $ws12
-bindsym $mod4+Shift+3 move container to workspace number $ws13
-bindsym $mod4+Shift+4 move container to workspace number $ws14
-bindsym $mod4+Shift+5 move container to workspace number $ws15
-bindsym $mod4+Shift+6 move container to workspace number $ws16
-bindsym $mod4+Shift+7 move container to workspace number $ws17
-bindsym $mod4+Shift+8 move container to workspace number $ws18
-bindsym $mod4+Shift+9 move container to workspace number $ws19
-bindsym $mod4+Shift+0 move container to workspace number $ws20
-
-focus_wrapping no
-font pango:monospace 8
-hide_edge_borders both
-ipc-socket ~/.i3/i3-ipc.sock
-popup_during_fullscreen smart
-workspace_auto_back_and_forth yes
+include modes.conf
+include workspace.conf
 
 # Assign Workspaces:
 assign [class="thunderbird"] $ws3
 assign [class="discord"] $ws3
 assign [class="Slack"] $ws3
 assign [class="vlc"] $ws5
+assign [class="Firefox"] $ws2
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_up
 bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_down
 bindsym XF86AudioMute exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_mute
 bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/scripts/external/volume_brightness.sh brightness_up
 bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/scripts/external/volume_brightness.sh brightness_down
-bindsym XF86AudioPlayPause exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
+# bindsym XF87AudioPlayPause exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
 bindsym XF86AudioPause exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
 bindsym XF86AudioPlay exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
 bindsym XF86AudioNext exec --no-startup-id $HOME/scripts/external/volume_brightness.sh next_track
 bindsym XF86AudioPrev exec --no-startup-id $HOME/scripts/external/volume_brightness.sh prev_track
 
-# Screenshots with Print key
-bindcode 107 exec ~/scripts/screenshot.sh
-bindcode $mod+107 exec ~/scripts/screenshot.sh -s
-
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec terminator
-# i3-sensible-terminal
+# bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # Open rofi program launcher
-bindsym $mod+d exec dmenu_run
-
-# Launch calculator
-bindcode 148 exec --no-startup-id gnome-calculator
-for_window [class="Gnome-calculator"] floating enable
-bindcode $mod+148 [class="Gnome-calculator"] scratchpad show
+bindsym $mod+d exec --no-startup-id dmenu_run
 
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
@@ -194,20 +117,6 @@ bindsym $mod+a focus parent
 # focus the child container
 bindsym $mod+semicolon focus child
 
-# resize window
-mode "resize" {
-  bindsym h resize shrink width 10 px or 10 ppt
-  bindsym k resize grow height 10 px or 10 ppt
-  bindsym j resize shrink height 10 px or 10 ppt
-  bindsym l resize grow width 10 px or 10 ppt
-
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-  bindsym $mod+r mode "default"
-}
-
-bindsym $mod+r mode "resize"
-
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
 
@@ -219,14 +128,10 @@ exec_always --no-startup-id nm-applet &
 
 # Display random wallpaper
 exec --no-startup-id ~/.fehbg &
-bindsym $mod+Shift+w exec ~/scripts/wallpaper.sh &
+bindsym $mod+Shift+w exec --no-startup-id ~/scripts/wallpaper.sh &
 
 # Window compositor
 exec_always --no-startup-id killall -q picom; picom --config ~/.config/picom.conf --backend glx --xrender-sync-fence &
-# exec_always --no-startup-id killall -q picom; picom --config ~/.config/picom.conf &
-
-# Polybar status bar
-# exec_always --no-startup-id ~/scripts/polybar/launch.sh
 
 # Remap Caps Lock to Control key
 exec_always --no-startup-id ~/scripts/keymaps.sh
@@ -238,54 +143,36 @@ exec_always --no-startup-id dunst &
 exec_always --no-startup-id ~/scripts/screenmirror.sh
 
 # Auto lock screen and suspend after some amount of idle time
-# exec_always --no-startup-id ~/scripts/screenlock.sh &
+exec_always --no-startup-id ~/scripts/screenlock.sh &
 
-# bindsym $mod+Shift+x exec systemctl suspend
-# bindsym $mod+Shift+x exec betterlockscreen --time-format "%r" --lock dim --off 60
+# bindsym $mod+t exec --no-startup-id thunar &
+bindsym $mod+t exec --no-startup-id nautilus &
+bindsym $mod+g exec --no-startup-id gnome-calculator &
+
+# bindsym $mod+Shift+x exec --no-startup-id betterlockscreen --time-format "%r" --lock dim --off 60
 bindsym $mod+Shift+x exec --no-startup-id i3lock && systemctl suspend
 
-# Rofi password store lookup
-# bindsym $mod+Shift+P exec rofi-pass
-bindsym $mod+Shift+P exec ~/scripts/external/dmenupass.sh
+# dmenu password input
+bindsym $mod+Shift+p exec --no-startup-id ~/scripts/external/dmenupass.sh
 
-set $mode_launcher Launch: [f]irefox [t]hunderbird [c]hrome [d]iscord [s]lack [v]lc
-mode "$mode_launcher" {
-    bindsym f exec firefox
-    bindsym t exec thunderbird
-    bindsym c exec chromium
-    bindsym d exec discord
-    bindsym s exec slack
-    bindsym v exec vlc
+# Launch calculator
+bindcode 148 exec --no-startup-id gnome-calculator
+for_window [class="Gnome-calculator"] floating enable
+bindcode $mod+148 [class="Gnome-calculator"] scratchpad show
 
-    bindsym Escape mode "default"
-    bindsym Return mode "default"
-}
-bindsym $mod+o mode "$mode_launcher"
+# Screenshots with Print key
+bindcode 107 exec --no-startup-id ~/scripts/screenshot.sh
+bindcode $mod+107 exec --no-startup-id ~/scripts/screenshot.sh -s
 
-set $Locker i3lock && sleep 1
-set $mode_power [l]lock [e]logout [s]suspend [h]hibernate [r]reboot [S]shutdown
-mode "$mode_power" {
-    # bindsym l exec --no-startup-id ~/scripts/lock.sh, mode "default"
-    bindsym l exec --no-startup-id i3lock -c 009999 && sleep 300 && systemctl suspend, mode "default"
-	bindsym e exec --no-startup-id i3-msg exit, mode "default"
-	bindsym s exec --no-startup-id $Locker && systemctl suspend, mode "default"
-	bindsym h exec --no-startup-id $Locker && systemctl hibernate, mode "default"
-	bindsym r exec --no-startup-id systemctl reboot, mode "default"
-	bindsym Shift+s exec --no-startup-id systemctl poweroff -i, mode "default"
-
-    bindsym Escape mode "default"
-    bindsym Return mode "default"
-}
-bindsym $mod+Escape mode "$mode_power"
-
-
+# i3status bar
 bar {
 	status_command i3status
 	tray_output eDP-1
 	# tray_output none
-	position bottom
-	font pango:monospace 9
+	position top
+	font pango:monospace 10
 	workspace_min_width 25
-	# tray_padding 4
 }
+
+bindsym $mod+Shift+z exec --no-startup-id notify-send "PATH" "$PATH"
 

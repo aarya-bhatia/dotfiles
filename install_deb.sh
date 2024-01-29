@@ -38,6 +38,7 @@ packages=(
 	vlc
 	xcape
 	xdotool
+	xsel
 	zathura
 )
 

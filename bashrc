@@ -156,9 +156,9 @@ export COPYIGNORE="$HOME/dotfiles/copyignore"
 
 export PATH=$PATH:$SCRIPTS_DIR
 
-export GOROOT=/usr/local/go/
+# export GOROOT=/usr/local/go/
+# export GOBIN=$GOPATH/bin
 export GOPATH=$HOME/go
-export GOBIN=$GOPATH/bin
 export PATH=$PATH:${GOPATH}/bin:${GOROOT}/bin
 
 export PATH=$PATH:/home/$USER/.local/bin

@@ -104,7 +104,7 @@ iabbrev --- ----------------------
 
 " }}}
 
-" Mappings {{{
+" Key Mappings {{{
 
 map [f <Nop>
 map ]f <Nop>
@@ -354,8 +354,6 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'L3MON4D3/LuaSnip'
 Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
 
-" source $VIM_DIR/plugins/coc.vim
-
 call plug#end()
 
 " lua configs
@@ -368,5 +366,8 @@ colorscheme gruvbox
 
 " Run the command on current line and paste output below
 nnoremap <leader>R "zyy:r !z
+
+xnoremap ss !sort<CR>
+xnoremap su !sort\|uniq<CR>
 
 let g:python3_host_prog="/home/aarya/pyvenv/bin/python3"
