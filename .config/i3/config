@@ -169,22 +169,23 @@ exec_always --no-startup-id ~/scripts/screenmirror.sh
 # Auto lock screen and suspend after some amount of idle time
 exec_always --no-startup-id ~/scripts/screenlock.sh &
 
+# Always turn on num lock
 exec --no-startup-id numlockx on
 
-# bindsym $mod+t exec --no-startup-id thunar &
-bindsym $mod+t exec --no-startup-id nautilus &
-bindsym $mod+g exec --no-startup-id gnome-calculator &
+# Launch file browser
+bindsym $mod+t exec --no-startup-id thunar &
+for_window [class="Thunar"] floating enable resize set 960 750
+
+# Launch calculator
+# bindsym $mod+Shift+g exec --no-startup-id gnome-calculator &
+bindsym $mod+g [class="Gnome-calculator"] scratchpad show
+for_window [class="Gnome-calculator"] floating enable
 
 # bindsym $mod+Shift+x exec --no-startup-id betterlockscreen --time-format "%r" --lock dim --off 60
 bindsym $mod+Shift+x exec --no-startup-id i3lock && systemctl suspend
 
 # dmenu password input
 bindsym $mod+Shift+p exec --no-startup-id ~/scripts/external/dmenupass.sh
-
-# Launch calculator
-# bindcode 148 exec --no-startup-id gnome-calculator
-# for_window [class="Gnome-calculator"] floating enable
-# bindcode $mod+148 [class="Gnome-calculator"] scratchpad show
 
 # Screenshots with Print key
 bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
