@@ -42,7 +42,6 @@ __pycache__/
 *.gem
 .bundle/
 /vendor/
-/.config
 
 # Java
 *.class

@@ -23,6 +23,7 @@ packages=(
 	neovim
 	nodejs
 	npm
+	numlockx
 	pass
 	picom
 	pipewire

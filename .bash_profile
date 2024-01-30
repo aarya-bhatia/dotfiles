@@ -2,13 +2,15 @@
 
 # setfont ter-120n
 
-if [ -n "$BASH_VERSION" ]; then
-    if [ -f "$HOME/.bashrc" ]; then
-        . "$HOME/.bashrc"
-    fi
+echo $(date) "hello from .bash_profile" >> $HOME/i3.log
+
+if [ -f $HOME/.bashrc ]; then
+	source $HOME/.bashrc
+else
+	echo "Failed to source bashrc" >> $HOME/i3.log
 fi
 
-xset s 0 0
+# xset s 0 0
 
 # Automatically Load the SSH Agent on Login
 # if [ -z "$SSH_AUTH_SOCK" ] ; then
