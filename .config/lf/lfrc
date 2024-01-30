@@ -155,27 +155,22 @@ cmd edit-config ${{
 
 map C edit-config
 
-# Dynamically set number of columns
-# cmd on-redraw %{{
-#     if [ $lf_width -le 80 ]; then
-#         lf -remote "send $id set ratios 1:2"
-#     elif [ $lf_width -le 160 ]; then
-#         lf -remote "send $id set ratios 1:2:3"
-#     else
-#         lf -remote "send $id set ratios 1:2:3:5"
-#     fi
-# }}
-
-# Toggle preview column
-cmd toggle_preview %{{
-    if [ "$lf_preview" = "true" ]; then
-        lf -remote "send $id :set preview false; set ratios 1:5"
+cmd change_layout %{{
+    if [ $lf_width -le 80 ]; then
+        lf -remote "send $id set nopreview; set ratios 1"
+    elif [ $lf_width -le 160 ]; then
+        lf -remote "send $id set ratios 1:2:3; set preview"
     else
-        lf -remote "send $id :set preview true; set ratios 1:2:3"
+        lf -remote "send $id set ratios 1:2:3:5; set preview"
     fi
 }}
 
-map zp toggle_preview
+map zz change_layout
+
+map z1 :set nopreview; set ratios 1
+map z2 :set ratios 1:2; set preview
+map z3 :set ratios 1:2:3; set preview
+map z4 :set ratios 1:2:3:5; set preview
 
 # Map A to rename with cursor at the last position
 map A rename<space>
