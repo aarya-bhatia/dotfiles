@@ -151,7 +151,7 @@ bindsym $mod+minus scratchpad show
 exec_always --no-startup-id nm-applet &
 
 # Display random wallpaper
-exec --no-startup-id ~/.fehbg &
+exec_always --no-startup-id ~/.fehbg &
 bindsym $mod+Shift+w exec --no-startup-id ~/scripts/wallpaper.sh &
 
 # Window compositor
@@ -170,7 +170,7 @@ exec_always --no-startup-id ~/scripts/screenmirror.sh
 exec_always --no-startup-id ~/scripts/screenlock.sh &
 
 # Always turn on num lock
-exec --no-startup-id numlockx on
+exec_always --no-startup-id numlockx on
 
 # Launch file browser
 bindsym $mod+t exec --no-startup-id thunar &
