@@ -99,7 +99,7 @@ augroup END
 " Abbreviations {{{
 
 iabbrev @@ aarya.bhatia1678@gmail.com
-iabbrev uiuc University of Illinois
+iabbrev UIUC University of Illinois
 iabbrev --- ----------------------
 
 " }}}

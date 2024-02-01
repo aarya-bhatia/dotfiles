@@ -12,6 +12,7 @@ VirtualBox/
 pyvenv/
 .cargo
 .docker/
+snap/
 
 .local/*/docker/
 .local/state
@@ -45,6 +46,9 @@ tmp/
 *.exe
 
 # Python
+.venv/
+venv/
+pyvenv/
 __pycache__/
 *.pyc
 *.pyo

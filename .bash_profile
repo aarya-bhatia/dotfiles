@@ -2,7 +2,7 @@
 
 # setfont ter-120n
 
-echo $(date) "hello from .bash_profile" >> $HOME/i3.log
+# echo $(date) "hello from .bash_profile" >> $HOME/i3.log
 
 if [ -f $HOME/.bashrc ]; then
 	source $HOME/.bashrc
