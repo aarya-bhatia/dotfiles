@@ -72,7 +72,7 @@ augroup group
   autocmd FileType * setlocal foldmethod=syntax
   " autocmd FileType c,cpp setlocal textwidth=120
   autocmd FileType c,cpp setlocal foldmethod=syntax
-  autocmd FileType c,cpp setlocal ts=2 sts=2 sw=2 et
+  " autocmd FileType c,cpp setlocal ts=2 sts=2 sw=2 et
   autocmd FileType markdown,text setlocal spell spelllang=en_us
   autocmd FileType markdown,text setlocal wrap
   autocmd FileType vim setlocal foldmethod=marker

@@ -64,6 +64,7 @@ assign [class="discord"] $ws3
 assign [class="Slack"] $ws3
 assign [class="vlc"] $ws5
 assign [class="Firefox"] $ws2
+assign [class="Code"] $ws4
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_up
 bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_down
@@ -92,9 +93,9 @@ bindsym $mod+p [class="floating-python"] scratchpad show
 bindcode $mod+148 [class="floating-qalc"] scratchpad show
 
 bindsym $mod+Control+Return exec --no-startup-id alacritty --class=floating-term -e tmux new-session -A -s term
-bindsym $mod+Control+p exec --no-startup-id alacritty --class=floating-python -e python3
+bindsym $mod+Control+p exec --no-startup-id alacritty --class=floating-python -e tmux new-session -A -s python3 "/home/aarya/pyvenv/bin/python3"
 bindcode 148 exec --no-startup-id alacritty --class=floating-qalc -e tmux new-session -A -s qalc "qalc"
-
+bindcode $mod+Control+q exec --no-startup-id alacritty --class=floating-qalc -e tmux new-session -A -s qalc "qalc"
 bindsym $mod+Control+v exec ~/scripts/launch_vim.sh
 
 # kill focused window
