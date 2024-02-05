@@ -67,6 +67,7 @@ assign [class="Slack"] $ws3
 assign [class="vlc"] $ws5
 assign [class="Firefox"] $ws2
 assign [class="Code"] $ws4
+assign [class="Pavucontrol"] $ws9
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_up
 bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_down
@@ -174,6 +175,9 @@ exec_always --no-startup-id ~/scripts/screenlock.sh &
 
 # Always turn on num lock
 exec_always --no-startup-id numlockx on
+
+# Start mpd daemon
+exec --no-startup-id mpd &
 
 # Launch file browser
 bindsym $mod+t exec --no-startup-id thunar &

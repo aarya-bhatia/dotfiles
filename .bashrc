@@ -219,8 +219,7 @@ vman(){
 # Load python venv
 [ -d $HOME/pyvenv ] && source $HOME/pyvenv/bin/activate
 
-alias toggle-notifications="dunstctl set-paused toggle"
-alias sshpass="sshpass -f ~/passwd ssh"
+# alias sshpass="sshpass -f ~/passwd ssh"
 
 lfcd () {
     cd "$(command lf -print-last-dir "$@")"

@@ -31,7 +31,7 @@ set hidden                        " allows multiple buffers without saving
 set nowrap
 set linebreak
 set shiftwidth=4 tabstop=4 noexpandtab
-set scrolloff=8
+" set scrolloff=8
 set backspace=indent,eol,start    " make that backspace key work the way it should
 set splitbelow                    " new horizontal split opens below current window
 set splitright                    " new vertical split opens to the right of current window
