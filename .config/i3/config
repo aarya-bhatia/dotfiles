@@ -43,21 +43,43 @@ set $ws18 "18"
 set $ws19 "19"
 set $ws20 "20"
 
-set $ws1 1:
-set $ws2 2:
-set $ws3 3:
-set $ws4 4:
-set $ws5 5:♫
-set $ws7 7:
-set $ws9 9:
+# set $ws1 :
+# set $ws2 2:
+# set $ws3 3:
+# set $ws4 4:
+# set $ws5 5:♫
+# set $ws7 7:
+# set $ws9 9:
+
+set $ws1 1:term
+set $ws2 2:www
+set $ws3 3:mail
+set $ws4 4:doc
+set $ws5 5:media
+set $ws6 6:code
+set $ws9 9:sys
 
 # Terminal
 set $terminal 'alacritty'
 set $termclass 'Alacritty'
 
+# i3 gaps
+for_window [class="^.*"] border pixel 1
+# for_window [class=".*"] title_format ""
+
+# Set inner/outer gaps
+set $gaps_inner 6
+set $gaps_outer 1
+
+gaps inner $gaps_inner
+gaps outer $gaps_outer
+
+smart_gaps on
+smart_borders on
+hide_edge_borders smart_no_gaps
+
 include modes.conf
 include workspace.conf
-include gaps.conf
 include colors.conf
 
 # Assign Workspaces:
@@ -66,7 +88,7 @@ assign [class="discord"] $ws3
 assign [class="Slack"] $ws3
 assign [class="vlc"] $ws5
 assign [class="Firefox"] $ws2
-assign [class="Code"] $ws4
+assign [class="Code"] $ws6
 assign [class="Pavucontrol"] $ws9
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_up
@@ -89,17 +111,20 @@ bindsym $mod+Return exec --no-startup-id $terminal
 
 # enable floating mode for windows where class name begins with floating
 for_window [class="^floating"] floating enable
+for_window [class="Qalculate"] floating enable
 
-# keybindings to retrieve hidden window from scratchpad
-bindsym $mod+Shift+Return [class="floating-term"] scratchpad show
-bindsym $mod+p [class="floating-python"] scratchpad show
-bindcode $mod+148 [class="floating-qalc"] scratchpad show
+# bindsym $mod+Shift+Return [class="floating-term"] scratchpad show
+# bindsym $mod+p [class="floating-python"] scratchpad show
 
 bindsym $mod+Control+Return exec --no-startup-id alacritty --class=floating-term -e tmux new-session -A -s term
 bindsym $mod+Control+p exec --no-startup-id alacritty --class=floating-python -e tmux new-session -A -s python3 "/home/aarya/pyvenv/bin/python3"
-bindcode 148 exec --no-startup-id alacritty --class=floating-qalc -e tmux new-session -A -s qalc "qalc"
-bindcode $mod+Control+q exec --no-startup-id alacritty --class=floating-qalc -e tmux new-session -A -s qalc "qalc"
+bindsym $mod+Control+q exec --no-startup-id alacritty --class=floating-qalc -e tmux new-session -A -s qalc "qalc"
 bindsym $mod+Control+v exec ~/scripts/launch_vim.sh
+
+bindcode 148 exec --no-startup-id qalculate
+
+# toggle window in scratchpad
+bindcode $mod+148 [class="Qalculate"] scratchpad show
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -221,4 +246,30 @@ bar {
 
 # For testing
 bindsym $mod+Shift+z exec --no-startup-id notify-send "PATH" "$PATH"
+
+# COLORS
+
+# class                         border    backgr.    text     indicator
+# client.focused              #333333   #2f2f2f   #f1f1f1   #d64937
+# client.unfocused            #1b1b1b   #2a2a2a   #999999
+# client.focused_inactive     #1b1b1b   #444444   #aaaaaa
+# client.urgent               #d64937   #444444   #000000   #d64937
+
+set $color-primary #ff9900
+set $color-secondary #000000
+set $color-tertiary #204a87
+set $color-alert #bd2c40
+set $color-light-gray #acacac
+set $color-medium-gray #777777
+set $color-dark-gray #555555
+set $color-black #000000
+set $color-white #e6e6e6
+
+# state                    border              background          text                 indicator
+client.focused             $color-dark-gray    #ff0074             $color-white         $color-medium-gray
+client.focused_inactive    $color-black        $color-black        $color-medium-gray   $color-black
+client.unfocused           $color-black        $color-black        $color-dark-gray     $color-black
+client.urgent              $color-alert        $color-alert        $color-black         $color-black
+client.placeholder         $color-black        $color-black        $color-white         $color-black
+client.background          $color-black
 
