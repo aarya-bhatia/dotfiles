@@ -126,6 +126,10 @@ bindcode 148 exec --no-startup-id qalculate
 # toggle window in scratchpad
 bindcode $mod+148 [class="Qalculate"] scratchpad show
 
+bindsym $mod+Control+c exec --no-startup-id ~/scripts/dmenu_open_config.sh
+
+bindsym $mod+Control+w exec --no-startup-id sxiv ~/wallpapers
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
