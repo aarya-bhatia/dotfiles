@@ -11,6 +11,6 @@ case "$1" in
     *.rar) unrar l "$1";;
     *.8z) 7z l "$1";;
     *.pdf) pdftotext "$1" -;;
-    *.json) jq < "$1";;
+    *.json) jq < "$1" 2>/dev/null || $view "$1";;
     *) $view "$1";;
 esac

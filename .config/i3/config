@@ -90,6 +90,7 @@ assign [class="vlc"] $ws5
 assign [class="Firefox"] $ws2
 assign [class="Code"] $ws6
 assign [class="Pavucontrol"] $ws9
+assign [class="floating-ncmpcpp"] $ws5
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_up
 bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_down
@@ -101,6 +102,11 @@ bindsym XF86AudioPause exec --no-startup-id $HOME/scripts/external/volume_bright
 bindsym XF86AudioPlay exec --no-startup-id $HOME/scripts/external/volume_brightness.sh play_pause
 bindsym XF86AudioNext exec --no-startup-id $HOME/scripts/external/volume_brightness.sh next_track
 bindsym XF86AudioPrev exec --no-startup-id $HOME/scripts/external/volume_brightness.sh prev_track
+
+bindsym $mod+XF86AudioPause exec --no-startup-id mpc toggle
+bindsym $mod+XF86AudioPlay exec --no-startup-id mpc toggle
+bindsym $mod+XF86AudioNext exec --no-startup-id mpc next
+bindsym $mod+XF86AudioPrev exec --no-startup-id mpc prev
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -211,6 +217,9 @@ exec --no-startup-id mpd &
 # Launch file browser
 bindsym $mod+t exec --no-startup-id thunar &
 for_window [class="Thunar"] floating enable resize set 960 750
+
+# Launch music player
+bindsym XF86Tools exec --no-startup-id alacritty --class=floating-ncmpcpp -e ncmpcpp
 
 # Launch calculator
 # bindsym $mod+Shift+g exec --no-startup-id gnome-calculator &
