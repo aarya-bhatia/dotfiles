@@ -12,15 +12,15 @@ command=~/scripts/i3/i3disk.sh
 interval=360
 color=#A4C2F4
 
-[cpu_usage]
-command=~/scripts/i3/cpu_usage/cpu_usage
-interval=10
-label=CPU
+# [cpu_usage]
+# command=~/scripts/i3/cpu_usage/cpu_usage
+# interval=10
+# label=CPU
 
-[memory]
-command=~/scripts/i3/memory/memory
-label=MEM
-interval=30
+# [memory]
+# command=~/scripts/i3/memory/memory
+# label=MEM
+# interval=30
 
 [internet]
 command=~/scripts/i3/i3internet.sh
@@ -36,6 +36,8 @@ color=#91E78B
 command=~/scripts/i3/bandwidth.sh
 interval=5
 color=#91E78B
+min_width=150
+align=center
 
 [mediaplayer]
 command=~/scripts/i3/mediaplayer/mediaplayer
@@ -46,10 +48,15 @@ command=pamixer --get-volume-human
 label=♪
 interval=1
 
+[brightness]
+command=~/scripts/brightness.sh
+label=
+interval=1
+
 [time]
-command=date +"%Y-%m-%d %H:%M %p"
+command=date +"%a %Y-%m-%d %I:%M %p"
 interval=5
-color=#91E78B
+color=#fff87c
 
 [battery2]
 command=~/scripts/i3/battery2/battery2

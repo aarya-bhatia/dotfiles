@@ -249,7 +249,8 @@ bindcode $mod+107 exec --no-startup-id ~/scripts/screenshot.sh -s
 bar {
 	status_command 2>/tmp/i3blocks.err i3blocks | tee /tmp/i3blocks.out
 	position top
-	font pango:DejaVu Sans Mono 9.5
+	# font pango:DejaVu Sans Mono 9.5
+	font pango:Hack Nerd Font 9.5
 	tray_output eDP-1
 }
 
