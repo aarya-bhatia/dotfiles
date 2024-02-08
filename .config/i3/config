@@ -14,8 +14,8 @@ bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you reall
 set $primary eDP-1
 set $secondary HDMI-1
 
-# font pango:monospace 8
-font pango:JetBrains Mono 1
+font pango:monospace 8
+# font pango:DejaVu Sans Mono 1
 
 focus_wrapping no
 ipc-socket ~/.i3/i3-ipc.sock
@@ -237,22 +237,21 @@ bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
 bindcode $mod+107 exec --no-startup-id ~/scripts/screenshot.sh -s
 
 # i3status bar
-bar {
-	status_command i3status
-	tray_output eDP-1
-	# tray_output primary
-	position top
-	font pango:DejaVu Sans Mono 9
-	workspace_min_width 25
-}
-
-# TODO
 # bar {
-# 	status_command i3blocks
-# 	position bottom
+# 	status_command i3status
+# 	tray_output eDP-1
+# 	# tray_output primary
+# 	position top
 # 	font pango:DejaVu Sans Mono 9
-# 	tray_output none
+# 	workspace_min_width 25
 # }
+
+bar {
+	status_command 2>/tmp/i3blocks.err i3blocks | tee /tmp/i3blocks.out
+	position top
+	font pango:DejaVu Sans Mono 9.5
+	tray_output eDP-1
+}
 
 # Polybar
 # exec_always --no-startup-id ~/.config/polybar/launch.sh
@@ -279,10 +278,10 @@ set $color-black #000000
 set $color-white #e6e6e6
 
 # state                    border              background          text                 indicator
-client.focused             $color-dark-gray    #ff0074             $color-white         $color-medium-gray
-client.focused_inactive    $color-black        $color-black        $color-medium-gray   $color-black
-client.unfocused           $color-black        $color-black        $color-dark-gray     $color-black
-client.urgent              $color-alert        $color-alert        $color-black         $color-black
-client.placeholder         $color-black        $color-black        $color-white         $color-black
-client.background          $color-black
-
+# client.focused             $color-dark-gray    #ff0074             $color-white         $color-medium-gray
+# client.focused_inactive    $color-black        $color-black        $color-medium-gray   $color-black
+# client.unfocused           $color-black        $color-black        $color-dark-gray     $color-black
+# client.urgent              $color-alert        $color-alert        $color-black         $color-black
+# client.placeholder         $color-black        $color-black        $color-white         $color-black
+# client.background          $color-black
+#

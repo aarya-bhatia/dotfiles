@@ -2,26 +2,59 @@
 command=xdotool getactivewindow getwindowname
 interval=persist
 
-[click]
-full_text=Click me!
-command=echo "Got clicked with button $button"
-color=#F79494
-
-# get the weather every ten min
 [weather]
-command=~/scripts/weather.py 2>/dev/null
+command=~/scripts/i3/i3forecast.sh
+interval=360
+color=#91E78B
+
+[disk]
+command=~/scripts/i3/i3disk.sh
 interval=360
 color=#A4C2F4
 
-# Query my default IP address only on startup
-[ip]
-command=hostname -I | awk '{ print "IP:" $1 }'
-interval=once
+[cpu_usage]
+command=~/scripts/i3/cpu_usage/cpu_usage
+interval=10
+label=CPU
+
+[memory]
+command=~/scripts/i3/memory/memory
+label=MEM
+interval=30
+
+[internet]
+command=~/scripts/i3/i3internet.sh
+interval=360
 color=#91E78B
 
-# Update time every 5 seconds
-[time]
-command=date +%T
+# [public_ip]
+# command=curl api.ipify.org
+# interval=once
+# color=#A4C2F4
+
+[bandwidth]
+command=~/scripts/i3/bandwidth.sh
 interval=5
+color=#91E78B
+
+[mediaplayer]
+command=~/scripts/i3/mediaplayer/mediaplayer
+interval=5
+
+[volume]
+command=pamixer --get-volume-human
+label=♪
+interval=1
+
+[time]
+command=date +"%Y-%m-%d %H:%M %p"
+interval=5
+color=#91E78B
+
+[battery2]
+command=~/scripts/i3/battery2/battery2
+markup=pango
+interval=30
+color=#A4C2F4
 
 # vim: ft=ini
