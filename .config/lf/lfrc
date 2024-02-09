@@ -181,3 +181,5 @@ map A rename<space>
 map I rename<space><home>
 
 map Y %realpath $f | xsel -b && echo "Copied file path: $(xsel -b -o)"
+
+map T $tmux new-session "/bin/bash -c 'cd $PWD' && /bin/bash"

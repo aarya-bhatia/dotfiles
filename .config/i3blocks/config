@@ -1,6 +1,6 @@
-[window]
-command=xdotool getactivewindow getwindowname
-interval=persist
+# [window]
+# command=xdotool getactivewindow getwindowname
+# interval=persist
 
 [weather]
 command=~/scripts/i3/i3forecast.sh
