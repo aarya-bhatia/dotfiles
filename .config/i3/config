@@ -57,6 +57,8 @@ set $ws3 3:mail
 set $ws4 4:doc
 set $ws5 5:media
 set $ws6 6:code
+set $ws7 7:virt
+set $ws8 8:misc
 set $ws9 9:sys
 
 # Terminal
@@ -83,14 +85,15 @@ include workspace.conf
 include colors.conf
 
 # Assign Workspaces:
+# assign [class="Firefox"] $ws2
 assign [class="thunderbird"] $ws3
 assign [class="discord"] $ws3
 assign [class="Slack"] $ws3
 assign [class="vlc"] $ws5
-assign [class="Firefox"] $ws2
 assign [class="Code"] $ws6
 assign [class="Pavucontrol"] $ws9
 assign [class="floating-ncmpcpp"] $ws5
+assign [class="Virt-manager"] $ws7
 
 bindsym XF86AudioRaiseVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_up
 bindsym XF86AudioLowerVolume exec --no-startup-id $HOME/scripts/external/volume_brightness.sh volume_down
@@ -236,53 +239,14 @@ bindsym $mod+Shift+p exec --no-startup-id ~/scripts/external/dmenupass.sh
 bindsym Print exec --no-startup-id ~/scripts/screenshot.sh
 bindcode $mod+107 exec --no-startup-id ~/scripts/screenshot.sh -s
 
-# i3status bar
-# bar {
-# 	status_command i3status
-# 	tray_output eDP-1
-# 	# tray_output primary
-# 	position top
-# 	font pango:DejaVu Sans Mono 9
-# 	workspace_min_width 25
-# }
+# For testing
+bindsym $mod+Shift+z exec --no-startup-id notify-send "PATH" "$PATH"
 
 bar {
 	status_command 2>/tmp/i3blocks.err i3blocks | tee /tmp/i3blocks.out
 	position top
-	# font pango:DejaVu Sans Mono 9.5
 	font pango:Hack Nerd Font 9.5
 	tray_output eDP-1
 }
 
-# Polybar
-# exec_always --no-startup-id ~/.config/polybar/launch.sh
 
-# For testing
-bindsym $mod+Shift+z exec --no-startup-id notify-send "PATH" "$PATH"
-
-# COLORS
-
-# class                         border    backgr.    text     indicator
-# client.focused              #333333   #2f2f2f   #f1f1f1   #d64937
-# client.unfocused            #1b1b1b   #2a2a2a   #999999
-# client.focused_inactive     #1b1b1b   #444444   #aaaaaa
-# client.urgent               #d64937   #444444   #000000   #d64937
-
-set $color-primary #ff9900
-set $color-secondary #000000
-set $color-tertiary #204a87
-set $color-alert #bd2c40
-set $color-light-gray #acacac
-set $color-medium-gray #777777
-set $color-dark-gray #555555
-set $color-black #000000
-set $color-white #e6e6e6
-
-# state                    border              background          text                 indicator
-# client.focused             $color-dark-gray    #ff0074             $color-white         $color-medium-gray
-# client.focused_inactive    $color-black        $color-black        $color-medium-gray   $color-black
-# client.unfocused           $color-black        $color-black        $color-dark-gray     $color-black
-# client.urgent              $color-alert        $color-alert        $color-black         $color-black
-# client.placeholder         $color-black        $color-black        $color-white         $color-black
-# client.background          $color-black
-#

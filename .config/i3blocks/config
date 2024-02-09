@@ -40,7 +40,7 @@ min_width=150
 align=center
 
 [mediaplayer]
-command=~/scripts/i3/mediaplayer/mediaplayer
+command=~/scripts/i3/mediaplayer/mediaplayer | head -c 40
 interval=5
 
 [volume]

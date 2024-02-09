@@ -1,6 +1,6 @@
 [Added Associations]
 application/javascript=code_code.desktop;
 text/plain=vim.desktop;
-image/png=vimiv-usercreated-1.desktop;
 image/jpeg=vimiv-usercreated-1.desktop;
 application/pdf=org.pwmt.zathura-pdf-poppler.desktop;
+image/png=sxiv.desktop;
