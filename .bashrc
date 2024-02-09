@@ -116,6 +116,8 @@ alias bathelp="$bat --plain --language=help"
 
 export LESS="-iR"
 
+export TERMINAL=alacritty
+
 export FZF_DEFAULT_OPTS="--border --info=inline -m"
 export FZF_DEFAULT_COMMAND="${fd} --follow --color=auto --hidden --exclude={.git,node_modules,tmp,__pycache__}"
 

@@ -289,6 +289,8 @@ Plug 'tpope/vim-abolish'
 Plug 'wellle/targets.vim'		  " text objects
 Plug 'numToStr/Comment.nvim'
 
+Plug 'kovetskiy/sxhkd-vim'
+
 " icons
 " Plug 'nvim-tree/nvim-web-devicons'
 
