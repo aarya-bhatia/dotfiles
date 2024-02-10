@@ -18,7 +18,10 @@ packages=(
 	git
 	i3
 	lxappearance
+	mpc
+	mpd
 	mpv
+	ncmpcpp
 	neofetch
 	neovim
 	nodejs
@@ -31,11 +34,11 @@ packages=(
 	python3-venv
 	rclone
 	rsync
-	terminator
+	sxhkd
+	sxiv
 	thunar
 	thunderbird
 	tmux
-	valgrind
 	vlc
 	xcape
 	xdotool
@@ -44,6 +47,7 @@ packages=(
 )
 
 extra=(
+	valgrind
 	xautolock
 	texlive
 	pavucontrol
