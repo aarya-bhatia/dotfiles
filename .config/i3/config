@@ -14,8 +14,8 @@ bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you reall
 set $primary eDP-1
 set $secondary HDMI-1
 
-# font pango:monospace 8
-font pango:DejaVu Sans Mono 8
+font pango:monospace 8
+# font pango:DejaVu Sans Mono 8
 
 focus_wrapping no
 ipc-socket ~/.i3/i3-ipc.sock
@@ -140,7 +140,7 @@ assign [class="floating-ncmpcpp"] $ws5
 assign [class="Virt-manager"] $ws7
 
 exec_always --no-startup-id killall -q sxhkd; sxhkd &
-bindsym $mod+Shift+s exec --no-startup-id  killall -SIGUSR1 sxhkd
+bindsym $mod+Shift+s exec --no-startup-id  killall -SIGUSR1 sxhkd && notify-send "i3" "sxhkd reloaded"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -236,7 +236,7 @@ for_window [class="Thunar"] floating enable resize set 960 750
 bindsym $mod+g [class="Gnome-calculator"] scratchpad show
 for_window [class="Gnome-calculator"] floating enable
 
-bindcode $mod+107 exec --no-startup-id ~/scripts/screenshot.sh -s
+# bindcode $mod+107 exec --no-startup-id ~/scripts/screenshot.sh -s
 
 bar {
 	status_command 2>/tmp/i3blocks.err i3blocks
@@ -269,6 +269,7 @@ mode "$mode_filemarks" {
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
+
 bindsym $mod+Shift+m mode "$mode_filemarks"
 
 set $mode_gaps Gaps: (o) outer, (i) inner
@@ -307,3 +308,4 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+

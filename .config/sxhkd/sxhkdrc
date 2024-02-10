@@ -96,9 +96,22 @@ alt+shift+p
 
 # Screenshots with Print key
 Print
-	~/scripts/screenshot.sh
+	~/scripts/screenshot.sh || notify-send "aarya" "screenshot failed"
+
+alt+Print
+	~/scripts/screenshot.sh -u || notify-send "aarya" "screenshot failed"
 
 # For testing
 alt+shift+z
 	notify-send "PATH" "$PATH"
+
+alt+shift+t; h
+	alacritty --class='floating-htop' -e htop
+
+alt+shift+t; v
+	alacritty --class='floating-vim' -e vim
+
+alt+shift+t; n
+	alacritty --class='floating-ncmpcpp' -e ncmpcpp
+
 
