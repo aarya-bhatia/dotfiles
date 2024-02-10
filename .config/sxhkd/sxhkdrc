@@ -57,12 +57,7 @@ XF86Tools
 	alacritty --class=floating-ncmpcpp -e ncmpcpp
 
 alt+o
-	chosen = $(printf "firefox\nthunderbird\ndiscord\nchromium\n" | dmenu -p "Launch >")
-	case $chosen in
-		"discord") discord ;;
-		"thunderbird") thunderbird ;;
-		"chromium") chormium ;;
-	esac
+	$HOME/scripts/dmenu_launch_app.sh
 
 alt+t
 	thunar
