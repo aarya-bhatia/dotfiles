@@ -1,7 +1,3 @@
-# [window]
-# command=xdotool getactivewindow getwindowname
-# interval=persist
-
 [weather]
 command=~/scripts/i3/i3forecast.sh
 interval=360
@@ -40,18 +36,20 @@ min_width=150
 align=center
 
 [mediaplayer]
-command=~/scripts/i3/mediaplayer/mediaplayer | head -c 40
+command=~/scripts/i3/mediaplayer/mediaplayer | head -c 35
 interval=5
 
 [volume]
-command=pamixer --get-volume-human
+command=~/scripts/volume.sh get_volume
 label=♪
-interval=1
+interval=once
+signal=10
 
 [brightness]
-command=~/scripts/brightness.sh
+command=~/scripts/volume.sh get_brightness
 label=
-interval=1
+interval=once
+signal=11
 
 [time]
 command=date +"%a %Y-%m-%d %I:%M %p"
@@ -61,7 +59,7 @@ color=#fff87c
 [battery2]
 command=~/scripts/i3/battery2/battery2
 markup=pango
-interval=30
+interval=5
 color=#A4C2F4
 
 # vim: ft=ini

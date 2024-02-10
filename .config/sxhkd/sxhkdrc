@@ -10,47 +10,17 @@
 # The valid modifier names are: super, hyper, meta, alt, control, ctrl, shift, mode_switch, lock,
 # mod1, mod2, mod3, mod4, mod5 and any.
 
-XF86AudioRaiseVolume
-	$HOME/scripts/external/volume_brightness.sh volume_up
+{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute,XF86MonBrightnessUp,XF86MonBrightnessDown}
+	$HOME/scripts/volume.sh {up,down,mute,brightness_up,brightness_down}
 
-XF86AudioLowerVolume
-	$HOME/scripts/external/volume_brightness.sh volume_down
+{XF87AudioPlayPause,XF86AudioPause,XF86AudioPlay}
+	$HOME/scripts/external/volume_brightness.sh {play_pause,play_pause,play_pause}
 
-XF86AudioMute
-	$HOME/scripts/external/volume_brightness.sh volume_mute
+{XF86AudioNext,XF86AudioPrev}
+	$HOME/scripts/external/volume_brightness.sh {next_track,prev_track}
 
-XF86MonBrightnessUp
-	$HOME/scripts/external/volume_brightness.sh brightness_up
-
-XF86MonBrightnessDown
-	$HOME/scripts/external/volume_brightness.sh brightness_down
-
-XF87AudioPlayPause
-	$HOME/scripts/external/volume_brightness.sh play_pause
-
-XF86AudioPause
-	$HOME/scripts/external/volume_brightness.sh play_pause
-
-XF86AudioPlay
-	$HOME/scripts/external/volume_brightness.sh play_pause
-
-XF86AudioNext
-	$HOME/scripts/external/volume_brightness.sh next_track
-
-XF86AudioPrev
-	$HOME/scripts/external/volume_brightness.sh prev_track
-
-alt+XF86AudioPause
-	mpc toggle
-
-alt+XF86AudioPlay
-	mpc toggle
-
-alt+XF86AudioNext
-	mpc next
-
-alt+XF86AudioPrev
-	mpc prev
+alt+{XF86AudioPause,XF86AudioPlay,XF86AudioNext,XF86AudioPrev}
+	mpc {toggle,toggle,next,prev}
 
 # Launch music player
 XF86Tools
