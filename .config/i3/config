@@ -78,6 +78,7 @@ assign [class="floating-ncmpcpp"] $ws5
 assign [class="Virt-manager"] $ws7
 
 exec_always --no-startup-id killall -q sxhkd; sxhkd &
+bindsym $mod+Shift+s exec --no-startup-id  killall -SIGUSR1 sxhkd
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod

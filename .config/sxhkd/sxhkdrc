@@ -52,19 +52,22 @@ alt+XF86AudioNext
 alt+XF86AudioPrev
 	mpc prev
 
-alt+o+d
-	discord
+# Launch music player
+XF86Tools
+	alacritty --class=floating-ncmpcpp -e ncmpcpp
 
-alt+o+t
-	thunderbird
+alt+o
+	chosen = $(printf "firefox\nthunderbird\ndiscord\nchromium\n" | dmenu -p "Launch >")
+	case $chosen in
+		"discord") discord ;;
+		"thunderbird") thunderbird ;;
+		"chromium") chormium ;;
+	esac
 
 alt+t
 	thunar
 
-alt+o+f
-	firefox
-
-alt+o+w
+alt+shift+w
 	sxiv ~/wallpapers
 
 alt+Return
@@ -76,6 +79,9 @@ alt+control+p
 alt+control+q
 	alacritty --class=floating-qalc -e tmux new-session -A -s qalc "qalc"
 
+alt+Escape
+	/home/aarya/scripts/dmenu_power.sh
+
 alt+control+v
 	~/scripts/launch_vim.sh
 
@@ -83,18 +89,14 @@ alt+control+v
 alt+d
 	dmenu_run
 
-alt+Shift+w
-	~/scripts/wallpaper.sh &
+alt+shift+w
+	~/scripts/wallpaper.sh
 
-# Launch music player
-XF86Tools
-	alacritty --class=floating-ncmpcpp -e ncmpcpp
-
-alt+Shift+x
+alt+shift+x
 	i3lock && systemctl suspend
 
 # dmenu password input
-alt+Shift+p
+alt+shift+p
 	~/scripts/external/dmenupass.sh
 
 # Screenshots with Print key
@@ -102,5 +104,6 @@ Print
 	~/scripts/screenshot.sh
 
 # For testing
-alt+Shift+z
+alt+shift+z
 	notify-send "PATH" "$PATH"
+
