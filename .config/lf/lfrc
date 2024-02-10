@@ -63,6 +63,7 @@ cmd open &{{
         image/gif) lf -remote "send $id \$sxiv -a \$fx";;
         image/*) lf -remote "send $id \$sxiv \$fx";;
         audio/*) lf -remote "send $id \$mpv \$fx";;
+        # audio/*) lf -remote "send $id \$mpv \$fx";;
         video/*) lf -remote "send $id \$vlc \$fx";;
         *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
     esac

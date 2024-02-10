@@ -1,7 +1,7 @@
 #!/bin/sh
 wallpaper=/home/aarya/wallpapers/arcolinux/koi-fishes-1920x1080.png
-wallpaper=/home/aarya/wallpapers/0009.jpg
 wallpaper=/home/aarya/wallpapers/0070.jpg
+wallpaper=/home/aarya/wallpapers/0009.jpg
 if [ ! -z "$wallpaper" ] && [ -f "$wallpaper" ]; then
 	echo $wallpaper
 	feh --no-fehbg --bg-scale "$wallpaper"

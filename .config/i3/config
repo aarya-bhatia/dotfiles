@@ -273,8 +273,8 @@ mode "$mode_filemarks" {
 bindsym $mod+Shift+m mode "$mode_filemarks"
 
 set $mode_gaps Gaps: (o) outer, (i) inner
-set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global)
-set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global)
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global), g (edit gaps)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global), g (edit gaps)
 bindsym $mod+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
@@ -293,6 +293,8 @@ mode "$mode_gaps_inner" {
         bindsym Shift+minus gaps inner all minus 5
         bindsym Shift+0     gaps inner all set 0
 
+		bindsym g mode "$mode_gaps"
+
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
@@ -304,6 +306,8 @@ mode "$mode_gaps_outer" {
         bindsym Shift+plus  gaps outer all plus 5
         bindsym Shift+minus gaps outer all minus 5
         bindsym Shift+0     gaps outer all set 0
+
+		bindsym g mode "$mode_gaps"
 
         bindsym Return mode "default"
         bindsym Escape mode "default"

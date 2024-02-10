@@ -8,20 +8,25 @@ command=~/scripts/i3/i3disk.sh
 interval=360
 color=#A4C2F4
 
-# [cpu_usage]
-# command=~/scripts/i3/cpu_usage/cpu_usage
-# interval=10
-# label=CPU
+[cpu_usage]
+command=~/scripts/i3/cpu_usage/cpu_usage
+interval=10
+label=CPU
 
-# [memory]
-# command=~/scripts/i3/memory/memory
-# label=MEM
-# interval=30
+[memory]
+command=~/scripts/i3/memory/memory
+label=MEM
+interval=30
 
-[internet]
-command=~/scripts/i3/i3internet.sh
+# [internet]
+# command=~/scripts/i3/i3internet.sh
+# interval=360
+# color=#91E78B
+
+[ip]
+command=hostname -I | cut -d" " -f1
 interval=360
-color=#91E78B
+color=#A4C2F4
 
 # [public_ip]
 # command=curl api.ipify.org
