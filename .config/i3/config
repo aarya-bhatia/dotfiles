@@ -139,7 +139,6 @@ assign [class="Pavucontrol"] $ws9
 assign [class="floating-ncmpcpp"] $ws5
 assign [class="Virt-manager"] $ws7
 
-exec_always --no-startup-id killall -q sxhkd; sxhkd &
 bindsym $mod+Shift+s exec --no-startup-id  killall -SIGUSR1 sxhkd && notify-send "i3" "sxhkd reloaded"
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -202,33 +201,6 @@ bindsym $mod+semicolon focus child
 
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
-
-# Network manager
-exec_always --no-startup-id nm-applet &
-
-# Display random wallpaper
-exec_always --no-startup-id ~/.fehbg &
-
-# Window compositor
-exec_always --no-startup-id killall -q picom; picom --config ~/.config/picom.conf --backend glx --xrender-sync-fence &
-
-# Remap Caps Lock to Control key
-exec_always --no-startup-id ~/scripts/keymaps.sh
-
-# Dunst notification daemon
-exec_always --no-startup-id dunst &
-
-# mirror display with HDMI-1 monitor if connected
-exec_always --no-startup-id ~/scripts/screenmirror.sh
-
-# Auto lock screen and suspend after some amount of idle time
-exec_always --no-startup-id ~/scripts/screenlock.sh &
-
-# Always turn on num lock
-exec_always --no-startup-id numlockx on
-
-# Start mpd daemon
-exec --no-startup-id mpd &
 
 for_window [class="Thunar"] floating enable resize set 960 750
 
@@ -298,6 +270,7 @@ mode "$mode_gaps_inner" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
 mode "$mode_gaps_outer" {
         bindsym plus  gaps outer current plus 5
         bindsym minus gaps outer current minus 5
@@ -312,4 +285,6 @@ mode "$mode_gaps_outer" {
         bindsym Return mode "default"
         bindsym Escape mode "default"
 }
+
+exec_always --no-startup-id ~/scripts/i3_startup.sh
 
