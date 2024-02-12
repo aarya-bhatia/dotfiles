@@ -334,7 +334,7 @@ Plug 'savq/melange-nvim'
 
 " Status Line
 Plug 'itchyny/lightline.vim'
-let g:lightline = { 'colorscheme': 'one' }
+let g:lightline = { 'colorscheme': 'wombat' }
 
 " better quickfix list
 Plug 'romainl/vim-qf'
@@ -363,8 +363,8 @@ source $HOME/.config/nvim/lua/config.lua
 source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/lsp.lua
 
-" colorscheme gruvbox
-colorscheme melange
+colorscheme gruvbox-material
+" colorscheme melange
 
 " Run the command on current line and paste output below
 nnoremap <leader>R "zyy:r !z

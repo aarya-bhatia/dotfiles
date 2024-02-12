@@ -77,7 +77,7 @@ done
 # python packages
 if python -m venv /home/$USER/pyvenv; then
 	if source /home/$USER/pyvenv/bin/activate; then
-		python -m pip install flask requests trash-cli pandas numpy matplotlib ipykernel
+		python -m pip install flask requests trash-cli pandas numpy matplotlib ipykernel dbus-python
 	fi
 fi
 

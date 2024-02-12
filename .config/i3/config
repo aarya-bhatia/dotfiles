@@ -14,7 +14,7 @@ bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you reall
 set $primary eDP-1
 set $secondary HDMI-1
 
-font pango:monospace 9
+font pango:monospace 9.5
 # font pango:DejaVu Sans Mono 8
 
 focus_wrapping no
@@ -113,6 +113,8 @@ bindsym $mod4+Shift+0 move container to workspace $WS20
 # Terminal
 set $terminal 'alacritty'
 set $termclass 'Alacritty'
+
+bindsym $mod+Return exec --no-startup-id $terminal
 
 # i3 gaps
 for_window [class="^.*"] border pixel 1
@@ -213,7 +215,7 @@ for_window [class="Gnome-calculator"] floating enable
 bar {
 	status_command 2>/tmp/i3blocks.err i3blocks
 	position top
-	font pango:Hack Nerd Font 9.5
+	font pango:Hack Nerd Font 10
 	tray_output eDP-1
 }
 
