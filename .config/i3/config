@@ -219,10 +219,10 @@ bar {
 
 # resize window
 mode "resize" {
-  bindsym h resize shrink width 10 px or 10 ppt
-  bindsym k resize grow height 10 px or 10 ppt
-  bindsym j resize shrink height 10 px or 10 ppt
-  bindsym l resize grow width 10 px or 10 ppt
+  bindsym h resize shrink width 20 px or 20 ppt
+  bindsym k resize grow height 20 px or 20 ppt
+  bindsym j resize shrink height 20 px or 20 ppt
+  bindsym l resize grow width 20 px or 20 ppt
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
