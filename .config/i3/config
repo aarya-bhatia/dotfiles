@@ -14,7 +14,7 @@ bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you reall
 set $primary eDP-1
 set $secondary HDMI-1
 
-font pango:monospace 8
+font pango:monospace 9
 # font pango:DejaVu Sans Mono 8
 
 focus_wrapping no
@@ -287,4 +287,8 @@ mode "$mode_gaps_outer" {
 }
 
 exec_always --no-startup-id ~/scripts/i3_startup.sh
+
+# load workspace 3 layout
+# exec i3-msg "workspace 3:mail; append_layout /home/aarya/.i3/workspace-3.json"
+
 
