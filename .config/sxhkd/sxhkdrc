@@ -58,7 +58,7 @@ alt+shift+w
 	~/scripts/wallpaper.sh
 
 alt+shift+x
-	i3lock && systemctl suspend
+	systemctl suspend && i3lock
 
 # dmenu password input
 alt+shift+p

@@ -363,7 +363,7 @@ source $HOME/.config/nvim/lua/config.lua
 source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/lsp.lua
 
-colorscheme gruvbox-material
+colorscheme gruvbox
 " colorscheme melange
 
 " Run the command on current line and paste output below
