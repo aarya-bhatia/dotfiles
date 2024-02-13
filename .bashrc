@@ -87,9 +87,8 @@ export PATH=$PATH:/usr/local/nvim/bin
 export PATH=$PATH:/snap/bin
 
 alias s="systemctl"
+alias ss="sudo systemctl"
 alias j="journalctl"
-alias ss="systemctl status"
-alias S="sudo systemctl"
 alias g="git"
 alias p="sudo pacman"
 alias y="yay"
@@ -151,3 +150,4 @@ lfcd () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
+eval $(keychain --eval --quiet id_rsa ~/.ssh/aaryab2)
