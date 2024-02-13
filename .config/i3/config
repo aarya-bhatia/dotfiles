@@ -11,12 +11,7 @@ bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
 bindsym $mod+Shift+x exec --no-startup-id systemctl suspend
-
-# lock screen on suspend
-exec --no-startup-id xss-lock -- &transfer-sleep-lock -- i3lock --nofork
-
-# start session manager
-exec --no-startup-id lxsession &
+bindsym $mod+Shift+s exec --no-startup-id  killall -SIGUSR1 sxhkd && notify-send "i3" "sxhkd reloaded"
 
 set $primary eDP-1
 set $secondary HDMI-1
@@ -117,14 +112,25 @@ bindsym $mod4+Shift+8 move container to workspace $WS18
 bindsym $mod4+Shift+9 move container to workspace $WS19
 bindsym $mod4+Shift+0 move container to workspace $WS20
 
-# Terminal
-set $terminal 'alacritty'
-set $termclass 'Alacritty'
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
 
-bindsym $mod+Return exec --no-startup-id $terminal
+# enable floating mode for windows where class name begins with floating
+for_window [class="^floating"] floating enable
+
+# Terminal
+bindsym $mod+Return exec --no-startup-id alacritty --class=Alacritty
+bindsym $mod+Shift+Return exec --no-startup-id alacritty --class=floating
+
+for_window [class="^.*"] border pixel 1
+
+# use window title *and* a thick border
+bindsym $mod+y border normal 3
+
+# use neither window title nor border
+bindsym $mod+u border none
 
 # i3 gaps
-for_window [class="^.*"] border pixel 1
 
 # Set inner/outer gaps
 set $gaps_inner 6
@@ -148,13 +154,6 @@ assign [class="Pavucontrol"] $ws9
 assign [class="floating-ncmpcpp"] $ws5
 assign [class="Virt-manager"] $ws7
 
-bindsym $mod+Shift+s exec --no-startup-id  killall -SIGUSR1 sxhkd && notify-send "i3" "sxhkd reloaded"
-
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
-# enable floating mode for windows where class name begins with floating
-for_window [class="^floating"] floating enable
 for_window [class="Qalculate"] floating enable
 
 bindcode 148 exec --no-startup-id qalculate
@@ -222,7 +221,7 @@ for_window [class="Gnome-calculator"] floating enable
 bar {
 	status_command 2>/tmp/i3blocks.err i3blocks
 	position top
-	font pango:Hack Nerd Font 10
+	# font pango:Hack Nerd Font 10
 	tray_output eDP-1
 }
 
@@ -295,8 +294,45 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-exec_always --no-startup-id ~/scripts/i3_startup.sh
+# Start simple x hotkey daemon
+exec --no-startup-id sxhkd &
 
-# load workspace 3 layout
-# exec i3-msg "workspace 3:mail; append_layout /home/aarya/.i3/workspace-3.json"
+# Start music player daemon
+exec --no-startup-id mpd &
+
+# Network manager
+exec --no-startup-id nm-applet &
+
+# Display wallpaper
+exec_always --no-startup-id ~/scripts/wallpaper.sh
+
+# Window compositor
+exec --no-startup-id picom --backend glx --xrender-sync-fence &
+
+# Always turn on num lock
+exec --no-startup-id numlockx on
+
+# Remap Caps Lock to ESC/Control key
+exec --no-startup-id ~/scripts/keymaps.sh
+
+# Dunst notification daemon
+exec --no-startup-id dunst &
+
+# mirror display with HDMI-1 monitor if connected
+exec_always --no-startup-id ~/scripts/screenmirror.sh
+
+# Auto lock screen and suspend after some amount of idle time
+# ~/scripts/screenlock.sh &
+
+# start session manager
+# exec --no-startup-id lxsession &
+
+# lock screen on suspend
+exec --no-startup-id xss-lock -- transfer-sleep-lock -- i3lock --nofork &
+
+# start clipmenu deamon
+exec --no-startup-id clipmenud &
+
+# open clipmenu
+bindsym $mod+c exec clipmenu
 

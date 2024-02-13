@@ -35,9 +35,6 @@ alt+t
 alt+shift+w
 	sxiv ~/wallpapers
 
-# alt+Return
-# 	alacritty
-
 alt+control+p
 	alacritty --class=floating-python -e tmux new-session -A -s python3 "/home/aarya/pyvenv/bin/python3"
 
