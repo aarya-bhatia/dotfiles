@@ -24,16 +24,15 @@ ipc-socket ~/.i3/i3-ipc.sock
 popup_during_fullscreen smart
 workspace_auto_back_and_forth yes
 
-set $ws1 1:term
-set $ws2 2:www
-set $ws3 3:mail
-set $ws4 4:doc
-set $ws5 5:media
-set $ws6 6:code
-set $ws7 7:virt
-set $ws8 8:misc
-set $ws9 9:sys
-
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
 set $ws10 "10"
 set $ws11 "11"
 set $ws12 "12"
@@ -304,7 +303,7 @@ exec --no-startup-id mpd &
 exec --no-startup-id nm-applet &
 
 # Display wallpaper
-exec_always --no-startup-id ~/scripts/wallpaper.sh
+exec --no-startup-id ~/scripts/wallpaper.sh
 
 # Window compositor
 exec --no-startup-id picom --backend glx --xrender-sync-fence &
@@ -313,7 +312,7 @@ exec --no-startup-id picom --backend glx --xrender-sync-fence &
 exec --no-startup-id numlockx on
 
 # Remap Caps Lock to ESC/Control key
-exec --no-startup-id ~/scripts/keymaps.sh
+exec_always --no-startup-id ~/scripts/keymaps.sh
 
 # Dunst notification daemon
 exec --no-startup-id dunst &
@@ -321,18 +320,15 @@ exec --no-startup-id dunst &
 # mirror display with HDMI-1 monitor if connected
 exec_always --no-startup-id ~/scripts/screenmirror.sh
 
-# Auto lock screen and suspend after some amount of idle time
-# ~/scripts/screenlock.sh &
-
-# start session manager
-# exec --no-startup-id lxsession &
-
 # lock screen on suspend
-exec --no-startup-id xss-lock -- transfer-sleep-lock -- i3lock --nofork &
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -e --nofork
 
 # start clipmenu deamon
 exec --no-startup-id clipmenud &
 
 # open clipmenu
 bindsym $mod+c exec clipmenu
+
+# Auto lock screen and suspend after some amount of idle time
+# ~/scripts/screenlock.sh &
 

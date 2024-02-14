@@ -22,12 +22,17 @@ rotate() {
 	done
 }
 
+# Notes
+# ctrl+x ctrl+x -> Copies the filename to clipboard
+# ctrl+x ctrl+c -> Copies the file data to clipboard
+# ctrl+x ctrl+w -> Set file as wallpaper
+# ctrl+x ctrl+. -> rotate file
+
 case "$1" in
-"C-x")      xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;
-"C-w")      while read file; do feh --no-fehbg --bg-scale "$file" & done ;;
+# "C-x")      xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;
+"C-x")      tr '\n' ' ' | xsel -b ;;
+"C-w")      while read file; do xwallpaper --stretch "$file" & done ;;
 "C-c")      while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
-"C-e")      while read file; do urxvt -bg "#444" -fg "#eee" -sl 0 -title "$file" -e sh -c "exiv2 pr -q -pa '$file' | less" & done ;;
-"C-g")      tr '\n' '\0' | xargs -0 gimp & ;;
 "C-r")      while read file; do rawtherapee "$file" & done ;;
 "C-comma")  rotate 270 ;;
 "C-period") rotate  90 ;;

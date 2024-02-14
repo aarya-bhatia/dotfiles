@@ -8,20 +8,22 @@ packages=(
 	base-devel
 	bat
 	blueman
+	bluez
+	bluez-tools
 	brightnessctl
+	ctags
 	curl
 	dmenu
+	docker
 	dunst
-	man
-	ctags
 	extra/libqalculate
 	fd
-	feh
 	ffmpeg
 	fzf
 	git
 	i3
 	lxappearance
+	man
 	mpc
 	mpd
 	mpv
@@ -50,23 +52,27 @@ packages=(
 	xcape
 	xdotool
 	xsel
+	xwallpaper
 	zathura
+	zathura-pdf-mupdf
 )
 
 extra=(
+	bleachbit
+	chromium
+	clipmenu
+	extra/perl-file-mimeinfo
+	feh
+	nitrogen
 	nodejs
 	npm
-	bleachbit
-	bluez
-	bluez-tools
-	chromium
-	nitrogen
 	redshift
 	rmlint
   	silversearcher-ag
 	snap
 	texlive
 	xautolock
+	xss-lock
 )
 
 # system packages and applications
