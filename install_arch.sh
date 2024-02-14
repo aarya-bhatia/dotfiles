@@ -31,6 +31,7 @@ packages=(
 	neofetch
 	neovim
 	numlockx
+	pamixer
 	pass
 	pavucontrol
 	picom
@@ -52,13 +53,16 @@ packages=(
 	xcape
 	xdotool
 	xsel
+	xss-lock
 	xwallpaper
 	zathura
 	zathura-pdf-mupdf
 )
 
 extra=(
+	ttf-dejavu
 	bleachbit
+	breeze-gtk
 	chromium
 	clipmenu
 	extra/perl-file-mimeinfo
@@ -72,7 +76,6 @@ extra=(
 	snap
 	texlive
 	xautolock
-	xss-lock
 )
 
 # system packages and applications

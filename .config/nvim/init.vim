@@ -130,6 +130,7 @@ nnoremap <leader>q :quit<CR>
 
 " close buffer and keep split
 nnoremap <leader>d :bd<CR>
+nnoremap <leader>D :bd!<CR>
 
 " Unhighlight search results
 nnoremap <Esc> :nohl<CR>
