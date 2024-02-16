@@ -60,7 +60,9 @@ packages=(
 )
 
 extra=(
-	ttf-dejavu
+	ttf-hack-nerd
+	noto-fonts
+	inetutils
 	bleachbit
 	breeze-gtk
 	chromium

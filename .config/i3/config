@@ -154,12 +154,15 @@ assign [class="Virt-manager"] $ws7
 
 for_window [class="Qalculate"] floating enable
 
-bindcode 148 exec --no-startup-id qalculate
+bindcode 148 exec --no-startup-id alacritty --class="floating" -e qalc
 
 # toggle window in scratchpad
 bindcode $mod+148 [class="Qalculate"] scratchpad show
 
-# bindsym $mod+Control+c exec --no-startup-id ~/scripts/dmenu_open_config.sh
+# open clipmenu
+bindsym $mod+c exec --no-startup-id clipmenu
+
+bindsym $mod+i exec --no-startup-id ~/scripts/dmenu_open_images.sh
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -316,23 +319,15 @@ exec_always --no-startup-id ~/scripts/keymaps.sh
 # Dunst notification daemon
 exec --no-startup-id dunst &
 
-# lock screen on suspend
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -e --nofork
-
 # start clipmenu deamon
 exec --no-startup-id clipmenud &
 
 # mirror display with HDMI-1 monitor if connected
 exec_always --no-startup-id ~/scripts/screenmirror.sh
 
-# start session manager
-exec --no-startup-id lxsession &
-
-# open clipmenu
-bindsym $mod+c exec --no-startup-id clipmenu
-
-bindsym $mod+i exec --no-startup-id ~/scripts/dmenu_open_images.sh
+# lock screen on suspend
+# exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -e --nofork
 
 # Auto lock screen and suspend after some amount of idle time
-# ~/scripts/screenlock.sh &
+exec --no-startup-id ~/scripts/screenlock.sh
 
