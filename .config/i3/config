@@ -16,7 +16,7 @@ bindsym $mod+Shift+s exec --no-startup-id  killall -SIGUSR1 sxhkd && notify-send
 set $primary eDP-1
 set $secondary HDMI-1
 
-font pango:monospace 9.5
+font pango:monospace 8
 
 focus_wrapping no
 ipc-socket ~/.i3/i3-ipc.sock
@@ -220,6 +220,7 @@ bar {
 	status_command 2>/tmp/i3blocks.err i3blocks
 	position top
 	tray_output eDP-1
+	font pango:Hack Nerd Font 9.5
 }
 
 # resize window
@@ -315,14 +316,17 @@ exec_always --no-startup-id ~/scripts/keymaps.sh
 # Dunst notification daemon
 exec --no-startup-id dunst &
 
-# mirror display with HDMI-1 monitor if connected
-exec_always --no-startup-id ~/scripts/screenmirror.sh
-
 # lock screen on suspend
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock -e --nofork
 
 # start clipmenu deamon
 exec --no-startup-id clipmenud &
+
+# mirror display with HDMI-1 monitor if connected
+exec_always --no-startup-id ~/scripts/screenmirror.sh
+
+# start session manager
+exec --no-startup-id lxsession &
 
 # open clipmenu
 bindsym $mod+c exec --no-startup-id clipmenu
