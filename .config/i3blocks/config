@@ -1,3 +1,12 @@
+[mediaplayer]
+command=~/scripts/i3/mediaplayer/mediaplayer | head -c 40
+interval=5
+
+[kernel]
+command=uname -a | cut -d" " -f3
+interval=once
+color=#A4C2F4
+
 [weather]
 command=~/scripts/i3/i3forecast.sh
 interval=360
@@ -18,26 +27,12 @@ command=~/scripts/i3/memory/memory
 label=MEM:
 interval=30
 
-[public_ip]
-command=echo $(curl api.ipify.org)
-interval=once
-color=#91E78B
-
-[ip]
-command=hostname -i | cut -d" " -f1
-interval=360
-color=#A4C2F4
-
 [bandwidth]
 command=~/scripts/i3/bandwidth.sh
 interval=5
 color=#91E78B
 min_width=150
 align=center
-
-[mediaplayer]
-command=~/scripts/i3/mediaplayer/mediaplayer | head -c 35
-interval=5
 
 [volume]
 command=printf "♪ %s\n" $(~/scripts/volume.sh get_volume)
@@ -59,5 +54,15 @@ command=~/scripts/i3/battery2/battery2
 markup=pango
 interval=5
 color=#A4C2F4
+
+# [public_ip]
+# command=echo $(curl api.ipify.org)
+# interval=once
+# color=#91E78B
+
+# [ip]
+# command=hostname -i | cut -d" " -f1
+# interval=360
+# color=#A4C2F4
 
 # vim: ft=ini

@@ -290,11 +290,6 @@ Plug 'tpope/vim-abolish'
 Plug 'wellle/targets.vim'		  " text objects
 Plug 'numToStr/Comment.nvim'
 
-Plug 'kovetskiy/sxhkd-vim'
-
-" icons
-" Plug 'nvim-tree/nvim-web-devicons'
-
 " Syntax highlighting
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -319,12 +314,6 @@ Plug 'preservim/tagbar'
 nnoremap <leader>tt :TagbarToggle<CR>
 
 source $VIM_DIR/plugins/fzf.vim           " fuzzy finder
-
-Plug 'mileszs/ack.vim'          " grep tool
-nnoremap <leader>a :Ack!<space>
-if executable('ag')
-  let g:ackprg = 'ag --vimgrep'
-endif
 
 " colorschemes
 Plug 'navarasu/onedark.nvim'

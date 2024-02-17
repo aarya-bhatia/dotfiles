@@ -10,7 +10,7 @@
     <property name="inactivity-on-battery" type="uint" value="30"/>
     <property name="lid-action-on-battery" type="uint" value="1"/>
     <property name="critical-power-action" type="uint" value="3"/>
-    <property name="lock-screen-suspend-hibernate" type="bool" value="false"/>
+    <property name="lock-screen-suspend-hibernate" type="bool" value="true"/>
     <property name="lid-action-on-ac" type="uint" value="1"/>
     <property name="brightness-on-battery" type="uint" value="9"/>
     <property name="blank-on-battery" type="int" value="1"/>
