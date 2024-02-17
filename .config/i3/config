@@ -1,5 +1,7 @@
+# |_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_|
 # i3 config file (v4)
 # Please see https://i3wm.org/docs/userguide.html for a complete reference!
+# |_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_|
 
 # mod1 = Alt
 set $mod Mod1
@@ -7,11 +9,149 @@ set $mod Mod1
 # mod4 = windows key
 set $mod4 Mod4
 
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
-bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+x exec --no-startup-id systemctl suspend
-bindsym $mod+Shift+s exec --no-startup-id  killall -SIGUSR1 sxhkd && notify-send "i3" "sxhkd reloaded"
+# Key bindings {{{
+
+bindsym $mod+Shift+c 			reload
+bindsym $mod+Shift+r 			restart
+bindsym $mod+Shift+q 			kill
+bindsym $mod+Tab 				workspace next
+bindsym $mod+Shift+Tab 			workspace prev
+
+bindsym $mod+Shift+e 			exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+x 			exec --no-startup-id systemctl suspend
+
+bindsym XF86AudioRaiseVolume 	exec 	$HOME/scripts/volume.sh up
+bindsym XF86AudioLowerVolume 	exec 	$HOME/scripts/volume.sh down
+bindsym XF86AudioMute 			exec 	$HOME/scripts/volume.sh mute
+bindsym XF86MonBrightnessUp 	exec 	$HOME/scripts/volume.sh brightness_up
+bindsym XF86MonBrightnessDown 	exec 	$HOME/scripts/volume.sh brightness_down
+bindsym XF87AudioPlayPause 		exec 	$HOME/scripts/external/volume_brightness.sh play_pause
+bindsym XF86AudioPause			exec 	$HOME/scripts/external/volume_brightness.sh play_pause
+bindsym XF86AudioPlay 			exec 	$HOME/scripts/external/volume_brightness.sh play_pause
+bindsym XF86AudioNext 			exec 	$HOME/scripts/external/volume_brightness.sh next_track
+bindsym XF86AudioPrev 			exec 	$HOME/scripts/external/volume_brightness.sh prev_track
+
+bindsym $mod+XF86AudioPause		exec 	mpc toggle
+bindsym $mod+XF86AudioPlay 		exec 	mpc toggle
+bindsym $mod+XF86AudioNext 		exec 	mpc next
+bindsym $mod+XF86AudioPrev 		exec 	mpc prev
+
+# Launch music player
+bindsym XF86Tools 				exec alacritty --class=floating -e ncmpcpp
+
+bindsym $mod+Control+p 		 	exec alacritty --class=floating-python -e tmux new-session -A -s python3 "~/pyvenv/bin/python3"
+bindsym $mod+Control+q 			exec alacritty --class=floating-qalc -e tmux new-session -A -s qalc "qalc"
+bindcode 148 					exec --no-startup-id alacritty --class="floating" -e qalc
+
+# Screenshots with Print key
+bindsym Print 					exec ~/scripts/screenshot.sh || notify-send "aarya" "screenshot failed"
+bindsym $mod+107 				exec ~/scripts/screenshot.sh -u || notify-send "aarya" "screenshot failed"
+
+# dmenu scripts
+bindsym $mod+Shift+p 			exec ~/scripts/external/dmenupass.sh
+bindsym $mod+d 					exec dmenu_run
+bindsym $mod+Escape 			exec /home/aarya/scripts/dmenu_power.sh
+bindsym $mod+o 					exec $HOME/scripts/dmenu_launch_app.sh
+bindsym $mod+slash 				exec --no-startup-id ~/scripts/dmenu_browser.sh
+bindsym $mod+c 					exec --no-startup-id clipmenu
+bindsym $mod+i 					exec --no-startup-id ~/scripts/dmenu_open_images.sh
+
+bindsym $mod+t 					exec thunar
+bindsym $mod+Control+v 			exec ~/scripts/launch_vim.sh
+bindsym $mod+Shift+w 			exec sxiv ~/wallpapers
+
+# Terminal
+bindsym $mod+Return 			exec --no-startup-id alacritty --class=Alacritty
+bindsym $mod+Shift+Return 		exec --no-startup-id alacritty --class=floating
+
+# bind modes
+bindsym $mod+r 					mode "resize"
+bindsym $mod+Shift+m 			mode "$mode_filemarks"
+
+
+# use window title *and* a thick border
+bindsym $mod+y 					border normal 3
+
+# use neither window title nor border
+bindsym $mod+u 					border none
+
+# change focus
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+
+# move focused window
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# split in horizontal orientation
+bindsym $mod+z split h
+
+# split in vertical orientation
+bindsym $mod+v split v
+
+# enter fullscreen mode for the focused container
+bindsym $mod+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $mod+s layout stacking
+bindsym $mod+w layout tabbed
+bindsym $mod+e layout toggle split
+
+# toggle tiling / floating
+bindsym $mod+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $mod+space focus mode_toggle
+
+# focus the parent container
+bindsym $mod+a focus parent
+
+# focus the child container
+bindsym $mod+semicolon focus child
+
+bindsym $mod+Shift+minus move scratchpad
+bindsym $mod+minus scratchpad show
+
+# }}}
+
+# exec commands {{{
+
+# Start music player daemon
+exec --no-startup-id 			mpd &
+
+# Network manager
+exec --no-startup-id 			nm-applet &
+
+# Display wallpaper
+exec --no-startup-id 			~/scripts/wallpaper.sh
+
+# Window compositor
+exec --no-startup-id 			picom --backend glx --xrender-sync-fence &
+
+# Always turn on num lock
+exec --no-startup-id 			numlockx on
+
+# Remap Caps Lock to ESC/Control key
+exec_always --no-startup-id 	~/scripts/keymaps.sh
+
+# Dunst notification daemon
+exec --no-startup-id 			dunst &
+
+# start clipmenu deamon
+exec --no-startup-id 			clipmenud &
+
+# mirror display with HDMI-1 monitor if connected
+exec_always --no-startup-id 	~/scripts/screenmirror.sh
+
+# lock screen on suspend
+exec --no-startup-id 			xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050
+exec --no-startup-id 			xfce4-power-manager &
+
+# }}}
 
 set $primary eDP-1
 set $secondary HDMI-1
@@ -22,6 +162,8 @@ focus_wrapping no
 ipc-socket ~/.i3/i3-ipc.sock
 popup_during_fullscreen smart
 workspace_auto_back_and_forth yes
+
+# workspaces {{{
 
 set $ws1 "1"
 set $ws2 "2"
@@ -110,27 +252,20 @@ bindsym $mod4+Shift+8 move container to workspace $WS18
 bindsym $mod4+Shift+9 move container to workspace $WS19
 bindsym $mod4+Shift+0 move container to workspace $WS20
 
+# }}}
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# Window rules
+
 # enable floating mode for windows where class name begins with floating
 for_window [class="^floating"] floating enable
-
-# Terminal
-bindsym $mod+Return exec --no-startup-id alacritty --class=Alacritty
-bindsym $mod+Shift+Return exec --no-startup-id alacritty --class=floating
-
 for_window [class="^.*"] border pixel 1
-
 for_window [class="^Surf"] border normal 3
+for_window [class="Thunar"] floating enable resize set 960 750
 
-# use window title *and* a thick border
-bindsym $mod+y border normal 3
-
-# use neither window title nor border
-bindsym $mod+u border none
-
-# i3 gaps
+# gaps {{{
 
 # Set inner/outer gaps
 set $gaps_inner 0
@@ -143,6 +278,8 @@ smart_gaps on
 smart_borders on
 hide_edge_borders smart_no_gaps
 
+# }}}
+
 # Assign Workspaces:
 # assign [class="Firefox"] $ws2
 assign [class="thunderbird"] $ws3
@@ -151,76 +288,9 @@ assign [class="Slack"] $ws3
 assign [class="vlc"] $ws5
 assign [class="Code"] $ws6
 assign [class="Pavucontrol"] $ws9
-assign [class="floating-ncmpcpp"] $ws5
 assign [class="Virt-manager"] $ws7
 
-for_window [class="Qalculate"] floating enable
-
-bindcode 148 exec --no-startup-id alacritty --class="floating" -e qalc
-
-# toggle window in scratchpad
-bindcode $mod+148 [class="Qalculate"] scratchpad show
-
-# open clipmenu
-bindsym $mod+c exec --no-startup-id clipmenu
-
-bindsym $mod+i exec --no-startup-id ~/scripts/dmenu_open_images.sh
-
-# kill focused window
-bindsym $mod+Shift+q kill
-
-bindsym $mod+Tab workspace next
-bindsym $mod+Shift+Tab workspace prev
-
-# change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-# move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-# split in horizontal orientation
-bindsym $mod+z split h
-
-# split in vertical orientation
-bindsym $mod+v split v
-
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
-
-# toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
-
-# change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
-
-# focus the parent container
-bindsym $mod+a focus parent
-
-# focus the child container
-bindsym $mod+semicolon focus child
-
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
-
-for_window [class="Thunar"] floating enable resize set 960 750
-
-# Launch calculator
-bindsym $mod+g [class="Gnome-calculator"] scratchpad show
-for_window [class="Gnome-calculator"] floating enable
-
-# bindcode $mod+107 exec --no-startup-id ~/scripts/screenshot.sh -s
-
+# i3bar
 bar {
 	status_command 2>/tmp/i3blocks.err i3blocks
 	position top
@@ -228,6 +298,8 @@ bar {
 	font pango:Hack Nerd Font 9
 	workspace_min_width 25
 }
+
+# Resize Mode {{{
 
 # resize window
 mode "resize" {
@@ -239,8 +311,10 @@ mode "resize" {
   bindsym Return mode "default"
   bindsym Escape mode "default"
 }
-bindsym $mod+r mode "resize"
 
+# }}}
+
+# open directory mode {{{
 set $mode_filemarks [1]configs [2]scripts [3]stat107 [4]cs233 [5]hdfs220 [6]cs340
 mode "$mode_filemarks" {
     bindsym 1 exec --no-startup-id alacritty -e /bin/bash -c "cd /home/aarya/.config && /bin/bash", mode "default"
@@ -253,8 +327,9 @@ mode "$mode_filemarks" {
     bindsym Escape mode "default"
     bindsym Return mode "default"
 }
+# }}}
 
-bindsym $mod+Shift+m mode "$mode_filemarks"
+# Edit gap mode {{{
 
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global), g (edit gaps)
@@ -298,41 +373,4 @@ mode "$mode_gaps_outer" {
         bindsym Escape mode "default"
 }
 
-# Start simple x hotkey daemon
-exec --no-startup-id sxhkd &
-
-# Start music player daemon
-exec --no-startup-id mpd &
-
-# Network manager
-exec --no-startup-id nm-applet &
-
-# Display wallpaper
-exec --no-startup-id ~/scripts/wallpaper.sh
-
-# Window compositor
-exec --no-startup-id picom --backend glx --xrender-sync-fence &
-
-# Always turn on num lock
-exec --no-startup-id numlockx on
-
-# Remap Caps Lock to ESC/Control key
-exec_always --no-startup-id ~/scripts/keymaps.sh
-
-# Dunst notification daemon
-exec --no-startup-id dunst &
-
-# start clipmenu deamon
-exec --no-startup-id clipmenud &
-
-# mirror display with HDMI-1 monitor if connected
-exec_always --no-startup-id ~/scripts/screenmirror.sh
-
-# lock screen on suspend
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050
-exec --no-startup-id xfce4-power-manager &
-
-# Auto lock screen and suspend after some amount of idle time
-# exec_always --no-startup-id ~/scripts/screenlock.sh
-
-bindsym $mod+slash exec --no-startup-id ~/scripts/dmenu_browser.sh
+# }}}

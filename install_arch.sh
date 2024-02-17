@@ -42,7 +42,6 @@ packages=(
 	rclone
 	rsync
 	scrot
-	sxhkd
 	sxiv
 	thunar
 	thunderbird
@@ -60,24 +59,26 @@ packages=(
 )
 
 extra=(
-	ttf-hack-nerd
-	noto-fonts
-	inetutils
 	bleachbit
 	breeze-gtk
 	chromium
 	clipmenu
 	extra/perl-file-mimeinfo
 	feh
+	inetutils
 	nitrogen
 	nodejs
+	noto-fonts
 	npm
+	sysstat
 	redshift
 	rmlint
   	silversearcher-ag
-	snap
+	sxhkd
 	texlive
+	ttf-hack-nerd
 	xautolock
+	xfce4-power-manager
 )
 
 # system packages and applications

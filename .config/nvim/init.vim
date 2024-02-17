@@ -36,13 +36,16 @@ set backspace=indent,eol,start    " make that backspace key work the way it shou
 set splitbelow                    " new horizontal split opens below current window
 set splitright                    " new vertical split opens to the right of current window
 set colorcolumn=0			      " color column
-set foldlevel=99 				  " Prevent folding on startup
+" set foldlevel=99 				  " Prevent folding on startup
 set laststatus=2		          " always show status line
 set mouse+=a
 set wildmenu
 set termguicolors
 set undodir=~/undodir
 set undofile
+
+set foldmethod=marker
+set foldmarker={{{,}}}
 
 if filereadable('/usr/share/dict/words')
   set dictionary=/usr/share/dict/words
@@ -67,15 +70,8 @@ au BufReadPost *
 
 augroup group
   autocmd!
-  autocmd FileType vim setlocal foldmethod=marker
-  autocmd FileType go setlocal foldmethod=manual
-  autocmd FileType * setlocal foldmethod=syntax
-  " autocmd FileType c,cpp setlocal textwidth=120
-  autocmd FileType c,cpp setlocal foldmethod=syntax
-  " autocmd FileType c,cpp setlocal ts=2 sts=2 sw=2 et
   autocmd FileType markdown,text setlocal spell spelllang=en_us
   autocmd FileType markdown,text setlocal wrap
-  autocmd FileType vim setlocal foldmethod=marker
   autocmd FileType make setlocal ts=4 sts=4 sw=4 noet list
 
   autocmd BufRead,BufNewFile *.h setlocal filetype=c
