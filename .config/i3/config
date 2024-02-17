@@ -9,6 +9,19 @@ set $mod Mod1
 # mod4 = windows key
 set $mod4 Mod4
 
+set $primary eDP-1
+set $secondary HDMI-1
+
+font pango:monospace 9
+
+focus_wrapping no
+ipc-socket ~/.i3/i3-ipc.sock
+popup_during_fullscreen smart
+workspace_auto_back_and_forth yes
+
+# Use Mouse+$mod to drag floating windows to their wanted position
+floating_modifier $mod
+
 # Key bindings {{{
 
 bindsym $mod+Shift+c 			reload
@@ -67,7 +80,7 @@ bindsym $mod+Shift+Return 		exec --no-startup-id alacritty --class=floating
 # bind modes
 bindsym $mod+r 					mode "resize"
 bindsym $mod+Shift+m 			mode "$mode_filemarks"
-
+bindsym $mod+Shift+t 			mode "$mode_terminal"
 
 # use window title *and* a thick border
 bindsym $mod+y 					border normal 3
@@ -152,16 +165,6 @@ exec --no-startup-id 			xss-lock --transfer-sleep-lock -- i3lock --nofork --igno
 exec --no-startup-id 			xfce4-power-manager &
 
 # }}}
-
-set $primary eDP-1
-set $secondary HDMI-1
-
-font pango:monospace 9
-
-focus_wrapping no
-ipc-socket ~/.i3/i3-ipc.sock
-popup_during_fullscreen smart
-workspace_auto_back_and_forth yes
 
 # workspaces {{{
 
@@ -254,16 +257,15 @@ bindsym $mod4+Shift+0 move container to workspace $WS20
 
 # }}}
 
-# Use Mouse+$mod to drag floating windows to their wanted position
-floating_modifier $mod
-
-# Window rules
+# Window rules {{{
 
 # enable floating mode for windows where class name begins with floating
 for_window [class="^floating"] floating enable
 for_window [class="^.*"] border pixel 1
 for_window [class="^Surf"] border normal 3
 for_window [class="Thunar"] floating enable resize set 960 750
+
+# }}}
 
 # gaps {{{
 
@@ -280,7 +282,8 @@ hide_edge_borders smart_no_gaps
 
 # }}}
 
-# Assign Workspaces:
+# workspace assignment {{{
+
 # assign [class="Firefox"] $ws2
 assign [class="thunderbird"] $ws3
 assign [class="discord"] $ws3
@@ -290,7 +293,9 @@ assign [class="Code"] $ws6
 assign [class="Pavucontrol"] $ws9
 assign [class="Virt-manager"] $ws7
 
-# i3bar
+# }}}
+
+# status bar {{{
 bar {
 	status_command 2>/tmp/i3blocks.err i3blocks
 	position top
@@ -298,10 +303,10 @@ bar {
 	font pango:Hack Nerd Font 9
 	workspace_min_width 25
 }
+# }}}
 
-# Resize Mode {{{
+# Resize window mode {{{
 
-# resize window
 mode "resize" {
   bindsym h resize shrink width 20 px or 20 ppt
   bindsym k resize grow height 20 px or 20 ppt
@@ -371,6 +376,20 @@ mode "$mode_gaps_outer" {
 
         bindsym Return mode "default"
         bindsym Escape mode "default"
+}
+
+# }}}
+
+# launch terminal app mode {{{
+
+set $mode_terminal Open: [h] htop [n] ncmpcpp [v] neovim
+mode "$mode_terminal" {
+  bindsym h exec alacritty -e htop, mode "default"
+  bindsym v exec alacritty -e nvim, mode "default"
+  bindsym n exec alacritty -e ncmpcpp, mode "default"
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
 }
 
 # }}}
