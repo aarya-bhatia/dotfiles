@@ -309,9 +309,9 @@ Plug 'xiyaowong/transparent.nvim'
 Plug 'preservim/tagbar'
 nnoremap <leader>tt :TagbarToggle<CR>
 
-source $VIM_DIR/plugins/fzf.vim           " fuzzy finder
+source $HOME/.config/nvim/plugins/fzf.vim           " fuzzy finder
 
-" colorschemes
+" color$HOME/schemes
 Plug 'navarasu/onedark.nvim'
 Plug 'folke/tokyonight.nvim'
 Plug 'morhetz/gruvbox'
