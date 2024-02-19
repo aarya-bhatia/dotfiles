@@ -65,7 +65,7 @@ bindcode $mod+107 				exec ~/scripts/screenshot.sh -s || notify-send "aarya" "sc
 bindcode $mod+Shift+107 		exec ~/scripts/screenshot.sh -u || notify-send "aarya" "screenshot failed"
 
 # dmenu scripts
-bindsym $mod+Shift+p 			exec ~/scripts/external/dmenupass.sh
+bindsym $mod+Shift+p 			exec ~/scripts/dmenu/dmenupass.sh
 bindsym $mod+d 					exec dmenu_run
 bindsym $mod+slash 				exec --no-startup-id ~/scripts/dmenu/dmenu_browser.sh
 bindsym $mod+c 					exec --no-startup-id clipmenu
