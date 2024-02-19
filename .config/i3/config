@@ -33,7 +33,6 @@ bindsym XF86AudioLowerVolume 	exec 	$HOME/scripts/volume.sh down
 bindsym XF86AudioMute 			exec 	$HOME/scripts/volume.sh mute
 bindsym XF86MonBrightnessUp 	exec 	$HOME/scripts/volume.sh brightness_up
 bindsym XF86MonBrightnessDown 	exec 	$HOME/scripts/volume.sh brightness_down
-bindsym XF87AudioPlayPause 		exec 	$HOME/scripts/external/volume_brightness.sh play_pause
 bindsym XF86AudioPause			exec 	$HOME/scripts/external/volume_brightness.sh play_pause
 bindsym XF86AudioPlay 			exec 	$HOME/scripts/external/volume_brightness.sh play_pause
 bindsym XF86AudioNext 			exec 	$HOME/scripts/external/volume_brightness.sh next_track
@@ -43,6 +42,8 @@ bindsym $mod+XF86AudioPause		exec 	mpc toggle
 bindsym $mod+XF86AudioPlay 		exec 	mpc toggle
 bindsym $mod+XF86AudioNext 		exec 	mpc next
 bindsym $mod+XF86AudioPrev 		exec 	mpc prev
+
+# bindsym XF87AudioPlayPause 		exec 	$HOME/scripts/external/volume_brightness.sh play_pause
 
 # Launch music player
 bindsym XF86Tools 				exec alacritty --class=floating -e ncmpcpp
@@ -58,10 +59,9 @@ bindsym $mod+107 				exec ~/scripts/screenshot.sh -u || notify-send "aarya" "scr
 # dmenu scripts
 bindsym $mod+Shift+p 			exec ~/scripts/external/dmenupass.sh
 bindsym $mod+d 					exec dmenu_run
-bindsym $mod+Escape 			exec /home/aarya/scripts/dmenu_power.sh
-bindsym $mod+slash 				exec --no-startup-id ~/scripts/dmenu_browser.sh
+bindsym $mod+slash 				exec --no-startup-id ~/scripts/dmenu/dmenu_browser.sh
 bindsym $mod+c 					exec --no-startup-id clipmenu
-bindsym $mod+i 					exec --no-startup-id ~/scripts/dmenu_open_images.sh
+bindsym $mod+i 					exec --no-startup-id ~/scripts/dmenu/dmenu_open_images.sh
 
 bindsym $mod+t 					exec thunar
 bindsym $mod+Control+v 			exec ~/scripts/launch_vim.sh
@@ -72,10 +72,11 @@ bindsym $mod+Return 			exec --no-startup-id alacritty --class=Alacritty
 bindsym $mod+Shift+Return 		exec --no-startup-id alacritty --class=floating
 
 # bind modes
-bindsym $mod+r 					mode "resize"
+bindsym $mod+r 					mode "$mode_resize"
 bindsym $mod+Shift+m 			mode "$mode_filemarks"
 bindsym $mod+Shift+t 			mode "$mode_terminal"
 bindsym $mod+o 					mode "$mode_application"
+bindsym $mod+Escape				mode "$mode_power"
 
 # use window title *and* a thick border
 bindsym $mod+y 					border normal 3
@@ -302,7 +303,8 @@ bar {
 
 # Resize window mode {{{
 
-mode "resize" {
+set $mode_resize resize: [hl] -/+ width [jk] -/+ height
+mode "$mode_resize" {
   bindsym h resize shrink width 20 px or 20 ppt
   bindsym k resize grow height 20 px or 20 ppt
   bindsym j resize shrink height 20 px or 20 ppt
@@ -400,6 +402,22 @@ mode "$mode_application" {
   bindsym p exec pavucontrol, mode "default"
   bindsym b exec blueman-manager, mode "default"
   bindsym a exec arandr, mode "default"
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+# }}}
+
+# power mode {{{
+
+set $mode_power [l]ock [s]uspend [r]eboot [p]oweroff [e]xit
+mode "$mode_power" {
+  bindsym l exec i3lock -e -u, mode "default"
+  bindsym s exec systemctl suspend, mode "default"
+  bindsym r exec reboot, mode "default"
+  bindsym p exec poweroff, mode "default"
+  bindsym e exec i3-msg exit, mode "default"
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
