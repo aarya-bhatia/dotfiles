@@ -71,6 +71,7 @@ extra=(
 	noto-fonts
 	npm
 	sysstat
+	man-pages
 	redshift
 	rmlint
   	silversearcher-ag
