@@ -34,10 +34,10 @@ bindsym XF86AudioLowerVolume 	exec 	$HOME/scripts/volume.sh down
 bindsym XF86AudioMute 			exec 	$HOME/scripts/volume.sh mute
 bindsym XF86MonBrightnessUp 	exec 	$HOME/scripts/volume.sh brightness_up
 bindsym XF86MonBrightnessDown 	exec 	$HOME/scripts/volume.sh brightness_down
-bindsym XF86AudioPause			exec 	$HOME/scripts/external/volume_brightness.sh play_pause
-bindsym XF86AudioPlay 			exec 	$HOME/scripts/external/volume_brightness.sh play_pause
-bindsym XF86AudioNext 			exec 	$HOME/scripts/external/volume_brightness.sh next_track
-bindsym XF86AudioPrev 			exec 	$HOME/scripts/external/volume_brightness.sh prev_track
+bindsym XF86AudioPause			exec 	$HOME/scripts/volume.sh play_pause
+bindsym XF86AudioPlay 			exec 	$HOME/scripts/volume.sh play_pause
+bindsym XF86AudioNext 			exec 	$HOME/scripts/volume.sh next_track
+bindsym XF86AudioPrev 			exec 	$HOME/scripts/volume.sh prev_track
 
 bindsym $mod+XF86AudioPause		exec 	mpc toggle
 bindsym $mod+XF86AudioPlay 		exec 	mpc toggle
@@ -301,7 +301,7 @@ assign [class="Virt-manager"] $ws7
 
 # status bar {{{
 bar {
-	status_command 2>/tmp/i3blocks.err i3blocks
+	status_command 2>/tmp/i3blocks.err i3blocks -vv
 	position top
 	tray_output eDP-1
 	font pango:Hack Nerd Font 9

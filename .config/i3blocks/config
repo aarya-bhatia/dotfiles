@@ -1,6 +1,7 @@
 [mediaplayer]
-command=~/scripts/i3/mediaplayer/mediaplayer | head -c 40
+command=~/scripts/mediaplayer.sh
 interval=5
+color=#c9c9c9
 
 [kernel]
 command=uname -a | cut -d" " -f3
@@ -8,57 +9,46 @@ interval=once
 color=#A4C2F4
 
 [weather]
-command=~/scripts/i3/i3forecast.sh
+command=~/scripts/weather.py
 interval=360
 color=#91E78B
 
 [disk]
-command=~/scripts/disk_usage.py
+command=~/scripts/system/disk.py
 interval=360
 color=#A4C2F4
 
-[cpu_usage]
-command=~/scripts/i3/cpu_usage/cpu_usage
-interval=10
-label=CPU:
+[cpu]
+command=~/scripts/system/cpu.py
+interval=persist
+color=#91E78B
 
 [memory]
-command=~/scripts/i3/memory/memory
-label=MEM:
-interval=30
-
-[bandwidth]
-command=~/scripts/i3/bandwidth.sh
-interval=5
-color=#91E78B
-min_width=150
-align=center
+command=~/scripts/system/memory.py
+interval=persist
+color=#A4C2F4
 
 [volume]
 command=printf "♪ %s\n" $(~/scripts/volume.sh get_volume)
 interval=once
 signal=10
+color=#91E78B
 
 [brightness]
 command=printf " %s\n" $(~/scripts/volume.sh get_brightness)
 interval=once
 signal=11
-
-[time]
-command=date +"%a %Y-%m-%d %I:%M %p"
-interval=5
-color=#fff87c
-
-# [battery2]
-# command=~/scripts/i3/battery2/battery2
-# markup=pango
-# interval=5
-# color=#A4C2F4
+color=#A4C2F4
 
 [battery]
 command=~/scripts/battery.sh
 interval=5
-color=#A4C2F4
+color=#91E78B
+
+[time]
+command=date +"%A %Y-%m-%d %I:%M %p"
+interval=5
+color=#fff87c
 
 # [public_ip]
 # command=echo $(curl api.ipify.org)
