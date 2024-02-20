@@ -31,6 +31,7 @@ white   = '#ebdbb2'
 
 [font]
 size = 6.5
+# size = 8
 
 [font.bold]
 family = "Hack Nerd Font"

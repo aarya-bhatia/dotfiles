@@ -82,6 +82,8 @@ extra=(
 	xfce4-power-manager
 )
 
+py=(flask requests trash-cli pandas numpy matplotlib ipykernel dbus-python psutil)
+
 # system packages and applications
 for package in "${packages[@]}"; do
 	pacman -S --needed $package
@@ -90,7 +92,9 @@ done
 # python packages
 if python -m venv /home/$USER/pyvenv; then
 	if source /home/$USER/pyvenv/bin/activate; then
-		python -m pip install flask requests trash-cli pandas numpy matplotlib ipykernel dbus-python
+		for package in "${py[@]}"; do
+			python -m pip install $package
+		done
 	fi
 fi
 

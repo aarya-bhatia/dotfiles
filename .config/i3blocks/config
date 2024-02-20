@@ -37,7 +37,7 @@ color=#91E78B
 [brightness]
 command=printf " %s\n" $(~/scripts/volume.sh get_brightness)
 interval=once
-signal=11
+signal=10
 color=#A4C2F4
 
 [battery]
