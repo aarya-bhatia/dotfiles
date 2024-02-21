@@ -14,17 +14,17 @@ interval=360
 color=#91E78B
 
 [disk]
-command=~/scripts/system/disk.py
+command=~/scripts/disk.py
 interval=360
 color=#A4C2F4
 
 [cpu]
-command=~/scripts/system/cpu.py
+command=~/scripts/cpu.py
 interval=persist
 color=#91E78B
 
 [memory]
-command=~/scripts/system/memory.py
+command=~/scripts/memory.py
 interval=persist
 color=#A4C2F4
 

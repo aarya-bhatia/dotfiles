@@ -76,10 +76,8 @@ augroup group
 
   autocmd BufRead,BufNewFile *.h setlocal filetype=c
   autocmd BufNewFile,BufRead *.ejs setlocal filetype=html
-  autocmd BufRead,BufNewFile *.html setlocal filetype=html
 
   " Trim trailing whitespace on lines
-  " autocmd BufWritePost * if &ft != "oil" | :%s/\s\+$//e | nohlsearch
   autocmd BufWritePost * :%s/\s\+$//e | nohlsearch
 
 augroup END
@@ -102,13 +100,12 @@ iabbrev --- ----------------------
 
 " Key Mappings {{{
 
+nnoremap <silent> <leader> <Nop>
+
 map [f <Nop>
 map ]f <Nop>
 map gh <Nop>
 map gH <Nop>
-map gH <Nop>
-
-nnoremap <silent> <leader> <Nop>
 
 " [V]im namespace
 nnoremap <leader>ve :edit $MYVIMRC<CR>

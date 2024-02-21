@@ -48,6 +48,7 @@ packages=(
 	tmux
 	ufw
 	valgrind
+	vi
 	vlc
 	xcape
 	xdotool
@@ -59,37 +60,37 @@ packages=(
 )
 
 extra=(
-	bleachbit
+	archlinux-wallpaper
 	breeze-gtk
 	chromium
 	clipmenu
 	extra/perl-file-mimeinfo
-	feh
+	gdb
 	inetutils
-	nitrogen
+	keychain
+	man-pages
 	nodejs
 	noto-fonts
+	noto-fonts-emoji
 	npm
-	sysstat
-	man-pages
 	redshift
 	rmlint
   	silversearcher-ag
 	sxhkd
+	sysstat
 	texlive
 	ttf-hack-nerd
-	xautolock
 	xfce4-power-manager
 )
 
 py=(flask requests trash-cli pandas numpy matplotlib ipykernel dbus-python psutil)
 
-# system packages and applications
+# install system packages
 for package in "${packages[@]}"; do
 	pacman -S --needed $package
 done
 
-# python packages
+# install python packages
 if python -m venv /home/$USER/pyvenv; then
 	if source /home/$USER/pyvenv/bin/activate; then
 		for package in "${py[@]}"; do
@@ -99,6 +100,6 @@ if python -m venv /home/$USER/pyvenv; then
 fi
 
 # program aliases
-which thunar && ln -s $(which thunar) /usr/local/bin/files
-which thunderbird && ln -s $(which thunderbird) /usr/local/bin/thunderbird
+which thunar && sudo ln -s $(which thunar) /usr/local/bin/files
+which thunderbird && sudo ln -s $(which thunderbird) /usr/local/bin/mail
 

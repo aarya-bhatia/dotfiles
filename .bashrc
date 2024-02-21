@@ -145,3 +145,5 @@ lfcd () {
 }
 
 eval $(keychain --eval --quiet id_rsa ~/.ssh/aaryab2)
+
+# neofetch

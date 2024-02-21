@@ -73,7 +73,7 @@ bindsym $mod+c 					exec --no-startup-id clipmenu
 bindsym $mod+i 					exec --no-startup-id ~/scripts/dmenu/dmenu_open_images.sh
 
 bindsym $mod+t 					exec thunar
-bindsym $mod+Control+v 			exec ~/scripts/launch_vim.sh
+bindsym $mod+Shift+v 			exec ~/scripts/launch_vim.sh
 bindsym $mod+Shift+w 			exec sxiv ~/wallpapers
 
 # Terminal
