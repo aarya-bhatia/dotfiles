@@ -108,15 +108,12 @@ cmd zip ${{
     rm -rf $1
 }}
 
-cmd cd-home $lf -remote "send $id cd $HOME"
-cmd cd-config $lf -remote "send $id cd $HOME/.config"
-cmd cd-lf $lf -remote "send $id cd $HOME/.config/lf"
-
-map gh cd-home
-map gc cd-config
-map gl cd-lf
+map gc cd ~/.config
 map gd cd ~/Downloads
-map gt cd ~/Downloads/tar
+map gh cd ~
+map gl cd ~/.config/lf
+map gr cd ~/repos
+map gs cd ~/scripts
 
 # Fuzzy finder
 cmd fzf_jump ${{

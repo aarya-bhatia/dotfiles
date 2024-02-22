@@ -954,7 +954,7 @@ tesseract-data-afr 2:4.1.0-4
 tesseract-data-osd 2:4.1.0-4
 texinfo 7.1-2
 thunar 4.18.10-1
-thunderbird 115.7.0-2
+thunderbird 115.8.0-1
 tk 8.6.13-2
 tldr 3.2.0-1
 tlp 1.6.1-1
