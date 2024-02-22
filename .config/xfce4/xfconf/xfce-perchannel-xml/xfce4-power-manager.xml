@@ -21,6 +21,6 @@
     <property name="blank-on-ac" type="int" value="5"/>
     <property name="brightness-on-ac" type="uint" value="9"/>
     <property name="brightness-level-on-ac" type="uint" value="20"/>
-    <property name="inactivity-on-ac" type="uint" value="20"/>
+    <property name="inactivity-on-ac" type="uint" value="15"/>
   </property>
 </channel>

@@ -1,4 +1,7 @@
 require('Comment').setup()
+local ft = require('Comment.ft')
+ft.set('asm', '#%s')
+
 -- require('ibl').setup()
 require('marks').setup()
 

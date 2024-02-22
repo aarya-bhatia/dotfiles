@@ -31,7 +31,7 @@ rotate() {
 case "$1" in
 # "C-x")      xclip -in -filter | tr '\n' ' ' | xclip -in -selection clipboard ;;
 "C-x")      tr '\n' ' ' | xsel -b ;;
-"C-w")      while read file; do xwallpaper --stretch "$file" & done ;;
+"C-w")      while read file; do ~/scripts/wallpaper.sh "$file"; done ;;
 "C-c")      while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
 "C-r")      while read file; do rawtherapee "$file" & done ;;
 "C-comma")  rotate 270 ;;
