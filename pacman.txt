@@ -45,6 +45,7 @@ brightnessctl
 brotli
 bubblewrap
 bzip2
+c-ares
 ca-certificates
 ca-certificates-mozilla
 ca-certificates-utils
@@ -553,6 +554,7 @@ libnfs
 libnftnl
 libnghttp2
 libnghttp3
+libngtcp2
 libnice
 libnl
 libnm
@@ -732,9 +734,13 @@ nettle
 network-manager-applet
 networkmanager
 nm-connection-editor
+node-gyp
+nodejs
+nodejs-nopt
 notmuch-runtime
 noto-fonts
 noto-fonts-emoji
+npm
 npth
 nspr
 nss
@@ -849,6 +855,7 @@ scrot
 sdl2
 seabios
 sed
+semver
 serd
 sfsexp
 shaderc
@@ -912,7 +919,6 @@ v4l-utils
 valgrind
 vapoursynth
 vde2
-vi
 vid.stab
 vim
 vim-runtime

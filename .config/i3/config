@@ -50,8 +50,8 @@ bindsym $mod+XF86AudioPrev 		exec 	mpc prev
 # Launch music player
 bindsym XF86Tools 				exec alacritty --class=floating -e ncmpcpp
 
-bindsym $mod+Control+p 		 	exec alacritty --class=floating-python -e tmux new-session -A -s python3 "~/pyvenv/bin/python3"
-bindsym $mod+Control+q 			exec alacritty --class=floating-qalc -e tmux new-session -A -s qalc "qalc"
+bindsym $mod+Control+p 		 	exec alacritty --class=floating -e tmux new-session -A -s python3 "~/pyvenv/bin/python3"
+bindsym $mod+Control+q 			exec alacritty --class=floating -e tmux new-session -A -s qalc "qalc"
 bindcode 148 					exec --no-startup-id alacritty --class="qalc" -e qalc
 
 # Screenshots with Print key
@@ -265,11 +265,11 @@ bindsym $mod4+Shift+0 move container to workspace $WS20
 # Window rules {{{
 
 # enable floating mode for windows where class name begins with floating
-for_window [class="^floating"] floating enable
 for_window [class="^.*"] border pixel 1
-for_window [class="^Surf"] border normal 3
+for_window [class="^floating"] floating enable
 for_window [class="Thunar"] floating enable resize set 960 750
 for_window [class="^qalc"] floating enable resize set 520 400
+for_window [class="^Surf"] border normal 3
 
 # }}}
 
