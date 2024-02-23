@@ -307,6 +307,7 @@ Plug 'preservim/tagbar'
 nnoremap <leader>tt :TagbarToggle<CR>
 
 source $HOME/.config/nvim/plugins/fzf.vim           " fuzzy finder
+source $HOME/.config/nvim/plugins/cscope.vim
 
 " color$HOME/schemes
 Plug 'navarasu/onedark.nvim'
