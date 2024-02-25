@@ -128,10 +128,24 @@ cmd fzf_jump ${{
         lf -remote "send $id $cmd \"$res\""
     fi
 }}
+
 map <c-f> :fzf_jump
 
-# To create files and directories
-map o %$HOME/scripts/lf/mkfile.py
+map o %{{
+	printf "create file: "
+	read ans
+	if touch $ans; then
+		lf -remote "send $id select $ans"
+	fi
+}}
+
+map O %{{
+	printf "create dir: "
+	read ans
+	if mkdir -p $ans; then
+		lf -remote "send $id select $ans"
+	fi
+}}
 
 # To rename selected files in editor
 map R !$HOME/scripts/lf/bulkrename.py

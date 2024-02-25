@@ -18,6 +18,8 @@ archlinux-keyring
 archlinux-wallpaper
 argon2
 aribb24
+asmfmt
+asmfmt-debug
 at-spi2-core
 atkmm
 attr
@@ -25,6 +27,7 @@ audiofile
 audit
 autoconf
 automake
+autopep8
 avahi
 base
 base-devel
@@ -809,18 +812,22 @@ python
 python-attrs
 python-cairo
 python-cffi
+python-click
 python-colorama
 python-cryptography
 python-distlib
+python-dotenv
 python-filelock
 python-gobject
 python-packaging
 python-pip
 python-platformdirs
 python-ply
+python-pycodestyle
 python-pycparser
 python-shtab
 python-termcolor
+python-tomli
 python-typing_extensions
 python-virtualenv
 python-wheel
@@ -889,6 +896,7 @@ tdb
 terminus-font
 tesseract
 tesseract-data-afr
+tesseract-data-eng
 tesseract-data-osd
 texinfo
 thunar

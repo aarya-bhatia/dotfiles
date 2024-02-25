@@ -48,7 +48,7 @@ packages=(
 	tmux
 	ufw
 	valgrind
-	vi
+	vim
 	vlc
 	xcape
 	xdotool
@@ -83,7 +83,7 @@ extra=(
 	xfce4-power-manager
 )
 
-py=(flask requests trash-cli pandas numpy matplotlib ipykernel dbus-python psutil)
+py=(flask requests trash-cli pandas numpy matplotlib ipykernel dbus-python psutil clang-format)
 
 # install system packages
 for package in "${packages[@]}"; do

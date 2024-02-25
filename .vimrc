@@ -1,4 +1,4 @@
-" plugings {{{
+" plugins {{{
 
 " autoinstall vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -13,13 +13,46 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
+Plug 'wellle/targets.vim'		  " text objects
 Plug 'preservim/tagbar'
 Plug 'morhetz/gruvbox'
+Plug 'sainnhe/gruvbox-material'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'			" fuzzy finder
+Plug 'romainl/vim-qf'
+Plug 'vim-autoformat/vim-autoformat'
+" Plug 'dense-analysis/ale'
 
 call plug#end()
+
+" }}}
+
+" Plugin config {{{
+
+let g:qf_auto_resize = 0
+
+au FileType qf cabbrev <buffer> K Keep
+au FileType qf cabbrev <buffer> Rej Reject
+au FileType qf cabbrev <buffer> Res Restore
+
+au FileType qf nnoremap <buffer> dd :.Reject<CR>
+au FileType qf vnoremap <buffer> d :Reject<CR>
+
+au FileType qf nnoremap <buffer> [[ :colder<CR>
+au FileType qf nnoremap <buffer> ]] :cnewer<CR>
+
+let g:autoformat_verbosemode=1
+
+let g:ale_completion_enabled=1
+let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰', '│', '─']
+let g:ale_set_loclist = 1
+set omnifunc=ale#completion#OmniFunc
+
+nnoremap [D :ALEFirst<CR>
+nnoremap ]D :ALELast<CR>
+nnoremap [d :ALEPrevious<CR>
+nnoremap ]d :ALENext<CR>
 
 " }}}
 
@@ -66,6 +99,8 @@ set foldmarker={{{,}}}
 
 runtime! ftplugin/man.vim         " Use :Man man to lookup man page
 
+let g:python3_host_prog="/home/aarya/pyvenv/bin/python3"
+
 " }}}
 
 " autocommands {{{
@@ -104,6 +139,8 @@ map [f <Nop>
 map ]f <Nop>
 map gh <Nop>
 map gH <Nop>
+
+nnoremap <leader>F :Autoformat<CR>
 
 nnoremap <leader>q :quit<CR>
 nnoremap <leader>s :write<cr>

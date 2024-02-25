@@ -168,27 +168,23 @@ nnoremap ]t :tabnext<CR>
 nnoremap [T :tabfirst<CR>
 nnoremap ]T :tablast<CR>
 
-" original vim keys
-nnoremap <leader>J J
-nnoremap <leader>K K
-
-" Vertical scrolling without moving cursor
-nnoremap <C-k> 6<C-y>
-nnoremap <C-j> 6<C-e>
-vnoremap <C-k> 6<C-y>
-vnoremap <C-j> 6<C-e>
-
 " Horizontal scrolling
 nnoremap <C-h> 8zh
 nnoremap <C-l> 8zl
 vnoremap <C-h> 8zh
 vnoremap <C-l> 8zl
 
+" Vertical scrolling without moving cursor
+nnoremap <leader>k 6<C-y>
+nnoremap <leader>j 6<C-e>
+vnoremap <leader>k 6<C-y>
+vnoremap <leader>j 6<C-e>
+
 " move up/down faster
-nnoremap K 6gk
-nnoremap J 6gj
-vnoremap K 6gk
-vnoremap J 6gj
+nnoremap <C-k> 6gk
+nnoremap <C-j> 6gj
+vnoremap <C-k> 6gk
+vnoremap <C-j> 6gj
 
 " handle line wrapped text in normal and visual mode
 nnoremap k gk
