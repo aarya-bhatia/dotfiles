@@ -410,9 +410,9 @@ mode "$mode_application" {
   bindsym t exec thunderbird, mode "default"
   bindsym d exec discord, mode "default"
   bindsym p exec pavucontrol, mode "default"
-  bindsym b exec blueman-manager, mode "default"
   bindsym a exec arandr, mode "default"
   bindsym v exec code, mode "default"
+  bindsym b exec blueman-manager, mode "default"
 
   bindsym Return mode "default"
   bindsym Escape mode "default"

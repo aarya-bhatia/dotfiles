@@ -9,26 +9,29 @@ endif
 
 call plug#begin("~/.vim/plugged")
 
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'tpope/vim-repeat'
-Plug 'wellle/targets.vim'		  " text objects
-Plug 'preservim/tagbar'
-Plug 'morhetz/gruvbox'
-Plug 'sainnhe/gruvbox-material'
+" Plug 'dense-analysis/ale'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'			" fuzzy finder
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'
+Plug 'morhetz/gruvbox'
+Plug 'preservim/tagbar'
 Plug 'romainl/vim-qf'
+Plug 'sainnhe/gruvbox-material'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
 Plug 'vim-autoformat/vim-autoformat'
-" Plug 'dense-analysis/ale'
+Plug 'wellle/targets.vim'
 
 call plug#end()
 
 " }}}
 
 " Plugin config {{{
+
+" quickfix list {{{
 
 let g:qf_auto_resize = 0
 
@@ -42,8 +45,17 @@ au FileType qf vnoremap <buffer> d :Reject<CR>
 au FileType qf nnoremap <buffer> [[ :colder<CR>
 au FileType qf nnoremap <buffer> ]] :cnewer<CR>
 
-let g:autoformat_verbosemode=1
+" }}}
 
+" comments {{{
+au FileType asm setlocal commentstring=#\ %s
+" }}}
+
+" {{{ autoformat
+let g:autoformat_verbosemode=1
+" }}}
+
+" ale linter {{{
 let g:ale_completion_enabled=1
 let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰', '│', '─']
 let g:ale_set_loclist = 1
@@ -53,6 +65,16 @@ nnoremap [D :ALEFirst<CR>
 nnoremap ]D :ALELast<CR>
 nnoremap [d :ALEPrevious<CR>
 nnoremap ]d :ALENext<CR>
+" }}}
+
+" easy-align {{{
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xnoremap ga <Plug>(EasyAlign)
+
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nnoremap ga <Plug>(EasyAlign)
+" }}}
 
 " }}}
 
@@ -141,6 +163,9 @@ map gh <Nop>
 map gH <Nop>
 
 nnoremap <leader>F :Autoformat<CR>
+
+xnoremap <leader>y :w !xsel -b<CR><CR>
+nnoremap <leader>yy :w !xsel -b<CR><CR>
 
 nnoremap <leader>q :quit<CR>
 nnoremap <leader>s :write<cr>
@@ -528,7 +553,7 @@ nnoremap <leader>- :LF<CR>
 
 " }}}
 
-" " Ultisnips {{{
+" Ultisnips {{{
 
 " Plug 'SirVer/ultisnips'       " snippet engine
 
@@ -537,5 +562,5 @@ nnoremap <leader>- :LF<CR>
 " let g:UltiSnipsJumpForwardTrigger="<c-j>"
 " let g:UltiSnipsJumpBackwardTrigger="<c-k>"
 
-" " }}}
+" }}}
 
