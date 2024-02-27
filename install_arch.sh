@@ -83,7 +83,18 @@ extra=(
 	xfce4-power-manager
 )
 
-py=(flask requests trash-cli pandas numpy matplotlib ipykernel dbus-python psutil clang-format)
+py=(
+	clang-format
+	dbus-python
+	flask
+	ipykernel
+	matplotlib
+	numpy
+	pandas
+	psutil
+	requests
+	trash-cli
+)
 
 # install system packages
 for package in "${packages[@]}"; do

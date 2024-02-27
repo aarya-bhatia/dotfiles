@@ -114,10 +114,13 @@ set termguicolors
 set wildmenu
 set foldmethod=marker
 set foldmarker={{{,}}}
+set undodir=~/.vim/undodir
+set undofile
 " set foldlevel=99 				  " Prevent folding on startup
 " set colorcolumn=0			      " color column
-" set undodir=~/undodir.vim
-" set undofile
+
+set listchars=tab:..,trail:_,extends:>,precedes:<,nbsp:~
+set list
 
 runtime! ftplugin/man.vim         " Use :Man man to lookup man page
 
@@ -277,7 +280,7 @@ nnoremap <leader>id i<C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR><Esc>
 nnoremap <leader>mk :make<CR>
 
 " Run the command on current line and paste output below
-nnoremap <leader>R "zyy:r !z
+nnoremap <leader>R "zy$:r !z
 
 xnoremap ss !sort<CR>
 xnoremap su !sort\|uniq<CR>
