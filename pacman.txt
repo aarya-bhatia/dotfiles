@@ -726,7 +726,6 @@ mpv
 msgpack-c
 mtdev
 mujs
-ncmpc
 ncmpcpp
 ncurses
 ndctl

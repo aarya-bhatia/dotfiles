@@ -9,7 +9,7 @@ interval=once
 color=#A4C2F4
 
 [weather]
-command=~/scripts/weather.py
+command=~/scripts/weather.py -f
 interval=360
 color=#91E78B
 

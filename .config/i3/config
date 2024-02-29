@@ -45,7 +45,7 @@ bindsym $mod+XF86AudioPlay 		exec 	mpc toggle
 bindsym $mod+XF86AudioNext 		exec 	mpc next
 bindsym $mod+XF86AudioPrev 		exec 	mpc prev
 
-# bindsym XF87AudioPlayPause 		exec 	$HOME/scripts/external/volume_brightness.sh play_pause
+bindsym $mod+XF87AudioPlayPause exec 	mpc toggle
 
 # Launch music player
 bindsym XF86Tools 				exec alacritty --class=floating -e ncmpcpp
