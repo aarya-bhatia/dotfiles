@@ -310,8 +310,7 @@ bar {
 # status 2>/tmp/i3blocks.err i3blocks -vv
 	position top
 	tray_output eDP-1
-	# font pango:Hack Nerd Font 9
-	font pango:Terminus 10
+	font pango:Hack Nerd Font 9
 	# workspace_min_width 20
 }
 # }}}

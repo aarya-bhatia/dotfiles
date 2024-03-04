@@ -3,7 +3,7 @@ import = [
 ]
 
 [font]
-size = 7
+size = 6.5
 
 [font.bold]
 family = "Hack Nerd Font"

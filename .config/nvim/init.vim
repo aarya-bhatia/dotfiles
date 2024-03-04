@@ -94,6 +94,7 @@ let maplocalleader = ' '
 set autoindent                    " set auto-indenting on for programming
 set backspace=indent,eol,start    " make that backspace key work the way it should
 set belloff=all                   " turn off error beeps
+set colorcolumn=0
 set hidden                        " allows multiple buffers without saving
 set ignorecase                    " ignore case when searching
 set incsearch                     " do incremental searching
@@ -110,16 +111,16 @@ set smarttab
 set splitbelow                    " new horizontal split opens below current window
 set splitright                    " new vertical split opens to the right of current window
 set termguicolors
-set wildmenu
-set foldmethod=marker
-set foldmarker={{{,}}}
 set undodir=~/undodir
 set undofile
-set foldlevel=1
-" set colorcolumn=0			      " color column
+set wildmenu
 
-set listchars=tab:..,trail:_,extends:>,precedes:<,nbsp:~
+set foldlevel=1
+set foldmarker={{{,}}}
+set foldmethod=marker
+
 set list
+set listchars=tab:..,trail:_,extends:>,precedes:<,nbsp:~
 
 runtime! ftplugin/man.vim         " Use :Man man to lookup man page
 
