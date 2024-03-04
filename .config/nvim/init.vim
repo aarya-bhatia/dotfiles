@@ -78,8 +78,8 @@ au FileType asm setlocal commentstring=#\ %s
 
 " editor settings {{{
 
-colorscheme gruvbox
-" colorscheme melange
+" colorscheme gruvbox
+colorscheme melange
 " colorscheme koehler
 
 set background=dark
@@ -113,7 +113,7 @@ set termguicolors
 set wildmenu
 set foldmethod=marker
 set foldmarker={{{,}}}
-set undodir=~/.vim/undodir
+set undodir=~/undodir
 set undofile
 " set foldlevel=99 				  " Prevent folding on startup
 " set colorcolumn=0			      " color column
@@ -140,6 +140,9 @@ au BufWritePost * :%s/\s\+$//e | nohlsearch
 
 au BufRead,BufNewFile *.h setlocal filetype=c
 au BufNewFile,BufRead *.ejs setlocal filetype=html
+
+au FileType c,cpp,h setlocal ts=2 sts=2 sw=2 et
+au FileType c,cpp 	setlocal foldmarker={,}
 
 au FileType markdown,text setlocal spell spelllang=en_us
 au FileType markdown,text setlocal wrap

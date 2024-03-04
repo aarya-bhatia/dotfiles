@@ -1,10 +1,9 @@
-# import = [
-#     "~/repos/alacritty-themes/themes/github_dark.toml"
-# ]
+import = [
+    "~/repos/alacritty-themes/themes/gruvbox_dark.toml"
+]
 
 [font]
-size = 6.5
-# size = 8
+size = 7
 
 [font.bold]
 family = "Hack Nerd Font"

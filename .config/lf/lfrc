@@ -186,11 +186,8 @@ map z2 :set ratios 1:2; set preview
 map z3 :set ratios 1:2:3; set preview
 map z4 :set ratios 1:2:3:5; set preview
 
-# Map A to rename with cursor at the last position
-map A rename<space>
-
-# Map I to rename with cursor at the first position
-map I rename<space><home>
+map A push :rename<enter><c-e>
+map I push :rename<enter><c-a>
 
 map Y %realpath $f | xsel -b && echo "Copied file path: $(xsel -b -o)"
 

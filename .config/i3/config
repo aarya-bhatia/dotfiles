@@ -145,7 +145,7 @@ exec --no-startup-id 			mpd &
 exec --no-startup-id 			nm-applet &
 
 # Display wallpaper
-exec --no-startup-id 			~/scripts/wallpaper.sh
+exec --no-startup-id 			~/scripts/wallpaper.sh /home/aarya/wallpapers/archlinux/sunset.jpg
 
 # Window compositor
 exec --no-startup-id 			picom --backend glx --xrender-sync-fence &
@@ -168,6 +168,9 @@ exec_always --no-startup-id 	~/scripts/screenmirror.sh
 # lock screen on suspend
 exec --no-startup-id 			xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050
 exec --no-startup-id 			xfce4-power-manager &
+
+# Session manager
+exec --no-startup-id 			lxsession &
 
 # }}}
 
@@ -303,11 +306,13 @@ hide_edge_borders smart_no_gaps
 
 # status bar {{{
 bar {
-	status_command 2>/tmp/i3blocks.err i3blocks -vv
+	status_command i3status
+# status 2>/tmp/i3blocks.err i3blocks -vv
 	position top
 	tray_output eDP-1
-	font pango:Hack Nerd Font 9.5
-	workspace_min_width 20
+	# font pango:Hack Nerd Font 9
+	font pango:Terminus 10
+	# workspace_min_width 20
 }
 # }}}
 
@@ -403,7 +408,7 @@ mode "$mode_terminal" {
 
 # launch app mode {{{
 
-set $mode_application Open: [f]irefox [c]hrome [t]hunderbird [d]iscord [p]avucontrol [b]luetooth [a]randr [v]scode
+set $mode_application Open: [f]irefox [c]hrome [t]hunderbird [d]iscord [p]avucontrol [b]luetooth [a]randr [v]scode [V]irt-manager
 mode "$mode_application" {
   bindsym f exec firefox, mode "default"
   bindsym c exec chromium, mode "default"
@@ -412,6 +417,7 @@ mode "$mode_application" {
   bindsym p exec pavucontrol, mode "default"
   bindsym a exec arandr, mode "default"
   bindsym v exec code, mode "default"
+  bindsym Shift+v exec virt-manager, mode "default"
   bindsym b exec blueman-manager, mode "default"
 
   bindsym Return mode "default"
