@@ -115,7 +115,7 @@ set foldmethod=marker
 set foldmarker={{{,}}}
 set undodir=~/undodir
 set undofile
-" set foldlevel=99 				  " Prevent folding on startup
+set foldlevel=1
 " set colorcolumn=0			      " color column
 
 set listchars=tab:..,trail:_,extends:>,precedes:<,nbsp:~
