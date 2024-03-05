@@ -17,6 +17,7 @@ archlinux-keyring
 argon2
 aribb24
 ario
+asmfmt
 at-spi2-core
 atkmm
 attica5
@@ -67,7 +68,6 @@ cryptsetup
 ctags
 curl
 dav1d
-db
 db5.3
 dbus
 dbus-broker
@@ -82,8 +82,8 @@ desktop-file-utils
 device-mapper
 dhcp
 diffutils
+discord
 dmenu
-dnssec-anchors
 docker
 double-conversion
 duktape
@@ -91,8 +91,6 @@ dunst
 e2fsprogs
 efibootmgr
 efivar
-electron25
-electron27
 enchant
 exo
 expat
@@ -139,7 +137,6 @@ gmp
 gnu-free-fonts
 gnupg
 gnutls
-go
 gobject-introspection-runtime
 gperftools
 gpgme
@@ -198,7 +195,6 @@ jbig2dec
 jbigkit
 json-c
 json-glib
-jsoncpp
 karchive5
 kauth5
 kbd
@@ -236,7 +232,6 @@ kxmlgui5
 l-smash
 lame
 lcms2
-ldns
 leptonica
 less
 lf
@@ -318,7 +313,6 @@ libinstpatch
 libisl
 libjpeg-turbo
 libjxl
-libkeybinder3
 libksba
 liblc3
 libldac
@@ -584,7 +578,6 @@ python
 python-attrs
 python-cairo
 python-cffi
-python-configobj
 python-cryptography
 python-distlib
 python-filelock
@@ -594,7 +587,6 @@ python-pip
 python-platformdirs
 python-ply
 python-pycparser
-python-six
 python-typing_extensions
 python-virtualenv
 python-wheel
@@ -602,20 +594,22 @@ qca-qt5
 qt5-base
 qt5-declarative
 qt5-graphicaleffects
+qt5-location
 qt5-multimedia
 qt5-quickcontrols
 qt5-quickcontrols2
+qt5-remoteobjects
 qt5-speech
 qt5-svg
 qt5-translations
 qt5-wayland
+qt5-webchannel
+qt5-webengine
 qt5-x11extras
 rav1e
 rclone
-re2
 readline
 redshift
-ripgrep
 rsync
 rubberband
 runc
@@ -689,7 +683,6 @@ vid.stab
 vim
 vim-runtime
 visual-studio-code-bin
-visual-studio-code-bin-debug
 vlc
 vmaf
 volume_key
@@ -751,7 +744,6 @@ xxhash
 xz
 yajl
 yay
-yay-debug
 yelp
 yelp-xsl
 zathura
@@ -760,6 +752,7 @@ zeromq
 zimg
 zix
 zlib
+zoom
 zram-generator
 zstd
 zziplib

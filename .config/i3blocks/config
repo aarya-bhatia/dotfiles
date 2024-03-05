@@ -43,7 +43,7 @@ interval=360
 label=
 
 [time]
-command=date +'%A, %d %B %Y %I:%M %p '
+command=date +'%A, %d %B %I:%M %p '
 interval=10
 
 # vim: ft=ini

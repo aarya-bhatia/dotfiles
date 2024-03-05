@@ -121,6 +121,8 @@ alias ta="tmux attach || tmux"
 alias vbox="VBoxManage"
 alias bright="brightnessctl"
 
+alias paclean="sudo pacman -Rsn $(pacman -Qdtq)"
+
 # alias valgrind="valgrind --leak-check=full --show-leak-kinds=all"
 
 alias notes="printf \"\n## $(date +'%Y-%m-%d %H:%M:%S')\n\n\" >> /home/aarya/GoogleDrive/Notes/$(date +"%Y-%m").md; vim /home/aarya/GoogleDrive/Notes/$(date +"%Y-%m").md -c 'norm G'"

@@ -318,7 +318,7 @@ bar {
 	status_command i3blocks
 	position top
 	tray_output eDP-1
-	font pango:Hack Nerd Font 9.5
+	font pango:Hack Nerd Font 10
 	# workspace_min_width 20
 }
 
