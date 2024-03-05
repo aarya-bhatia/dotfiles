@@ -23,6 +23,7 @@ packages=(
 	extra/perl-file-mimeinfo
 	fd
 	ffmpeg
+	font-manager
 	fzf
 	gdb
 	git
@@ -42,6 +43,7 @@ packages=(
 	neovim
 	noto-fonts
 	numlockx
+	optipng
 	pamixer
 	pass
 	pavucontrol

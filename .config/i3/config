@@ -306,13 +306,22 @@ hide_edge_borders smart_no_gaps
 
 # status bar {{{
 bar {
-	status_command i3status
-# status 2>/tmp/i3blocks.err i3blocks -vv
+    colors {
+        #color class       border  back.   text
+        focused_workspace  #007030 #007030 #ffffff
+        active_workspace   #555555 #555555 #ffffff
+        inactive_workspace #000000 #000000 #888888
+        urgent_workspace   #2f343a #900000 #ffffff
+    }
+
+	# status_command i3status
+	status_command i3blocks
 	position top
 	tray_output eDP-1
-	font pango:Hack Nerd Font 9
+	font pango:Hack Nerd Font 9.5
 	# workspace_min_width 20
 }
+
 # }}}
 
 # Resize window mode {{{
@@ -407,17 +416,18 @@ mode "$mode_terminal" {
 
 # launch app mode {{{
 
-set $mode_application Open: [f]irefox [c]hrome [t]hunderbird [d]iscord [p]avucontrol [b]luetooth [a]randr [v]scode [V]irt-manager
+set $mode_application Open: [f]irefox [c]hrome [t]hunderbird [d]iscord [p]avucontrol [b]luetooth [a]randr [v]scode [l]xappearance [V]irt-manager
 mode "$mode_application" {
-  bindsym f exec firefox, mode "default"
-  bindsym c exec chromium, mode "default"
-  bindsym t exec thunderbird, mode "default"
-  bindsym d exec discord, mode "default"
-  bindsym p exec pavucontrol, mode "default"
   bindsym a exec arandr, mode "default"
-  bindsym v exec code, mode "default"
-  bindsym Shift+v exec virt-manager, mode "default"
   bindsym b exec blueman-manager, mode "default"
+  bindsym c exec chromium, mode "default"
+  bindsym d exec discord, mode "default"
+  bindsym f exec firefox, mode "default"
+  bindsym l exec lxappearance, mode "default"
+  bindsym p exec pavucontrol, mode "default"
+  bindsym Shift+v exec virt-manager, mode "default"
+  bindsym t exec thunderbird, mode "default"
+  bindsym v exec code, mode "default"
 
   bindsym Return mode "default"
   bindsym Escape mode "default"
@@ -440,3 +450,13 @@ mode "$mode_power" {
 }
 
 # }}}
+
+# colorscheme {{{
+#colors:                border  backgr. text    indicator
+client.focused          #007030 #007030 #ffffff #2b2b2b
+client.focused_inactive #888888 #2b2b2b #ffffff #2b2b2b
+client.unfocused        #888888 #2b2b2b #ffffff #2b2b2b
+client.urgent           #900000 #900000 #ffffff #2b2b2b
+
+# }}}
+

@@ -115,7 +115,7 @@ set undodir=~/undodir
 set undofile
 set wildmenu
 
-set foldlevel=1
+set foldlevel=0
 set foldmarker={{{,}}}
 set foldmethod=marker
 
@@ -142,8 +142,8 @@ au BufWritePost * :%s/\s\+$//e | nohlsearch
 au BufRead,BufNewFile *.h setlocal filetype=c
 au BufNewFile,BufRead *.ejs setlocal filetype=html
 
-au FileType c,cpp,h setlocal ts=2 sts=2 sw=2 et
-au FileType c,cpp 	setlocal foldmarker={,}
+" au FileType c,cpp,h setlocal ts=2 sts=2 sw=2 et
+au FileType c,cpp 	setlocal foldmarker={,} foldlevel=1
 
 au FileType markdown,text setlocal spell spelllang=en_us
 au FileType markdown,text setlocal wrap
@@ -162,6 +162,8 @@ iabbrev --- ----------------------
 " keymaps {{{
 
 nnoremap <silent> <leader> <Nop>
+
+tnoremap <Esc> <C-\><C-n>
 
 map [f <Nop>
 map ]f <Nop>

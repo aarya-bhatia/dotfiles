@@ -1,63 +1,49 @@
 [mediaplayer]
 command=~/scripts/mediaplayer.sh
 interval=5
-color=#c9c9c9
 
 [kernel]
-command=uname -a | cut -d" " -f3
+command=printf " %s\n" $(uname -a | cut -d" " -f3)
 interval=once
-color=#A4C2F4
+label=
 
 [weather]
 command=~/scripts/weather.py -f
 interval=360
-color=#91E78B
 
 [disk]
 command=~/scripts/disk.py
 interval=360
-color=#A4C2F4
 
-[cpu]
-command=~/scripts/cpu.py
-interval=persist
-color=#91E78B
-
-[memory]
-command=~/scripts/memory.py
-interval=persist
-color=#A4C2F4
+# [cpu]
+# command=~/scripts/cpu.py
+# interval=persist
+#
+# [memory]
+# command=~/scripts/memory.py
+# interval=persist
 
 [volume]
 command=printf "♪ %s\n" $(~/scripts/volume.sh get_volume)
 interval=once
 signal=10
-color=#91E78B
 
-[brightness]
-command=printf " %s\n" $(~/scripts/volume.sh get_brightness)
-interval=once
-signal=10
-color=#A4C2F4
+# [brightness]
+# command=printf " %s\n" $(~/scripts/volume.sh get_brightness)
+# interval=once
+# signal=10
 
 [battery]
 command=~/scripts/battery.sh
 interval=5
-color=#91E78B
+
+[ip]
+command=printf " %s\n" $(hostname -i | cut -d" " -f1)
+interval=360
+label=
 
 [time]
-command=date +"%A %Y-%m-%d %I:%M %p"
-interval=5
-color=#fff87c
-
-# [public_ip]
-# command=echo $(curl api.ipify.org)
-# interval=once
-# color=#91E78B
-
-# [ip]
-# command=hostname -i | cut -d" " -f1
-# interval=360
-# color=#A4C2F4
+command=date +'%A, %d %B %Y %I:%M %p '
+interval=10
 
 # vim: ft=ini
