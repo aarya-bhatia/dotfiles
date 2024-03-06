@@ -78,8 +78,8 @@ au FileType asm setlocal commentstring=#\ %s
 
 " editor settings {{{
 
-" colorscheme gruvbox
-colorscheme melange
+colorscheme gruvbox
+" colorscheme melange
 " colorscheme koehler
 
 set background=dark
