@@ -43,6 +43,7 @@ packages=(
 	neovim
 	noto-fonts
 	numlockx
+	openconnect
 	optipng
 	pamixer
 	pass

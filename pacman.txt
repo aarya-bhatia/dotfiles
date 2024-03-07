@@ -40,6 +40,7 @@ bluez-libs
 bluez-tools
 boost-libs
 botan2
+brave-bin
 breeze
 breeze-gtk
 breeze-icons
@@ -550,9 +551,11 @@ nspr
 nss
 numactl
 numlockx
+oath-toolkit
 ocl-icd
 oniguruma
 openal
+openconnect
 opencore-amr
 openexr
 openjpeg2
@@ -679,6 +682,7 @@ sqlite
 sratom
 srt
 startup-notification
+stoken
 sudo
 svt-av1
 sxhkd
@@ -729,6 +733,7 @@ visual-studio-code-bin
 vlc
 vmaf
 volume_key
+vpnc
 vulkan-headers
 vulkan-icd-loader
 vulkan-intel
@@ -767,6 +772,7 @@ xfce4-notifyd
 xfce4-power-manager
 xfconf
 xkeyboard-config
+xmlsec
 xorg-fonts-encodings
 xorg-server
 xorg-server-common
