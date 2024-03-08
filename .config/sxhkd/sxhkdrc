@@ -1,12 +1,64 @@
-# General syntax:
-#
-#    HOTKEY
-# 	   [;]COMMAND
-#
-#    HOTKEY      := CHORD_1 ; CHORD_2 ; ... ; CHORD_n
-#    CHORD_i     := [MODIFIERS_i +] [~][@]KEYSYM_i
-#    MODIFIERS_i := MODIFIER_i1 + MODIFIER_i2 + ... + MODIFIER_ik
-#
-# The valid modifier names are: super, hyper, meta, alt, control, ctrl, shift, mode_switch, lock,
-# mod1, mod2, mod3, mod4, mod5 and any.
+XF86AudioRaiseVolume 	
+	$HOME/scripts/volume.sh up
 
+XF86AudioLowerVolume 	
+	$HOME/scripts/volume.sh down
+
+XF86AudioMute 			
+	$HOME/scripts/volume.sh mute
+
+XF86MonBrightnessUp 	
+	$HOME/scripts/volume.sh brightness_up
+
+XF86MonBrightnessDown 	
+	$HOME/scripts/volume.sh brightness_down
+
+XF86AudioPause			
+	$HOME/scripts/volume.sh play_pause
+
+XF86AudioPlay 			
+	$HOME/scripts/volume.sh play_pause
+
+XF86AudioNext 			
+	$HOME/scripts/volume.sh next_track
+	
+XF86AudioPrev 			
+	$HOME/scripts/volume.sh prev_track
+
+# terminal emulator
+alt + Return
+	alacritty
+
+# program launcher
+alt + @d
+	dmenu_run
+
+# make sxhkd reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd && notify-send "reloaded sxhkd"
+
+alt + z
+	notify-send "hello world"
+
+# quit/restart bspwm
+alt + shift + {x,r}
+	bspc {quit,wm -r}
+
+# close and kill
+alt + {_,shift + }q
+	bspc node -{c,k}
+
+# switch to desktop
+alt + {0-9}
+	bspc desktop -f {0-9}
+
+# alternate between the tiled and monocle layout
+alt + m
+	bspc desktop -l next
+
+alt + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# focus the next/previous desktop in the current monitor
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local

@@ -160,7 +160,7 @@ exec_always --no-startup-id 	~/scripts/keymaps.sh
 exec --no-startup-id 			dunst &
 
 # start clipmenu deamon
-exec --no-startup-id 			clipmenud &
+# exec --no-startup-id 			clipmenud &
 
 # mirror display with HDMI-1 monitor if connected
 exec_always --no-startup-id 	~/scripts/screenmirror.sh
@@ -171,6 +171,9 @@ exec --no-startup-id 			xfce4-power-manager &
 
 # Session manager
 exec --no-startup-id 			lxsession &
+
+# virtual machine networks
+# exec --no-startup-id			virsh net-start default
 
 # }}}
 
@@ -318,7 +321,7 @@ bar {
 	status_command i3blocks
 	position top
 	tray_output eDP-1
-	font pango:Hack Nerd Font 10
+	font pango:Hack Nerd Font 9.5
 	# workspace_min_width 20
 }
 
