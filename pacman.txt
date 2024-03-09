@@ -47,7 +47,6 @@ brave-bin
 breeze
 breeze-gtk
 breeze-icons
-breeze5
 bridge-utils
 brightnessctl
 brotli
@@ -696,6 +695,7 @@ spirv-tools
 sqlite
 sratom
 srt
+stalonetray
 startup-notification
 stoken
 sudo

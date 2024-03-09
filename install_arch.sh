@@ -89,6 +89,7 @@ extra=(
 	rmlint
 	sddm
   	silversearcher-ag
+	stalonetray
 	sxhkd
 	texlive
 	ttf-hack-nerd

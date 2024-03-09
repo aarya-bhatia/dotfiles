@@ -13,7 +13,6 @@ set $secondary HDMI-1
 
 floating_modifier $mod
 font pango:monospace 9
-# font pango:Terminus 9.5
 focus_wrapping no
 ipc-socket ~/.i3/i3-ipc.sock
 popup_during_fullscreen smart
@@ -280,8 +279,8 @@ for_window [class="^Surf"] border normal 3
 # gaps {{{
 
 # Set inner/outer gaps
-set $gaps_inner 6
-set $gaps_outer 4
+set $gaps_inner 0
+set $gaps_outer 0
 
 gaps inner $gaps_inner
 gaps outer $gaps_outer
@@ -316,11 +315,14 @@ bar {
     }
 
 	# status_command i3status
-	status_command 2>/tmp/i3blocks.err i3blocks -vvv | tee /tmp/i3blocks.out
-	position top
+	# status_command 2>/tmp/i3blocks.err i3blocks -vvv | tee /tmp/i3blocks.out
+	# position top
+	# tray_output None
 	tray_output eDP-1
-	font pango:Hack Nerd Font 9
+	# font pango:Hack Nerd Font 9.5
 }
+
+exec_always --no-startup-id 	killall lemonbar; sleep 1; /home/aarya/.config/lemonbar/launchlemon.sh 2>/tmp/lemonbar.err
 
 # }}}
 
@@ -439,7 +441,7 @@ mode "$mode_application" {
 
 set $mode_power [l]ock [s]uspend [r]eboot [p]oweroff [e]xit
 mode "$mode_power" {
-  bindsym l exec $locker, mode "default"
+  bindsym l exec betterlockscreen -l --off 10, mode "default
   # bindsym l exec i3lock && sleep 1 && xset dpms force off, mode "default"
   bindsym s exec systemctl suspend, mode "default"
   bindsym r exec reboot, mode "default"
