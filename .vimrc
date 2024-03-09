@@ -568,5 +568,5 @@ nnoremap <leader>- :LF<CR>
 " }}}
 
 " transparent background
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 

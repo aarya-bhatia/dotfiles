@@ -146,6 +146,6 @@ lfcd () {
     cd "$(command lf -print-last-dir "$@")"
 }
 
-# eval $(keychain --eval --quiet id_rsa ~/.ssh/aaryab2)
+eval $(keychain --eval --quiet id_rsa ~/.ssh/aaryab2)
 
 # neofetch

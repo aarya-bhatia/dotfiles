@@ -6,7 +6,8 @@
 # mod1 = Alt, mod4 = windows key
 
 set $mod Mod1
-set $mod4 Mod4
+set $super Mod4
+
 set $primary eDP-1
 set $secondary HDMI-1
 
@@ -20,119 +21,119 @@ workspace_auto_back_and_forth yes
 
 # Key bindings {{{
 
-bindsym $mod+Shift+c 			reload
-bindsym $mod+Shift+r 			restart
-bindsym $mod+Shift+q 			kill
-bindsym $mod+Tab 				workspace next
-bindsym $mod+Shift+Tab 			workspace prev
+bindsym $super+Shift+c 				reload
+bindsym $super+Shift+r 				restart
+bindsym $super+Shift+q 				kill
+bindsym $super+Tab 					workspace next
+bindsym $super+Shift+Tab 			workspace prev
 
-bindsym $mod+Shift+e 			exec --no-startup-id alacritty -e nvim ~/.config/i3/config
-# bindsym $mod+Shift+e 			exec --no-startup-id "i3-nagbar -t warning -m 'Do you really want to exit i3?' -B 'Yes, exit i3' 'i3-msg exit'"
-# bindsym $mod+Shift+x 			exec --no-startup-id systemctl suspend
+bindsym $super+Shift+e 				exec --no-startup-id alacritty -e nvim ~/.config/i3/config
+bindsym $super+Control+c 			exec --no-startup-id ~/scripts/dmenu/dmenu_edit_config.sh
+# bindsym $super+Shift+x 			exec --no-startup-id systemctl suspend
 
-bindsym XF86AudioRaiseVolume 	exec 	$HOME/scripts/volume.sh up
-bindsym XF86AudioLowerVolume 	exec 	$HOME/scripts/volume.sh down
-bindsym XF86AudioMute 			exec 	$HOME/scripts/volume.sh mute
-bindsym XF86MonBrightnessUp 	exec 	$HOME/scripts/volume.sh brightness_up
-bindsym XF86MonBrightnessDown 	exec 	$HOME/scripts/volume.sh brightness_down
-bindsym XF86AudioPause			exec 	$HOME/scripts/volume.sh play_pause
-bindsym XF86AudioPlay 			exec 	$HOME/scripts/volume.sh play_pause
-bindsym XF86AudioNext 			exec 	$HOME/scripts/volume.sh next_track
-bindsym XF86AudioPrev 			exec 	$HOME/scripts/volume.sh prev_track
+bindsym XF86AudioRaiseVolume 		exec 	$HOME/scripts/volume.sh up
+bindsym XF86AudioLowerVolume 		exec 	$HOME/scripts/volume.sh down
+bindsym XF86AudioMute 				exec 	$HOME/scripts/volume.sh mute
+bindsym XF86MonBrightnessUp 		exec 	$HOME/scripts/volume.sh brightness_up
+bindsym XF86MonBrightnessDown 		exec 	$HOME/scripts/volume.sh brightness_down
+bindsym XF86AudioPause				exec 	$HOME/scripts/volume.sh play_pause
+bindsym XF86AudioPlay 				exec 	$HOME/scripts/volume.sh play_pause
+bindsym XF86AudioNext 				exec 	$HOME/scripts/volume.sh next_track
+bindsym XF86AudioPrev 				exec 	$HOME/scripts/volume.sh prev_track
 
-bindsym $mod+XF86AudioPause		exec 	mpc toggle
-bindsym $mod+XF86AudioPlay 		exec 	mpc toggle
-bindsym $mod+XF86AudioNext 		exec 	mpc next
-bindsym $mod+XF86AudioPrev 		exec 	mpc prev
+bindsym $super+XF86AudioPause		exec 	mpc toggle
+bindsym $super+XF86AudioPlay 		exec 	mpc toggle
+bindsym $super+XF86AudioNext 		exec 	mpc next
+bindsym $super+XF86AudioPrev 		exec 	mpc prev
 
-bindsym $mod+XF87AudioPlayPause exec 	mpc toggle
+bindsym $super+XF87AudioPlayPause 	exec 	mpc toggle
 
 # Launch music player
-bindsym XF86Tools 				exec alacritty --class=floating -e ncmpcpp
+bindsym XF86Tools 					exec alacritty --class=floating -e ncmpcpp
 
-bindsym $mod+Control+p 		 	exec alacritty --class=floating -e tmux new-session -A -s python3 "~/pyvenv/bin/python3"
-bindsym $mod+Control+q 			exec alacritty --class=floating -e tmux new-session -A -s qalc "qalc"
-bindcode 148 					exec --no-startup-id alacritty --class="qalc" -e qalc
+bindsym $super+Control+p 		 	exec alacritty --class=floating -e tmux new-session -A -s python3 "~/pyvenv/bin/python3"
+bindsym $super+Control+q 			exec alacritty --class=floating -e tmux new-session -A -s qalc "qalc"
+bindcode 148 						exec --no-startup-id alacritty --class="qalc" -e qalc
 
 # Screenshots with Print key
 
 # capture entire window
-bindsym Print 					exec ~/scripts/screenshot.sh || notify-send "aarya" "screenshot failed"
+bindsym Print 						exec ~/scripts/screenshot.sh || notify-send "aarya" "screenshot failed"
 
 # capture selection
-bindcode $mod+107 				exec ~/scripts/screenshot.sh -s || notify-send "aarya" "screenshot failed"
+bindcode $super+107 				exec ~/scripts/screenshot.sh -s || notify-send "aarya" "screenshot failed"
 
 # capture focused window
-bindcode $mod+Shift+107 		exec ~/scripts/screenshot.sh -u || notify-send "aarya" "screenshot failed"
+bindcode $super+Shift+107 			exec ~/scripts/screenshot.sh -u || notify-send "aarya" "screenshot failed"
 
 # dmenu scripts
-bindsym $mod+Shift+p 			exec ~/scripts/dmenu/dmenupass.sh
-bindsym $mod+d 					exec dmenu_run
-bindsym $mod+slash 				exec --no-startup-id ~/scripts/dmenu/dmenu_browser.sh
-bindsym $mod+c 					exec --no-startup-id clipmenu
-bindsym $mod+i 					exec --no-startup-id ~/scripts/dmenu/dmenu_open_images.sh
+bindsym $super+Shift+p 				exec ~/scripts/dmenu/dmenupass.sh
+bindsym $super+d 					exec dmenu_run
+bindsym $super+slash 				exec --no-startup-id ~/scripts/dmenu/dmenu_browser.sh
+bindsym $super+c 					exec --no-startup-id clipmenu
+bindsym $super+i 					exec --no-startup-id ~/scripts/dmenu/dmenu_open_images.sh
 
-bindsym $mod+t 					exec thunar
-bindsym $mod+Shift+v 			exec ~/scripts/launch_vim.sh
-bindsym $mod+Shift+w 			exec sxiv ~/wallpapers
+bindsym $super+t 					exec thunar
+bindsym $super+Shift+v 				exec ~/scripts/launch_vim.sh
+bindsym $super+Shift+w 				exec sxiv ~/wallpapers
 
 # Terminal
-bindsym $mod+Return 			exec --no-startup-id alacritty --class=Alacritty
-bindsym $mod+Shift+Return 		exec --no-startup-id alacritty --class=floating
+bindsym $super+Return 				exec --no-startup-id alacritty --class=Alacritty
+bindsym $super+Shift+Return 		exec --no-startup-id alacritty --class=floating
 
-# bind modes
-bindsym $mod+r 					mode "$mode_resize"
-bindsym $mod+Shift+m 			mode "$mode_filemarks"
-bindsym $mod+Shift+t 			mode "$mode_terminal"
-bindsym $mod+o 					mode "$mode_application"
-bindsym $mod+Escape				mode "$mode_power"
+# bind superes
+bindsym $super+r 					mode "$mode_resize"
+bindsym $super+Shift+m 				mode "$mode_filemarks"
+bindsym $super+Shift+t 				mode "$mode_terminal"
+bindsym $super+o 					mode "$mode_application"
+bindsym $super+Escape				mode "$mode_power"
 
 # use window title *and* a thick border
-bindsym $mod+y 					border normal 3
+bindsym $super+y 					border normal 3
 
 # use neither window title nor border
-bindsym $mod+u 					border none
+bindsym $super+u 					border none
 
 # change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
+bindsym $super+h focus left
+bindsym $super+j focus down
+bindsym $super+k focus up
+bindsym $super+l focus right
 
 # move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
+bindsym $super+Shift+h move left
+bindsym $super+Shift+j move down
+bindsym $super+Shift+k move up
+bindsym $super+Shift+l move right
 
 # split in horizontal orientation
-bindsym $mod+z split h
+bindsym $super+z split h
 
 # split in vertical orientation
-bindsym $mod+v split v
+bindsym $super+v split v
 
-# enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
+# enter fullscreen supere for the focused container
+bindsym $super+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
-bindsym $mod+e layout toggle split
+bindsym $super+s layout stacking
+bindsym $super+w layout tabbed
+bindsym $super+e layout toggle split
 
 # toggle tiling / floating
-bindsym $mod+Shift+space floating toggle
+bindsym $super+Shift+space floating toggle
 
 # change focus between tiling / floating windows
-bindsym $mod+space focus mode_toggle
+bindsym $super+space focus mode_toggle
 
 # focus the parent container
-bindsym $mod+a focus parent
+bindsym $super+a focus parent
 
 # focus the child container
-bindsym $mod+semicolon focus child
+bindsym $super+semicolon focus child
 
-bindsym $mod+Shift+minus move scratchpad
-bindsym $mod+minus scratchpad show
+bindsym $super+Shift+minus move scratchpad
+bindsym $super+minus scratchpad show
 
 # }}}
 
@@ -166,14 +167,11 @@ exec --no-startup-id 			dunst &
 exec_always --no-startup-id 	~/scripts/screenmirror.sh
 
 # lock screen on suspend
-exec --no-startup-id 			xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050
+exec_always --no-startup-id 	xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050
 exec --no-startup-id 			xfce4-power-manager &
 
 # Session manager
 exec --no-startup-id 			lxsession &
-
-# virtual machine networks
-# exec --no-startup-id			virsh net-start default
 
 # }}}
 
@@ -222,49 +220,49 @@ workspace 18 output $secondary
 workspace 19 output $secondary
 workspace 20 output $secondary
 
-bindsym $mod+1 workspace $WS1
-bindsym $mod+2 workspace $WS2
-bindsym $mod+3 workspace $WS3
-bindsym $mod+4 workspace $WS4
-bindsym $mod+5 workspace $WS5
-bindsym $mod+6 workspace $WS6
-bindsym $mod+7 workspace $WS7
-bindsym $mod+8 workspace $WS8
-bindsym $mod+9 workspace $WS9
-bindsym $mod+0 workspace $WS10
+bindsym $super+1 workspace $WS1
+bindsym $super+2 workspace $WS2
+bindsym $super+3 workspace $WS3
+bindsym $super+4 workspace $WS4
+bindsym $super+5 workspace $WS5
+bindsym $super+6 workspace $WS6
+bindsym $super+7 workspace $WS7
+bindsym $super+8 workspace $WS8
+bindsym $super+9 workspace $WS9
+bindsym $super+0 workspace $WS10
 
-bindsym $mod4+1 workspace $WS11
-bindsym $mod4+2 workspace $WS12
-bindsym $mod4+3 workspace $WS13
-bindsym $mod4+4 workspace $WS14
-bindsym $mod4+5 workspace $WS15
-bindsym $mod4+6 workspace $WS16
-bindsym $mod4+7 workspace $WS17
-bindsym $mod4+8 workspace $WS18
-bindsym $mod4+9 workspace $WS19
-bindsym $mod4+0 workspace $WS20
+bindsym $mod+1 workspace $WS11
+bindsym $mod+2 workspace $WS12
+bindsym $mod+3 workspace $WS13
+bindsym $mod+4 workspace $WS14
+bindsym $mod+5 workspace $WS15
+bindsym $mod+6 workspace $WS16
+bindsym $mod+7 workspace $WS17
+bindsym $mod+8 workspace $WS18
+bindsym $mod+9 workspace $WS19
+bindsym $mod+0 workspace $WS20
 
-bindsym $mod+Shift+1 move container to workspace $WS1
-bindsym $mod+Shift+2 move container to workspace $WS2
-bindsym $mod+Shift+3 move container to workspace $WS3
-bindsym $mod+Shift+4 move container to workspace $WS4
-bindsym $mod+Shift+5 move container to workspace $WS5
-bindsym $mod+Shift+6 move container to workspace $WS6
-bindsym $mod+Shift+7 move container to workspace $WS7
-bindsym $mod+Shift+8 move container to workspace $WS8
-bindsym $mod+Shift+9 move container to workspace $WS9
-bindsym $mod+Shift+0 move container to workspace $WS10
+bindsym $super+Shift+1 move container to workspace $WS1
+bindsym $super+Shift+2 move container to workspace $WS2
+bindsym $super+Shift+3 move container to workspace $WS3
+bindsym $super+Shift+4 move container to workspace $WS4
+bindsym $super+Shift+5 move container to workspace $WS5
+bindsym $super+Shift+6 move container to workspace $WS6
+bindsym $super+Shift+7 move container to workspace $WS7
+bindsym $super+Shift+8 move container to workspace $WS8
+bindsym $super+Shift+9 move container to workspace $WS9
+bindsym $super+Shift+0 move container to workspace $WS10
 
-bindsym $mod4+Shift+1 move container to workspace $WS11
-bindsym $mod4+Shift+2 move container to workspace $WS12
-bindsym $mod4+Shift+3 move container to workspace $WS13
-bindsym $mod4+Shift+4 move container to workspace $WS14
-bindsym $mod4+Shift+5 move container to workspace $WS15
-bindsym $mod4+Shift+6 move container to workspace $WS16
-bindsym $mod4+Shift+7 move container to workspace $WS17
-bindsym $mod4+Shift+8 move container to workspace $WS18
-bindsym $mod4+Shift+9 move container to workspace $WS19
-bindsym $mod4+Shift+0 move container to workspace $WS20
+bindsym $mod+Shift+1 move container to workspace $WS11
+bindsym $mod+Shift+2 move container to workspace $WS12
+bindsym $mod+Shift+3 move container to workspace $WS13
+bindsym $mod+Shift+4 move container to workspace $WS14
+bindsym $mod+Shift+5 move container to workspace $WS15
+bindsym $mod+Shift+6 move container to workspace $WS16
+bindsym $mod+Shift+7 move container to workspace $WS17
+bindsym $mod+Shift+8 move container to workspace $WS18
+bindsym $mod+Shift+9 move container to workspace $WS19
+bindsym $mod+Shift+0 move container to workspace $WS20
 
 # }}}
 
@@ -282,8 +280,8 @@ for_window [class="^Surf"] border normal 3
 # gaps {{{
 
 # Set inner/outer gaps
-set $gaps_inner 0
-set $gaps_outer 0
+set $gaps_inner 6
+set $gaps_outer 4
 
 gaps inner $gaps_inner
 gaps outer $gaps_outer
@@ -318,11 +316,10 @@ bar {
     }
 
 	# status_command i3status
-	status_command i3blocks
+	status_command 2>/tmp/i3blocks.err i3blocks -vvv | tee /tmp/i3blocks.out
 	position top
 	tray_output eDP-1
-	font pango:Hack Nerd Font 9.5
-	# workspace_min_width 20
+	font pango:Hack Nerd Font 9
 }
 
 # }}}
@@ -362,7 +359,7 @@ mode "$mode_filemarks" {
 set $mode_gaps Gaps: (o) outer, (i) inner
 set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global), g (edit gaps)
 set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global), g (edit gaps)
-bindsym $mod+Shift+g mode "$mode_gaps"
+bindsym $super+Shift+g mode "$mode_gaps"
 
 mode "$mode_gaps" {
         bindsym o      mode "$mode_gaps_outer"
@@ -442,7 +439,8 @@ mode "$mode_application" {
 
 set $mode_power [l]ock [s]uspend [r]eboot [p]oweroff [e]xit
 mode "$mode_power" {
-  bindsym l exec i3lock -e -u && sleep 1 && xset dpms force off, mode "default"
+  bindsym l exec $locker, mode "default"
+  # bindsym l exec i3lock && sleep 1 && xset dpms force off, mode "default"
   bindsym s exec systemctl suspend, mode "default"
   bindsym r exec reboot, mode "default"
   bindsym p exec poweroff, mode "default"

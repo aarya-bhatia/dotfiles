@@ -9,11 +9,11 @@ label=
 
 [weather]
 command=~/scripts/weather.py -f
-interval=360
+interval=300
 
 [disk]
 command=~/scripts/disk.py
-interval=360
+interval=60
 
 # [cpu]
 # command=~/scripts/cpu.py
@@ -39,7 +39,7 @@ interval=5
 
 [ip]
 command=printf " %s\n" $(hostname -i | cut -d" " -f1)
-interval=360
+interval=60
 label=
 
 [time]

@@ -53,6 +53,7 @@ packages=(
 	playerctl
 	python-pip
 	python-virtualenv
+	qt5ct
 	rclone
 	redshift
 	rsync
@@ -78,10 +79,15 @@ packages=(
 
 extra=(
 	archlinux-wallpaper
+	breeze
+	bspwm
+	lemonbar
 	nodejs
 	noto-fonts-emoji
 	npm
+	polybar
 	rmlint
+	sddm
   	silversearcher-ag
 	sxhkd
 	texlive

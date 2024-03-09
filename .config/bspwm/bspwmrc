@@ -19,7 +19,7 @@ numlock on
 ~/scripts/keymaps.sh
 ~/scripts/screenmirror.sh
 
-bspc monitor eDP-1 -d 1 2 3 4 5 6 7 8 9
+bspc monitor $primary -d 1 2 3 4 5 6 7 8 9 10
 
 bspc config border_width         2
 bspc config window_gap          12
