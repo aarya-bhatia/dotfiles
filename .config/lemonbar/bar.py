@@ -1,5 +1,4 @@
 from module import Module
-import sys
 
 MAX_LENGTH = 120
 

@@ -62,13 +62,16 @@ class Module(Thread):
                                            stderr=subprocess.PIPE,
                                            text=True)
 
-                if self.method == UPDATE_WITH_INTERVAL:
+                if self.method == UPDATE_WITH_INTERVAL or self.method == UPDATE_WITH_SIGNAL:
                     stdout, stderr = process.communicate()
                     value = str(stdout).strip()
                     sys.stderr.write(stderr)
 
                     with self.mutex:
                         self.value = value
+
+                    if self.method != UPDATE_WITH_INTERVAL or self.interval <= 0:
+                        return
 
                     time.sleep(self.interval)
 
