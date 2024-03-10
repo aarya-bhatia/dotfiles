@@ -473,6 +473,7 @@ libxcrypt
 libxcursor
 libxcvt
 libxdamage
+libxdg-basedir
 libxdmcp
 libxext
 libxfce4ui
@@ -671,6 +672,7 @@ rav1e
 rclone
 readline
 redshift
+rofi
 rsync
 rubberband
 runc

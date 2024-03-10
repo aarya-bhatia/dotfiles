@@ -1,4 +1,6 @@
 from module import Module
+import sys
+debug = False
 
 
 class Bar:
@@ -36,7 +38,8 @@ class Bar:
         if new_value == self.prev_value:
             return
 
-        new_value = new_value + " "  # padding
+        new_value += " "  # padding
         print(new_value, flush=True)
-        # sys.stderr.write(new_value + "\n")
-        self. prev_value = new_value
+        if debug:
+            sys.stderr.write(new_value + "\n")
+        self.prev_value = new_value

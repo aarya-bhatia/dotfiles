@@ -30,6 +30,7 @@ def main():
     volume = "/home/aarya/scripts/lemonbar/volume.sh"
     brightness = "/home/aarya/scripts/lemonbar/brightness.sh"
     bluetooth = "/home/aarya/scripts/lemonbar/bluetooth.sh"
+    dunst = "/home/aarya/scripts/lemonbar/dunst.sh"
 
     # active_window = "/home/aarya/scripts/lemonbar/active_window.sh"
     # bar.add_left(Module(bar, active_window, 0, 0.5, bg_color=colors.BACKGROUND_COLOR))  # noqa
@@ -42,7 +43,7 @@ def main():
 
     bar.add_right(Module(bar, disk, 0, 120, underline=colors.UNDERLINE_COLOR,
                          bg_color=colors.BACKGROUND_COLOR,
-                         handler_name="disk"))
+                         handler_name=None))
 
     bar.add_right(Module(bar, battery, 0, 1, underline=colors.UNDERLINE_COLOR,
                          bg_color=colors.BACKGROUND_COLOR,
@@ -61,12 +62,17 @@ def main():
     bar.add_right(Module(bar, brightness, UPDATE_WITH_SIGNAL, INTERVAL_NONE,
                          underline=colors.UNDERLINE_COLOR,
                          bg_color=colors.BACKGROUND_COLOR,
-                         handler_name="brightness"))
+                         handler_name=None))
 
-    # bar.add_right(Module(bar, bluetooth, UPDATE_WITH_SIGNAL, INTERVAL_NONE,
-    #                      underline=colors.UNDERLINE_COLOR,
-    #                      bg_color=colors.BACKGROUND_COLOR,
-    #                      handler_name="bluetooth"))
+    bar.add_right(Module(bar, bluetooth, UPDATE_WITH_SIGNAL, INTERVAL_NONE,
+                         underline=None, escape=False,
+                         bg_color=colors.BACKGROUND_COLOR,
+                         handler_name="bluetooth"))
+
+    bar.add_right(Module(bar, dunst, UPDATE_WITH_SIGNAL, INTERVAL_NONE,
+                         underline=colors.UNDERLINE_COLOR,
+                         bg_color=colors.BACKGROUND_COLOR,
+                         handler_name="dunst"))
 
     bar.add_right(Module(bar, wifi, 0, 300, underline=colors.UNDERLINE_COLOR,
                          bg_color=colors.BACKGROUND_COLOR,

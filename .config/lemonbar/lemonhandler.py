@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
 import sys
+import os
 import i3ipc
 import subprocess
 
@@ -45,6 +46,13 @@ while True:
 
     elif line == "wifi":
         launch_terminal("nmtui")
+
+    elif line == "dunst":
+        os.system(
+            "dunstctl set-paused toggle && kill -10 $(pgrep -f lemonconfig.py)")
+
+    elif line == "bluetooth":
+        os.system("bluetooth toggle && kill -10 $(pgrep -f lemonconfig.py)")
 
     elif line == "date":
         launch_terminal("cal")
