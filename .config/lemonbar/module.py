@@ -6,6 +6,11 @@ import time
 UPDATE_WITH_INTERVAL = 0
 UPDATE_WITH_SIGNAL = 1
 UPDATE_PERSIST = 2
+INTERVAL_NONE = -1
+
+
+def add_button_handler(string, name):
+    return f"%{{A:{name}:}}{string}%{{A}}"
 
 
 def add_fg_color(string, color):
@@ -24,7 +29,8 @@ class Module(Thread):
     def __init__(self, bar, command: str = "", method: int = 0,
                  interval: int = 1, fg_color: str | None = None,
                  bg_color: str | None = None, underline: str | None = None,
-                 escape: bool = True):
+                 escape: bool = True, maxlen: int = 120,
+                 handler_name: str | None = None):
 
         Thread.__init__(self)
         self.daemon = True
@@ -38,10 +44,15 @@ class Module(Thread):
         self.u_color = underline
         self.escape = escape
         self.bar = bar
+        self.maxlen = maxlen
+        self.handler_name = handler_name
 
     def format_value(self, value):
         if self.escape:
             value = value.replace("%", "%%")
+
+        if self.maxlen > 0:
+            value = value[:self.maxlen]
 
         if self.fg_color:
             value = add_fg_color(value, self.fg_color)
@@ -51,6 +62,9 @@ class Module(Thread):
 
         if self.u_color:
             value = add_underline(value, self.u_color)
+
+        if self.handler_name:
+            value = add_button_handler(value, self.handler_name)
 
         return value
 
@@ -77,7 +91,6 @@ class Module(Thread):
 
                         self.bar.update()
 
-                # if self.method == UPDATE_WITH_INTERVAL or self.method == UPDATE_WITH_SIGNAL:
                 stdout, stderr = process.communicate()
                 value = str(stdout).strip()
                 sys.stderr.write(stderr)

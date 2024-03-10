@@ -20,9 +20,9 @@ workspace_auto_back_and_forth yes
 
 # Key bindings {{{
 
-bindsym $super+Shift+c 				reload
+bindsym $super+Shift+c 				exec "'i3-msg reload'; notify-send 'reloaded i3 config'"
 bindsym $super+Shift+r 				restart
-bindsym $super+Shift+q 				kill
+bindsym $super+q 					kill
 bindsym $super+Tab 					workspace next
 bindsym $super+Shift+Tab 			workspace prev
 
@@ -272,6 +272,7 @@ for_window [class="^.*"] border pixel 2
 for_window [class="^floating"] floating enable
 for_window [class="Thunar"] floating enable resize set 960 750
 for_window [class="^qalc"] floating enable resize set 520 400
+for_window [class="^info"] floating enable resize set 520 400
 for_window [class="^Surf"] border normal 3
 
 # }}}
@@ -305,22 +306,23 @@ hide_edge_borders smart_no_gaps
 # }}}
 
 # status bar {{{
-bar {
-    colors {
-        #color class       border  back.   text
-        focused_workspace  #007030 #007030 #ffffff
-        active_workspace   #555555 #555555 #ffffff
-        inactive_workspace #000000 #000000 #888888
-        urgent_workspace   #2f343a #900000 #ffffff
-    }
 
-	# status_command i3status
-	# status_command 2>/tmp/i3blocks.err i3blocks -vvv | tee /tmp/i3blocks.out
-	# position top
-	# tray_output None
-	tray_output eDP-1
-	# font pango:Hack Nerd Font 9.5
-}
+# bar {
+#     colors {
+#         #color class       border  back.   text
+#         focused_workspace  #007030 #007030 #ffffff
+#         active_workspace   #555555 #555555 #ffffff
+#         inactive_workspace #000000 #000000 #888888
+#         urgent_workspace   #2f343a #900000 #ffffff
+#     }
+#
+# 	# status_command i3status
+# 	# status_command 2>/tmp/i3blocks.err i3blocks -vvv | tee /tmp/i3blocks.out
+# 	# position top
+# 	# tray_output None
+# 	tray_output eDP-1
+# 	# font pango:Hack Nerd Font 9.5
+# }
 
 exec_always --no-startup-id 	killall lemonbar; sleep 1; /home/aarya/.config/lemonbar/launchlemon.sh 2>/tmp/lemonbar.err
 
@@ -418,7 +420,7 @@ mode "$mode_terminal" {
 
 # launch app mode {{{
 
-set $mode_application Open: [f]irefox [c]hrome [t]hunderbird [d]iscord [p]avucontrol [b]luetooth [a]randr [v]scode [l]xappearance [V]irt-manager
+set $mode_application Open: [f]irefox [c]hrome [t]mail [d]iscord [p]audio [b]lue [a]randr [v]code [l]x
 mode "$mode_application" {
   bindsym a exec arandr, mode "default"
   bindsym b exec blueman-manager, mode "default"

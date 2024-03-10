@@ -1,7 +1,5 @@
 from module import Module
 
-MAX_LENGTH = 120
-
 
 class Bar:
     def __init__(self):
@@ -23,13 +21,13 @@ class Bar:
         module.start()
 
     def update(self):
-        left_value = "|".join([module.get_value()[:MAX_LENGTH]
+        left_value = "|".join([module.get_value()
                               for module in self.left_modules])
 
-        center_value = "|".join([module.get_value()[:MAX_LENGTH]
+        center_value = "|".join([module.get_value()
                                  for module in self.center_modules])
 
-        right_value = "|".join([module.get_value()[:MAX_LENGTH]
+        right_value = "|".join([module.get_value()
                                for module in self.right_modules])
 
         new_value = f" {left_value} %{{c}}{center_value} %{{r}}{right_value}"

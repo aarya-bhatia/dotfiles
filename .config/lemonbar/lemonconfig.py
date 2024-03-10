@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 from bar import Bar
-from module import Module, UPDATE_WITH_SIGNAL, UPDATE_PERSIST
+from module import Module, UPDATE_WITH_SIGNAL, UPDATE_PERSIST, INTERVAL_NONE
 import signal
 import time
 import colors
@@ -20,8 +20,7 @@ def main():
     # Register the signal handler
     signal.signal(signal.SIGUSR1, sigusr1_handler)
 
-    workspaces = "/home/aarya/scripts/lemonbar/i3_workspaces.py"
-    active_window = "/home/aarya/scripts/lemonbar/active_window.sh"
+    i3 = "/home/aarya/scripts/lemonbar/i3.py"
     date = "/home/aarya/scripts/lemonbar/date.sh"
     wifi = "/home/aarya/scripts/lemonbar/wifi.sh"
     disk = "/home/aarya/scripts/disk.py"
@@ -31,16 +30,45 @@ def main():
     volume = "/home/aarya/scripts/lemonbar/volume.sh"
     brightness = "/home/aarya/scripts/lemonbar/brightness.sh"
 
-    bar.add_left(Module(bar, workspaces, UPDATE_PERSIST, 0, escape=False))  # noqa
+    # active_window = "/home/aarya/scripts/lemonbar/active_window.sh"
     # bar.add_left(Module(bar, active_window, 0, 0.5, bg_color=colors.BACKGROUND_COLOR))  # noqa
-    bar.add_right(Module(bar, kernel, 0, -1, underline=colors.UNDERLINE_COLOR, bg_color=colors.BACKGROUND_COLOR))  # noqa
-    bar.add_right(Module(bar, disk, 0, 120, underline=colors.UNDERLINE_COLOR, bg_color=colors.BACKGROUND_COLOR))  # noqa
-    bar.add_right(Module(bar, battery, 0, 1, underline=colors.UNDERLINE_COLOR, bg_color=colors.BACKGROUND_COLOR))  # noqa
-    bar.add_right(Module(bar, weather, 0, 300, underline=colors.UNDERLINE_COLOR, bg_color=colors.BACKGROUND_COLOR))  # noqa
-    bar.add_right(Module(bar, volume, UPDATE_WITH_SIGNAL, -1, underline=colors.UNDERLINE_COLOR, bg_color=colors.BACKGROUND_COLOR))  # noqa
-    bar.add_right(Module(bar, brightness, UPDATE_WITH_SIGNAL, -1, underline=colors.UNDERLINE_COLOR, bg_color=colors.BACKGROUND_COLOR))  # noqa
-    bar.add_right(Module(bar, wifi, 0, 300, underline=colors.UNDERLINE_COLOR, bg_color=colors.BACKGROUND_COLOR))  # noqa
-    bar.add_right(Module(bar, date, 0, 1, underline=colors.UNDERLINE_COLOR, bg_color=colors.BACKGROUND_COLOR))  # noqa
+
+    bar.add_left(Module(bar, i3, UPDATE_PERSIST, 0, escape=False, maxlen=-1))
+
+    bar.add_right(Module(bar, kernel, 0, INTERVAL_NONE,
+                         underline=colors.UNDERLINE_COLOR,
+                         bg_color=colors.BACKGROUND_COLOR))
+
+    bar.add_right(Module(bar, disk, 0, 120, underline=colors.UNDERLINE_COLOR,
+                         bg_color=colors.BACKGROUND_COLOR,
+                         handler_name="disk"))
+
+    bar.add_right(Module(bar, battery, 0, 1, underline=colors.UNDERLINE_COLOR,
+                         bg_color=colors.BACKGROUND_COLOR,
+                         handler_name="battery"))
+
+    bar.add_right(Module(bar, weather, 0, 300,
+                         underline=colors.UNDERLINE_COLOR,
+                         bg_color=colors.BACKGROUND_COLOR,
+                         handler_name="weather"))
+
+    bar.add_right(Module(bar, volume, UPDATE_WITH_SIGNAL, INTERVAL_NONE,
+                         underline=colors.UNDERLINE_COLOR,
+                         bg_color=colors.BACKGROUND_COLOR,
+                         handler_name="volume"))
+
+    bar.add_right(Module(bar, brightness, UPDATE_WITH_SIGNAL, INTERVAL_NONE,
+                         underline=colors.UNDERLINE_COLOR,
+                         bg_color=colors.BACKGROUND_COLOR,
+                         handler_name="brightness"))
+
+    bar.add_right(Module(bar, wifi, 0, 300, underline=colors.UNDERLINE_COLOR,
+                         bg_color=colors.BACKGROUND_COLOR,
+                         handler_name="wifi"))
+
+    bar.add_right(Module(bar, date, 0, 1, underline=colors.UNDERLINE_COLOR,
+                         bg_color=colors.BACKGROUND_COLOR,
+                         handler_name="date"))
 
     print("loading...", flush=True)
     while True:
