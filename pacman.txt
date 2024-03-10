@@ -660,6 +660,7 @@ qt5ct
 qt6-5compat
 qt6-base
 qt6-declarative
+qt6-shadertools
 qt6-svg
 qt6-translations
 qt6-wayland

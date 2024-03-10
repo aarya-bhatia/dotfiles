@@ -32,7 +32,7 @@ class Bar:
         right_value = "|".join([module.get_value()[:MAX_LENGTH]
                                for module in self.right_modules])
 
-        new_value = f"{left_value} %{{c}}{center_value} %{{r}}{right_value}"
+        new_value = f" {left_value} %{{c}}{center_value} %{{r}}{right_value}"
 
         # no updates
         if new_value == self.prev_value:
@@ -41,4 +41,4 @@ class Bar:
         new_value = new_value + " "  # padding
         print(new_value, flush=True)
         # sys.stderr.write(new_value + "\n")
-        self.prev_value = new_value
+        self. prev_value = new_value

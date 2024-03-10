@@ -15,13 +15,13 @@ fi
 
 numlock on
 ~/scripts/wallpaper.sh /home/aarya/wallpapers/archlinux/sunset.jpg
-~/.config/lemonbar/launchlemon.sh &
+~/.config/lemonbar/launchlemon.sh 2>/tmp/lemonbar.err &
 ~/scripts/keymaps.sh
 ~/scripts/screenmirror.sh
 
 # ~/.config/polybar/launch.sh &
 
-bspc monitor $primary -d 1 2 3 4 5 6 7 8 9 10
+bspc monitor $primary -d 1 2 3 4 5 6 7 8 9
 
 bspc config border_width         2
 bspc config window_gap          10

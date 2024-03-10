@@ -21,9 +21,10 @@ def add_underline(string, color):
 
 
 class Module(Thread):
-    def __init__(self, command: str = "", method: int = 0, interval: int = 1,
-                 fg_color: str | None = None, bg_color: str | None = None,
-                 underline: str | None = None):
+    def __init__(self, bar, command: str = "", method: int = 0,
+                 interval: int = 1, fg_color: str | None = None,
+                 bg_color: str | None = None, underline: str | None = None,
+                 escape: bool = True):
 
         Thread.__init__(self)
         self.daemon = True
@@ -35,9 +36,12 @@ class Module(Thread):
         self.fg_color = fg_color
         self.bg_color = bg_color
         self.u_color = underline
+        self.escape = escape
+        self.bar = bar
 
     def format_value(self, value):
-        value = value.replace("%", "%%")
+        if self.escape:
+            value = value.replace("%", "%%")
 
         if self.fg_color:
             value = add_fg_color(value, self.fg_color)
@@ -62,27 +66,33 @@ class Module(Thread):
                                            stderr=subprocess.PIPE,
                                            text=True)
 
-                if self.method == UPDATE_WITH_INTERVAL or self.method == UPDATE_WITH_SIGNAL:
-                    stdout, stderr = process.communicate()
-                    value = str(stdout).strip()
-                    sys.stderr.write(stderr)
-
-                    with self.mutex:
-                        self.value = value
-
-                    if self.method != UPDATE_WITH_INTERVAL or self.interval <= 0:
-                        return
-
-                    time.sleep(self.interval)
-
-                elif self.method == UPDATE_PERSIST:
+                if self.method == UPDATE_PERSIST:
                     while True:
-                        output = process.stdout.readline().strip()
-                        if not output:
-                            break
+                        value = process.stdout.readline().strip()
+                        if not value:
+                            return
 
                         with self.mutex:
                             self.value = value
+
+                        self.bar.update()
+
+                # if self.method == UPDATE_WITH_INTERVAL or self.method == UPDATE_WITH_SIGNAL:
+                stdout, stderr = process.communicate()
+                value = str(stdout).strip()
+                sys.stderr.write(stderr)
+
+                with self.mutex:
+                    self.value = value
+
+                if self.method == UPDATE_WITH_SIGNAL:
+                    self.bar.update()
+                    return
+
+                if self.interval <= 0:
+                    return
+
+                time.sleep(self.interval)
 
             except KeyboardInterrupt:
                 if process.poll() is None:
