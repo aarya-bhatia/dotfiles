@@ -627,6 +627,7 @@ python
 python-attrs
 python-cairo
 python-cffi
+python-colorama
 python-cryptography
 python-distlib
 python-filelock
@@ -636,6 +637,8 @@ python-pip
 python-platformdirs
 python-ply
 python-pycparser
+python-shtab
+python-termcolor
 python-typing_extensions
 python-virtualenv
 python-wheel
@@ -720,6 +723,7 @@ tesseract-data-osd
 texinfo
 thunar
 thunderbird
+tldr
 tlp
 tmux
 tpm2-tss
@@ -727,6 +731,7 @@ tracker3
 tree
 tree-sitter
 tslib
+ttf-font-awesome
 ttf-hack-nerd
 ttf-liberation
 twolame

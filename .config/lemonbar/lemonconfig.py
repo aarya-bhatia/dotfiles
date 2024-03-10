@@ -29,6 +29,7 @@ def main():
     kernel = "/home/aarya/scripts/lemonbar/kernel.sh"
     volume = "/home/aarya/scripts/lemonbar/volume.sh"
     brightness = "/home/aarya/scripts/lemonbar/brightness.sh"
+    bluetooth = "/home/aarya/scripts/lemonbar/bluetooth.sh"
 
     # active_window = "/home/aarya/scripts/lemonbar/active_window.sh"
     # bar.add_left(Module(bar, active_window, 0, 0.5, bg_color=colors.BACKGROUND_COLOR))  # noqa
@@ -61,6 +62,11 @@ def main():
                          underline=colors.UNDERLINE_COLOR,
                          bg_color=colors.BACKGROUND_COLOR,
                          handler_name="brightness"))
+
+    # bar.add_right(Module(bar, bluetooth, UPDATE_WITH_SIGNAL, INTERVAL_NONE,
+    #                      underline=colors.UNDERLINE_COLOR,
+    #                      bg_color=colors.BACKGROUND_COLOR,
+    #                      handler_name="bluetooth"))
 
     bar.add_right(Module(bar, wifi, 0, 300, underline=colors.UNDERLINE_COLOR,
                          bg_color=colors.BACKGROUND_COLOR,

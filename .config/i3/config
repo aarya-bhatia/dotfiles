@@ -12,16 +12,17 @@ set $primary eDP-1
 set $secondary HDMI-1
 
 floating_modifier $mod
-font pango:monospace 9
+font pango:monospace 8.5
 focus_wrapping no
 ipc-socket ~/.i3/i3-ipc.sock
 popup_during_fullscreen smart
+focus_follows_mouse no
 workspace_auto_back_and_forth yes
 
 # Key bindings {{{
 
-bindsym $super+Shift+c 				exec "'i3-msg reload'; notify-send 'reloaded i3 config'"
-bindsym $super+Shift+r 				restart
+bindsym $super+Shift+c 				exec i3-msg reload && notify-send "reloaded i3"
+bindsym $super+Shift+r 				exec i3-msg restart && notify-send "restarted i3"
 bindsym $super+Shift+q 				kill
 bindsym $super+Tab 					workspace next
 bindsym $super+Shift+Tab 			workspace prev
@@ -142,7 +143,7 @@ bindsym $super+minus scratchpad show
 exec --no-startup-id 			mpd &
 
 # Network manager
-exec --no-startup-id 			nm-applet &
+# exec --no-startup-id 			nm-applet &
 
 # Display wallpaper
 exec --no-startup-id 			~/scripts/wallpaper.sh /home/aarya/wallpapers/archlinux/sunset.jpg
@@ -420,7 +421,7 @@ mode "$mode_terminal" {
 
 # launch app mode {{{
 
-set $mode_application Open: [f]irefox [c]hrome [t]mail [d]iscord [p]audio [b]lue [a]randr [v]code [l]x
+set $mode_application Open: [f]irefox [c]hrome [t]hunderbird [d]iscord [p]avucontrol [b]luetooth [a]randr
 mode "$mode_application" {
   bindsym a exec arandr, mode "default"
   bindsym b exec blueman-manager, mode "default"
