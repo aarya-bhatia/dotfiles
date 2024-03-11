@@ -545,6 +545,7 @@ mpv
 msgpack-c
 mtdev
 mujs
+multicolor-sddm-theme
 ncmpcpp
 ncurses
 neofetch
@@ -681,6 +682,7 @@ runc
 sbc
 scrot
 sddm
+sddm-theme-astronaut
 sdl2
 sed
 semver

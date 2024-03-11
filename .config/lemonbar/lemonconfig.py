@@ -77,13 +77,22 @@ if __name__ == "__main__":
                          id="volume",
                          update_signal=update_signal))
 
-    bar.add_right(Module(command=brightness,
-                         method=UPDATE_WITH_SIGNAL,
-                         interval=INTERVAL_NONE,
+    # bar.add_right(Module(command=brightness,
+    #                      method=UPDATE_WITH_SIGNAL,
+    #                      interval=INTERVAL_NONE,
+    #                      underline=colors.UNDERLINE_COLOR,
+    #                      bg_color=colors.BACKGROUND_COLOR,
+    #                      id="brightness",
+    #                      button=False,
+    #                      update_signal=update_signal))
+
+    bar.add_right(Module(command=wifi,
+                         method=0,
+                         interval=300,
                          underline=colors.UNDERLINE_COLOR,
                          bg_color=colors.BACKGROUND_COLOR,
-                         id="brightness",
-                         button=False,
+                         id="wifi",
+                         escape=False,
                          update_signal=update_signal))
 
     bar.add_right(Module(command=dunst,
@@ -93,14 +102,6 @@ if __name__ == "__main__":
                          bg_color=colors.BACKGROUND_COLOR,
                          id="dunst",
                          button=True,
-                         update_signal=update_signal))
-
-    bar.add_right(Module(command=wifi,
-                         method=0,
-                         interval=300,
-                         underline=colors.UNDERLINE_COLOR,
-                         bg_color=colors.BACKGROUND_COLOR,
-                         id="wifi",
                          update_signal=update_signal))
 
     bar.add_right(Module(command=date,
