@@ -1,11 +1,17 @@
 #!/usr/bin/env python3
 
+import socket
 import sys
 import os
 import i3ipc
 import subprocess
 
 i3 = i3ipc.Connection()
+
+socket_file = "/tmp/lemonbar.sock"
+if not os.path.exists(socket_file):
+    print("socket file does not exist")
+    os.exit(1)
 
 
 def switch_to_workspace(name):
@@ -21,41 +27,45 @@ def launch_terminal(*args):
                      "--hold", "-e", "bash", "-c", *args])
 
 
-while True:
-    line = sys.stdin.readline().strip()
-    if not line:
-        break
+with socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM) as client_socket:
+    client_socket.connect(socket_file)
 
-    if line.startswith("workspace-"):
-        switch_to_workspace(line[len("workspace-"):])
+    while True:
+        line = sys.stdin.readline().strip()
+        if not line:
+            break
 
-    elif line == "disk":
-        launch_terminal("df", "-sh")
+        if line.startswith("workspace-"):
+            switch_to_workspace(line[len("workspace-"):])
 
-    elif line == "battery":
-        launch_terminal("acpi")
+        elif line == "disk":
+            launch_terminal("df", "-sh")
 
-    elif line == "weather":
-        launch_terminal("curl", "https://wttr.in/")
+        elif line == "battery":
+            launch_terminal("acpi")
 
-    elif line == "volume":
-        launch_app("pavucontrol")
+        elif line == "weather":
+            launch_terminal("curl", "https://wttr.in/")
 
-    elif line == "brightness":
-        pass
+        elif line == "volume":
+            launch_app("pavucontrol")
 
-    elif line == "wifi":
-        launch_terminal("nmtui")
+        elif line == "brightness":
+            pass
 
-    elif line == "dunst":
-        os.system(
-            "dunstctl set-paused toggle && kill -10 $(pgrep -f lemonconfig.py)")
+        elif line == "wifi":
+            launch_terminal("nmtui")
 
-    elif line == "bluetooth":
-        os.system("bluetooth toggle && kill -10 $(pgrep -f lemonconfig.py)")
+        elif line == "dunst":
+            os.system("dunstctl set-paused toggle")
+            client_socket.send("dunst".encode())
 
-    elif line == "date":
-        launch_terminal("cal")
+        elif line == "bluetooth":
+            os.system("bluetooth toggle")
+            client_socket.send("bluetooth".encode())
 
-    else:
-        sys.stderr.write("unknown handler: " + line)
+        elif line == "date":
+            launch_terminal("cal")
+
+        else:
+            print("unknown handler: " + line)

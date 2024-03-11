@@ -567,6 +567,7 @@ oath-toolkit
 ocl-icd
 oniguruma
 openal
+openbsd-netcat
 openconnect
 opencore-amr
 openexr

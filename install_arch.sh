@@ -41,6 +41,7 @@ packages=(
 	ncmpcpp
 	neofetch
 	neovim
+	netcat
 	noto-fonts
 	numlockx
 	openconnect

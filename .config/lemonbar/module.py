@@ -2,6 +2,7 @@ from threading import Lock, Thread
 import sys
 import subprocess
 import time
+import queue
 
 UPDATE_WITH_INTERVAL = 0
 UPDATE_WITH_SIGNAL = 1
@@ -26,11 +27,18 @@ def add_underline(string, color):
 
 
 class Module(Thread):
-    def __init__(self, bar, command: str = "", method: int = 0,
-                 interval: int = 1, fg_color: str | None = None,
-                 bg_color: str | None = None, underline: str | None = None,
-                 escape: bool = True, maxlen: int = 120,
-                 handler_name: str | None = None):
+    def __init__(self,
+                 command: str = "",
+                 method: int = 0,
+                 interval: int = 1,
+                 id: str = "",
+                 fg_color: str | None = None,
+                 bg_color: str | None = None,
+                 underline: str | None = None,
+                 escape: bool = True,
+                 maxlen: int = 120,
+                 button: bool = False,
+                 update_signal: queue.Queue = None):
 
         Thread.__init__(self)
         self.daemon = True
@@ -43,9 +51,10 @@ class Module(Thread):
         self.bg_color = bg_color
         self.u_color = underline
         self.escape = escape
-        self.bar = bar
+        self.update_signal = update_signal
         self.maxlen = maxlen
-        self.handler_name = handler_name
+        self.id = id
+        self.button = button
 
     def format_value(self, value):
         if self.escape:
@@ -63,8 +72,8 @@ class Module(Thread):
         if self.u_color:
             value = add_underline(value, self.u_color)
 
-        if self.handler_name:
-            value = add_button_handler(value, self.handler_name)
+        if self.button:
+            value = add_button_handler(value, self.id)
 
         return value
 
@@ -89,7 +98,7 @@ class Module(Thread):
                         with self.mutex:
                             self.value = value
 
-                        self.bar.update()
+                        self.update_signal.put(True)
 
                 stdout, stderr = process.communicate()
                 value = str(stdout).strip()
@@ -99,7 +108,7 @@ class Module(Thread):
                     self.value = value
 
                 if self.method == UPDATE_WITH_SIGNAL:
-                    self.bar.update()
+                    self.update_signal.put(True)
                     return
 
                 if self.interval <= 0:
