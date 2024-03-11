@@ -173,6 +173,9 @@ exec --no-startup-id 			xfce4-power-manager &
 # Session manager
 exec --no-startup-id 			lxsession &
 
+# Nightlight
+exec --no-startup-id 			~/scripts/nightlight.sh auto &
+
 # }}}
 
 # workspaces {{{
@@ -325,7 +328,7 @@ hide_edge_borders smart_no_gaps
 # 	# font pango:Hack Nerd Font 9.5
 # }
 
-exec_always --no-startup-id 	killall lemonbar; sleep 1; /home/aarya/.config/lemonbar/launchlemon.sh 2>/tmp/lemonbar.err
+exec_always --no-startup-id 	/home/aarya/.config/lemonbar/launchlemon.sh 2>&1 >/tmp/lemonbar.err &
 
 # }}}
 

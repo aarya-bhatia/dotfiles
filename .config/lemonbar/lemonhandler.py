@@ -57,7 +57,7 @@ with socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM) as client_socket:
             launch_terminal("nmtui")
 
         elif line == "dunst":
-            os.system("dunstctl set-paused toggle")
+            os.system("/home/aarya/scripts/lemonbar/dunst.sh --click")
             client_socket.send("dunst".encode())
 
         elif line == "bluetooth":

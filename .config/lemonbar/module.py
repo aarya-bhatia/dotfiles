@@ -42,7 +42,6 @@ class Module(Thread):
 
         Thread.__init__(self)
         self.daemon = True
-        self.value = ""
         self.command = command
         self.method = method
         self.interval = max(interval, 0.1)
@@ -55,6 +54,9 @@ class Module(Thread):
         self.maxlen = maxlen
         self.id = id
         self.button = button
+
+        self.value = None
+        self.has_changed = False
 
     def format_value(self, value):
         if self.escape:
@@ -79,7 +81,16 @@ class Module(Thread):
 
     def get_value(self):
         with self.mutex:
+            if not self.value:
+                return self.format_value("")
+
             return self.format_value(self.value)
+
+    def is_changed(self):
+        with self.mutex:
+            ret = self.has_changed
+            self.has_changed = False
+            return ret
 
     def run(self):
         while True:
@@ -96,7 +107,10 @@ class Module(Thread):
                             return
 
                         with self.mutex:
-                            self.value = value
+                            if not self.value or value != self.value:
+                                self.has_changed = True
+                                self.value = value
+                                # sys.stderr.write(f"module {self.id} changed\n")
 
                         self.update_signal.put(True)
 
@@ -105,7 +119,10 @@ class Module(Thread):
                 sys.stderr.write(stderr)
 
                 with self.mutex:
-                    self.value = value
+                    if not self.value or value != self.value:
+                        self.has_changed = True
+                        self.value = value
+                        # sys.stderr.write(f"module {self.id} changed\n")
 
                 if self.method == UPDATE_WITH_SIGNAL:
                     self.update_signal.put(True)

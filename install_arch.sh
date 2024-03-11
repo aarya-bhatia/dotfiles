@@ -31,6 +31,7 @@ packages=(
 	i3blocks
 	i3status
 	inetutils
+	jq
 	keychain
 	lxappearance
 	man
@@ -41,7 +42,7 @@ packages=(
 	ncmpcpp
 	neofetch
 	neovim
-	netcat
+	openbsd-netcat
 	noto-fonts
 	numlockx
 	openconnect
@@ -82,7 +83,7 @@ extra=(
 	archlinux-wallpaper
 	breeze
 	bspwm
-	lemonbar
+	lemonbar-xft-git
 	nodejs
 	noto-fonts-emoji
 	npm
@@ -94,6 +95,8 @@ extra=(
 	sxhkd
 	texlive
 	ttf-hack-nerd
+	visual-studio-code-bin
+	zoom
 )
 
 py=(

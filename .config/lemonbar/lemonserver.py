@@ -6,6 +6,8 @@ import threading
 import bar
 from module import UPDATE_WITH_SIGNAL
 
+debug = False
+
 
 class LemonManager:
     def __init__(self, bar: bar.Bar,
@@ -46,10 +48,24 @@ class LemonManager:
         while True:
             try:
                 self.update_signal.get(timeout=self.update_interval)
-                # sys.stderr.write("update requested...\n")
+
+                while True:
+                    # flush any pending signals as
+                    # it is handled with the next update
+                    try:
+                        self.update_signal.get(block=False)
+                    except queue.Empty:
+                        break
+
+                if debug:
+                    sys.stderr.write("update requested...\n")
+
                 self.bar.update()
+
             except queue.Empty:
-                # sys.stderr.write("timeout... checking for updates\n")
+                if debug:
+                    sys.stderr.write("timeout... checking for updates\n")
+
                 self.bar.update()
 
     def message_handler(self):
@@ -80,7 +96,8 @@ class LemonManager:
             while True:
                 data = server_socket.recv(1024).decode()
                 self.messages.put(data)
-                sys.stderr.write(f"Received from client: {data}\n")
+                if debug:
+                    sys.stderr.write(f"Received from client: {data}\n")
         finally:
             server_socket.close()
             os.unlink(self.socket_file)

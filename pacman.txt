@@ -204,6 +204,7 @@ iw
 jansson
 jbig2dec
 jbigkit
+jq
 json-c
 json-glib
 jsoncpp
