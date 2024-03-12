@@ -344,6 +344,8 @@ nnoremap <silent> <leader>fg :FzfGFiles<CR>
 " List files
 nnoremap <silent> <leader>ff :FzfFiles<CR>
 
+nnoremap <C-p> :FzfFiles<CR>
+
 " Find in history
 nnoremap <silent> <leader>fh :FzfHistory<CR>
 

@@ -1,8 +1,7 @@
 #!/bin/sh
 source /home/aarya/pyvenv/bin/activate
 
-killall -q lemonbar
-while pgrep -u $UID -x lemonbar >/dev/null; do sleep 1; done
+pkill -f lemon
 
 /home/aarya/.config/lemonbar/lemonconfig.py | \
     lemonbar -p -g x24++ \

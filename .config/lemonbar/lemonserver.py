@@ -1,4 +1,4 @@
-import socket
+# import socket
 import sys
 import os
 import queue
@@ -12,13 +12,15 @@ debug = False
 class LemonManager:
     def __init__(self, bar: bar.Bar,
                  sock_file="/tmp/lemonbar.sock",
-                 update_interval: int = 5,
+                 fifo_file="/tmp/lemonbar.fifo",
+                 update_interval: int = 10,
                  update_signal: queue.Queue = None):
 
         self.bar = bar
         self.update_interval = update_interval
         self.messages = queue.Queue()
         self.socket_file = sock_file
+        self.fifo_file = fifo_file
         self.update_signal = update_signal
 
         self.handler_thread = threading.Thread(
@@ -89,15 +91,27 @@ class LemonManager:
 
     def server_listener(self):
         sys.stderr.write("Server is listening...\n")
-        os.system("/usr/bin/rm -rf " + self.socket_file)
-        server_socket = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
-        server_socket.bind(self.socket_file)
-        try:
+        os.system(f"/usr/bin/rm -rf {self.fifo_file}")
+        # os.system("/usr/bin/rm -rf " + self.socket_file)
+        # server_socket = socket.socket(socket.AF_UNIX, socket.SOCK_DGRAM)
+        # server_socket.bind(self.socket_file)
+        os.mkfifo(self.fifo_file)
+        with open(self.fifo_file, "r") as pipe:
             while True:
-                data = server_socket.recv(1024).decode()
+                data = pipe.readline()
+                if not data:
+                    continue
+
+                if data[-1] == '\n':
+                    data = data[:-1]
+
                 self.messages.put(data)
+
                 if debug:
                     sys.stderr.write(f"Received from client: {data}\n")
-        finally:
-            server_socket.close()
-            os.unlink(self.socket_file)
+        # try:
+        #     while True:
+        #         data = server_socket.recv(1024).decode()
+        # finally:
+        #     server_socket.close()
+        os.unlink(self.socket_file)

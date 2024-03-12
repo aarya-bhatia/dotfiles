@@ -29,6 +29,12 @@ class Bar:
         return False
 
     def update(self) -> bool:
+        any_changed = self.has_changed()
+
+        # no updates
+        if not any_changed:
+            return False
+
         left_value = "|".join([module.get_value()
                               for module in self.left_modules])
 
@@ -39,12 +45,6 @@ class Bar:
                                for module in self.right_modules])
 
         new_value = f" {left_value} %{{c}}{center_value} %{{r}}{right_value}"
-
-        any_changed = self.has_changed()
-
-        # no updates
-        if not any_changed:
-            return False
 
         new_value += " "  # padding
         if debug:

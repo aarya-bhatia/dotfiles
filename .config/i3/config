@@ -155,7 +155,7 @@ exec --no-startup-id 			picom --backend glx --xrender-sync-fence &
 exec_always --no-startup-id 	numlockx on
 
 # Remap Caps Lock to ESC/Control key
-exec_always --no-startup-id 	~/scripts/keymaps.sh
+exec_always --no-startup-id 	~/scripts/keymaps.sh &
 
 # Dunst notification daemon
 exec --no-startup-id 			dunst &
@@ -167,7 +167,7 @@ exec --no-startup-id 			dunst &
 exec_always --no-startup-id 	~/scripts/screenmirror.sh
 
 # lock screen on suspend
-exec_always --no-startup-id 	xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050
+exec_always --no-startup-id 	xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
 exec --no-startup-id 			xfce4-power-manager &
 
 # Session manager
@@ -312,23 +312,15 @@ hide_edge_borders smart_no_gaps
 # status bar {{{
 
 # bar {
-#     colors {
-#         #color class       border  back.   text
-#         focused_workspace  #007030 #007030 #ffffff
-#         active_workspace   #555555 #555555 #ffffff
-#         inactive_workspace #000000 #000000 #888888
-#         urgent_workspace   #2f343a #900000 #ffffff
-#     }
-#
-# 	# status_command i3status
+# 	status_command i3status
 # 	# status_command 2>/tmp/i3blocks.err i3blocks -vvv | tee /tmp/i3blocks.out
-# 	# position top
-# 	# tray_output None
+# 	position top
 # 	tray_output eDP-1
-# 	# font pango:Hack Nerd Font 9.5
+# 	font pango:Hack Nerd Font 9.5
 # }
 
-exec_always --no-startup-id 	/home/aarya/.config/lemonbar/launchlemon.sh 2>&1 >/tmp/lemonbar.err &
+# exec_always --no-startup-id 	/home/aarya/.config/lemonbar/launchlemon.sh 2>&1 >/tmp/lemonbar.err &
+exec --no-startup-id /home/aarya/.config/polybar/launch.sh &
 
 # }}}
 
