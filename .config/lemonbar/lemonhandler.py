@@ -2,14 +2,20 @@
 
 import sys
 import os
-import i3ipc
 import subprocess
 
-i3 = i3ipc.Connection()
+usei3 = False
 
+if usei3:
+    import i3ipc
+    i3 = i3ipc.Connection()
 
-def switch_to_workspace(name):
-    i3.command("workspace " + name)
+    def switch_to_workspace(name):
+        i3.command("workspace " + name)
+
+else:
+    def switch_to_workspace(name):
+        pass
 
 
 def launch_app(*args):

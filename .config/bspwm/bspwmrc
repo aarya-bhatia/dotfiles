@@ -4,24 +4,21 @@ primary=eDP-1
 secondary=HDMI-1
 
 ## autostart
-if [ $1 -eq 0 ]; then
-	dunst &
-	lxsession &
-	mpd &
-	nm-applet &
-	picom --backend glx --xrender-sync-fence &
-	sxhkd &
-fi
+pgrep dunst || dunst &
+pgrep lxsession || lxsession &
+pgrep mpd || mpd &
+pgrep picom || picom --backend glx --xrender-sync-fence &
+pgrep sxhkd || sxhkd &
 
-numlock on
-~/scripts/wallpaper.sh /home/aarya/wallpapers/archlinux/sunset.jpg
-~/.config/lemonbar/launchlemon.sh 2>/tmp/lemonbar.err &
-~/scripts/keymaps.sh
-~/scripts/screenmirror.sh
+numlockx on
 
-# ~/.config/polybar/launch.sh &
+~/.config/polybar/launch.sh >/dev/null &
+~/scripts/keymaps.sh &
+~/scripts/screenmirror.sh &
+~/scripts/wallpaper.py &
 
-bspc monitor $primary -d 1 2 3 4 5 6 7 8 9
+bspc monitor $primary -d 1 2 3 4 5
+bspc monitor $secondary -d 6 7 8 9 10
 
 bspc config border_width         2
 bspc config window_gap          10
