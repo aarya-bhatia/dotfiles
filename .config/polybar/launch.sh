@@ -1,7 +1,4 @@
 #!/bin/sh
-
-polybar-msg cmd quit 2>/dev/null
-
-polybar example
-
-# echo "Polybar launched..."
+pgrep -f polybar && polybar-msg cmd quit
+polybar example 2>&1 | tee -a /tmp/polybar.log & disown
+echo "Polybar launched..."

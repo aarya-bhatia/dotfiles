@@ -402,11 +402,12 @@ mode "$mode_gaps_outer" {
 
 # launch terminal app mode {{{
 
-set $mode_terminal Open: [h] htop [n] ncmpcpp [v] neovim
+set $mode_terminal Open: [1] htop [2] ncmpcpp [3] vim [4] nmtui
 mode "$mode_terminal" {
-  bindsym h exec alacritty -e htop, mode "default"
-  bindsym v exec alacritty -e nvim, mode "default"
-  bindsym n exec alacritty -e ncmpcpp, mode "default"
+  bindsym 1 exec alacritty -e htop, mode "default"
+  bindsym 2 exec alacritty -e ncmpcpp, mode "default"
+  bindsym 3 exec alacritty -e nvim, mode "default"
+  bindsym 4 exec alacritty -e nmtui, mode "default"
 
   bindsym Return mode "default"
   bindsym Escape mode "default"

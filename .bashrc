@@ -54,7 +54,7 @@ if uname -a | grep -q -i -E "debian|ubuntu"; then
 fi
 
 alias fd=$fd
-alias bat="$bat --style=plain --theme=gruvbox-dark"
+alias bat="$bat --style=plain"
 alias cat="$bat --plain"
 alias bathelp="$bat --plain --language=help"
 
