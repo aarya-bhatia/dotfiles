@@ -43,6 +43,7 @@ bluez-libs
 bluez-tools
 boost-libs
 botan2
+box2d
 brave-bin
 breeze
 breeze-gtk
@@ -67,6 +68,7 @@ chromium
 clang
 clipmenu
 clipnotify
+clucene
 compiler-rt
 confuse
 containerd
@@ -280,6 +282,7 @@ lemonbar-xft-git-debug
 leptonica
 less
 lf
+libabw
 libao
 libappindicator-gtk3
 libarchive
@@ -287,6 +290,7 @@ libass
 libassuan
 libasyncns
 libatasmart
+libatomic_ops
 libavc1394
 libavif
 libb2
@@ -310,7 +314,9 @@ libcap
 libcap-ng
 libcdio
 libcdio-paranoia
+libcdr
 libcloudproviders
+libcmis
 libcolord
 libconfig
 libcups
@@ -326,19 +332,24 @@ libdrm
 libdvbpsi
 libdvdnav
 libdvdread
+libe-book
 libebml
 libedit
 libelf
 libepoxy
+libepubgen
+libetonyek
 libev
 libevdev
 libevent
 libexif
+libexttextcat
 libfabric
 libfdk-aac
 libffi
 libfontenc
 libfreeaptx
+libfreehand
 libgcrypt
 libgirepository
 libgit2
@@ -357,9 +368,11 @@ libimobiledevice
 libinput
 libinstpatch
 libisl
+libixion
 libjpeg-turbo
 libjxl
 libksba
+liblangtag
 liblc3
 libldac
 libldap
@@ -380,7 +393,9 @@ libmpc
 libmpcdec
 libmpdclient
 libmpeg2
+libmspub
 libmupdf
+libmwaw
 libmysofa
 libndp
 libnetfilter_conntrack
@@ -398,11 +413,15 @@ libnma
 libnma-common
 libnotify
 libnsl
+libnumbertext
 libnvme
+libodfgen
 libogg
 libomxil-bellagio
 libopenmpt
+liborcus
 libp11-kit
+libpagemaker
 libpcap
 libpciaccess
 libpgm
@@ -415,8 +434,11 @@ libproxy
 libpsl
 libpulse
 libqalculate
+libqxp
 libraqm
 libraw1394
+libreoffice-still
+librevenge
 librsvg
 libsamplerate
 libsasl
@@ -434,6 +456,7 @@ libsoup3
 libsoxr
 libssh
 libssh2
+libstaroffice
 libstemmer
 libsynctex
 libsysprof-capture
@@ -445,6 +468,7 @@ libthai
 libtheora
 libtiff
 libtirpc
+libtommath
 libtool
 libunibreak
 libunistring
@@ -460,6 +484,7 @@ libva-intel-driver
 libva-mesa-driver
 libvdpau
 libverto
+libvisio
 libvorbis
 libvpl
 libvpx
@@ -467,7 +492,9 @@ libvterm
 libwacom
 libwebp
 libwireplumber
+libwpd
 libwpe
+libwps
 libx11
 libxau
 libxcb
@@ -504,6 +531,7 @@ libxv
 libxxf86vm
 libyaml
 libyuv
+libzmf
 licenses
 lilv
 linux
@@ -512,6 +540,7 @@ linux-firmware
 linux-firmware-whence
 llvm-libs
 lm_sensors
+lpsolve
 lsof
 lua
 luajit
@@ -551,6 +580,7 @@ multicolor-sddm-theme
 ncmpcpp
 ncurses
 neofetch
+neon
 neovim
 nettle
 network-manager-applet
@@ -624,6 +654,7 @@ polkit
 polkit-qt5
 polkit-qt6
 polybar
+poppler
 popt
 portaudio
 procps-ng
@@ -673,9 +704,12 @@ qt6-shadertools
 qt6-svg
 qt6-translations
 qt6-wayland
+raptor
+rasqal
 rav1e
 rclone
 readline
+redland
 redshift
 rofi
 rsync
@@ -794,6 +828,7 @@ xcb-util-renderutil
 xcb-util-wm
 xcb-util-xrm
 xdg-dbus-proxy
+xdg-ninja
 xdg-utils
 xdotool
 xf86-input-libinput
@@ -840,4 +875,5 @@ zlib
 zoom
 zram-generator
 zstd
+zxing-cpp
 zziplib
