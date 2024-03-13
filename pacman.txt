@@ -50,6 +50,7 @@ breeze-icons
 bridge-utils
 brightnessctl
 brotli
+bsp-layout
 bspwm
 bubblewrap
 bzip2
@@ -145,6 +146,7 @@ gmp
 gnu-free-fonts
 gnupg
 gnutls
+go
 gobject-introspection-runtime
 gperftools
 gpgme
@@ -746,6 +748,7 @@ uchardet
 udisks2
 ufw
 unibilium
+unzip
 upower
 usbmuxd
 usbutils
@@ -809,6 +812,7 @@ xorg-server-common
 xorg-setxkbmap
 xorg-xauth
 xorg-xdpyinfo
+xorg-xev
 xorg-xinit
 xorg-xkbcomp
 xorg-xmodmap

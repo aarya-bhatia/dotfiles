@@ -45,6 +45,9 @@ Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'williamboman/mason.nvim'
 
+" Syntax
+Plug 'kovetskiy/sxhkd-vim'
+
 call plug#end()
 
 " }}}

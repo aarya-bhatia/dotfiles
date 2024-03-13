@@ -13,6 +13,7 @@ packages=(
 	breeze-gtk
 	brightnessctl
 	chromium
+	clang
 	clipmenu
 	ctags
 	curl
@@ -42,9 +43,9 @@ packages=(
 	ncmpcpp
 	neofetch
 	neovim
-	openbsd-netcat
 	noto-fonts
 	numlockx
+	openbsd-netcat
 	openconnect
 	optipng
 	pamixer
@@ -66,12 +67,16 @@ packages=(
 	thunderbird
 	tmux
 	ufw
+	unzip
 	valgrind
 	vim
 	vlc
 	xcape
 	xdotool
 	xfce4-power-manager
+	xorg-xev
+	xorg-xprop
+	xorg-xset
 	xsel
 	xss-lock
 	xwallpaper
@@ -102,12 +107,14 @@ extra=(
 py=(
 	clang-format
 	dbus-python
+	disutils
 	flask
 	ipykernel
 	matplotlib
 	numpy
 	pandas
 	psutil
+	python-dotenv
 	requests
 	trash-cli
 )
