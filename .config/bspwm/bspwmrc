@@ -4,18 +4,51 @@ primary=eDP-1
 secondary=HDMI-1
 
 ## autostart
-pgrep dunst || dunst &
-pgrep lxsession || lxsession &
-pgrep mpd || mpd &
-pgrep picom || picom --backend glx --xrender-sync-fence &
-pgrep sxhkd || sxhkd &
 
-numlockx on
+numlockx on # turn on numlock
+~/.config/polybar/launch.sh >/dev/null & # launch polybar
+~/scripts/keymaps.sh & # setup keyboard mappings
+~/scripts/screenmirror.sh & # mirror display to HDMI
+~/scripts/wallpaper.py & # set wallpaper to last used
 
-~/.config/polybar/launch.sh >/dev/null &
-~/scripts/keymaps.sh &
-~/scripts/screenmirror.sh &
-~/scripts/wallpaper.py &
+# start notification daemon
+if ! pgrep dunst; then
+	dunst &
+fi
+
+# start session manager
+if ! pgrep lxsession; then
+	lxsession &
+fi
+
+# start music player daemon
+if ! pgrep mpd; then
+	mpd &
+fi
+
+if ! pgrep picom; then
+	picom --backend glx --xrender-sync-fence # start compositor
+fi
+
+# start simple X hotkey daemon
+if ! pgrep sxhkd; then
+	sxhkd &
+fi
+
+# start nightlight with location services
+if ! pgrep redshift; then
+	~/scripts/nightlight.sh auto &
+fi
+
+# start screen locker
+if ! pgrep xss-lock; then
+	xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
+fi
+
+# power management
+if ! pgrep xfce4-power-manager; then
+	xfce4-power-manager --daemon &
+fi
 
 bspc monitor $primary -d 1 2 3 4 5
 bspc monitor $secondary -d 6 7 8 9 10
@@ -32,3 +65,6 @@ bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+
+bspc rule -a Thunar state=floating
+

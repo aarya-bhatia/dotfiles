@@ -101,6 +101,7 @@ extra=(
 	texlive
 	ttf-hack-nerd
 	visual-studio-code-bin
+	bsp-layout
 	zoom
 )
 

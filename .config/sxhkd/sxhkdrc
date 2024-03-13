@@ -96,3 +96,85 @@ alt + space
 	bsp-layout next --layouts tall,rtall,wide,rwise,grid,tiled,monocle; \
 	current=$(bsp-layout get); \
 	notify-send "layout changed: $current"
+
+alt + f1
+	bsp-layout next --layouts tall,rtall,wide,rwise,grid,tiled,monocle; \
+	current=$(bsp-layout get); \
+	notify-send "layout changed: $current"
+
+alt + o; {v,f,t,d}
+	{alacritty -e nvim, firefox, thunderbird, discord}
+
+alt + super + p
+	bspc config focus_follows_pointer {true,false}
+
+alt + shift + v
+	/home/aarya/scripts/launch_vim.sh
+
+# use master-stack layout
+alt + F1
+	bsp-layout set tall -- --master-size 0.5
+
+# use mirror master-stack layout
+alt + F2
+	bsp-layout set rtall -- --master-size 0.5
+
+# use spiral layout
+alt + F3
+	bsp-layout set tiled
+
+# monocle
+alt + F4
+	bsp-layout set monocle
+
+# launch python repl
+alt+control+p
+	alacritty --class=floating -e tmux new-session -A -s python3 "~/pyvenv/bin/python3"
+
+# launch calculator (qalc)
+alt+control+q
+	alacritty --class=floating -e tmux new-session -A -s qalc "qalc"
+
+# launch calculator (qalc)
+alt+XF86Calculator
+	alacritty --class="qalc" -e qalc
+
+# music player
+alt+XF86Tools
+	alacritty -e ncmpcpp
+
+# email client
+alt+XF86Mail
+	thunderbird
+
+# file browser
+alt+XF86Search
+	thunar
+
+# file browser
+alt+t
+	thunar
+
+# press print key
+Print; @Print
+	/home/aarya/scripts/screenshot.sh && sxiv $(xsel -o)
+
+# press alt + print key
+alt + Print
+	/home/aarya/scripts/screenshot.sh -s && sxiv $(xsel -o)
+
+# launch sxiv to view/select wallpapers (ctrl-x+w)
+alt+shift+w
+	sxiv /home/aarya/wallpapers/*
+
+# launch sxiv to view screenshots
+alt+shift+s
+	sxiv /home/aarya/screenshots/*
+
+# password input
+alt + shift + p
+	/home/aarya/scripts/dmenu/dmenupass.sh
+
+# power menu
+alt + BackSpace
+	/home/aarya/scripts/dmenu/dmenu_power.sh
