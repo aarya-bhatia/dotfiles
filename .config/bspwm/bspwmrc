@@ -8,8 +8,11 @@ secondary=HDMI-1
 numlockx on # turn on numlock
 ~/.config/polybar/launch.sh >/dev/null & # launch polybar
 ~/scripts/keymaps.sh & # setup keyboard mappings
-~/scripts/screenmirror.sh & # mirror display to HDMI
 ~/scripts/wallpaper.py & # set wallpaper to last used
+
+if xrandr | grep -q "HDMI-1 connected"; then
+	/home/aarya/.screenlayout/horizontal.sh &
+fi
 
 # start notification daemon
 if ! pgrep dunst; then
@@ -27,7 +30,7 @@ if ! pgrep mpd; then
 fi
 
 if ! pgrep picom; then
-	picom --backend glx --xrender-sync-fence # start compositor
+	picom --backend glx --xrender-sync-fence & # start compositor
 fi
 
 # start simple X hotkey daemon
@@ -50,6 +53,8 @@ if ! pgrep xfce4-power-manager; then
 	xfce4-power-manager --daemon &
 fi
 
+alacritty -&
+
 bspc monitor $primary -d 1 2 3 4 5
 bspc monitor $secondary -d 6 7 8 9 10
 
@@ -66,5 +71,6 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 
-bspc rule -a Thunar state=floating
-
+bspc rule -a Thunar state=floating center=true rectange=960x750++
+bspc rule -a floating center=true state=floating
+bspc rule -a qalc state=floating center=true rectangle=520x400

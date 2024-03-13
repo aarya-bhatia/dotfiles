@@ -34,8 +34,11 @@ alt + {_,shift + }q
 	bspc node -{c,k}
 
 # switch to desktop
-alt + {0-9}
-	bspc desktop -f {0-9}
+alt + {1-9}
+	bspc desktop -f {1-9}
+
+alt + 0
+	bspc desktop -f 10
 
 # alternate between the tiled and monocle layout
 alt + m
