@@ -5,6 +5,7 @@ secondary=HDMI-1
 
 ## autostart
 
+xsetroot -cursor_name left_ptr & # set cursor style
 numlockx on # turn on numlock
 ~/.config/polybar/launch.sh >/dev/null & # launch polybar
 ~/scripts/keymaps.sh & # setup keyboard mappings
@@ -15,62 +16,73 @@ if xrandr | grep -q "HDMI-1 connected"; then
 fi
 
 # start notification daemon
-if ! pgrep dunst; then
+if ! pgrep -f dunst; then
 	dunst &
 fi
 
 # start session manager
-if ! pgrep lxsession; then
+if ! pgrep -f lxsession; then
 	lxsession &
 fi
 
 # start music player daemon
-if ! pgrep mpd; then
+if ! pgrep -f mpd; then
 	mpd &
 fi
 
-if ! pgrep picom; then
+if ! pgrep -f picom; then
 	picom --backend glx --xrender-sync-fence & # start compositor
 fi
 
 # start simple X hotkey daemon
-if ! pgrep sxhkd; then
+if ! pgrep -f sxhkd; then
 	sxhkd &
 fi
 
 # start nightlight with location services
-if ! pgrep redshift; then
+if ! pgrep -f redshift; then
 	~/scripts/nightlight.sh auto &
 fi
 
 # start screen locker
-if ! pgrep xss-lock; then
+if ! pgrep -f xss-lock; then
 	xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
 fi
 
 # power management
-if ! pgrep xfce4-power-manager; then
+if ! pgrep -f xfce4-power-manager; then
 	xfce4-power-manager --daemon &
 fi
-
-alacritty -&
 
 bspc monitor $primary -d 1 2 3 4 5
 bspc monitor $secondary -d 6 7 8 9 10
 
-bspc config border_width         2
-bspc config window_gap          10
+bspc config border_width        2
+bspc config window_gap          8
 
-bspc config split_ratio          0.52
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+
+bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
+
+bspc config normal_border_color             "#4c566a"
+bspc config focused_border_color            "#5e81ac"
+bspc config presel_border_color             "#5e81ac"
+
+# use super+mouse to drag/resize floating windows
+bspc config pointer_modifier mod4
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action2 resize_corner
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
+bspc rule -a zoom state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-
 bspc rule -a Thunar state=floating center=true rectange=960x750++
 bspc rule -a floating center=true state=floating
 bspc rule -a qalc state=floating center=true rectangle=520x400

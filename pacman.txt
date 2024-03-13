@@ -66,8 +66,6 @@ cdparanoia
 chromaprint
 chromium
 clang
-clipmenu
-clipnotify
 clucene
 compiler-rt
 confuse
@@ -185,6 +183,8 @@ hunspell
 hwdata
 hwloc
 hyphen
+i3-autolayout
+i3-autolayout-debug
 i3-wm
 i3blocks
 i3lock-color
@@ -855,6 +855,7 @@ xorg-xprop
 xorg-xrandr
 xorg-xrdb
 xorg-xset
+xorg-xsetroot
 xorgproto
 xsel
 xss-lock

@@ -5,8 +5,8 @@
 
 # mod1 = Alt, mod4 = windows key
 
-set $mod Mod1
-set $super Mod4
+set $mod Mod4
+set $super Mod1
 
 set $primary eDP-1
 set $secondary HDMI-1
@@ -23,7 +23,7 @@ workspace_auto_back_and_forth yes
 
 bindsym $super+Shift+c 				exec i3-msg reload && notify-send "reloaded i3"
 bindsym $super+Shift+r 				exec i3-msg restart && notify-send "restarted i3"
-bindsym $super+Shift+q 				kill
+bindsym $super+q 					kill
 bindsym $super+Tab 					workspace next
 bindsym $super+Shift+Tab 			workspace prev
 
@@ -86,7 +86,7 @@ bindsym $super+r 					mode "$mode_resize"
 bindsym $super+Shift+m 				mode "$mode_filemarks"
 bindsym $super+Shift+t 				mode "$mode_terminal"
 bindsym $super+o 					mode "$mode_application"
-bindsym $super+Escape				mode "$mode_power"
+bindsym $super+BackSpace			mode "$mode_power"
 
 # use window title *and* a thick border
 bindsym $super+y 					border normal 3
@@ -117,8 +117,10 @@ bindsym $super+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
 bindsym $super+s layout stacking
-bindsym $super+w layout tabbed
 bindsym $super+e layout toggle split
+
+bindsym $super+w layout tabbed
+# bindsym $super+w exec i3-autolayout tabmode --file-layout /tmp/i3-autolayout-tabmode.save
 
 # toggle tiling / floating
 bindsym $super+Shift+space floating toggle
@@ -139,6 +141,9 @@ bindsym $super+minus scratchpad show
 
 # exec commands {{{
 
+# Start polybar
+exec_always --no-startup-id /home/aarya/.config/polybar/launch_i3.sh &
+
 # Start music player daemon
 exec --no-startup-id 			mpd &
 
@@ -146,7 +151,7 @@ exec --no-startup-id 			mpd &
 # exec --no-startup-id 			nm-applet &
 
 # Display wallpaper
-exec --no-startup-id 			~/scripts/wallpaper.sh /home/aarya/wallpapers/archlinux/sunset.jpg
+exec --no-startup-id 			~/scripts/wallpaper.py
 
 # Window compositor
 exec --no-startup-id 			picom --backend glx --xrender-sync-fence &
@@ -160,9 +165,6 @@ exec_always --no-startup-id 	~/scripts/keymaps.sh &
 # Dunst notification daemon
 exec --no-startup-id 			dunst &
 
-# start clipmenu deamon
-# exec --no-startup-id 			clipmenud &
-
 # mirror display with HDMI-1 monitor if connected
 exec_always --no-startup-id 	~/scripts/screenmirror.sh
 
@@ -175,6 +177,9 @@ exec --no-startup-id 			lxsession &
 
 # Nightlight
 exec --no-startup-id 			~/scripts/nightlight.sh auto &
+
+# Bspwm-like layout Manager
+# exec --no-startup-id			i3-autolayout autolayout &
 
 # }}}
 
@@ -313,14 +318,10 @@ hide_edge_borders smart_no_gaps
 
 # bar {
 # 	status_command i3status
-# 	# status_command 2>/tmp/i3blocks.err i3blocks -vvv | tee /tmp/i3blocks.out
-# 	position top
+# 	position bottom
 # 	tray_output eDP-1
-# 	font pango:Hack Nerd Font 9.5
+# 	font pango:monospace 9
 # }
-
-# exec_always --no-startup-id 	/home/aarya/.config/lemonbar/launchlemon.sh 2>&1 >/tmp/lemonbar.err &
-exec --no-startup-id /home/aarya/.config/polybar/launch.sh &
 
 # }}}
 

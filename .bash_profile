@@ -4,6 +4,8 @@
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc
 
+# export XDG_SESSION_TYPE=X11
+
 export XDG_CACHE_HOME=$HOME/.cache
 export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
@@ -27,18 +29,24 @@ export BROWSER="firefox"
 export EDITOR="nvim"
 export READER="zathura"
 export TERMINAL=alacritty
-export FZF_DEFAULT_OPTS="--border --info=inline -m"
-export FZF_DEFAULT_COMMAND="${fd} --follow --color=auto --hidden --exclude={.git,node_modules,tmp,__pycache__,undodir,.cache}"
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export DOTFILES="$HOME/dotfiles"
 export SCRIPTS_DIR="$HOME/scripts"
 export COPYIGNORE="$HOME/dotfiles/copyignore"
+
+export FZF_DEFAULT_OPTS="--border --info=inline -m"
+export FZF_DEFAULT_COMMAND="fd --follow --color=auto --hidden --exclude={.git,node_modules,tmp,__pycache__,undodir,plugged,.cache}"
+
 export LATITUDE="41.11"
 export LONGITUDE="-88.24"
 
-export PATH=$PATH:${GOPATH}/bin:${GOROOT}/bin
-export PATH=$PATH:$SCRIPTS_DIR
-export PATH=$PATH:/home/$USER/.local/bin
-export PATH=$PATH:/home/$USER/pyvenv/bin
+# colored man pages
+export MANPAGER="less -R --use-color -Dd+r -Du+b"
+export MANROFFOPT="-P -c"
+
 export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/snap/bin
+export PATH=$PATH:$HOME/.local/bin
+export PATH=$PATH:$HOME/scripts
+export PATH=$PATH:$HOME/pyvenv/bin
+export PATH=$PATH:$GOPATH/bin
