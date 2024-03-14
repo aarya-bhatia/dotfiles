@@ -1,0 +1,3 @@
+/home/aarya
+└── (empty)
+
