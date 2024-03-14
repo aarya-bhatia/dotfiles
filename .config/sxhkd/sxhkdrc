@@ -52,17 +52,30 @@ alt + {_,shift + } Tab
 alt + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
-# focus/swap nodes in direction
-alt + {_,shift + }{Left,Down,Up,Right}
-	bspc node -{f,s} {west,south,north,east}
-
 # focus the next/previous desktop in the current monitor
 alt + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
-# focus the next/previous window in the current desktop
+# Toggle floating and tiled window
+alt + f
+	if [ -z "$(bspc query -N -n focused.floating)" ]; then \
+        bspc node focused -t floating; \
+    else \
+        bspc node focused -t tiled; \
+    fi
+
+# Focus a floating window / Cycle floating windows.
+alt + {_,shift + }g
+	bspc node 'focused.floating#{next,prev}.local.!hidden.floating' -f \
+	    || bspc node 'last.local.!focused.!hidden.floating' -f \
+	    || bspc node  'any.local.!focused.!hidden.floating' -f
+
+# Focus a (pseudo_)tiled window / Cycle (pseudo_)tiled windows.
 alt + {_,shift + }c
-	bspc node -f {next,prev}.local.!hidden.window
+	bspc node 'focused.!floating.!fullscreen.window#{next,prev}.local.!hidden.!floating.!fullscreen.window' -f \
+	    || bspc node 'last.local.!focused.!hidden.!floating.!fullscreen.window' -f \
+	    || bspc node  'any.local.!focused.!hidden.!floating.!fullscreen.window' -f
+
 
 # focus or send to the given desktop
 alt + {_,shift + }{1-9,0}
@@ -82,7 +95,7 @@ alt + {_,shift + }{1-9,0}
 
 # Smart resize, will grow or shrink depending on location.
 # Will always grow for floating nodes.
-alt + ctrl + super + {Left,Down,Up,Right}
+alt + ctrl + super + {h,j,k,l}
   n=20; \
   { d1=left;   d2=right;  dx=-$n; dy=0;   \
   , d1=bottom; d2=top;    dx=0;   dy=$n;  \
