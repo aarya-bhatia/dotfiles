@@ -57,9 +57,17 @@ alt + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # Toggle floating and tiled window
-alt + f
+alt + space
 	if [ -z "$(bspc query -N -n focused.floating)" ]; then \
         bspc node focused -t floating; \
+    else \
+        bspc node focused -t tiled; \
+    fi
+
+# Toggle fullscreen and tiled window
+alt + f
+	if [ -z "$(bspc query -N -n focused.fullscreen)" ]; then \
+        bspc node focused -t fullscreen; \
     else \
         bspc node focused -t tiled; \
     fi
@@ -108,12 +116,6 @@ alt + ctrl + super + {h,j,k,l}
 alt + super + {0-9}
 	mpc -q seek {0-9}0%
 
-alt + space
-	bsp-layout next --layouts tall,rtall,wide,rwise,grid,tiled,monocle; \
-	current=$(bsp-layout get); \
-	notify-send "layout changed: $current"
-
-
 alt + o; {v,f,t,d}
 	{alacritty -e nvim, firefox, thunderbird, discord}
 
@@ -123,12 +125,10 @@ alt + super + p
 alt + shift + v
 	/home/aarya/scripts/launch_vim.sh
 
-# layouts: { tiled, monocle, master-stack, reverse master-stack }
+# layouts: tiled, monocle, master-stack, reverse-master-stack
 alt + control + {1,2,3,4}
-	{ bsp-layout set tiled; polybar-msg action my_layout hook 0,					 \
-	  bsp-layout set monocle; polybar-msg action my_layout hook 0,					 \
-	  bsp-layout set tall -- --master-size 0.5; polybar-msg action my_layout hook 0, \
-	  bsp-layout set rtall -- --master-size 0.5; polybar-msg action my_layout hook 0 }
+	bsp-layout set { tiled, monocle, tall -- --master-size 0.5, rtall -- --master-size 0.5 }; \
+	polybar-msg action my_layout hook 0
 
 # launch python repl
 alt+control+p

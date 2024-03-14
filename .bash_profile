@@ -12,6 +12,7 @@ export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 export XDG_RUNTIME_DIR=/run/user/$UID
 
+export CARGO_HOME=$XDG_DATA_HOME/cargo
 export DOTNET_CLI_HOME=$XDG_DATA_HOME/dotnet
 export GOPATH=$XDG_DATA_HOME/go
 export GTK2_RC_FILES=$XDG_CONFIG_HOME/gtk-2.0/gtkrc

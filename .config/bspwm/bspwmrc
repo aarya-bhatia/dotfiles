@@ -11,10 +11,6 @@ numlockx on # turn on numlock
 ~/scripts/keymaps.sh & # setup keyboard mappings
 ~/scripts/wallpaper.py & # set wallpaper to last used
 
-if xrandr | grep -q "HDMI-1 connected"; then
-	/home/aarya/.screenlayout/horizontal.sh &
-fi
-
 # start notification daemon
 if ! pgrep -f dunst; then
 	dunst &
@@ -54,8 +50,22 @@ if ! pgrep -f xfce4-power-manager; then
 	xfce4-power-manager --daemon &
 fi
 
-bspc monitor $primary -d 1 2 3 4 5
-bspc monitor $secondary -d 6 7 8 9 10
+bspc subscribe desktop_focus | while read -r _; do
+	polybar-msg action my_layout hook 0
+done &
+
+Multiscreen() {
+	bspc monitor $primary -d 1 2 3 4 5
+	bspc monitor $secondary -d 6 7 8 9 10
+	xrandr | grep -q "HDMI-1 connected" && /home/aarya/.screenlayout/horizontal.sh &
+}
+
+Mirror() {
+	bspc monitor $primary -d 1 2 3 4 5 6 7 8 9 10
+	/home/aarya/scripts/screenmirror.sh &
+}
+
+Mirror
 
 bspc config border_width        2
 bspc config window_gap          8
@@ -80,7 +90,6 @@ bspc config pointer_action2 resize_corner
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
 bspc rule -a mplayer2 state=floating
-# bspc rule -a Zathura state=floating
 bspc rule -a zoom state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
