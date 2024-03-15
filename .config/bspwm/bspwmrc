@@ -49,7 +49,7 @@ Mirror() {
 Mirror
 
 bspc config border_width        2
-bspc config window_gap          8
+bspc config window_gap          2
 
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true
