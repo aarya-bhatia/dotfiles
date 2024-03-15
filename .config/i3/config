@@ -142,7 +142,7 @@ bindsym $super+minus scratchpad show
 # exec commands {{{
 
 # Start polybar
-exec_always --no-startup-id /home/aarya/.config/polybar/launch_i3.sh &
+exec_always --no-startup-id /home/aarya/.config/polybar/i3_launch.sh &
 
 # Start music player daemon
 exec --no-startup-id 			mpd &

@@ -33,12 +33,9 @@ alt + shift + r
 alt + {_,shift + }q
 	bspc node -{c,k}
 
-# switch to desktop
-alt + {1-9}
-	bspc desktop -f {1-9}
-
-alt + 0
-	bspc desktop -f 10
+# focus or send to the given desktop
+alt + {_,shift + }{0-9}
+	bspc {desktop -f,node -d} {X,I,II,III,IV,V,VI,VII,VIII,IX}
 
 # alternate between the tiled and monocle layout
 alt + m
@@ -57,12 +54,22 @@ alt + bracket{left,right}
 	bspc desktop -f {prev,next}.local
 
 # Toggle floating and tiled window
-alt + space
+alt + shift + space
 	if [ -z "$(bspc query -N -n focused.floating)" ]; then \
         bspc node focused -t floating; \
     else \
         bspc node focused -t tiled; \
     fi
+
+# to change focus between tiling and floating windows
+alt + space
+	if ! bspc query -N -n focused.fullscreen; then \
+		if bspc query -N -n focused.floating; then \
+			bspc node -f any.local.\!floating; \
+		else \
+			bspc node -f any.local.floating; \
+		fi \
+	fi
 
 # Toggle fullscreen and tiled window
 alt + f
@@ -72,22 +79,21 @@ alt + f
         bspc node focused -t tiled; \
     fi
 
-# Focus a floating window / Cycle floating windows.
-alt + {_,shift + }g
-	bspc node 'focused.floating#{next,prev}.local.!hidden.floating' -f \
-	    || bspc node 'last.local.!focused.!hidden.floating' -f \
-	    || bspc node  'any.local.!focused.!hidden.floating' -f
-
-# Focus a (pseudo_)tiled window / Cycle (pseudo_)tiled windows.
+# focus the next/previous window in the current desktop
 alt + {_,shift + }c
-	bspc node 'focused.!floating.!fullscreen.window#{next,prev}.local.!hidden.!floating.!fullscreen.window' -f \
-	    || bspc node 'last.local.!focused.!hidden.!floating.!fullscreen.window' -f \
-	    || bspc node  'any.local.!focused.!hidden.!floating.!fullscreen.window' -f
+	bspc node -f {next,prev}.local.!hidden.window
 
-
-# focus or send to the given desktop
-alt + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} '^{1-9,10}'
+# # Focus a floating window / Cycle floating windows.
+# alt + {_,shift + }g
+# 	bspc node 'focused.floating#{next,prev}.local.!hidden.floating' -f \
+# 	    || bspc node 'last.local.!focused.!hidden.floating' -f \
+# 	    || bspc node  'any.local.!focused.!hidden.floating' -f
+#
+# # Focus a (pseudo_)tiled window / Cycle (pseudo_)tiled windows.
+# alt + {_,shift + }c
+# 	bspc node 'focused.!floating.!fullscreen.window#{next,prev}.local.!hidden.!floating.!fullscreen.window' -f \
+# 	    || bspc node 'last.local.!focused.!hidden.!floating.!fullscreen.window' -f \
+# 	    || bspc node  'any.local.!focused.!hidden.!floating.!fullscreen.window' -f
 
 # volume keys
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
@@ -122,13 +128,12 @@ alt + o; {v,f,t,d}
 alt + super + p
 	bspc config focus_follows_pointer {true,false}
 
-alt + shift + v
+alt + v
 	/home/aarya/scripts/launch_vim.sh
 
 # layouts: tiled, monocle, master-stack, reverse-master-stack
 alt + control + {1,2,3,4}
-	bsp-layout set { tiled, monocle, tall -- --master-size 0.5, rtall -- --master-size 0.5 }; \
-	polybar-msg action my_layout hook 0
+	bsp-layout set { tiled, monocle, tall -- --master-size 0.5, rtall -- --master-size 0.5 }; # polybar-msg action my_layout hook 0
 
 # launch python repl
 alt+control+p
@@ -181,3 +186,7 @@ alt + shift + p
 # power menu
 alt + BackSpace
 	/home/aarya/scripts/dmenu/dmenu_power.sh
+
+# reload polybar
+F11; @F11
+	/home/aarya/.config/polybar/launch.sh; notify-send "reloaded polybar"

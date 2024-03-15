@@ -7,52 +7,32 @@ secondary=HDMI-1
 
 xsetroot -cursor_name left_ptr & # set cursor style
 numlockx on # turn on numlock
-~/.config/polybar/launch.sh >/dev/null & # launch polybar
+~/.config/polybar/bspwm_launch.sh >/dev/null & # launch polybar
 ~/scripts/keymaps.sh & # setup keyboard mappings
 ~/scripts/wallpaper.py & # set wallpaper to last used
 
 # start notification daemon
-if ! pgrep -f dunst; then
-	dunst &
-fi
+pgrep -f dunst || dunst &
 
 # start session manager
-if ! pgrep -f lxsession; then
-	lxsession &
-fi
+pgrep -f lxsession || lxsession &
 
 # start music player daemon
-if ! pgrep -f mpd; then
-	mpd &
-fi
+pgrep -f mpd || mpd &
 
-if ! pgrep -f picom; then
-	picom --backend glx --xrender-sync-fence & # start compositor
-fi
+pgrep -f picom || picom --backend glx --xrender-sync-fence & # start compositor
 
 # start simple X hotkey daemon
-if ! pgrep -f sxhkd; then
-	sxhkd &
-fi
+pgrep -f sxhkd || sxhkd &
 
 # start nightlight with location services
-if ! pgrep -f redshift; then
-	~/scripts/nightlight.sh auto &
-fi
+pgrep -f redshift || ~/scripts/nightlight.sh auto &
 
 # start screen locker
-if ! pgrep -f xss-lock; then
-	xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
-fi
+pgrep -f xss-lock || xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
 
 # power management
-if ! pgrep -f xfce4-power-manager; then
-	xfce4-power-manager --daemon &
-fi
-
-bspc subscribe desktop_focus | while read -r _; do
-	polybar-msg action my_layout hook 0
-done &
+pgrep -f xfce4-power-manager || xfce4-power-manager --daemon &
 
 Multiscreen() {
 	bspc monitor $primary -d 1 2 3 4 5
@@ -61,7 +41,8 @@ Multiscreen() {
 }
 
 Mirror() {
-	bspc monitor $primary -d 1 2 3 4 5 6 7 8 9 10
+	# bspc monitor $primary -d 1 2 3 4 5 6 7 8 9 10
+	bspc monitor $primary -d I II III IV V VI VII VIII IX X
 	/home/aarya/scripts/screenmirror.sh &
 }
 
