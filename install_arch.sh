@@ -90,7 +90,6 @@ extra=(
 	bspwm
 	lemonbar-xft-git
 	nodejs
-	noto-fonts-emoji
 	npm
 	polybar
 	rmlint

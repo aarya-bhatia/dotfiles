@@ -74,7 +74,6 @@ network-manager-applet
 networkmanager
 nodejs
 noto-fonts
-noto-fonts-emoji
 npm
 numlockx
 openbsd-netcat
