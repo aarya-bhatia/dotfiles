@@ -20,7 +20,7 @@ tmp/
 .DS_Store
 *.o
 *.exe
-.config/discord
+.config/discord/
 
 # Python
 .venv/

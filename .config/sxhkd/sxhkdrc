@@ -160,8 +160,18 @@ alt+XF86Search
 	thunar
 
 # file browser
-alt+t
+alt+e
 	thunar
+
+# Add focused window to a tabbed instance in given direction
+alt + t; {h,j,k,l}
+    tabc.sh $(bspc query -N -n {west,south,north,east}) add $(bspc query -N -n focused)
+
+# Remove one tab from tabbed
+alt + t; r
+    tabbed=$(bspc query -N -n focused); \
+    child=$(tabc.sh $tabbed list | head -n1); \
+    tabc.sh $tabbed remove $child
 
 # press print key
 Print; @Print
@@ -189,4 +199,4 @@ alt + BackSpace
 
 # reload polybar
 F11; @F11
-	/home/aarya/.config/polybar/launch.sh; notify-send "reloaded polybar"
+	/home/aarya/.config/polybar/bspwm_launch.sh; notify-send "reloaded polybar"

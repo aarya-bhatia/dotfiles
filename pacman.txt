@@ -2,7 +2,6 @@ acpi
 adwaita-dark
 alacritty
 arandr
-archlinux-themes-sddm
 ario
 asmfmt
 base
@@ -66,7 +65,6 @@ mate-user-guide
 mpc
 mpd
 mpv
-multicolor-sddm-theme
 ncmpcpp
 neofetch
 neovim
@@ -75,6 +73,7 @@ networkmanager
 nodejs
 noto-fonts
 npm
+nsxiv
 numlockx
 openbsd-netcat
 openconnect
@@ -98,8 +97,7 @@ redshift
 rofi
 rsync
 scrot
-sddm
-sddm-theme-astronaut
+slock
 sof-firmware
 stalonetray
 surf

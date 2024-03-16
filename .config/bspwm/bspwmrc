@@ -30,9 +30,19 @@ pgrep -f redshift || ~/scripts/nightlight.sh auto &
 
 # start screen locker
 pgrep -f xss-lock || xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
+# pgrep -f xss-lock || xss-lock --transfer-sleep-lock -- slock &
 
 # power management
 pgrep -f xfce4-power-manager || xfce4-power-manager --daemon &
+
+# screen saver
+# pgrep -f xscreensaver || xscreensaver --no-splash &
+
+# set volume
+pamixer --set-volume 32 &
+
+# set brightness
+# brightnessctl set 50% &
 
 Multiscreen() {
 	bspc monitor $primary -d 1 2 3 4 5
@@ -49,7 +59,7 @@ Mirror() {
 Mirror
 
 bspc config border_width        2
-bspc config window_gap          2
+bspc config window_gap          8
 
 bspc config remove_disabled_monitors true
 bspc config remove_unplugged_monitors true

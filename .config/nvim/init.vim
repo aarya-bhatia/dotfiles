@@ -286,7 +286,7 @@ nnoremap <leader>id i<C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR><Esc>
 nnoremap <leader>mk :make<CR>
 
 " Run the command on current line and paste output below
-nnoremap <leader>R "zy$:r !z
+nnoremap <leader>R "zyy:r !z
 
 xnoremap ss !sort<CR>
 xnoremap su !sort\|uniq<CR>
