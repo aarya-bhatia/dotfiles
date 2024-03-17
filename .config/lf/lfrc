@@ -151,11 +151,16 @@ map R !$HOME/scripts/lf/bulkrename.py
 
 # To change mode bits for selected files
 cmd chmod %{{
-  printf "Mode bits: "
+  printf "Mode bits [1]rw-r----- [2]rwx-rx---- "
   read ans
-  for file in "$fx"
-  do
-    chmod $ans $file
+  for file in "$fx"; do
+	if [ "$ans" = "1" ]; then
+		chmod 640 "$file"
+	elif [ "$ans" = "2" ]; then
+		chmod 750 "$file"
+	else
+		chmod "$ans" "$file"
+	fi
   done
 }}
 

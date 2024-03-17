@@ -199,4 +199,5 @@ alt + BackSpace
 
 # reload polybar
 F11; @F11
-	/home/aarya/.config/polybar/bspwm_launch.sh; notify-send "reloaded polybar"
+	/home/aarya/.config/polybar/bspwm_launch.sh; notify-send "reloaded polybar"; \
+	/home/aarya/.config/lemonbar/launchlemon.sh; notify-send "reloaded lemonbar";

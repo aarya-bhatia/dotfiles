@@ -2,6 +2,9 @@
 
 #include <stdbool.h>
 
+#define SPACING "   "
+#define PYTHON3 "python3"
+#define SHELL "/bin/sh"
 #define MAX_BUFFER_SIZE 256
 
 #define die(msg)                                                                                                       \
@@ -23,6 +26,9 @@ struct Module {
     char *bg_color;
     char *fg_color;
 };
+
+void setup();
+void start();
 
 unsigned int num_modules();
 void add_module(const char *args[], bool escape, const char *prefix);

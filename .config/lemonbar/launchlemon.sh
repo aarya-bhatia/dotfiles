@@ -16,7 +16,7 @@ start() {
 
 pkill -f /home/aarya/.config/lemonbar/bin/main
 pkill -f /home/aarya/scripts/lemonbar
-pkill -f lemonbar
+pkill -x lemonbar
 
 start &
 echo "lemonbar launched..."

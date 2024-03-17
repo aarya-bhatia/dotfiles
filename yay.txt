@@ -30,6 +30,7 @@ font-manager
 fzf
 gdb
 git
+gnome-terminal
 go
 gst-plugin-pipewire
 i3-autolayout
@@ -91,6 +92,7 @@ playerctl
 polybar
 python-pip
 python-virtualenv
+qbittorrent
 qt5ct
 rclone
 redshift
@@ -137,6 +139,7 @@ xorg-xsetroot
 xsel
 xss-lock
 xwallpaper
+yad
 yay
 zathura
 zathura-pdf-mupdf
