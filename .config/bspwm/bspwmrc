@@ -36,9 +36,6 @@ pgrep -f xss-lock || xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-
 # power management
 pgrep -f xfce4-power-manager || xfce4-power-manager --daemon &
 
-# screen saver
-# pgrep -f xscreensaver || xscreensaver --no-splash &
-
 # set volume
 pamixer --set-volume 32 &
 
@@ -46,6 +43,10 @@ pamixer --set-volume 32 &
 # brightnessctl set 50% &
 
 ToggleLemonbar() {
+	if pgrep -f "bspc subscribe node_state"; then
+		return 0
+	fi
+
 	bspc subscribe node_state |
 		while read line; do
 			action=$(echo $line | awk '{print $5}')

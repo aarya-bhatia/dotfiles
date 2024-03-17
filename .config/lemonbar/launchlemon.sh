@@ -2,10 +2,10 @@
 
 start() {
 	source /home/aarya/pyvenv/bin/activate
-	make
-	/home/aarya/.config/lemonbar/bin/main | lemonbar -b -p -g x25++ \
+	cd /home/aarya/.config/lemonbar && make
+	/home/aarya/.config/lemonbar/bin/main | lemonbar -b -p -g x24++ \
 		-F#ffffff -B#222222 -U#268BD2 -u 2 \
-		-f "Hack Nerd Font:size=9.5" \
+		-f "Hack Nerd Font:size=10" \
 		-f "Font Awesome 6 Free"  \
 		-f "Font Awesome 6 Brands" \
 		-f "Font Awesome 6 Free Solid" |
@@ -14,6 +14,9 @@ start() {
 		done
 }
 
-killall -q lemonbar
+pkill -f /home/aarya/.config/lemonbar/bin/main
+pkill -f /home/aarya/scripts/lemonbar
+pkill -f lemonbar
+
 start &
 echo "lemonbar launched..."

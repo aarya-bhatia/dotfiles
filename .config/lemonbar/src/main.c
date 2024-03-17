@@ -131,6 +131,7 @@ int main()
 {
     signal(SIGCHLD, on_sigchld);
     signal(SIGINT, on_sigint);
+    signal(SIGTERM, on_sigint);
 
     epoll_fd = epoll_create1(0);
     if (epoll_fd == -1) {
@@ -144,13 +145,14 @@ int main()
     add_module((const char *[]){SHELL, "-c", "echo 4", NULL}, false, NULL);
     add_module((const char *[]){SHELL, "-c", "echo 5", NULL}, false, NULL);
 #else
-    add_module((const char *[]){SHELL, "-c", "/home/aarya/scripts/lemonbar/apps.sh", NULL}, false, NULL);
-    add_module((const char *[]){SHELL, "-c", "/home/aarya/scripts/lemonbar/kernel.sh", NULL}, false, "%{r}");
-    add_module((const char *[]){PYTHON3, "/home/aarya/scripts/lemonbar/disk.py", NULL}, false, NULL);
-    add_module((const char *[]){SHELL, "-c", "/home/aarya/scripts/lemonbar/packages.sh", NULL}, false, NULL);
+    add_module((const char *[]){"/home/aarya/scripts/lemonbar/apps.sh", NULL}, false, NULL);
+    add_module((const char *[]){"/home/aarya/scripts/lemonbar/kernel.sh", NULL}, false, "%{c}");
+    add_module((const char *[]){"/home/aarya/scripts/lemonbar/uptime.sh", NULL}, false, NULL);
+    add_module((const char *[]){PYTHON3, "/home/aarya/scripts/lemonbar/disk.py", NULL}, false, "%{r}");
+    add_module((const char *[]){"/home/aarya/scripts/lemonbar/packages.sh", NULL}, false, NULL);
     add_module((const char *[]){PYTHON3, "/home/aarya/scripts/cpu.py", NULL}, false, NULL);
     add_module((const char *[]){PYTHON3, "/home/aarya/scripts/memory.py", NULL}, false, NULL);
-    add_module((const char *[]){SHELL, "-c", "/home/aarya/scripts/lemonbar/wifi.sh", NULL}, false, NULL);
+    add_module((const char *[]){"/home/aarya/scripts/lemonbar/wifi.sh", NULL}, false, NULL);
 #endif
 
     int n = num_modules();
