@@ -7,8 +7,8 @@ secondary=HDMI-1
 
 xsetroot -cursor_name left_ptr & # set cursor style
 numlockx on # turn on numlock
-~/.config/polybar/bspwm_launch.sh >/dev/null & # launch top polybar
-~/.config/lemonbar/launchlemon.sh >/dev/null & # launch bottom lemonbar
+~/.config/polybar/bspwm_launch.sh 2>/dev/null & # launch top polybar
+~/.config/lemonbar/launchlemon.sh 2>/dev/null & # launch bottom lemonbar
 ~/scripts/keymaps.sh & # setup keyboard mappings
 ~/scripts/wallpaper.py & # set wallpaper to last used
 
@@ -44,6 +44,26 @@ pamixer --set-volume 32 &
 
 # set brightness
 # brightnessctl set 50% &
+
+ToggleLemonbar() {
+	bspc subscribe node_state |
+		while read line; do
+			action=$(echo $line | awk '{print $5}')
+
+			if [ $action = "fullscreen" ]; then
+				value=$(echo $line | awk '{print $6}')
+				if [ $value = "on" ]; then
+					ID=$(xdo id -N "Bar")
+					[ -z "$ID" ] || xdo hide "$ID"
+				else
+					ID=$(xdo id -N "Bar")
+					[ -z "$ID" ] || xdo show "$ID"
+				fi
+			fi
+		done
+}
+
+ToggleLemonbar &
 
 Multiscreen() {
 	bspc monitor $primary -d 1 2 3 4 5
