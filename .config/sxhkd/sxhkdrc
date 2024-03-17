@@ -74,8 +74,12 @@ alt + space
 # Toggle fullscreen and tiled window
 alt + f
 	if [ -z "$(bspc query -N -n focused.fullscreen)" ]; then \
+		ID=$(xdo id -N "Bar"); \
+		[ -z "$ID" ] || xdo hide "$ID"; \
         bspc node focused -t fullscreen; \
     else \
+		ID=$(xdo id -N "Bar"); \
+		[ -z "$ID" ] || xdo show "$ID"; \
         bspc node focused -t tiled; \
     fi
 

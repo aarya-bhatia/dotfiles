@@ -21,8 +21,10 @@ volatile sig_atomic_t sigchld_received = 0;
 
 void display()
 {
-    char *display_buffer = calloc(1, MAX_BUFFER_SIZE * num_modules());
+    char *display_buffer = calloc(1, (MAX_BUFFER_SIZE + strlen(SPACING)) * num_modules() + 1);
     int index = 0;
+
+    display_buffer[index++] = ' ';
 
     for (struct Module *module = modules; module; module = module->next) {
         if (strlen(module->buffer) == 0) {
@@ -143,9 +145,11 @@ int main()
     add_module((const char *[]){SHELL, "-c", "echo 5", NULL}, false, NULL);
 #else
     add_module((const char *[]){SHELL, "-c", "/home/aarya/scripts/lemonbar/apps.sh", NULL}, false, NULL);
-    add_module((const char *[]){SHELL, "-c", "/home/aarya/scripts/lemonbar/kernel.sh", NULL}, false, NULL);
+    add_module((const char *[]){SHELL, "-c", "/home/aarya/scripts/lemonbar/kernel.sh", NULL}, false, "%{r}");
     add_module((const char *[]){PYTHON3, "/home/aarya/scripts/lemonbar/disk.py", NULL}, false, NULL);
     add_module((const char *[]){SHELL, "-c", "/home/aarya/scripts/lemonbar/packages.sh", NULL}, false, NULL);
+    add_module((const char *[]){PYTHON3, "/home/aarya/scripts/cpu.py", NULL}, false, NULL);
+    add_module((const char *[]){PYTHON3, "/home/aarya/scripts/memory.py", NULL}, false, NULL);
     add_module((const char *[]){SHELL, "-c", "/home/aarya/scripts/lemonbar/wifi.sh", NULL}, false, NULL);
 #endif
 

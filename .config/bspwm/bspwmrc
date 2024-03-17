@@ -7,7 +7,8 @@ secondary=HDMI-1
 
 xsetroot -cursor_name left_ptr & # set cursor style
 numlockx on # turn on numlock
-~/.config/polybar/bspwm_launch.sh >/dev/null & # launch polybar
+~/.config/polybar/bspwm_launch.sh >/dev/null & # launch top polybar
+~/.config/lemonbar/launchlemon.sh >/dev/null & # launch bottom lemonbar
 ~/scripts/keymaps.sh & # setup keyboard mappings
 ~/scripts/wallpaper.py & # set wallpaper to last used
 
