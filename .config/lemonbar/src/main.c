@@ -138,13 +138,6 @@ int main()
         die("epoll_create1");
     }
 
-#ifdef DEBUG
-    add_module((const char *[]){SHELL, "-c", "echo 1", NULL}, false, NULL);
-    add_module((const char *[]){SHELL, "-c", "echo 2", NULL}, false, NULL);
-    add_module((const char *[]){SHELL, "-c", "echo 3", NULL}, false, NULL);
-    add_module((const char *[]){SHELL, "-c", "echo 4", NULL}, false, NULL);
-    add_module((const char *[]){SHELL, "-c", "echo 5", NULL}, false, NULL);
-#else
     add_module((const char *[]){"/home/aarya/scripts/lemonbar/apps.sh", NULL}, false, NULL);
     add_module((const char *[]){"/home/aarya/scripts/lemonbar/kernel.sh", NULL}, false, "%{c}");
     add_module((const char *[]){"/home/aarya/scripts/lemonbar/uptime.sh", NULL}, false, NULL);
@@ -152,8 +145,8 @@ int main()
     add_module((const char *[]){"/home/aarya/scripts/lemonbar/packages.sh", NULL}, false, NULL);
     add_module((const char *[]){PYTHON3, "/home/aarya/scripts/cpu.py", NULL}, false, NULL);
     add_module((const char *[]){PYTHON3, "/home/aarya/scripts/memory.py", NULL}, false, NULL);
+    add_module((const char *[]){PYTHON3, "/home/aarya/scripts/weather.py", NULL}, false, NULL);
     add_module((const char *[]){"/home/aarya/scripts/lemonbar/wifi.sh", NULL}, false, NULL);
-#endif
 
     int n = num_modules();
     if (n == 0) {

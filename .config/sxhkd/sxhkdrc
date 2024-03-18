@@ -83,18 +83,6 @@ alt + f
 alt + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
-# # Focus a floating window / Cycle floating windows.
-# alt + {_,shift + }g
-# 	bspc node 'focused.floating#{next,prev}.local.!hidden.floating' -f \
-# 	    || bspc node 'last.local.!focused.!hidden.floating' -f \
-# 	    || bspc node  'any.local.!focused.!hidden.floating' -f
-#
-# # Focus a (pseudo_)tiled window / Cycle (pseudo_)tiled windows.
-# alt + {_,shift + }c
-# 	bspc node 'focused.!floating.!fullscreen.window#{next,prev}.local.!hidden.!floating.!fullscreen.window' -f \
-# 	    || bspc node 'last.local.!focused.!hidden.!floating.!fullscreen.window' -f \
-# 	    || bspc node  'any.local.!focused.!hidden.!floating.!fullscreen.window' -f
-
 # volume keys
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
 	$HOME/scripts/volume.sh {up,down,mute}
@@ -163,16 +151,6 @@ alt+XF86Search
 alt+e
 	thunar
 
-# Add focused window to a tabbed instance in given direction
-alt + t; {h,j,k,l}
-    tabc.sh $(bspc query -N -n {west,south,north,east}) add $(bspc query -N -n focused)
-
-# Remove one tab from tabbed
-alt + t; r
-    tabbed=$(bspc query -N -n focused); \
-    child=$(tabc.sh $tabbed list | head -n1); \
-    tabc.sh $tabbed remove $child
-
 # press print key
 Print; @Print
 	/home/aarya/scripts/screenshot.sh && sxiv $(xsel -o)
@@ -201,3 +179,8 @@ alt + BackSpace
 F11; @F11
 	/home/aarya/.config/polybar/bspwm_launch.sh; notify-send "reloaded polybar"; \
 	/home/aarya/.config/lemonbar/launchlemon.sh; notify-send "reloaded lemonbar";
+
+# decrease/increase window gap size
+alt + g; {0-9}
+	bspc config window_gap {0-9}
+
