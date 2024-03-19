@@ -7,7 +7,7 @@ secondary=HDMI-1
 
 xsetroot -cursor_name left_ptr & # set cursor style
 numlockx on # turn on numlock
-~/.config/polybar/bspwm_launch.sh & # launch top polybar
+# ~/.config/polybar/bspwm_launch.sh & # launch top polybar
 ~/.config/lemonbar/launchlemon.sh & # launch bottom lemonbar
 ~/scripts/keymaps.sh & # setup keyboard mappings
 ~/scripts/wallpaper.py & # set wallpaper to last used
@@ -35,12 +35,6 @@ pgrep -f xss-lock || xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-
 
 # power management
 pgrep -f xfce4-power-manager || xfce4-power-manager --daemon &
-
-# set volume
-# pamixer --set-volume 32 &
-
-# set brightness
-# brightnessctl set 50% &
 
 ToggleLemonbar() {
 	if pgrep -f "bspc subscribe node_state"; then
