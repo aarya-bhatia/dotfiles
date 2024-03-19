@@ -138,9 +138,9 @@ int main()
         die("epoll_create1");
     }
 
-    add_module((const char *[]){"/home/aarya/scripts/lemonbar/apps.sh", NULL}, false, NULL);
-    add_module((const char *[]){"/home/aarya/scripts/lemonbar/kernel.sh", NULL}, false, "%{c}");
-    add_module((const char *[]){"/home/aarya/scripts/lemonbar/uptime.sh", NULL}, false, NULL);
+    // add_module((const char *[]){"/home/aarya/scripts/lemonbar/apps.sh", NULL}, false, NULL);
+    add_module((const char *[]){"/home/aarya/scripts/lemonbar/kernel.sh", NULL}, false, "%{l}");
+    add_module((const char *[]){"/home/aarya/scripts/lemonbar/uptime.sh", NULL}, false, "%{c}");
     add_module((const char *[]){PYTHON3, "/home/aarya/scripts/lemonbar/disk.py", NULL}, false, "%{r}");
     add_module((const char *[]){"/home/aarya/scripts/lemonbar/packages.sh", NULL}, false, NULL);
     add_module((const char *[]){PYTHON3, "/home/aarya/scripts/cpu.py", NULL}, false, NULL);

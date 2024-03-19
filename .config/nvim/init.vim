@@ -623,4 +623,13 @@ endif
 
 " }}}
 
+" Colors {{{
 " hi Normal guibg=NONE ctermbg=NONE
+
+" Change the color of the current match
+highlight Search cterm=none ctermbg=yellow ctermfg=black guibg=yellow guifg=black
+
+" Change the color of the first character of the current match
+highlight SearchCursor cterm=none ctermbg=yellow ctermfg=black guibg=yellow guifg=black
+
+" }}}
