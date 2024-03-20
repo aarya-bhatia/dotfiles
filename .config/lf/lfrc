@@ -40,8 +40,8 @@ set scrolloff 10
 map ` !true
 
 # execute current file (must be executable)
-cmd exec !python3 $HOME/scripts/lf/exec.py
-cmd exec_args !python3 $HOME/scripts/lf/exec.py args
+cmd exec !python3 $HOME/.config/lf/scripts/exec.py
+cmd exec_args !python3 $HOME/.config/lf/scripts/exec.py args
 
 map x exec
 map X exec_args
@@ -71,7 +71,7 @@ cmd open &{{
 map <enter> open
 
 # To delete files
-cmd trash !$HOME/scripts/lf/trash.py
+cmd trash !python3 $HOME/.config/lf/scripts/trash.py
 map <delete> trash
 map D trash
 
@@ -147,7 +147,7 @@ map O %{{
 }}
 
 # To rename selected files in editor
-map R !$HOME/scripts/lf/bulkrename.py
+map R !python3 $HOME/.config/lf/scripts/bulkrename.py
 
 # To change mode bits for selected files
 cmd chmod %{{
