@@ -110,8 +110,8 @@ alt + ctrl + super + {h,j,k,l}
 alt + super + {0-9}
 	mpc -q seek {0-9}0%
 
-alt + o; {v,f,t,d}
-	{alacritty -e nvim, firefox, thunderbird, discord}
+alt + o; {v,f,t,d,n,a,b,p,w}
+	{alacritty -e nvim, firefox, thunderbird, discord, alacritty -e ncmpcpp, arandr, blueman-manager, pavucontrol, alacritty -e nmtui}
 
 alt + super + p
 	bspc config focus_follows_pointer {true,false}
@@ -180,7 +180,7 @@ F11; @F11
 	/home/aarya/repos/aarya-bhatia/lemonbar/launchlemon.sh; notify-send "reloaded lemonbar"
 	# /home/aarya/.config/polybar/bspwm_launch.sh; notify-send "reloaded polybar"; \
 
-# decrease/increase window gap size
-alt + g; {0-9}
-	bspc config window_gap {0-9}
+# TODO: decrease/increase window gap size
+alt + g; 0
+	bspc config window_gap 0; notify-send "changed window gap to 0"
 
