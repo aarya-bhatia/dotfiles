@@ -8,7 +8,7 @@ secondary=HDMI-1
 xsetroot -cursor_name left_ptr & # set cursor style
 numlockx on # turn on numlock
 # ~/.config/polybar/bspwm_launch.sh & # launch top polybar
-~/.config/lemonbar/launchlemon.sh & # launch bottom lemonbar
+~/repos/aarya-bhatia/lemonbar/launchlemon.sh & # launch bottom lemonbar
 ~/scripts/keymaps.sh & # setup keyboard mappings
 ~/scripts/wallpaper.py & # set wallpaper to last used
 
@@ -41,18 +41,21 @@ ToggleLemonbar() {
 		return 0
 	fi
 
+	echo "lemonbar toggle listener started..."
 	bspc subscribe node_state |
 		while read line; do
 			action=$(echo $line | awk '{print $5}')
 
 			if [ $action = "fullscreen" ]; then
 				value=$(echo $line | awk '{print $6}')
-				if [ $value = "on" ]; then
-					ID=$(xdo id -N "Bar")
-					[ -z "$ID" ] || xdo hide "$ID"
+				if [ "$value" = "on" ]; then
+					for window in $(xdo id -N "Bar"); do
+						xdo hide "$window"
+					done
 				else
-					ID=$(xdo id -N "Bar")
-					[ -z "$ID" ] || xdo show "$ID"
+					for window in $(xdo id -N "Bar"); do
+						xdo show "$window"
+					done
 				fi
 			fi
 		done
@@ -60,18 +63,10 @@ ToggleLemonbar() {
 
 ToggleLemonbar &
 
-Multiscreen() {
-	bspc monitor $primary -d I II III IV V
-	bspc monitor $secondary -d VI VII VIII IX X
-	/home/aarya/.screenlayout/horizontal.sh &
-}
-
-Mirror() {
-	bspc monitor $primary -d I II III IV V VI VII VIII IX X
-	/home/aarya/scripts/screenmirror.sh &
-}
-
-Multiscreen
+bspc monitor $primary -d I II III IV V VI VII VIII IX X
+# bspc monitor $secondary -d I II III IV V VI VII VIII IX X
+# /home/aarya/.screenlayout/horizontal.sh &
+/home/aarya/scripts/screenmirror.sh &
 
 bspc config border_width        2
 bspc config window_gap          8

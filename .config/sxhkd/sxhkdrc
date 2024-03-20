@@ -121,7 +121,7 @@ alt + v
 
 # layouts: tiled, monocle, master-stack, reverse-master-stack
 alt + control + {1,2,3,4}
-	bsp-layout set { tiled, monocle, tall -- --master-size 0.5, rtall -- --master-size 0.5 }; # polybar-msg action my_layout hook 0
+	bsp-layout set { tiled, monocle, tall -- --master-size 0.5, rtall -- --master-size 0.5 };
 
 # launch python repl
 alt+control+p
@@ -175,10 +175,10 @@ alt + shift + p
 alt + BackSpace
 	/home/aarya/scripts/dmenu/dmenu_power.sh
 
-# reload polybar
+# reload status bar
 F11; @F11
-	/home/aarya/.config/polybar/bspwm_launch.sh; notify-send "reloaded polybar"; \
-	/home/aarya/.config/lemonbar/launchlemon.sh; notify-send "reloaded lemonbar";
+	/home/aarya/repos/aarya-bhatia/lemonbar/launchlemon.sh; notify-send "reloaded lemonbar"
+	# /home/aarya/.config/polybar/bspwm_launch.sh; notify-send "reloaded polybar"; \
 
 # decrease/increase window gap size
 alt + g; {0-9}
