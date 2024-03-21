@@ -181,8 +181,8 @@ alt + BackSpace
 
 # reload status bar
 F11; @F11
-	/home/aarya/repos/aarya-bhatia/lemonbar/launchlemon.sh; notify-send "reloaded lemonbar"
-	# /home/aarya/.config/polybar/bspwm_launch.sh; notify-send "reloaded polybar"; \
+	polybar-msg cmd restart; notify-send "reloaded polybar"
+	# /home/aarya/repos/aarya-bhatia/lemonbar/launchlemon.sh; notify-send "reloaded lemonbar"
 
 # TODO: decrease/increase window gap size
 alt + g; 0
