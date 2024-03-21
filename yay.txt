@@ -33,7 +33,6 @@ git
 gnome-terminal
 go
 gst-plugin-pipewire
-i3-autolayout
 i3-wm
 i3blocks
 i3status

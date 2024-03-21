@@ -5,36 +5,7 @@ secondary=HDMI-1
 
 ## autostart
 
-xsetroot -cursor_name left_ptr & # set cursor style
-numlockx on # turn on numlock
-# ~/.config/polybar/bspwm_launch.sh & # launch top polybar
-~/repos/aarya-bhatia/lemonbar/launchlemon.sh & # launch bottom lemonbar
-~/scripts/keymaps.sh & # setup keyboard mappings
-~/scripts/wallpaper.py & # set wallpaper to last used
-
-# start notification daemon
-pgrep -f dunst || dunst &
-
-# start session manager
-pgrep -f lxsession || lxsession &
-
-# start music player daemon
-pgrep -f mpd || mpd &
-
-pgrep -f picom || picom --backend glx --xrender-sync-fence & # start compositor
-
-# start simple X hotkey daemon
-pgrep -f sxhkd || sxhkd &
-
-# start nightlight with location services
-pgrep -f redshift || ~/scripts/nightlight.sh auto &
-
-# start screen locker
-pgrep -f xss-lock || xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
-# pgrep -f xss-lock || xss-lock --transfer-sleep-lock -- slock &
-
-# power management
-pgrep -f xfce4-power-manager || xfce4-power-manager --daemon &
+source ~/.config/bspwm/autostart.sh
 
 ToggleLemonbar() {
 	if pgrep -f "bspc subscribe node_state"; then
@@ -64,9 +35,6 @@ ToggleLemonbar() {
 ToggleLemonbar &
 
 bspc monitor $primary -d I II III IV V VI VII VIII IX X
-# bspc monitor $secondary -d I II III IV V VI VII VIII IX X
-# /home/aarya/.screenlayout/horizontal.sh &
-/home/aarya/scripts/screenmirror.sh &
 
 bspc config border_width        2
 bspc config window_gap          8
@@ -95,5 +63,4 @@ bspc rule -a zoom state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
 bspc rule -a Thunar state=floating center=true rectange=960x750++
-bspc rule -a floating center=true state=floating
-bspc rule -a qalc state=floating center=true rectangle=520x400
+bspc rule -a floating state=floating center=true rectangle=520x400

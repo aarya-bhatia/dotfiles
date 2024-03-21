@@ -22,7 +22,6 @@ export IPYTHONDIR=$XDG_CONFIG_HOME/ipython
 export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
 export PASSWORD_STORE_DIR=$XDG_DATA_HOME/pass
 export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
-export XINITRC=$XDG_CONFIG_HOME/X11/xinitrc
 
 export GPG_TTY=`tty`
 export LESS="-iR"

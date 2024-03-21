@@ -29,7 +29,6 @@ bindsym $super+Shift+Tab 			workspace prev
 
 bindsym $super+Shift+e 				exec --no-startup-id alacritty -e nvim ~/.config/i3/config
 bindsym $super+Control+c 			exec --no-startup-id ~/scripts/dmenu/dmenu_edit_config.sh
-# bindsym $super+Shift+x 			exec --no-startup-id systemctl suspend
 
 bindsym XF86AudioRaiseVolume 		exec 	$HOME/scripts/volume.sh up
 bindsym XF86AudioLowerVolume 		exec 	$HOME/scripts/volume.sh down
@@ -141,45 +140,7 @@ bindsym $super+minus scratchpad show
 
 # exec commands {{{
 
-# Start polybar
-exec_always --no-startup-id /home/aarya/.config/polybar/i3_launch.sh &
-
-# Start music player daemon
-exec --no-startup-id 			mpd &
-
-# Network manager
-# exec --no-startup-id 			nm-applet &
-
-# Display wallpaper
-exec --no-startup-id 			~/scripts/wallpaper.py
-
-# Window compositor
-exec --no-startup-id 			picom --backend glx --xrender-sync-fence &
-
-# Always turn on num lock
-exec_always --no-startup-id 	numlockx on
-
-# Remap Caps Lock to ESC/Control key
-exec_always --no-startup-id 	~/scripts/keymaps.sh &
-
-# Dunst notification daemon
-exec --no-startup-id 			dunst &
-
-# mirror display with HDMI-1 monitor if connected
-exec_always --no-startup-id 	~/scripts/screenmirror.sh
-
-# lock screen on suspend
-exec_always --no-startup-id 	xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
-exec --no-startup-id 			xfce4-power-manager &
-
-# Session manager
-exec --no-startup-id 			lxsession &
-
-# Nightlight
-exec --no-startup-id 			~/scripts/nightlight.sh auto &
-
-# Bspwm-like layout Manager
-# exec --no-startup-id			i3-autolayout autolayout &
+exec_always --no-startup-id 	/home/aarya/.config/bspwm/autostart.sh
 
 # }}}
 
@@ -316,12 +277,12 @@ hide_edge_borders smart_no_gaps
 
 # status bar {{{
 
-# bar {
-# 	status_command i3status
-# 	position bottom
-# 	tray_output eDP-1
-# 	font pango:monospace 9
-# }
+bar {
+	status_command i3status
+	position top
+	tray_output eDP-1
+	font pango:monospace 9
+}
 
 # }}}
 

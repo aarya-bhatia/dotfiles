@@ -10,6 +10,10 @@ super + Return
 alt + Return
 	alacritty
 
+# terminal emulator in default tmux session
+# alt + shift + Return
+# 	alacritty --class=floating -e tmux new-session -A -s home
+
 # program launcher
 alt + d
 	dmenu_run -h 24
