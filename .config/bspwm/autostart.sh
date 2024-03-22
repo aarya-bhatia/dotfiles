@@ -1,37 +1,55 @@
 #!/bin/bash
 
-xsetroot -cursor_name left_ptr & # set cursor style
-numlockx on # turn on numlock
-~/.config/polybar/bspwm_launch.sh & # launch polybar
-~/scripts/keymaps.sh & # setup keyboard mappings
-~/scripts/wallpaper.py & # set wallpaper to last used
+# Run command in background unless already running...
+run() {
+  if ! pgrep -f "$1"; then
+    $@&
+  fi
+}
+
+# set cursor style
+xsetroot -cursor_name left_ptr &
+
+# turn on numlock
+numlockx on &
+
+# launch polybar
+$HOME/.config/polybar/bspwm_launch.sh &
+
+# setup keyboard mappings
+$HOME/scripts/keymaps.sh &
+
+# set wallpaper to last used
+$HOME/scripts/wallpaper.py &
 
 # start notification daemon
-pgrep -f dunst || dunst &
+run dunst &
 
 # start session manager
-pgrep -f lxsession || lxsession &
+run lxsession &
 
 # start music player daemon
-pgrep -f mpd || mpd &
+run mpd &
 
-pgrep -f picom || picom --backend glx --xrender-sync-fence & # start compositor
+ # start compositor
+run picom --backend glx --xrender-sync-fence &
 
 # start simple X hotkey daemon
-pgrep -f sxhkd || sxhkd -c $HOME/.config/sxhkd/sxhkdrc $HOME/.config/sxhkd/sxhkdrc.common &
+run sxhkd -c $HOME/.config/sxhkd/sxhkdrc $HOME/.config/sxhkd/sxhkdrc.common &
 
 # start nightlight with location services
-pgrep -f redshift || ~/scripts/nightlight.sh auto &
+run ~/scripts/nightlight.sh auto &
 
 # start screen locker
-pgrep -f xss-lock || xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
+run xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
 
 # power management
-pgrep -f xfce4-power-manager || xfce4-power-manager --daemon &
+run xfce4-power-manager --daemon &
 
 # clipboard manager
-pgrep -f clipmenud || clipmenud &
+run clipmenud &
 
-xrandr | grep -q "HDMI-1 connected" && /home/aarya/.screenlayout/mirror.sh &
+# mirror screen to monitor
+xrandr | grep -q "HDMI-1 connected" && $HOME/.screenlayout/mirror.sh &
 
-# /home/aarya/.screenlayout/horizontal.sh &
+# $HOME/.screenlayout/horizontal.sh &
