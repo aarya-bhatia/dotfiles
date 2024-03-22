@@ -97,3 +97,7 @@ F11; @F11
 alt + shift + e
 	/home/aarya/scripts/dmenu/dmenu_edit_config.sh
 
+# show dmenu hotkey help menu
+F12; @F12
+	/home/aarya/scripts/dmenu/dmenu_hotkeys.sh
+
