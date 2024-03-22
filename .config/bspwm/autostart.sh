@@ -3,7 +3,6 @@
 xsetroot -cursor_name left_ptr & # set cursor style
 numlockx on # turn on numlock
 ~/.config/polybar/bspwm_launch.sh & # launch polybar
-# ~/repos/aarya-bhatia/lemonbar/launchlemon.sh & # launch bottom lemonbar
 ~/scripts/keymaps.sh & # setup keyboard mappings
 ~/scripts/wallpaper.py & # set wallpaper to last used
 
@@ -19,7 +18,7 @@ pgrep -f mpd || mpd &
 pgrep -f picom || picom --backend glx --xrender-sync-fence & # start compositor
 
 # start simple X hotkey daemon
-pgrep -f sxhkd || sxhkd &
+pgrep -f sxhkd || sxhkd -c $HOME/.config/sxhkd/sxhkdrc $HOME/.config/sxhkd/sxhkdrc.common &
 
 # start nightlight with location services
 pgrep -f redshift || ~/scripts/nightlight.sh auto &
@@ -29,6 +28,9 @@ pgrep -f xss-lock || xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-
 
 # power management
 pgrep -f xfce4-power-manager || xfce4-power-manager --daemon &
+
+# clipboard manager
+pgrep -f clipmenud || clipmenud &
 
 xrandr | grep -q "HDMI-1 connected" && /home/aarya/.screenlayout/mirror.sh &
 

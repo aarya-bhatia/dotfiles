@@ -32,7 +32,7 @@ ToggleLemonbar() {
 		done
 }
 
-ToggleLemonbar &
+# ToggleLemonbar &
 
 bspc monitor $primary -d I II III IV V VI VII VIII IX X
 

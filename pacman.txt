@@ -16,6 +16,7 @@ bsp-layout
 bspwm
 chromium
 clang
+clipmenu
 ctags
 dhcp
 discord

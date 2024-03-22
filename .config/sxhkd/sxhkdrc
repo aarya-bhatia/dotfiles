@@ -1,29 +1,10 @@
-# for testing
-alt + z
-	notify-send "hello world"
+# decrease/increase window gap size
+alt + g; {0-9}
+	bspc config window_gap {0-9}; notify-send "window gap changed"
 
-# terminal emulator
-super + Return
-	alacritty
-
-# terminal emulator
-alt + Return
-	alacritty
-
-# terminal emulator in default tmux session
-# alt + shift + Return
-# 	alacritty --class=floating -e tmux new-session -A -s home
-
-# program launcher
-alt + d
-	dmenu_run -h 24
-
-# make sxhkd reload its configuration files:
-alt + Escape
-	pkill -USR1 -x sxhkd; \
-	notify-send "reloaded sxhkd"; \
-	sleep 1; \
-	/home/aarya/scripts/keymaps.sh &
+# layouts: tiled, monocle, master-stack, reverse-master-stack
+alt + control + {1,2,3,4}
+	bsp-layout set { tiled, monocle, tall -- --master-size 0.5, rtall -- --master-size 0.5 };
 
 # quit bspwm
 alt + shift + x
@@ -71,7 +52,7 @@ alt + space
 		if bspc query -N -n focused.floating; then \
 			bspc node -f any.local.\!floating; \
 		else \
-			bspc node -f any.local.floating; \
+			bspc node -f any.floating; \
 		fi \
 	fi
 
@@ -87,18 +68,6 @@ alt + f
 alt + {_,shift + }c
 	bspc node -f {next,prev}.local.!hidden.window
 
-# volume keys
-{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
-	$HOME/scripts/volume.sh {up,down,mute}
-
-# brightness keys
-{XF86MonBrightnessUp,XF86MonBrightnessDown}
-	$HOME/scripts/volume.sh {brightness_up,brightness_down}
-
-# multimedia keys
-{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
-	$HOME/scripts/volume.sh {next_track,prev_track,play_pause,play_pause}
-
 # Smart resize, will grow or shrink depending on location.
 # Will always grow for floating nodes.
 alt + ctrl + super + {h,j,k,l}
@@ -110,81 +79,6 @@ alt + ctrl + super + {h,j,k,l}
   } \
   bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
 
-# seek music player
-alt + super + {0-9}
-	mpc -q seek {0-9}0%
-
-alt + o; {v,f,t,d,n,a,b,p,w}
-	{alacritty -e nvim, firefox, thunderbird, discord, alacritty -e ncmpcpp, arandr, blueman-manager, pavucontrol, alacritty -e nmtui}
-
 alt + super + p
 	bspc config focus_follows_pointer {true,false}
-
-alt + v
-	/home/aarya/scripts/launch_vim.sh
-
-# layouts: tiled, monocle, master-stack, reverse-master-stack
-alt + control + {1,2,3,4}
-	bsp-layout set { tiled, monocle, tall -- --master-size 0.5, rtall -- --master-size 0.5 };
-
-# launch python repl
-alt+control+p
-	alacritty --class=floating -e tmux new-session -A -s python3 "~/pyvenv/bin/python3"
-
-# launch calculator (qalc)
-alt+control+q
-	alacritty --class=floating -e tmux new-session -A -s qalc "qalc"
-
-# launch calculator (qalc)
-alt+XF86Calculator
-	alacritty --class="qalc" -e qalc
-
-# music player
-alt+XF86Tools
-	alacritty -e ncmpcpp
-
-# email client
-alt+XF86Mail
-	thunderbird
-
-# file browser
-alt+XF86Search
-	thunar
-
-# file browser
-alt+e
-	thunar
-
-# press print key
-Print; @Print
-	/home/aarya/scripts/screenshot.sh && sxiv $(xsel -o)
-
-# press alt + print key
-alt + Print
-	/home/aarya/scripts/screenshot.sh -s && sxiv $(xsel -o)
-
-# launch sxiv to view/select wallpapers (ctrl-x+w)
-alt+shift+w
-	sxiv /home/aarya/wallpapers/*
-
-# launch sxiv to view screenshots
-alt+shift+s
-	sxiv /home/aarya/screenshots/*
-
-# password input
-alt + shift + p
-	/home/aarya/scripts/dmenu/dmenupass.sh
-
-# power menu
-alt + BackSpace
-	/home/aarya/scripts/dmenu/dmenu_power.sh
-
-# reload status bar
-F11; @F11
-	polybar-msg cmd restart; notify-send "reloaded polybar"
-	# /home/aarya/repos/aarya-bhatia/lemonbar/launchlemon.sh; notify-send "reloaded lemonbar"
-
-# TODO: decrease/increase window gap size
-alt + g; 0
-	bspc config window_gap 0; notify-send "changed window gap to 0"
 
