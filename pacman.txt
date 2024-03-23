@@ -139,6 +139,7 @@ xorg-xinit
 xorg-xsetroot
 xsel
 xss-lock
+xterm
 xwallpaper
 yad
 yay

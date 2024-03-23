@@ -158,7 +158,8 @@ au FileType make setlocal ts=4 sts=4 sw=4 noet list
 " aliases {{{
 iabbrev @@ aarya.bhatia1678@gmail.com
 iabbrev UIUC University of Illinois
-iabbrev --- ----------------------
+iabbrev ---- -----------------------------------
+iabbrev #### ###################################
 
 " }}}
 

@@ -1,3 +1,11 @@
+####################################
+# KEYBOARD BINDINGS FOR ANY WM
+####################################
+
+####################################
+# FUNCTION KEYS
+####################################
+
 # volume keys
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
 	$HOME/scripts/volume.sh {up,down,mute}
@@ -10,12 +18,34 @@
 {XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
 	$HOME/scripts/volume.sh {next_track,prev_track,play_pause,play_pause}
 
+# reload status bar
+F11; @F11
+	polybar-msg cmd restart || \
+		/home/aarya/.config/polybar/bspwm_launch.sh; \
+		notify-send "reloaded polybar"
+
+# show dmenu hotkey help menu
+F12; @F12
+	/home/aarya/scripts/dmenu/dmenu_hotkeys.sh
+
+####################################
+# ALT + FUNCTION KEYS
+####################################
+
 # launch calculator / music player / email client / file browser
 alt + {XF86Calculator, XF86Tools, XF86Mail, XF86Search}
 	{alacritty --class="floating" -e qalc \
 	,	alacritty -e ncmpcpp \
 	, 	thunderbird \
 	,	thunar }
+
+####################################
+# ALT + ... KEYS
+####################################
+
+# power menu
+alt + BackSpace
+	/home/aarya/scripts/dmenu/dmenu_power.sh
 
 # for testing
 alt + z
@@ -37,33 +67,58 @@ alt + d
 alt + Escape
 	pkill -USR1 -x sxhkd; notify-send "reloaded sxhkd"
 
-# seek music player
-alt + super + {0-9}
-	mpc -q seek {0-9}0%
-
 # launch applications
-alt + o; {v,f,t,d,n,a,b,p,w}
-	{alacritty -e nvim, firefox, thunderbird, discord, alacritty -e ncmpcpp, arandr, blueman-manager, pavucontrol, alacritty -e nmtui}
-
-# edit and copy temp file to clipboard
-alt + shift + v
-	/home/aarya/scripts/launch_vim.sh
+alt + o; {e,v,f,t,d,n,a,b,p,w}
+	{thunar,alacritty -e nvim, firefox, thunderbird, discord, alacritty -e ncmpcpp, arandr, blueman-manager, pavucontrol, alacritty -e nmtui}
 
 # clipboard history
 alt + v
 	clipmenu
 
-# launch python repl
-alt+control+p
-	alacritty --class="floating" -e tmux new-session -A -s python3 "~/pyvenv/bin/python3"
+####################################
+# ALT + SUPER KEYS
+####################################
 
-# launch calculator (qalc)
-alt+control+q
-	alacritty --class="floating" -e tmux new-session -A -s qalc "qalc"
+# seek music player
+alt + super + {0-9}
+	mpc -q seek {0-9}0%
 
-# file browser
-alt+e
-	thunar
+####################################
+# ALT + SHIFT KEYS
+####################################
+
+# edit and copy temp file to clipboard
+alt + shift + v
+	/home/aarya/scripts/launch_vim.sh
+
+# launch sxiv to view/select wallpapers (ctrl-x+w)
+alt + shift + w
+	sxiv /home/aarya/wallpapers/*
+
+# launch sxiv to view screenshots
+alt + shift + s
+	sxiv /home/aarya/screenshots/*
+
+# password input
+alt + shift + p
+	/home/aarya/scripts/dmenu/dmenupass.sh
+
+# dmenu: edit config
+alt + shift + e
+	/home/aarya/scripts/dmenu/dmenu_edit_config.sh
+
+####################################
+# ALT + CONTROL KEYS
+####################################
+
+# launch tmux with python repl / calculator
+alt + control + p
+	alacritty --class="floating" -e tmux new-session \
+		-A -s {python3 "~/pyvenv/bin/python3", qalc "qalc"}
+
+####################################
+# SCREENSHOT KEYS
+####################################
 
 # press print key
 Print; @Print
@@ -72,32 +127,4 @@ Print; @Print
 # press alt + print key
 alt + Print
 	/home/aarya/scripts/screenshot.sh -s && sxiv $(xsel -o)
-
-# launch sxiv to view/select wallpapers (ctrl-x+w)
-alt+shift+w
-	sxiv /home/aarya/wallpapers/*
-
-# launch sxiv to view screenshots
-alt+shift+s
-	sxiv /home/aarya/screenshots/*
-
-# password input
-alt + shift + p
-	/home/aarya/scripts/dmenu/dmenupass.sh
-
-# power menu
-alt + BackSpace
-	/home/aarya/scripts/dmenu/dmenu_power.sh
-
-# reload status bar
-F11; @F11
-	polybar-msg cmd restart; notify-send "reloaded polybar"
-
-# dmenu: edit config
-alt + shift + e
-	/home/aarya/scripts/dmenu/dmenu_edit_config.sh
-
-# show dmenu hotkey help menu
-F12; @F12
-	/home/aarya/scripts/dmenu/dmenu_hotkeys.sh
 
