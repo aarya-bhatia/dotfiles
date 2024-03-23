@@ -71,6 +71,7 @@ neofetch
 neovim
 network-manager-applet
 networkmanager
+networkmanager-openconnect
 nodejs
 noto-fonts
 npm

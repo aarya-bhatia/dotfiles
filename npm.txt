@@ -1,3 +1,3 @@
-/home/aarya
+/home/aarya/.config/bspwm
 └── (empty)
 

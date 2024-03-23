@@ -8,7 +8,8 @@ source ~/.config/bspwm/autostart.sh
 
 # monitors
 bspc monitor $primary -d I II III IV V VI VII VIII IX X
-bspc monitor $secondary -d I II III IV V VI VII VIII IX X
+# bspc monitor $primary -d VI VII VIII IX X
+# bspc monitor $secondary -d I II III IV V
 
 # settings
 bspc config border_width        2

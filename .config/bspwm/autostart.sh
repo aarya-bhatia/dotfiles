@@ -22,6 +22,9 @@ $HOME/scripts/keymaps.sh &
 # set wallpaper to last used
 $HOME/scripts/wallpaper.py &
 
+# network manager tray icon
+run nm-applet &
+
 # start notification daemon
 run dunst &
 
@@ -52,4 +55,4 @@ run clipmenud &
 # mirror screen to monitor
 xrandr | grep -q "HDMI-1 connected" && $HOME/.screenlayout/mirror.sh &
 
-# $HOME/.screenlayout/horizontal.sh &
+# xrandr | grep -q "HDMI-1 connected" && $HOME/.screenlayout/horizontal.sh &
