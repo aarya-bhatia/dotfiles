@@ -12,6 +12,7 @@ blueman
 bluez-tools
 breeze-gtk
 brightnessctl
+bsp-layout
 bspwm
 chromium
 clang

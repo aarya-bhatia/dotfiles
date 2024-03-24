@@ -98,15 +98,11 @@ alt + shift + v
 alt + shift + w
 	sxiv /home/aarya/wallpapers/*
 
-# launch sxiv to view screenshots
-alt + shift + s
-	sxiv /home/aarya/screenshots/*
-
 # password input
 alt + shift + p
 	/home/aarya/scripts/dmenu/dmenupass.sh
 
-# dmenu: edit config
+# dmenu edit config
 alt + shift + e
 	/home/aarya/scripts/dmenu/dmenu_edit_config.sh
 
@@ -114,20 +110,15 @@ alt + shift + e
 # ALT + CONTROL KEYS
 ####################################
 
-# launch tmux with python repl / calculator
-alt + control + p
-	alacritty --class="floating" -e tmux new-session \
-		-A -s {python3 "~/pyvenv/bin/python3", qalc "qalc"}
-
 ####################################
 # SCREENSHOT KEYS
 ####################################
 
 # press print key
 Print; @Print
-	/home/aarya/scripts/screenshot.sh && sxiv $(xsel -o)
+	/home/aarya/scripts/screenshot.sh
 
 # press alt + print key
 alt + Print
-	/home/aarya/scripts/screenshot.sh -s && sxiv $(xsel -o)
+	/home/aarya/scripts/screenshot.sh -s
 
