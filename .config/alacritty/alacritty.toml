@@ -1,9 +1,9 @@
 import = [
-    # "~/repos/alacritty-themes/themes/gruvbox_dark.toml"
+    # "~/repos/alacritty-themes/themes/one_dark.toml"
 ]
 
 [font]
-size = 6.5
+size = 6
 
 [font.bold]
 family = "Hack Nerd Font"
@@ -25,9 +25,9 @@ style = "Regular"
 save_to_clipboard = true
 
 [keyboard]
-bindings = [
-   { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
-]
+# bindings = [
+#    { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+# ]
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.66"

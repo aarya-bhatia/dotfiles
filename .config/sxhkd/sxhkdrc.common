@@ -55,6 +55,9 @@ alt + z
 super + Return
 	alacritty --class=floating -e tmux new-session -A -s default
 
+alt + shift + Return
+	alacritty --class=floating -e tmux new-session -A -s default
+
 # terminal emulator
 alt + Return
 	alacritty
