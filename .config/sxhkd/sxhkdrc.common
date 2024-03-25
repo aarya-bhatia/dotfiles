@@ -28,19 +28,15 @@ F11; @F11
 F12; @F12
 	/home/aarya/scripts/dmenu/dmenu_hotkeys.sh
 
-####################################
-# ALT + FUNCTION KEYS
-####################################
-
 # launch calculator / music player / email client / file browser
-alt + {XF86Calculator, XF86Tools, XF86Mail, XF86Search}
+{XF86Calculator, XF86Tools, XF86Mail, XF86Search}
 	{alacritty --class="floating" -e qalc \
 	,	alacritty -e ncmpcpp \
 	, 	thunderbird \
 	,	thunar }
 
 ####################################
-# ALT + ... KEYS
+# ALT + KEYS
 ####################################
 
 # power menu

@@ -37,8 +37,8 @@ export COPYIGNORE="$HOME/dotfiles/copyignore"
 export FZF_DEFAULT_OPTS="--border --info=inline -m"
 export FZF_DEFAULT_COMMAND="fd --follow --color=auto --hidden --exclude={.git,node_modules,tmp,__pycache__,undodir,plugged,.cache}"
 
-export LATITUDE="41.11"
-export LONGITUDE="-88.24"
+export LATITUDE="40.11"
+export LONGITUDE="-88.23"
 
 # colored man pages
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
@@ -48,5 +48,6 @@ export PATH=$PATH:/usr/local/bin
 export PATH=$PATH:/snap/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/scripts
+export PATH=$PATH:$HOME/scripts/lemonbar
 export PATH=$PATH:$HOME/pyvenv/bin
 export PATH=$PATH:$GOPATH/bin

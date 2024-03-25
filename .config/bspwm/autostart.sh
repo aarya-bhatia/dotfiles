@@ -14,7 +14,7 @@ xsetroot -cursor_name left_ptr &
 numlockx on &
 
 # launch polybar
-$HOME/.config/polybar/bspwm_launch.sh &
+polybar-msg cmd restart || $HOME/.config/polybar/bspwm_launch.sh &
 
 # setup keyboard mappings
 $HOME/scripts/keymaps.sh &

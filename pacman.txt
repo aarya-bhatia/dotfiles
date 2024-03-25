@@ -17,6 +17,7 @@ bspwm
 chromium
 clang
 clipmenu
+cronie
 cscope
 ctags
 cups

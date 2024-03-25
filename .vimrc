@@ -82,7 +82,7 @@ nnoremap ga <Plug>(EasyAlign)
 
 let g:lightline = {'colorscheme': 'wombat'}
 
-colorscheme gruvbox
+" colorscheme gruvbox
 set background=dark
 
 set nocompatible
