@@ -8,6 +8,7 @@ autopep8
 base
 base-devel
 bat
+betterlockscreen
 blueman
 bluez-tools
 breeze-gtk
@@ -39,7 +40,6 @@ gst-plugins-good
 htop-vim
 i3-wm
 i3blocks
-i3lock
 i3status
 inetutils
 intel-ucode
@@ -113,6 +113,7 @@ ttf-font-awesome
 ttf-hack-nerd
 ufw
 unzip
+urlencode
 valgrind
 vim
 virt-manager

@@ -39,6 +39,10 @@ F12; @F12
 # ALT + KEYS
 ####################################
 
+# browser links
+alt + slash
+	/home/aarya/scripts/dmenu/dmenu_browser.sh
+
 # power menu
 alt + BackSpace
 	/home/aarya/scripts/dmenu/dmenu_power.sh
