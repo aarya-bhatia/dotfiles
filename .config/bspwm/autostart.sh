@@ -16,9 +16,6 @@ numlockx on &
 # launch polybar
 polybar-msg cmd restart || $HOME/.config/polybar/bspwm_launch.sh &
 
-# setup keyboard mappings
-$HOME/scripts/keymaps.sh &
-
 # set wallpaper to last used
 $HOME/scripts/wallpaper.py &
 
@@ -49,10 +46,5 @@ run xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --
 # power management
 run xfce4-power-manager --daemon &
 
-# clipboard manager
-run clipmenud &
-
 # mirror screen to monitor
 xrandr | grep -q "HDMI-1 connected" && $HOME/.screenlayout/mirror.sh &
-
-# xrandr | grep -q "HDMI-1 connected" && $HOME/.screenlayout/horizontal.sh &

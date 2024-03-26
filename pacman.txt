@@ -16,7 +16,6 @@ bsp-layout
 bspwm
 chromium
 clang
-clipmenu
 cronie
 cscope
 ctags
@@ -48,6 +47,7 @@ iptables-nft
 iverilog
 jq
 keychain
+keyd
 less
 lf
 libguestfs
@@ -120,7 +120,6 @@ virt-viewer
 visual-studio-code-bin
 vlc
 webkit2gtk
-xcape
 xclip
 xdotool
 xfce4-power-manager
@@ -134,4 +133,5 @@ xwallpaper
 yay
 zathura
 zathura-pdf-mupdf
+zoom
 zram-generator

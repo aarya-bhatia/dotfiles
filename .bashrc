@@ -85,10 +85,10 @@ alias du="du -h"
 alias free="free -h"
 
 if which lsd 2>&1 >/dev/null; then
-	alias ls="lsd --color=auto --group-directories-first"
-	alias ll="lsd --color=auto -alFh"
-	alias la="lsd --color=auto -Ah"
-	alias l="lsd --color=auto -CF"
+	alias ls="lsd --group-directories-first"
+	alias ll="lsd -alFh"
+	alias la="lsd -Ah"
+	alias l="lsd"
 else
 	alias ls="ls --color=auto --group-directories-first"
 	alias ll="ls --color=auto -alFh"
