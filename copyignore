@@ -1,26 +1,19 @@
-plugged/
 bin/
 obj/
 pkg/
 cache
 Cache/
 .cache/
-*.pl
-*history
-VirtualBox/
-pyvenv/
 .cargo
 .docker/
 snap/
 node_modules/
 tmp/
-.npm/
 *.log
 *.swp
 .DS_Store
-*.o
-*.exe
 .config/discord/
+plugged/
 
 # Python
 .venv/
