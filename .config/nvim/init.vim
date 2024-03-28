@@ -1,3 +1,6 @@
+let mapleader = ' '
+let maplocalleader = ' '
+
 " plugins {{{
 
 " autoinstall vim-plug
@@ -36,17 +39,19 @@ Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'savq/melange-nvim'
 
-" LSP
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'L3MON4D3/LuaSnip'
-Plug 'neovim/nvim-lspconfig'
-Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
-Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'williamboman/mason.nvim'
+" " LSP
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'hrsh7th/nvim-cmp'
+" Plug 'L3MON4D3/LuaSnip'
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
+" Plug 'williamboman/mason-lspconfig.nvim'
+" Plug 'williamboman/mason.nvim'
 
 " Syntax
 Plug 'kovetskiy/sxhkd-vim'
+
+source /home/aarya/.config/nvim/plugins/coc.vim
 
 call plug#end()
 
@@ -90,9 +95,6 @@ set background=dark
 set nocompatible
 syntax on
 filetype indent plugin on
-
-let mapleader = ' '
-let maplocalleader = ' '
 
 set autoindent                    " set auto-indenting on for programming
 set backspace=indent,eol,start    " make that backspace key work the way it should
@@ -159,6 +161,7 @@ au FileType make setlocal ts=4 sts=4 sw=4 noet list
 iabbrev @@ aarya.bhatia1678@gmail.com
 iabbrev UIUC University of Illinois
 iabbrev ---- -----------------------------------
+iabbrev #### ###################################
 
 " }}}
 
@@ -581,7 +584,8 @@ nnoremap ga <Plug>(EasyAlign)
 nnoremap <leader>- :Lf<CR>z1
 nnoremap <leader>tt :TagbarToggle<CR>
 nnoremap <leader>M :Mason<CR>
-nnoremap <leader>F :LspZeroFormat<CR>
+" nnoremap <leader>F :LspZeroFormat<CR>
+nnoremap <leader>F :Format<CR>
 
 " }}}
 
@@ -615,7 +619,7 @@ end
 EOF
 
 source $HOME/.config/nvim/lua/treesitter.lua
-source $HOME/.config/nvim/lua/lsp.lua
+" source $HOME/.config/nvim/lua/lsp.lua
 
 set guicursor=i:block
 

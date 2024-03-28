@@ -167,8 +167,9 @@ map gH <Nop>
 
 nnoremap <leader>F :Autoformat<CR>
 
-xnoremap <leader>y :w !xsel -b<CR><CR>
-nnoremap <leader>yy :w !xsel -b<CR><CR>
+xnoremap <leader>y :w !xsel -b -i<CR><CR>
+nnoremap <leader>yy :w !xsel -b -i<CR><CR>
+nnoremap <leader>pp :r !xsel -b -o<CR><CR>
 
 nnoremap <leader>q :quit<CR>
 nnoremap <leader>s :write<cr>

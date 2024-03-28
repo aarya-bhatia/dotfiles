@@ -30,6 +30,7 @@ docker
 dunst
 efibootmgr
 fd
+ffmpegthumbnailer
 firefox
 font-manager
 fzf
@@ -132,7 +133,7 @@ xsel
 xss-lock
 xwallpaper
 yay
+yt-dlp
 zathura
 zathura-pdf-mupdf
 zoom
-zram-generator

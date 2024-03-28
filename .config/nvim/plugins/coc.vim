@@ -5,9 +5,6 @@
 " Use release branch (recommended)
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-" Or build from source code by using npm
-" Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
-
 if executable('/usr/bin/node')
   let g:coc_node_path = '/usr/bin/node'
 endif
@@ -56,7 +53,6 @@ nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window
-nnoremap <silent> <leader>ck :call ShowDocumentation()<CR>
 nnoremap <silent> <leader>lk :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
