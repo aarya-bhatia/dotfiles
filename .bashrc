@@ -140,3 +140,5 @@ alias showkey="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf \"%
 
 # dotfile bare repo
 alias dot="/usr/bin/git --git-dir=$HOME/dotbare/ --work-tree=$HOME"
+
+# /\.-./\
