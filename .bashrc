@@ -53,6 +53,8 @@ if uname -a | grep -q -i -E "debian|ubuntu"; then
 	bat=batcat
 fi
 
+export COPYIGNORE=$HOME/copyignore
+
 alias fd=$fd
 alias bat="$bat --style=plain"
 alias cat="$bat --plain"
@@ -139,6 +141,6 @@ alias showkey="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf \"%
 # neofetch
 
 # dotfile bare repo
-alias dot="/usr/bin/git --git-dir=$HOME/dotbare/ --work-tree=$HOME"
+alias dot="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
 
 # /\.-./\

@@ -32,7 +32,7 @@ export TERMINAL=alacritty
 export VIRTUAL_ENV_DISABLE_PROMPT=1
 export DOTFILES="$HOME/dotfiles"
 export SCRIPTS_DIR="$HOME/scripts"
-export COPYIGNORE="$HOME/dotfiles/copyignore"
+export COPYIGNORE="$HOME/copyignore"
 
 export FZF_DEFAULT_OPTS="--border --info=inline -m"
 export FZF_DEFAULT_COMMAND="fd --follow --color=auto --hidden --exclude={.git,node_modules,tmp,__pycache__,undodir,plugged,.cache}"
