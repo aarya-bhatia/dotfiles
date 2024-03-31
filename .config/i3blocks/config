@@ -1,0 +1,49 @@
+[mediaplayer]
+command=~/scripts/mediaplayer.sh
+interval=5
+
+[kernel]
+command=printf " %s\n" $(uname -a | cut -d" " -f3)
+interval=once
+label=
+
+[weather]
+command=~/scripts/weather.py -f
+interval=300
+
+[disk]
+command=~/scripts/disk.py
+interval=60
+
+# [cpu]
+# command=~/scripts/cpu.py
+# interval=persist
+#
+# [memory]
+# command=~/scripts/memory.py
+# interval=persist
+
+[volume]
+command=printf "♪ %s\n" $(~/scripts/volume.sh get_volume)
+interval=once
+signal=10
+
+# [brightness]
+# command=printf " %s\n" $(~/scripts/volume.sh get_brightness)
+# interval=once
+# signal=10
+
+[battery]
+command=~/scripts/battery.sh
+interval=5
+
+[ip]
+command=printf " %s\n" $(hostname -i | cut -d" " -f1)
+interval=60
+label=
+
+[time]
+command=date +'%A, %d %B %I:%M %p '
+interval=10
+
+# vim: ft=ini

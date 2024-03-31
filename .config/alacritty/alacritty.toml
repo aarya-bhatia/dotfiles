@@ -1,0 +1,36 @@
+import = [
+    # "~/repos/alacritty-themes/themes/one_dark.toml"
+]
+
+[font]
+size = 6
+
+[font.bold]
+family = "Hack Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "Hack Nerd Font"
+style = "Bold Italic"
+
+[font.italic]
+family = "Hack Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "Hack Nerd Font"
+style = "Regular"
+
+[selection]
+save_to_clipboard = true
+
+[keyboard]
+# bindings = [
+#    { key = "Return", mods = "Control|Shift", action = "SpawnNewInstance" }
+# ]
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.66"
+
+[window]
+# opacity=0.95

@@ -1,0 +1,127 @@
+####################################
+# KEYBOARD BINDINGS FOR ANY WM
+####################################
+
+####################################
+# FUNCTION KEYS
+####################################
+
+# volume keys
+{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
+	$HOME/scripts/volume.sh {up,down,mute}
+
+# brightness keys
+{XF86MonBrightnessUp,XF86MonBrightnessDown}
+	$HOME/scripts/volume.sh {brightness_up,brightness_down}
+
+# multimedia keys
+{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
+	$HOME/scripts/volume.sh {next_track,prev_track,play_pause,play_pause}
+
+alt+{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
+	mpc {next,prev,toggle,toggle}
+
+# reload status bar
+F11; @F11
+	polybar-msg cmd restart || \
+		/home/aarya/.config/polybar/bspwm_launch.sh; \
+		notify-send "reloaded polybar"
+
+# show dmenu hotkey help menu
+F12; @F12
+	/home/aarya/scripts/dmenu/dmenu_hotkeys.sh
+
+# launch calculator / music player / email client / file browser
+{XF86Calculator, XF86Tools, XF86Mail, XF86Search}
+	{alacritty --class="floating" -e qalc \
+	,	alacritty -e ncmpcpp \
+	, 	thunderbird \
+	,	thunar }
+
+####################################
+# ALT + KEYS
+####################################
+
+# browser links
+alt + slash
+	/home/aarya/scripts/dmenu/dmenu_browser.sh
+
+# power menu
+alt + BackSpace
+	/home/aarya/scripts/dmenu/dmenu_power.sh
+
+# for testing
+alt + z
+	notify-send "hello world"
+
+# terminal emulator
+super + Return
+	alacritty --class=floating -e tmux new-session -A -s default
+
+alt + shift + Return
+	alacritty --class=floating -e tmux new-session -A -s default
+
+# terminal emulator
+alt + Return
+	alacritty
+
+# program launcher
+alt + d
+	dmenu_run -h 24
+
+# make sxhkd reload its configuration files:
+alt + Escape
+	pkill -USR1 -x sxhkd; notify-send "reloaded sxhkd"
+
+# launch applications
+alt + o; {e,v,f,t,d,n,a,b,p,w}
+	{thunar,alacritty -e nvim, firefox, thunderbird, discord, alacritty -e ncmpcpp, arandr, blueman-manager, pavucontrol, alacritty -e nmtui}
+
+# clipboard history
+alt + v
+	clipmenu
+
+####################################
+# ALT + SUPER KEYS
+####################################
+
+# seek music player
+alt + super + {0-9}
+	mpc -q seek {0-9}0%
+
+####################################
+# ALT + SHIFT KEYS
+####################################
+
+# edit and copy temp file to clipboard
+alt + shift + v
+	/home/aarya/scripts/launch_vim.sh
+
+# launch sxiv to view/select wallpapers (ctrl-x+w)
+alt + shift + w
+	sxiv /home/aarya/wallpapers/*
+
+# password input
+alt + shift + p
+	/home/aarya/scripts/dmenu/dmenupass.sh
+
+# dmenu edit config
+alt + shift + e
+	/home/aarya/scripts/dmenu/dmenu_edit_config.sh
+
+####################################
+# ALT + CONTROL KEYS
+####################################
+
+####################################
+# SCREENSHOT KEYS
+####################################
+
+# press print key
+Print; @Print
+	/home/aarya/scripts/screenshot.sh
+
+# press alt + print key
+alt + Print
+	/home/aarya/scripts/screenshot.sh -s
+

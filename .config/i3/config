@@ -1,0 +1,426 @@
+# |_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_|
+# i3 config file (v4)
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+# |_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_||_|
+
+# mod1 = Alt, mod4 = windows key
+
+set $mod Mod4
+set $super Mod1
+
+set $primary eDP-1
+set $secondary HDMI-1
+
+floating_modifier $super
+font pango:monospace 8.5
+focus_wrapping no
+ipc-socket ~/.i3/i3-ipc.sock
+popup_during_fullscreen smart
+focus_follows_mouse no
+workspace_auto_back_and_forth yes
+
+# Key bindings {{{
+
+bindsym $super+Shift+c 				exec i3-msg reload && notify-send "reloaded i3"
+bindsym $super+Shift+r 				exec i3-msg restart && notify-send "restarted i3"
+bindsym $super+q 					kill
+bindsym $super+Tab 					workspace next
+bindsym $super+Shift+Tab 			workspace prev
+
+bindsym $super+Shift+e 				exec --no-startup-id alacritty -e nvim ~/.config/i3/config
+bindsym $super+Control+c 			exec --no-startup-id ~/scripts/dmenu/dmenu_edit_config.sh
+
+bindsym XF86AudioRaiseVolume 		exec 	$HOME/scripts/volume.sh up
+bindsym XF86AudioLowerVolume 		exec 	$HOME/scripts/volume.sh down
+bindsym XF86AudioMute 				exec 	$HOME/scripts/volume.sh mute
+bindsym XF86MonBrightnessUp 		exec 	$HOME/scripts/volume.sh brightness_up
+bindsym XF86MonBrightnessDown 		exec 	$HOME/scripts/volume.sh brightness_down
+bindsym XF86AudioPause				exec 	$HOME/scripts/volume.sh play_pause
+bindsym XF86AudioPlay 				exec 	$HOME/scripts/volume.sh play_pause
+bindsym XF86AudioNext 				exec 	$HOME/scripts/volume.sh next_track
+bindsym XF86AudioPrev 				exec 	$HOME/scripts/volume.sh prev_track
+
+bindsym $super+XF86AudioPause		exec 	mpc toggle
+bindsym $super+XF86AudioPlay 		exec 	mpc toggle
+bindsym $super+XF86AudioNext 		exec 	mpc next
+bindsym $super+XF86AudioPrev 		exec 	mpc prev
+
+bindsym $super+XF87AudioPlayPause 	exec 	mpc toggle
+
+# Launch music player
+bindsym XF86Tools 					exec alacritty --class=floating -e ncmpcpp
+
+bindsym $super+Control+p 		 	exec alacritty --class=floating -e tmux new-session -A -s python3 "~/pyvenv/bin/python3"
+bindsym $super+Control+q 			exec alacritty --class=floating -e tmux new-session -A -s qalc "qalc"
+bindcode 148 						exec --no-startup-id alacritty --class="qalc" -e qalc
+
+# Screenshots with Print key
+
+# capture entire window
+bindsym Print 						exec ~/scripts/screenshot.sh || notify-send "aarya" "screenshot failed"
+
+# capture selection
+bindcode $super+107 				exec ~/scripts/screenshot.sh -s || notify-send "aarya" "screenshot failed"
+
+# capture focused window
+bindcode $super+Shift+107 			exec ~/scripts/screenshot.sh -u || notify-send "aarya" "screenshot failed"
+
+# dmenu scripts
+bindsym $super+Shift+p 				exec ~/scripts/dmenu/dmenupass.sh
+bindsym $super+d 					exec dmenu_run
+bindsym $super+slash 				exec --no-startup-id ~/scripts/dmenu/dmenu_browser.sh
+bindsym $super+c 					exec --no-startup-id clipmenu
+bindsym $super+i 					exec --no-startup-id ~/scripts/dmenu/dmenu_open_images.sh
+
+bindsym $super+t 					exec thunar
+bindsym $super+Shift+v 				exec ~/scripts/launch_vim.sh
+bindsym $super+Shift+w 				exec sxiv ~/wallpapers
+
+# Terminal
+bindsym $super+Return 				exec --no-startup-id alacritty --class=Alacritty
+bindsym $super+Shift+Return 		exec --no-startup-id alacritty --class=floating
+
+# bind superes
+bindsym $super+r 					mode "$mode_resize"
+bindsym $super+Shift+m 				mode "$mode_filemarks"
+bindsym $super+Shift+t 				mode "$mode_terminal"
+bindsym $super+o 					mode "$mode_application"
+bindsym $super+BackSpace			mode "$mode_power"
+
+# use window title *and* a thick border
+bindsym $super+y 					border normal 3
+
+# use neither window title nor border
+bindsym $super+u 					border none
+
+# change focus
+bindsym $super+h focus left
+bindsym $super+j focus down
+bindsym $super+k focus up
+bindsym $super+l focus right
+
+# move focused window
+bindsym $super+Shift+h move left
+bindsym $super+Shift+j move down
+bindsym $super+Shift+k move up
+bindsym $super+Shift+l move right
+
+# split in horizontal orientation
+bindsym $super+z split h
+
+# split in vertical orientation
+bindsym $super+v split v
+
+# enter fullscreen supere for the focused container
+bindsym $super+f fullscreen toggle
+
+# change container layout (stacked, tabbed, toggle split)
+bindsym $super+s layout stacking
+bindsym $super+e layout toggle split
+
+bindsym $super+w layout tabbed
+# bindsym $super+w exec i3-autolayout tabmode --file-layout /tmp/i3-autolayout-tabmode.save
+
+# toggle tiling / floating
+bindsym $super+Shift+space floating toggle
+
+# change focus between tiling / floating windows
+bindsym $super+space focus mode_toggle
+
+# focus the parent container
+bindsym $super+a focus parent
+
+# focus the child container
+bindsym $super+semicolon focus child
+
+bindsym $super+Shift+minus move scratchpad
+bindsym $super+minus scratchpad show
+
+# }}}
+
+# exec commands {{{
+
+exec_always --no-startup-id 	/home/aarya/.config/bspwm/autostart.sh
+
+# }}}
+
+# workspaces {{{
+
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
+set $ws10 "10"
+set $ws11 "11"
+set $ws12 "12"
+set $ws13 "13"
+set $ws14 "14"
+set $ws15 "15"
+set $ws16 "16"
+set $ws17 "17"
+set $ws18 "18"
+set $ws19 "19"
+set $ws20 "20"
+
+workspace 1 output $primary
+workspace 2 output $primary
+workspace 3 output $primary
+workspace 4 output $primary
+workspace 5 output $primary
+workspace 6 output $primary
+workspace 7 output $primary
+workspace 8 output $primary
+workspace 9 output $primary
+workspace 10 output $primary
+
+workspace 11 output $secondary
+workspace 12 output $secondary
+workspace 13 output $secondary
+workspace 14 output $secondary
+workspace 15 output $secondary
+workspace 16 output $secondary
+workspace 17 output $secondary
+workspace 18 output $secondary
+workspace 19 output $secondary
+workspace 20 output $secondary
+
+bindsym $super+1 workspace $WS1
+bindsym $super+2 workspace $WS2
+bindsym $super+3 workspace $WS3
+bindsym $super+4 workspace $WS4
+bindsym $super+5 workspace $WS5
+bindsym $super+6 workspace $WS6
+bindsym $super+7 workspace $WS7
+bindsym $super+8 workspace $WS8
+bindsym $super+9 workspace $WS9
+bindsym $super+0 workspace $WS10
+
+bindsym $mod+1 workspace $WS11
+bindsym $mod+2 workspace $WS12
+bindsym $mod+3 workspace $WS13
+bindsym $mod+4 workspace $WS14
+bindsym $mod+5 workspace $WS15
+bindsym $mod+6 workspace $WS16
+bindsym $mod+7 workspace $WS17
+bindsym $mod+8 workspace $WS18
+bindsym $mod+9 workspace $WS19
+bindsym $mod+0 workspace $WS20
+
+bindsym $super+Shift+1 move container to workspace $WS1
+bindsym $super+Shift+2 move container to workspace $WS2
+bindsym $super+Shift+3 move container to workspace $WS3
+bindsym $super+Shift+4 move container to workspace $WS4
+bindsym $super+Shift+5 move container to workspace $WS5
+bindsym $super+Shift+6 move container to workspace $WS6
+bindsym $super+Shift+7 move container to workspace $WS7
+bindsym $super+Shift+8 move container to workspace $WS8
+bindsym $super+Shift+9 move container to workspace $WS9
+bindsym $super+Shift+0 move container to workspace $WS10
+
+bindsym $mod+Shift+1 move container to workspace $WS11
+bindsym $mod+Shift+2 move container to workspace $WS12
+bindsym $mod+Shift+3 move container to workspace $WS13
+bindsym $mod+Shift+4 move container to workspace $WS14
+bindsym $mod+Shift+5 move container to workspace $WS15
+bindsym $mod+Shift+6 move container to workspace $WS16
+bindsym $mod+Shift+7 move container to workspace $WS17
+bindsym $mod+Shift+8 move container to workspace $WS18
+bindsym $mod+Shift+9 move container to workspace $WS19
+bindsym $mod+Shift+0 move container to workspace $WS20
+
+# }}}
+
+# Window rules {{{
+
+# enable floating mode for windows where class name begins with floating
+for_window [class="^.*"] border pixel 2
+for_window [class="^floating"] floating enable
+for_window [class="Thunar"] floating enable resize set 960 750
+for_window [class="^qalc"] floating enable resize set 520 400
+for_window [class="^info"] floating enable resize set 520 400
+for_window [class="^Surf"] border normal 3
+
+# }}}
+
+# gaps {{{
+
+# Set inner/outer gaps
+set $gaps_inner 0
+set $gaps_outer 0
+
+gaps inner $gaps_inner
+gaps outer $gaps_outer
+
+smart_gaps on
+smart_borders on
+hide_edge_borders smart_no_gaps
+
+# }}}
+
+# workspace assignment {{{
+
+# assign [class="Firefox"] $ws2
+# assign [class="thunderbird"] $ws3
+# assign [class="discord"] $ws3
+# assign [class="Slack"] $ws3
+# assign [class="vlc"] $ws5
+# assign [class="Code"] $ws6
+# assign [class="Pavucontrol"] $ws9
+# assign [class="Virt-manager"] $ws7
+
+# }}}
+
+# status bar {{{
+
+bar {
+	status_command i3status
+	position top
+	tray_output eDP-1
+	font pango:monospace 9
+}
+
+# }}}
+
+# Resize window mode {{{
+
+set $mode_resize resize: [hl] -/+ width [jk] -/+ height
+mode "$mode_resize" {
+  bindsym h resize shrink width 20 px or 20 ppt
+  bindsym k resize grow height 20 px or 20 ppt
+  bindsym j resize shrink height 20 px or 20 ppt
+  bindsym l resize grow width 20 px or 20 ppt
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+# }}}
+
+# open directory mode {{{
+set $mode_filemarks [1]configs [2]scripts [3]stat107 [4]cs233 [5]hdfs220 [6]cs340
+mode "$mode_filemarks" {
+    bindsym 1 exec --no-startup-id alacritty -e /bin/bash -c "cd /home/aarya/.config && /bin/bash", mode "default"
+    bindsym 2 exec --no-startup-id alacritty -e /bin/bash -c "cd /home/aarya/scripts && /bin/bash", mode "default"
+    bindsym 3 exec --no-startup-id alacritty -e /bin/bash -c "cd /home/aarya/GoogleDrive/uiuc/senior/spring/STAT107 && /bin/bash", mode "default"
+    bindsym 4 exec --no-startup-id alacritty -e /bin/bash -c "cd /home/aarya/GoogleDrive/uiuc/senior/spring/CS233 && /bin/bash", mode "default"
+    bindsym 5 exec --no-startup-id alacritty -e /bin/bash -c "cd /home/aarya/GoogleDrive/uiuc/senior/spring/CS233 && /bin/bash", mode "default"
+    bindsym 6 exec --no-startup-id alacritty -e /bin/bash -c "cd /home/aarya/cs340-illinois && /bin/bash", mode "default"
+
+    bindsym Escape mode "default"
+    bindsym Return mode "default"
+}
+# }}}
+
+# Edit gap mode {{{
+
+set $mode_gaps Gaps: (o) outer, (i) inner
+set $mode_gaps_outer Outer Gaps: +|-|0 (local), Shift + +|-|0 (global), g (edit gaps)
+set $mode_gaps_inner Inner Gaps: +|-|0 (local), Shift + +|-|0 (global), g (edit gaps)
+bindsym $super+Shift+g mode "$mode_gaps"
+
+mode "$mode_gaps" {
+        bindsym o      mode "$mode_gaps_outer"
+        bindsym i      mode "$mode_gaps_inner"
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_inner" {
+        bindsym plus  gaps inner current plus 5
+        bindsym minus gaps inner current minus 5
+        bindsym 0     gaps inner current set 0
+
+        bindsym Shift+plus  gaps inner all plus 5
+        bindsym Shift+minus gaps inner all minus 5
+        bindsym Shift+0     gaps inner all set 0
+
+		bindsym g mode "$mode_gaps"
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+mode "$mode_gaps_outer" {
+        bindsym plus  gaps outer current plus 5
+        bindsym minus gaps outer current minus 5
+        bindsym 0     gaps outer current set 0
+
+        bindsym Shift+plus  gaps outer all plus 5
+        bindsym Shift+minus gaps outer all minus 5
+        bindsym Shift+0     gaps outer all set 0
+
+		bindsym g mode "$mode_gaps"
+
+        bindsym Return mode "default"
+        bindsym Escape mode "default"
+}
+
+# }}}
+
+# launch terminal app mode {{{
+
+set $mode_terminal Open: [1] htop [2] ncmpcpp [3] vim [4] nmtui
+mode "$mode_terminal" {
+  bindsym 1 exec alacritty -e htop, mode "default"
+  bindsym 2 exec alacritty -e ncmpcpp, mode "default"
+  bindsym 3 exec alacritty -e nvim, mode "default"
+  bindsym 4 exec alacritty -e nmtui, mode "default"
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+# }}}
+
+# launch app mode {{{
+
+set $mode_application Open: [f]irefox [c]hrome [t]hunderbird [d]iscord [p]avucontrol [b]luetooth [a]randr
+mode "$mode_application" {
+  bindsym a exec arandr, mode "default"
+  bindsym b exec blueman-manager, mode "default"
+  bindsym c exec chromium, mode "default"
+  bindsym d exec discord, mode "default"
+  bindsym f exec firefox, mode "default"
+  bindsym l exec lxappearance, mode "default"
+  bindsym p exec pavucontrol, mode "default"
+  bindsym Shift+v exec virt-manager, mode "default"
+  bindsym t exec thunderbird, mode "default"
+  bindsym v exec code, mode "default"
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+# }}}
+
+# power mode {{{
+
+set $mode_power [l]ock [s]uspend [r]eboot [p]oweroff [e]xit
+mode "$mode_power" {
+  bindsym l exec betterlockscreen -l --off 10, mode "default
+  # bindsym l exec i3lock && sleep 1 && xset dpms force off, mode "default"
+  bindsym s exec systemctl suspend, mode "default"
+  bindsym r exec reboot, mode "default"
+  bindsym p exec poweroff, mode "default"
+  bindsym e exec i3-msg exit, mode "default"
+
+  bindsym Return mode "default"
+  bindsym Escape mode "default"
+}
+
+# }}}
+
+# colorscheme {{{
+#colors:                border  backgr. text    indicator
+# client.focused          #007030 #007030 #ffffff #2b2b2b
+# client.focused_inactive #888888 #2b2b2b #ffffff #2b2b2b
+# client.unfocused        #888888 #2b2b2b #ffffff #2b2b2b
+# client.urgent           #900000 #900000 #ffffff #2b2b2b
+
+# }}}
+

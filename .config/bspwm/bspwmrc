@@ -1,0 +1,54 @@
+#!/bin/sh
+
+primary=eDP-1
+secondary=HDMI-1
+
+# autostart
+source ~/.config/bspwm/autostart.sh
+
+# monitors
+bspc monitor $primary -d I II III IV V VI VII VIII IX X
+# bspc monitor $primary -d VI VII VIII IX X
+# bspc monitor $secondary -d I II III IV V
+
+# settings
+bspc config border_width        2
+bspc config window_gap          8
+bspc config top_padding          30
+bspc config bottom_padding       30
+bspc config click_to_focus      true
+bspc config remove_disabled_monitors true
+bspc config remove_unplugged_monitors true
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true
+bspc config merge_overlapping_monitors true
+
+# use super+mouse to drag/resize floating windows
+bspc config pointer_modifier mod1
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action2 resize_corner
+
+# rules
+# bspc rule -a Gimp desktop='^8' state=floating follow=on
+# bspc rule -a Chromium desktop='^2'
+bspc rule -a thunderbird desktop='^3'
+bspc rule -a discord desktop='^4'
+bspc rule -a zoom desktop='^4'
+
+bspc rule -a mplayer2 state=floating
+bspc rule -a zoom state=floating
+bspc rule -a QtSpim state=floating
+bspc rule -a mpv state=floating
+bspc rule -a Kupfer.py focus=on
+bspc rule -a Screenkey manage=off
+bspc rule -a Thunar state=floating center=true rectange=960x750++
+bspc rule -a floating state=floating center=true rectangle=520x400++
+
+# colors
+bspc config normal_border_color		"#4c566a"
+bspc config active_border_color		"#1e1e1e"
+bspc config focused_border_color	"#5e81ac"
+bspc config presel_feedback_color	"#5e81ac"
+bspc config urgent_border_color 	"#dd2727"
