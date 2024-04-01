@@ -22,9 +22,10 @@ set laststatus=2				  " always show status line
 set linebreak
 set list
 set listchars=tab:..,trail:_,extends:>,precedes:<,nbsp:~
-set mouse+=a
+set mouse=a
 set nowrap
-set relativenumber                " show relative line numbers
+" set relativenumber                " show relative line numbers
+set number
 set shiftwidth=4 tabstop=4 noexpandtab
 set showmatch                     " jump to matches when entering regexp
 set smartcase                     " no ignorecase if Uppercase char present
@@ -63,7 +64,6 @@ Plug 'folke/tokyonight.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'savq/melange-nvim'
-Plug 'crusoexia/vim-monokai'
 
 " LSP
 Plug 'hrsh7th/cmp-nvim-lsp'
@@ -86,7 +86,17 @@ call plug#end()
 
 " THEMES
 " melange koehler gruvbox
-colorscheme gruvbox-material
+" colorscheme gruvbox-material
+colorscheme tokyonight-moon
+" highlight SignColumn guibg=none
+" highlight Normal guibg=NONE ctermbg=NONE
+
+" Change the color of the current match
+highlight Search cterm=none ctermbg=yellow ctermfg=black guibg=yellow guifg=black
+
+" Change the color of the first character of the current match
+highlight SearchCursor cterm=none ctermbg=yellow ctermfg=black guibg=yellow guifg=black
+
 let g:lightline = { 'colorscheme': 'one' }
 
 " comments
@@ -114,14 +124,6 @@ source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/lsp.lua
 source $HOME/.config/nvim/lua/config.lua
 
-" hi Normal guibg=NONE ctermbg=NONE
-
-" Change the color of the current match
-highlight Search cterm=none ctermbg=yellow ctermfg=black guibg=yellow guifg=black
-
-" Change the color of the first character of the current match
-highlight SearchCursor cterm=none ctermbg=yellow ctermfg=black guibg=yellow guifg=black
-
 " aliases
 iabbrev @@ aarya.bhatia1678@gmail.com
 iabbrev UIUC University of Illinois
@@ -143,6 +145,7 @@ au BufNewFile,BufRead *.ejs setlocal filetype=html
 
 " au FileType c,cpp,h setlocal ts=2 sts=2 sw=2 et
 au FileType c,cpp	setlocal foldmarker={,} foldlevel=4
+" au FileType c,cpp	setlocal ts=2 sts=2 sw=2 et
 
 au FileType markdown,text setlocal spell spelllang=en_us
 au FileType markdown,text setlocal wrap

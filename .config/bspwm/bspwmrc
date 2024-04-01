@@ -33,9 +33,9 @@ bspc config pointer_action2 resize_corner
 # rules
 # bspc rule -a Gimp desktop='^8' state=floating follow=on
 # bspc rule -a Chromium desktop='^2'
-bspc rule -a thunderbird desktop='^3'
-bspc rule -a discord desktop='^4'
-bspc rule -a zoom desktop='^4'
+bspc rule -a thunderbird desktop=III
+bspc rule -a discord desktop=IV
+bspc rule -a zoom desktop=IV
 
 bspc rule -a mplayer2 state=floating
 bspc rule -a zoom state=floating

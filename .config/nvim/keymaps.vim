@@ -2,8 +2,9 @@ nnoremap <silent> <leader> <Nop>
 
 tnoremap <Esc> <C-\><C-n>
 
-xnoremap <leader>y :w !xsel -b<CR><CR>
-nnoremap <leader>yy :w !xsel -b<CR><CR>
+xnoremap <leader>y :w !xsel -b -i<CR><CR>
+nnoremap <leader>yy :w !xsel -b -i<CR><CR>
+nnoremap <leader>pp :r !xsel -o<CR><CR>
 
 nnoremap <leader>q :quit<CR>
 nnoremap <leader>s :write<cr>
@@ -39,62 +40,62 @@ vnoremap > >gv
 xnoremap p "_dP
 
 " navigate quickfix list
-nnoremap [q :cprev<CR>
-nnoremap ]q :cnext<CR>
-nnoremap [Q :cfirst<CR>
-nnoremap ]Q :clast<CR>
+nnoremap <silent> [q :cprev<CR>
+nnoremap <silent> ]q :cnext<CR>
+nnoremap <silent> [Q :cfirst<CR>
+nnoremap <silent> ]Q :clast<CR>
 
 " navigate location list
-nnoremap [l :lprev<CR>
-nnoremap ]l :lnext<CR>
-nnoremap [L :lfirst<CR>
-nnoremap ]L :llast<CR>
+nnoremap <silent> [l :lprev<CR>
+nnoremap <silent> ]l :lnext<CR>
+nnoremap <silent> [L :lfirst<CR>
+nnoremap <silent> ]L :llast<CR>
 
 " navigate buffers
-nnoremap [b :bprev<CR>
-nnoremap ]b :bnext<CR>
+nnoremap <silent> [b :bprev<CR>
+nnoremap <silent> ]b :bnext<CR>
 
-" navigate arg list
-nnoremap [A :first<CR>
-nnoremap ]A :last<CR>
-nnoremap [a :prev<CR>
-nnoremap ]a :next<CR>
+" navigat<silent> e arg list
+nnoremap <silent> [A :first<CR>
+nnoremap <silent> ]A :last<CR>
+nnoremap <silent> [a :prev<CR>
+nnoremap <silent> ]a :next<CR>
 
 " navigate tabs
-nnoremap [t :tabprevious<CR>
-nnoremap ]t :tabnext<CR>
-nnoremap [T :tabfirst<CR>
-nnoremap ]T :tablast<CR>
+nnoremap <silent> [t :tabprevious<CR>
+nnoremap <silent> ]t :tabnext<CR>
+nnoremap <silent> [T :tabfirst<CR>
+nnoremap <silent> ]T :tablast<CR>
 
 " Horizontal scrolling
-nnoremap <C-h> 8zh
-nnoremap <C-l> 8zl
-vnoremap <C-h> 8zh
-vnoremap <C-l> 8zl
+nnoremap <silent> <C-h> 8zh
+nnoremap <silent> <C-l> 8zl
+vnoremap <silent> <C-h> 8zh
+vnoremap <silent> <C-l> 8zl
 
 " Vertical scrolling without moving cursor
-nnoremap <leader>k 6<C-y>
-nnoremap <leader>j 6<C-e>
-vnoremap <leader>k 6<C-y>
-vnoremap <leader>j 6<C-e>
+nnoremap <silent> <leader>k 6<C-y>
+nnoremap <silent> <leader>j 6<C-e>
+vnoremap <silent> <leader>k 6<C-y>
+vnoremap <silent> <leader>j 6<C-e>
 
 " move up/down faster
-nnoremap <C-k> 6gk
-nnoremap <C-j> 6gj
-vnoremap <C-k> 6gk
-vnoremap <C-j> 6gj
+nnoremap <silent> <C-k> 6gk
+nnoremap <silent> <C-j> 6gj
+vnoremap <silent> <C-k> 6gk
+vnoremap <silent> <C-j> 6gj
 
 " handle line wrapped text in normal and visual mode
-nnoremap k gk
-nnoremap j gj
-vnoremap k gk
-vnoremap j gj
+nnoremap <silent> k gk
+nnoremap <silent> j gj
+vnoremap <silent> k gk
+vnoremap <silent> j gj
 
 " To move around in insert mode
-inoremap <C-h> <Left>
-inoremap <C-j> <Down>
-inoremap <C-k> <Up>
-inoremap <C-l> <Right>
+inoremap <silent> <C-h> <Left>
+inoremap <silent> <C-j> <Down>
+inoremap <silent> <C-k> <Up>
+inoremap <silent> <C-l> <Right>
 
 " Replay macro @q
 nnoremap Q @q
@@ -119,3 +120,5 @@ nnoremap <leader>R "zyy:r !z
 
 xnoremap ss !sort<CR>
 xnoremap su !sort\|uniq<CR>
+
+nnoremap <leader>rn :set relativenumber! number!<CR>

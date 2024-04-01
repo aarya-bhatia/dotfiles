@@ -74,8 +74,10 @@ alt + Escape
 	pkill -USR1 -x sxhkd; notify-send "reloaded sxhkd"
 
 # launch applications
-alt + o; {e,v,f,t,d,n,a,b,p,w}
-	{thunar,alacritty -e nvim, firefox, thunderbird, discord, alacritty -e ncmpcpp, arandr, blueman-manager, pavucontrol, alacritty -e nmtui}
+alt + o; {e,v,f,t,d,n,m,a,b,p,w}
+	{thunar,alacritty -e nvim, firefox, thunderbird, discord, alacritty -e \
+	ncmpcpp, alacritty -e mpq, arandr, blueman-manager, pavucontrol, \
+	alacritty -e nmtui}
 
 # clipboard history
 alt + v
