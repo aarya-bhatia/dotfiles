@@ -18,8 +18,13 @@
 {XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
 	$HOME/scripts/volume.sh {next_track,prev_track,play_pause,play_pause}
 
+# mpd controls with alt + functions keys
 alt+{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
 	mpc {next,prev,toggle,toggle}
+
+# mpd controls without function keys
+alt + {minus,greater,less}
+	mpc {toggle,next,prev}
 
 # reload status bar
 F11; @F11
