@@ -25,7 +25,7 @@ bspc config gapless_monocle      true
 bspc config merge_overlapping_monitors true
 
 # use super+mouse to drag/resize floating windows
-bspc config pointer_modifier mod1
+bspc config pointer_modifier mod4
 bspc config pointer_action1 move
 bspc config pointer_action2 resize_side
 bspc config pointer_action2 resize_corner

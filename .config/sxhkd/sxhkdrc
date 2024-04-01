@@ -1,41 +1,41 @@
 # decrease/increase window gap size
-alt + g; {0-9}
+super + g; {0-9}
 	bspc config window_gap {0-9}; notify-send "window gap changed"
 
 # layouts: tiled, monocle, master-stack, reverse-master-stack
-alt + control + {1,2,3,4}
+super + control + {1,2,3,4}
 	bsp-layout set { tiled, monocle, tall -- --master-size 0.5, rtall -- --master-size 0.5 };
 
 # quit bspwm
-alt + shift + x
+super + shift + x
 	test $(echo -e "Yes\nNo\n" | dmenu -p "Are you sure want to quit?") = "Yes" && bspc quit
 
 # restart bspwm
-alt + shift + r
+super + shift + r
 	bspc wm -r && /home/aarya/.config/bspwm/bspwmrc
 
 # close and kill
-alt + {_,shift + }q
+super + {_,shift + }q
 	bspc node -{c,k}
 
 # focus or send to the given desktop
-alt + {_,shift + }{0-9}
+super + {_,shift + }{0-9}
 	bspc {desktop -f,node -d} {X,I,II,III,IV,V,VI,VII,VIII,IX}
 
 # focus the next/previous window in the current desktop
-alt + {_,shift + } Tab
+super + {_,shift + } Tab
 	bspc desktop -f {prev,next}.local
 
 # focus the next/previous desktop in the current monitor
-alt + bracket{left,right}
+super + bracket{left,right}
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus/swap nodes in direction
-alt + {_,shift + }{h,j,k,l}
+super + {_,shift + }{h,j,k,l}
 	bspc node -{f,s} {west,south,north,east}
 
 # Toggle floating and tiled window
-alt + shift + space
+super + shift + space
 	if [ -z "$(bspc query -N -n focused.floating)" ]; then \
         bspc node focused -t floating; \
     else \
@@ -43,7 +43,7 @@ alt + shift + space
     fi
 
 # to change focus between tiling and floating windows
-alt + space
+super + space
 	if ! bspc query -N -n focused.fullscreen; then \
 		if bspc query -N -n focused.floating; then \
 			bspc node -f any.local.\!floating; \
@@ -52,12 +52,12 @@ alt + space
 		fi \
 	fi
 
-# alternate between the tiled and monocle layout
-alt + f
+# superernate between the tiled and monocle layout
+super + f
 	bspc desktop -l next
 
 # Toggle fullscreen and tiled window
-alt + shift + f
+super + shift + f
 	if [ -z "$(bspc query -N -n focused.fullscreen)" ]; then \
         bspc node focused -t fullscreen; \
     else \

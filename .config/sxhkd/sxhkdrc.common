@@ -18,12 +18,12 @@
 {XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
 	$HOME/scripts/volume.sh {next_track,prev_track,play_pause,play_pause}
 
-# mpd controls with alt + functions keys
-alt+{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
+# mpd controls with super + functions keys
+super+{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
 	mpc {next,prev,toggle,toggle}
 
 # mpd controls without function keys
-alt + {minus,greater,less}
+super + {minus,greater,less}
 	mpc {toggle,next,prev}
 
 # reload status bar
@@ -44,48 +44,45 @@ F12; @F12
 	,	thunar }
 
 ####################################
-# ALT + KEYS
+# super + KEYS
 ####################################
 
 # browser links
-alt + slash
+super + slash
 	/home/aarya/scripts/dmenu/dmenu_browser.sh
 
 # power menu
-alt + BackSpace
+super + BackSpace
 	/home/aarya/scripts/dmenu/dmenu_power.sh
 
 # for testing
-alt + z
+super + z
 	notify-send "hello world"
+
+# terminal emulator in default tmux session
+super + shift + Return
+	alacritty --class=floating -e tmux new-session -A -s default
 
 # terminal emulator
 super + Return
-	alacritty --class=floating -e tmux new-session -A -s default
-
-alt + shift + Return
-	alacritty --class=floating -e tmux new-session -A -s default
-
-# terminal emulator
-alt + Return
 	alacritty
 
 # program launcher
-alt + d
+super + d
 	dmenu_run -h 24
 
 # make sxhkd reload its configuration files:
-alt + Escape
+super + Escape
 	pkill -USR1 -x sxhkd; notify-send "reloaded sxhkd"
 
 # launch applications
-alt + o; {e,v,f,t,d,n,m,a,b,p,w}
+super + o; {e,v,f,t,d,n,m,a,b,p,w}
 	{thunar,alacritty -e nvim, firefox, thunderbird, discord, alacritty -e \
 	ncmpcpp, alacritty -e mpq, arandr, blueman-manager, pavucontrol, \
 	alacritty -e nmtui}
 
 # clipboard history
-alt + v
+super + v
 	clipmenu
 
 ####################################
@@ -97,27 +94,27 @@ alt + super + {0-9}
 	mpc -q seek {0-9}0%
 
 ####################################
-# ALT + SHIFT KEYS
+# super + SHIFT KEYS
 ####################################
 
 # edit and copy temp file to clipboard
-alt + shift + v
+super + shift + v
 	/home/aarya/scripts/launch_vim.sh
 
 # launch sxiv to view/select wallpapers (ctrl-x+w)
-alt + shift + w
+super + shift + w
 	sxiv /home/aarya/wallpapers/*
 
 # password input
-alt + shift + p
+super + shift + p
 	/home/aarya/scripts/dmenu/dmenupass.sh
 
 # dmenu edit config
-alt + shift + e
+super + shift + e
 	/home/aarya/scripts/dmenu/dmenu_edit_config.sh
 
 ####################################
-# ALT + CONTROL KEYS
+# super + CONTROL KEYS
 ####################################
 
 ####################################
@@ -128,7 +125,7 @@ alt + shift + e
 Print; @Print
 	/home/aarya/scripts/screenshot.sh
 
-# press alt + print key
-alt + Print
+# press super + print key
+super + Print
 	/home/aarya/scripts/screenshot.sh -s
 
