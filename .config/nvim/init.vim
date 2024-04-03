@@ -40,6 +40,7 @@ set wildmenu
 
 call plug#begin('$HOME/.local/share/nvim/plugged')
 
+Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'jamessan/vim-gnupg'
 Plug 'junegunn/vim-easy-align'
@@ -118,6 +119,8 @@ nnoremap <leader>tt :TagbarToggle<CR>
 nnoremap <leader>M :Mason<CR>
 nnoremap <leader>F :LspZeroFormat<CR>
 " nnoremap <leader>F :AutoFormat<CR>
+
+nnoremap <leader>nn :NERDTreeToggle<CR>
 
 source $HOME/.config/nvim/keymaps.vim
 source $HOME/.config/nvim/lua/treesitter.lua

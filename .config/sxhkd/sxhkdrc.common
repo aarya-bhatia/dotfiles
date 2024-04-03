@@ -55,9 +55,9 @@ super + slash
 super + BackSpace
 	/home/aarya/scripts/dmenu/dmenu_power.sh
 
-# for testing
+# open pdfs with zathura
 super + z
-	notify-send "hello world"
+	/home/aarya/scripts/dmenu/dmenu_pdfs.sh
 
 # terminal emulator in default tmux session
 super + shift + Return
@@ -81,7 +81,7 @@ super + o; {e,v,f,t,d,n,m,a,b,p,w}
 	ncmpcpp, alacritty -e mpq, arandr, blueman-manager, pavucontrol, \
 	alacritty -e nmtui}
 
-# clipboard history
+# TODO: clipboard history
 super + v
 	clipmenu
 
