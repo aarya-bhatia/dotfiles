@@ -69,7 +69,7 @@ super + Return
 
 # program launcher
 super + d
-	dmenu_run -h 24
+	dmenu_run
 
 # make sxhkd reload its configuration files:
 super + Escape

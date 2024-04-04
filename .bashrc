@@ -126,4 +126,4 @@ lfcd () {
 alias keychain="keychain --dir /run/user/$UID --absolute"
 eval $(keychain --eval --quiet id_rsa ~/.ssh/aaryab2)
 
-neofetch
+# neofetch
