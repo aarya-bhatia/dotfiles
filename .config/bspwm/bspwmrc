@@ -35,7 +35,7 @@ bspc config pointer_action2 resize_corner
 # bspc rule -a Chromium desktop='^2'
 bspc rule -a thunderbird desktop=III
 bspc rule -a discord desktop=IV
-bspc rule -a zoom desktop=IV
+bspc rule -a zoom desktop=V
 
 bspc rule -a mplayer2 state=floating
 bspc rule -a zoom state=floating
