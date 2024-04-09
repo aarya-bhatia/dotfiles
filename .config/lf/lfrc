@@ -59,11 +59,11 @@ cmd open &{{
 		text/*) lf -remote "send $id \$$EDITOR \$fx";;
 			  application/json ) lf -remote "send $id \$$EDITOR \$fx";;
 			  application/pdf ) lf -remote "send $id \$zathura \$fx &";;
-			  image/gif) lf -remote "send $id \$sxiv -a \$fx";;
-			  image/*) lf -remote "send $id \$sxiv \$fx";;
+			  image/gif) lf -remote "send $id \$nsxiv -a \$fx";;
+			  image/*) lf -remote "send $id \$nsxiv \$fx";;
 			  audio/*) lf -remote "send $id \$mpv \$fx";;
 # audio/*) lf -remote "send $id \$mpv \$fx";;
-video/*) lf -remote "send $id \$vlc \$fx";;
+video/*) lf -remote "send $id \$mpv \$fx";;
 			 *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
 			 esac
 			 }}
