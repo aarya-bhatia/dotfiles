@@ -62,13 +62,12 @@ cmd open &{{
 			  image/gif) lf -remote "send $id \$nsxiv -a \$fx";;
 			  image/*) lf -remote "send $id \$nsxiv \$fx";;
 			  audio/*) lf -remote "send $id \$mpv \$fx";;
-# audio/*) lf -remote "send $id \$mpv \$fx";;
-video/*) lf -remote "send $id \$mpv \$fx";;
+			  video/*) lf -remote "send $id \$smplayer \$fx";;
 			 *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
-			 esac
-			 }}
+	 esac
+}}
 
-			 map <enter> open
+map <enter> open
 
 # To delete files
 cmd trash !python3 $HOME/.config/lf/scripts/trash.py
