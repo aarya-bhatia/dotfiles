@@ -6,6 +6,6 @@ if pgrep -f polybar; then
 fi
 
 polybar bspwm 2>&1 >> /tmp/polybar.log & disown
-polybar bottom 2>&1 >> /tmp/polybar.log & disown
+# polybar bottom 2>&1 >> /tmp/polybar.log & disown
 
 echo "Polybar launched..."

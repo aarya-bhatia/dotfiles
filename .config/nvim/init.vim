@@ -145,7 +145,7 @@ au BufReadPost *
 " Trim trailing whitespace on lines
 au BufWritePost * :%s/\s\+$//e | nohlsearch
 
-au BufRead,BufNewFile *.h setlocal filetype=c
+" au BufRead,BufNewFile *.h setlocal filetype=c
 au BufNewFile,BufRead *.ejs setlocal filetype=html
 
 " au FileType c,cpp,h setlocal ts=2 sts=2 sw=2 et
