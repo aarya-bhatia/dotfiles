@@ -120,7 +120,7 @@ nnoremap <leader>M :Mason<CR>
 nnoremap <leader>F :LspZeroFormat<CR>
 " nnoremap <leader>ls :LspStop<CR>
 " nnoremap <leader>lS :LspStart<CR>
-" nnoremap <leader>F :AutoFormat<CR>
+nnoremap <leader>A :Autoformat<CR>
 
 nnoremap <leader>nn :NERDTreeToggle<CR>
 

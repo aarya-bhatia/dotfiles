@@ -74,7 +74,7 @@ if which lsd 2>&1 >/dev/null; then
 	alias ls="lsd -X"
 	alias ll="lsd -AlFh"
 	alias la="lsd -Ah"
-	# alias l="ls"
+	alias l="ls"
 else
 	alias ls="ls --color=auto --group-directories-first"
 	alias ll="ls --color=auto -alFh"

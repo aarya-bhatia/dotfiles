@@ -44,7 +44,8 @@ run sxhkd -c $HOME/.config/sxhkd/sxhkdrc $HOME/.config/sxhkd/sxhkdrc.common &
 run ~/scripts/nightlight.sh auto &
 
 # start screen locker
-run xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
+# run xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
+run xss-lock --transfer-sleep-lock -- betterlockscreen -l &
 
 # power management
 run xfce4-power-manager --daemon &
