@@ -70,17 +70,15 @@ alias bc="bc -q"
 alias du="du -h"
 alias free="free -h"
 
-if which lsd 2>&1 >/dev/null; then
-	alias ls="lsd -X"
-	alias ll="lsd -AlFh"
-	alias la="lsd -Ah"
-	alias l="ls"
-else
-	alias ls="ls --color=auto --group-directories-first"
-	alias ll="ls --color=auto -alFh"
-	alias la="ls --color=auto -Ah"
-	alias l="ls --color=auto -CF"
-fi
+# alias ls="lsd -X"
+# alias ll="lsd -AlFh"
+# alias la="lsd -Ah"
+# alias l="ls"
+
+alias ls="ls --color=auto --group-directories-first"
+alias ll="ls --color=auto -alFh"
+alias la="ls --color=auto -Ah"
+alias l="ls --color=auto -CF"
 
 alias ip="ip --color=auto"
 alias diff="diff --color=auto"

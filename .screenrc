@@ -30,13 +30,37 @@ pow_detach_msg "Screen session of \$LOGNAME \$:cr:\$:nl:ended."
 # set every new windows hardstatus line to somenthing descriptive
 # defhstatus "screen: ^En (^Et)"
 
-defscrollback 1000
+defscrollback 10000
 
 # don't kill window after the process died
 # zombie "^["
 
 # enable support for the "alternate screen" capability in all windows
 # altscreen on
+
+# ================== my config ==============================
+
+# status line
+hardstatus off
+hardstatus alwayslastline
+hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
+# hardstatus string "%w"
+
+term screen-256color
+attrcolor b ".I"
+termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
+defbce on
+
+# Key bindings for pane navigation with hjkl
+bind h focus left
+bind j focus down
+bind k focus up
+bind l focus right
+
+# mouse tracking allows to switch region focus by clicking
+mousetrack on
+
+bind v eval "writebuf" "exec sh -c 'exec xsel -b --display :0 -i < /tmp/screen-exchange'"
 
 ################
 #
@@ -151,16 +175,4 @@ bind ^] paste [.]
 # defnonblock 1
 # blankerprg rain -d 100
 # idle 30 blanker
-
-# ================== my config ==============================
-
-hardstatus off
-hardstatus alwayslastline
-hardstatus string '%{= kG}[ %{G}%H %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][%{B} %m-%d %{W} %c %{g}]'
-
-# Key bindings for pane navigation with hjkl
-bind h focus left
-bind j focus down
-bind k focus up
-bind l focus right
 
