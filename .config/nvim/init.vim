@@ -107,6 +107,7 @@ au FileType asm setlocal commentstring=#\ %s
 let g:autoformat_verbosemode=1
 let g:formatter_prettier="prettier --write"
 let g:formatters_html=["prettier"]
+let g:formatters_markdown=["prettier"]
 
 " easy-align
 xnoremap ga <Plug>(EasyAlign)
