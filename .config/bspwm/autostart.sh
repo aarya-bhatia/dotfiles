@@ -31,9 +31,6 @@ run lxsession &
 # start music player daemon
 run mpd &
 
-# send mpd song notifications
-run $HOME/scripts/mpdnotify.sh &
-
  # start compositor
 run picom --backend glx --xrender-sync-fence &
 
