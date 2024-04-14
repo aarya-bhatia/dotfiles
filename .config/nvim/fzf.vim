@@ -73,8 +73,8 @@ nnoremap <silent> <leader>fl :FzfBLines<CR>
 " Find lines in all buffers
 nnoremap <silent> <leader>fL :FzfLines<CR>
 
-" Grep search with Silver Searcher
-nnoremap <silent> <leader>/ :FzfAg<CR>
+" Grep search
+nnoremap <silent> <leader>/ :FzfRg<CR>
 
 " List help tags
 nnoremap <silent> <leader>f? :FzfHelp<CR>

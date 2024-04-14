@@ -26,6 +26,10 @@ super+{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
 super + {minus,greater,less}
 	mpc {toggle,next,prev}
 
+# tell me current mpd song
+F10; @F10
+	notify-send "Playing: $(mpc current)"
+
 # reload status bar
 F11; @F11
 	polybar-msg cmd restart || \

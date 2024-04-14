@@ -9,3 +9,5 @@
 	autoSetupRemote = true
 [diff]
 	tool = vimdiff
+[advice]
+	detachedHead = false

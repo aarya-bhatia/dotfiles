@@ -39,34 +39,6 @@ vnoremap > >gv
 " Paste over currently selected text without yanking it
 xnoremap p "_dP
 
-" navigate quickfix list
-nnoremap <silent> [q :cprev<CR>
-nnoremap <silent> ]q :cnext<CR>
-nnoremap <silent> [Q :cfirst<CR>
-nnoremap <silent> ]Q :clast<CR>
-
-" navigate location list
-nnoremap <silent> [l :lprev<CR>
-nnoremap <silent> ]l :lnext<CR>
-nnoremap <silent> [L :lfirst<CR>
-nnoremap <silent> ]L :llast<CR>
-
-" navigate buffers
-nnoremap <silent> [b :bprev<CR>
-nnoremap <silent> ]b :bnext<CR>
-
-" navigat<silent> e arg list
-nnoremap <silent> [A :first<CR>
-nnoremap <silent> ]A :last<CR>
-nnoremap <silent> [a :prev<CR>
-nnoremap <silent> ]a :next<CR>
-
-" navigate tabs
-nnoremap <silent> [t :tabprevious<CR>
-nnoremap <silent> ]t :tabnext<CR>
-nnoremap <silent> [T :tabfirst<CR>
-nnoremap <silent> ]T :tablast<CR>
-
 " Horizontal scrolling
 nnoremap <silent> <C-h> 8zh
 nnoremap <silent> <C-l> 8zl

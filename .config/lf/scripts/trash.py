@@ -2,11 +2,11 @@
 import os
 
 auto = False
-RM = "rm -rf"
-HOME=os.environ.get("HOME","/home")
+RM = "/bin/rm -rf"
 
-if os.environ.get('PWD','').startswith(HOME):
-    RM = "trash-put"
+# HOME=os.environ.get("HOME","/home")
+# if os.environ.get('PWD','').startswith(HOME):
+#     RM = "trash-put"
 
 print("Using remove command: " + RM)
 

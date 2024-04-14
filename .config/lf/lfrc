@@ -70,7 +70,7 @@ cmd open &{{
 map <enter> open
 
 # To delete files
-cmd trash !python3 $HOME/.config/lf/scripts/trash.py
+cmd trash %python3 $HOME/.config/lf/scripts/trash.py
 map <delete> trash
 map D trash
 

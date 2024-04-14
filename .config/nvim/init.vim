@@ -40,14 +40,15 @@ set wildmenu
 
 call plug#begin('$HOME/.local/share/nvim/plugged')
 
-Plug 'preservim/nerdtree'
 Plug 'itchyny/lightline.vim'
 Plug 'jamessan/vim-gnupg'
 Plug 'junegunn/vim-easy-align'
+Plug 'kovetskiy/sxhkd-vim'
 Plug 'kshenoy/vim-signature'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-commentary'
@@ -55,10 +56,10 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'voldikss/vim-floaterm'
 Plug 'wellle/targets.vim'
-Plug 'kovetskiy/sxhkd-vim'
 
 " colorschemes
 Plug 'folke/tokyonight.nvim'
