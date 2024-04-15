@@ -1,8 +1,5 @@
 " FZF (Fuzzy Finder)
 
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
 " An action can be a reference to a function that processes selected lines
 function! s:build_quickfix_list(lines)
 	call setqflist(map(copy(a:lines), '{ "filename": v:val, "lnum": 1 }'))

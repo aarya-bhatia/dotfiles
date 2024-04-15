@@ -1,8 +1,4 @@
-" Ultisnips
-
-Plug 'SirVer/ultisnips'       " snippet engine
-
-let g:UltiSnipsSnippetDirectories=[$HOME.'/.vim/UltiSnips']
+let g:UltiSnipsSnippetDirectories=['/home/aarya/.config/nvim/snippets']
 let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
 let g:UltiSnipsJumpBackwardTrigger="<c-k>"

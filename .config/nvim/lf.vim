@@ -1,5 +1,3 @@
-Plug 'ptzz/lf.vim'
-
 function! LF()
 	let temp = tempname()
 	exec 'silent !lf -selection-path=' . shellescape(temp)

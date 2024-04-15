@@ -51,3 +51,7 @@ export PATH=$PATH:$HOME/scripts
 export PATH=$PATH:$HOME/scripts/lemonbar
 export PATH=$PATH:$HOME/pyvenv/bin
 export PATH=$PATH:$GOPATH/bin
+
+if [ -z "$DISPLAY" ] && [ "$XDG_VTNR" = 1 ]; then
+  exec startx
+fi

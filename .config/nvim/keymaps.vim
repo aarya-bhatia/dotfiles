@@ -1,7 +1,5 @@
 nnoremap <silent> <leader> <Nop>
 
-tnoremap <Esc> <C-\><C-n>
-
 xnoremap <leader>y :w !xsel -b -i<CR><CR>
 nnoremap <leader>yy :w !xsel -b -i<CR><CR>
 nnoremap <leader>pp :r !xsel -o<CR><CR>
@@ -10,23 +8,21 @@ nnoremap <leader>q :quit<CR>
 nnoremap <leader>s :write<cr>
 nnoremap <leader>d :bd<CR>
 
-" [V]im namespace
+" [V]im related
 nnoremap <leader>ve :edit $MYVIMRC<CR>
 nnoremap <leader>vs :source $MYVIMRC<CR>
 nnoremap <leader>vpi :PlugInstall<CR>
 nnoremap <leader>vpu :PlugUpdate<CR>
 nnoremap <leader>vps :PlugStatus<CR>
 nnoremap <leader>vpc :PlugClean<CR>
+nnoremap <leader>vrn :set relativenumber! number!<CR>
 
 " Unhighlight search results
-nnoremap <Esc> :nohl<CR>
-nnoremap <leader>hl :set invhlsearch<CR>
-
-" surround last visual selection with quotes
-nnoremap <leader>v" `>a"<esc>`<i"<esc>lel
+nnoremap <silent> <Esc> :noh<CR>
+nnoremap <silent> <leader>hl :set invhlsearch<CR>
 
 " Exit insert mode
-inoremap kj <Esc>
+inoremap <silent> kj <Esc>
 
 " Indent with single angle bracket
 " nnoremap > >>
@@ -37,7 +33,7 @@ inoremap kj <Esc>
 " vnoremap > >gv
 
 " Paste over currently selected text without yanking it
-xnoremap p "_dP
+xnoremap <silent> p "_dP
 
 " Horizontal scrolling
 nnoremap <silent> <C-h> 8zh
@@ -80,9 +76,8 @@ nnoremap <leader>V V`]
 
 " Replace current word with yanked word ([p]aste [w]ord)
 nnoremap <leader>pw ciw<C-r>0<Esc>
-nnoremap <leader>pW ciW<C-r>0<Esc>
 
-" [I]nsert [D]ate
+" [I]nsert [D]ate : TODO replace with date snippet
 nnoremap <leader>id i<C-R>=strftime('%Y-%m-%d %H:%M:%S')<CR><Esc>
 
 nnoremap <leader>mk :make<CR>
@@ -93,4 +88,28 @@ nnoremap <leader>R "zyy:r !z
 xnoremap ss !sort<CR>
 xnoremap su !sort\|uniq<CR>
 
-nnoremap <leader>rn :set relativenumber! number!<CR>
+" Smooth scrolling
+nnoremap <silent> <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
+nnoremap <silent> <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
+
+" Exit terminal mode
+tnoremap <silent> <Esc> <C-\\><C-n>
+
+nnoremap <A-h> <C-w><C-h>
+nnoremap <A-j> <C-w><C-j>
+nnoremap <A-k> <C-w><C-k>
+nnoremap <A-l> <C-w><C-l>
+
+" easy-align
+xnoremap <leader>ga <Plug>(EasyAlign)
+nnoremap <leader>ga <Plug>(EasyAlign)
+
+" tagbar
+nnoremap <leader>tt :TagbarToggle<CR>
+
+" lsp
+nnoremap <leader>M :Mason<CR>
+nnoremap <leader>L :LspInfo<CR>
+
+nnoremap <leader>nn :NERDTreeToggle<CR>
+

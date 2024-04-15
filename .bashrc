@@ -106,8 +106,10 @@ lfcd () {
 alias keychain="keychain --dir /run/user/$UID --absolute"
 eval $(keychain --eval --quiet id_rsa ~/.ssh/aaryab2)
 
-# neofetch
+alias ta="tmux new-session -A -s $USER"
 
-if [ "$TERM" != "screen-256color" ]; then
-	tmux new-session -A -s "$USER"
-fi
+neofetch
+
+# if [ "$TERM" != "screen-256color" ]; then
+# 	tmux new-session -A -s "$USER"
+# fi

@@ -1,5 +1,3 @@
-Plug 'romainl/vim-qf'
-
 let g:qf_auto_resize = 0
 
 au FileType qf cabbrev <buffer> K Keep

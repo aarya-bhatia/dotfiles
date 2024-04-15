@@ -1,57 +1,47 @@
----
--- LSP setup
----
-local lsp_zero = require('lsp-zero')
+-- Setup language servers.
+local lspconfig = require('lspconfig')
+-- lspconfig.pyright.setup {}
+-- lspconfig.tsserver.setup {}
+lspconfig.clangd.setup {}
+lspconfig.lua_ls.setup {}
 
-lsp_zero.on_attach(function(client, bufnr)
-  local opts = {buffer = bufnr, remap = false}
+-- Global mappings.
+-- See `:help vim.diagnostic.*` for documentation on any of the below functions
+vim.keymap.set('n', '<space>lf', vim.diagnostic.open_float)
+vim.keymap.set('n', '<space>lq', vim.diagnostic.setloclist)
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev)
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next)
 
-  vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
-  vim.keymap.set("n", "gh", function() vim.lsp.buf.hover() end, opts)
-  vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts)
+-- Use LspAttach autocommand to only map the following keys
+-- after the language server attaches to the current buffer
+vim.api.nvim_create_autocmd('LspAttach', {
+	group = vim.api.nvim_create_augroup('UserLspConfig', {}),
+	callback = function(ev)
+		-- Enable completion triggered by <c-x><c-o>
+		vim.bo[ev.buf].omnifunc = 'v:lua.vim.lsp.omnifunc'
 
-  vim.keymap.set("n", "<leader>la", function() vim.lsp.buf.code_action() end, opts)
-  vim.keymap.set("n", "<leader>lf", function() vim.diagnostic.open_float() end, opts)
-  vim.keymap.set("n", "<leader>lh", function() vim.lsp.buf.signature_help() end, opts)
-  vim.keymap.set("n", "<leader>ln", function() vim.lsp.buf.rename() end, opts)
-  vim.keymap.set("n", "<leader>ls", function() vim.lsp.buf.workspace_symbol() end, opts)
-
-  vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-  vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-end)
-
-require('mason').setup({})
-require('mason-lspconfig').setup({
-  ensure_installed = {'clangd'},
-  handlers = {
-    lsp_zero.default_setup,
-    lua_ls = function()
-      local lua_opts = lsp_zero.nvim_lua_ls()
-      require('lspconfig').lua_ls.setup(lua_opts)
-    end,
-  }
+		-- Buffer local mappings.
+		-- See `:help vim.lsp.*` for documentation on any of the below functions
+		local opts = { buffer = ev.buf }
+		vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
+		vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
+		vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
+		vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
+		vim.keymap.set('n', 'gh', vim.lsp.buf.signature_help, opts)
+		vim.keymap.set('n', '<space>wa', vim.lsp.buf.add_workspace_folder, opts)
+		vim.keymap.set('n', '<space>wr', vim.lsp.buf.remove_workspace_folder, opts)
+		vim.keymap.set('n', '<space>wl', function()
+			print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
+		end, opts)
+		vim.keymap.set('n', '<space>lt', vim.lsp.buf.type_definition, opts)
+		vim.keymap.set('n', '<space>lr', vim.lsp.buf.rename, opts)
+		vim.keymap.set({ 'n', 'v' }, '<space>la', vim.lsp.buf.code_action, opts)
+		vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
+		vim.keymap.set('n', '<space>lF', function()
+			vim.lsp.buf.format { async = true }
+		end, opts)
+	end,
 })
 
----
--- Autocompletion config
----
-local cmp = require('cmp')
-local cmp_action = lsp_zero.cmp_action()
-
-cmp.setup({
-  mapping = cmp.mapping.preset.insert({
-    -- `Enter` key to confirm completion
-    ['<CR>'] = cmp.mapping.confirm({select = true}),
-
-    -- Ctrl+Space to trigger completion menu
-    ['<C-Space>'] = cmp.mapping.complete(),
-
-    -- Navigate between snippet placeholder
-    ['<C-j>'] = cmp_action.luasnip_jump_forward(),
-    ['<C-k>'] = cmp_action.luasnip_jump_backward(),
-
-    -- Scroll up and down in the completion documentation
-    ['<C-f>'] = cmp.mapping.scroll_docs(-4),
-    ['<C-b>'] = cmp.mapping.scroll_docs(4),
-  })
-})
+require('mason').setup{}
+require('mason-lspconfig').setup{}
