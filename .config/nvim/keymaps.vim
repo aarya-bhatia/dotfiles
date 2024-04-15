@@ -29,12 +29,12 @@ nnoremap <leader>v" `>a"<esc>`<i"<esc>lel
 inoremap kj <Esc>
 
 " Indent with single angle bracket
-nnoremap > >>
-nnoremap < <<
+" nnoremap > >>
+" nnoremap < <<
 
 " Reselect visual range while indenting
-vnoremap < <gv
-vnoremap > >gv
+" vnoremap < <gv
+" vnoremap > >gv
 
 " Paste over currently selected text without yanking it
 xnoremap p "_dP
