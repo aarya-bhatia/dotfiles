@@ -22,9 +22,9 @@ order += "disk /home"
 order += "cpu_usage"
 order += "memory"
 order += "battery 0"
-# order += "wireless wlp1s0"
-order += "wireless wlo1"
-order += "ethernet enx00e04c680d42"
+order += "wireless wlp1s0"
+# order += "wireless wlo1"
+# order += "ethernet enx00e04c680d42"
 order += "volume master"
 order += "time"
 
@@ -59,10 +59,10 @@ disk "/" {
 
 ## audio volume sensor
 volume master {
-    # format = "♪: %volume"
-    format = "vol: %volume"
-    # format_muted = "♪: muted (%volume)"
-    format_muted = "muted (%volume)"
+    format = "♪: %volume"
+    # format = "vol: %volume"
+    format_muted = "♪: muted (%volume)"
+    # format_muted = "muted (%volume)"
     device = "default"
     mixer = "Master"
     mixer_idx = 0

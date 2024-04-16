@@ -101,7 +101,11 @@ eval $(keychain --eval --quiet id_rsa ~/.ssh/aaryab2)
 
 alias ta="tmux new-session -A -s $USER"
 
-neofetch
+# fortune
+# cat $HOME/banner
+# echo ""
+# echo ""
+# neofetch
 
 # if [ "$TERM" != "screen-256color" ]; then
 # 	tmux new-session -A -s "$USER"

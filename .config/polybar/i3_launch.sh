@@ -1,4 +1,10 @@
 #!/bin/sh
-pgrep -f polybar && polybar-msg cmd quit
-polybar i3 2>&1 | tee -a /tmp/polybar_i3.log & disown
-echo "Polybar launched: i3"
+source /home/aarya/pyvenv/bin/activate
+
+if pgrep -f polybar; then
+	polybar-msg cmd quit
+fi
+
+polybar i3 &>> /tmp/polybar.log & disown
+
+echo "Polybar launched..."

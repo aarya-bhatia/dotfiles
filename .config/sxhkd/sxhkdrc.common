@@ -1,8 +1,4 @@
 ####################################
-# KEYBOARD BINDINGS FOR ANY WM
-####################################
-
-####################################
 # FUNCTION KEYS
 ####################################
 
@@ -32,9 +28,9 @@ F10; @F10
 
 # reload status bar
 F11; @F11
-	polybar-msg cmd restart || \
-		/home/aarya/.config/polybar/bspwm_launch.sh; \
-		notify-send "reloaded polybar"
+	polybar-msg cmd restart; notify-send "reloaded polybar"
+	# [ "$XDG_CURRENT_DESKTOP" = "i3" ] && $HOME/.config/polybar/i3_launch.sh || \
+	# /home/aarya/.config/polybar/bspwm_launch.sh; \
 
 # show dmenu hotkey help menu
 F12; @F12
@@ -46,6 +42,14 @@ F12; @F12
 	,	alacritty -e ncmpcpp \
 	, 	thunderbird \
 	,	thunar }
+
+# press print key
+Print; @Print
+	/home/aarya/scripts/screenshot.sh
+
+# press super + print key
+super + Print
+	/home/aarya/scripts/screenshot.sh -s
 
 ####################################
 # super + KEYS
@@ -60,7 +64,7 @@ super + BackSpace
 	/home/aarya/scripts/dmenu/dmenu_power.sh
 
 # open pdfs with zathura
-super + z
+super + shift + z
 	/home/aarya/scripts/dmenu/dmenu_pdfs.sh
 
 # terminal emulator in default tmux session
@@ -84,10 +88,6 @@ super + o; {e,v,f,t,d,m,a,b,p,h,g}
 	{thunar,alacritty -e nvim, firefox, thunderbird, discord, \
 	ario, arandr, blueman-manager, pavucontrol, \
 	alacritty -e htop, alacritty -e gtop}
-
-# TODO: clipboard history
-super + v
-	clipmenu
 
 ####################################
 # ALT + SUPER KEYS
@@ -120,16 +120,4 @@ super + shift + e
 ####################################
 # super + CONTROL KEYS
 ####################################
-
-####################################
-# SCREENSHOT KEYS
-####################################
-
-# press print key
-Print; @Print
-	/home/aarya/scripts/screenshot.sh
-
-# press super + print key
-super + Print
-	/home/aarya/scripts/screenshot.sh -s
 
