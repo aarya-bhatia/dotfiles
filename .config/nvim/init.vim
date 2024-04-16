@@ -28,6 +28,7 @@ Plug 'folke/tokyonight.nvim'
 Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'savq/melange-nvim'
+Plug 'rose-pine/neovim'
 
 " LSP / Linter / Formatter
 Plug 'neovim/nvim-lspconfig'
@@ -71,7 +72,8 @@ source $HOME/.config/nvim/lua/formatter.lua
 source $HOME/.config/nvim/lua/autocomplete.lua
 " source $HOME/.config/nvim/lua/linter.lua
 
-colorscheme tokyonight-moon
+" colorscheme tokyonight-moon
+colorscheme rose-pine-moon
 " highlight Normal guibg=NONE ctermbg=NONE
 
 let g:lightline = { 'colorscheme': 'one' }

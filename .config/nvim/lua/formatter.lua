@@ -2,12 +2,12 @@
 
 local conform = require("conform")
 
+-- Conform will run multiple formatters sequentially
+-- Use a sub-list to run only the first available formatter
 conform.setup({
     formatters_by_ft = {
         lua = { "stylua" },
-        -- Conform will run multiple formatters sequentially
-        python = { "isort", "black" },
-        -- Use a sub-list to run only the first available formatter
+        python = { "autopep8" },
         javascript = { { "prettierd", "prettier" } },
         cpp = { "clang-format" },
         html = { "prettier" },

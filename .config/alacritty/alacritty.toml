@@ -24,6 +24,7 @@
 
 [font]
 size = 6.5
+# size = 10
 
 [font.bold]
 family = "hack"

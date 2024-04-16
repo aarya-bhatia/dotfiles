@@ -22,4 +22,4 @@ command! -bar LF call LF()
 let g:lf_map_keys = 0
 let g:lf_replace_netrw = 1
 
-nnoremap <leader>- :Lf<CR>z1
+nnoremap <leader>- :Lf<CR>

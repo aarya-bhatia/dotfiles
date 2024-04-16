@@ -6,7 +6,7 @@ super + g; {0-9}
 super + control + {1,2,3,4}
 	bsp-layout set { tiled, monocle, tall -- --master-size 0.5, rtall -- --master-size 0.5 };
 
-super + shift + {parenleft, parenright}
+super + control + {parenleft, parenright}
 	bsp-layout {previous, next}
 
 # quit bspwm

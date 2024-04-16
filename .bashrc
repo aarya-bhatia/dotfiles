@@ -80,17 +80,10 @@ alias t=tmux
 alias notes="printf \"\n## $(date +'%Y-%m-%d %H:%M:%S')\n\n\" >> /home/aarya/GoogleDrive/Notes/$(date +"%Y-%m").md; vim /home/aarya/GoogleDrive/Notes/$(date +"%Y-%m").md -c 'norm G'"
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-if which lsd &>/dev/null; then
-	alias ls="lsd -X"
-	alias ll="lsd -AlFh"
-	alias la="lsd -Ah"
-	alias l="ls"
-else
-	alias ls="ls --color=auto --group-directories-first"
-	alias ll="ls --color=auto -alFh"
-	alias la="ls --color=auto -Ah"
-	alias l="ls --color=auto -CF"
-fi
+alias ls="ls --color=auto --group-directories-first"
+alias ll="ls --color=auto -alFh"
+alias la="ls --color=auto -Ah"
+alias l="ls --color=auto -CF"
 
 # alias valgrind="valgrind --leak-check=full --show-leak-kinds=all"
 

@@ -1,6 +1,6 @@
 -- Auto completion
 
-local cmp = require'cmp'
+local cmp = require('cmp')
 
 cmp.setup({
 	snippet = {
@@ -23,21 +23,17 @@ cmp.setup({
 	}),
 	sources = cmp.config.sources({
 		{ name = 'nvim_lsp' },
-		{ name = 'ultisnips' }, -- For ultisnips users.
+		{ name = 'ultisnips' },
 		{ name = 'buffer' },
 		{ name = 'path' },
 	})
 })
 
--- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
 local lspconfig = require('lspconfig')
-
-lspconfig['clangd'].setup {
-	capabilities = capabilities
-}
-
-lspconfig['lua_ls'].setup {
-	capabilities = capabilities
-}
+local servers = { 'clangd', 'pyright' }
+for _, lsp in ipairs(servers) do
+  lspconfig[lsp].setup {
+    capabilities = capabilities,
+  }
+end
