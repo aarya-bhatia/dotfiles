@@ -4,9 +4,11 @@ xnoremap <leader>y :w !xsel -b -i<CR><CR>
 nnoremap <leader>yy :w !xsel -b -i<CR><CR>
 nnoremap <leader>pp :r !xsel -o<CR><CR>
 
-nnoremap <leader>q :quit<CR>
 nnoremap <leader>s :write<cr>
-nnoremap <leader>d :bd<CR>
+" nnoremap <leader>d :bd<CR>
+" nnoremap <leader>q :quit<CR>
+nnoremap <leader>d :lua MiniBufremove.unshow()<CR>
+nnoremap <leader>q :lua MiniBufremove.wipeout()<CR>
 
 " [V]im related
 nnoremap <leader>ve :edit $MYVIMRC<CR>
@@ -25,12 +27,12 @@ nnoremap <silent> <leader>hl :set invhlsearch<CR>
 inoremap <silent> kj <Esc>
 
 " Indent with single angle bracket
-" nnoremap > >>
-" nnoremap < <<
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
 
 " Reselect visual range while indenting
-" vnoremap < <gv
-" vnoremap > >gv
+vnoremap <Tab> >gv
+vnoremap <S-Tab> <gv
 
 " Paste over currently selected text without yanking it
 xnoremap <silent> p "_dP
@@ -95,10 +97,10 @@ nnoremap <silent> <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><
 " Exit terminal mode
 tnoremap <silent> <Esc> <C-\\><C-n>
 
-nnoremap <A-h> <C-w><C-h>
-nnoremap <A-j> <C-w><C-j>
-nnoremap <A-k> <C-w><C-k>
-nnoremap <A-l> <C-w><C-l>
+" nnoremap <A-h> <C-w><C-h>
+" nnoremap <A-j> <C-w><C-j>
+" nnoremap <A-k> <C-w><C-k>
+" nnoremap <A-l> <C-w><C-l>
 
 " easy-align
 xnoremap <leader>ga <Plug>(EasyAlign)

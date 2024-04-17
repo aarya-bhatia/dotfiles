@@ -9,11 +9,6 @@ super + control + {1,2,3,4}
 super + control + {parenleft, parenright}
 	bsp-layout {previous, next}
 
-# quit bspwm
-super + shift + x
-	betterlockscreen -l --off 10
-	# test $(echo -e "Yes\nNo\n" | dmenu -p "Are you sure want to quit?") = "Yes" && bspc quit
-
 # restart bspwm
 super + shift + r
 	bspc wm -r && /home/aarya/.config/bspwm/bspwmrc

@@ -17,7 +17,7 @@ vim.opt.hidden = true
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 vim.opt.incsearch = true
-vim.opt.laststatus = 2
+vim.opt.laststatus = 1
 vim.opt.linebreak = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.list = true
@@ -40,6 +40,7 @@ vim.opt.undofile = true
 vim.opt.updatetime = 250
 vim.opt.wildmenu = true
 vim.opt.wrap = true
+vim.opt.showcmd = false
 
 -- vim.opt.smartindent = true
 -- vim.opt.smarttab = true

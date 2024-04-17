@@ -90,11 +90,11 @@ super + o; {e,v,f,t,d,m,a,b,p,h,g}
 	alacritty -e htop, alacritty -e gtop}
 
 ####################################
-# ALT + SUPER KEYS
+# SUPER + ALT KEYS
 ####################################
 
 # seek music player
-alt + super + {0-9}
+super + alt + {0-9}
 	mpc -q seek {0-9}0%
 
 ####################################
@@ -116,6 +116,11 @@ super + shift + p
 # dmenu edit config
 super + shift + e
 	/home/aarya/scripts/dmenu/dmenu_edit_config.sh
+
+# lock screen
+super + shift + x
+	betterlockscreen -l --off 10
+	# test $(echo -e "Yes\nNo\n" | dmenu -p "Are you sure want to quit?") = "Yes" && bspc quit
 
 ####################################
 # super + CONTROL KEYS
