@@ -4,9 +4,6 @@ call plug#begin('$HOME/.local/share/nvim/plugged')
 
 Plug 'echasnovski/mini.nvim'
 
-" Status bar
-" Plug 'itchyny/lightline.vim'
-
 " Edit gpg files
 Plug 'jamessan/vim-gnupg'
 
@@ -31,12 +28,12 @@ Plug 'romainl/vim-qf'
 
 " Classic
 Plug 'tpope/vim-abolish'
-" Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
-" Plug 'tpope/vim-surround'
+Plug 'tpope/vim-surround'
 Plug 'tpope/vim-unimpaired'
 
 " Floating Terminal
@@ -96,8 +93,6 @@ source $HOME/.config/nvim/lua/mini.lua
 " colorscheme tokyonight-moon
 colorscheme rose-pine-moon
 " highlight Normal guibg=NONE ctermbg=NONE
-
-" let g:lightline = { 'colorscheme': 'one' }
 
 " autoinstall vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'

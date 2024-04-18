@@ -60,7 +60,7 @@ bindsym $super+Shift+Tab 			workspace prev
 
 # launch terminal
 bindsym $super+Return 			exec --no-startup-id alacritty --class=Alacritty
-bindsym $super+Shift+Return 		exec --no-startup-id alacritty --class=floating
+bindsym $super+Shift+Return 		exec --no-startup-id alacritty --class=floating -e tmux new-session -A -s $USER
 
 # bind modes
 bindsym $super+r 			mode "$mode_resize"

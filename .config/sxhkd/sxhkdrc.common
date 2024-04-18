@@ -68,8 +68,8 @@ super + shift + z
 	/home/aarya/scripts/dmenu/dmenu_pdfs.sh
 
 # terminal emulator in default tmux session
-super + shift + Return
-	alacritty --class=floating -e tmux new-session -A -s default
+# super + shift + Return
+# 	alacritty --class=floating -e tmux new-session -A -s default
 
 # terminal emulator
 super + Return
