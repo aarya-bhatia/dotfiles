@@ -91,8 +91,8 @@ xnoremap ss !sort<CR>
 xnoremap su !sort\|uniq<CR>
 
 " Smooth scrolling
-nnoremap <silent> <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
-nnoremap <silent> <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
+" nnoremap <silent> <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
+" nnoremap <silent> <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
 
 " Exit terminal mode
 tnoremap <silent> <Esc> <C-\\><C-n>

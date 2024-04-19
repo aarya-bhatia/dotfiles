@@ -49,6 +49,7 @@ export PATH=$PATH:/snap/bin
 export PATH=$PATH:$HOME/.local/bin
 export PATH=$PATH:$HOME/scripts
 export PATH=$PATH:$HOME/scripts/lemonbar
+export PATH=$PATH:$HOME/scripts/dwm
 export PATH=$PATH:$HOME/pyvenv/bin
 export PATH=$PATH:$GOPATH/bin
 

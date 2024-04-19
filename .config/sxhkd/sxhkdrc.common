@@ -34,7 +34,7 @@ F11; @F11
 
 # show dmenu hotkey help menu
 F12; @F12
-	/home/aarya/scripts/dmenu/dmenu_hotkeys.sh
+	/home/aarya/scripts/dmenu_hotkeys.sh
 
 # launch calculator / music player / email client / file browser
 {XF86Calculator, XF86Tools, XF86Mail, XF86Search}
@@ -57,15 +57,15 @@ super + Print
 
 # browser links
 super + slash
-	/home/aarya/scripts/dmenu/dmenu_browser.sh
+	/home/aarya/scripts/dmenu_browser.sh
 
 # power menu
 super + BackSpace
-	/home/aarya/scripts/dmenu/dmenu_power.sh
+	/home/aarya/scripts/dmenu_power.sh
 
 # open pdfs with zathura
 super + shift + z
-	/home/aarya/scripts/dmenu/dmenu_pdfs.sh
+	/home/aarya/scripts/dmenu_pdfs.sh
 
 # terminal emulator in default tmux session
 # super + shift + Return
@@ -111,11 +111,11 @@ super + shift + w
 
 # password input
 super + shift + p
-	/home/aarya/scripts/dmenu/dmenupass.sh
+	/home/aarya/scripts/dmenupass.sh
 
 # dmenu edit config
 super + shift + e
-	/home/aarya/scripts/dmenu/dmenu_edit_config.sh
+	/home/aarya/scripts/dmenu_edit_config.sh
 
 # lock screen
 super + shift + x
