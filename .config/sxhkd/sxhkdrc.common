@@ -18,19 +18,14 @@
 super+{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
 	mpc {next,prev,toggle,toggle}
 
-# mpd controls without function keys
-super + {minus,greater,less}
-	mpc {toggle,next,prev}
-
 # tell me current mpd song
 F10; @F10
-	notify-send "Playing: $(mpc current)"
+	notify-send "mpd" "$(mpc status)"
 
 # reload status bar
 F11; @F11
-	polybar-msg cmd restart; notify-send "reloaded polybar"
-	# [ "$XDG_CURRENT_DESKTOP" = "i3" ] && $HOME/.config/polybar/i3_launch.sh || \
-	# /home/aarya/.config/polybar/bspwm_launch.sh; \
+	pkill -USR1 dwmblocks; notify-send "refreshed dwmblocks"
+	# polybar-msg cmd restart; notify-send "reloaded polybar"
 
 # show dmenu hotkey help menu
 F12; @F12
@@ -89,12 +84,16 @@ super + o; {e,v,f,t,d,m,a,b,p,h,g}
 	ario, arandr, blueman-manager, pavucontrol, \
 	alacritty -e htop, alacritty -e gtop}
 
+# mpc controls
+super + m; {p,h,l,j,k}
+	mpc {toggle, seek -10%, seek +10%, next, prev}
+
 ####################################
 # SUPER + ALT KEYS
 ####################################
 
 # seek music player
-super + alt + {0-9}
+super + m + {0-9}
 	mpc -q seek {0-9}0%
 
 ####################################
