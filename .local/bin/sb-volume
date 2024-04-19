@@ -1,0 +1,13 @@
+#!/bin/sh
+# action=pavucontrol
+
+Get() {
+	volume=$(pamixer --get-volume)
+	printf "%s%%" $volume
+
+	if [ $(pamixer --get-mute) = "true" ]; then
+		printf " (mute)"
+	fi
+}
+
+echo -e "Vol:$(Get)"
