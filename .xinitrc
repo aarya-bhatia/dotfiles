@@ -36,8 +36,8 @@ echo session: $session
 
 case $session in
     dwm)
-        $HOME/scripts/dwm/autostart.sh &
-        exec $HOME/scripts/dwm/startdwm.sh
+        $HOME/scripts/autostart.sh &
+        exec while true; do dwm 2>~/.dwm.log; done
         ;;
 
     i3|i3wm)  exec i3;;
