@@ -10,6 +10,7 @@
     font = FreeMono 10
     format = "<b>%s</b>\n%b"
 	frame_width=0
+    gap_size=8
 
 [urgency_low]
     # background = "#1d2021"

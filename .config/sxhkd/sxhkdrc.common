@@ -24,8 +24,8 @@ F10; @F10
 
 # reload status bar
 F11; @F11
-	pkill -USR1 dwmblocks; notify-send "refreshed dwmblocks"
-	# polybar-msg cmd restart; notify-send "reloaded polybar"
+	pgrep -x dwmblocks && pkill -USR1 dwmblocks && notify-send "refreshed dwmblocks"; \
+	pgrep -x polybar && polybar-msg cmd restart && notify-send "reloaded polybar";
 
 # show dmenu hotkey help menu
 F12; @F12

@@ -1,49 +1,39 @@
-[mediaplayer]
-command=~/scripts/mediaplayer.sh
-interval=5
+separator=false
 
 [kernel]
-command=printf " %s\n" $(uname -a | cut -d" " -f3)
+command=echo " " $(uname -r)
 interval=once
-label=
-
-[weather]
-command=~/scripts/weather.py -f
-interval=300
-
-[disk]
-command=~/scripts/disk.py
-interval=60
-
-# [cpu]
-# command=~/scripts/cpu.py
-# interval=persist
-#
-# [memory]
-# command=~/scripts/memory.py
-# interval=persist
+color=#ff0000
 
 [volume]
-command=printf "♪ %s\n" $(~/scripts/volume.sh get_volume)
+command=sb-volume
 interval=once
-signal=10
-
-# [brightness]
-# command=printf " %s\n" $(~/scripts/volume.sh get_brightness)
-# interval=once
-# signal=10
+signal=5
+color=#ff00ff
 
 [battery]
-command=~/scripts/battery.sh
+command=sb-battery
 interval=5
+color=#00ff00
 
-[ip]
-command=printf " %s\n" $(hostname -i | cut -d" " -f1)
+[weather]
+command=sb-weather
 interval=60
-label=
+color=#00ffff
 
-[time]
-command=date +'%A, %d %B %I:%M %p '
-interval=10
+[disk]
+command=sb-disk
+interval=30
+color=#ffff00
+
+[memory]
+command=sb-memory
+interval=30
+color=#ff0000
+
+[date]
+command=sb-date
+interval=5
+color=#00ff00
 
 # vim: ft=ini

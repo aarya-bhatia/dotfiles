@@ -118,47 +118,26 @@ bindsym $super+semicolon scratchpad show
 
 # workspaces {{{
 
-# set $ws1 "I"
-# set $ws2 "II"
-# set $ws3 "III"
-# set $ws4 "IV"
-# set $ws5 "V"
-# set $ws6 "VI"
-# set $ws7 "VII"
-# set $ws8 "VIII"
-# set $ws9 "IX"
-# set $ws10 "X"
-# set $ws11 "XI"
-# set $ws12 "XII"
-# set $ws13 "XIII"
-# set $ws14 "XIV"
-# set $ws15 "XV"
-# set $ws16 "XVI"
-# set $ws17 "XVII"
-# set $ws18 "XVIII"
-# set $ws19 "XIX"
-# set $ws20 "XX"
-
-set $ws1  "1"
-set $ws2  "2"
-set $ws3  "3"
-set $ws4  "4"
-set $ws5  "5"
-set $ws6  "6"
-set $ws7  "7"
-set $ws8  "8"
-set $ws9  "9"
-set $ws10 "10"
-set $ws11 "11"
-set $ws12 "12"
-set $ws13 "13"
-set $ws14 "14"
-set $ws15 "15"
-set $ws16 "16"
-set $ws17 "17"
-set $ws18 "18"
-set $ws19 "19"
-set $ws20 "20"
+set $ws1      "1:I"
+set $ws2      "2:II"
+set $ws3      "3:III"
+set $ws4      "4:IV"
+set $ws5      "5:V"
+set $ws6      "6:VI"
+set $ws7      "7:VII"
+set $ws8      "8:VIII"
+set $ws9      "9:IX"
+set $ws10     "10:X"
+set $ws11     "11:XI"
+set $ws12     "12:XII"
+set $ws13     "13:XIII"
+set $ws14     "14:XIV"
+set $ws15     "15:XV"
+set $ws16     "16:XVI"
+set $ws17     "17:XVII"
+set $ws18     "18:XVIII"
+set $ws19     "19:XIX"
+set $ws20     "20:XX"
 
 workspace $ws1 output $primary
 workspace $ws2 output $primary
@@ -231,10 +210,16 @@ bindsym $mod+Shift+0 move container to workspace $ws20
 # status bar {{{
 
 bar {
-	status_command i3status
+	status_command i3blocks
 	position top
 	tray_output eDP-1
-	font pango:FreeMono 10.5
+	font pango:Hack Nerd Font 9.5
+        strip_workspace_numbers yes
+        colors {
+                background #000000
+                statusline #ffffff
+                separator #666666
+        }
 }
 
 # }}}
@@ -336,18 +321,3 @@ mode "$mode_application" {
 
 # }}}
 
-# Power mode {{{
-
-set $mode_power [l]ock [s]uspend [r]eboot [p]oweroff [e]xit
-mode "$mode_power" {
-  bindsym l exec betterlockscreen -l --off 10, mode "default
-  bindsym s exec systemctl suspend, mode "default"
-  bindsym r exec reboot, mode "default"
-  bindsym p exec poweroff, mode "default"
-  bindsym e exec i3-msg exit, mode "default"
-
-  bindsym Return mode "default"
-  bindsym Escape mode "default"
-}
-
-# }}}
