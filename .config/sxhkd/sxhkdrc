@@ -21,6 +21,10 @@ super + control + space
 super + control + {parenleft, parenright}
 	bsp-layout {previous, next}
 
+# balance the tree at root of current node
+super + control + equal
+	bspc node @/ -B
+
 # restart bspwm
 super + shift + r
 	bspc wm -r && /home/aarya/.config/bspwm/bspwmrc
