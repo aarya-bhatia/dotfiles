@@ -14,7 +14,7 @@ xsetroot -cursor_name left_ptr &
 numlockx on &
 
 # launch polybar
-polybar-msg cmd restart || $HOME/.config/polybar/bspwm_launch.sh &
+polybar-msg cmd restart || $HOME/.config/polybar/launch.sh &
 
 # set wallpaper to last used
 $HOME/scripts/wallpaper.py &

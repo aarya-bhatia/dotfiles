@@ -1,0 +1,16 @@
+#!/bin/sh
+BATTACPI=$(acpi --battery | grep -v "unavailable")
+BATPERC=$(echo $BATTACPI | cut -d, -f2 | tr -d '[:space:]')
+BATPERC=$(echo $BATPERC | tr -d %)
+
+Get() {
+	if [[ $BATTACPI == *"Discharging"* ]]; then
+		echo "$BATPERC-"
+	elif [[ $BATTACPI == *"Charging"* ]]; then
+		echo "$BATPERC+"
+	else
+		echo "$BATPERC"
+	fi
+}
+
+echo %{u#ff0000}%{+u}Bat:$(Get)%{-u}
