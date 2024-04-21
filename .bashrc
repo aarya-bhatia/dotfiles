@@ -112,3 +112,5 @@ alias ta="tmux new-session -A -s $USER"
 # if [ "$TERM" != "screen-256color" ]; then
 # 	tmux new-session -A -s "$USER"
 # fi
+
+source ~/scripts/bash_completion

@@ -29,22 +29,21 @@ bspc config pointer_action2 resize_side
 bspc config pointer_action2 resize_corner
 
 # rules
-# bspc rule -a Gimp desktop='^8' state=floating follow=on
-# bspc rule -a Chromium desktop='^2'
+bspc rule -r "*"
 bspc rule -a thunderbird desktop=III
 bspc rule -a discord desktop=IV
 bspc rule -a zoom desktop=V
 bspc rule -a Ario desktop=VII
-bspc rule -a ^Minecraft desktop=VIII
 
 bspc rule -a mplayer2 state=floating
 bspc rule -a zoom state=floating
 bspc rule -a QtSpim state=floating
 bspc rule -a mpv state=floating
-bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a Thunar state=floating center=true rectange=960x750++
+bspc rule -a Thunar state=floating center=true rectange=520x400++
 bspc rule -a floating state=floating center=true rectangle=520x400++
+
+bspc config external_rules_command ~/.config/bspwm/external_rules
 
 # colors
 bspc config normal_border_color		"#4c566a"
