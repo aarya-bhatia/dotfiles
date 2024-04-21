@@ -115,3 +115,5 @@ nnoremap <leader>L :LspInfo<CR>
 
 nnoremap <leader>nn :NERDTreeToggle<CR>
 
+nnoremap <leader>_ :Lf<CR>
+nnoremap <leader>- :Oil<CR>

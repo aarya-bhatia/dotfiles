@@ -75,23 +75,27 @@ Plug 'L3MON4D3/LuaSnip'
 Plug 'ptzz/lf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'stevearc/oil.nvim'
 
 call plug#end()
+
+let g:lf_map_keys = 0
+let g:lf_replace_netrw = 0
 
 source $HOME/.config/nvim/keymaps.vim
 source $HOME/.config/nvim/autocommands.vim
 source $HOME/.config/nvim/abbreviations.vim
-source $HOME/.config/nvim/lf.vim
 source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/quickfix.vim
 
 source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/lsp_zero.lua
 source $HOME/.config/nvim/lua/mini.lua
+source $HOME/.config/nvim/lua/plugins.lua
 " source $HOME/.config/nvim/lua/linter.lua
 
-" colorscheme tokyonight-moon
-colorscheme rose-pine-moon
+colorscheme tokyonight-moon
+" colorscheme rose-pine-moon
 " highlight Normal guibg=NONE ctermbg=NONE
 
 " autoinstall vim-plug

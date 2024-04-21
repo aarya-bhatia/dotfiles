@@ -14,13 +14,13 @@ xsetroot -cursor_name left_ptr &
 numlockx on &
 
 # launch polybar
-polybar-msg cmd restart || $HOME/.config/polybar/launch.sh &
+~/.config/polybar/launch.sh &
 
 # set wallpaper to last used
-$HOME/scripts/wallpaper.py &
+~/scripts/wallpaper.py &
 
 # network manager tray icon
-run nm-applet &
+# run nm-applet &
 
 # start notification daemon
 run dunst &
@@ -35,17 +35,16 @@ run mpd &
 run picom --backend glx --xrender-sync-fence &
 
 # start simple X hotkey daemon
-run sxhkd -c $HOME/.config/sxhkd/sxhkdrc $HOME/.config/sxhkd/sxhkdrc.common &
+run sxhkd -c ~/.config/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc.common &
 
 # start nightlight with location services
 run ~/scripts/nightlight.sh auto &
 
 # start screen locker
-# run xss-lock --transfer-sleep-lock -- i3lock --nofork --ignore-empty-password --no-unlock-indicator --color=505050 &
 run xss-lock --transfer-sleep-lock -- betterlockscreen -l &
 
 # power management
-run xfce4-power-manager --daemon &
+run xfce4-power-manager &
 
 # mirror screen to monitor
-xrandr | grep -q "HDMI-1 connected" && $HOME/.screenlayout/mirror.sh &
+xrandr | grep -q "HDMI-1 connected" && ~/.screenlayout/mirror.sh &

@@ -31,7 +31,7 @@ if [ -d /etc/X11/xinit/xinitrc.d ] ; then
  unset f
 fi
 
-session=${2:-dwm}
+session=${2:-bspwm}
 echo session: $session
 
 case $session in

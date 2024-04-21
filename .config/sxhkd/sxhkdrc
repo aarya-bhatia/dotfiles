@@ -2,9 +2,21 @@
 super + g; {0-9}
 	bspc config window_gap {0-9}; notify-send "window gap changed"
 
-# layouts: tiled, monocle, master-stack, reverse-master-stack
-super + control + {1,2,3,4}
-	bsp-layout set { tiled, monocle, tall -- --master-size 0.5, rtall -- --master-size 0.5 };
+# change layouts
+super + control + {1,2,3}
+	bsp-layout set {tiled,wide,tall -- --master-size 0.5}; notify-send "Layout" "$(bsp-layout get)"
+
+# focus the node for the given path jump
+super + {p,b,semicolon,apostrophe}
+	bspc node -f @{parent,brother,first,second}
+
+# selects direction for next window to spawm in
+super + control + {h,j,k,l}
+	bspc node --presel-dir {west, south, north, east}
+
+# cancel preselection
+super + control + space
+	bspc node --presel-dir cancel
 
 super + control + {parenleft, parenright}
 	bsp-layout {previous, next}
@@ -22,11 +34,15 @@ super + {_,shift + }{0-9}
 	bspc {desktop -f,node -d} {X,I,II,III,IV,V,VI,VII,VIII,IX}
 
 # focus the next/previous window in the current desktop
-super + {_,shift + } Tab
+super + bracket{left,right}
 	bspc desktop -f {prev,next}.local.occupied
 
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
 # focus the next/previous desktop in the current monitor
-super + bracket{left,right}
+super {_, shift +} c
 	bspc node -f {next,prev}.local.!hidden.window
 
 # focus/swap nodes in direction
@@ -65,7 +81,7 @@ super + shift + f
 
 # Smart resize, will grow or shrink depending on location.
 # Will always grow for floating nodes.
-alt + ctrl + super + {h,j,k,l}
+super + alt + ctrl + {h,j,k,l}
   n=20; \
   { d1=left;   d2=right;  dx=-$n; dy=0;   \
   , d1=bottom; d2=top;    dx=0;   dy=$n;  \
