@@ -3,4 +3,4 @@ Get() {
     date '+%b %d (%a) %I:%M %p'
 }
 
-echo %{u#607D8B}%{+u}$(Get)%{-u}
+echo %{u#2196f3}%{+u}$(Get)%{-u}
