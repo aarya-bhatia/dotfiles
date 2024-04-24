@@ -89,10 +89,8 @@ source $HOME/.config/nvim/fzf.vim
 source $HOME/.config/nvim/quickfix.vim
 
 source $HOME/.config/nvim/lua/treesitter.lua
-source $HOME/.config/nvim/lua/lsp_zero.lua
-source $HOME/.config/nvim/lua/mini.lua
 source $HOME/.config/nvim/lua/plugins.lua
-" source $HOME/.config/nvim/lua/linter.lua
+source $HOME/.config/nvim/lua/lsp_zro.lua
 
 colorscheme tokyonight-moon
 " colorscheme rose-pine-moon
