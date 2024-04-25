@@ -1,2 +1,0 @@
-#!/bin/sh
-echo %{u#ff5252}%{+u}Temp:$(python3 ~/scripts/lemonbar/weather.py 2>/dev/null)%{-u}

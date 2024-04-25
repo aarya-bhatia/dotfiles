@@ -1,3 +1,0 @@
-#!/bin/sh
-. ~/pyvenv/bin/activate
-echo "Temp:$(python3 ~/scripts/lemonbar/weather.py 2>/dev/null)"

@@ -1,6 +1,0 @@
-#!/bin/sh
-Get() {
-    date '+%b %d (%a) %I:%M %p'
-}
-
-echo %{u#2196f3}%{+u}$(Get)%{-u}
