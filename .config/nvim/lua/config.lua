@@ -8,7 +8,7 @@ vim.opt.backspace = "indent,eol,start"
 vim.opt.belloff = "all"
 vim.opt.breakindent = true
 vim.opt.compatible = false
-vim.opt.expandtab = false
+vim.opt.expandtab = true
 vim.opt.foldlevel = 0
 vim.opt.foldmarker = "{{{,}}}"
 vim.opt.foldmethod = "marker"
@@ -17,7 +17,7 @@ vim.opt.hidden = true
 vim.opt.hlsearch = true
 vim.opt.ignorecase = true
 vim.opt.incsearch = true
-vim.opt.laststatus = 1
+vim.opt.laststatus = 2
 vim.opt.linebreak = true
 vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
 vim.opt.list = true

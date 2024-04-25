@@ -109,6 +109,7 @@ alias trayer='trayer --edge top --align center --width 6'
 # echo ""
 # echo ""
 # neofetch
+uname -a
 
 # if [ "$TERM" != "screen-256color" ]; then
 # 	tmux new-session -A -s "$USER"

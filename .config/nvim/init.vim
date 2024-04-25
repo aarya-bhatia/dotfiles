@@ -90,7 +90,7 @@ source $HOME/.config/nvim/quickfix.vim
 
 source $HOME/.config/nvim/lua/treesitter.lua
 source $HOME/.config/nvim/lua/plugins.lua
-source $HOME/.config/nvim/lua/lsp_zro.lua
+source $HOME/.config/nvim/lua/lsp_zero.lua
 
 colorscheme tokyonight-moon
 " colorscheme rose-pine-moon
@@ -99,7 +99,7 @@ colorscheme tokyonight-moon
 " autoinstall vim-plug
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
-	silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
-	autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+    silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+    autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
