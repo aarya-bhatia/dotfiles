@@ -1,4 +1,4 @@
-# set gap size
+# set gap iize
 super + g; {0-9}
 	bspc config window_gap {0-9}; notify-send "window gap changed"
 

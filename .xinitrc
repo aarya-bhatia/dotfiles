@@ -39,8 +39,9 @@ case $session in
         $HOME/scripts/autostart.sh &
         exec dwm ;;
 
-    i3|i3wm)  exec i3;;
-    bspwm)    exec bspwm;;
-    cinnamon) exec cinnamon-session;;
-    *)        exec $1;;
+    i3|i3wm)    exec i3;;
+    xfce|xfce4) exec xfce4-session;;
+    bspwm)      exec bspwm;;
+    cinnamon)   exec cinnamon-session;;
+    *)          exec $1;;
 esac
