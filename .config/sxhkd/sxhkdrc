@@ -116,3 +116,6 @@ super + control + {o,i}
 	bspc node {older,newer} -f; \
 	bspc wm -h on
 
+# toggle current windows sticky flag
+super + shift + s
+	bspc node $(bspc query -N -n focused) -g sticky

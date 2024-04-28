@@ -112,6 +112,9 @@ super + shift + w
 super + shift + Tab
 	python3 ~/scripts/dmenu_bspwm_nodes.py
 
+super + shift + a
+	rofi -show drun -show-icons
+
 # password input
 super + shift + p
 	/home/aarya/scripts/dmenupass.sh

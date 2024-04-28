@@ -75,6 +75,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-autoformat/vim-autoformat'
 Plug 'wellle/targets.vim'
+Plug 'sheerun/vim-polyglot.git'
 
 call plug#end()
 
