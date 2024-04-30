@@ -39,14 +39,11 @@ set scrolloff 10
 # show the result of execution of previous commands
 map ` !true
 
-# execute current file (must be executable)
-cmd exec !python3 $HOME/.config/lf/scripts/exec.py
-cmd exec_args !python3 $HOME/.config/lf/scripts/exec.py args
+map x !{{
+	read -p "$f " args
+	$f $args
+}}
 
-map x exec
-map X exec_args
-
-# dedicated keys for file opener actions
 # map <enter> &mimeopen $f
 # map <Shift><enter> $mimeopen --ask $f
 
@@ -67,10 +64,18 @@ case $(file --mime-type -Lb $f) in
 esac
 }}
 
-map <enter> open
+# cmd trash %printf "%s\n" $fx | python3 $HOME/.config/lf/scripts/trash.py
 
-# To delete files
-cmd trash %python3 $HOME/.config/lf/scripts/trash.py
+cmd trash %{{
+	for file in $fx; do
+		printf "remove $file? [y/n] "
+		read ans
+		if [ "$ans" = 'y' ]; then
+			rm -rf "$file"
+		fi
+	done
+}}
+
 map <delete> trash
 map D trash
 
@@ -146,9 +151,7 @@ fi
 }}
 
 # To rename selected files in editor
-map R !python3 $HOME/.config/lf/scripts/bulkrename.py
-
-map Y !printf "%s" $fx | xsel -i -b
+map R !printf "%s\n" $fx | bulkrename.py
 
 # Edit and reload config
 cmd edit-config ${{
@@ -178,19 +181,6 @@ map z4 :set ratios 1:2:3:5; set preview
 map A push :rename<enter><c-e>
 map I push :rename<enter><c-a>
 
-# map Y %realpath $f | xsel -b && echo "Copied file path: $(xsel -b -o)"
+map Y %realpath $f | xsel -b && echo "Copied file path: $(xsel -b -o)"
 
 map T $tmux new-session "/bin/bash -c 'cd $PWD' && /bin/bash"
-
-# TODO: MPC commands
-# map <f-2> !{{
-# 	basedir=$HOME/Music/
-# 	[[ "$PWD" == $basedir* ]] && {
-# 		for file in "$fx"; do
-# 			filepath=$(realpath -s --relative-to=$basedir "$file")
-# 			# mpc add "$file"
-# 			printf "%s\n" "To add $filepath"
-# 			# printf '%s\n' "Added file: '$file'"
-# 		done
-# 	} || echo "not in music directory!"
-# }}
