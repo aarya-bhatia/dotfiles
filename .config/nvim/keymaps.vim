@@ -90,30 +90,11 @@ nnoremap <leader>R "zyy:r !z
 xnoremap ss !sort<CR>
 xnoremap su !sort\|uniq<CR>
 
-" Smooth scrolling
-" nnoremap <silent> <C-U> <C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y><C-Y>
-" nnoremap <silent> <C-D> <C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E><C-E>
-
 " Exit terminal mode
-tnoremap <silent> <Esc> <C-\\><C-n>
+tnoremap <silent> <Esc> <C-\><C-n>
 
-" nnoremap <A-h> <C-w><C-h>
-" nnoremap <A-j> <C-w><C-j>
-" nnoremap <A-k> <C-w><C-k>
-" nnoremap <A-l> <C-w><C-l>
+nnoremap <C-u> <C-u>zz
+nnoremap <C-d> <C-d>zz
 
-" easy-align
-xnoremap <leader>ga <Plug>(EasyAlign)
-nnoremap <leader>ga <Plug>(EasyAlign)
-
-" tagbar
-nnoremap <leader>tt :TagbarToggle<CR>
-
-" lsp
-nnoremap <leader>M :Mason<CR>
-nnoremap <leader>L :LspInfo<CR>
-
-nnoremap <leader>nn :NERDTreeToggle<CR>
-
-nnoremap <leader>_ :Lf<CR>
-nnoremap <leader>- :Oil<CR>
+nnoremap <C-e> 4<C-e>
+nnoremap <C-y> 4<C-y>

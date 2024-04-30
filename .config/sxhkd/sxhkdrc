@@ -119,3 +119,9 @@ super + control + {o,i}
 # toggle current windows sticky flag
 super + shift + s
 	bspc node $(bspc query -N -n focused) -g sticky
+
+# scratchpads
+super + alt + {space,h,l,n}
+    ~/scripts/bspwm_scratchpad.sh {terminal,htop,lf,notes}
+
+

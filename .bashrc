@@ -49,8 +49,7 @@ alias sudo="sudo "
 alias s="sudo systemctl"
 alias j="sudo journalctl"
 alias p="sudo pacman"
-alias git="git --no-pager"
-alias g="git --no-pager"
+alias g="git"
 alias y="yay"
 alias v="nvim"
 alias vim="nvim"
@@ -104,15 +103,12 @@ eval $(keychain --eval --quiet id_rsa ~/.ssh/aaryab2)
 alias ta="tmux new-session -A -s $USER"
 alias trayer='trayer --edge top --align center --width 6'
 
-# fortune
-# cat $HOME/banner
-# echo ""
-# echo ""
-# neofetch
-# uname -a
+source ~/scripts/bash_completion
 
 # if [ "$TERM" != "screen-256color" ]; then
 # 	tmux new-session -A -s "$USER"
 # fi
 
-source ~/scripts/bash_completion
+# fortune
+# neofetch
+pfetch
