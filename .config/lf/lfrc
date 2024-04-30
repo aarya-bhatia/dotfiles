@@ -55,16 +55,16 @@ map X exec_args
 # use either file extensions and/or mime types here. Below uses an editor for
 # text files and a file opener for the rest.
 cmd open &{{
-	case $(file --mime-type -Lb $f) in
-		text/*) lf -remote "send $id \$$EDITOR \$fx";;
-			  application/json ) lf -remote "send $id \$$EDITOR \$fx";;
-			  application/pdf ) lf -remote "send $id \$zathura \$fx &";;
-			  image/gif) lf -remote "send $id \$nsxiv -a \$fx";;
-			  image/*) lf -remote "send $id \$nsxiv \$fx";;
-			  audio/*) lf -remote "send $id \$mpv \$fx";;
-			  video/*) lf -remote "send $id \$smplayer \$fx";;
-			 *) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
-	 esac
+case $(file --mime-type -Lb $f) in
+	text/*) lf -remote "send $id \$$EDITOR \$fx";;
+	application/json ) lf -remote "send $id \$$EDITOR \$fx";;
+	application/pdf ) lf -remote "send $id \$zathura \$fx &";;
+	image/gif) lf -remote "send $id \$nsxiv -a \$fx";;
+	image/*) lf -remote "send $id \$nsxiv \$fx";;
+	audio/*) lf -remote "send $id \$mpv \$fx";;
+	video/*) lf -remote "send $id \$smplayer \$fx";;
+	*) for f in $fx; do $OPENER $f > /dev/null 2> /dev/null & done;;
+esac
 }}
 
 map <enter> open
@@ -79,14 +79,14 @@ map D trash
 cmd extract ${{
 set -f
 case $f in
-			 *.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
-			 *.tar.gz|*.tgz) tar xzvf $f;;
-			 *.tar.xz|*.txz) tar xJvf $f;;
-			 *.zip) unzip $f;;
-			 *.rar) unrar x $f;;
-			 *.7z) 7z x $f;;
-			 esac
-			 }}
+	*.tar.bz|*.tar.bz2|*.tbz|*.tbz2) tar xjvf $f;;
+	*.tar.gz|*.tgz) tar xzvf $f;;
+	*.tar.xz|*.txz) tar xJvf $f;;
+	*.zip) unzip $f;;
+	*.rar) unrar x $f;;
+	*.7z) 7z x $f;;
+esac
+}}
 
 # compress current file or selected files with tar and gunzip
 cmd tar ${{
@@ -117,13 +117,13 @@ map gs cd ~/scripts
 cmd fzf_jump ${{
 res="$(fzf)"
 if [ -n "$res" ]; then
-if [ -d "$res" ]; then
-cmd="cd"
-else
-cmd="select"
-fi
-res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
-lf -remote "send $id $cmd \"$res\""
+	if [ -d "$res" ]; then
+		cmd="cd"
+	else
+		cmd="select"
+	fi
+	res="$(printf '%s' "$res" | sed 's/\\/\\\\/g;s/"/\\"/g')"
+	lf -remote "send $id $cmd \"$res\""
 fi
 }}
 
@@ -134,52 +134,38 @@ printf "create file: "
 read ans
 if touch $ans; then
 	lf -remote "send $id select $ans"
-		fi
+fi
 }}
 
 map O %{{
-	printf "create dir: "
-		read ans
-		if mkdir -p $ans; then
-			lf -remote "send $id select $ans"
-				fi
+printf "create dir: "
+read ans
+if mkdir -p $ans; then
+	lf -remote "send $id select $ans"
+fi
 }}
 
 # To rename selected files in editor
 map R !python3 $HOME/.config/lf/scripts/bulkrename.py
 
-# To change mode bits for selected files
-cmd chmod %{{
-	printf "Mode bits [1]rw-r----- [2]rwx-rx---- "
-		read ans
-		for file in "$fx"; do
-			if [ "$ans" = "1" ]; then
-				chmod 640 "$file"
-					elif [ "$ans" = "2" ]; then
-					chmod 750 "$file"
-			else
-				chmod "$ans" "$file"
-					fi
-					done
-}}
-
+map Y !printf "%s" $fx | xsel -i -b
 
 # Edit and reload config
 cmd edit-config ${{
-	$EDITOR ~/.config/lf/lfrc
-		lf -remote "send $id source ~/.config/lf/lfrc"
+$EDITOR ~/.config/lf/lfrc
+lf -remote "send $id source ~/.config/lf/lfrc"
 }}
 
 map C edit-config
 
 cmd change_layout %{{
-	if [ $lf_width -le 80 ]; then
-		lf -remote "send $id set nopreview; set ratios 1"
-			elif [ $lf_width -le 160 ]; then
-			lf -remote "send $id set ratios 1:2:3; set preview"
-	else
-		lf -remote "send $id set ratios 1:2:3:5; set preview"
-			fi
+if [ $lf_width -le 80 ]; then
+	lf -remote "send $id set nopreview; set ratios 1"
+elif [ $lf_width -le 160 ]; then
+	lf -remote "send $id set ratios 1:2:3; set preview"
+else
+	lf -remote "send $id set ratios 1:2:3:5; set preview"
+fi
 }}
 
 map zz change_layout
@@ -192,7 +178,7 @@ map z4 :set ratios 1:2:3:5; set preview
 map A push :rename<enter><c-e>
 map I push :rename<enter><c-a>
 
-map Y %realpath $f | xsel -b && echo "Copied file path: $(xsel -b -o)"
+# map Y %realpath $f | xsel -b && echo "Copied file path: $(xsel -b -o)"
 
 map T $tmux new-session "/bin/bash -c 'cd $PWD' && /bin/bash"
 
