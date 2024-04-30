@@ -104,7 +104,7 @@ super + alt + {0-9}
 
 # edit and copy temp file to clipboard
 super + shift + v
-	/home/aarya/scripts/launch_vim.sh
+	/home/aarya/scripts/launch_vim_notepad.sh
 
 # launch sxiv to view/select wallpapers (ctrl-x+w)
 super + shift + w
