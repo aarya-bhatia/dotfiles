@@ -23,7 +23,7 @@ numlockx on &
 # run nm-applet &
 
 # start notification daemon
-run dunst &
+# run dunst &
 
 # start session manager
 run lxsession &

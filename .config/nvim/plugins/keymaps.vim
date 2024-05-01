@@ -116,6 +116,9 @@ nnoremap ]Q :cclose<CR>
 nnoremap [e ddkP
 nnoremap ]e ddp
 
+nnoremap [t :tabprev<CR>
+nnoremap ]t :tabnext<CR>
+
 " adjust split sizes easier
 noremap <silent> <C-Left> :vertical resize -3<CR>
 noremap <silent> <C-Right> :vertical resize +3<CR>
