@@ -5,8 +5,7 @@ nnoremap <leader>yy :w !xsel -b -i<CR><CR>
 nnoremap <leader>pp :r !xsel -o<CR><CR>
 
 nnoremap <leader>s :write<cr>
-" nnoremap <leader>d :bd<CR>
-" nnoremap <leader>q :quit<CR>
+nnoremap <leader>q :quit<CR>
 nnoremap <leader>d :lua MiniBufremove.wipeout()<CR>
 
 " [V]im related

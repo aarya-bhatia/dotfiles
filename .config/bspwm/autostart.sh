@@ -19,9 +19,6 @@ numlockx on &
 # set wallpaper to last used
 ~/scripts/wallpaper.py &
 
-# network manager tray icon
-# run nm-applet &
-
 # start notification daemon
 # run dunst &
 
