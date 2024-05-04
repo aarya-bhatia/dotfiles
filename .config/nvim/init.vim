@@ -72,7 +72,7 @@ set foldlevel=0
 set foldmethod=marker
 set guicursor=i:block
 set nohlsearch
-set mouse=
+set mouse=n
 set scrolloff=8 sidescrolloff=8
 set splitbelow splitright
 set undodir=/tmp/nvim.undo
