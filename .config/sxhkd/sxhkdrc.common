@@ -64,7 +64,7 @@ super + shift + z
 
 # terminal emulator in default tmux session
 super + shift + Return
-	alacritty --class=floating -e tmux new-session -A -s default
+	alacritty --class=floating -e tmux new-session -A -s $USER
 
 # terminal emulator
 super + Return
@@ -84,7 +84,7 @@ super + o; {e,v,f,t,d,m,a,b,p,h,g,s,c}
 	ario, arandr, blueman-manager, pavucontrol, \
 	alacritty -e htop, alacritty -e gtop, \
 	xfce4-settings-manager, \
-	alacritty -e tty-clock}
+	chromium}
 
 # mpc controls
 super + m; {p,h,l,j,k}

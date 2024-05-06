@@ -15,11 +15,11 @@
 rotate() {
 	degree="$1"
 	tr '\n' '\0' | xargs -0 realpath | sort | uniq | while read file; do
-		case "$(file -b -i "$file")" in
+	case "$(file -b -i "$file")" in
 		image/jpeg*) jpegtran -rotate "$degree" -copy all -outfile "$file" "$file" ;;
 		*)           mogrify  -rotate "$degree" "$file" ;;
-		esac
-	done
+	esac
+done
 }
 
 # Notes
@@ -29,11 +29,18 @@ rotate() {
 # ctrl+x ctrl+. -> rotate file
 
 case "$1" in
-"C-x")      tr '\n' ' ' | xsel -b ;;
-"C-w")      while read file; do ~/scripts/wallpaper.py "$file" & done ;;
-"C-c")      while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
+	"C-x")      tr '\n' ' ' | xsel -b ;;
+	"C-w")      while read file; do ~/scripts/wallpaper.py "$file" & done ;;
+	"C-c")      while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
+	"C-d")      while read file; do
+		ans=$(printf "Yes\nNo\n" | dmenu -i -p "delete image: '$file'?")
+		[ "$ans" = "Yes" ] && rm "$file"
+	done
+	;;
+
 "C-comma")  rotate 270 ;;
 "C-period") rotate  90 ;;
 "C-slash")  rotate 180 ;;
 esac
 
+# vim: set filetype=sh
