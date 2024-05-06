@@ -70,6 +70,7 @@ alias py="python3"
 alias bc="bc -q"
 alias du="du -h"
 alias free="free -h"
+alias mutt="neomutt"
 
 alias vbox="VBoxManage"
 alias bright="brightnessctl"
