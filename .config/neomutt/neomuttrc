@@ -1,5 +1,6 @@
 # IMAP settings
 set folder=~/Mail/gmail/
+
 # set imap_user=aarya.bhatia1678@gmail.com
 # set imap_pass="`pass show mutt/aarya.bhatia1678@gmail.com`"
 # set imap_check_subscribed=yes
@@ -15,19 +16,21 @@ set realname="Aarya Bhatia"
 # SMTP settings
 set smtp_url=smtp://aarya.bhatia1678@gmail.com@smtp.gmail.com:465
 set smtp_pass="`pass show mutt/aarya.bhatia1678@gmail.com`"
-# set ssl_starttls=yes
+set ssl_starttls=no
 
 # Mailboxes
-set spoolfile=+INBOX
-set record=+INBOX.Sent
-set postponed=+INBOX.Drafts
-# mailboxes=+INBOX
+set spoolfile= "+INBOX"
+set record= "+[Gmail]/Sent Mail"
+set trash= "+[Gmail]/Trash"
+set postponed= "+[Gmail]/Drafts"
+
+mailboxes =INBOX "=[Gmail]/Sent Mail" "=[Gmail]/Drafts" "=[Gmail]/Starred" "=[Gmail]/Trash" "=[Gmail]/Spam"
 
 # Mail Editor
 set editor=nvim
 
 # Sidebar
-set sidebar_width=20
+# set sidebar_width=20
 set sidebar_visible
 set sidebar_format="%B%<F? [%F]>%* %<N?%N/>%S"
 set mail_check_stats
@@ -37,9 +40,9 @@ set header_cache=~/.cache/mutt
 set message_cachedir=~/.cache/mutt
 
 # Keybindings
-bind index,pager K sidebar-prev
-bind index,pager J sidebar-next
-bind index,pager O sidebar-open
-bind index,pager B sidebar-toggle-visible
+bind index,pager \CK sidebar-prev
+bind index,pager \CJ sidebar-next
+bind index,pager \CO sidebar-open
+bind index,pager \CB sidebar-toggle-visible
 
 # vim: syntax=neomuttrc
