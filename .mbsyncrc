@@ -1,0 +1,20 @@
+IMAPStore       gmail-remote
+Host            imap.gmail.com
+Port            993
+User            aarya.bhatia1678@gmail.com
+PassCmd         "pass show mutt/aarya.bhatia1678@gmail.com"
+SSLType         IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore    gmail-local
+Path            ~/Mail/gmail/
+Inbox           ~/Mail/gmail/INBOX
+Subfolders      Verbatim
+
+Channel         gmail
+Far             :gmail-remote:
+Near            :gmail-local:
+Create          Both
+Expunge         Both
+Patterns        *
+SyncState       *
