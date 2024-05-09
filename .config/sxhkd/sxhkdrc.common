@@ -80,7 +80,8 @@ super + Escape
 
 # launch applications
 super + o; {e,v,f,t,d,m,a,b,p,h,g,s,c}
-	{thunar,alacritty -e nvim, firefox, thunderbird, discord, \
+	{thunar,alacritty -e nvim, firefox, alacritty -e aerc, \ 
+	firefox "https://discord.com/channels/@me", \
 	ario, arandr, blueman-manager, pavucontrol, \
 	alacritty -e htop, alacritty -e gtop, \
 	xfce4-settings-manager, \

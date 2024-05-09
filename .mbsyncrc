@@ -18,3 +18,25 @@ Create          Both
 Expunge         Both
 Patterns        *
 SyncState       *
+
+
+IMAPStore       gmail2-remote
+Host            imap.gmail.com
+Port            993
+User            aarya.bhatia6@gmail.com
+PassCmd         "pass show google/aarya.bhatia6"
+SSLType         IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore    gmail2-local
+Path            ~/Mail/gmail2/
+Inbox           ~/Mail/gmail2/INBOX
+Subfolders      Verbatim
+
+Channel         gmail2
+Far             :gmail2-remote:
+Near            :gmail2-local:
+Create          Both
+Expunge         Both
+Patterns        *
+SyncState       *
