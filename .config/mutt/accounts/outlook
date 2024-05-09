@@ -1,0 +1,17 @@
+source ~/.config/mutt/muttrc
+
+# outlook
+
+set folder           = "~/Mail/outlook/"
+set from             = "aaryab2@illinois.edu"
+set realname         = "Aarya Bhatia"
+
+set spoolfile        = "+INBOX"
+set record           = "+Sent"
+
+mailboxes "=INBOX" \
+        "=Sent" \
+        "=Archive" \
+        "=Newsletters"
+
+# vim: syntax=neomuttrc
