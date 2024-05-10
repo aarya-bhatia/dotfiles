@@ -64,7 +64,7 @@ super + shift + z
 
 # terminal emulator in default tmux session
 super + shift + Return
-	alacritty --class=floating -e tmux new-session -A -s $USER
+	alacritty --class=floating -e tmux new-session -A -s default
 
 # terminal emulator
 super + Return
@@ -80,7 +80,7 @@ super + Escape
 
 # launch applications
 super + o; {e,v,f,t,d,m,a,b,p,h,g,s,c}
-	{thunar,alacritty -e nvim, firefox, alacritty -e aerc, \ 
+	{thunar,alacritty -e nvim, firefox, alacritty -e aerc, \
 	firefox "https://discord.com/channels/@me", \
 	ario, arandr, blueman-manager, pavucontrol, \
 	alacritty -e htop, alacritty -e gtop, \
@@ -116,6 +116,9 @@ super + shift + Tab
 
 super + shift + a
 	rofi -show drun -show-icons
+
+super + a
+	python3 ~/scripts/dmenu_addressbook.py
 
 # password input
 super + shift + p

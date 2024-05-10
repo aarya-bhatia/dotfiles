@@ -45,3 +45,6 @@ run xfce4-power-manager &
 
 # mirror screen to monitor
 xrandr | grep -q "HDMI-1 connected" && ~/.screenlayout/mirror.sh &
+
+# mail sync
+run ~/scripts/mailsync.sh &>>$HOME/.log &
