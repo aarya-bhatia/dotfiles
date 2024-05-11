@@ -71,6 +71,8 @@ alias bc="bc -q"
 alias du="du -h"
 alias free="free -h"
 alias mutt="neomutt"
+alias mutt1="neomutt -F ~/.config/mutt/accounts/aarya.bhatia1678@gmail.com"
+alias mutt2="neomutt -F ~/.config/mutt/accounts/aarya.bhatia6@gmail.com"
 
 alias vbox="VBoxManage"
 alias bright="brightnessctl"

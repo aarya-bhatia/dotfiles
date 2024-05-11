@@ -2,6 +2,7 @@ source ~/.config/mutt/colors
 source ~/.config/mutt/keybindings
 source ~/.config/mutt/aliases
 
+set sendmail="/usr/bin/msmtp"
 set sort=threads sort_aux=reverse-last-date-received
 
 set include
@@ -23,15 +24,5 @@ set mail_check_stats
 
 set header_cache     = "~/.cache/mutt/"
 set message_cachedir = "~/.cache/mutt/"
-
-folder-hook 'aarya.bhatia1678' 'source ~/.config/mutt/accounts/aarya.bhatia1678@gmail.com'
-folder-hook 'aaryab2' 'source ~/.config/mutt/accounts/aaryab2@illinois.edu'
-folder-hook 'aarya.bhatia6' 'source ~/.config/mutt/accounts/aarya.bhatia6@gmail.com'
-
-macro index <f2> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/aarya.bhatia1678@gmail.com<enter><change-folder>!<enter>'
-macro index <f3> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/aaryab2@illinois.edu<enter><change-folder>!<enter>'
-macro index <f4> '<sync-mailbox><enter-command>source ~/.config/mutt/accounts/aarya.bhatia6@gmail.com<enter><change-folder>!<enter>'
-
-source ~/.config/mutt/accounts/aarya.bhatia1678@gmail.com
 
 # vim: syntax=neomuttrc

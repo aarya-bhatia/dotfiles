@@ -17,7 +17,7 @@ Subfolders      Verbatim
 Channel         aaryabhatia1678
 Far             :aaryabhatia1678-remote:
 Near            :aaryabhatia1678-local:
-Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/All Mail"
+Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/All Mail" "[Gmail]/Trash" "[Gmail]/Drafts"
 Create Both
 Expunge Both
 SyncState *
@@ -41,7 +41,7 @@ Subfolders      Verbatim
 Channel         aaryabhatia6
 Far             :aaryabhatia6-remote:
 Near            :aaryabhatia6-local:
-Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/All Mail"
+Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/All Mail" "[Gmail]/Trash" "[Gmail]/Drafts"
 Create Both
 Expunge Both
 SyncState *
