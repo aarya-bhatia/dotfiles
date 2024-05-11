@@ -1,42 +1,47 @@
-IMAPStore       gmail-remote
+### aarya.bhatia1678@gmail.com ###
+
+IMAPStore       aaryabhatia1678-remote
 Host            imap.gmail.com
 Port            993
 User            aarya.bhatia1678@gmail.com
-PassCmd         "pass show mutt/aarya.bhatia1678@gmail.com"
+AuthMechs       XOAUTH2
+PassCmd         "~/oauth/mutt_oauth2.py ~/oauth/aarya.bhatia1678@gmail.com.token"
 SSLType         IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
-MaildirStore    gmail-local
+MaildirStore    aaryabhatia1678-local
 Path            ~/Mail/gmail/
 Inbox           ~/Mail/gmail/INBOX
 Subfolders      Verbatim
 
-Channel         gmail
-Far             :gmail-remote:
-Near            :gmail-local:
-Create          Both
-Expunge         Both
-Patterns        *
-SyncState       *
+Channel         aaryabhatia1678
+Far             :aaryabhatia1678-remote:
+Near            :aaryabhatia1678-local:
+Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/All Mail"
+Create Both
+Expunge Both
+SyncState *
 
+### aarya.bhatia6@gmail.com ###
 
-IMAPStore       gmail2-remote
+IMAPStore       aaryabhatia6-remote
 Host            imap.gmail.com
 Port            993
 User            aarya.bhatia6@gmail.com
-PassCmd         "pass show google/aarya.bhatia6"
+AuthMechs       XOAUTH2
+PassCmd         "~/oauth/mutt_oauth2.py ~/oauth/aarya.bhatia6@gmail.com.token"
 SSLType         IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
-MaildirStore    gmail2-local
-Path            ~/Mail/gmail2/
-Inbox           ~/Mail/gmail2/INBOX
+MaildirStore    aaryabhatia6-local
+Path            ~/Mail/aaryabhatia6/
+Inbox           ~/Mail/aaryabhatia6/INBOX
 Subfolders      Verbatim
 
-Channel         gmail2
-Far             :gmail2-remote:
-Near            :gmail2-local:
-Create          Both
-Expunge         Both
-Patterns        *
-SyncState       *
+Channel         aaryabhatia6
+Far             :aaryabhatia6-remote:
+Near            :aaryabhatia6-local:
+Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/All Mail"
+Create Both
+Expunge Both
+SyncState *

@@ -95,6 +95,8 @@ au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g
 " Trim trailing whitespace on lines
 au BufWritePost * :%s/\s\+$//e | nohlsearch
 
+au BufNewFile,BufRead */mutt/* set filetype=muttrc
+
 au BufNewFile,BufRead *.ejs setlocal filetype=html
 au FileType c,cpp	setlocal foldmarker={,} foldlevel=4
 au FileType markdown,text setlocal spell spelllang=en_us
