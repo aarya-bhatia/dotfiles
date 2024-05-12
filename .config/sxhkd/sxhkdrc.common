@@ -87,6 +87,9 @@ super + o; {e,v,f,t,d,m,a,b,p,h,g,s,c}
 	xfce4-settings-manager, \
 	chromium}
 
+super + y; {1}
+	{alacritty -e neomutt -F ~/.config/mutt/accounts/aarya.bhatia1678@gmail.com}
+
 # mpc controls
 super + m; {p,h,l,j,k}
 	mpc {toggle, seek -10%, seek +10%, next, prev}
