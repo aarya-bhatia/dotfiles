@@ -84,7 +84,8 @@ let g:netrw_liststyle=3
 let g:lf_map_keys = 0
 let g:lf_replace_netrw = 1
 
-colorscheme tokyonight-moon
+" colorscheme tokyonight-moon
+colorscheme gruvbox
 
 " comments
 au FileType asm setlocal commentstring=#\ %s

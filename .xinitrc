@@ -35,10 +35,7 @@ session=${2:-bspwm}
 echo session: $session
 
 case $session in
-    dwm)
-        $HOME/scripts/autostart.sh &
-        exec dwm ;;
-
+    dwm)        exec startdwm;;
     i3|i3wm)    exec i3;;
     xfce|xfce4) exec xfce4-session;;
     bspwm)      exec bspwm;;

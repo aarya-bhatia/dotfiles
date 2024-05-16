@@ -79,13 +79,14 @@ super + Escape
 	pkill -USR1 -x sxhkd; notify-send "reloaded sxhkd"
 
 # launch applications
-super + o; {e,v,f,t,d,m,a,b,p,h,g,s,c}
+super + o; {e,v,f,t,d,m,a,b,p,h,g,s,c,l}
 	{thunar,alacritty -e nvim, firefox, alacritty -e aerc, \
 	firefox "https://discord.com/channels/@me", \
 	ario, arandr, blueman-manager, pavucontrol, \
 	alacritty -e htop, alacritty -e gtop, \
 	xfce4-settings-manager, \
-	chromium}
+	chromium, \
+	alacritty -e lf}
 
 super + y; {1}
 	{alacritty -e neomutt -F ~/.config/mutt/accounts/aarya.bhatia1678@gmail.com}
@@ -93,6 +94,11 @@ super + y; {1}
 # mpc controls
 super + m; {p,h,l,j,k}
 	mpc {toggle, seek -10%, seek +10%, next, prev}
+
+# bookmarks
+super + shift + b; {a, l}
+	{echo $(xclip -o | head -n 1) >> ~/.bookmarks, \
+	xdotool type $(cat ~/.bookmarks | sort | uniq | dmenu -i -l 20)}
 
 ####################################
 # SUPER + ALT KEYS
@@ -112,7 +118,7 @@ super + shift + v
 
 # launch sxiv to view/select wallpapers (ctrl-x+w)
 super + shift + w
-	sxiv /home/aarya/Media/Wallpapers/*
+	nsxiv /home/aarya/Media/Wallpapers/*
 
 super + shift + Tab
 	python3 ~/scripts/dmenu_bspwm_nodes.py

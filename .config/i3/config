@@ -213,7 +213,7 @@ bar {
 	status_command i3blocks
 	position top
 	tray_output eDP-1
-	font pango:Hack Nerd Font 9.5
+	font pango:FreeMono 10.5
         strip_workspace_numbers yes
         colors {
                 background #000000

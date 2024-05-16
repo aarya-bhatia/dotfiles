@@ -47,8 +47,8 @@ super + {_,shift + }q
 	bspc node -{c,k}
 
 # focus or send to the given desktop
-super + {_,shift + }{0-9}
-	bspc {desktop -f,node -d} {X,I,II,III,IV,V,VI,VII,VIII,IX}
+super + {_,shift + }{1-9}
+	bspc {desktop -f,node -d} {1-9}
 
 # focus the next/previous window in the current desktop
 super + bracket{left,right}
