@@ -14,13 +14,14 @@ xsetroot -cursor_name left_ptr &
 numlockx on &
 
 # launch polybar
-~/.config/polybar/launch.sh &
+# ~/.config/polybar/launch.sh &
+run ~/repos/lemons/startlemon 2>>~/lemonbar.log &
 
 # set wallpaper to last used
 ~/scripts/wallpaper.py &
 
 # start notification daemon
-# run dunst &
+run dunst &
 
 # start session manager
 run lxsession &

@@ -92,8 +92,11 @@ super + y; {1}
 	{alacritty -e neomutt -F ~/.config/mutt/accounts/aarya.bhatia1678@gmail.com}
 
 # mpc controls
-super + m; {p,h,l,j,k}
-	mpc {toggle, seek -10%, seek +10%, next, prev}
+super + equal
+	mpc toggle
+
+super + alt + {1-9}
+	mpc seek {1-9}0%
 
 # bookmarks
 super + shift + b; {a, l}
