@@ -41,7 +41,7 @@ run xfce4-power-manager &
 xrandr | grep -q "HDMI-1 connected" && ~/.screenlayout/mirror.sh &
 
 # launch panel
-# ~/.config/polybar/launch.sh &
+~/.config/polybar/launch.sh &
 # run ~/repos/lemons/startlemon &>$HOME/lemonbar.log &
 #
 # mail sync
