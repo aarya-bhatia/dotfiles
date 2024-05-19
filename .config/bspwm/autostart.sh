@@ -13,10 +13,6 @@ xsetroot -cursor_name left_ptr &
 # turn on numlock
 numlockx on &
 
-# launch polybar
-# ~/.config/polybar/launch.sh &
-run ~/repos/lemons/startlemon 2>>~/lemonbar.log &
-
 # set wallpaper to last used
 ~/scripts/wallpaper.py &
 
@@ -35,9 +31,6 @@ run picom --backend glx --xrender-sync-fence &
 # start simple X hotkey daemon
 run sxhkd -c ~/.config/sxhkd/sxhkdrc ~/.config/sxhkd/sxhkdrc.common &
 
-# start nightlight with location services
-run ~/scripts/nightlight.sh auto &
-
 # start screen locker
 run xss-lock --transfer-sleep-lock -- betterlockscreen -l &
 
@@ -47,5 +40,14 @@ run xfce4-power-manager &
 # mirror screen to monitor
 xrandr | grep -q "HDMI-1 connected" && ~/.screenlayout/mirror.sh &
 
+# launch panel
+# ~/.config/polybar/launch.sh &
+# run ~/repos/lemons/startlemon &>$HOME/lemonbar.log &
+#
 # mail sync
-run ~/scripts/mailcheck.sh &>>$HOME/.log &
+# run ~/scripts/mailcheck.sh &>$HOME/mail.log &
+#
+# start nightlight with location services
+# run ~/scripts/nightlight.sh auto &
+
+~/scripts/tmux_autostart.sh &

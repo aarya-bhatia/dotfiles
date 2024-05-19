@@ -104,7 +104,8 @@ lfcd () {
 alias keychain="keychain --dir /run/user/$UID --absolute"
 eval $(keychain --eval --quiet id_rsa ~/.ssh/aaryab2)
 
-alias ta="tmux new-session -A -s $USER"
+alias tau="tmux new-session -A -s $USER"
+alias ta="tmux new-session -A -s"
 alias trayer='trayer --edge top --align center --width 6'
 
 source ~/scripts/bash_completion
