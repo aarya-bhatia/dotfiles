@@ -90,6 +90,12 @@ alias ll="ls --color=auto -alFh"
 alias la="ls --color=auto -Ah"
 alias l="ls --color=auto -CF"
 
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+
+alias please="sudo"
+
 # alias valgrind="valgrind --leak-check=full --show-leak-kinds=all"
 
 # open man page in vim
