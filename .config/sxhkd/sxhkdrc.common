@@ -80,7 +80,7 @@ super + Escape
 
 # launch applications
 super + o; {e,v,f,t,d,m,a,b,p,h,g,s,c,l}
-	{thunar,alacritty -e nvim, firefox, alacritty -e aerc, \
+	{thunar,alacritty -e nvim, firefox, alacritty --class=email -e aerc, \
 	firefox "https://discord.com/channels/@me", \
 	ario, arandr, blueman-manager, pavucontrol, \
 	alacritty -e htop, alacritty -e gtop, \
