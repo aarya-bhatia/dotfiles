@@ -124,4 +124,3 @@ super + shift + s
 super + alt + {space,h,l,n}
     ~/scripts/bspwm_scratchpad.sh {terminal,htop,lf,notes}
 
-

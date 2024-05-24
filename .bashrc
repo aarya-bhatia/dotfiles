@@ -111,6 +111,7 @@ alias keychain="keychain --dir /run/user/$UID --absolute"
 eval $(keychain --eval --quiet id_rsa ~/.ssh/aaryab2)
 
 alias tau="tmux new-session -A -s $USER"
+alias tas="tmux new-session -A -s system"
 alias ta="tmux new-session -A -s"
 alias trayer='trayer --edge top --align center --width 6'
 
