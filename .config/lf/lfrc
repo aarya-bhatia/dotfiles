@@ -67,11 +67,16 @@ esac
 # cmd trash %printf "%s\n" $fx | python3 $HOME/.config/lf/scripts/trash.py
 
 cmd trash %{{
+	RM="rm -rf"
+	if which trash-put &>/dev/null; then
+		RM="trash-put"
+	fi
+
 	for file in $fx; do
 		printf "remove $file? [y/n] "
 		read ans
 		if [ "$ans" = 'y' ]; then
-			rm -rf "$file"
+			$RM "$file"
 		fi
 	done
 }}

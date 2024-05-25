@@ -105,6 +105,9 @@ super + shift + b; {a, l}
 super + alt + {0-9}
 	mpc -q seek {0-9}0%
 
+super + alt + {j,k}
+	mpc {next,prev}
+
 ####################################
 # super + SHIFT KEYS
 ####################################
