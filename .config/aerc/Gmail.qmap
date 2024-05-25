@@ -1,6 +1,5 @@
-INBOX = tag:inbox and not tag:archived and not tag:deleted and not tag:spam
-Archive = tag:archived
-Sent = from:aarya.bhatia
-Trash = tag:deleted
-Spam = tag:spam
+INBOX = tag:inbox and not tag:trash
+Archive = tag:archived or not tag:inbox
+Sent = from:aarya.bhatia1678@gmail.com or from:aarya.bhatia6@gmail.com
+Trash = tag:trash
 

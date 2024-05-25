@@ -10,7 +10,7 @@
 # configured here named ".notmuch".
 #
 [database]
-path=/home/aarya/Mail/
+path=/home/aarya/.mail/
 # User configuration
 #
 # Here is where you can let notmuch know how you would like to be
@@ -28,6 +28,7 @@ path=/home/aarya/Mail/
 #
 [user]
 primary_email=aarya.bhatia1678@gmail.com
+other_email=aarya.bhatia6@gmail.com
 # Configuration for "notmuch new"
 #
 # The following options are supported here:
@@ -52,7 +53,10 @@ primary_email=aarya.bhatia1678@gmail.com
 #		search results by default.  Using an excluded tag in a
 #		query will override that exclusion.
 #
+ignore=/.*[.].*$/
+
 [search]
+exclude_tags=trash
 # Maildir compatibility configuration
 #
 # The following option is supported here:

@@ -95,6 +95,9 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 alias please="sudo"
+alias todo="todo.sh"
+
+alias n="notmuch"
 
 # alias valgrind="valgrind --leak-check=full --show-leak-kinds=all"
 

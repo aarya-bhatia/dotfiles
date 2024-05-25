@@ -5,13 +5,13 @@ Host            imap.gmail.com
 Port            993
 User            aarya.bhatia1678@gmail.com
 AuthMechs       XOAUTH2
-PassCmd         "~/oauth/mutt_oauth2.py ~/oauth/aarya.bhatia1678@gmail.com.token"
+PassCmd         "mutt_oauth2.py ~/.mail/gmail/.token"
 SSLType         IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 MaildirStore    aaryabhatia1678-local
-Path            ~/Mail/gmail/
-Inbox           ~/Mail/gmail/INBOX
+Path            ~/.mail/gmail/
+Inbox           ~/.mail/gmail/INBOX
 Subfolders      Verbatim
 
 Channel         aaryabhatia1678
@@ -29,13 +29,13 @@ Host            imap.gmail.com
 Port            993
 User            aarya.bhatia6@gmail.com
 AuthMechs       XOAUTH2
-PassCmd         "~/oauth/mutt_oauth2.py ~/oauth/aarya.bhatia6@gmail.com.token"
+PassCmd         "mutt_oauth2.py ~/.mail/aaryabhatia6/.token"
 SSLType         IMAPS
 CertificateFile /etc/ssl/certs/ca-certificates.crt
 
 MaildirStore    aaryabhatia6-local
-Path            ~/Mail/aaryabhatia6/
-Inbox           ~/Mail/aaryabhatia6/INBOX
+Path            ~/.mail/aaryabhatia6/
+Inbox           ~/.mail/aaryabhatia6/INBOX
 Subfolders      Verbatim
 
 Channel         aaryabhatia6
