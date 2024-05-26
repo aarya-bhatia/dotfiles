@@ -7,6 +7,15 @@ run() {
   fi
 }
 
+start_tmux_session() {
+  source ~/scripts/tmux_manager.sh
+  # fetch mail
+  TmuxAdd system mail "~/scripts/mailcheck.sh"
+  # start nightlight with location services
+  TmuxAdd system nightlight "~/scripts/nightlight.sh auto"
+  # TmuxAdd system lemonbar "~/repos/lemons/startlemon"
+}
+
 # set cursor style
 xsetroot -cursor_name left_ptr &
 
@@ -42,12 +51,5 @@ xrandr | grep -q "HDMI-1 connected" && ~/.screenlayout/mirror.sh &
 
 # launch panel
 ~/.config/polybar/launch.sh &
-# run ~/repos/lemons/startlemon &>$HOME/lemonbar.log &
-#
-# mail sync
-# run ~/scripts/mailcheck.sh &>$HOME/mail.log &
-#
-# start nightlight with location services
-# run ~/scripts/nightlight.sh auto &
 
-~/scripts/tmux_autostart.sh &
+start_tmux_session &
