@@ -53,10 +53,7 @@ other_email=aarya.bhatia6@gmail.com
 #		search results by default.  Using an excluded tag in a
 #		query will override that exclusion.
 #
-ignore=/.*[.].*$/
-
 [search]
-exclude_tags=trash
 # Maildir compatibility configuration
 #
 # The following option is supported here:

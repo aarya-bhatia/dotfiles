@@ -78,15 +78,17 @@ super + d
 super + Escape
 	pkill -USR1 -x sxhkd; notify-send "reloaded sxhkd"
 
+
 # launch applications
-super + o; {e,v,f,t,d,m,a,b,p,h,g,s,c,l}
-	{thunar,alacritty -e nvim, firefox, alacritty --class=email -e aerc, \
-	firefox "https://discord.com/channels/@me", \
-	ario, arandr, blueman-manager, pavucontrol, \
-	alacritty -e htop, alacritty -e gtop, \
-	xfce4-settings-manager, \
-	chromium, \
-	alacritty -e lf}
+super + o; {e,f,T,r,c,m,b,p}
+	{thunar, $BROWSER, thunderbird, $READER, chromium, ario, blueman-manager, pavucontrol}
+
+# launch terminal applications
+super + o; {v,h,l,t}
+	{$TERMINAL -e nvim, \
+	$TERMINAL -e htop, \
+	$TERMINAL -e lf, \
+	$TERMINAL --class=email -e aerc}
 
 # mpc controls
 super + equal
@@ -127,7 +129,8 @@ super + shift + a
 	rofi -show drun -show-icons
 
 super + a
-	python3 ~/scripts/dmenu_addressbook.py
+	~/scripts/dmenu_emails.sh
+	# python3 ~/scripts/dmenu_addressbook.py
 
 # password input
 super + shift + p
