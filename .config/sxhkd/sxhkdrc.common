@@ -66,6 +66,9 @@ super + shift + z
 super + shift + Return
 	alacritty --class=floating -e tmux new-session -A -s default
 
+super + comma
+	alacritty --class=floating -e tmux_notepad.sh
+
 # terminal emulator
 super + Return
 	alacritty

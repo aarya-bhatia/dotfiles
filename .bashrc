@@ -80,7 +80,6 @@ alias bright="brightnessctl"
 alias paclean="sudo pacman -Rsn $(pacman -Qdtq)"
 alias showkey="xev | awk -F'[ )]+' '/^KeyPress/ { a[NR+2] } NR in a { printf \"%-3s %s\n\", \$5, \$8 }'"
 alias dot="/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME"
-alias weather="curl https://wttr.in/?m"
 alias t=tmux
 alias notes="printf \"\n## $(date +'%Y-%m-%d %H:%M:%S')\n\n\" >> /home/aarya/GoogleDrive/Notes/$(date +"%Y-%m").md; vim /home/aarya/GoogleDrive/Notes/$(date +"%Y-%m").md -c 'norm G'"
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'

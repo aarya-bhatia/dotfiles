@@ -4,7 +4,7 @@ primary=eDP-1
 secondary=HDMI-1
 
 # autostart
-source ~/.config/bspwm/autostart.sh
+source ~/.config/bspwm/autostart.sh >> $HOME/.bspwm.autostart.log
 
 # monitors
 bspc monitor $primary -d main www mail media sys doc

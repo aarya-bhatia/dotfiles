@@ -53,6 +53,7 @@ other_email=aarya.bhatia6@gmail.com
 #		search results by default.  Using an excluded tag in a
 #		query will override that exclusion.
 #
+ignore=/.*[.](mbsyncstate|uivalidity)/
 [search]
 # Maildir compatibility configuration
 #
