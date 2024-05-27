@@ -40,5 +40,5 @@ case $session in
     xfce|xfce4) exec xfce4-session;;
     bspwm)      exec bspwm;;
     cinnamon)   exec cinnamon-session;;
-    *)          exec $1;;
+    *)          exec $session;;
 esac
