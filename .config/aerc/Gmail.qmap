@@ -1,5 +1,7 @@
 INBOX = tag:inbox and not tag:trash
-Archive = tag:archived or not tag:inbox
+Primary = tag:inbox and not tag:trash and not tag:archived and to:aarya.bhatia1678@gmail.com
+Secondary = tag:inbox and not tag:trash and not tag:archived and to:aarya.bhatia6@gmail.com
+Archive = tag:archived or not tag:inbox and not tag:trash
 Sent = from:aarya.bhatia1678@gmail.com or from:aarya.bhatia6@gmail.com
 Trash = tag:trash
-
+Important = tag:flagged
