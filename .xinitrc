@@ -1,44 +1,18 @@
 #!/bin/sh
-userresources=$HOME/.Xresources
-usermodmap=$HOME/.Xmodmap
-sysresources=/etc/X11/xinit/.Xresources
-sysmodmap=/etc/X11/xinit/.Xmodmap
 
-# merge in defaults and keymaps
-
-if [ -f $sysresources ]; then
-    xrdb -merge $sysresources
-fi
-
-if [ -f $sysmodmap ]; then
-    xmodmap $sysmodmap
-fi
-
-if [ -f "$userresources" ]; then
-    xrdb -merge "$userresources"
-fi
-
-if [ -f "$usermodmap" ]; then
-    xmodmap "$usermodmap"
-fi
-
-# start some nice programs
-
-if [ -d /etc/X11/xinit/xinitrc.d ] ; then
- for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
-  [ -x "$f" ] && . "$f"
- done
- unset f
-fi
-
-session=${2:-bspwm}
-echo session: $session
+arg=${2:-bspwm}
 
 case $session in
-    dwm)        exec startdwm;;
-    i3|i3wm)    exec i3;;
-    xfce|xfce4) exec xfce4-session;;
-    bspwm)      exec bspwm;;
-    cinnamon)   exec cinnamon-session;;
-    *)          exec $session;;
+    dwm)        session=startdwm;;
+    i3|i3wm)    session=i3;;
+    xfce|xfce4) session=xfce4-session;;
+    bspwm)      session=bspwm;;
+    cinnamon)   session=cinnamon-session;;
+    *)          session=$arg;;
 esac
+
+logfile=~/.xinit.log
+echo starting session: $session
+echo log file: $logfile
+exec $session &>>$logfile
+# exec dbus-run-session -- $session &>>$logfile

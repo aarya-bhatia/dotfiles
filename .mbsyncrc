@@ -1,3 +1,5 @@
+# Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/All Mail" "[Gmail]/Trash" "[Gmail]/Drafts"
+
 ### aarya.bhatia1678@gmail.com ###
 
 IMAPStore       aaryabhatia1678-remote
@@ -46,4 +48,27 @@ Create Both
 Expunge Both
 SyncState *
 
-# Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/All Mail" "[Gmail]/Trash" "[Gmail]/Drafts"
+### aaryab2@illinois.edu ###
+
+### aarya@aaryab.in ###
+
+IMAPStore       aaryab.in-remote
+Host            mail.aaryab.in
+Port            993
+User            aarya@aaryab.in
+PassCmd         "pass show aaryab.in/aarya"
+SSLType         IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore    aaryab.in-local
+Path            ~/.mail/aaryab.in/
+Inbox           ~/.mail/aaryab.in/INBOX
+Subfolders      Verbatim
+
+Channel         aaryab.in
+Far             :aaryab.in-remote:
+Near            :aaryab.in-local:
+Patterns        *
+Create Both
+Expunge Both
+SyncState *
