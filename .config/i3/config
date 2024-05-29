@@ -2,12 +2,12 @@ set $primary eDP-1
 set $secondary HDMI-1
 set $mod Mod1
 set $super Mod4
-set $gaps_inner 8
+set $gaps_inner 0
 set $gaps_outer 0
 
 # settings
 floating_modifier $super
-font pango:monospace 8.5
+font pango:UbuntuMono 10
 focus_wrapping no
 ipc-socket ~/.i3/i3-ipc.sock
 popup_during_fullscreen smart
@@ -37,35 +37,35 @@ for_window [class="^Surf"] border normal 3
 for_window [class="^Thunar"] floating enable resize set 960 750
 for_window [class="^zoom"] floating enable resize set 960 750
 
-assign [class="Ario"] $ws7
-assign [class="Code"] $ws6
-assign [class="discord"] $ws4
+assign [class="Ario"] $ws4
+assign [class="Code"] $ws1
+assign [class="discord"] $ws3
 # assign [class="Firefox"] $ws2
 assign [class="Minecraft"] $ws7
-assign [class="Pavucontrol"] $ws9
-assign [class="Slack"] $ws4
+assign [class="Pavucontrol"] $ws5
+assign [class="Slack"] $ws3
 assign [class="thunderbird"] $ws3
-assign [class="Virt-manager"] $ws7
-# assign [class="^vlc"] $ws5
-assign [class="zoom"] $ws5
+assign [class="Virt-manager"] $ws5
+assign [class="^vlc"] $ws4
+assign [class="zoom"] $ws3
 
 # }}}
 
 # Key bindings {{{
-bindsym $super+Shift+c 				exec i3-msg reload && notify-send "reloaded i3"
-bindsym $super+Shift+r 				exec i3-msg restart && notify-send "restarted i3"
-bindsym $super+q 					kill
-bindsym $super+Tab 					workspace next
-bindsym $super+Shift+Tab 			workspace prev
+bindsym $super+Shift+c 		exec i3-msg reload && notify-send "reloaded i3"
+bindsym $super+Shift+r 		exec i3-msg restart && notify-send "restarted i3"
+bindsym $super+q 		kill
+bindsym $super+Tab 		workspace next
+bindsym $super+Shift+Tab 	workspace prev
 
 # launch terminal
-bindsym $super+Return 			exec --no-startup-id alacritty --class=Alacritty
-bindsym $super+Shift+Return 		exec --no-startup-id alacritty --class=floating -e tmux new-session -A -s $USER
+bindsym $super+Return 		exec --no-startup-id alacritty --class=Alacritty
+bindsym $super+Shift+Return 	exec --no-startup-id alacritty --class=floating -e tmux new-session -A -s $USER
 
 # bind modes
-bindsym $super+r 			mode "$mode_resize"
-# bindsym $super+o 			mode "$mode_application"
-# bindsym $super+BackSpace		mode "$mode_power"
+bindsym $super+r 		mode "$mode_resize"
+# bindsym $super+o 		mode "$mode_application"
+# bindsym $super+BackSpace	mode "$mode_power"
 
 bindsym $super+grave workspace back_and_forth
 
@@ -118,26 +118,26 @@ bindsym $super+semicolon scratchpad show
 
 # workspaces {{{
 
-set $ws1      "1:I"
-set $ws2      "2:II"
-set $ws3      "3:III"
-set $ws4      "4:IV"
-set $ws5      "5:V"
-set $ws6      "6:VI"
-set $ws7      "7:VII"
-set $ws8      "8:VIII"
-set $ws9      "9:IX"
-set $ws10     "10:X"
-set $ws11     "11:XI"
-set $ws12     "12:XII"
-set $ws13     "13:XIII"
-set $ws14     "14:XIV"
-set $ws15     "15:XV"
-set $ws16     "16:XVI"
-set $ws17     "17:XVII"
-set $ws18     "18:XVIII"
-set $ws19     "19:XIX"
-set $ws20     "20:XX"
+set $ws1      "1"
+set $ws2      "2"
+set $ws3      "3"
+set $ws4      "4"
+set $ws5      "5"
+set $ws6      "6"
+set $ws7      "7"
+set $ws8      "8"
+set $ws9      "9"
+set $ws10     "10"
+set $ws11     "11"
+set $ws12     "12"
+set $ws13     "13"
+set $ws14     "14"
+set $ws15     "15"
+set $ws16     "16"
+set $ws17     "17"
+set $ws18     "18"
+set $ws19     "19"
+set $ws20     "20"
 
 workspace $ws1 output $primary
 workspace $ws2 output $primary
@@ -209,18 +209,17 @@ bindsym $mod+Shift+0 move container to workspace $ws20
 
 # status bar {{{
 
-bar {
-	status_command i3blocks
-	position top
-	tray_output eDP-1
-	font pango:FreeMono 10.5
-        strip_workspace_numbers yes
-        colors {
-                background #000000
-                statusline #ffffff
-                separator #666666
-        }
-}
+# bar {
+# 	status_command i3blocks
+# 	position top
+#         font pango:UbuntuMono 11.5
+#         strip_workspace_numbers yes
+#         colors {
+#                 background #000000
+#                 statusline #ffffff
+#                 separator #666666
+#         }
+# }
 
 # }}}
 

@@ -1,39 +1,36 @@
-separator=false
-
-[kernel]
-command=echo " " $(uname -r)
-interval=once
-color=#ff0000
+[mpd]
+command=mpc current | head -c 100
+interval=5
 
 [volume]
 command=sb-volume
 interval=once
 signal=5
-color=#ff00ff
+label=Vol:
 
 [battery]
 command=sb-battery
 interval=5
-color=#00ff00
+label=Bat:
 
 [weather]
 command=sb-weather
 interval=60
-color=#00ffff
+label=Temp:
 
 [disk]
 command=sb-disk
 interval=30
-color=#ffff00
+label=Used:
 
 [memory]
 command=sb-memory
 interval=30
-color=#ff0000
+label=Mem:
 
 [date]
 command=sb-date
 interval=5
-color=#00ff00
+label=Clk:
 
 # vim: ft=ini

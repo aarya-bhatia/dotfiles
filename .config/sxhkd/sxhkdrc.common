@@ -83,11 +83,11 @@ super + Escape
 
 
 # launch applications
-super + o; {e,f,T,r,c,m,b,p}
+super + o; {e,f,t,r,c,m,b,p}
 	{thunar, $BROWSER, thunderbird, $READER, chromium, ario, blueman-manager, pavucontrol}
 
 # launch terminal applications
-super + o; {v,h,l,t}
+super + o; {v,h,l,T}
 	{$TERMINAL -e nvim, \
 	$TERMINAL -e htop, \
 	$TERMINAL -e lf, \
