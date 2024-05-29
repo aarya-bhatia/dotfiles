@@ -7,7 +7,7 @@ secondary=HDMI-1
 source ~/.config/bspwm/autostart.sh >> $HOME/.bspwm.autostart.log
 
 # monitors
-bspc monitor $primary -d main www mail media sys doc
+bspc monitor $primary -d main www mail media sys doc etc games tmp
 
 # settings
 bspc config border_width        1
