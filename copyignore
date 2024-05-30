@@ -1,0 +1,46 @@
+bin/
+obj/
+pkg/
+cache
+Cache/
+.cache/
+.cargo
+.docker/
+snap/
+node_modules/
+tmp/
+*.log
+*.swp
+.DS_Store
+.config/discord/
+plugged/
+
+# Python
+.venv/
+venv/
+pyvenv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+/go/pkg/
+/go/bin/
+
+# Ruby
+*.gem
+.bundle/
+/vendor/
+
+# Java
+*.class
+*.jar
+
+# Rust
+/target/
+
+# JavaScript
+node_modules/
+dist/
+build/
+

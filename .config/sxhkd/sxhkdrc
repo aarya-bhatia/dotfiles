@@ -1,0 +1,127 @@
+# set gap iize
+super + g; {0-9}
+	bspc config window_gap {0-9}; notify-send "window gap changed"
+
+# select prev/next bsp-layout
+super + control + {bracketleft, bracketright}
+	bsp-layout {previous, next}
+
+# change layouts
+super + control + {1,2,3}
+	bsp-layout set {tiled,wide,tall -- --master-size 0.5}; notify-send "Layout" "$(bsp-layout get)"
+
+# focus the node for the given path jump
+super + {p,b,semicolon,apostrophe}
+	bspc node -f @{parent,brother,first,second}
+
+# selects direction for next window to spawm in
+super + control + {h,j,k,l}
+	bspc node --presel-dir {west, south, north, east}
+
+# cancel preselection
+super + control + space
+	bspc node --presel-dir cancel
+
+# move window to preselection
+super + control + Return
+	bspc node -n 'last.!automatic.local'
+
+# change preselection ratio
+super + control + {1-9}
+	bspc node -o 0.{1-9}
+
+# balance the tree at root of current node
+super + control + equal
+	bspc node @/ -B
+
+# rotate the tree at current node
+super + control + r
+	bspc node -R 90
+
+# restart bspwm
+super + shift + r
+	bspc wm -r && /home/aarya/.config/bspwm/bspwmrc
+
+# close and kill
+super + {_,shift + }q
+	bspc node -{c,k}
+
+# focus or send to the given desktop
+super + {_,shift + }{1-9}
+	bspc {desktop -f,node -d} ^{1-9}
+
+# focus the next/previous window in the current desktop
+super + bracket{left,right}
+	bspc desktop -f {prev,next}.local.occupied
+
+# focus the last node/desktop
+super + {grave,Tab}
+	bspc {node,desktop} -f last
+
+# focus the next/previous desktop in the current monitor
+super {_, shift +} c
+	bspc node -f {next,prev}.local.!hidden.window
+
+# focus/swap nodes in direction
+super + {_,shift + }{h,j,k,l}
+	bspc node -{f,s} {west,south,north,east}
+
+# Toggle floating and tiled window
+super + shift + space
+	if [ -z "$(bspc query -N -n focused.floating)" ]; then \
+        bspc node focused -t floating; \
+    else \
+        bspc node focused -t tiled; \
+    fi
+
+# to change focus between tiling and floating windows
+super + space
+	if ! bspc query -N -n focused.fullscreen; then \
+		if bspc query -N -n focused.floating; then \
+			bspc node -f any.local.\!floating; \
+		else \
+			bspc node -f any.floating; \
+		fi \
+	fi
+
+# superernate between the tiled and monocle layout
+super + f
+	bspc desktop -l next
+
+# Toggle fullscreen and tiled window
+super + shift + f
+	if [ -z "$(bspc query -N -n focused.fullscreen)" ]; then \
+        bspc node focused -t fullscreen; \
+    else \
+        bspc node focused -t tiled; \
+    fi
+
+# Smart resize, will grow or shrink depending on location.
+# Will always grow for floating nodes.
+super + alt + ctrl + {h,j,k,l}
+  n=20; \
+  { d1=left;   d2=right;  dx=-$n; dy=0;   \
+  , d1=bottom; d2=top;    dx=0;   dy=$n;  \
+  , d1=top;    d2=bottom; dx=0;   dy=-$n; \
+  , d1=right;  d2=left;   dx=$n;  dy=0;   \
+  } \
+  bspc node --resize $d1 $dx $dy || bspc node --resize $d2 $dx $dy
+
+alt + super + p
+	bspc config focus_follows_pointer {true,false}
+
+# focus the older or newer node in the focus history
+super + control + {o,i}
+	bspc wm -h off; \
+	bspc node {older,newer} -f; \
+	bspc wm -h on
+
+# toggle current windows sticky flag
+super + shift + s
+	bspc node $(bspc query -N -n focused) -g sticky
+
+# scratchpads
+super + alt + {space,n}
+    ~/scripts/bspwm_scratchpad.sh {terminal,notes}
+
+

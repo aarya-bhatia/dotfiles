@@ -1,0 +1,36 @@
+[mpd]
+command=mpc current | head -c 100
+interval=5
+
+[volume]
+command=sb-volume
+interval=once
+signal=5
+label=Vol:
+
+[battery]
+command=sb-battery
+interval=5
+label=Bat:
+
+[weather]
+command=sb-weather
+interval=60
+label=Temp:
+
+[disk]
+command=sb-disk
+interval=30
+label=Used:
+
+[memory]
+command=sb-memory
+interval=30
+label=Mem:
+
+[date]
+command=sb-date
+interval=5
+label=Clk:
+
+# vim: ft=ini

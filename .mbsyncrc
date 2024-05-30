@@ -1,0 +1,74 @@
+# Patterns * ![Gmail]* "[Gmail]/Sent Mail" "[Gmail]/All Mail" "[Gmail]/Trash" "[Gmail]/Drafts"
+
+### aarya.bhatia1678@gmail.com ###
+
+IMAPStore       aaryabhatia1678-remote
+Host            imap.gmail.com
+Port            993
+User            aarya.bhatia1678@gmail.com
+AuthMechs       XOAUTH2
+PassCmd         "mutt_oauth2.py ~/.mail/gmail/.token"
+SSLType         IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore    aaryabhatia1678-local
+Path            ~/.mail/gmail/
+Inbox           ~/.mail/gmail/INBOX
+Subfolders      Verbatim
+
+Channel         aaryabhatia1678
+Far             :aaryabhatia1678-remote:
+Near            :aaryabhatia1678-local:
+Patterns        INBOX ![Gmail]*
+Create Both
+Expunge Both
+SyncState *
+
+### aarya.bhatia6@gmail.com ###
+
+IMAPStore       aaryabhatia6-remote
+Host            imap.gmail.com
+Port            993
+User            aarya.bhatia6@gmail.com
+AuthMechs       XOAUTH2
+PassCmd         "mutt_oauth2.py ~/.mail/aaryabhatia6/.token"
+SSLType         IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore    aaryabhatia6-local
+Path            ~/.mail/aaryabhatia6/
+Inbox           ~/.mail/aaryabhatia6/INBOX
+Subfolders      Verbatim
+
+Channel         aaryabhatia6
+Far             :aaryabhatia6-remote:
+Near            :aaryabhatia6-local:
+Patterns        INBOX ![Gmail]*
+Create Both
+Expunge Both
+SyncState *
+
+### aaryab2@illinois.edu ###
+
+### aarya@aaryab.in ###
+
+IMAPStore       aaryab.in-remote
+Host            mail.aaryab.in
+Port            993
+User            aarya@aaryab.in
+PassCmd         "pass show aaryab.in/aarya"
+SSLType         IMAPS
+CertificateFile /etc/ssl/certs/ca-certificates.crt
+
+MaildirStore    aaryab.in-local
+Path            ~/.mail/aaryab.in/
+Inbox           ~/.mail/aaryab.in/INBOX
+Subfolders      Verbatim
+
+Channel         aaryab.in
+Far             :aaryab.in-remote:
+Near            :aaryab.in-local:
+Patterns        *
+Create Both
+Expunge Both
+SyncState *
