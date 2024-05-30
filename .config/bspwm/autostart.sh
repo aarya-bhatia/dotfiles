@@ -46,6 +46,8 @@ xrandr | grep -q "HDMI-1 connected" && ~/.screenlayout/mirror.sh &
 # start nightlight with location services
 run ~/scripts/nightlight.sh auto &
 
+# run python3 ~/repos/aarya-bhatia/self-hosted/mpd-control/client.py http://aaryab.in:5000 &
+
 # {
 #   source ~/scripts/tmux_manager.sh
 #   TmuxAdd system mail "~/scripts/mailcheck.sh"

@@ -11,7 +11,7 @@ bspc monitor $primary -d main www mail media sys doc etc games tmp
 
 # settings
 bspc config border_width        1
-bspc config window_gap          8
+bspc config window_gap          0
 bspc config top_padding         28
 bspc config bottom_padding       0
 bspc config click_to_focus      true
