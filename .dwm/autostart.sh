@@ -7,6 +7,9 @@ run() {
   fi
 }
 
+# start session manager
+run lxsession &
+
 # turn on numlock
 numlockx on &
 
@@ -19,14 +22,11 @@ $HOME/scripts/wallpaper.py &
 # start notification daemon
 run dunst &
 
-# start session manager
-run lxsession &
-
 # start music player daemon
 run mpd &
 
  # start compositor
-run picom --backend glx --xrender-sync-fence &
+# run picom --backend glx --xrender-sync-fence &
 
 # start simple X hotkey daemon
 run sxhkd -c $HOME/.config/sxhkd/sxhkdrc.common &

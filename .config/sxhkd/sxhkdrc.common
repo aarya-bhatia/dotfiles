@@ -4,32 +4,28 @@
 
 # volume keys
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
-	$HOME/scripts/volume.sh {up,down,mute}
+	volume.sh {up,down,mute}
 
 # brightness keys
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
-	$HOME/scripts/volume.sh {brightness_up,brightness_down}
+	volume.sh {brightness_up,brightness_down}
 
 # multimedia keys
 {XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
-	$HOME/scripts/volume.sh {next_track,prev_track,play_pause,play_pause}
+	volume.sh {next_track,prev_track,play_pause,play_pause}
 
 # mpd controls with super + functions keys
 super+{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
 	mpc {next,prev,toggle,toggle}
 
 # tell me current mpd song
-F10; @F10
+F12; @F12
 	notify-send "mpd" "$(mpc status)"
 
 # reload status bar
 F11; @F11
 	pgrep -x dwmblocks && pkill -USR1 dwmblocks && notify-send "refreshed dwmblocks"; \
 	pgrep -x polybar && polybar-msg cmd restart && notify-send "reloaded polybar";
-
-# show dmenu hotkey help menu
-F12; @F12
-	/home/aarya/scripts/dmenu_hotkeys.sh
 
 # launch calculator / music player / email client / file browser
 {XF86Calculator, XF86Tools, XF86Mail, XF86Search}
@@ -40,11 +36,11 @@ F12; @F12
 
 # press print key
 Print; @Print
-	/home/aarya/scripts/screenshot.sh
+	screenshot.sh
 
 # press super + print key
 super + Print
-	/home/aarya/scripts/screenshot.sh -s
+	screenshot.sh -s
 
 ####################################
 # super + KEYS
@@ -52,15 +48,15 @@ super + Print
 
 # browser links
 super + slash
-	/home/aarya/scripts/dmenu_browser.sh
+	dmenu_browser.sh
 
 # power menu
 super + BackSpace
-	/home/aarya/scripts/dmenu_power.sh
+	dmenu_power.sh
 
 # open pdfs with zathura
 super + shift + z
-	/home/aarya/scripts/dmenu_pdfs.sh
+	dmenu_pdfs.sh
 
 # terminal emulator in default tmux session
 super + shift + Return
@@ -98,13 +94,8 @@ super + o; {v,h,l,T}
 	$TERMINAL --class=email -e aerc}
 
 # mpc controls
-super + equal
+super + alt + equal
 	mpc toggle
-
-# bookmarks
-super + shift + b; {a, l}
-	{echo $(xclip -o | head -n 1) >> ~/.bookmarks, \
-	xdotool type $(cat ~/.bookmarks | sort | uniq | dmenu -i -l 20)}
 
 ####################################
 # SUPER + ALT KEYS
@@ -114,8 +105,8 @@ super + shift + b; {a, l}
 super + alt + {0-9}
 	mpc -q seek {0-9}0%
 
-super + alt + {j,k}
-	mpc {next,prev}
+super + alt + {h,j,k,l}
+	mpc {seek -5%, next, prev, seek +5%}
 
 ####################################
 # super + SHIFT KEYS
@@ -123,11 +114,11 @@ super + alt + {j,k}
 
 # edit and copy temp file to clipboard
 super + shift + v
-	/home/aarya/scripts/launch_vim_notepad.sh
+	launch_vim_notepad.sh
 
-# launch sxiv to view/select wallpapers (ctrl-x+w)
+# launch image viewer
 super + shift + w
-	nsxiv /home/aarya/Media/Wallpapers/*
+	dmenu_image_viewer.sh
 
 super + shift + n
 	python3 ~/scripts/dmenu_bspwm_nodes.py
@@ -136,16 +127,16 @@ super + shift + a
 	rofi -show drun -show-icons
 
 super + a
-	~/scripts/dmenu_emails.sh
+	dmenu_emails.sh
 	# python3 ~/scripts/dmenu_addressbook.py
 
 # password input
 super + shift + p
-	/home/aarya/scripts/dmenupass.sh
+	dmenupass.sh
 
 # dmenu edit config
 super + shift + e
-	/home/aarya/scripts/dmenu_edit_config.sh
+	dmenu_edit_config.sh
 
 # lock screen
 super + shift + x

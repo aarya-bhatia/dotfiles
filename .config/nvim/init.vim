@@ -18,6 +18,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'kshenoy/vim-signature'
 Plug 'preservim/tagbar'
 Plug 'romainl/vim-qf'
+Plug 'justinmk/vim-sneak'
 
 " File management
 Plug 'voldikss/vim-floaterm'

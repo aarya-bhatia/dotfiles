@@ -1,18 +1,10 @@
 #!/bin/sh
-
-arg=${2:-bspwm}
-
+session=${2:-bspwm}
 case $session in
-    dwm)        session=startdwm;;
-    i3|i3wm)    session=i3;;
-    xfce|xfce4) session=xfce4-session;;
-    bspwm)      session=bspwm;;
-    cinnamon)   session=cinnamon-session;;
-    *)          session=$arg;;
+    dwm)        while true; do ~/.dwm/autostart.sh; dwm; done;;
+    i3|i3wm)    exec i3;;
+    xfce|xfce4) exec xfce4-session;;
+    bspwm)      exec bspwm;;
+    cinnamon)   exec cinnamon-session;;
+    *)          exec $arg;;
 esac
-
-logfile=~/.xinit.log
-echo starting session: $session
-echo log file: $logfile
-exec $session &>>$logfile
-# exec dbus-run-session -- $session &>>$logfile
