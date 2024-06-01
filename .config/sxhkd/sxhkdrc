@@ -1,3 +1,7 @@
+# program launcher
+super + d
+	dmenu_run
+
 # set gap iize
 super + g; {0-9}
 	bspc config window_gap {0-9}; notify-send "window gap changed"
@@ -23,7 +27,7 @@ super + control + space
 	bspc node --presel-dir cancel
 
 # move window to preselection
-super + control + Return
+super + control + p
 	bspc node -n 'last.!automatic.local'
 
 # change preselection ratio
@@ -124,4 +128,6 @@ super + shift + s
 super + alt + {space,n}
     ~/scripts/bspwm_scratchpad.sh {terminal,notes}
 
+super + shift + n
+	python3 ~/scripts/dmenu_bspwm_nodes.py
 

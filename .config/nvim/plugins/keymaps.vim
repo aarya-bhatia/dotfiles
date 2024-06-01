@@ -29,8 +29,8 @@ nnoremap < <<
 vnoremap > >gv
 vnoremap < <gv
 
-nnoremap <Tab> :bnext<CR>
-nnoremap <S-Tab> :bprev<CR>
+" nnoremap <Tab> :bnext<CR>
+" nnoremap <S-Tab> :bprev<CR>
 
 " Paste over currently selected text without yanking it
 xnoremap <silent> p "_dP

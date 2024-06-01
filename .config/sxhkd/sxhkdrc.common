@@ -2,21 +2,14 @@
 # FUNCTION KEYS
 ####################################
 
-# volume keys
 {XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
 	volume.sh {up,down,mute}
 
-# brightness keys
 {XF86MonBrightnessUp,XF86MonBrightnessDown}
 	volume.sh {brightness_up,brightness_down}
 
-# multimedia keys
 {XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
 	volume.sh {next_track,prev_track,play_pause,play_pause}
-
-# mpd controls with super + functions keys
-super+{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
-	mpc {next,prev,toggle,toggle}
 
 # tell me current mpd song
 F12; @F12
@@ -27,119 +20,64 @@ F11; @F11
 	pgrep -x dwmblocks && pkill -USR1 dwmblocks && notify-send "refreshed dwmblocks"; \
 	pgrep -x polybar && polybar-msg cmd restart && notify-send "reloaded polybar";
 
-# launch calculator / music player / email client / file browser
 {XF86Calculator, XF86Tools, XF86Mail, XF86Search}
-	{alacritty --class="floating" -e qalc \
-	,	alacritty -e ncmpcpp \
-	, 	thunderbird \
-	,	thunar }
+	{$TERMINAL -c floating -e qalc, \
+	$TERMINAL -e ncmpcpp, \
+	thunderbird, \
+	thunar }
 
 # press print key
 Print; @Print
 	screenshot.sh
 
-# press super + print key
-super + Print
-	screenshot.sh -s
-
 ####################################
 # super + KEYS
 ####################################
 
-# browser links
-super + slash
-	dmenu_browser.sh
+super+{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
+	mpc {next,prev,toggle,toggle}
 
-# power menu
-super + BackSpace
-	dmenu_power.sh
+super + {Escape, Return,a,slash,BackSpace,Print}
+	{pkill -USR1 -x sxhkd && notify-send "reloaded sxhkd", \
+		$TERMINAL, dmenu_emails.sh, dmenu_browser.sh, dmenu_power.sh, screenshot.sh -s}
 
-# open pdfs with zathura
-super + shift + z
-	dmenu_pdfs.sh
-
-# terminal emulator in default tmux session
-super + shift + Return
-	alacritty --class=floating -e tmux new-session -A -s default
-
-super + comma
-	alacritty --class=floating -e tmux_notepad.sh
-
-# terminal emulator
-super + Return
-	alacritty
-
-# terminal emulator
-alt + Return
-	alacritty
-
-# program launcher
-super + d
-	dmenu_run
-
-# make sxhkd reload its configuration files:
-super + Escape
-	pkill -USR1 -x sxhkd; notify-send "reloaded sxhkd"
-
-
-# launch applications
 super + o; {e,f,t,r,c,m,b,p}
 	{thunar, $BROWSER, thunderbird, $READER, chromium, ario, blueman-manager, pavucontrol}
 
-# launch terminal applications
 super + o; {v,h,l,T}
 	{$TERMINAL -e nvim, \
 	$TERMINAL -e htop, \
 	$TERMINAL -e lf, \
 	$TERMINAL --class=email -e aerc}
 
-# mpc controls
-super + alt + equal
-	mpc toggle
-
 ####################################
 # SUPER + ALT KEYS
 ####################################
 
-# seek music player
 super + alt + {0-9}
 	mpc -q seek {0-9}0%
 
-super + alt + {h,j,k,l}
-	mpc {seek -5%, next, prev, seek +5%}
+super + alt + {equal,h,j,k,l}
+	mpc {toggle, seek -5%, next, prev, seek +5%}
 
 ####################################
 # super + SHIFT KEYS
 ####################################
 
-# edit and copy temp file to clipboard
-super + shift + v
-	launch_vim_notepad.sh
+super + shift + {a,e,p,v,w,x,z}
+	{rofi -show drun -show-icons, \
+	dmenu_edit_config.sh, \
+	dmenupass.sh, \
+	launch_vim_notepad.sh, \
+	dmenu_image_viewer.sh, \
+	betterlockscreen -l --off 10, \
+	dmenu_pdfs.sh}
 
-# launch image viewer
-super + shift + w
-	dmenu_image_viewer.sh
+####################################
+# super + CONTROL + KEYS
+####################################
 
-super + shift + n
-	python3 ~/scripts/dmenu_bspwm_nodes.py
-
-super + shift + a
-	rofi -show drun -show-icons
-
-super + a
-	dmenu_emails.sh
-	# python3 ~/scripts/dmenu_addressbook.py
-
-# password input
-super + shift + p
-	dmenupass.sh
-
-# dmenu edit config
-super + shift + e
-	dmenu_edit_config.sh
-
-# lock screen
-super + shift + x
-	betterlockscreen -l --off 10
-	# test $(echo -e "Yes\nNo\n" | dmenu -p "Are you sure want to quit?") = "Yes" && bspc quit
+# terminal emulator in default tmux session
+super + control + Return
+	$TERMINAL -c floating -e tmux new-session -A -s default
 

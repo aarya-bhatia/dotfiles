@@ -37,6 +37,7 @@ Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'savq/melange-nvim'
 Plug 'rose-pine/neovim'
+" Plug 'dracula/vim'
 
 " LSP
 Plug 'nvim-lua/plenary.nvim'
@@ -85,8 +86,7 @@ let g:netrw_liststyle=3
 let g:lf_map_keys = 0
 let g:lf_replace_netrw = 1
 
-" colorscheme tokyonight-moon
-colorscheme gruvbox
+" colorscheme dracula
 
 " comments
 au FileType asm setlocal commentstring=#\ %s
