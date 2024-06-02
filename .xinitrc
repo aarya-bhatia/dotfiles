@@ -1,6 +1,8 @@
 #!/bin/sh
 exec &>/dev/null
 
+export XDG_SESSION_TYPE=X11
+
 session=${2:-dwm}
 
 # Run command in background unless already running...
