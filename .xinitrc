@@ -1,4 +1,6 @@
 #!/bin/sh
+exec &>/dev/null
+
 session=${2:-dwm}
 
 # Run command in background unless already running...
@@ -8,19 +10,20 @@ run() {
   fi
 }
 
-run dunst &
-run mpd &
-run nightlight.sh auto &
-run xss-lock --transfer-sleep-lock -- betterlockscreen -l &
-# run picom --backend glx --xrender-sync-fence &
+numlockx on
 
-numlockx on &
-wallpaper.py &
+run mpd &
 
 startdwm() {
-        run dwmblocks &
-        run sxhkd -c ~/.config/sxhkd/sxhkdrc.common &
-        while true; do dwm; done
+    run lxsession &
+    run dunst &
+    run dwmblocks &
+    run nightlight.sh auto &
+    run sxhkd -c ~/.config/sxhkd/sxhkdrc.common &
+    run wallpaper.py &
+    run xss-lock --transfer-sleep-lock -- betterlockscreen -l &
+    # run picom --backend glx --xrender-sync-fence &
+    while true; do dwm; done
 }
 
 case $session in

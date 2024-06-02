@@ -1,21 +1,21 @@
 [font]
-size = 6.5
+size = 12
 
-[font.bold]
-family = "hack"
-style = "Bold"
+# [font.bold]
+# family = "hack"
+# style = "Bold"
 
-[font.bold_italic]
-family = "hack"
-style = "Bold Italic"
+# [font.bold_italic]
+# family = "hack"
+# style = "Bold Italic"
 
-[font.italic]
-family = "hack"
-style = "Italic"
+# [font.italic]
+# family = "hack"
+# style = "Italic"
 
-[font.normal]
-family = "hack"
-style = "Regular"
+# [font.normal]
+# family = "hack"
+# style = "Regular"
 
 [selection]
 save_to_clipboard = true
