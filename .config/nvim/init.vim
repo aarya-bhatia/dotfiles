@@ -63,7 +63,7 @@ set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent
 set incsearch ignorecase smartcase nohlsearch
 set wildmode=longest,list,full wildmenu
 set ruler laststatus=2 showcmd showmode
-set list
+set nolist
 set fillchars+=vert:\
 set wrap breakindent
 set encoding=utf-8
