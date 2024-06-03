@@ -6,7 +6,6 @@ endif
 
 call plug#begin('$HOME/.local/share/nvim/plugged')
 " General
-Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sleuth'

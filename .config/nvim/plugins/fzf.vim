@@ -44,16 +44,14 @@ let g:fzf_colors =
 
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
+" List files in working directory
+nnoremap <C-p> :FzfFiles<CR>
+
 " List files in current files directory
 nnoremap <leader>ff :call fzf#vim#files(expand("%:h"))<CR>
 
 " List git files
 nnoremap <silent> <leader>fg :FzfGFiles<CR>
-
-" List files
-nnoremap <silent> <leader>fd :FzfFiles<CR>
-
-nnoremap <C-p> :FzfFiles<CR>
 
 " Find in history
 nnoremap <silent> <leader>fh :FzfHistory<CR>
