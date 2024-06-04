@@ -17,7 +17,7 @@ numlockx on
 run mpd &
 
 startdwm() {
-    run lxsession &
+    # run lxsession &
     run dunst &
     run dwmblocks &
     run nightlight.sh auto &
