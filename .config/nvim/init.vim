@@ -5,10 +5,9 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
 endif
 
 call plug#begin('$HOME/.local/share/nvim/plugged')
-" General
+
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'echasnovski/mini.bufremove'
 Plug 'echasnovski/mini.ai'
@@ -20,15 +19,13 @@ Plug 'romainl/vim-qf'
 Plug 'justinmk/vim-sneak'
 
 " File management
-Plug 'voldikss/vim-floaterm'
-Plug 'ptzz/lf.vim'
+Plug 'stevearc/oil.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
 " Syntax
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-Plug 'kovetskiy/sxhkd-vim'
 
 " colorschemes
 Plug 'folke/tokyonight.nvim'
@@ -36,7 +33,6 @@ Plug 'morhetz/gruvbox'
 Plug 'sainnhe/gruvbox-material'
 Plug 'savq/melange-nvim'
 Plug 'rose-pine/neovim'
-" Plug 'dracula/vim'
 
 " LSP
 Plug 'nvim-lua/plenary.nvim'
@@ -44,14 +40,15 @@ Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v3.x'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'williamboman/mason.nvim'
-Plug 'mfussenegger/nvim-lint'
+
+" Formatter
 Plug 'stevearc/conform.nvim'
+
+" Autocompletion
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
-Plug 'ray-x/lsp_signature.nvim'
-Plug 'L3MON4D3/LuaSnip'
 
 call plug#end()
 
@@ -63,7 +60,6 @@ set incsearch ignorecase smartcase nohlsearch
 set wildmode=longest,list,full wildmenu
 set ruler laststatus=2 showcmd showmode
 set nolist
-set fillchars+=vert:\
 set wrap breakindent
 set encoding=utf-8
 set hidden
@@ -82,10 +78,7 @@ set undofile
 let g:netrw_banner=0
 let g:netrw_liststyle=3
 
-let g:lf_map_keys = 0
-let g:lf_replace_netrw = 1
-
-" colorscheme dracula
+colorscheme default
 
 " comments
 au FileType asm setlocal commentstring=#\ %s
@@ -108,13 +101,7 @@ iabbrev @@ aarya.bhatia1678@gmail.com
 iabbrev UIUC University of Illinois
 iabbrev ----- --------------------------------------
 
-xnoremap <leader>ga <Plug>(EasyAlign)
-nnoremap <leader>ga <Plug>(EasyAlign)
-nnoremap <leader>tt :TagbarToggle<CR>
-nnoremap <leader>M :Mason<CR>
-nnoremap <leader>L :LspInfo<CR>
-nnoremap <leader>e :25Lex<CR>
-nnoremap <leader>- :Lf<CR>
+"nnoremap <leader>e :25Lex<CR>
 
 lua << EOF
 
@@ -123,10 +110,18 @@ for i, file in pairs(paths) do
   vim.cmd('source ' .. file)
 end
 
+require("oil").setup()
 require("mini.bufremove").setup()
 require("mini.ai").setup()
 require("treesitter")
 require("lsp_zero")
 
 EOF
+
+xnoremap <leader>ga <Plug>(EasyAlign)
+nnoremap <leader>ga <Plug>(EasyAlign)
+nnoremap <leader>tt :TagbarToggle<CR>
+nnoremap <leader>M :Mason<CR>
+nnoremap <leader>L :LspInfo<CR>
+nnoremap <leader>- :Oil<CR>
 
