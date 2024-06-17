@@ -21,7 +21,7 @@ F11; @F11
 	pgrep -x polybar && polybar-msg cmd restart && notify-send "reloaded polybar";
 
 {XF86Calculator, XF86Tools, XF86Mail, XF86Search}
-	{$TERMINAL -c floating -e qalc, \
+	{alacritty --class=floating -e python3, \
 	$TERMINAL -e ncmpcpp, \
 	thunderbird, \
 	thunar }
@@ -37,6 +37,9 @@ Print; @Print
 super+{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
 	mpc {next,prev,toggle,toggle}
 
+super+{F8,F9,F10}
+	mpc {prev,toggle,next}
+
 super + {Escape, Return,a,slash,BackSpace,Print}
 	{pkill -USR1 -x sxhkd && notify-send "reloaded sxhkd", \
 		$TERMINAL, dmenu_emails.sh, dmenu_browser.sh, dmenu_power.sh, screenshot.sh -s}
@@ -48,7 +51,7 @@ super + o; {v,h,l,T}
 	{$TERMINAL -e nvim, \
 	$TERMINAL -e htop, \
 	$TERMINAL -e lf, \
-	$TERMINAL --class=email -e aerc}
+	alacritty --class=email -e aerc}
 
 ####################################
 # SUPER + ALT KEYS
@@ -56,9 +59,6 @@ super + o; {v,h,l,T}
 
 super + alt + {0-9}
 	mpc -q seek {0-9}0%
-
-super + alt + {equal,h,j,k,l}
-	mpc {toggle, seek -5%, next, prev, seek +5%}
 
 ####################################
 # super + SHIFT KEYS
@@ -79,5 +79,5 @@ super + shift + {a,e,p,v,w,x,z}
 
 # terminal emulator in default tmux session
 super + control + Return
-	$TERMINAL -c floating -e tmux new-session -A -s default
+	alacritty --class=floating -e tmux new-session -A -s default
 

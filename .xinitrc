@@ -13,11 +13,12 @@ run() {
 }
 
 numlockx on
-
 run mpd &
 
-startdwm() {
+autostart() {
     # run lxsession &
+    # run blueman-applet &
+    run nm-applet &
     run dunst &
     run dwmblocks &
     run nightlight.sh auto &
@@ -25,7 +26,13 @@ startdwm() {
     run wallpaper.py &
     run xss-lock --transfer-sleep-lock -- betterlockscreen -l &
     # run picom --backend glx --xrender-sync-fence &
-    while true; do dwm; done
+}
+
+startdwm() {
+    while true; do
+        autostart
+        dwm
+    done
 }
 
 case $session in
