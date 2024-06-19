@@ -12,9 +12,9 @@ export XDG_STATE_HOME=$HOME/.local/state
 export LATITUDE=40.11
 export LONGITUDE=-88.23
 
-export BROWSER=firefox
+export BROWSER=chromium
 export READER=zathura
-export TERMINAL=st
+export TERMINAL=alacritty
 export VIDEO_PLAYER=smplayer
 export IMAGE_VIEWER=nsxiv
 export IMAGE_EDITOR=gimp

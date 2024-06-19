@@ -21,7 +21,7 @@ autostart() {
     run nm-applet &
     run dunst &
     run dwmblocks &
-    run nightlight.sh auto &
+    # run nightlight.sh auto &
     run sxhkd -c ~/.config/sxhkd/sxhkdrc.common &
     run wallpaper.py &
     run xss-lock --transfer-sleep-lock -- betterlockscreen -l &
