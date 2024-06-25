@@ -1,0 +1,9 @@
+#!/bin/sh
+
+PROG=brightnessctl
+
+if which $PROG &>/dev/null; then
+	echo "100 * $($PROG get) / $($PROG max)"|bc
+else
+	echo 0
+fi

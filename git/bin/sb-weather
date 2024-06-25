@@ -1,0 +1,12 @@
+#!/bin/sh
+coords=$(get_location.sh)
+latitude=$(echo $coords | cut -d":" -f1)
+longitude=$(echo $coords | cut -d":" -f2)
+
+if [ -n "$latitude" -a -n "$longitude" ]; then
+    echo $latitude, $longitude >&2
+    LATITUDE=$latitude LONGITUDE=$longitude weather.py
+else
+    echo "latitude or longitude is unavailable" >&2
+    weather.py
+fi

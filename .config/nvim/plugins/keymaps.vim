@@ -1,8 +1,8 @@
 nnoremap <silent> <leader> <Nop>
 
-xnoremap <leader>y :w !xsel -b -i<CR><CR>
-nnoremap <leader>yy :w !xsel -b -i<CR><CR>
-nnoremap <leader>pp :r !xsel -o<CR><CR>
+xnoremap <leader>y "+y
+nnoremap <leader>yy "+yy
+nnoremap <leader>pp "+p
 
 nnoremap <leader>s :write<cr>
 nnoremap <leader>q :quit<CR>

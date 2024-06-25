@@ -9,9 +9,6 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
-export LATITUDE=40.11
-export LONGITUDE=-88.23
-
 export BROWSER=chromium
 export READER=zathura
 export TERMINAL=alacritty
@@ -34,14 +31,11 @@ export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
 export LESS="-iR"
 export MANPAGER="less -R --use-color -Dd+r -Du+b"
 export MANROFFOPT="-P -c"
-export PASSWORD_STORE_DIR=$XDG_DATA_HOME/pass
-# export VIRTUAL_ENV_DISABLE_PROMPT=1
+export PASSWORD_STORE_DIR=$HOME/git/password-store
 
 export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
 export GOPATH=$XDG_DATA_HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/scripts
-export PATH=$PATH:$HOME/scripts/lemonbar
-export PATH=$PATH:/snap/bin
+export PATH=$PATH:$HOME/git/scripts/bin
 export PATH=$PATH:/usr/local/bin

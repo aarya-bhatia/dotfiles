@@ -44,8 +44,8 @@ super + {Escape, Return,a,slash,BackSpace,Print}
 	{pkill -USR1 -x sxhkd && notify-send "reloaded sxhkd", \
 		$TERMINAL, dmenu_emails.sh, dmenu_browser.sh, dmenu_power.sh, screenshot.sh -s}
 
-super + o; {e,f,t,r,c,m,b,p}
-	{thunar, $BROWSER, thunderbird, $READER, chromium, ario, blueman-manager, pavucontrol}
+super + o; {e,f,c,t,r,m,b,p}
+	{nemo, firefox, chromium, thunderbird, $READER, ario, blueman-manager, pavucontrol}
 
 super + o; {v,h,l,T}
 	{$TERMINAL -e nvim, \
@@ -70,7 +70,7 @@ super + shift + {a,e,p,v,w,x,z}
 	dmenupass.sh, \
 	launch_vim_notepad.sh, \
 	dmenu_image_viewer.sh, \
-	betterlockscreen -l --off 10, \
+	xautolock -locknow, \
 	dmenu_pdfs.sh}
 
 ####################################

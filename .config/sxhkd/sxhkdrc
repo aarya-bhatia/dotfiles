@@ -126,8 +126,8 @@ super + shift + s
 
 # scratchpads
 super + alt + {space,n}
-    ~/scripts/bspwm_scratchpad.sh {terminal,notes}
+    bspwm_scratchpad.sh {terminal,notes}
 
 super + shift + n
-	python3 ~/scripts/dmenu_bspwm_nodes.py
+	dmenu_bspwm_nodes.py
 

@@ -1,0 +1,8 @@
+#!/bin/sh
+maxlen=60
+label='♪'
+title=$(mpc current | head -c $maxlen)
+status=$(mpc status %percenttime% | sed 's/^ *//g')
+
+echo %{A1:mpc toggle:}$label [$status] $title%{A}
+

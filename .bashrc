@@ -27,4 +27,4 @@ ta() {
   tmux new-session -A -s ${1:-$USER}
 }
 
-source ~/scripts/bash_completion
+source ~/git/scripts/bash_completion

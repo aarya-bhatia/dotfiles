@@ -9,3 +9,6 @@ history = 50000
 
 [window]
 opacity = 1.0
+
+[env]
+WINIT_X11_SCALE_FACTOR = "1.66"

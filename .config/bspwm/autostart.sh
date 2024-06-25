@@ -7,14 +7,8 @@ run() {
   fi
 }
 
-# set cursor style
-xsetroot -cursor_name left_ptr &
-
-# turn on numlock
-numlockx on &
-
 # set wallpaper to last used
-~/scripts/wallpaper.py &
+wallpaper.py &
 
 # start notification daemon
 run dunst &
@@ -43,13 +37,3 @@ xrandr | grep -q "HDMI-1 connected" && ~/.screenlayout/mirror.sh &
 # launch panel
 ~/.config/polybar/launch.sh &
 
-# start nightlight with location services
-run nightlight.sh auto &
-
-# run python3 ~/repos/aarya-bhatia/self-hosted/mpd-control/client.py http://aaryab.in:5000 &
-
-# {
-#   source ~/scripts/tmux_manager.sh
-#   TmuxAdd system mail "~/scripts/mailcheck.sh"
-#   # TmuxAdd system lemonbar "~/repos/lemons/startlemon"
-# } &

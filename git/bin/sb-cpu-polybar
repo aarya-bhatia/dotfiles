@@ -1,0 +1,2 @@
+#!/bin/sh
+echo %{u#2196f3}%{+u}Cpu:$(printf "%b" "import psutil\nprint('{}%'.format(psutil.cpu_percent(interval=2)))" | python3)%{-u}
