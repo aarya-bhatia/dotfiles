@@ -37,5 +37,5 @@ export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
 export GOPATH=$XDG_DATA_HOME/go
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$HOME/.local/bin
-export PATH=$PATH:$HOME/git/scripts/bin
+export PATH=$PATH:$HOME/git/bin
 export PATH=$PATH:/usr/local/bin

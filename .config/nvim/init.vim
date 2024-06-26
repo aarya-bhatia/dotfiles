@@ -50,9 +50,14 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 
+Plug 'freitass/todo.txt-vim'
+au BufNewFile,BufRead todo.txt set filetype=todotxt
+let g:todo_done_filename = 'done.txt'
+
 call plug#end()
 
 let mapleader = " "
+let maplocalleader = " "
 
 filetype plugin indent on
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent

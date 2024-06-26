@@ -14,16 +14,9 @@ let g:fzf_action = {
 			\ 'ctrl-s': 'split',
 			\ 'ctrl-v': 'vsplit' }
 
-" - down / up / left / right
-let g:fzf_layout = { 'down': '40%' }
-
-" Preview window is hidden by default. You can toggle it with ctrl-/.
-" It will show on the right with 50% width, but if the width is smaller
-" than 70 columns, it will show above the candidate list
-let g:fzf_preview_window = ['right,40%', 'ctrl-/']
+"let g:fzf_layout = { 'down': '40%' }
+"let g:fzf_preview_window = ['right,40%', 'ctrl-/']
 " let g:fzf_preview_window = []
-
-let g:fzf_command_prefix = 'Fzf'
 
 " Customize fzf colors to match your color scheme
 " - fzf#wrap translates this to a set of `--color` options
@@ -44,51 +37,51 @@ let g:fzf_colors =
 
 let g:fzf_history_dir = '~/.local/share/fzf-history'
 
-" List files in working directory
-nnoremap <C-p> :FzfFiles<CR>
-
 " List files in current files directory
-nnoremap <leader>ff :call fzf#vim#files(expand("%:h"))<CR>
+nnoremap <C-p> :call fzf#vim#files(expand("%:h"))<CR>
+
+" List files in working directory
+nnoremap <leader>ff :Files<CR>
 
 " List git files
-nnoremap <silent> <leader>fg :FzfGFiles<CR>
+nnoremap <silent> <leader>fg :GFiles<CR>
 
 " Find in history
-nnoremap <silent> <leader>fh :FzfHistory<CR>
+nnoremap <silent> <leader>fh :History<CR>
 
 " List windows
-nnoremap <silent> <leader>fw :FzfWindows<CR>
+nnoremap <silent> <leader>fw :Windows<CR>
 
 " List buffers
-nnoremap <silent> <leader><leader> :FzfBuffers<CR>
+nnoremap <silent> <leader><leader> :Buffers<CR>
 
 " Find lines in buffers
-nnoremap <silent> <leader>fl :FzfBLines<CR>
+nnoremap <silent> <leader>fl :BLines<CR>
 
 " Find lines in all buffers
-nnoremap <silent> <leader>fL :FzfLines<CR>
+nnoremap <silent> <leader>fL :Lines<CR>
 
 " Grep search
-nnoremap <silent> <leader>/ :FzfRg<CR>
-nnoremap <silent> <leader>a :FzfAg<CR>
+nnoremap <silent> <leader>/ :Rg<CR>
+nnoremap <silent> <leader>a :Ag<CR>
 
 " List help tags
-nnoremap <silent> <leader>f? :FzfHelp<CR>
+nnoremap <silent> <leader>f? :Help<CR>
 
 " List marks
-nnoremap <silent> <leader>fm :FzfMarks<CR>
+nnoremap <silent> <leader>fm :Marks<CR>
 
 " List jumps
-nnoremap <silent> <leader>fj :FzfJumps<CR>
+nnoremap <silent> <leader>fj :Jumps<CR>
 
 " List snippets
-nnoremap <silent> <leader>fs :FzfSnippets<CR>
+nnoremap <silent> <leader>fs :Snippets<CR>
 
 " List tags
-nnoremap <silent> <leader>ft :FzfTags<CR>
+nnoremap <silent> <leader>ft :Tags<CR>
 
 " fzf colorschemes
-nnoremap <silent> <leader>fc :FzfColors<CR>
+nnoremap <silent> <leader>fc :Colors<CR>
 
 " List git commits
-nnoremap <silent> <leader>fC :FzfCommits<CR>
+nnoremap <silent> <leader>fC :Commits<CR>

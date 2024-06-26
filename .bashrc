@@ -22,9 +22,3 @@ if [ -d /usr/share/fzf ]; then
 fi
 
 eval $(keychain --eval --quiet id_rsa ~/.ssh/aaryab2)
-
-ta() {
-  tmux new-session -A -s ${1:-$USER}
-}
-
-source ~/git/scripts/bash_completion
