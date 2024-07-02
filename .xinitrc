@@ -19,7 +19,7 @@ numlockx on
 
 autostart() {
     run lxpolkit &
-    run mpd &
+    # run mpd &
     run wallpaper.py &
     run nm-applet &
     run dunst &

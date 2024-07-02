@@ -6,6 +6,7 @@ endif
 
 call plug#begin('$HOME/.local/share/nvim/plugged')
 
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -17,9 +18,15 @@ Plug 'kshenoy/vim-signature'
 Plug 'preservim/tagbar'
 Plug 'romainl/vim-qf'
 Plug 'justinmk/vim-sneak'
+Plug 'preservim/nerdtree'
+
+Plug 'ptzz/lf.vim'
+Plug 'voldikss/vim-floaterm'
+let g:lf_map_keys = 0
+nnoremap <leader>- :Lf<CR>
 
 " File management
-Plug 'stevearc/oil.nvim'
+" Plug 'stevearc/oil.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 
@@ -92,7 +99,8 @@ au FileType asm setlocal commentstring=#\ %s
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
 " Trim trailing whitespace on lines
-au BufWritePost * :%s/\s\+$//e | nohlsearch
+"au BufWritePost * :%s/\s\+$//e | nohlsearch
+au BufWritePost * if &filetype != 'oil' | execute ':%s/\s\+$//e' | nohlsearch | endif
 
 au BufNewFile,BufRead */mutt/* set filetype=muttrc
 
@@ -101,6 +109,7 @@ au FileType c,cpp	setlocal foldmarker={,} foldlevel=4
 au FileType markdown,text setlocal spell spelllang=en_us
 au FileType markdown,text setlocal wrap
 au FileType make setlocal ts=4 sts=4 sw=4 noet list
+au FileType javascript setlocal ts=2 sts=2 sw=2 noet list
 
 iabbrev @@ aarya.bhatia1678@gmail.com
 iabbrev UIUC University of Illinois
@@ -115,7 +124,7 @@ for i, file in pairs(paths) do
   vim.cmd('source ' .. file)
 end
 
-require("oil").setup()
+-- require("oil").setup()
 require("mini.bufremove").setup()
 require("mini.ai").setup()
 require("treesitter")
@@ -128,5 +137,9 @@ nnoremap <leader>ga <Plug>(EasyAlign)
 nnoremap <leader>tt :TagbarToggle<CR>
 nnoremap <leader>M :Mason<CR>
 nnoremap <leader>L :LspInfo<CR>
-nnoremap <leader>- :Oil<CR>
+" nnoremap <leader>- :Oil<CR>
 
+nnoremap <leader>n :NERDTreeFocus<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-t> :NERDTreeToggle<CR>
+nnoremap <C-f> :NERDTreeFind<CR>
