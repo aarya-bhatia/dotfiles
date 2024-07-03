@@ -69,20 +69,22 @@ source '~/.config/lf/opener'
 
 # cmd trash %printf "%s\n" $fx | python3 $HOME/.config/lf/scripts/trash.py
 
-cmd trash %{{
-	RM="rm -rf"
-	if which trash-put &>/dev/null; then
-		RM="trash-put"
-	fi
+# cmd trash %{{
+# 	RM="rm -rf"
+# 	# if which trash-put &>/dev/null; then
+# 	# 	RM="trash-put"
+# 	# fi
 
-	for file in $fx; do
-		printf "remove $file? [y/n] "
-		read ans
-		if [ "$ans" = 'y' ]; then
-			$RM "$file"
-		fi
-	done
-}}
+# 	for file in $fx; do
+# 		printf "remove $file? [y/n] "
+# 		read ans
+# 		if [ "$ans" = 'y' ]; then
+# 			$RM "$file"
+# 		fi
+# 	done
+# }}
+
+cmd trash !python3 ~/.config/lf/scripts/trash.py
 
 map <delete> trash
 map D trash

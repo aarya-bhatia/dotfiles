@@ -1,0 +1,9 @@
+#!/bin/sh
+
+[ -f $HOME/.bash_profile ] && . $HOME/.bash_profile
+
+while :; do
+    autostart.sh >> /tmp/dwm.log
+    dwm >> /tmp/dwm.log
+    sleep 1
+done

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+HISTORY="/home/aarya/.wallpaper"
+
+if which xwallpaper; then
+    if [ ! -z "$1" ]; then
+        echo wallpaper: $(realpath "$1")
+        xwallpaper --stretch "$1" && echo $(realpath "$1") >> $HISTORY
+    else
+        file=$(tail -1 $HISTORY)
+        echo wallpaper: $file
+        [ ! -z "$file" ] && xwallpaper --stretch "$file"
+    fi
+else
+    notify-send "wallpaper error"
+fi
+

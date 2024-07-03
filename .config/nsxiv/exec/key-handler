@@ -30,7 +30,7 @@ done
 
 case "$1" in
 	"C-x")      tr '\n' ' ' | xsel -b ;;
-	"C-w")      while read file; do wallpaper.py "$file" & done ;;
+	"C-w")      while read file; do wallpaper "$file" & done ;;
 	"C-c")      while read file; do xclip -selection clipboard -target image/png "$file"; done ;;
 	"C-d")      while read file; do
 		ans=$(printf "Yes\nNo\n" | dmenu -i -p "delete image: '$file'?")
