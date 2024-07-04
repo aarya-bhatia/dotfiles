@@ -1,7 +1,7 @@
 #!/bin/sh
 
 Status() {
-    echo Bat:$(sb-battery) Mem:$(sb-memory) $(sb-date)
+    echo Vol:$(sb-volume) Bat:$(sb-battery) Mem:$(sb-memory) $(sb-date)
 }
 
 while :; do
