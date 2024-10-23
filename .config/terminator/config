@@ -1,0 +1,17 @@
+[global_config]
+  extra_styling = False
+[keybindings]
+[profiles]
+  [[default]]
+    font = JetBrainsMono Nerd Font 10
+    show_titlebar = False
+    copy_on_selection = True
+[layouts]
+  [[default]]
+    [[[window0]]]
+      type = Window
+      parent = ""
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+[plugins]

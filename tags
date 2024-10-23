@@ -1,0 +1,299 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+<	.config/nvim/init.vim	/^nnoremap < <<$/;"	m
+<C-@><C-@>c	.config/nvim/plugins/cscope.vim	/^	nmap <C-@><C-@>c :vert scs find c <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@><C-@>d	.config/nvim/plugins/cscope.vim	/^	nmap <C-@><C-@>d :vert scs find d <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@><C-@>e	.config/nvim/plugins/cscope.vim	/^	nmap <C-@><C-@>e :vert scs find e <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@><C-@>f	.config/nvim/plugins/cscope.vim	/^	nmap <C-@><C-@>f :vert scs find f <C-R>=expand("<cfile>")<CR><CR>$/;"	m
+<C-@><C-@>g	.config/nvim/plugins/cscope.vim	/^	nmap <C-@><C-@>g :vert scs find g <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@><C-@>i	.config/nvim/plugins/cscope.vim	/^	nmap <C-@><C-@>i :vert scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>$/;"	m
+<C-@><C-@>s	.config/nvim/plugins/cscope.vim	/^	nmap <C-@><C-@>s :vert scs find s <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@><C-@>t	.config/nvim/plugins/cscope.vim	/^	nmap <C-@><C-@>t :vert scs find t <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@>c	.config/nvim/plugins/cscope.vim	/^	nmap <C-@>c :scs find c <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@>d	.config/nvim/plugins/cscope.vim	/^	nmap <C-@>d :scs find d <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@>e	.config/nvim/plugins/cscope.vim	/^	nmap <C-@>e :scs find e <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@>f	.config/nvim/plugins/cscope.vim	/^	nmap <C-@>f :scs find f <C-R>=expand("<cfile>")<CR><CR>$/;"	m
+<C-@>g	.config/nvim/plugins/cscope.vim	/^	nmap <C-@>g :scs find g <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@>i	.config/nvim/plugins/cscope.vim	/^	nmap <C-@>i :scs find i ^<C-R>=expand("<cfile>")<CR>$<CR>$/;"	m
+<C-@>s	.config/nvim/plugins/cscope.vim	/^	nmap <C-@>s :scs find s <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-@>t	.config/nvim/plugins/cscope.vim	/^	nmap <C-@>t :scs find t <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-\>c	.config/nvim/plugins/cscope.vim	/^	nmap <C-\\>c :cs find c <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-\>d	.config/nvim/plugins/cscope.vim	/^	nmap <C-\\>d :cs find d <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-\>e	.config/nvim/plugins/cscope.vim	/^	nmap <C-\\>e :cs find e <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-\>f	.config/nvim/plugins/cscope.vim	/^	nmap <C-\\>f :cs find f <C-R>=expand("<cfile>")<CR><CR>$/;"	m
+<C-\>g	.config/nvim/plugins/cscope.vim	/^	nmap <C-\\>g :cs find g <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-\>i	.config/nvim/plugins/cscope.vim	/^	nmap <C-\\>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>$/;"	m
+<C-\>s	.config/nvim/plugins/cscope.vim	/^	nmap <C-\\>s :cs find s <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-\>t	.config/nvim/plugins/cscope.vim	/^	nmap <C-\\>t :cs find t <C-R>=expand("<cword>")<CR><CR>$/;"	m
+<C-e>	.config/nvim/init.vim	/^nnoremap <C-e> 4<C-e>$/;"	m
+<C-f>	.config/nvim/init.vim	/^nnoremap <C-f> :NERDTreeFind<CR>$/;"	m
+<C-h>	.config/nvim/init.vim	/^inoremap <silent> <C-h> <Left>$/;"	m
+<C-h>	.config/nvim/init.vim	/^nnoremap <silent> <C-h> 8zh$/;"	m
+<C-j>	.config/nvim/init.vim	/^inoremap <silent> <C-j> <Down>$/;"	m
+<C-j>	.config/nvim/init.vim	/^nnoremap <silent> <C-j> 6gj$/;"	m
+<C-k>	.config/nvim/init.vim	/^inoremap <silent> <C-k> <Up>$/;"	m
+<C-k>	.config/nvim/init.vim	/^nnoremap <silent> <C-k> 6gk$/;"	m
+<C-l>	.config/nvim/init.vim	/^inoremap <silent> <C-l> <Right>$/;"	m
+<C-l>	.config/nvim/init.vim	/^nnoremap <silent> <C-l> 8zl$/;"	m
+<C-n>	.config/nvim/init.vim	/^nnoremap <C-n> :NERDTreeToggle<CR>$/;"	m
+<C-p>	.config/nvim/init.vim	/^nnoremap <C-p> :GFiles<CR>$/;"	m
+<C-p>	.config/nvim/plugins/fzf.vim	/^nnoremap <C-p> :call fzf#vim#files(expand("%:h"))<CR>$/;"	m
+<C-y>	.config/nvim/init.vim	/^nnoremap <C-y> 4<C-y>$/;"	m
+<leader>	.config/nvim/init.vim	/^nnoremap <silent> <leader> <Nop>$/;"	m
+<leader>-	.config/nvim/init.vim	/^nnoremap <leader>- :Lf<CR>$/;"	m
+<leader>-	.config/nvim/plugins/lf.vim	/^nnoremap <leader>- :LF<CR>$/;"	m
+<leader>/	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>\/ :Rg<CR>$/;"	m
+<leader><leader>	.config/nvim/init.vim	/^nnoremap <silent> <leader><leader> :Buffers<CR>$/;"	m
+<leader><leader>	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader><leader> :Buffers<CR>$/;"	m
+<leader>R	.config/nvim/init.vim	/^nnoremap <leader>R "zyy:r !z 2>&1 $/;"	m
+<leader>a	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>a :Ag<CR>$/;"	m
+<leader>cd	.config/nvim/init.vim	/^nnoremap <leader>cd :cd %:p:h<cr>:pwd<cr>$/;"	m
+<leader>csc	.config/nvim/plugins/cscope.vim	/^nnoremap <leader>csc         <Esc>:call LoadCscopeToQuickFix(expand("<cword>"),"c")<CR>$/;"	m
+<leader>csg	.config/nvim/plugins/cscope.vim	/^nnoremap <leader>csg         <Esc>:call LoadCscopeToQuickFix(expand("<cword>"),"g")<CR>$/;"	m
+<leader>css	.config/nvim/plugins/cscope.vim	/^nnoremap <leader>css         <Esc>:call LoadCscopeToQuickFix(expand("<cword>"),"s")<CR>$/;"	m
+<leader>d	.config/nvim/init.vim	/^nnoremap <leader>d :bd<CR>$/;"	m
+<leader>f/	.config/nvim/init.vim	/^nnoremap <silent> <leader>f\/ :BLines<CR>$/;"	m
+<leader>f?	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>f? :Help<CR>$/;"	m
+<leader>fC	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>fC :Commits<CR>$/;"	m
+<leader>fL	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>fL :Lines<CR>$/;"	m
+<leader>fc	.config/nvim/init.vim	/^nnoremap <silent> <leader>fc :Commands<CR>$/;"	m
+<leader>fc	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>fc :Colors<CR>$/;"	m
+<leader>ff	.config/nvim/init.vim	/^nnoremap <leader>ff :Files<CR>$/;"	m
+<leader>ff	.config/nvim/plugins/fzf.vim	/^nnoremap <leader>ff :Files<CR>$/;"	m
+<leader>fg	.config/nvim/init.vim	/^nnoremap <silent> <leader>fg :RG<CR>$/;"	m
+<leader>fg	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>fg :GFiles<CR>$/;"	m
+<leader>fh	.config/nvim/init.vim	/^nnoremap <silent> <leader>fh :Help<CR>$/;"	m
+<leader>fh	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>fh :History<CR>$/;"	m
+<leader>fj	.config/nvim/init.vim	/^nnoremap <silent> <leader>fj :Jumps<CR>$/;"	m
+<leader>fj	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>fj :Jumps<CR>$/;"	m
+<leader>fl	.config/nvim/init.vim	/^nnoremap <silent> <leader>fl :Lines<CR>$/;"	m
+<leader>fl	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>fl :BLines<CR>$/;"	m
+<leader>fm	.config/nvim/init.vim	/^nnoremap <silent> <leader>fm :Marks<CR>$/;"	m
+<leader>fm	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>fm :Marks<CR>$/;"	m
+<leader>fo	.config/nvim/init.vim	/^nnoremap <silent> <leader>fo :History<CR>$/;"	m
+<leader>fs	.config/nvim/init.vim	/^nnoremap <silent> <leader>fs :Snippets<CR>$/;"	m
+<leader>fs	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>fs :Snippets<CR>$/;"	m
+<leader>ft	.config/nvim/init.vim	/^nnoremap <silent> <leader>ft :Tags<CR>$/;"	m
+<leader>ft	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>ft :Tags<CR>$/;"	m
+<leader>fv	.config/nvim/init.vim	/^nnoremap <silent> <leader>fv :Commits<CR>$/;"	m
+<leader>fw	.config/nvim/plugins/fzf.vim	/^nnoremap <silent> <leader>fw :Windows<CR>$/;"	m
+<leader>hl	.config/nvim/init.vim	/^nnoremap <silent> <leader>hl :set invhlsearch<CR>$/;"	m
+<leader>id	.config/nvim/init.vim	/^nnoremap <leader>id i<C-R>=strftime('%Y-%m-%d')<CR><Esc>$/;"	m
+<leader>mk	.config/nvim/init.vim	/^nnoremap <leader>mk :make<CR>$/;"	m
+<leader>n	.config/nvim/init.vim	/^nnoremap <leader>n :NERDTreeFocus<CR>$/;"	m
+<leader>pp	.config/nvim/init.vim	/^nnoremap <leader>pp "+p$/;"	m
+<leader>pt	.config/nvim/init.vim	/^nnoremap <leader>pt :set invpaste<CR>$/;"	m
+<leader>pw	.config/nvim/init.vim	/^nnoremap <leader>pw ciw<C-r>0<Esc>$/;"	m
+<leader>q	.config/nvim/init.vim	/^nnoremap <leader>q :quit<CR>$/;"	m
+<leader>s	.config/nvim/init.vim	/^nnoremap <leader>s :write<cr>$/;"	m
+<leader>tt	.config/nvim/init.vim	/^nnoremap <leader>tt :TagbarToggle<CR>$/;"	m
+<leader>ve	.config/nvim/init.vim	/^nnoremap <leader>ve :edit $MYVIMRC<CR>$/;"	m
+<leader>vpc	.config/nvim/init.vim	/^nnoremap <leader>vpc :PlugClean<CR>$/;"	m
+<leader>vpi	.config/nvim/init.vim	/^nnoremap <leader>vpi :PlugInstall<CR>$/;"	m
+<leader>vps	.config/nvim/init.vim	/^nnoremap <leader>vps :PlugStatus<CR>$/;"	m
+<leader>vpu	.config/nvim/init.vim	/^nnoremap <leader>vpu :PlugUpdate<CR>$/;"	m
+<leader>vs	.config/nvim/init.vim	/^nnoremap <leader>vs :source $MYVIMRC<CR>$/;"	m
+<leader>yy	.config/nvim/init.vim	/^nnoremap <leader>yy "+yy$/;"	m
+>	.config/nvim/init.vim	/^nnoremap > >>$/;"	m
+ADDRESS_BOOK	scripts/dmenu_addressbook.py	/^ADDRESS_BOOK = "\/home\/aarya\/.abook\/addressbook"$/;"	v
+ClipboardNote	scripts/launch_vim_notepad.sh	/^ClipboardNote() {$/;"	f
+ContinueNote	scripts/launch_vim_notepad.sh	/^ContinueNote() {$/;"	f
+DEFAULT	scripts/wallpaper.py	/^DEFAULT = "\/home\/aarya\/wallpapers\/archlinux\/sunset.jpg"$/;"	v
+GetActiveSet	scripts/bspwm_workspaces.py	/^def GetActiveSet():$/;"	f
+GetCounts	scripts/mailcount.sh	/^GetCounts() {$/;"	f
+GetDesktops	scripts/bspwm_workspaces.py	/^def GetDesktops():$/;"	f
+GetFocused	scripts/bspwm_workspaces.py	/^def GetFocused():$/;"	f
+HIDE_INACTIVE	scripts/bspwm_workspaces.py	/^HIDE_INACTIVE = True$/;"	v
+HISTORY	scripts/wallpaper.py	/^HISTORY = "\/home\/aarya\/.wallpaper"$/;"	v
+LF	.config/nvim/plugins/lf.vim	/^command! -bar LF call LF()$/;"	c
+LF	.config/nvim/plugins/lf.vim	/^function! LF()$/;"	f
+LoadCscopeToQuickFix	.config/nvim/plugins/cscope.vim	/^function! LoadCscopeToQuickFix(currword, oper)$/;"	f
+MUSIC_DIR	scripts/organize_music_folders.py	/^MUSIC_DIR = "\/home\/aarya\/Media\/Music"$/;"	v
+NERDTreeShowHidden	.config/nvim/init.vim	/^let NERDTreeShowHidden=1$/;"	v
+NewNote	scripts/launch_vim_notepad.sh	/^NewNote() {$/;"	f
+Open	scripts/dmenu_edit_config.sh	/^Open() {$/;"	f
+OpenNote	scripts/launch_vim_notepad.sh	/^OpenNote() {$/;"	f
+PrintNodes	scripts/dmenu_bspwm_nodes.sh	/^PrintNodes() {$/;"	f
+PromptSaveNote	scripts/launch_vim_notepad.sh	/^PromptSaveNote() {$/;"	f
+Q	.config/nvim/init.vim	/^nnoremap Q @q$/;"	m
+Status	scripts/statusinfo.sh	/^Status() {$/;"	f
+TMP_DIR	scripts/bulkedit.py	/^TMP_DIR = "\/tmp\/bulkedit"$/;"	v
+TmuxAdd	scripts/tmux_manager.sh	/^TmuxAdd() {$/;"	f
+Y	.config/nvim/init.vim	/^nnoremap Y y\$$/;"	m
+["[["] 	.config/nvim/after/plugin/mytreesitter.lua	/^        ["[["] = "@function.outer",$/;"	f
+["]]"] 	.config/nvim/after/plugin/mytreesitter.lua	/^        ["]]"] = "@function.outer",$/;"	f
+["af"] 	.config/nvim/after/plugin/mytreesitter.lua	/^        ["af"] = "@function.outer",$/;"	f
+["if"] 	.config/nvim/after/plugin/mytreesitter.lua	/^        ["if"] = "@function.inner",$/;"	f
+[D	.config/nvim/plugins/ale.vim	/^nnoremap [D :ALEFirst<CR>$/;"	m
+[d	.config/nvim/plugins/ale.vim	/^nnoremap [d :ALEPrevious<CR>$/;"	m
+]D	.config/nvim/plugins/ale.vim	/^nnoremap ]D :ALELast<CR>$/;"	m
+]d	.config/nvim/plugins/ale.vim	/^nnoremap ]d :ALENext<CR>$/;"	m
+added	scripts/bulkrename.py	/^added = []$/;"	v
+all	.config/lf/scripts/trash.py	/^            all = True$/;"	v
+all	.config/lf/scripts/trash.py	/^all = False$/;"	v
+ans	.config/lf/scripts/trash.py	/^        ans = sys.stdin.readline().strip()[0]$/;"	v
+ans	scripts/bulkedit.py	/^                ans = input(f"create file {line}? [y\/n]").strip()$/;"	v
+ans	scripts/bulkedit.py	/^                ans = input(f"remove {filenames[i]}? [y\/n] ").strip()$/;"	v
+black	scripts/bspwm_workspaces.py	/^black = "#000"$/;"	v
+blue	scripts/bspwm_workspaces.py	/^blue = "#40E0D0"$/;"	v
+bspc_write_nodeid	scripts/bspwm_scratchpad.sh	/^bspc_write_nodeid() {$/;"	f
+build_quickfix_list	.config/nvim/init.vim	/^function! s:build_quickfix_list(lines)$/;"	f
+build_quickfix_list	.config/nvim/plugins/fzf.vim	/^function! s:build_quickfix_list(lines)$/;"	f
+capture_output	scripts/dmenu_bspwm_nodes.py	/^    capture_output=True,$/;"	v
+check_scratchpad	scripts/bspwm_scratchpad_status.sh	/^check_scratchpad() {$/;"	f
+checkforecast	scripts/forecast.sh	/^checkforecast() {$/;"	f
+cmd	.config/lf/scripts/trash.py	/^        cmd = prog.split() + [file]$/;"	v
+combine_artists	scripts/organize_music_folders.py	/^def combine_artists(folders):$/;"	f
+confirm	scripts/sync.sh	/^confirm() {$/;"	f
+contacts	scripts/dmenu_addressbook.py	/^    contacts = []$/;"	v
+count	scripts/bulkrename.py	/^count = 0$/;"	v
+create_terminal	scripts/bspwm_scratchpad.sh	/^create_terminal(){$/;"	f
+cur	scripts/dmenu_addressbook.py	/^            cur = {}$/;"	v
+cur	scripts/dmenu_addressbook.py	/^    cur = None$/;"	v
+darkgrey	scripts/bspwm_workspaces.py	/^darkgrey = "#555"$/;"	v
+data_dir	.config/nvim/init.vim	/^let data_dir = has('nvim') ? stdpath('data') . '\/site' : '~\/.vim'$/;"	v
+datetime	scripts/bulkedit.py	/^from datetime import datetime$/;"	i
+datetime	scripts/bulkrename.py	/^from datetime import datetime$/;"	i
+desktops	scripts/bspwm_workspaces.py	/^desktops = subprocess.run("bspc query -D --names".split(),$/;"	v
+desktops	scripts/dmenu_bspwm_nodes.py	/^desktops = [subprocess.run($/;"	v
+die	scripts/illinois_net_connect.sh	/^die () {$/;"	f
+dmenu_input	scripts/dmenu_bspwm_nodes.py	/^dmenu_input = "\\n".join(sorted(dmenu_input))$/;"	v
+dmenu_input	scripts/dmenu_bspwm_nodes.py	/^dmenu_input = [f"{desktop}: {title}" for desktop,$/;"	v
+dontrunasroot	scripts/illinois_net_connect.sh	/^dontrunasroot () {$/;"	f
+edited	scripts/bulkrename.py	/^        edited = tmp.readlines()$/;"	v
+f	scripts/bulkedit.py	/^                    f = os.open(line)$/;"	v
+file_index	scripts/bulkedit.py	/^            file_index = int(tokens[0]).strip()$/;"	v
+file_name	scripts/bulkedit.py	/^            file_name = " ".join(tokens[1:]).strip()$/;"	v
+filenames	scripts/bulkedit.py	/^filenames = []$/;"	v
+filenames	scripts/bulkrename.py	/^filenames = []$/;"	v
+filepath	scripts/wallpaper.py	/^            filepath = line$/;"	v
+filepath	scripts/wallpaper.py	/^filepath = DEFAULT$/;"	v
+files	.config/lf/scripts/trash.py	/^files = os.getenv("fx").splitlines()$/;"	v
+findutil	scripts/illinois_net_connect.sh	/^findutil () {$/;"	f
+g:UltiSnipsExpandTrigger	.config/nvim/plugins/ultisnip.vim	/^let g:UltiSnipsExpandTrigger="<tab>"$/;"	v
+g:UltiSnipsJumpBackwardTrigger	.config/nvim/plugins/ultisnip.vim	/^let g:UltiSnipsJumpBackwardTrigger="<c-k>"$/;"	v
+g:UltiSnipsJumpForwardTrigger	.config/nvim/plugins/ultisnip.vim	/^let g:UltiSnipsJumpForwardTrigger="<c-j>"$/;"	v
+g:UltiSnipsSnippetDirectories	.config/nvim/plugins/ultisnip.vim	/^let g:UltiSnipsSnippetDirectories=[$HOME.'\/.vim\/UltiSnips']$/;"	v
+g:ale_completion_enabled	.config/nvim/plugins/ale.vim	/^let g:ale_completion_enabled=1$/;"	v
+g:ale_floating_window_border	.config/nvim/plugins/ale.vim	/^let g:ale_floating_window_border = ['│', '─', '╭', '╮', '╯', '╰', '│', '─']$/;"	v
+g:ale_lint_on_enter	.config/nvim/plugins/ale.vim	/^let g:ale_lint_on_enter=0$/;"	v
+g:ale_lint_on_text_changed	.config/nvim/plugins/ale.vim	/^let g:ale_lint_on_text_changed='never'$/;"	v
+g:ale_linters	.config/nvim/plugins/ale.vim	/^let g:ale_linters={$/;"	v
+g:ale_set_loclist	.config/nvim/plugins/ale.vim	/^let g:ale_set_loclist = 1$/;"	v
+g:fzf_action	.config/nvim/init.vim	/^let g:fzf_action = {$/;"	v
+g:fzf_action	.config/nvim/plugins/fzf.vim	/^let g:fzf_action = {$/;"	v
+g:fzf_history_dir	.config/nvim/plugins/fzf.vim	/^let g:fzf_history_dir = '~\/.local\/share\/fzf-history'$/;"	v
+g:fzf_layout	.config/nvim/init.vim	/^let g:fzf_layout = { 'down':  '30%'}$/;"	v
+g:fzf_vim	.config/nvim/init.vim	/^let g:fzf_vim = {}$/;"	v
+g:fzf_vim	.config/nvim/init.vim	/^let g:fzf_vim.buffers_jump = 1$/;"	v
+g:fzf_vim	.config/nvim/init.vim	/^let g:fzf_vim.preview_window = ['hidden,right,50%', 'ctrl-\/']$/;"	v
+g:fzf_vim	.config/nvim/plugins/fzf.vim	/^let g:fzf_vim = {}$/;"	v
+g:fzf_vim	.config/nvim/plugins/fzf.vim	/^let g:fzf_vim.preview_window = ['hidden,right,50%,<70(up,40%)', 'ctrl-\/']$/;"	v
+g:lf_map_keys	.config/nvim/init.vim	/^let g:lf_map_keys = 0$/;"	v
+g:lightline	.config/nvim/init.vim	/^let g:lightline = { 'colorscheme': 'wombat' }$/;"	v
+g:qf_auto_resize	.config/nvim/init.vim	/^let g:qf_auto_resize = 0$/;"	v
+g:vimwiki_list	.config/nvim/init.vim	/^let g:vimwiki_list = [{'path': '~\/wiki\/'}]$/;"	v
+gca	:ALECodeAction<CR>	.config/nvim/plugins/ale.vim	/^nnoremap gca	:ALECodeAction<CR>$/;"	m
+gd		:ALEGoToDefinition<CR>	.config/nvim/plugins/ale.vim	/^nnoremap gd		:ALEGoToDefinition<CR>$/;"	m
+get_album_art	scripts/volume.sh	/^get_album_art() {$/;"	f
+get_artist_map	scripts/organize_music_folders.py	/^def get_artist_map(folders):$/;"	f
+get_brightness	scripts/volume.sh	/^get_brightness() {$/;"	f
+get_music_folders	scripts/organize_music_folders.py	/^def get_music_folders():$/;"	f
+get_volume	scripts/volume.sh	/^get_volume() {$/;"	f
+getdailyhighlow	scripts/forecast.sh	/^getdailyhighlow() {$/;"	f
+getforecast	scripts/forecast.sh	/^getforecast() { timeout --signal=1 2s curl -sf "$url\/$LOCATION?m" > "$weatherreport" || exit 1; }$/;"	f
+getprecipchance	scripts/forecast.sh	/^getprecipchance() {$/;"	f
+gh		:ALEHover<CR>	.config/nvim/plugins/ale.vim	/^nnoremap gh		:ALEHover<CR>$/;"	m
+green	scripts/bspwm_workspaces.py	/^green = "#0f0"$/;"	v
+grey	scripts/bspwm_workspaces.py	/^grey = "#aaa"$/;"	v
+grn	:ALERename<CR>	.config/nvim/plugins/ale.vim	/^nnoremap grn	:ALERename<CR>$/;"	m
+grr	:ALEFindReferences<CR>	.config/nvim/plugins/ale.vim	/^nnoremap grr	:ALEFindReferences<CR>$/;"	m
+gss	:ALESymbolSearch	.config/nvim/plugins/ale.vim	/^nnoremap gss	:ALESymbolSearch$/;"	m
+handle_signal	scripts/mailcheck.sh	/^handle_signal() {$/;"	f
+hide_all_except_current	scripts/bspwm_scratchpad.sh	/^hide_all_except_current(){$/;"	f
+input	scripts/dmenu_bspwm_nodes.py	/^    input=dmenu_input,$/;"	v
+key	scripts/dmenu_addressbook.py	/^            key = tok[0]$/;"	v
+kj	.config/nvim/init.vim	/^inoremap <silent> kj <Esc>$/;"	m
+line	scripts/bspwm_workspaces.py	/^        line = p.stdout.readline()$/;"	v
+line	scripts/dmenu_addressbook.py	/^        line = line.strip()$/;"	v
+line	scripts/wallpaper.py	/^        line = ""$/;"	v
+line	scripts/wallpaper.py	/^        line = line.strip()$/;"	v
+local lsp_attach 	.config/nvim/after/plugin/mylspzero.lua	/^local lsp_attach = function(client, bufnr)$/;"	f
+local map 	.config/nvim/plugins/lsp_zero.lua	/^    local map = function(keys, func, desc)$/;"	f
+logout	scripts/dmenu_power.sh	/^logout() {$/;"	f
+logout	scripts/dmenu_power_1.sh	/^logout() {$/;"	f
+lua_ls 	.config/nvim/after/plugin/mylspzero.lua	/^        lua_ls = function()$/;"	f
+lua_ls 	.config/nvim/plugins/lsp_zero.lua	/^        lua_ls = function()$/;"	f
+make_subdirs	scripts/organize_music_folders.py	/^def make_subdirs():$/;"	f
+mapleader	.config/nvim/init.vim	/^let mapleader = " "$/;"	v
+missing	scripts/illinois_net_connect.sh	/^missing () {$/;"	f
+names	scripts/dmenu_addressbook.py	/^    names = []$/;"	v
+new_filename	scripts/bulkrename.py	/^                new_filename = new_filename[:-1]$/;"	v
+new_filename	scripts/bulkrename.py	/^            new_filename = edited[i].strip()$/;"	v
+nodes	scripts/dmenu_bspwm_nodes.py	/^nodes = subprocess.run($/;"	v
+old_filename	scripts/bulkrename.py	/^            old_filename = added[i]$/;"	v
+old_name	scripts/bulkedit.py	/^                old_name = filenames[file_index]$/;"	v
+options	scripts/dmenu_addressbook.py	/^    options = []$/;"	v
+orange	scripts/bspwm_workspaces.py	/^orange = "#FFBF00"$/;"	v
+os	.config/lf/scripts/trash.py	/^import os$/;"	i
+os	scripts/bulkedit.py	/^import os$/;"	i
+os	scripts/bulkrename.py	/^import os$/;"	i
+os	scripts/organize_music_folders.py	/^import os$/;"	i
+os	scripts/wallpaper.py	/^import os$/;"	i
+panel_update_brightness	scripts/volume.sh	/^panel_update_brightness() {$/;"	f
+panel_update_volume	scripts/volume.sh	/^panel_update_volume() {$/;"	f
+prog	.config/lf/scripts/trash.py	/^    prog = "trash-put"$/;"	v
+prog	.config/lf/scripts/trash.py	/^prog = "rm -rf"$/;"	v
+pylsp 	.config/nvim/after/plugin/mylspzero.lua	/^        pylsp = function()$/;"	f
+pylsp 	.config/nvim/plugins/lsp_zero.lua	/^        pylsp = function()$/;"	f
+re	scripts/dmenu_addressbook.py	/^import re$/;"	i
+readfile	scripts/forecast.sh	/^readfile() { weatherdata="$(cat "$weatherreport")" ;}$/;"	f
+red	scripts/bspwm_workspaces.py	/^red = "#f00"$/;"	v
+remove_empty_dirs	scripts/organize_music_folders.py	/^def remove_empty_dirs(folders):$/;"	f
+result	scripts/dmenu_bspwm_nodes.py	/^result = subprocess.run($/;"	v
+rotate	.config/nsxiv/exec/key-handler	/^rotate() {$/;"	f
+run	scripts/autostart.sh	/^run() {$/;"	f
+sel	scripts/dmenu_addressbook.py	/^            sel = subprocess.run(["dmenu", "-i"], input="\\n".join(val_options), capture_output=True, text=True).stdout.strip()$/;"	v
+sel	scripts/dmenu_addressbook.py	/^    sel = subprocess.run(["dmenu", "-i"], input="\\n".join(names), capture_output=True, text=True).stdout.strip()$/;"	v
+sel	scripts/dmenu_addressbook.py	/^    sel = subprocess.run(["dmenu", "-i"], input="\\n".join(options), capture_output=True, text=True).stdout.strip()$/;"	v
+set_wallpaper	scripts/wallpaper.py	/^def set_wallpaper(filepath):$/;"	f
+show_brightness_notif	scripts/volume.sh	/^show_brightness_notif() {$/;"	f
+show_player_notif	scripts/volume.sh	/^show_player_notif() {$/;"	f
+show_volume_notif	scripts/volume.sh	/^show_volume_notif() {$/;"	f
+showweather	scripts/forecast.sh	/^showweather() {$/;"	f
+shutil	.config/lf/scripts/trash.py	/^import shutil$/;"	i
+subprocess	.config/lf/scripts/trash.py	/^import subprocess$/;"	i
+subprocess	scripts/bspwm_workspaces.py	/^import subprocess$/;"	i
+subprocess	scripts/bulkedit.py	/^import subprocess$/;"	i
+subprocess	scripts/bulkrename.py	/^import subprocess$/;"	i
+subprocess	scripts/dmenu_addressbook.py	/^import subprocess$/;"	i
+subprocess	scripts/dmenu_bspwm_nodes.py	/^import subprocess$/;"	i
+subprocess	scripts/wallpaper.py	/^import subprocess$/;"	i
+sys	.config/lf/scripts/trash.py	/^import sys$/;"	i
+sys	scripts/bulkedit.py	/^import sys$/;"	i
+sys	scripts/bulkrename.py	/^import sys$/;"	i
+sys	scripts/organize_music_folders.py	/^import sys$/;"	i
+sys	scripts/wallpaper.py	/^import sys$/;"	i
+text	scripts/dmenu_bspwm_nodes.py	/^    text=True$/;"	v
+timer	scripts/mailcheck.sh	/^timer() {$/;"	f
+timestamp	scripts/bulkedit.py	/^timestamp = str(datetime.now().timestamp())$/;"	v
+timestamp	scripts/bulkrename.py	/^timestamp = str(datetime.now().timestamp())$/;"	v
+title	scripts/dmenu_bspwm_nodes.py	/^title = result[result.index(":") + 2:]$/;"	v
+titles	scripts/dmenu_bspwm_nodes.py	/^titles = [subprocess.run($/;"	v
+tmp_filename	scripts/bulkedit.py	/^tmp_filename = os.path.join(TMP_DIR, timestamp)$/;"	v
+tmp_filename	scripts/bulkrename.py	/^tmp_filename = os.path.join("\/tmp\/lf", timestamp)$/;"	v
+toggle_hidden	scripts/bspwm_scratchpad.sh	/^toggle_hidden() {$/;"	f
+tok	scripts/dmenu_addressbook.py	/^            tok = line.split('=')$/;"	v
+tokens	scripts/bulkedit.py	/^            tokens = line.split(" ")$/;"	v
+update_history	scripts/wallpaper.py	/^def update_history(filepath):$/;"	f
+val	scripts/dmenu_addressbook.py	/^            val = tok[1]$/;"	v
+val_options	scripts/dmenu_addressbook.py	/^            val_options = values[i].split(",")$/;"	v
+values	scripts/dmenu_addressbook.py	/^    values = []$/;"	v
+visited	scripts/bulkedit.py	/^visited = set()$/;"	v
+whichdetect	scripts/illinois_net_connect.sh	/^whichdetect () {$/;"	f
+white	scripts/bspwm_workspaces.py	/^white = "#fff"$/;"	v
+yellow	scripts/bspwm_workspaces.py	/^yellow = "#DFFF00"$/;"	v

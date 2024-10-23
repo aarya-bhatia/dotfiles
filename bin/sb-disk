@@ -1,0 +1,4 @@
+#!/bin/sh
+root_used=$(/bin/df / --output=pcent | sed 1d | tr -d " ")
+home_used=$(/bin/df /home --output=pcent | sed 1d | tr -d " ")
+echo "/:$root_used /home:$home_used"

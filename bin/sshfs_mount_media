@@ -1,0 +1,2 @@
+#!/bin/sh
+sudo sshfs -o IdentityFile=/home/aarya/.ssh/id_rsa -o allow_other,default_permissions aarya@192.168.0.100:/media/hdd/ /mnt/remote/

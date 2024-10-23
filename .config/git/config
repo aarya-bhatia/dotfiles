@@ -1,0 +1,15 @@
+[core]
+	editor = nvim
+[user]
+	email = aarya.bhatia1678@gmail.com
+	name = Aarya Bhatia
+[init]
+	defaultBranch = main
+[push]
+	autoSetupRemote = true
+[diff]
+	tool = vimdiff
+[advice]
+	detachedHead = false
+[safe]
+	directory = /mnt/Media

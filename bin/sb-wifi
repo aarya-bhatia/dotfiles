@@ -1,0 +1,16 @@
+#!/bin/sh
+
+result=$(nmcli -t -f DEVICE,TYPE,STATE dev | grep wifi)
+
+[ -z "$result" ] && echo Off || {
+    if ! echo $result | grep -q "connected"; then
+        echo "Off"
+    else
+        SSID=$(nmcli -t -f ACTIVE,SSID dev wifi | grep "^yes" | cut -d":" -f2 | head -c 20)
+        if [ -z "$SSID" ]; then
+            echo "On"
+        else
+            echo "$SSID" | head -c 16
+        fi
+    fi
+}

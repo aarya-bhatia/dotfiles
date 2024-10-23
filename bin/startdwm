@@ -1,0 +1,19 @@
+#!/bin/bash
+
+[ -f ~/.bash_profile ] && . ~/.bash_profile
+
+while :; do
+    pgrep -f lxpolkit || lxpolkit &
+    pgrep -f nextcloud || nextcloud --background &
+    pgrep -f nm-applet || nm-applet &
+    pgrep -f blueman-applet || blueman-applet &
+    pgrep -f sxhkd || sxhkd &
+    pgrep -f dunst || dunst &
+    pgrep -f nightlight.sh || nightlight.sh &
+    pgrep -f statusinfo.sh || statusinfo.sh &
+    pgrep -f screenlock.sh || screenlock.sh &
+    pgrep -f xss-lock || xss-lock --transfer-sleep-lock -- i3lock --nofork &
+    ~/.screenlayout/desktop.sh 
+    wallpaper.sh
+    dwm
+done

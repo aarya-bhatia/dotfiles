@@ -1,0 +1,10 @@
+#!/bin/sh
+
+locker="betterlockscreen --lock --off 10"
+
+xautolock -time 10 -locker "$locker" -detectsleep \
+    -corners "++--" -killtime 1 -killer "systemctl suspend" \
+    -notify 5 -notifier "notify-send 'screen will lock'"
+
+# xss-lock --transfer-sleep-lock -- betterlockscreen -l
+

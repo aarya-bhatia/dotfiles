@@ -1,0 +1,37 @@
+# i3 config file (v4)
+#
+# Please see https://i3wm.org/docs/userguide.html for a complete reference!
+#
+
+# super key
+set $mod Mod4
+set $left h
+set $right l
+set $up k
+set $down j
+set $display1 "eDP-1"
+set $display2 "DVI-I-1-1"
+
+font pango:FreeMono 10
+floating_modifier $mod
+tiling_drag modifier titlebar
+
+exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id lxpolkit
+exec --no-startup-id nm-applet
+exec --no-startup-id blueman-applet
+exec --no-startup-id sxhkd
+exec --no-startup-id dunst
+exec --no-startup-id nextcloud
+exec --no-startup-id ~/.screenlayout/desktop.sh 
+exec --no-startup-id ~/bin/nightlight.sh
+# exec --no-startup-id ~/bin/screenlock.sh
+exec --no-startup-id ~/bin/wallpaper.sh
+
+bar {
+        status_command i3blocks
+        position top
+}
+
+include ~/.config/i3/config.d/*.conf
+
