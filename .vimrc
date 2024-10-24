@@ -46,7 +46,6 @@ Plug 'justinmk/vim-sneak'
 Plug 'preservim/nerdtree'
 Plug 'ptzz/lf.vim'
 Plug 'voldikss/vim-floaterm'
-Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
@@ -61,7 +60,25 @@ Plug 'mattn/calendar-vim'
 Plug 'morhetz/gruvbox'
 Plug 'crusoexia/vim-monokai'
 
+" Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
+
 call plug#end()
+
+" Theme
+
+set noshowmode
+set laststatus=2
+
+let g:lightline = { 'colorscheme': 'one' }
+
+let g:airline_theme='term'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 colorscheme gruvbox
 
@@ -107,19 +124,6 @@ nnoremap <C-n> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
 let NERDTreeShowHidden=0
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" status line
-
-set noshowmode
-set laststatus=2
-
-if !has('gui_running')
-  set t_Co=256
-endif
-
-let g:lightline = { 'colorscheme': 'one' }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -366,5 +370,4 @@ if has("autocmd")
     autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
   augroup END
 endif
-
 
