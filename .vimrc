@@ -361,4 +361,10 @@ if executable('ag')
     set grepprg=ag\ --vimgrep
 endif
 
+if has("autocmd")
+  augroup templates
+    autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
+  augroup END
+endif
+
 
