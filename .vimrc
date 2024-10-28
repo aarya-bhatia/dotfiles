@@ -167,7 +167,7 @@ let g:fzf_action = {
 " let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " List files in current files directory
-nnoremap <C-p> :call :GFiles<CR>
+nnoremap <C-p> :GFiles<CR>
 
 " List files in working directory
 nnoremap <leader>ff :Files<CR>
