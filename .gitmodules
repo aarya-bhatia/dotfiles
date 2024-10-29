@@ -1,6 +1,0 @@
-[submodule "dwm"]
-	path = dwm
-	url = https://git.aaryab.in/aarya.bhatia/dwm.git
-[submodule "dmenu"]
-	path = dmenu
-	url = https://git.aaryab.in/aarya.bhatia/dmenu.git
