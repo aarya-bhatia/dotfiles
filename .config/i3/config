@@ -23,10 +23,10 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id sxhkd
 exec --no-startup-id dunst
 exec --no-startup-id nextcloud
-exec --no-startup-id ~/.screenlayout/desktop.sh 
 exec --no-startup-id ~/bin/nightlight.sh
-# exec --no-startup-id ~/bin/screenlock.sh
-exec --no-startup-id ~/bin/wallpaper.sh
+exec --no-startup-id ~/bin/screenlock.sh
+
+exec_always --no-startup-id ~/.screenlayout/desktop.sh ; ~/bin/wallpaper.sh
 
 bar {
         status_command i3blocks
