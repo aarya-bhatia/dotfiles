@@ -1,0 +1,13 @@
+#!/bin/bash
+set -e
+
+mkdir -p ~/.vlc
+mount | grep -q "ifuse on /home/aarya/.vlc" || ifuse --documents org.videolan.vlc-ios ~/.vlc/
+
+find ~/Music/  \
+-type d \( -name "Various Artists" -o -name ".venv" \) -prune -o \
+-type f \( -name "*.mp3" -o -name "*.flac" \) -print0 | sort -z | \
+xargs -r0 -I {} cp -u -v "{}" ~/.vlc/
+# xargs -r0 du -csh
+
+umount ~/.vlc

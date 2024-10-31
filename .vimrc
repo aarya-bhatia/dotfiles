@@ -8,35 +8,34 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'tpope/vim-sensible'
+Plug 'ap/vim-css-color'
+Plug 'crusoexia/vim-monokai'
+Plug 'edkolev/tmuxline.vim'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'justinmk/vim-sneak'
+Plug 'kshenoy/vim-signature'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'mattn/calendar-vim'
+Plug 'morhetz/gruvbox'
+Plug 'preservim/nerdtree'
+Plug 'preservim/tagbar'
+Plug 'ptzz/lf.vim'
+Plug 'romainl/vim-qf'
 Plug 'sheerun/vim-polyglot'
+Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'preservim/tagbar'
-Plug 'romainl/vim-qf'
-Plug 'justinmk/vim-sneak'
-Plug 'wellle/targets.vim'
-Plug 'kshenoy/vim-signature'
-
-Plug 'preservim/nerdtree'
-Plug 'ptzz/lf.vim'
-Plug 'voldikss/vim-floaterm'
-
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'edkolev/tmuxline.vim'
-Plug 'morhetz/gruvbox'
-Plug 'crusoexia/vim-monokai'
-
-Plug 'mattn/calendar-vim'
-Plug 'ap/vim-css-color'
 Plug 'vimwiki/vimwiki'
-Plug 'preservim/vim-markdown'
+Plug 'voldikss/vim-floaterm'
+Plug 'wellle/targets.vim'
 
 call plug#end()
 
@@ -76,11 +75,13 @@ set termguicolors
 set noshowmode
 set laststatus=2
 
+let g:airline_powerline_fonts = 1
 let g:airline_theme='term'
-let g:airline#extensions#tabline#enabled = 1
-" let g:airline#extensions#tabline#formatter = 'unique'
+let g:airline#extensions#tabline#enabled = 0
+let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#whitespace#enabled = 0  " Disable whitespace extension
 let g:airline#extensions#syntastic#enabled = 0   " Disable syntastic if using
+let g:airline#extensions#tabline#enabled = 0     " Disable tabline
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -167,8 +168,6 @@ let g:fzf_action = {
 			\ 'ctrl-x': 'split',
 			\ 'ctrl-s': 'split',
 			\ 'ctrl-v': 'vsplit' }
-
-" let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 " List files in current files directory
 nnoremap <C-p> :GFiles<CR>
@@ -354,16 +353,16 @@ nnoremap <leader>j :move .+1<cr>==
 vnoremap <leader>k :move '<-2<cr>gv=gv
 vnoremap <leader>j :move '>+1<cr>gv=gv
 
-" yanks visually selected text to tmux buffer
-vnoremap <leader>ty y<cr>:call system("tmux load-buffer -", @0)<cr>
-" yanks current line to tmux buffer
-nnoremap <leader>tyy y<cr>:.w !tmux load-buffer -<cr>
-" yanks entire vim buffer to tmux buffer
-nnoremap <leader>tye y<cr>:w !tmux load-buffer -<cr>
-" pastes text from tmux buffer to vim buffer
-nnoremap <leader>tp :let @0 = system("tmux save-buffer -")<cr>"0p<cr>g;
-
-nnoremap <leader>osc :!osc52.sh<cr>
+if exists('$TMUX')
+  " yanks visually selected text to tmux buffer
+  vnoremap <leader>ty y<cr>:call system("tmux load-buffer -", @0)<cr>
+  " yanks current line to tmux buffer
+  nnoremap <leader>tyy y<cr>:.w !tmux load-buffer -<cr>
+  " yanks entire vim buffer to tmux buffer
+  nnoremap <leader>tye y<cr>:w !tmux load-buffer -<cr>
+  " pastes text from tmux buffer to vim buffer
+  nnoremap <leader>tp :let @0 = system("tmux save-buffer -")<cr>"0p<cr>g;
+endif
 
 if executable('ag')
     set grepprg=ag\ --vimgrep
