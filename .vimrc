@@ -1,29 +1,3 @@
-let mapleader = " "
-
-syntax on
-filetype plugin indent on
-
-set nocompatible
-set encoding=utf-8
-set hidden
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab smarttab autoindent cindent
-set incsearch ignorecase smartcase nohlsearch
-set number title showcmd
-set foldlevel=0 foldmethod=marker
-set nohlsearch
-set mouse=a
-set splitright
-set undodir=~/.vim/undo undofile
-set wildmode=longest:list,full wildmenu
-set completeopt=menuone,noinsert,noselect,preview
-set tags=tags
-set background=dark
-set termguicolors
-set nowrap linebreak
-set scrolloff=0 sidescrolloff=0
-
-iabbrev @@ aarya.bhatia1678@gmail.com
-
 " plugins
 
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -43,40 +17,72 @@ Plug 'tpope/vim-surround'
 Plug 'preservim/tagbar'
 Plug 'romainl/vim-qf'
 Plug 'justinmk/vim-sneak'
+Plug 'wellle/targets.vim'
+Plug 'kshenoy/vim-signature'
+
 Plug 'preservim/nerdtree'
 Plug 'ptzz/lf.vim'
 Plug 'voldikss/vim-floaterm'
+
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'morhetz/gruvbox'
-Plug 'wellle/targets.vim'
-Plug 'vimwiki/vimwiki'
-Plug 'mattn/calendar-vim'
-Plug 'ap/vim-css-color'
-Plug 'kshenoy/vim-signature'
-Plug 'wellle/targets.vim'
-Plug 'vimwiki/vimwiki'
-Plug 'mattn/calendar-vim'
-Plug 'morhetz/gruvbox'
-Plug 'crusoexia/vim-monokai'
 
-" Plug 'itchyny/lightline.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'edkolev/tmuxline.vim'
+Plug 'morhetz/gruvbox'
+Plug 'crusoexia/vim-monokai'
+
+Plug 'mattn/calendar-vim'
+Plug 'ap/vim-css-color'
+Plug 'vimwiki/vimwiki'
+Plug 'tools-life/taskwiki'
+" Plug 'godlygeek/tabular'
+" Plug 'preservim/vim-markdown'
 
 call plug#end()
 
+let mapleader = " "
+
+syntax on
+filetype plugin indent on
+
+set nocompatible
+set encoding=utf-8
+set hidden
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab 
+set smarttab autoindent cindent
+set incsearch ignorecase smartcase nohlsearch
+set number title showcmd
+set foldlevel=0 foldmethod=marker
+set nohlsearch
+set mouse=a
+set splitright
+set undodir=~/.vim/undo undofile
+set wildmode=longest:list,full wildmenu
+set completeopt=menuone,noinsert,noselect,preview
+set tags=tags
+set background=dark
+set nowrap linebreak
+set scrolloff=0 sidescrolloff=0
+
+iabbrev @@ aarya.bhatia1678@gmail.com
+
 " Theme
+
+hi Normal guibg=NONE ctermbg=NONE
+set termguicolors
+
+" status 
 
 set noshowmode
 set laststatus=2
 
-let g:lightline = { 'colorscheme': 'one' }
-
 let g:airline_theme='term'
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+" let g:airline#extensions#tabline#formatter = 'unique'
+let g:airline#extensions#whitespace#enabled = 0  " Disable whitespace extension
+let g:airline#extensions#syntastic#enabled = 0   " Disable syntastic if using
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
