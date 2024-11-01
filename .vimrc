@@ -36,9 +36,7 @@ Plug 'crusoexia/vim-monokai'
 Plug 'mattn/calendar-vim'
 Plug 'ap/vim-css-color'
 Plug 'vimwiki/vimwiki'
-Plug 'tools-life/taskwiki'
-" Plug 'godlygeek/tabular'
-" Plug 'preservim/vim-markdown'
+Plug 'preservim/vim-markdown'
 
 call plug#end()
 
@@ -135,7 +133,7 @@ let NERDTreeShowHidden=0
 
 " vimwiki
 
-let g:vimwiki_list = [{'path': '~/wiki/' }]
+let g:vimwiki_list = [{'path': '~/wiki-md/', 'syntax': 'markdown', 'ext': 'md' }]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
