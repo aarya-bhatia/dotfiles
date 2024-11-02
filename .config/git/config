@@ -13,3 +13,8 @@
 	detachedHead = false
 [safe]
 	directory = /mnt/Media
+[alias]
+    l = log
+    s = status
+    c = commit
+    a = add

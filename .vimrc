@@ -60,7 +60,8 @@ set smarttab autoindent cindent
 set splitright
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab 
 set tags=tags
-set undodir=~/.vim/undo undofile
+set undodir=~/.vim/undo 
+set undofile
 set wildmode=longest:list,full wildmenu
 
 iabbrev @@ aarya.bhatia1678@gmail.com
