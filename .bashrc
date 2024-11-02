@@ -5,8 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-HISTSIZE=5000
-HISTFILESIZE=10000
+HISTSIZE=
+HISTFILESIZE=
 shopt -s histappend
 
 alias ls='ls --color=auto'

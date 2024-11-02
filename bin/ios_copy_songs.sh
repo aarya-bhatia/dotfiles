@@ -5,16 +5,16 @@ idevicepair list
 # mkdir -p ~/.iPhone
 # ifuse .iPhone
 
-mkdir -p ~/.iphone_vlc
+mkdir -p ~/.vlc
 printf "mount vlc folder? [y/n]: "
 read ans
-[ "$ans" = 'y' ] && ifuse --documents org.videolan.vlc-ios ~/.iphone_vlc/
+[ "$ans" = 'y' ] && ifuse --documents org.videolan.vlc-ios ~/.vlc/
 
 printf "check corrupted songs? [y/n]: "
 read diff_check
 
 MUSIC=~/Music
-MOUNT=~/.iphone_vlc
+MOUNT=~/.vlc
 printf "vlc mount point: $MOUNT [y/n]: "
 read ans
 [ "$ans" != 'y' ] && exit 1

@@ -44,34 +44,31 @@ let mapleader = " "
 syntax on
 filetype plugin indent on
 
-set nocompatible
+set background=dark
+set completeopt=menuone,noinsert,noselect,preview
 set encoding=utf-8
-set hidden
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab 
-set smarttab autoindent cindent
-set incsearch ignorecase smartcase nohlsearch
-set number title showcmd
 set foldlevel=0 foldmethod=marker
-set nohlsearch
+set hidden
+set incsearch ignorecase smartcase nohlsearch
 set mouse=a
+set nocompatible
+set nohlsearch
+set nowrap linebreak
+set number title showcmd
+set scrolloff=0 sidescrolloff=0
+set smarttab autoindent cindent
 set splitright
+set tabstop=4 softtabstop=4 shiftwidth=4 expandtab 
+set tags=tags
 set undodir=~/.vim/undo undofile
 set wildmode=longest:list,full wildmenu
-set completeopt=menuone,noinsert,noselect,preview
-set tags=tags
-set background=dark
-set nowrap linebreak
-set scrolloff=0 sidescrolloff=0
 
 iabbrev @@ aarya.bhatia1678@gmail.com
 
-" Theme
+" theme and statusline
 
 hi Normal guibg=NONE ctermbg=NONE
 set termguicolors
-
-" status 
-
 set noshowmode
 set laststatus=2
 
