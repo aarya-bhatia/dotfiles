@@ -11,6 +11,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'ap/vim-css-color'
 Plug 'crusoexia/vim-monokai'
 Plug 'edkolev/tmuxline.vim'
+Plug 'freitass/todo.txt-vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -39,6 +40,7 @@ Plug 'wellle/targets.vim'
 
 call plug#end()
 
+let maplocalleader = " "
 let mapleader = " "
 
 syntax on
@@ -80,6 +82,10 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 let g:airline#extensions#whitespace#enabled = 0  " Disable whitespace extension
 let g:airline#extensions#syntastic#enabled = 0   " Disable syntastic if using
 let g:airline#extensions#tabline#enabled = 0     " Disable tabline
+
+" edit todos
+nnoremap <leader>et :e ~/nextcloud/todos/todo.txt<CR>
+let g:todo_done_filename = 'done.txt'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -132,7 +138,7 @@ let NERDTreeShowHidden=0
 
 " vimwiki
 
-let g:vimwiki_list = [{'path': '~/wiki-md/', 'syntax': 'markdown', 'ext': 'md' }]
+let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md' }]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
