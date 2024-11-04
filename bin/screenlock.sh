@@ -11,12 +11,12 @@ if which xidlehook; then
 		--not-when-fullscreen \
 		`# Don't lock when there's audio playing` \
 		--not-when-audio \
-		`# Dim the screen after 60 seconds, undim if user becomes active` \
-		--timer 60 \
+		`# Dim the screen after X seconds, undim if user becomes active` \
+		--timer 300 \
 		'xrandr --output "$PRIMARY_DISPLAY" --brightness .1' \
 		'xrandr --output "$PRIMARY_DISPLAY" --brightness 1' \
-		`# Undim & lock after 10 more seconds` \
-		--timer 10 \
+		`# Undim & lock after X more seconds` \
+		--timer 300 \
 		'xrandr --output "$PRIMARY_DISPLAY" --brightness 1; i3lock' \
 		'' \
 		`# Finally, suspend an hour after it locks` \
