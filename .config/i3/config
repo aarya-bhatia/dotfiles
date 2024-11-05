@@ -23,6 +23,7 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id sxhkd
 exec --no-startup-id dunst
 exec --no-startup-id nextcloud
+exec --no-startup-id dropbox
 exec --no-startup-id ~/bin/nightlight.sh
 exec --no-startup-id ~/bin/screenlock.sh
 

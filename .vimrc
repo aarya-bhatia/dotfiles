@@ -84,7 +84,7 @@ let g:airline#extensions#syntastic#enabled = 0   " Disable syntastic if using
 let g:airline#extensions#tabline#enabled = 0     " Disable tabline
 
 " edit todos
-nnoremap <leader>et :e ~/nextcloud/todos/todo.txt<CR>
+nnoremap <leader>et :e ~/Dropbox/todos/todo.txt<CR>
 let g:todo_done_filename = 'done.txt'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
