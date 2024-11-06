@@ -311,8 +311,8 @@ nnoremap < <<
 xnoremap > >gv
 xnoremap < <gv
 
-nnoremap [a :ap<CR>
-nnoremap ]a :an<CR>
+nnoremap [a :prev<CR>
+nnoremap ]a :next<CR>
 
 nnoremap [l :lp<CR>
 nnoremap ]l :ln<CR>
