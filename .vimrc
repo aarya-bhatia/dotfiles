@@ -8,6 +8,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" Plug 'dense-analysis/ale'
+" Plug 'vimwiki/vimwiki'
+Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'ap/vim-css-color'
 Plug 'crusoexia/vim-monokai'
 Plug 'edkolev/tmuxline.vim'
@@ -18,11 +21,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'justinmk/vim-sneak'
 Plug 'kshenoy/vim-signature'
-Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'mattn/calendar-vim'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
+Plug 'preservim/vim-markdown'
 Plug 'ptzz/lf.vim'
 Plug 'romainl/vim-qf'
 Plug 'sheerun/vim-polyglot'
@@ -34,7 +37,6 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'vimwiki/vimwiki'
 Plug 'voldikss/vim-floaterm'
 Plug 'wellle/targets.vim'
 
@@ -65,6 +67,7 @@ set tags=tags
 set undodir=~/.vim/undo 
 set undofile
 set wildmode=longest:list,full wildmenu
+set directory=~/.vim/swap
 
 iabbrev @@ aarya.bhatia1678@gmail.com
 
@@ -86,6 +89,43 @@ let g:airline#extensions#tabline#enabled = 0     " Disable tabline
 " edit todos
 nnoremap <leader>et :e ~/Dropbox/todos/todo.txt<CR>
 let g:todo_done_filename = 'done.txt'
+
+nnoremap <leader>ew :e ~/wiki/index.md<CR>
+
+" --------- markdown file settings ---------
+
+" Enable folding.
+let g:vim_markdown_folding_disabled = 0
+
+" Fold heading in with the contents.
+let g:vim_markdown_folding_style_pythonic = 1
+
+let g:vim_markdown_no_default_key_mappings = 0
+
+" Autoshrink TOCs.
+let g:vim_markdown_toc_autofit = 1
+
+" Indentation for new lists. We don't insert bullets as it doesn't play
+" nicely with `gq` formatting. It relies on a hack of treating bullets
+" as comment characters.
+" See https://github.com/plasticboy/vim-markdown/issues/232
+let g:vim_markdown_new_list_item_indent = 0
+let g:vim_markdown_auto_insert_bullets = 0
+
+" Filetype names and aliases for fenced code blocks.
+let g:vim_markdown_fenced_languages = ['php', 'py=python', 'js=javascript', 'bash=sh', 'viml=vim']
+
+" Highlight front matter (useful for Hugo posts).
+let g:vim_markdown_toml_frontmatter = 1
+let g:vim_markdown_json_frontmatter = 1
+let g:vim_markdown_frontmatter = 1
+
+" Format strike-through text (wrapped in `~~`).
+let g:vim_markdown_strikethrough = 1
+
+let g:vim_markdown_no_extensions_in_markdown = 1
+let g:vim_markdown_auto_insert_bullets = 0
+let g:vim_markdown_new_list_item_indent = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
