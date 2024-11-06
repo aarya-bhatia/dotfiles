@@ -2,6 +2,10 @@
 
 exec &>/dev/null
 
+#get gnome-keyring running
+dbus-update-activation-environment --all
+gnome-keyring-daemon --start --components=secrets
+
 session="${2:-i3}"
 
 case "$session" in
