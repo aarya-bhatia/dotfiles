@@ -48,6 +48,18 @@ let mapleader = " "
 syntax on
 filetype plugin indent on
 
+if !isdirectory($HOME . '/.vim/undo')
+    call mkdir($HOME . '/.vim/undo', 'p')
+endif
+
+if !isdirectory($HOME . '/.vim/swap')
+    call mkdir($HOME . '/.vim/swap', 'p')
+endif
+
+if !isdirectory($HOME . '/.vim/templates')
+    call mkdir($HOME . '/.vim/templates', 'p')
+endif
+
 set background=dark
 set completeopt=menuone,noinsert,noselect,preview
 set encoding=utf-8
