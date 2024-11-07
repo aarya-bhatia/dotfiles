@@ -1,15 +1,19 @@
 " plugins
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
     silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
 call plug#begin('~/.vim/plugged')
 
 " Plug 'dense-analysis/ale'
-" Plug 'vimwiki/vimwiki'
+Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'ap/vim-css-color'
 Plug 'crusoexia/vim-monokai'
@@ -40,10 +44,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'voldikss/vim-floaterm'
 Plug 'wellle/targets.vim'
 
-Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'idbrii/vim-argedit'
-
 call plug#end()
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 let maplocalleader = " "
 let mapleader = " "
@@ -86,12 +89,24 @@ set directory=~/.vim/swap
 
 iabbrev @@ aarya.bhatia1678@gmail.com
 
+" edit todos
+nnoremap <leader>et :e ~/Dropbox/todos/todo.txt<CR>
+let g:todo_done_filename = 'done.txt'
+
+" edit wiki
+nnoremap <leader>ew :e ~/wiki/index.md<CR>
+
+" ------------------------------------
+"
 " theme and statusline
+"
 
 hi Normal guibg=NONE ctermbg=NONE
 set termguicolors
 set noshowmode
 set laststatus=2
+
+colorscheme gruvbox
 
 let g:airline_powerline_fonts = 1
 let g:airline_theme='term'
@@ -101,50 +116,23 @@ let g:airline#extensions#whitespace#enabled = 0  " Disable whitespace extension
 let g:airline#extensions#syntastic#enabled = 0   " Disable syntastic if using
 let g:airline#extensions#tabline#enabled = 0     " Disable tabline
 
-" edit todos
-nnoremap <leader>et :e ~/Dropbox/todos/todo.txt<CR>
-let g:todo_done_filename = 'done.txt'
+"
+" --------- vim-markdown ---------
+"
 
-nnoremap <leader>ew :e ~/wiki/index.md<CR>
-
-" --------- markdown file settings ---------
-
-" Enable folding.
 let g:vim_markdown_folding_disabled = 0
-
-" Fold heading in with the contents.
 let g:vim_markdown_folding_style_pythonic = 1
-
 let g:vim_markdown_no_default_key_mappings = 0
-
-" Autoshrink TOCs.
 let g:vim_markdown_toc_autofit = 1
-
-" Indentation for new lists. We don't insert bullets as it doesn't play
-" nicely with `gq` formatting. It relies on a hack of treating bullets
-" as comment characters.
-" See https://github.com/plasticboy/vim-markdown/issues/232
 let g:vim_markdown_new_list_item_indent = 0
 let g:vim_markdown_auto_insert_bullets = 0
-
-" Filetype names and aliases for fenced code blocks.
 let g:vim_markdown_fenced_languages = ['php', 'py=python', 'js=javascript', 'bash=sh', 'viml=vim']
-
-" Highlight front matter (useful for Hugo posts).
-let g:vim_markdown_toml_frontmatter = 1
-let g:vim_markdown_json_frontmatter = 1
-let g:vim_markdown_frontmatter = 1
-
-" Format strike-through text (wrapped in `~~`).
-let g:vim_markdown_strikethrough = 1
-
+let g:vim_markdown_follow_anchor = 1
 let g:vim_markdown_no_extensions_in_markdown = 1
 let g:vim_markdown_auto_insert_bullets = 0
 let g:vim_markdown_new_list_item_indent = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
-
-colorscheme gruvbox
 
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
@@ -429,13 +417,63 @@ if exists('$TMUX')
   nnoremap <leader>tp :let @0 = system("tmux save-buffer -")<cr>"0p<cr>g;
 endif
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
 if executable('ag')
     set grepprg=ag\ --vimgrep
+    set grepformat=%f:%l:%c:%m
 endif
 
+""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   augroup templates
     autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
   augroup END
 endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+function! EditArgs()
+  new
+  call setline(1, argv())
+  setlocal buftype=nofile bufhidden=wipe noswapfile
+  nnoremap <buffer> <silent> <leader>s :call SetArgs()<CR>
+endfunction
+
+function! SetArgs()
+  let args = getline(1, '$')
+  exe 'args ' . join(args, ' ')
+  bdelete
+endfunction
+
+nnoremap <leader>ea :call EditArgs()<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+function! EditQuickfix()
+  new
+  let qflist = getqflist()
+  setlocal buftype=nofile bufhidden=wipe noswapfile
+  nnoremap <buffer> <silent> <leader>s :call SetQuickfix()<CR>
+endfunction
+
+function! SetQuickfix()
+  let new_qf = []
+  for line in getline(1, '$')
+    let parts = split(line, ':', 4)
+    if len(parts) >= 4
+      call add(new_qf, {
+            \ 'filename': parts[0],
+            \ 'lnum': str2nr(parts[1]),
+            \ 'col': str2nr(parts[2]),
+            \ 'text': parts[3]
+            \ })
+    endif
+  endfor
+  call setqflist(new_qf)
+  bd
+endfunction
+
+nnoremap <leader>eq :call EditQuickfix()<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
