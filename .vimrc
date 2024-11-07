@@ -40,6 +40,9 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'voldikss/vim-floaterm'
 Plug 'wellle/targets.vim'
 
+Plug 'ConradIrwin/vim-bracketed-paste'
+Plug 'idbrii/vim-argedit'
+
 call plug#end()
 
 let maplocalleader = " "
@@ -323,24 +326,30 @@ nnoremap < <<
 xnoremap > >gv
 xnoremap < <gv
 
+nnoremap [A :first<CR>
+nnoremap ]A :last<CR>
 nnoremap [a :prev<CR>
 nnoremap ]a :next<CR>
 
-nnoremap [l :lp<CR>
-nnoremap ]l :ln<CR>
+nnoremap [L :lfirst<CR>
+nnoremap ]L :llast<CR>
+nnoremap [l :lprev<CR>
+nnoremap ]l :lnext<CR>
 
-nnoremap [q :cp<CR>
-nnoremap ]q :cn<CR>
+nnoremap [Q :cfirst<CR>
+nnoremap ]Q :clast<CR>
+nnoremap [q :cprev<CR>
+nnoremap ]q :cnext<CR>
 
-nnoremap [b :bp<CR>
-nnoremap ]b :bp<CR>
+nnoremap [B :bfirst<CR>
+nnoremap ]B :blast<CR>
+nnoremap [b :bprev<CR>
+nnoremap ]b :bnext<CR>
 
-nnoremap [t :tn<CR>
-nnoremap ]t :tp<CR>
-
-
-" nnoremap <Tab> :bnext<CR>
-" nnoremap <S-Tab> :bprev<CR>
+nnoremap [T :tfirst<CR>
+nnoremap ]T :tlast<CR>
+nnoremap [t :tnext<CR>
+nnoremap ]t :tprev<CR>
 
 " Paste over currently selected text without yanking it
 xnoremap <silent> p "_dP
