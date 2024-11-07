@@ -16,6 +16,7 @@ font pango:FreeMono 10
 floating_modifier $mod
 tiling_drag modifier titlebar
 
+exec --no-startup-id mpd
 exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 exec --no-startup-id lxpolkit
 exec --no-startup-id nm-applet
