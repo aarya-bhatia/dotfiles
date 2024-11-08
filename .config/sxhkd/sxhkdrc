@@ -31,12 +31,9 @@ super+{F8,F9,F10}
 super + {Escape,a,slash,BackSpace,Print}
 	{pkill -USR1 -x sxhkd && notify-send "reloaded sxhkd", dmenu_emails.sh, dmenu_browser.sh, dmenu_power.sh, screenshot.sh -s}
 
-super + o; {e,f,c,t,r,w,b,p}
-	{$FILE_VIEWER, firefox, chromium, $MAIL_READER, $READER, \
-		$TERMINAL -e "vim -c VimwikiIndex", blueman-manager, pavucontrol}
-
-super + o; {v,h}
-	{$TERMINAL -e nvim, $TERMINAL --class="htop" -e htop}
+super + o; {e,f,c,t,r,b,p,v,h}
+	{$FILE_VIEWER, firefox, chromium, $MAIL_READER, $READER, blueman-manager, pavucontrol, \
+	    $TERMINAL -e nvim, $TERMINAL --class="htop" -e htop}
 
 ####################################
 # SUPER + ALT KEYS
@@ -49,15 +46,14 @@ super + alt + {0-9}
 # super + SHIFT KEYS
 ####################################
 
-super + shift + {a,e,p,v,w,x,n,z}
+super + shift + {a,e,p,v,w,x,n}
 	{rofi -show drun -show-icons, \
 	dmenu_edit_config.sh, \
 	dmenupass.sh, \
 	launch_vim_notepad.sh, \
-	dmenu_image_viewer.sh, \
+	${IMAGE_VIEWER:-nsxiv} "~/Wallpapers", \
 	lock.sh, \
-	quick_notes.sh, \
-	dmenu_pdfs.sh}
+	quick_notes.sh }
 
 ####################################
 # super + CONTROL + KEYS
@@ -66,4 +62,7 @@ super + shift + {a,e,p,v,w,x,n,z}
 # terminal emulator in default tmux session
 super + control + {Return,t}
 	alacritty --class=floating { , -e tmux new-session -A -s $USER}
+
+super + control + {m}
+    {DISPLAY=0:0 notify-send "mpd" "`mpc status`"}
 

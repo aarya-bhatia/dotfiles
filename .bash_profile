@@ -14,6 +14,9 @@ export FILE_VIEWER=thunar
 export IMAGE_VIEWER=nsxiv
 export MAIL_READER=thunderbird
 
+export MPD_HOST=127.0.0.1
+export MPD_PORT=6600
+
 # seattle
 export LATITUDE=47.614442
 export LONGITUDE=-122.34172

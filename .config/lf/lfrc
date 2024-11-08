@@ -12,7 +12,8 @@ map i $/home/aarya/.config/lf/preview.sh $f | less -R
 set drawbox true
 set ignorecase true
 set incsearch true
-set info size:time
+set sortby atime
+set info size:atime
 
 # interpreter for shell commands
 set shell bash
