@@ -12,19 +12,20 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" Plug 'dense-analysis/ale'
-Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'ap/vim-css-color'
+Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'crusoexia/vim-monokai'
+" Plug 'dense-analysis/ale'
 Plug 'edkolev/tmuxline.vim'
 Plug 'freitass/todo.txt-vim'
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'junegunn/vim-easy-align'
 Plug 'justinmk/vim-sneak'
 Plug 'kshenoy/vim-signature'
+Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'mattn/calendar-vim'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
@@ -35,6 +36,7 @@ Plug 'romainl/vim-qf'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
@@ -87,6 +89,8 @@ set undofile
 set wildmode=longest:list,full wildmenu
 set directory=~/.vim/swap
 
+set path+=**
+
 iabbrev @@ aarya.bhatia1678@gmail.com
 
 " edit todos
@@ -95,6 +99,12 @@ let g:todo_done_filename = 'done.txt'
 
 " edit wiki
 nnoremap <leader>ew :e ~/wiki/index.md<CR>
+
+" remap inbuilt CTRL+i = TAB, to use TAB key for other things...
+nnoremap <leader><C-o> <C-i>
+
+nnoremap <Tab> >>
+nnoremap <S-Tab> <<
 
 " ------------------------------------
 "
@@ -260,6 +270,11 @@ au FileType qf nnoremap <buffer> dd :.Reject<CR>
 au FileType qf vnoremap <buffer> d :Reject<CR>
 au FileType qf nnoremap <buffer> [[ :colder<CR>
 au FileType qf nnoremap <buffer> ]] :cnewer<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
+
+xmap ga <Plug>(EasyAlign)
+nmap ga <Plug>(EasyAlign)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
