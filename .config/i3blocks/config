@@ -1,0 +1,28 @@
+[volume]
+command=echo Vol:$(sb-volume)
+interval=once
+signal=5
+
+[memory]
+command=echo Mem:$(sb-memory)
+interval=5
+
+[battery]
+command=echo Bat:$(sb-battery)
+interval=5
+
+[disk]
+command=sb-disk
+interval=5
+
+[weather]
+command=echo Temp:$(sb-weather)
+interval=5
+
+[public-ip]
+command=wget -qO - icanhazip.com
+interval=once
+
+[datetime]
+command=sb-date
+interval=1

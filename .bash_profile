@@ -42,8 +42,6 @@ export ICEAUTHORITY=$XDG_CACHE_HOME/ICEauthority
 export IPYTHONDIR=$XDG_CONFIG_HOME/ipython
 export JUPYTER_CONFIG_DIR=$XDG_CONFIG_HOME/jupyter
 export XCURSOR_PATH=/usr/share/icons:$XDG_DATA_HOME/icons
-export GOPATH=$XDG_DATA_HOME/go
-export PATH=$PATH:$GOPATH/bin
 
 export LESS_TERMCAP_mb=$'\e[1;32m'
 export LESS_TERMCAP_md=$'\e[1;32m'
@@ -53,5 +51,7 @@ export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
+export GOPATH=$XDG_DATA_HOME/go
+export PATH=$PATH:$GOPATH/bin
 export PATH="/usr/local/go/bin:$PATH"
 export PATH="$HOME/.local/bin:$HOME/bin:$PATH"

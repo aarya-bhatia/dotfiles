@@ -14,7 +14,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'ap/vim-css-color'
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'crusoexia/vim-monokai'
 " Plug 'dense-analysis/ale'
 Plug 'edkolev/tmuxline.vim'
 Plug 'freitass/todo.txt-vim'
@@ -31,19 +30,17 @@ Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
 Plug 'preservim/vim-markdown'
-Plug 'ptzz/lf.vim'
 Plug 'romainl/vim-qf'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-eunuch'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'vifm/vifm.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'voldikss/vim-floaterm'
 Plug 'wellle/targets.vim'
 
 call plug#end()
@@ -78,7 +75,7 @@ set mouse=a
 set nocompatible
 set nohlsearch
 set nowrap linebreak
-set number title showcmd
+set number title noshowcmd
 set scrolloff=0 sidescrolloff=0
 set smarttab autoindent cindent
 set splitright
@@ -105,6 +102,12 @@ nnoremap <leader><C-o> <C-i>
 
 nnoremap <Tab> >>
 nnoremap <S-Tab> <<
+
+" nnoremap <leader>- :Vifm<CR>
+
+nnoremap <leader>tt :TagbarToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " ------------------------------------
 "
@@ -153,14 +156,6 @@ command TrimTrailingSpaces :%s/\s\+$//e | nohlsearch
 
 au FileType markdown,text,wiki setlocal spell spelllang=en_us wrap
 au FileType make setlocal ts=4 sts=4 sw=4 noet list
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" lf
-
-let g:lf_map_keys = 0
-nnoremap <leader>- :Lf<CR>
-nnoremap <leader>tt :TagbarToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -494,4 +489,26 @@ endfunction
 nnoremap <leader>eq :call EditQuickfix()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
+
+function! LF()
+	let temp = tempname()
+	exec 'silent !lf -selection-path=' . shellescape(temp)
+	if !filereadable(temp)
+		redraw!
+		return
+	endif
+	let names = readfile(temp)
+	if empty(names)
+		redraw!
+		return
+	endif
+	exec 'edit ' . fnameescape(names[0])
+	for name in names[1:]
+		exec 'argadd ' . fnameescape(name)
+	endfor
+	redraw!
+endfunction
+
+command! -bar LF call LF()
+nnoremap <leader>- :LF<CR>
 
