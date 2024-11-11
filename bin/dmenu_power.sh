@@ -8,7 +8,7 @@ logout() {
     pkill -f xinit
 }
 
-case $(echo -e 'lock\nexit\nrestart\nshutdown\nsleep\n' | dmenu -i) in
+case $(echo -e 'sleep\nlock\nexit\nrestart\nshutdown' | dmenu -i) in
 	lock) lock.sh ;;
 	exit) logout ;;
 	sleep) systemctl suspend ;;

@@ -37,42 +37,40 @@ endif
 
 call plug#begin('~/.local/share/nvim/plugged')
 
+Plug 'ap/vim-css-color'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
-Plug 'tpope/vim-unimpaired'
 Plug 'kshenoy/vim-signature'
 Plug 'preservim/tagbar'
 Plug 'romainl/vim-qf'
 Plug 'justinmk/vim-sneak'
 Plug 'preservim/nerdtree'
-Plug 'ptzz/lf.vim'
-Plug 'voldikss/vim-floaterm'
 Plug 'itchyny/lightline.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'morhetz/gruvbox'
 Plug 'wellle/targets.vim'
-Plug 'vimwiki/vimwiki'
-Plug 'mattn/calendar-vim'
+
+Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'folke/tokyonight.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v4.x'}
-Plug 'neovim/nvim-lspconfig'
-Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'williamboman/mason.nvim'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'stevearc/conform.nvim'
-Plug 'ap/vim-css-color'
+
+" Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v4.x'}
+" Plug 'williamboman/mason-lspconfig.nvim'
+" Plug 'williamboman/mason.nvim'
+" Plug 'hrsh7th/nvim-cmp'
+" Plug 'hrsh7th/cmp-nvim-lsp'
+" Plug 'stevearc/conform.nvim'
+
+Plug 'stevearc/oil.nvim'
+
 call plug#end()
 
-let g:lf_map_keys = 0
-
-nnoremap <leader>- :Lf<CR>
+nnoremap <leader>- :Oil<CR>
 nnoremap <leader>tt :TagbarToggle<CR>
 
 " Return to last edit position when opening files
@@ -84,7 +82,7 @@ au BufWritePost * :%s/\s\+$//e | nohlsearch
 au FileType markdown,text setlocal spell spelllang=en_us wrap
 au FileType make setlocal ts=4 sts=4 sw=4 noet list
 
-colorscheme default
+colorscheme koehler
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -155,11 +153,6 @@ nnoremap <silent> <leader>fv :Commits<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
-" vimwiki
-let g:vimwiki_list = [{'path': '~/wiki/'}]
-
-""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " quickfix list
 
 let g:qf_auto_resize = 0
@@ -221,6 +214,31 @@ nnoremap < <<
 xnoremap > >gv
 xnoremap < <gv
 
+nnoremap [A :first<CR>
+nnoremap ]A :last<CR>
+nnoremap [a :prev<CR>
+nnoremap ]a :next<CR>
+
+nnoremap [L :lfirst<CR>
+nnoremap ]L :llast<CR>
+nnoremap [l :lprev<CR>
+nnoremap ]l :lnext<CR>
+
+nnoremap [Q :cfirst<CR>
+nnoremap ]Q :clast<CR>
+nnoremap [q :cprev<CR>
+nnoremap ]q :cnext<CR>
+
+nnoremap [B :bfirst<CR>
+nnoremap ]B :blast<CR>
+nnoremap [b :bprev<CR>
+nnoremap ]b :bnext<CR>
+
+nnoremap [T :tfirst<CR>
+nnoremap ]T :tlast<CR>
+nnoremap [t :tnext<CR>
+nnoremap ]t :tprev<CR>
+
 " Paste over currently selected text without yanking it
 xnoremap <silent> p "_dP
 
@@ -250,9 +268,6 @@ nnoremap Y y$
 
 " Replace current word with yanked word ([p]aste [w]ord)
 nnoremap <leader>pw ciw<C-r>0<Esc>
-
-" [I]nsert [D]ate : TODO replace with date snippet
-nnoremap <leader>id i<C-R>=strftime('%Y-%m-%d')<CR><Esc>
 
 nnoremap <leader>mk :make<CR>
 
