@@ -1,3 +1,6 @@
+[general]
+import = [ "~/repositories/alacritty-theme/themes/gnome_terminal.toml" ]
+
 [font]
 size = 7.5
 

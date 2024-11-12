@@ -82,7 +82,7 @@ set path+=**
 
 iabbrev @@ aarya.bhatia1678@gmail.com
 
-if isdirectory("~/vimfiles")
+if isdirectory($HOME . "/vimfiles")
     set runtimepath+=~/vimfiles
 endif
 
@@ -178,7 +178,7 @@ elseif executable('rg')
 endif
 
 if has("autocmd")
-    if isdirectory("~/vimfiles/templates")
+    if isdirectory($HOME . "/vimfiles/templates")
         augroup templates
             autocmd BufNewFile *.sh 0r ~/vimfiles/templates/skeleton.sh
         augroup END
