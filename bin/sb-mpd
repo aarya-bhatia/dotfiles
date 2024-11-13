@@ -1,8 +1,11 @@
 #!/bin/sh
-maxlen=60
 label='♪'
-title=$(mpc current | head -c $maxlen)
-status=$(mpc status %percenttime% | sed 's/^ *//g')
+if [ "$(mpc status %state%)" != "playing" ]; then
+    label='⏸︎'
+fi
 
-echo %{A1:mpc toggle:}$label [$status] $title%{A}
+# position=$(mpc status %percenttime% | tr -d ' ')
+title=$(mpc current | head -c 60)
+
+echo "${label} ${title}"
 

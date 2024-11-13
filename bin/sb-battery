@@ -4,9 +4,9 @@ BATPERC=$(echo $BATTACPI | cut -d, -f2 | tr -d '[:space:]')
 BATPERC=$(echo $BATPERC | tr -d %)
 
 if [[ $BATTACPI == *"Discharging"* ]]; then
-	echo "$BATPERC-"
+	echo "󰂍 $BATPERC"
 elif [[ $BATTACPI == *"Charging"* ]]; then
-	echo "$BATPERC+"
+	echo "󰂏 $BATPERC"
 else
-	echo "$BATPERC"
+	echo "󰁹 $BATPERC"
 fi
