@@ -36,6 +36,8 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vifm/vifm.vim'
 Plug 'vim-airline/vim-airline'
+" Plug 'vim-autoformat/vim-autoformat'
+
 Plug 'vim-airline/vim-airline-themes'
 Plug 'wellle/targets.vim'
 
@@ -64,10 +66,9 @@ set completeopt=menuone,noinsert,noselect,preview
 set encoding=utf-8
 set foldlevel=0 foldmethod=marker
 set hidden
-set incsearch ignorecase smartcase nohlsearch
+set incsearch ignorecase smartcase hlsearch
 set mouse=a
 set nocompatible
-set nohlsearch
 set nowrap linebreak
 set relativenumber title noshowcmd
 set scrolloff=0 sidescrolloff=0
@@ -100,8 +101,8 @@ nnoremap <leader>ew :e ~/wiki/index.md<CR>
 " remap inbuilt CTRL+i = TAB, to use TAB key for other things...
 nnoremap <leader><C-o> <C-i>
 
-nnoremap <Tab> >>
-nnoremap <S-Tab> <<
+" nnoremap <Tab> >>
+" nnoremap <S-Tab> <<
 
 " nnoremap <leader>- :Vifm<CR>
 

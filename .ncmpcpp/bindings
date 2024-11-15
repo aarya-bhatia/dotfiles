@@ -549,3 +549,12 @@
 #def_key "q"
 #  quit
 #
+
+def_key "l"
+  next_column
+def_key "h"
+  previous_column
+def_key "k"
+  scroll_up
+def_key "j"
+  scroll_down

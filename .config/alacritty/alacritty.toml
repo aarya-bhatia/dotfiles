@@ -1,40 +1,9 @@
 [general]
-import = [ "~/repositories/alacritty-theme/themes/gnome_terminal.toml" ]
+import = [ "~/repositories/alacritty-theme/themes/gnome_terminal.toml",
+       "~/.config/alacritty/alacritty-font-hacknerd.toml" ]
 
 [font]
-size = 7.5
-
-[font.bold]
-family="JetbrainsMono Nerd Font"
-style="Bold"
-
-[font.bold_italic]
-family="JetbrainsMono Nerd Font"
-style="Bold Italic"
-
-[font.italic]
-family="JetbrainsMono Nerd Font"
-style="Italic"
-
-[font.normal]
-family="JetbrainsMono Nerd Font"
-style="Regular"
-
-# [font.bold]
-# family="Hack Nerd Font"
-# style="Bold"
-
-# [font.bold_italic]
-# family="Hack Nerd Font"
-# style="Bold Italic"
-
-# [font.italic]
-# family="Hack Nerd Font"
-# style="Italic"
-
-# [font.normal]
-# family="Hack Nerd Font"
-# style="Regular"
+size = 8
 
 [selection]
 save_to_clipboard = true

@@ -12,15 +12,15 @@ if which xidlehook; then
 		`# Don't lock when there's audio playing` \
 		--not-when-audio \
 		`# Dim the screen after X seconds, undim if user becomes active` \
-		--timer 300 \
+		--timer 600 \
 		'xrandr --output "$PRIMARY_DISPLAY" --brightness .1' \
 		'xrandr --output "$PRIMARY_DISPLAY" --brightness 1' \
 		`# Undim & lock after X more seconds` \
-		--timer 300 \
+		--timer 600 \
 		'xrandr --output "$PRIMARY_DISPLAY" --brightness 1; i3lock' \
 		'' \
-		`# Finally, suspend an hour after it locks` \
-		--timer 3600 \
+		`# Finally, suspend X secs after it locks` \
+		--timer 600 \
 		'systemctl suspend' \
 		''
 
