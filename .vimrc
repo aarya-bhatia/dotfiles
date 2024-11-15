@@ -304,3 +304,6 @@ vnoremap <leader>j :move '>+1<cr>gv=gv
 
 command! BufOnly silent! execute "%bd|e#|bd#"
 nnoremap <leader>bo :BufOnly<cr>
+
+nnoremap <leader>C :!osc52.sh<cr><cr>
+
