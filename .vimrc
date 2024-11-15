@@ -302,3 +302,5 @@ nnoremap <leader>j :move .+1<cr>==
 vnoremap <leader>k :move '<-2<cr>gv=gv
 vnoremap <leader>j :move '>+1<cr>gv=gv
 
+command! BufOnly silent! execute "%bd|e#|bd#"
+nnoremap <leader>bo :BufOnly<cr>
