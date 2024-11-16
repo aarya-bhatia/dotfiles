@@ -51,7 +51,7 @@ super + shift + {a,e,p,v,w,x,n}
 	dmenu_edit_config.sh, \
 	dmenupass.sh, \
 	launch_vim_notepad.sh, \
-	${IMAGE_VIEWER:-nsxiv} "~/Wallpapers", \
+	nsxiv $HOME/Wallpapers, \
 	lock.sh, \
 	quick_notes.sh }
 
