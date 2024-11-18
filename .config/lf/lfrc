@@ -5,8 +5,8 @@
 # !  shell-wait      shell command waiting for key press
 # &  shell-async     shell command running asynchronously
 
-set previewer /home/aarya/.config/lf/preview.sh
-map i $/home/aarya/.config/lf/preview.sh $f | less -R
+# set previewer /home/aarya/.config/lf/preview.sh
+# map i $/home/aarya/.config/lf/preview.sh $f | less -R
 
 #set icons
 set drawbox true

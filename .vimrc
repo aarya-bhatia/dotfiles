@@ -92,7 +92,7 @@ for config in split(glob('~/vimfiles/plugin-config/*.vim'), '\n')
 endfor
 
 " edit todos
-nnoremap <leader>et :e ~/Dropbox/todos/todo.txt<CR>
+nnoremap <leader>et :e ~/Nextcloud/todos/todo.txt<CR>
 let g:todo_done_filename = 'done.txt'
 
 " edit wiki
