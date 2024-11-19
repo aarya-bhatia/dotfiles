@@ -92,7 +92,12 @@ for config in split(glob('~/vimfiles/plugin-config/*.vim'), '\n')
 endfor
 
 " edit todos
-nnoremap <leader>et :e ~/Nextcloud/todos/todo.txt<CR>
+if isdirectory($HOME . '/Nextcloud')
+    nnoremap <leader>et :e ~/Nextcloud/todos/todo.txt<CR>
+elseif isdirectory($HOME . '/nextcloud')
+    nnoremap <leader>et :e ~/nextcloud/todos/todo.txt<CR>
+endif
+
 let g:todo_done_filename = 'done.txt'
 
 " edit wiki

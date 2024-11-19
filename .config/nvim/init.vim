@@ -59,12 +59,11 @@ Plug 'folke/tokyonight.nvim'
 Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
 Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
-" Plug 'VonHeikemen/lsp-zero.nvim', {'branch': 'v4.x'}
-" Plug 'williamboman/mason-lspconfig.nvim'
-" Plug 'williamboman/mason.nvim'
-" Plug 'hrsh7th/nvim-cmp'
-" Plug 'hrsh7th/cmp-nvim-lsp'
-" Plug 'stevearc/conform.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'williamboman/mason.nvim'
+Plug 'hrsh7th/nvim-cmp'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'stevearc/conform.nvim'
 
 Plug 'stevearc/oil.nvim'
 
@@ -82,7 +81,7 @@ au BufWritePost * :%s/\s\+$//e | nohlsearch
 au FileType markdown,text setlocal spell spelllang=en_us wrap
 au FileType make setlocal ts=4 sts=4 sw=4 noet list
 
-colorscheme koehler
+colorscheme gruvbox
 
 """"""""""""""""""""""""""""""""""""""""""""""""""
 
