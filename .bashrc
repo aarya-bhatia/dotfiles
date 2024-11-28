@@ -96,6 +96,7 @@ alias xopen="xdg-open"
 alias y="yay"
 alias z="zathura"
 alias b="brightness.sh"
+alias yy="yay --noconfirm --answerdiff=None --answeredit=None"
 
 # long commands
 alias trayer="trayer --edge top --align center --width 6"
