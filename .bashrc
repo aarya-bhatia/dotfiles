@@ -97,6 +97,7 @@ alias y="yay"
 alias z="zathura"
 alias b="brightness.sh"
 alias yy="yay --noconfirm --answerdiff=None --answeredit=None"
+alias blank="sleep .1; xset dpms force off"
 
 # long commands
 alias trayer="trayer --edge top --align center --width 6"

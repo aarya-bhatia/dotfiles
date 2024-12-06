@@ -7,6 +7,9 @@ gnome-keyring-daemon --start --components=secrets
 
 session="${2:-dwm}"
 
+xset s off
+xset dpms 0 0 1800
+
 case "$session" in
     dwm)        exec startdwm;;
     bspwm)      exec bspwm;;

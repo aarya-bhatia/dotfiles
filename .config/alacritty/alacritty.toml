@@ -1,9 +1,9 @@
 [general]
-import = [ "~/repositories/alacritty-theme/themes/gnome_terminal.toml",
-       "~/.config/alacritty/alacritty-font-hacknerd.toml" ]
+# import = [ "~/repositories/alacritty-theme/themes/gnome_terminal.toml", "~/.config/alacritty/alacritty-font-hacknerd.toml" ]
+import = [ "~/.config/alacritty/alacritty-font-hacknerd.toml" ]
 
 [font]
-size = 8
+size = 7.5
 
 [selection]
 save_to_clipboard = true

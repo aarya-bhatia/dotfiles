@@ -52,7 +52,7 @@ super + shift + {a,e,p,v,w,x,n}
 	dmenupass.sh, \
 	launch_vim_notepad.sh, \
 	nsxiv $HOME/Wallpapers, \
-	lock.sh, \
+	systemctl suspend, \
 	quick_notes.sh }
 
 ####################################

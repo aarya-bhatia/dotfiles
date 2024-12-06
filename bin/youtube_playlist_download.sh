@@ -4,5 +4,5 @@ if [ -z $1 ]; then
 	exit 1
 fi
 
-yt-dlp --download-archive archive.txt -x --audio-format mp3 -o "%(artist)s/%(album)s/%(playlist_index)s - %(title)s.%(ext)s" $1
+yt-dlp -f 'bestaudio' --extract-audio --audio-format flac --audio-quality 0 -o "%(playlist_title)s/%(playlist_index)s - %(title)s.%(ext)s" "$1"
 

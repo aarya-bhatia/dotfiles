@@ -195,3 +195,23 @@ map I push :rename<enter><c-a>
 map Y %realpath $f | xsel -b && echo "Copied file path: $(xsel -b -o)"
 
 map T $tmux new-session "/bin/bash -c 'cd $PWD' && /bin/bash"
+
+cmd mvlink !{{
+	read -p "Enter new directory: " newdir
+    directory=$(realpath "$newdir") 
+    
+    if [ ! -d "$directory" ]; then
+        echo Error: "$directory" is not a valid directory.
+        exit 1
+    fi
+
+ 	for file in $fx; do
+ 		printf "Move and Link '$file' to '$directory'? [y/n] "
+ 		read ans
+ 		if [ "$ans" = 'y' ]; then
+ 		    mv "$file" "$directory"     	
+            ln -s "$directory/$(basename $file)" "$file"
+ 		fi
+    done
+}}
+
