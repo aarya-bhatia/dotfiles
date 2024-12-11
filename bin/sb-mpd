@@ -1,6 +1,12 @@
 #!/bin/sh
 label='♪'
-if [ "$(mpc status %state%)" != "playing" ]; then
+state="$(mpc status %state%)"
+if [ "$state" = "stopped" ]; then
+    echo - 
+    exit 0
+fi
+
+if [ "$state" != "playing" ]; then
     label='⏸︎'
 fi
 

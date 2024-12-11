@@ -42,5 +42,4 @@ yt-dlp  --ignore-errors \
         --postprocessor-args "-metadata date='${year}' -metadata artist=\"${artist}\" -metadata album_artist=\"${artist}\"" \
         --embed-thumbnail \
         --ppa "EmbedThumbnail+ffmpeg_o:-c:v mjpeg -vf crop=\"'if(gt(ih,iw),iw,ih)':'if(gt(iw,ih),ih,iw)'\"" \
-		--download-archive archive.txt \
         -o "$artist/%(album)s/%(playlist_index)s - %(title)s.%(ext)s" "$1"
