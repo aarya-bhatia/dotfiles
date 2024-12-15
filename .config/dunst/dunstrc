@@ -1,9 +1,7 @@
 [global]
+    geometry = "300x5-30+20"
     monitor = 0
     follow = keyboard
-    width = 370
-    height = 350
-    offset = 0x20
     padding = 4
     horizontal_padding = 4
     transparency = 5

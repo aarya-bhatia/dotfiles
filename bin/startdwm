@@ -12,9 +12,9 @@ statusinfo.sh &
 nextcloud --background &
 # screenlock.sh &
 
+xrandr --output eDP-1 --primary --mode 1600x900
+
 while :; do
-    # test $(xrandr --query | grep -q " connected " | wc -l) -eq 1 && ~/.screenlayout/default.sh || ~/.screenlayout/desktop.sh || ~/.screenlayout/hdmi-mirror.sh
-    ~/.screenlayout/hdmi-mirror.sh
     wallpaper.sh
     dwm
 done
