@@ -34,7 +34,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'vifm/vifm.vim'
 Plug 'vim-airline/vim-airline'
 " Plug 'vim-autoformat/vim-autoformat'
 
@@ -70,7 +69,9 @@ set incsearch ignorecase smartcase hlsearch
 set mouse=a
 set nocompatible
 set nowrap linebreak
-set relativenumber title noshowcmd
+" set relativenumber 
+set number
+set title noshowcmd
 set scrolloff=0 sidescrolloff=0
 set smarttab autoindent cindent
 set splitright
@@ -109,8 +110,6 @@ nnoremap <leader><C-o> <C-i>
 " nnoremap <Tab> >>
 " nnoremap <S-Tab> <<
 
-" nnoremap <leader>- :Vifm<CR>
-
 nnoremap <leader>tt :TagbarToggle<CR>
 
 "
@@ -133,6 +132,7 @@ command TrimTrailingSpaces :%s/\s\+$//e | nohlsearch
 
 au FileType markdown,text,wiki setlocal spell spelllang=en_us wrap
 au FileType make setlocal ts=4 sts=4 sw=4 noet list
+au FileType swift setlocal ts=2 sts=2 sw=2 et list
 
 let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md' }]
 
