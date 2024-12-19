@@ -25,7 +25,6 @@ Plug 'mattn/calendar-vim'
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
 Plug 'preservim/tagbar'
-Plug 'preservim/vim-markdown'
 Plug 'romainl/vim-qf'
 Plug 'sheerun/vim-polyglot'
 Plug 'tomtom/tlib_vim'
@@ -35,10 +34,11 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
-" Plug 'vim-autoformat/vim-autoformat'
-
 Plug 'vim-airline/vim-airline-themes'
 Plug 'wellle/targets.vim'
+
+" Plug 'preservim/vim-markdown'
+" Plug 'vim-autoformat/vim-autoformat'
 
 call plug#end()
 
@@ -59,7 +59,6 @@ if !isdirectory($HOME . '/.vim/swap')
 endif
 
 set directory=~/.vim/swap
-
 set background=dark
 set completeopt=menuone,noinsert,noselect,preview
 set encoding=utf-8
@@ -69,7 +68,6 @@ set incsearch ignorecase smartcase hlsearch
 set mouse=a
 set nocompatible
 set nowrap linebreak
-" set relativenumber 
 set number
 set title noshowcmd
 set scrolloff=0 sidescrolloff=0
@@ -79,7 +77,7 @@ set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set tags=tags
 set undofile
 set wildmode=longest:list,full wildmenu
-
+set cursorline
 set path+=**
 
 iabbrev @@ aarya.bhatia1678@gmail.com
@@ -134,7 +132,7 @@ au FileType markdown,text,wiki setlocal spell spelllang=en_us wrap
 au FileType make setlocal ts=4 sts=4 sw=4 noet list
 au FileType swift setlocal ts=2 sts=2 sw=2 et list
 
-let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md' }]
+" let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md' }]
 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
