@@ -1,0 +1,5 @@
+require('lsp')
+require('autocomplete')
+require('lsp-servers')
+require('plugin-configs/oil')
+require('plugin-configs/treesitter')

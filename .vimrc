@@ -8,37 +8,44 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-Plug 'ap/vim-css-color'
+" critical
 Plug 'ConradIrwin/vim-bracketed-paste'
-Plug 'dense-analysis/ale'
-Plug 'edkolev/tmuxline.vim'
-Plug 'freitass/todo.txt-vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/vim-easy-align'
-Plug 'justinmk/vim-sneak'
-Plug 'kshenoy/vim-signature'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'mattn/calendar-vim'
-Plug 'morhetz/gruvbox'
-Plug 'preservim/nerdtree'
-Plug 'preservim/tagbar'
-Plug 'romainl/vim-qf'
-Plug 'sheerun/vim-polyglot'
-Plug 'tomtom/tlib_vim'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
+Plug 'kshenoy/vim-signature'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
+Plug 'romainl/vim-qf'
 Plug 'wellle/targets.vim'
 
+" quality of life
+Plug 'ap/vim-css-color'
+Plug 'junegunn/vim-easy-align'
+Plug 'justinmk/vim-sneak'
+Plug 'MarcWeber/vim-addon-mw-utils'
+Plug 'garbas/vim-snipmate'
+Plug 'honza/vim-snippets'
+Plug 'preservim/tagbar'
+Plug 'tomtom/tlib_vim'
+
+" colorschemes and themes
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'edkolev/tmuxline.vim'
+Plug 'morhetz/gruvbox'
+
+" filetype and syntax plugins
+Plug 'sheerun/vim-polyglot'
+Plug 'freitass/todo.txt-vim'
 " Plug 'preservim/vim-markdown'
 " Plug 'vim-autoformat/vim-autoformat'
+
+" lsp and completion
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -77,7 +84,7 @@ set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set tags=tags
 set undofile
 set wildmode=longest:list,full wildmenu
-set cursorline
+" set cursorline
 set path+=**
 
 iabbrev @@ aarya.bhatia1678@gmail.com
@@ -90,17 +97,54 @@ for config in split(glob('~/vimfiles/plugin-config/*.vim'), '\n')
     execute 'source' config
 endfor
 
-" edit todos
-if isdirectory($HOME . '/Nextcloud')
-    nnoremap <leader>et :e ~/Nextcloud/todos/todo.txt<CR>
-elseif isdirectory($HOME . '/nextcloud')
-    nnoremap <leader>et :e ~/nextcloud/todos/todo.txt<CR>
-endif
+function! SetupDirs() abort
+    " Set the initial nextcloud directory to ~/nextcloud
+    let g:nextcloud_dir = expand('$HOME/nextcloud')
+
+    " Check if the directory exists; if not, check for ~/Nextcloud
+    if !isdirectory(g:nextcloud_dir)
+        let l:alt_dir = expand('$HOME/Nextcloud')
+        if isdirectory(l:alt_dir)
+            " echom "Found nextcloud directory: " . l:alt_dir
+            let g:nextcloud_dir = l:alt_dir
+        else
+            echom "Nextcloud directory not found. Defaulting to: " . g:nextcloud_dir
+        endif
+    endif
+
+    " Ensure the main directory exists
+    if !isdirectory(g:nextcloud_dir)
+        call mkdir(g:nextcloud_dir, 'p')
+    endif
+
+    " Create necessary subdirectories
+    let l:subdirs = ['todos', 'diary/work', 'diary/me', 'wiki']
+    for l:subdir in l:subdirs
+        let l:full_path = g:nextcloud_dir . '/' . l:subdir
+        if !isdirectory(l:full_path)
+            call mkdir(l:full_path, 'p')
+        endif
+    endfor
+endfunction
+
+" Call the function to set up directories
+call SetupDirs()
+
+autocmd BufNewFile */diary/*.md 0r !echo "\# $(date)"
+
+" edit [t]odos
+nnoremap <leader>et :execute "edit " . g:nextcloud_dir . "/todos/todo.txt"<CR>
+
+" edit [d]iary
+nnoremap <leader>ed :execute "edit " . g:nextcloud_dir . "/diary/work/" . strftime("%Y-%m-%d") . ".md"<CR>
+
+" edit [p]ersonal diary
+nnoremap <leader>ep :execute "edit " . g:nextcloud_dir . "/diary/me/" . strftime("%Y-%m-%d") . ".md"<CR>
+
+" edit [w]iki
+nnoremap <leader>ew :execute "edit " . g:nextcloud_dir . "/wiki/index.md"<CR>
 
 let g:todo_done_filename = 'done.txt'
-
-" edit wiki
-nnoremap <leader>ew :e ~/wiki/index.md<CR>
 
 " remap inbuilt CTRL+i = TAB, to use TAB key for other things...
 nnoremap <leader><C-o> <C-i>
@@ -120,6 +164,7 @@ set noshowmode
 set laststatus=2
 
 colorscheme gruvbox
+" colorscheme industry
 
 " Return to last edit position when opening files
 au BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
@@ -132,7 +177,7 @@ au FileType markdown,text,wiki setlocal spell spelllang=en_us wrap
 au FileType make setlocal ts=4 sts=4 sw=4 noet list
 au FileType swift setlocal ts=2 sts=2 sw=2 et list
 
-" let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md' }]
+let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md' }]
 
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
