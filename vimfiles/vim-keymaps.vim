@@ -153,3 +153,8 @@ else
         nnoremap <leader>pp :r !pbpaste<cr>
     endif
 endif
+
+" grep for current word
+nnoremap <leader>gw yiw:grep "<C-r>""<cr>
+
+command! -nargs=+ Ag :cgetexpr system('ag --vimgrep --ignore "tags" <args>') | copen
