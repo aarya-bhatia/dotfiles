@@ -157,8 +157,17 @@ endif
 " grep for current word
 nnoremap <leader>gw yiw:grep "<C-r>""<cr>
 
-command! -nargs=+ Ag :cgetexpr system('ag --vimgrep --ignore "tags" <args>') | copen
-
 " Trim trailing whitespace on lines
 command TrimTrailingSpaces :%s/\s\+$//e | nohlsearch
 nnoremap <leader>W :TrimTrailingSpaces<CR>
+
+if has('ag')
+  command! -nargs=+ Ag :cgetexpr system('ag --vimgrep --ignore "tags" <args>') | copen
+endif
+
+if has('vim')
+  command! BufOnly silent! execute "%bd|e#|bd#"
+  nnoremap <leader>bo :BufOnly<cr>
+endif
+
+nnoremap <leader>C :!osc52.sh<cr><cr>
