@@ -32,9 +32,12 @@ nnoremap <C-p> :GFiles<CR>
 
 " List files in working directory
 nnoremap <leader>ff :Files<CR>
-" List git files
-nnoremap <silent> <leader>fg :Ag<CR>
+
+"nnoremap <silent> <leader>fg :Ag<CR>
+
+" Live grep
 nnoremap <silent> <leader>/ :RG<CR>
+
 " Find in history
 nnoremap <silent> <leader>fo :History<CR>
 " List buffers

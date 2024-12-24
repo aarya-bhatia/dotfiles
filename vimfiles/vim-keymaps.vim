@@ -158,3 +158,7 @@ endif
 nnoremap <leader>gw yiw:grep "<C-r>""<cr>
 
 command! -nargs=+ Ag :cgetexpr system('ag --vimgrep --ignore "tags" <args>') | copen
+
+" Trim trailing whitespace on lines
+command TrimTrailingSpaces :%s/\s\+$//e | nohlsearch
+nnoremap <leader>W :TrimTrailingSpaces<CR>

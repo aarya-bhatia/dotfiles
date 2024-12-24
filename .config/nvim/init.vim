@@ -4,7 +4,13 @@ filetype plugin indent on
 let maplocalleader = " "
 let mapleader = " "
 
+let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md' }]
+let g:vimwiki_table_mappings=0
+
 call plug#begin('~/.nvim/plugged')
+
+"Plug 'preservim/vim-markdown'
+Plug 'vimwiki/vimwiki'
 
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -76,12 +82,19 @@ if isdirectory($HOME . "/vimfiles")
 
 endif
 
+if !exists('*MKDir')
+  function MKDir(path)
+    silent execute '!mkdir '.a:path.' > /dev/null 2>&1'
+  endfunction
+endif
+
 if has('nvim')
   set guicursor=""
   set undodir=/tmp/nvim.undo
 else
   set nocompatible
   set hidden
+  call MKDir('~/.vim/undo')
   set undodir=~/.vim/undo
 endif
 
@@ -110,3 +123,15 @@ colorscheme gruvbox
 
 source ~/.config/nvim/lua/main.lua
 
+iabbrev @@ aarya.bhatia1678@gmail.com
+
+if isdirectory($HOME . "/vimfiles")
+    set runtimepath+=~/vimfiles
+endif
+
+"autocmd BufNewFile */diary/*.md 0r !echo "\# $(date)"
+
+let g:todo_done_filename = 'done.txt'
+
+" remap inbuilt CTRL+i = TAB, to use TAB key for other things...
+nnoremap <leader><C-o> <C-i>
