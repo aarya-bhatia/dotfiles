@@ -12,7 +12,7 @@ statusinfo.sh &
 nextcloud --background &
 # screenlock.sh &
 
-xrandr --output eDP-1 --primary --mode 1600x900
+~/.screenlayout/hdmi-mirror.sh
 
 while :; do
     wallpaper.sh

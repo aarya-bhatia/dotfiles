@@ -6,6 +6,10 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
     autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+let g:vimwiki_key_mappings = {}
+let g:vimwiki_key_mappings.table_mappings = 0
+let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md' }]
+
 call plug#begin('~/.vim/plugged')
 
 " critical
@@ -46,6 +50,8 @@ Plug 'freitass/todo.txt-vim'
 
 " lsp and completion
 Plug 'dense-analysis/ale'
+
+" Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 call plug#end()
 
@@ -177,8 +183,6 @@ au FileType markdown,text,wiki setlocal spell spelllang=en_us wrap
 au FileType make setlocal ts=4 sts=4 sw=4 noet list
 au FileType swift setlocal ts=2 sts=2 sw=2 et list
 
-let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md' }]
-
 xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
@@ -226,9 +230,19 @@ elseif executable('rg')
     set grepformat=%f:%l:%c:%m
 endif
 
+" Define syntax for keywords
+syntax keyword TodoKeyword TODO
+syntax keyword WaitKeyword WAIT
+syntax keyword DoingKeyword DOING
+syntax keyword DoneKeyword DONE
+
 if has("autocmd")
+    " if isdirectory($HOME . "/vimfiles/syntax")
+    "     autocmd FileType markdown source ~/vimfiles/syntax/todo.vim
+    " endif
+
     if isdirectory($HOME . "/vimfiles/templates")
-        augroup templates
+        augroup mytemplates
             autocmd BufNewFile *.sh 0r ~/vimfiles/templates/skeleton.sh
         augroup END
     endif
