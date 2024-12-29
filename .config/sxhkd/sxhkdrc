@@ -66,3 +66,7 @@ super + control + {Return,t}
 super + control + {m}
     {DISPLAY=0:0 notify-send "mpd" "`mpc status`"}
 
+super + m; {space,j,k,l,h}
+  mpc {toggle,next,prev,seek -10%,seek +10%}
+
+
