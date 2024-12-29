@@ -12,9 +12,8 @@ statusinfo.sh &
 nextcloud --background &
 # screenlock.sh &
 
-~/.screenlayout/hdmi-mirror.sh
-
 while :; do
+    ~/.screenlayout/hdmi-mirror.sh
     wallpaper.sh
     dwm
 done
