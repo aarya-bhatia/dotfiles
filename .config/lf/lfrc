@@ -45,45 +45,35 @@ map x !{{
 	$f $args
 }}
 
-map <enter> &mimeopen $f
+map <enter> !{{
+if which mimeopen; then
+	mimeopen "$f"
+else
+	open "$f"
+fi
+}}
+
 map <Shift><enter> $mimeopen --ask $f
 
-source '~/.config/lf/opener'
+# source '~/.config/lf/opener'
 
-# # define a custom 'open' command
-# # This command is called when current file is not a directory. You may want to
-# # use either file extensions and/or mime types here. Below uses an editor for
-# # text files and a file opener for the rest.
-# cmd open &{{
-# case $(file --mime-type -Lb $f) in
-# 	text/html) firefox $fx;;
-# 	text/*) lf -remote "send $id vim \$fx";;
-# 	application/json ) nvim $fx;;
-# 	application/pdf ) zathura $fx;;
-# 	image/gif) nsxiv -a $fx;;
-# 	image/*) nsxiv $fx;;
-# 	audio/*) mpv $fx;;
-# 	video/*) smplayer $fx;;
-# 	*) for f in $fx; do setsid $OPENER $f &>/dev/null & done;;
-# esac
-# }}
-
-# cmd trash %printf "%s\n" $fx | python3 $HOME/.config/lf/scripts/trash.py
-
-# cmd trash %{{
-# 	RM="rm -rf"
-# 	# if which trash-put &>/dev/null; then
-# 	# 	RM="trash-put"
-# 	# fi
-
-# 	for file in $fx; do
-# 		printf "remove $file? [y/n] "
-# 		read ans
-# 		if [ "$ans" = 'y' ]; then
-# 			$RM "$file"
-# 		fi
-# 	done
-# }}
+# define a custom 'open' command
+# This command is called when current file is not a directory. You may want to
+# use either file extensions and/or mime types here. Below uses an editor for
+# text files and a file opener for the rest.
+cmd open &{{
+case $(file --mime-type -Lb $f) in
+	text/html) firefox $fx;;
+	text/*) lf -remote "send $id vim \$fx";;
+	application/json ) nvim $fx;;
+	application/pdf ) zathura $fx;;
+	image/gif) nsxiv -a $fx;;
+	image/*) nsxiv $fx;;
+	audio/*) mpv $fx;;
+	video/*) smplayer $fx;;
+	*) for f in $fx; do setsid $OPENER $f &>/dev/null & done;;
+esac
+}}
 
 cmd trash !python3 ~/.config/lf/scripts/trash.py
 

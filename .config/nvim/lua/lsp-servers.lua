@@ -6,8 +6,10 @@ lspconfig.pyright.setup{}
 -- C/C++
 lspconfig.clangd.setup{}
 
--- swift
+-- Go
+lspconfig.gopls.setup{}
 
+-- swift
 local swift_lsp = vim.api.nvim_create_augroup("swift_lsp", { clear = true })
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "swift", "objective-c", "objective-cpp" },

@@ -72,7 +72,6 @@ if isdirectory($HOME . "/vimfiles")
   source ~/vimfiles/vim-keymaps.vim
   source ~/vimfiles/autocommands.vim
 
-  source ~/vimfiles/plugin-config/format.vim
   source ~/vimfiles/plugin-config/quickfix.vim
   source ~/vimfiles/plugin-config/fzf.vim
   source ~/vimfiles/plugin-config/nerdtree.vim
@@ -135,3 +134,4 @@ let g:todo_done_filename = 'done.txt'
 
 " remap inbuilt CTRL+i = TAB, to use TAB key for other things...
 nnoremap <leader><C-o> <C-i>
+
