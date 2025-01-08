@@ -63,10 +63,9 @@ super + shift + {a,e,p,v,w,x,n}
 super + control + {Return,t}
 	alacritty --class=floating { , -e tmux new-session -A -s $USER}
 
-super + control + {m}
-    {DISPLAY=0:0 notify-send "mpd" "`mpc status`"}
-
-super + m; {space,j,k,l,h}
-  mpc {toggle,next,prev,seek -10%,seek +10%}
-
+super + m; {s,space,j,k,l,h,f,0}
+  DISPLAY=0:0 {notify-send "mpd" "`mpc status`", \
+		mpc toggle,mpc next,mpc prev,mpc seek -10%,mpc seek +10%,\
+			mpd-add-to-favorites.sh && notify-send "mpd" 'Added song to favorites.',\
+				mpc seek 0%}
 
