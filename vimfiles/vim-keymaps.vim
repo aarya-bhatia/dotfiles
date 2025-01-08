@@ -11,6 +11,9 @@ nnoremap <leader>vpu :PlugUpdate<CR>
 nnoremap <leader>vps :PlugStatus<CR>
 nnoremap <leader>vpc :PlugClean<CR>
 
+" remap inbuilt CTRL+i = TAB, to use TAB key for other things...
+nnoremap <leader><C-o> <C-i>
+
 if has('nvim')
   nnoremap <leader>vl :edit ~/.config/nvim/lua/main.lua<CR>
 endif
@@ -171,3 +174,15 @@ if has('vim')
 endif
 
 nnoremap <leader>C :!osc52.sh<cr><cr>
+
+" alternate file
+nnoremap <leader>a :A<CR>
+
+" open or create file under cursor
+noremap <leader>gf :e <cfile><cr>
+
+nnoremap <leader>co :copen<cr>
+nnoremap <leader>cc :cclose<cr>
+
+" make header file from implementation in c/cpp
+"nnoremap <leader>mh :g/.*\n^{/yank A<cr>:bn<cr>pkdd:%s/$/;/<cr>:g/::/d B<cr>A<cr><cr>class <cr>{<cr>};<esc>"BP:%s/[^ ]\+:://<cr>j%jyt(kk$p=ipjA<cr>public:<esc>

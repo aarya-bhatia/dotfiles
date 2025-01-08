@@ -9,9 +9,8 @@ let g:vimwiki_table_mappings=0
 
 call plug#begin('~/.nvim/plugged')
 
-"Plug 'preservim/vim-markdown'
 Plug 'vimwiki/vimwiki'
-
+Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sensible'
@@ -27,6 +26,9 @@ Plug 'justinmk/vim-sneak'
 Plug 'preservim/tagbar'
 Plug 'wellle/targets.vim'
 Plug 'freitass/todo.txt-vim'
+
+" Plug 'vim-scripts/a.vim'
+Plug 'tpope/vim-abolish'
 
 " snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -50,9 +52,14 @@ Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 Plug 'folke/tokyonight.nvim'
 
 " lsp
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
+
+Plug 'hrsh7th/vim-vsnip'
+Plug 'hrsh7th/vim-vsnip-integ'
 
 call plug#end()
 
@@ -73,9 +80,16 @@ if isdirectory($HOME . "/vimfiles")
   source ~/vimfiles/autocommands.vim
 
   source ~/vimfiles/plugin-config/quickfix.vim
+  "source ~/vimfiles/plugin-config/ale.vim
+  source ~/vimfiles/plugin-config/format.vim
   source ~/vimfiles/plugin-config/fzf.vim
   source ~/vimfiles/plugin-config/nerdtree.vim
+  source ~/vimfiles/plugin-config/quickfix.vim
+  source ~/vimfiles/plugin-config/tagbar.vim
   source ~/vimfiles/plugin-config/vim-airline.vim
+  source ~/vimfiles/plugin-config/vim-easy-align.vim
+  source ~/vimfiles/plugin-config/vimwiki.vim
+  source ~/vimfiles/plugin-config/vim-vsnip.vim
 
   set spellfile=~/vimfiles/spell/en.utf-8.add
 

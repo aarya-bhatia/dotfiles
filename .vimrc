@@ -9,7 +9,6 @@ let g:vimwiki_key_mappings.table_mappings = 0
 
 call plug#begin('~/.vim/plugged')
 
-" critical
 Plug 'ConradIrwin/vim-bracketed-paste'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
@@ -22,8 +21,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'romainl/vim-qf'
 Plug 'wellle/targets.vim'
+Plug 'vim-scripts/a.vim'
+Plug 'tpope/vim-abolish'
 
-" quality of life
 Plug 'ap/vim-css-color'
 Plug 'junegunn/vim-easy-align'
 Plug 'justinmk/vim-sneak'
@@ -43,10 +43,11 @@ Plug 'morhetz/gruvbox'
 Plug 'sheerun/vim-polyglot'
 Plug 'freitass/todo.txt-vim'
 
-" lsp and completion
+" language tools
 Plug 'dense-analysis/ale'
 
-" tools
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 call plug#end()
@@ -109,3 +110,11 @@ set wildmode=longest:list,full wildmenu
 hi Normal guibg=NONE ctermbg=NONE
 
 colorscheme gruvbox
+
+" au FileType go nnoremap <buffer> gd :GoDef<CR>
+" au FileType go nnoremap <buffer> gh :GoDoc<CR>
+" au FileType go nnoremap <buffer> <leader>pb :GoBuild<CR>
+" au FileType go nnoremap <buffer> <leader>pt :GoTest<CR>
+" au FileType go nnoremap <buffer> <leader>pr :GoRun<CR>
+" au FileType go nnoremap <buffer> <leader>rn :GoRename<CR>
+" au FileType go nnoremap <buffer> <leader>pl :GoLint<CR>
