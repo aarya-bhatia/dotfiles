@@ -10,7 +10,8 @@ set $right l
 set $up k
 set $down j
 set $display1 "eDP-1"
-set $display2 "DVI-I-1-1"
+# set $display2 "DVI-I-1-1"
+set $display2 "HDMI-1"
 
 font pango:FreeMono 10
 floating_modifier $mod
@@ -24,11 +25,10 @@ exec --no-startup-id blueman-applet
 exec --no-startup-id sxhkd
 exec --no-startup-id dunst
 exec --no-startup-id nextcloud
-exec --no-startup-id dropbox
-exec --no-startup-id ~/bin/nightlight.sh
-exec --no-startup-id ~/bin/screenlock.sh
+exec --no-startup-id xrandr --output eDP-1 --primary --mode 1600x900 --pos 0x0 --rotate normal --output HDMI-1 --mode 1920x1080 --pos 1600x0 --rotate normal
+exec --no-startup-id nightlight.sh
 
-exec_always --no-startup-id ~/.screenlayout/desktop.sh ; ~/bin/wallpaper.sh
+exec_always --no-startup-id wallpaper.sh
 
 bar {
         status_command i3blocks

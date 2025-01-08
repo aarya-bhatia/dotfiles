@@ -10,10 +10,9 @@ blueman-applet &
 nightlight.sh &
 statusinfo.sh &
 nextcloud --background &
-# screenlock.sh &
 
 while :; do
-    ~/.screenlayout/hdmi-mirror.sh
+    ~/.screenlayout/hdmi-monitor.sh
     wallpaper.sh
     dwm
 done
