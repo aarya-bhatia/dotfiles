@@ -18,4 +18,4 @@ function! LF()
 endfunction
 
 command! -bar LF call LF()
-nnoremap <leader>- :LF<CR>
+" nnoremap <leader>- :LF<CR>

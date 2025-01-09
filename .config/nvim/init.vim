@@ -149,3 +149,10 @@ let g:todo_done_filename = 'done.txt'
 " remap inbuilt CTRL+i = TAB, to use TAB key for other things...
 nnoremap <leader><C-o> <C-i>
 
+if has('vim')
+  nnoremap <leader>- :LF<cr>
+endif
+
+" close all buffers except current
+nnoremap <leader>bo :%bd\|e#<cr>
+
