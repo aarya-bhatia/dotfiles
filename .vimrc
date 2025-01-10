@@ -46,8 +46,6 @@ Plug 'freitass/todo.txt-vim'
 " language tools
 Plug 'dense-analysis/ale'
 
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
-
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
 call plug#end()
@@ -110,11 +108,3 @@ set wildmode=longest:list,full wildmenu
 hi Normal guibg=NONE ctermbg=NONE
 
 colorscheme gruvbox
-
-" au FileType go nnoremap <buffer> gd :GoDef<CR>
-" au FileType go nnoremap <buffer> gh :GoDoc<CR>
-" au FileType go nnoremap <buffer> <leader>pb :GoBuild<CR>
-" au FileType go nnoremap <buffer> <leader>pt :GoTest<CR>
-" au FileType go nnoremap <buffer> <leader>pr :GoRun<CR>
-" au FileType go nnoremap <buffer> <leader>rn :GoRename<CR>
-" au FileType go nnoremap <buffer> <leader>pl :GoLint<CR>

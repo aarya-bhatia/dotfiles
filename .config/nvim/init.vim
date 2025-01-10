@@ -132,7 +132,7 @@ set laststatus=2
 
 hi Normal guibg=NONE ctermbg=NONE
 
-colorscheme gruvbox
+colorscheme default
 
 source ~/.config/nvim/lua/main.lua
 

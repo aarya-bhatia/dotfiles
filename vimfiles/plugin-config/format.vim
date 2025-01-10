@@ -1,4 +1,4 @@
-au FileType c,cpp,h nnoremap <leader>F mk:%!clang-format<CR>'k
-au FileType go nnoremap <leader>F :%!gofmt<CR>
-au FileType javascript,typescript nnoremap <leader>F :%!prettier --stdin-filepath %<CR>
-au FileType python nnoremap <leader>F :!black %<CR>
+au FileType c,cpp,h nnoremap <buffer> <leader>F mk:%!clang-format<CR>'kz.
+au FileType go nnoremap <buffer> <leader>F mk:%!gofmt<CR>'kz.
+au FileType javascript,typescript nnoremap <buffer> <leader>F :%!prettier --stdin-filepath %<CR>
+au FileType python nnoremap <buffer> <leader>F :!black %<CR>
