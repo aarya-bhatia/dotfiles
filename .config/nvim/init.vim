@@ -28,7 +28,7 @@ Plug 'wellle/targets.vim'
 Plug 'freitass/todo.txt-vim'
 
 " Plug 'vim-scripts/a.vim'
-Plug 'tpope/vim-abolish'
+" Plug 'tpope/vim-abolish'
 
 " snippets
 Plug 'MarcWeber/vim-addon-mw-utils'
@@ -60,6 +60,8 @@ Plug 'hrsh7th/cmp-nvim-lsp'
 
 Plug 'hrsh7th/vim-vsnip'
 Plug 'hrsh7th/vim-vsnip-integ'
+
+Plug 'mfussenegger/nvim-jdtls'
 
 call plug#end()
 
