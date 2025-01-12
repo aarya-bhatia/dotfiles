@@ -30,8 +30,6 @@ export XDG_CONFIG_HOME=$HOME/.config
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_STATE_HOME=$HOME/.local/state
 
-export PASSWORD_STORE_DIR=$HOME/nextcloud/passwords
-
 export CARGO_HOME=$XDG_DATA_HOME/cargo
 export COPYIGNORE=$HOME/copyignore
 export DOTNET_CLI_HOME=$XDG_DATA_HOME/dotnet

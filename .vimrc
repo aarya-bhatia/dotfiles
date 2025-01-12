@@ -7,6 +7,8 @@ let mapleader = " "
 let g:vimwiki_key_mappings = {}
 let g:vimwiki_key_mappings.table_mappings = 0
 
+let g:polyglot_disabled = ['markdown', 'csv']
+
 call plug#begin('~/.vim/plugged')
 
 Plug 'ConradIrwin/vim-bracketed-paste'
@@ -40,11 +42,11 @@ Plug 'edkolev/tmuxline.vim'
 Plug 'morhetz/gruvbox'
 
 " filetype and syntax plugins
-Plug 'sheerun/vim-polyglot'
+" Plug 'sheerun/vim-polyglot'
 Plug 'freitass/todo.txt-vim'
 
 " language tools
-Plug 'dense-analysis/ale'
+" Plug 'dense-analysis/ale'
 
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 

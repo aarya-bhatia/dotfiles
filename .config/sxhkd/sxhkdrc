@@ -31,9 +31,8 @@ super+{F8,F9,F10}
 super + {Escape,a,slash,BackSpace,Print}
 	{pkill -USR1 -x sxhkd && notify-send "reloaded sxhkd", dmenu_emails.sh, dmenu_browser.sh, dmenu_power.sh, screenshot.sh -s}
 
-super + o; {e,f,c,t,r,b,p,v,h}
-	{$FILE_VIEWER, firefox, chromium, $MAIL_READER, $READER, blueman-manager, pavucontrol, \
-	    $TERMINAL -e nvim, $TERMINAL --class="htop" -e htop}
+super + o; {e,f,t,b,p,v,h,l,k}
+	{$FILE_VIEWER, firefox, $MAIL_READER, blueman-manager, pavucontrol, $TERMINAL -e nvim, $TERMINAL --class="htop" -e htop, libreoffice, keepassxc}
 
 ####################################
 # SUPER + ALT KEYS
