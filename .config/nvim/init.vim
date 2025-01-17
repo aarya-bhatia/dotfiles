@@ -158,3 +158,5 @@ endif
 " close all buffers except current
 nnoremap <leader>bo :%bd\|e#<cr>
 
+" [o]pen work [t]asks
+nnoremap <leader>ot :e ~/Nextcloud/wiki/work.md<cr>
