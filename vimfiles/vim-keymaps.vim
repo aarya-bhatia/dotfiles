@@ -1,8 +1,7 @@
 nnoremap <silent> <leader> <Nop>
 
 nnoremap <leader>s :write<cr>
-" nnoremap <leader>q :quit<CR>
-nnoremap <leader>q :echo "use ZZ/ZQ instead"<cr>
+nnoremap <leader>q :quit<CR>
 
 " [V]im related
 nnoremap <leader>ve :edit $MYVIMRC<CR>
@@ -185,5 +184,3 @@ noremap <leader>gf :e <cfile><cr>
 nnoremap <leader>co :copen<cr>
 nnoremap <leader>cc :cclose<cr>
 
-" make header file from implementation in c/cpp
-"nnoremap <leader>mh :g/.*\n^{/yank A<cr>:bn<cr>pkdd:%s/$/;/<cr>:g/::/d B<cr>A<cr><cr>class <cr>{<cr>};<esc>"BP:%s/[^ ]\+:://<cr>j%jyt(kk$p=ipjA<cr>public:<esc>

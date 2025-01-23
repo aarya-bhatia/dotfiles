@@ -11,3 +11,7 @@ au FileType sh nnoremap <buffer> <leader>F :%!shfmt<CR>
 au FileType go nnoremap <buffer> <leader>F :%!gofmt<CR>
 
 au FileType go iabbrev <buffer> iferr if err != nil { return err }
+
+augroup TemplateGroup
+    autocmd BufNewFile *.sh 0r ~/vimfiles/templates/skeleton.sh
+augroup END

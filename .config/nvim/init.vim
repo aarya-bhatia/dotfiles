@@ -24,63 +24,13 @@ set noshowmode
 " See :h g:lightline.colorscheme
 let g:lightline = { 'colorscheme': 'solarized' }
 
-
-call plug#begin('~/.nvim/plugged')
-
-Plug 'vimwiki/vimwiki'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-sensible'
-Plug 'tpope/vim-surround'
-Plug 'kshenoy/vim-signature'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-Plug 'preservim/nerdtree'
-Plug 'romainl/vim-qf'
-Plug 'ap/vim-css-color'
-Plug 'junegunn/vim-easy-align'
-Plug 'justinmk/vim-sneak'
-Plug 'preservim/tagbar'
-Plug 'wellle/targets.vim'
-Plug 'freitass/todo.txt-vim'
-Plug 'morhetz/gruvbox'
-Plug 'itchyny/lightline.vim'
-
-" Plug 'vim-scripts/a.vim'
-" Plug 'tpope/vim-abolish'
-
-if has('nvim')
-  Plug 'dcampos/nvim-snippy'
-  Plug 'stevearc/oil.nvim'
-  Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-  Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-  Plug 'folke/tokyonight.nvim'
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'hrsh7th/nvim-cmp'
-  Plug 'hrsh7th/cmp-nvim-lsp'
-  Plug 'mfussenegger/nvim-jdtls'
-endif
-
-call plug#end()
-
-if executable('rg')
-  set grepprg=rg\ --vimgrep
-  set grepformat=%f:%l:%c:%m
-elseif executable('ag')
-  set grepprg=ag\ --vimgrep\ --ignore\ tags
-  set grepformat=%f:%l:%c:%m
-endif
-
 if isdirectory($HOME . "/vimfiles")
 
-  autocmd BufNewFile *.sh 0r ~/vimfiles/templates/skeleton.sh
-
+  source ~/vimfiles/utils.vim
   source ~/vimfiles/install-vim-plug.vim
   source ~/vimfiles/vim-keymaps.vim
+  source ~/vimfiles/vim-grep.vim
   source ~/vimfiles/autocommands.vim
-  source ~/vimfiles/utils.vim
 
   source ~/vimfiles/plugin-config/snippy.vim
   source ~/vimfiles/plugin-config/quickfix.vim
@@ -128,17 +78,13 @@ set laststatus=2
 
 hi Normal guibg=NONE ctermbg=NONE
 
-colorscheme default
-
-source ~/.config/nvim/lua/main.lua
-
 iabbrev @@ aarya.bhatia1678@gmail.com
 
 if isdirectory($HOME . "/vimfiles")
-    set runtimepath+=~/vimfiles
+  set runtimepath+=~/vimfiles
 endif
 
-"autocmd BufNewFile */diary/*.md 0r !echo "\# $(date)"
+autocmd BufNewFile */diary/*.md 0r !echo "\# $(date +\%Y-\%m-\%d)"
 
 let g:todo_done_filename = 'done.txt'
 
@@ -154,3 +100,47 @@ nnoremap <leader>bo :%bd\|e#<cr>
 
 " [o]pen work [t]asks
 nnoremap <leader>ot :e ~/Nextcloud/wiki/work.md<cr>
+
+call plug#begin('~/.nvim/plugged')
+
+Plug 'vimwiki/vimwiki'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-surround'
+Plug 'kshenoy/vim-signature'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'preservim/nerdtree'
+Plug 'romainl/vim-qf'
+" Plug 'ap/vim-css-color'
+Plug 'junegunn/vim-easy-align'
+Plug 'justinmk/vim-sneak'
+Plug 'preservim/tagbar'
+Plug 'wellle/targets.vim'
+Plug 'freitass/todo.txt-vim'
+Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
+Plug 'mileszs/ack.vim'
+Plug 'vim-scripts/a.vim'
+" Plug 'tpope/vim-abolish'
+
+if has('nvim')
+  Plug 'dcampos/nvim-snippy'
+  Plug 'stevearc/oil.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+  Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+  Plug 'folke/tokyonight.nvim'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'mfussenegger/nvim-jdtls'
+endif
+
+call plug#end()
+
+colorscheme default
+
+source ~/.config/nvim/lua/main.lua

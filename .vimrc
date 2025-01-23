@@ -7,8 +7,6 @@ let mapleader = " "
 let g:vimwiki_key_mappings = {}
 let g:vimwiki_key_mappings.table_mappings = 0
 
-let g:polyglot_disabled = ['markdown', 'csv']
-
 call plug#begin('~/.vim/plugged')
 
 Plug 'ConradIrwin/vim-bracketed-paste'
@@ -25,33 +23,13 @@ Plug 'romainl/vim-qf'
 Plug 'wellle/targets.vim'
 Plug 'vim-scripts/a.vim'
 Plug 'tpope/vim-abolish'
-
-Plug 'ap/vim-css-color'
 Plug 'junegunn/vim-easy-align'
 Plug 'justinmk/vim-sneak'
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
 Plug 'preservim/tagbar'
-Plug 'tomtom/tlib_vim'
-
-" colorschemes and themes
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'edkolev/tmuxline.vim'
 Plug 'morhetz/gruvbox'
-
-" filetype and syntax plugins
-" Plug 'sheerun/vim-polyglot'
 Plug 'freitass/todo.txt-vim'
-
-" language tools
-" Plug 'dense-analysis/ale'
-
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
-
-" snippets
-" Plug 'SirVer/ultisnips'
+" Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -70,7 +48,6 @@ if isdirectory($HOME . "/vimfiles")
   source ~/vimfiles/plugin-config/nerdtree.vim
   source ~/vimfiles/plugin-config/quickfix.vim
   source ~/vimfiles/plugin-config/tagbar.vim
-  source ~/vimfiles/plugin-config/vim-airline.vim
   source ~/vimfiles/plugin-config/vim-easy-align.vim
   source ~/vimfiles/plugin-config/vimwiki.vim
 
@@ -113,3 +90,6 @@ set wildmode=longest:list,full wildmenu
 hi Normal guibg=NONE ctermbg=NONE
 
 colorscheme gruvbox
+
+map <leader>id :put =strftime('%Y-%m-%d')<CR>
+map <leader>it :put =strftime('%Y-%m-%d %H:%M:%S%z')<CR>
