@@ -7,6 +7,24 @@ let mapleader = " "
 let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md' }]
 let g:vimwiki_table_mappings=0
 
+" let g:vsnip_snippet_dir=[$HOME."/vimfiles/snippets"]
+
+let g:targets_nl = 'nl'
+
+if isdirectory(expand('~/.virtualenvs/neovim'))
+  let g:python3_host_prog = expand('~/.virtualenvs/neovim/bin/python')
+endif
+
+set laststatus=2
+if !has('gui_running')
+  set t_Co=256
+endif
+" hide mode if status line shows it
+set noshowmode
+" See :h g:lightline.colorscheme
+let g:lightline = { 'colorscheme': 'solarized' }
+
+
 call plug#begin('~/.nvim/plugged')
 
 Plug 'vimwiki/vimwiki'
@@ -26,50 +44,32 @@ Plug 'justinmk/vim-sneak'
 Plug 'preservim/tagbar'
 Plug 'wellle/targets.vim'
 Plug 'freitass/todo.txt-vim'
+Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
 
 " Plug 'vim-scripts/a.vim'
 " Plug 'tpope/vim-abolish'
 
-" snippets
-Plug 'MarcWeber/vim-addon-mw-utils'
-Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
-Plug 'honza/vim-snippets'
-
-Plug 'morhetz/gruvbox'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-
-Plug 'preservim/nerdtree'
-Plug 'wellle/targets.vim'
-
-" neovim only
-Plug 'stevearc/oil.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-Plug 'nvim-treesitter/nvim-treesitter-textobjects'
-
-Plug 'folke/tokyonight.nvim'
-
-" lsp
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'neovim/nvim-lspconfig'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-
-Plug 'hrsh7th/vim-vsnip'
-Plug 'hrsh7th/vim-vsnip-integ'
-
-Plug 'mfussenegger/nvim-jdtls'
+if has('nvim')
+  Plug 'dcampos/nvim-snippy'
+  Plug 'stevearc/oil.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+  Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+  Plug 'folke/tokyonight.nvim'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'mfussenegger/nvim-jdtls'
+endif
 
 call plug#end()
 
-if executable('ag')
-  set grepprg=ag\ --vimgrep\ --ignore\ tags
-  set grepformat=%f:%l:%c:%m
-elseif executable('rg')
+if executable('rg')
   set grepprg=rg\ --vimgrep
+  set grepformat=%f:%l:%c:%m
+elseif executable('ag')
+  set grepprg=ag\ --vimgrep\ --ignore\ tags
   set grepformat=%f:%l:%c:%m
 endif
 
@@ -80,9 +80,10 @@ if isdirectory($HOME . "/vimfiles")
   source ~/vimfiles/install-vim-plug.vim
   source ~/vimfiles/vim-keymaps.vim
   source ~/vimfiles/autocommands.vim
+  source ~/vimfiles/utils.vim
 
+  source ~/vimfiles/plugin-config/snippy.vim
   source ~/vimfiles/plugin-config/quickfix.vim
-  "source ~/vimfiles/plugin-config/ale.vim
   source ~/vimfiles/plugin-config/format.vim
   source ~/vimfiles/plugin-config/fzf.vim
   source ~/vimfiles/plugin-config/nerdtree.vim
@@ -91,16 +92,9 @@ if isdirectory($HOME . "/vimfiles")
   source ~/vimfiles/plugin-config/vim-airline.vim
   source ~/vimfiles/plugin-config/vim-easy-align.vim
   source ~/vimfiles/plugin-config/vimwiki.vim
-  source ~/vimfiles/plugin-config/vim-vsnip.vim
 
   set spellfile=~/vimfiles/spell/en.utf-8.add
 
-endif
-
-if !exists('*MKDir')
-  function MKDir(path)
-    silent execute '!mkdir '.a:path.' > /dev/null 2>&1'
-  endfunction
 endif
 
 if has('nvim')

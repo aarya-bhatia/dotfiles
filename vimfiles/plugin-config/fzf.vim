@@ -8,7 +8,9 @@ let g:fzf_vim = {}
 let g:fzf_vim.preview_window = ['hidden,right,50%', 'ctrl-/']
 let g:fzf_layout = { 'down':  '30%'}
 
-inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
+if has('rg')
+  inoremap <expr> <c-x><c-f> fzf#vim#complete#path('rg --files')
+endif
 
 " [Buffers] Jump to the existing window if possible (default: 0)
 let g:fzf_vim.buffers_jump = 1

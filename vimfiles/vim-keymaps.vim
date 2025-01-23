@@ -1,7 +1,8 @@
 nnoremap <silent> <leader> <Nop>
 
 nnoremap <leader>s :write<cr>
-nnoremap <leader>q :quit<CR>
+" nnoremap <leader>q :quit<CR>
+nnoremap <leader>q :echo "use ZZ/ZQ instead"<cr>
 
 " [V]im related
 nnoremap <leader>ve :edit $MYVIMRC<CR>

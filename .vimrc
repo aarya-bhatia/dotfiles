@@ -50,6 +50,9 @@ Plug 'freitass/todo.txt-vim'
 
 Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
 
+" snippets
+" Plug 'SirVer/ultisnips'
+
 call plug#end()
 
 if isdirectory($HOME . "/vimfiles")
