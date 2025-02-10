@@ -7,19 +7,20 @@ alias py="python3"
 alias todo="todo.sh"
 
 alias t="tmux"
-alias tl="tmux ls"
 alias ta="tmux a"
 alias tq="tmux kill-session"
 
 alias grep="grep -E --color=auto"
+
 alias la="ls --color=auto -Ah"
 alias ll="ls --color=auto -alFh"
 alias l="ls --color=auto -CF"
 alias ls="ls --color=auto"
 alias l.="ls -d .*"
 
-alias mwinit="mwinit -f"
 alias g=git
+
+alias mwinit="mwinit -f"
 alias b=brazil
 alias bb=brazil-build
 alias bba='brazil-build apollo-pkg'

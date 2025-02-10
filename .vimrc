@@ -4,12 +4,106 @@ filetype plugin indent on
 let maplocalleader = " "
 let mapleader = " "
 
-let g:vimwiki_key_mappings = {}
-let g:vimwiki_key_mappings.table_mappings = 0
+let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md' }]
+let g:vimwiki_table_mappings=0
 
-call plug#begin('~/.vim/plugged')
+" let g:vsnip_snippet_dir=[$HOME."/vimfiles/snippets"]
 
-Plug 'ConradIrwin/vim-bracketed-paste'
+let g:targets_nl = 'nl'
+
+if isdirectory(expand('~/.virtualenvs/neovim'))
+  let g:python3_host_prog = expand('~/.virtualenvs/neovim/bin/python')
+endif
+
+set laststatus=2
+if !has('gui_running')
+  set t_Co=256
+endif
+" hide mode if status line shows it
+set noshowmode
+" See :h g:lightline.colorscheme
+let g:lightline = { 'colorscheme': 'solarized' }
+
+if isdirectory($HOME . "/vimfiles")
+
+  source ~/vimfiles/utils.vim
+  source ~/vimfiles/install-vim-plug.vim
+  source ~/vimfiles/vim-keymaps.vim
+  source ~/vimfiles/vim-grep.vim
+  source ~/vimfiles/autocommands.vim
+
+  if has('nvim')
+  source ~/vimfiles/plugin-config/snippy.vim
+  endif
+
+  source ~/vimfiles/plugin-config/quickfix.vim
+  source ~/vimfiles/plugin-config/format.vim
+  source ~/vimfiles/plugin-config/fzf.vim
+  source ~/vimfiles/plugin-config/nerdtree.vim
+  source ~/vimfiles/plugin-config/quickfix.vim
+  source ~/vimfiles/plugin-config/tagbar.vim
+  source ~/vimfiles/plugin-config/vim-airline.vim
+  source ~/vimfiles/plugin-config/vim-easy-align.vim
+
+  " source ~/vimfiles/plugin-config/vimwiki.vim
+
+  set spellfile=~/vimfiles/spell/en.utf-8.add
+
+endif
+
+if has('nvim')
+  set guicursor=""
+  set undodir=/tmp/nvim-undo
+else
+  set nocompatible
+  set hidden
+  set undodir=/tmp/vim-undo
+endif
+
+set encoding=utf-8
+set background=dark
+set foldlevel=0 foldmethod=marker
+set incsearch ignorecase smartcase hlsearch
+set mouse=a
+set nowrap linebreak
+set number
+set scrolloff=0 sidescrolloff=0
+set smarttab cindent
+set splitright
+set ts=2 sts=2 sw=2 et
+set tags=tags
+set undofile
+set completeopt=menuone,noinsert,noselect,preview
+set wildmode=longest:list,full wildmenu
+set spell spelllang=en_us
+set termguicolors
+set laststatus=2
+
+hi Normal guibg=NONE ctermbg=NONE
+
+iabbrev @@ aarya.bhatia1678@gmail.com
+
+if isdirectory($HOME . "/vimfiles")
+  set runtimepath+=~/vimfiles
+endif
+
+autocmd BufNewFile */diary/*.md 0r !echo "\# $(date +\%Y-\%m-\%d)"
+
+let g:todo_done_filename = 'done.txt'
+
+" remap inbuilt CTRL+i = TAB, to use TAB key for other things...
+nnoremap <leader><C-o> <C-i>
+
+if has('vim')
+  nnoremap <leader>- :LF<cr>
+endif
+
+" close all buffers except current
+nnoremap <leader>bo :%bd\|e#<cr>
+
+call plug#begin('~/.nvim/plugged')
+
+Plug 'vimwiki/vimwiki'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
@@ -20,76 +114,35 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'romainl/vim-qf'
-Plug 'wellle/targets.vim'
-Plug 'vim-scripts/a.vim'
-Plug 'tpope/vim-abolish'
 Plug 'junegunn/vim-easy-align'
 Plug 'justinmk/vim-sneak'
 Plug 'preservim/tagbar'
-Plug 'morhetz/gruvbox'
+Plug 'wellle/targets.vim'
 Plug 'freitass/todo.txt-vim'
-Plug 'vimwiki/vimwiki', { 'branch': 'dev' }
-" Plug 'dense-analysis/ale'
+Plug 'morhetz/gruvbox'
+Plug 'itchyny/lightline.vim'
+Plug 'mileszs/ack.vim'
+
+" Plug 'vim-scripts/a.vim'
+" Plug 'tpope/vim-abolish'
+
+if has('nvim')
+  Plug 'dcampos/nvim-snippy'
+  Plug 'stevearc/oil.nvim'
+  Plug 'nvim-lua/plenary.nvim'
+  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
+  Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+  Plug 'folke/tokyonight.nvim'
+  Plug 'neovim/nvim-lspconfig'
+  Plug 'hrsh7th/nvim-cmp'
+  Plug 'hrsh7th/cmp-nvim-lsp'
+  Plug 'mfussenegger/nvim-jdtls'
+endif
 
 call plug#end()
 
-if isdirectory($HOME . "/vimfiles")
-
-  autocmd BufNewFile *.sh 0r ~/vimfiles/templates/skeleton.sh
-
-  source ~/vimfiles/install-vim-plug.vim
-  source ~/vimfiles/vim-grep.vim
-  source ~/vimfiles/vim-keymaps.vim
-  source ~/vimfiles/autocommands.vim
-
-  source ~/vimfiles/plugin-config/ale.vim
-  source ~/vimfiles/plugin-config/format.vim
-  source ~/vimfiles/plugin-config/fzf.vim
-  source ~/vimfiles/plugin-config/nerdtree.vim
-  source ~/vimfiles/plugin-config/quickfix.vim
-  source ~/vimfiles/plugin-config/tagbar.vim
-  source ~/vimfiles/plugin-config/vim-easy-align.vim
-  source ~/vimfiles/plugin-config/vimwiki.vim
-
-  set spellfile=~/vimfiles/spell/en.utf-8.add
-
-endif
-
 if has('nvim')
-  set guicursor=""
-  set undodir=/tmp/nvim.undo
-else
-  set nocompatible
-  set hidden
-  set undodir=~/.vim/undo
-  set directory=~/.vim/swap
+  source ~/.config/nvim/lua/main.lua
 endif
-
-set background=dark
-set completeopt=menuone,noinsert,noselect,preview
-set cursorline
-set encoding=utf-8
-set foldlevel=0 foldmethod=marker
-set incsearch ignorecase smartcase hlsearch
-set laststatus=2
-set mouse=a
-set nowrap linebreak
-set number
-set path+=**
-set scrolloff=0 sidescrolloff=0
-set smarttab cindent
-set spell spelllang=en_us
-set splitright
-set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-set tags=tags
-set termguicolors
-set ts=2 sts=2 sw=2 et
-set undofile
-
-set wildmode=longest:list,full wildmenu
-hi Normal guibg=NONE ctermbg=NONE
 
 colorscheme gruvbox
-
-map <leader>id :put =strftime('%Y-%m-%d')<CR>
-map <leader>it :put =strftime('%Y-%m-%d %H:%M:%S%z')<CR>

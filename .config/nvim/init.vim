@@ -32,7 +32,10 @@ if isdirectory($HOME . "/vimfiles")
   source ~/vimfiles/vim-grep.vim
   source ~/vimfiles/autocommands.vim
 
+  if has('nvim')
   source ~/vimfiles/plugin-config/snippy.vim
+  endif
+
   source ~/vimfiles/plugin-config/quickfix.vim
   source ~/vimfiles/plugin-config/format.vim
   source ~/vimfiles/plugin-config/fzf.vim
@@ -41,7 +44,8 @@ if isdirectory($HOME . "/vimfiles")
   source ~/vimfiles/plugin-config/tagbar.vim
   source ~/vimfiles/plugin-config/vim-airline.vim
   source ~/vimfiles/plugin-config/vim-easy-align.vim
-  source ~/vimfiles/plugin-config/vimwiki.vim
+
+  " source ~/vimfiles/plugin-config/vimwiki.vim
 
   set spellfile=~/vimfiles/spell/en.utf-8.add
 
@@ -49,12 +53,11 @@ endif
 
 if has('nvim')
   set guicursor=""
-  set undodir=/tmp/nvim.undo
+  set undodir=/tmp/nvim-undo
 else
   set nocompatible
   set hidden
-  call MKDir('~/.vim/undo')
-  set undodir=~/.vim/undo
+  set undodir=/tmp/vim-undo
 endif
 
 set encoding=utf-8
@@ -98,9 +101,6 @@ endif
 " close all buffers except current
 nnoremap <leader>bo :%bd\|e#<cr>
 
-" [o]pen work [t]asks
-nnoremap <leader>ot :e ~/Nextcloud/wiki/work.md<cr>
-
 call plug#begin('~/.nvim/plugged')
 
 Plug 'vimwiki/vimwiki'
@@ -114,7 +114,6 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'preservim/nerdtree'
 Plug 'romainl/vim-qf'
-" Plug 'ap/vim-css-color'
 Plug 'junegunn/vim-easy-align'
 Plug 'justinmk/vim-sneak'
 Plug 'preservim/tagbar'
@@ -123,7 +122,8 @@ Plug 'freitass/todo.txt-vim'
 Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'mileszs/ack.vim'
-Plug 'vim-scripts/a.vim'
+
+" Plug 'vim-scripts/a.vim'
 " Plug 'tpope/vim-abolish'
 
 if has('nvim')
@@ -141,6 +141,8 @@ endif
 
 call plug#end()
 
-colorscheme default
+if has('nvim')
+  source ~/.config/nvim/lua/main.lua
+endif
 
-source ~/.config/nvim/lua/main.lua
+colorscheme gruvbox
