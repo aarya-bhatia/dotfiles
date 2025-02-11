@@ -3,8 +3,9 @@
 [keybindings]
 [profiles]
   [[default]]
-    font = JetBrainsMono Nerd Font 10
+    font = Ubuntu Sans Mono 11
     show_titlebar = False
+    use_system_font = False
     copy_on_selection = True
 [layouts]
   [[default]]
