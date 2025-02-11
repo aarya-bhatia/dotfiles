@@ -4,24 +4,20 @@ filetype plugin indent on
 let maplocalleader = " "
 let mapleader = " "
 
-let g:vimwiki_list = [{'path': '~/wiki/', 'syntax': 'markdown', 'ext': 'md' }]
-let g:vimwiki_table_mappings=0
-
-" let g:vsnip_snippet_dir=[$HOME."/vimfiles/snippets"]
-
 let g:targets_nl = 'nl'
+let g:todo_done_filename = 'done.txt'
 
 if isdirectory(expand('~/.virtualenvs/neovim'))
   let g:python3_host_prog = expand('~/.virtualenvs/neovim/bin/python')
 endif
 
-set laststatus=2
 if !has('gui_running')
   set t_Co=256
 endif
+
 " hide mode if status line shows it
 set noshowmode
-" See :h g:lightline.colorscheme
+
 let g:lightline = { 'colorscheme': 'solarized' }
 
 if isdirectory($HOME . "/vimfiles")
@@ -32,22 +28,24 @@ if isdirectory($HOME . "/vimfiles")
   source ~/vimfiles/vim-grep.vim
   source ~/vimfiles/autocommands.vim
 
-  if has('nvim')
-  source ~/vimfiles/plugin-config/snippy.vim
+  if isdirectory($HOME . "/vimfiles/plugin-config")
+    source ~/vimfiles/plugin-config/quickfix.vim
+    source ~/vimfiles/plugin-config/format.vim
+    source ~/vimfiles/plugin-config/fzf.vim
+    source ~/vimfiles/plugin-config/nerdtree.vim
+    source ~/vimfiles/plugin-config/quickfix.vim
+    source ~/vimfiles/plugin-config/tagbar.vim
+    source ~/vimfiles/plugin-config/vim-easy-align.vim
+
+    if has('nvim')
+      source ~/vimfiles/plugin-config/snippy.vim
+    endif
+
   endif
 
-  source ~/vimfiles/plugin-config/quickfix.vim
-  source ~/vimfiles/plugin-config/format.vim
-  source ~/vimfiles/plugin-config/fzf.vim
-  source ~/vimfiles/plugin-config/nerdtree.vim
-  source ~/vimfiles/plugin-config/quickfix.vim
-  source ~/vimfiles/plugin-config/tagbar.vim
-  source ~/vimfiles/plugin-config/vim-airline.vim
-  source ~/vimfiles/plugin-config/vim-easy-align.vim
-
-  " source ~/vimfiles/plugin-config/vimwiki.vim
-
-  set spellfile=~/vimfiles/spell/en.utf-8.add
+  if isdirectory($HOME . "/vimfiles/spell")
+    set spellfile=~/vimfiles/spell/en.utf-8.add
+  endif
 
 endif
 
@@ -69,27 +67,21 @@ set nowrap linebreak
 set number
 set scrolloff=0 sidescrolloff=0
 set smarttab cindent
-set splitright
+set splitright splitbelow
 set ts=2 sts=2 sw=2 et
 set tags=tags
 set undofile
 set completeopt=menuone,noinsert,noselect,preview
 set wildmode=longest:list,full wildmenu
-set spell spelllang=en_us
 set termguicolors
 set laststatus=2
+set spelllang=en_us
 
 hi Normal guibg=NONE ctermbg=NONE
 
 iabbrev @@ aarya.bhatia1678@gmail.com
 
-if isdirectory($HOME . "/vimfiles")
-  set runtimepath+=~/vimfiles
-endif
-
 autocmd BufNewFile */diary/*.md 0r !echo "\# $(date +\%Y-\%m-\%d)"
-
-let g:todo_done_filename = 'done.txt'
 
 " remap inbuilt CTRL+i = TAB, to use TAB key for other things...
 nnoremap <leader><C-o> <C-i>
@@ -97,9 +89,6 @@ nnoremap <leader><C-o> <C-i>
 if has('vim')
   nnoremap <leader>- :LF<cr>
 endif
-
-" close all buffers except current
-nnoremap <leader>bo :%bd\|e#<cr>
 
 call plug#begin('~/.nvim/plugged')
 
@@ -123,7 +112,6 @@ Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'mileszs/ack.vim'
 
-" Plug 'vim-scripts/a.vim'
 " Plug 'tpope/vim-abolish'
 
 if has('nvim')
@@ -136,7 +124,10 @@ if has('nvim')
   Plug 'neovim/nvim-lspconfig'
   Plug 'hrsh7th/nvim-cmp'
   Plug 'hrsh7th/cmp-nvim-lsp'
-  Plug 'mfussenegger/nvim-jdtls'
+
+  if executable('java')
+    Plug 'mfussenegger/nvim-jdtls'
+  endif
 endif
 
 call plug#end()
@@ -145,4 +136,4 @@ if has('nvim')
   source ~/.config/nvim/lua/main.lua
 endif
 
-colorscheme gruvbox
+colorscheme tokyonight-moon

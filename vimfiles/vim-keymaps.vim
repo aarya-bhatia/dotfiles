@@ -168,19 +168,18 @@ if has('ag')
   command! -nargs=+ Ag :cgetexpr system('ag --vimgrep --ignore "tags" <args>') | copen
 endif
 
-if has('vim')
-  command! BufOnly silent! execute "%bd|e#|bd#"
-  nnoremap <leader>bo :BufOnly<cr>
+" close all buffers except current
+nnoremap <leader>bo :%bd\|e#<cr>
+
+" sync clipboard with terminal emulator - useful in tmux
+if executable('osc52.sh')
+  nnoremap <leader>C :!osc52.sh<cr><cr>
 endif
-
-nnoremap <leader>C :!osc52.sh<cr><cr>
-
-" alternate file
-nnoremap <leader>a :A<CR>
 
 " open or create file under cursor
 noremap <leader>gf :e <cfile><cr>
 
+" open/close quickfix
 nnoremap <leader>co :copen<cr>
 nnoremap <leader>cc :cclose<cr>
 
