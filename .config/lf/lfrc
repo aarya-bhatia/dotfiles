@@ -5,8 +5,7 @@
 # !  shell-wait      shell command waiting for key press
 # &  shell-async     shell command running asynchronously
 
-# set previewer /home/aarya/.config/lf/preview.sh
-# map i $/home/aarya/.config/lf/preview.sh $f | less -R
+set previewer ~/.config/lf/preview.sh
 
 #set icons
 set drawbox true
@@ -46,7 +45,9 @@ map x !{{
 }}
 
 map <enter> !{{
-if which mimeopen; then
+if which sushi; then
+  sushi "$f"
+elif which mimeopen; then
 	mimeopen "$f"
 else
 	open "$f"
@@ -203,5 +204,33 @@ cmd mvlink !{{
             ln -s "$directory/$(basename $file)" "$file"
  		fi
     done
+}}
+
+cmd linkfrom %{{
+  echo $f > /tmp/lf-linkfrom
+  echo "Select directory to add symlink"
+}}
+
+cmd linkto %{{
+  if ! [ -f /tmp/lf-linkfrom ]; then
+    echo "No selected file to link"
+    exit 1
+  fi
+
+  linkfile=$(cat /tmp/lf-linkfrom)
+  if ! [ -e "$linkfile" ]; then
+    echo "Selected file does not exit: $linkfile"
+    rm -f /tmp/lf-linkfrom
+    exit 1
+  fi
+
+  basename=$(basename "$linkfile")
+  printf "Create symlink '$PWD/$basename' -> '$linkfile' ? [y/n]"
+  read ans
+  if [ "$ans" = "y" ]; then
+    ln -snf "${linkfile}"
+  fi
+
+  rm -f /tmp/lf-linkfrom
 }}
 
