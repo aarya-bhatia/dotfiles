@@ -1,24 +1,4 @@
 ####################################
-# FUNCTION KEYS
-####################################
-
-{XF86AudioRaiseVolume,XF86AudioLowerVolume,XF86AudioMute}
-	volume.sh {up,down,mute}
-
-{XF86MonBrightnessUp,XF86MonBrightnessDown}
-	brightness.sh {up, down}
-
-{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
-	playerctl {next, previous, play-pause, play-pause}
-
-{XF86Calculator, XF86Tools, XF86Mail, XF86Search}
-	{galculator, strawberry, thunderbird, thunar}
-
-# press print key
-Print; @Print
-	screenshot.sh
-
-####################################
 # super + KEYS
 ####################################
 
@@ -28,11 +8,14 @@ super+{XF86AudioNext,XF86AudioPrev,XF86AudioPause,XF86AudioPlay}
 super+{F8,F9,F10}
 	mpc {prev,toggle,next}
 
-super + {Escape,a,slash,BackSpace,Print}
-	{pkill -USR1 -x sxhkd && notify-send "reloaded sxhkd", dmenu_emails.sh, dmenu_browser.sh, dmenu_power.sh, screenshot.sh -s}
+super + Escape
+	pkill -USR1 -x sxhkd && notify-send "reloaded sxhkd"
 
-super + o; {e,f,t,b,p,v,h,l,k}
-	{$FILE_VIEWER, firefox, $MAIL_READER, blueman-manager, pavucontrol, $TERMINAL -e nvim, $TERMINAL --class="htop" -e htop, libreoffice, keepassxc}
+super + o; {e,f,t,b,p,l,k}
+	{$FILE_VIEWER, firefox, thunderbird, blueman-manager, pavucontrol, libreoffice, keepassxc}
+
+super + o; {v,h}
+	$TERMINAL -e {nvim, htop}
 
 ####################################
 # SUPER + ALT KEYS
@@ -45,22 +28,11 @@ super + alt + {0-9}
 # super + SHIFT KEYS
 ####################################
 
-super + shift + {a,e,p,v,w,x,n}
-	{rofi -show drun -show-icons, \
-	dmenu_edit_config.sh, \
-	dmenupass.sh, \
-	launch_vim_notepad.sh, \
-	nsxiv $HOME/Wallpapers, \
-	systemctl suspend, \
-	quick_notes.sh }
+super + space
+  rofi -combi-modi "window,drun,ssh" -theme solarized -show combi -show-icons -modes combi
 
-####################################
-# super + CONTROL + KEYS
-####################################
-
-# terminal emulator in default tmux session
-super + control + {Return,t}
-	alacritty --class=floating { , -e tmux new-session -A -s $USER}
+super + Return
+  terminator
 
 super + m; {s,space,j,k,l,h,f,0}
   DISPLAY=0:0 {notify-send "mpd" "`mpc status`", \

@@ -134,6 +134,5 @@ call plug#end()
 
 if has('nvim')
   source ~/.config/nvim/lua/main.lua
+  colorscheme tokyonight-moon
 endif
-
-colorscheme tokyonight-moon
