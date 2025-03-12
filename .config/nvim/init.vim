@@ -5,7 +5,6 @@ let maplocalleader = " "
 let mapleader = " "
 
 let g:targets_nl = 'nl'
-let g:todo_done_filename = 'done.txt'
 
 if isdirectory(expand('~/.virtualenvs/neovim'))
   let g:python3_host_prog = expand('~/.virtualenvs/neovim/bin/python')
@@ -112,28 +111,12 @@ Plug 'morhetz/gruvbox'
 Plug 'itchyny/lightline.vim'
 Plug 'mileszs/ack.vim'
 
-" Plug 'tpope/vim-abolish'
-
 if has('nvim')
   Plug 'dcampos/nvim-snippy'
-  Plug 'stevearc/oil.nvim'
   Plug 'nvim-lua/plenary.nvim'
-  Plug 'nvim-treesitter/nvim-treesitter', { 'do': ':TSUpdate' }
-  Plug 'nvim-treesitter/nvim-treesitter-textobjects'
   Plug 'folke/tokyonight.nvim'
-  Plug 'neovim/nvim-lspconfig'
-  Plug 'hrsh7th/nvim-cmp'
-  Plug 'hrsh7th/cmp-nvim-lsp'
-
-  if executable('java')
-    Plug 'mfussenegger/nvim-jdtls'
-  endif
 endif
 
 call plug#end()
-
-if has('nvim')
-  source ~/.config/nvim/lua/main.lua
-endif
 
 colorscheme tokyonight-moon
