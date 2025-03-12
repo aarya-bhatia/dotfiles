@@ -8,7 +8,7 @@ eval "$(mise activate zsh)"
 source /Users/aaryab/.brazil_completion/zsh_completion
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-21.jdk/Contents/Home"
 
-alias glp=git log --pretty=format:"%C(yellow)%h%C(reset) - %C(cyan)%an%C(reset) - %C(green)%ar%C(reset) - %s" --abbrev-commit
+alias glp="git log --pretty=format:'%C(yellow)%h%C(reset) - %C(cyan)%an%C(reset) - %C(green)%ar%C(reset) - %s %C(red)%d%C(reset)' --abbrev-commit"
 
 
 alias v=$EDITOR
