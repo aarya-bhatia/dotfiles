@@ -1,6 +1,8 @@
 bindkey -e
 
 export EDITOR=nvim
+alias v=$EDITOR
+
 export PATH=$PATH:$HOME/.toolbox/bin
 eval "$(/opt/homebrew/bin/brew shellenv)"
 # Set up mise for runtime management
@@ -9,10 +11,6 @@ source /Users/aaryab/.brazil_completion/zsh_completion
 export JAVA_HOME="/Library/Java/JavaVirtualMachines/amazon-corretto-21.jdk/Contents/Home"
 
 alias glp="git log --pretty=format:'%C(yellow)%h%C(reset) - %C(cyan)%an%C(reset) - %C(green)%ar%C(reset) - %s %C(red)%d%C(reset)' --abbrev-commit"
-
-
-alias v=$EDITOR
-alias vim=$EDITOR
 
 alias ..="cd .."
 alias g="git"
@@ -49,6 +47,6 @@ alias sam="brazil-build-tool-exec sam"
 
 alias auth="kinit -f && mwinit -s"
 
-which bat &>/dev/null && alias cat="bat --plain"
-which trash-put &>/dev/null && alias rm="trash-put"
-
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
